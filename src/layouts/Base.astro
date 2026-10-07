@@ -30,6 +30,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
     />
+
+    <!-- Brand mark + favicons: the Beets logo asset from beets3d.com -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
   <body>
     <a class="skip" href="#main">跳至內容 Skip to content</a>
@@ -37,6 +42,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <header class="site">
       <div class="wrap">
         <a class="brand" href="/">
+          <img class="logo" src="/beets-logo.png" alt="" width="32" height="32" />
           <span class="mark">BEETS</span><span class="mark-alt">AI</span>
         </a>
         <nav>
@@ -132,10 +138,18 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         flex-wrap: wrap;
       }
       .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
         text-decoration: none;
         font-weight: 700;
         font-size: 1.25rem;
         letter-spacing: 0.02em;
+      }
+      .brand .logo {
+        display: block;
+        width: 32px;
+        height: 32px;
       }
       .brand .mark {
         color: var(--ink);
