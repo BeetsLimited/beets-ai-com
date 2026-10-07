@@ -17,9 +17,9 @@ description: "An editable one-term AI education planning template: two pilot act
 downloads: ["/files/en/one-term-ai-education-plan.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

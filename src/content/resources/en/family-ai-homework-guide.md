@@ -17,9 +17,9 @@ description: "A guide families can use at home with no teacher present: three 15
 downloads: ["/files/en/family-ai-homework-guide.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

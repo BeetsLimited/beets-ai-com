@@ -18,9 +18,9 @@ description: "一張可編輯的一學期 AI 教育規劃範本：兩項試點�
 downloads: ["/files/one-term-ai-education-plan.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

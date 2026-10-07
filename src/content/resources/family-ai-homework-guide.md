@@ -18,9 +18,9 @@ description: "一份供家庭在家使用、毋須老師在場的指引：三個
 downloads: ["/files/family-ai-homework-guide.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

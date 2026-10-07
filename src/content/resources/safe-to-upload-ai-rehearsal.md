@@ -18,9 +18,9 @@ description: "教師實作練習：從六份虛構學校文件中找出並移除
 downloads: ["/files/safe-to-upload-exercise.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

@@ -18,9 +18,9 @@ description: "一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科
 downloads: ["/files/p4-p6-curriculum-gap-map.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

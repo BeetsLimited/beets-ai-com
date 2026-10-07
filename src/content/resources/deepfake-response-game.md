@@ -18,9 +18,9 @@ description: "初中課室遊戲：學生收到一則虛構的「學校」訊息
 downloads: ["/files/deepfake-response-game.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

@@ -17,9 +17,9 @@ description: "An editable P4-P6 AI literacy coverage workbook: record existing a
 downloads: ["/files/en/p4-p6-curriculum-gap-map.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

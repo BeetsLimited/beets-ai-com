@@ -17,9 +17,9 @@ description: "A classroom game in which pupils receive a fictional 'school' mess
 downloads: ["/files/en/deepfake-response-game.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 

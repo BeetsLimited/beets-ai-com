@@ -17,9 +17,9 @@ description: "A hands-on practice for teachers: find and remove pupil-identifyin
 downloads: ["/files/en/safe-to-upload-exercise.html"]
 feedback: true
 factChecked: true
-factCheckedBy: "Billy Yeung"
+factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
-reviewer: "Billy Yeung"
+reviewer: "Billy Kan"
 draft: false
 ---
 
