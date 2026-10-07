@@ -10,5 +10,8 @@ export default defineConfig({
   build: {
     format: "directory",
   },
-  integrations: [sitemap()],
+  integrations: [
+    // /review/ holds unreviewed drafts — never submit them for indexing.
+    sitemap({ filter: (page) => !page.includes("/review/") }),
+  ],
 });

@@ -1,0 +1,116 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+// Renders DRAFTS for internal review. Excluded from search engines and from the
+// public routes: production resources live at /resources/<slug>/ once they pass
+// the fact-check and educator-review gates.
+const drafts = (await getCollection("content", ({ data }) => data.draft)).sort((a, b) =>
+  a.data.slug.localeCompare(b.data.slug),
+);
+
+const CHECKS: Record<string, { fact: string[]; educator: string[] }> = {
+  "safe-to-upload-ai-rehearsal": {
+    fact: [
+      "六份示例全部為虛構，沒有影射任何真實學生或學校個案",
+      "所列的移除手法與 EDB 文件 G（pp.2-4, 2-9）的說法一致",
+      "「檔案名稱 / 中繼資料」的風險描述正確",
+    ],
+    educator: [
+      "「讀寫障礙」示例是否適合香港學校的文化與敏感度",
+      "45 分鐘的課堂時間是否可行",
+      "六份示例的難度是否適合 P4–P6",
+    ],
+  },
+  "student-ai-use-process-sheet": {
+    fact: [
+      "五格架構忠實反映 F（p.1-13）重視歷程、G（p.2-8）以思考歷程檢視學習的要求",
+      "「不必交出完整對話紀錄」符合私隱與資料最小化的做法",
+    ],
+    educator: [
+      "第 4 格是否真的能用一句話寫完",
+      "是否符合實際課業時間",
+      "表內不綁定學科的設計是否合用",
+    ],
+  },
+  "p4-hk-population-ai-graph-check": {
+    fact: [
+      "⚠️ 最重要：2021 年人口 7,413,070 須與政府統計處 2021 年人口普查一致",
+      "⚠️ 「人口並非逐年上升」在現行官方數據下仍然成立",
+      "⚠️ 要求學生填寫的年份與 Table 110-01001 現行版本一致",
+      "⚠️ censtatd.gov.hk 的來源連結仍然有效",
+    ],
+    educator: [
+      "35–40 分鐘對 P4 是否合適",
+      "「AI 對了一半」這個切入點是否 P4 學生能掌握",
+      "方格紙／試算表的器材假設是否合理",
+    ],
+  },
+};
+---
+
+<Base title="內部審閱 Internal review — BEETS AI" noindex>
+  <h1>內部審閱 Internal review</h1>
+
+  <div class="notice">
+    <strong>此區域不對外發佈，亦不會被搜尋引擎收錄。</strong>
+    <p>
+      以下 {drafts.length} 份資源已完成草擬，正在等待<strong>事實核實</strong>及<strong>教育工作者審閱</strong>。
+      在兩項完成前，它們不會在正式網址發佈。
+    </p>
+    <p class="muted">
+      Not public, excluded from search engines. These {drafts.length} resources are drafted and
+      awaiting fact-check and educator review before publication.
+    </p>
+  </div>
+
+  {
+    drafts.map((entry) => {
+      const checks = CHECKS[entry.data.slug];
+      return (
+        <section>
+          <h2>
+            <a href={`/review/${entry.data.slug}/`}>{entry.data.title}</a>
+          </h2>
+          <p class="meta">
+            Theme {entry.data.theme} · {entry.data.stage} · {entry.data.subject} · 來源{" "}
+            {entry.data.sources.join("、")}
+          </p>
+          <p>{entry.data.description}</p>
+
+          {checks ? (
+            <>
+              <h3>① 事實核實 Fact-check</h3>
+              <ul>
+                {checks.fact.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <h3>② 教育工作者審閱 Educator review（Henry）</h3>
+              <ul>
+                {checks.educator.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+
+          <p>
+            <a class="btn" href={`/review/${entry.data.slug}/`}>開啟頁面 Open page →</a>
+          </p>
+        </section>
+      );
+    })
+  }
+
+  <hr />
+  <h2>如何回應 How to respond</h2>
+  <p>
+    在 Mattermost 告訴 Ada「#8 可發佈」、「#11 需修改：……」，並註明事實核實者姓名。
+    兩項關卡通過後，我會把該頁設為正式發佈，並提交 Google Search Console 與 Bing IndexNow。
+  </p>
+  <p class="muted">
+    Reply in Mattermost with your sign-off (and who did the fact-checking). Once both gates pass,
+    the page is published at its public URL and submitted for indexing.
+  </p>
+</Base>

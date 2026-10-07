@@ -3,12 +3,15 @@ interface Props {
   title: string;
   description?: string;
   lang?: string;
+  /** Keep the page out of search engines (internal review areas). */
+  noindex?: boolean;
 }
 
 const {
   title,
   description = "香港教師 AI 課堂實用資源：按學科、級別和具體教學需要，免費取得可編輯工作紙、教案及校本規劃範例。",
   lang = "zh-HK",
+  noindex = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -22,6 +25,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex ? <meta name="robots" content="noindex, nofollow" /> : null}
 
     <!-- Brand typography: Quicksand (Latin) + Noto Sans TC (Chinese), as on beets3d.com -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
