@@ -45,6 +45,9 @@ jobs:
       - name: Check one language per page
         run: npm run check:lang
 
+      - name: Check no page repeats a heading
+        run: npm run check:structure
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true

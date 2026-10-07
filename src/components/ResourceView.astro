@@ -76,25 +76,15 @@ const showDraftNotice = reviewMode || d.draft;
 
   <Content />
 
+  {/*
+    The body carries the plan's seven sections — including its own files,
+    framework and feedback sections. This view adds only what the content does
+    not: the raw source list with a link to the official document, same-theme
+    siblings, and the reuse terms. Anything else would print the same heading
+    twice on one page.
+  */}
   <section>
-    <h2>{t(lang, "downloadsHeading")}</h2>
-    {
-      d.downloads.length === 0 ? (
-        <p>{t(lang, "downloadsPending")}</p>
-      ) : (
-        <ul>
-          {d.downloads.map((file) => (
-            <li>
-              <a href={file}>{file.split("/").pop()}</a> <span class="meta">{t(lang, "downloadNote")}</span>
-            </li>
-          ))}
-        </ul>
-      )
-    }
-  </section>
-
-  <section>
-    <h2>{t(lang, "edbHeading")}</h2>
+    <h2>{t(lang, "sourcesHeading")}</h2>
     <ul>
       {d.sources.map((source) => (
         <li>{source}</li>
@@ -130,13 +120,4 @@ const showDraftNotice = reviewMode || d.draft;
     <h2>{t(lang, "reuseHeading")}</h2>
     <p>{t(lang, "reuseBody")}</p>
   </section>
-
-  {
-    d.feedback ? (
-      <section>
-        <h2>{t(lang, "feedbackHeading")}</h2>
-        <p>{t(lang, "feedbackBody")}</p>
-      </section>
-    ) : null
-  }
 </article>

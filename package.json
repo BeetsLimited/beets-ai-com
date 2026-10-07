@@ -13,7 +13,8 @@
     "test:watch": "vitest",
     "check:links": "node scripts/check-links.mjs",
     "check:links:external": "node scripts/check-external-links.mjs",
-    "check:lang": "node scripts/check-language.mjs"
+    "check:lang": "node scripts/check-language.mjs",
+    "check:structure": "node scripts/check-structure.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
