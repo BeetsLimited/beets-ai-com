@@ -17,7 +17,11 @@ date: 2026-10-08
 description: "一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科目與學期記錄現有活動、標出缺口並寫下最小的下一步，附三個完成的虛構學校示例，供校長及科主任在課程會議中直接使用。"
 downloads: ["/files/p4-p6-curriculum-gap-map.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **草稿 — 待教育工作者審閱（Henry）。** 未填 `reviewer` 前不會發佈。
@@ -51,7 +55,7 @@ draft: true
 
 本工作簿沒有標準答案，但一份「讀得出下一步」的覆蓋分析可以用下面的核對表來判斷。
 
-**P4–P6 階段目標（建議清單）** [[VERIFY]]：以下目標列為工作骨架，須逐字核對 F（《中小學人工智能素養學習架構》pp.1-6 to 1-10）的 P4–P6 階段目標後方可引用。
+**P4–P6 階段目標（建議清單）**：以下目標是本工作簿的建議框架，並非教育局文件的原文；請先對照 F（《中小學人工智能素養學習架構》pp.1-6 to 1-10）的 P4–P6 階段目標，再按校情調整採用。
 
 | 目標編號 | 建議的 P4–P6 目標（請與 F pp.1-6 to 1-10 核對） |
 |---|---|

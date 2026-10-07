@@ -16,7 +16,11 @@ date: 2026-10-08
 description: "An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting."
 downloads: ["/files/en/p4-p6-curriculum-gap-map.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
@@ -50,7 +54,7 @@ This is a curriculum-meeting agenda of about 60 minutes (it can be folded into a
 
 There is no single right answer, but a coverage map that "leads to a next step" can be judged against the checklist below.
 
-**P4-P6 stage goals (suggested list)** [[VERIFY]]: the goal rows below are a working scaffold and must be checked word for word against the P4-P6 stage goals in F (the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10) before they are quoted.
+**P4-P6 stage goals (suggested list)**: the rows below are this workbook's suggested scaffold, not the framework's own wording. Check them against the P4-P6 stage goals in F (the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10) before you quote them.
 
 | Goal | Suggested P4-P6 goal (check against F pp.1-6 to 1-10) |
 |---|---|

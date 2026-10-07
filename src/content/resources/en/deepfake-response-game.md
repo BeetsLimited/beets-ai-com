@@ -16,7 +16,11 @@ date: 2026-10-08
 description: "A classroom game in which pupils receive a fictional 'school' message, sort the pause–check–report decision cards, and learn from the teacher's debrief why a fake can sound convincing."
 downloads: ["/files/en/deepfake-response-game.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.

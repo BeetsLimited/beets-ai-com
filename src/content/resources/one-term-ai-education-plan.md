@@ -17,7 +17,11 @@ date: 2026-10-08
 description: "一張可編輯的一學期 AI 教育規劃範本：兩項試點活動、負責人、日期與檢討證據，附一個完成的虛構學校示例，供校長及課程統籌直接套用。"
 downloads: ["/files/one-term-ai-education-plan.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **草稿 — 待教育工作者審閱（Henry）。** 未填 `reviewer` 前不會發佈。

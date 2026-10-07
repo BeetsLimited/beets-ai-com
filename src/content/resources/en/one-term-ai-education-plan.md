@@ -16,7 +16,11 @@ date: 2026-10-08
 description: "An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy."
 downloads: ["/files/en/one-term-ai-education-plan.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.

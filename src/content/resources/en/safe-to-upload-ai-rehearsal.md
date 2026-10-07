@@ -16,7 +16,11 @@ date: 2026-10-07
 description: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps."
 downloads: ["/files/en/safe-to-upload-exercise.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.

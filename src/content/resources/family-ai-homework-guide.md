@@ -17,7 +17,11 @@ date: 2026-10-08
 description: "一份供家庭在家使用、毋須老師在場的指引：三個 15–20 分鐘的親子活動、一份家庭功課協議，以及一封可供學校修改的家長通告。"
 downloads: ["/files/family-ai-homework-guide.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **草稿 — 待教育工作者審閱（Henry）。** 未填 `reviewer` 前不會發佈。

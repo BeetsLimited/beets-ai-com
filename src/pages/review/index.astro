@@ -69,8 +69,12 @@ const rows = addresses.map((address) => {
     enFile: printable(en),
     checks: RESOURCE_CHECKLISTS[address] ?? EVERY_RESOURCE_CHECKLIST,
     flagged: [...flagged(zh, "中文版"), ...flagged(en, "English")],
+    published: !lead?.data.draft,
   };
 });
+
+const liveCount = rows.filter((row) => row.published).length;
+const draftCount = rows.length - liveCount;
 
 const byTheme = themesInOrder(ZH)
   .map((theme) => ({
@@ -86,13 +90,14 @@ const byTheme = themesInOrder(ZH)
   <div class="notice">
     <strong>此區域不對外發佈，亦不會被搜尋引擎收錄。</strong>
     <p>
-      以下 {addresses.length} 份資源已完成草擬，每份均有<strong>繁體中文版</strong>及<strong>英文版</strong>。
-      兩個版本都<strong>未在任何正式網址發佈</strong>：資源只有在填上事實核實者及教育工作者審閱人之後才會上線。
+      以下 {addresses.length} 份資源，每份均有<strong>繁體中文版</strong>及<strong>英文版</strong>：已發佈{" "}
+      <strong>{liveCount}</strong> 份、審閱中（草稿，未在任何正式網址發佈）<strong>{draftCount}</strong> 份。
+      草稿只有在填上事實核實者及教育工作者審閱人之後才會上線。
     </p>
     <p class="muted">
       Not public, excluded from search engines. {addresses.length} resources, each with a
-      Traditional Chinese and an English edition. None is live at its public URL: a resource
-      only goes live once a named fact-checker and educator reviewer are recorded.
+      Traditional Chinese and an English edition: {liveCount} live, {draftCount} in review. A
+      draft only goes live once a named fact-checker and educator reviewer are recorded.
     </p>
   </div>
 
@@ -150,7 +155,14 @@ const byTheme = themesInOrder(ZH)
             <ul>
               <li>
                 繁體中文版：{" "}
-                <a href={reviewHref(row.address, ZH)}>頁面</a>
+                {row.published ? (
+                  <a href={publicHref(row.address, ZH)}>已發佈頁面</a>
+                ) : (
+                  <>
+                    <a href={reviewHref(row.address, ZH)}>頁面</a>
+                    <span class="meta"> · 正式網址 {publicHref(row.address, ZH)}</span>
+                  </>
+                )}
                 {row.zhFile ? (
                   <>
                     {" · "}
@@ -159,11 +171,17 @@ const byTheme = themesInOrder(ZH)
                 ) : row.zhFile === undefined ? (
                   <span class="meta"> · 附件尚未製作</span>
                 ) : null}
-                <span class="meta"> · 正式網址 {publicHref(row.address, ZH)}</span>
               </li>
               <li>
                 English edition:{" "}
-                <a href={reviewHref(row.address, EN)}>page</a>
+                {row.published ? (
+                  <a href={publicHref(row.address, EN)}>live page</a>
+                ) : (
+                  <>
+                    <a href={reviewHref(row.address, EN)}>page</a>
+                    <span class="meta"> · public URL {publicHref(row.address, EN)}</span>
+                  </>
+                )}
                 {row.enFile ? (
                   <>
                     {" · "}
@@ -172,7 +190,6 @@ const byTheme = themesInOrder(ZH)
                 ) : row.enFile === undefined ? (
                   <span class="meta"> · file not made yet</span>
                 ) : null}
-                <span class="meta"> · public URL {publicHref(row.address, EN)}</span>
               </li>
             </ul>
 

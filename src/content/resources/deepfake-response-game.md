@@ -17,7 +17,11 @@ date: 2026-10-08
 description: "初中課室遊戲：學生收到一則虛構的「學校」訊息，用「暫停、核實、舉報」決策卡排序應對步驟，並從解說中了解深偽訊息為何令人信服。"
 downloads: ["/files/deepfake-response-game.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **草稿 — 待教育工作者審閱（Henry）。** 未填 `reviewer` 前不會發佈。

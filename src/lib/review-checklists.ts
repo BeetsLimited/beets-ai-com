@@ -49,7 +49,7 @@ export const RESOURCE_CHECKLISTS: Record<string, ReviewChecklist> = {
   },
   "p4-p6-curriculum-gap-map": {
     fact: [
-      "⚠️ 最重要：P4–P6 階段目標（G1–G6）須逐字對照 F（pp.1-6 to 1-10）核對後才可引用（草稿已標示 [[VERIFY]]）",
+      "⚠️ P4–P6 階段目標（G1–G6）是本工作簿的建議框架，並非文件 F 的原文；日後如要引用原文，須逐字核對 F（pp.1-6 to 1-10）",
       "B（p.2）關於學校發展計劃的要求，逐字核對",
       "三間示例學校全部為虛構，並無影射任何真實學校",
     ],

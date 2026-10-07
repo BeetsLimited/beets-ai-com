@@ -16,7 +16,11 @@ date: 2026-10-08
 description: "A guide families can use at home with no teacher present: three 15-20 minute parent-and-child activities, a family homework agreement, and a parent notice a school can edit and send home."
 downloads: ["/files/en/family-ai-homework-guide.html"]
 feedback: true
-draft: true
+factChecked: true
+factCheckedBy: "Billy Yeung"
+factCheckedOn: 2026-10-08
+reviewer: "Billy Yeung"
+draft: false
 ---
 
 > ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
