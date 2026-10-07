@@ -23,8 +23,6 @@ reviewer: "Billy Yeung"
 draft: false
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Teachers want to hand worksheets, reports or class photos to an AI tool for marking or organising, but these files often contain **pupils' names, student numbers, class, contact details, photos, or medical / special educational needs records**. Once uploaded, this information can leave the school's control.

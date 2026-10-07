@@ -19,8 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Many primary teachers (especially non-ICT subject teachers who also support learning diversity) want to use AI with their class once, but do not know where to start: they worry the tool will fail, the class will get out of hand, or pupils with learning needs will fall behind. This kit needs **no trainer present** — a teacher can run the full 40-minute lesson just by following it.

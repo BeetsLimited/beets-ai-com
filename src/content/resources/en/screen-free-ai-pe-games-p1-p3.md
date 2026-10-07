@@ -19,8 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Young pupils often treat "AI" as meaning "anything electronic" or "any machine", and they do not know that AI learns from examples. If a wrong idea is fixed at the start, it is harder later to tell the limits and risks of AI apart.

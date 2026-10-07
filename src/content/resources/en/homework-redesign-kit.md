@@ -19,8 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Now that AI is common, an assignment that only asks students to "find the answer" can be completed by copying a classmate, searching online, or handing it straight to an AI. Teachers mark only the finished product, and cannot see what the student understood or where they got stuck.

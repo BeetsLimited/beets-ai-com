@@ -21,11 +21,13 @@ interface Props {
 const { entry, lang, reviewMode = false, related = [] } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+/** The draft warning follows the `draft` flag, so publishing removes it. */
+const showDraftNotice = reviewMode || d.draft;
 ---
 
 <article>
   {
-    reviewMode ? (
+    showDraftNotice ? (
       <div class="notice">
         <strong>⚠️ 草稿 · 未經審閱 — DRAFT, NOT REVIEWED</strong>
         <p>

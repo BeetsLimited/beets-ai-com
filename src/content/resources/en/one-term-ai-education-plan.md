@@ -23,8 +23,6 @@ reviewer: "Billy Yeung"
 draft: false
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Principals and curriculum coordinators know they are expected to write digital and AI education into their school plan, but the hard part is the step from the framework to an executable term plan: how to do two genuinely achievable things in one term, and know afterwards whether they worked.

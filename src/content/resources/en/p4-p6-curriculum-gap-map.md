@@ -23,8 +23,6 @@ reviewer: "Billy Yeung"
 draft: false
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Many schools already teach AI-literacy-related content in different subjects — General Studies teaches "checking a source", ICT teaches "not giving away personal data", Chinese Language teaches "telling true from false information" — but these scattered activities sit in different subjects, and no one knows which goals are already covered, which are repeated, and which are not taught at all.

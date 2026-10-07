@@ -23,8 +23,6 @@ reviewer: "Billy Yeung"
 draft: false
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 When a child wants to use AI for homework, parents are often unsure whether to allow it or stop it: when help is acceptable, what to ask, and what to do with the answer once it arrives. This guide needs no teacher present. It lets a parent and child build one simple, consistent habit at home through three 15-20 minute activities: **try it yourself first, ask for help (not answers), check before you use**. It also includes a family homework agreement and a parent notice a school can edit.

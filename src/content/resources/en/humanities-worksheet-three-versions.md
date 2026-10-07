@@ -19,8 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Same topic, same learning objective — but the pupils in a class have different abilities and needs. Some can compare and reason directly, some need sentence frames and a word bank, and some need pictures and a hands-on sorting task to stay engaged. Teachers often end up re-making three worksheets by hand.

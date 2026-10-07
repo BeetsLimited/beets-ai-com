@@ -19,8 +19,6 @@ draft: true
 description: "A reusable process sheet that records a student's first attempt, the AI prompt, the checking results, revisions, and final explanation, so teachers can see the student's thinking without having to search through the entire conversation log."
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 When students use AI to complete their work, teachers often see only the finished product — they cannot tell what the student thought for themselves, what the AI contributed, or whether the student checked anything. Asking students to hand over the entire conversation log is neither practical nor good for privacy.

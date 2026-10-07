@@ -163,6 +163,35 @@ describe("English content is English", () => {
   });
 });
 
+describe("published content", () => {
+  const published = entries.filter((entry) => entry.fm.draft === "false");
+
+  it("has at least one published resource once publishing has started", () => {
+    // Guards the filter itself: if `draft:` were written in a form this parser
+    // does not read, this would silently check nothing.
+    expect(published.length).toBeGreaterThan(0);
+  });
+
+  it("carries no draft warning in its body", () => {
+    // The warning is rendered by ResourceView from the `draft` flag. A warning
+    // written into the body stays there after publication — which is how five
+    // live pages came to announce themselves as unpublished drafts.
+    for (const entry of published) {
+      expect(/待教育工作者審閱|awaiting educator review|DRAFT, NOT REVIEWED/.test(entry.body), entry.id).toBe(
+        false,
+      );
+    }
+  });
+
+  it("records who reviewed and fact-checked it", () => {
+    for (const entry of published) {
+      expect(entry.fm.reviewer, `${entry.id} needs a named reviewer`).toBeTruthy();
+      expect(entry.fm.factChecked, `${entry.id} needs factChecked: true`).toBe("true");
+      expect(entry.fm.factCheckedBy, `${entry.id} needs factCheckedBy`).toBeTruthy();
+    }
+  });
+});
+
 describe("English printables", () => {
   const files = existsSync(EN_PRINTABLES)
     ? readdirSync(EN_PRINTABLES).filter((name) => name.endsWith(".html"))

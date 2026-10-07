@@ -19,8 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 After pupils use AI for homework, the hardest thing for a teacher to see is often not whether the answer is right, but whether the pupil actually thought about it. Reading through a chat history is neither practical nor good for privacy.

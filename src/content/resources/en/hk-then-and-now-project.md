@@ -19,8 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 "Hong Kong then and now" is a popular local history project, but the usual version asks every pupil to go home and interview a relative. Not every pupil can or should do that: pupils from newly arrived or cross-border families may have relatives unfamiliar with old Hong Kong, and looked-after children, pupils who have been bereaved, and families with language barriers can all find the task difficult or distressing.

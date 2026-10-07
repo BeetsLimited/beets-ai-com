@@ -19,7 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting review by an educator (Henry).**
 > Needs particular review: **the number series must be verified against official Census and Statistics Department data** (see the "For the reviewer" section below).
 > It will not be published until a `reviewer` is set.
 

@@ -23,8 +23,6 @@ reviewer: "Billy Yeung"
 draft: false
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 On social platforms and in group chats, teenagers can receive a voice note or short clip that claims to be from their school — the office chasing a payment, a form teacher asking for personal details. Deepfake technology makes this kind of message **harder and harder to spot just by whether it sounds or looks right**.

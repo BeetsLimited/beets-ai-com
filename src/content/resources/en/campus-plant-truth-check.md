@@ -19,8 +19,6 @@ feedback: true
 draft: true
 ---
 
-> ⚠️ **Draft — awaiting educator review (Henry).** Not published until `reviewer` is set.
-
 ## What this solves
 
 Students will soon photograph a plant and ask an AI, "What is this?" The real skill is not memorising plant names, but **observing with your own eyes first, then using that observation to check the AI's answer**.
