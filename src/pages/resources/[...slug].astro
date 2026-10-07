@@ -1,0 +1,98 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("content", ({ data }) => !data.draft);
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<Base title={`${d.title} — BEETS AI`} description={d.description} lang={d.lang}>
+  <article>
+    <p class="meta">
+      Theme {d.theme} · {d.stage} · {d.subject}
+      {d.sourceIdea ? ` · 原始構思 ${d.sourceIdea}` : ""}
+    </p>
+    <h1>{d.title}</h1>
+    {d.title_en ? <p class="meta">{d.title_en}</p> : null}
+
+    <p>{d.description}</p>
+
+    <dl class="meta">
+      {d.prepTime ? (
+        <>
+          <dt>準備時間 Preparation</dt>
+          <dd>{d.prepTime}</dd>
+        </>
+      ) : null}
+      {d.equipment ? (
+        <>
+          <dt>所需器材 Equipment</dt>
+          <dd>{d.equipment}</dd>
+        </>
+      ) : null}
+      <dt>版本 Version</dt>
+      <dd>{d.version}</dd>
+      {d.reviewer ? (
+        <>
+          <dt>審閱 Reviewer</dt>
+          <dd>{d.reviewer}</dd>
+        </>
+      ) : null}
+    </dl>
+
+    <Content />
+
+    <section>
+      <h2>下載 Downloads</h2>
+      {
+        d.downloads.length === 0 ? (
+          <p>檔案準備中。Files are being prepared.</p>
+        ) : (
+          <ul>
+            {d.downloads.map((file) => (
+              <li>
+                <a href={file}>下載 Download</a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+
+    <section>
+      <h2>與 EDB 框架的關係 How this relates to the EDB framework</h2>
+      <ul>
+        {d.sources.map((source) => (
+          <li>{source}</li>
+        ))}
+      </ul>
+      <p class="meta">
+        官方文件：
+        <a
+          href="https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html"
+          rel="noopener"
+        >
+          EDB 數字教育 Digital Education Blueprint
+        </a>
+      </p>
+    </section>
+
+    {
+      d.feedback ? (
+        <section>
+          <h2>意見 Feedback</h2>
+          <p>你用過這份資源嗎？歡迎告訴我們需要改善的地方，或建議下一份資源。</p>
+        </section>
+      ) : null
+    }
+  </article>
+</Base>

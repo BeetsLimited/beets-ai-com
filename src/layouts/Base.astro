@@ -1,0 +1,119 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+}
+
+const {
+  title,
+  description = "香港教師 AI 課堂實用資源：按學科、級別和具體教學需要，免費取得可編輯工作紙、教案及校本規劃範例。",
+  lang = "zh-HK",
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+  </head>
+  <body>
+    <a class="skip" href="#main">跳至內容 Skip to content</a>
+
+    <header>
+      <a class="brand" href="/">BEETS AI</a>
+      <nav>
+        <a href="/resources/">免費資源 Free resources</a>
+        <a href="/about/">關於 About</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer>
+      <p>
+        獨立資源計劃，並非 EDB 官方文件。資源經教育工作者審閱，並標明來源。
+      </p>
+      <p>
+        An independent resource initiative — not an official EDB publication.
+        Materials are educator-reviewed and source-referenced.
+      </p>
+    </footer>
+
+    <style>
+      :root {
+        color-scheme: light dark;
+        --fg: #16202a;
+        --muted: #5a6b7b;
+        --bg: #ffffff;
+        --accent: #0b6e4f;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #eef2f6;
+          --muted: #9fb0c0;
+          --bg: #0f1720;
+          --accent: #4ec79b;
+        }
+      }
+      body {
+        margin: 0 auto;
+        max-width: 48rem;
+        padding: 1.5rem;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.7 system-ui, -apple-system, "Noto Sans TC", sans-serif;
+      }
+      .skip {
+        position: absolute;
+        left: -9999px;
+      }
+      .skip:focus {
+        left: 1rem;
+        top: 1rem;
+        background: var(--bg);
+        padding: 0.5rem;
+      }
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: baseline;
+        justify-content: space-between;
+        border-bottom: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
+        padding-bottom: 0.75rem;
+      }
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      nav a {
+        margin-left: 1rem;
+      }
+      a {
+        color: var(--accent);
+      }
+      footer {
+        margin-top: 3rem;
+        border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+      h1 {
+        line-height: 1.25;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+    </style>
+  </body>
+</html>

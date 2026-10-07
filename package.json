@@ -1,0 +1,25 @@
+{
+  "name": "beets-ai-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BEETS AI — free Hong Kong AI teaching-resource library (beets-ai.com)",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.6",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.3"
+  }
+}
