@@ -9,41 +9,92 @@ stage: "P4"
 subject: "數學 / Mathematics"
 sourceIdea: "#11"
 sources: ["E, p.6"]
-prepTime: "10 min"
-equipment: "投影 / 打印"
+prepTime: "1 節（約 35–40 分鐘）"
+equipment: "投影；學生工作紙列印（方格紙或試算表）"
 author: "BeetsBot"
 version: "0.1"
 date: 2026-10-07
-description: "檢查 AI 生成的香港人口折線圖解釋，找出錯誤、核對官方來源，再畫出正確折線圖。"
-downloads: []
+description: "學生核對一段 AI 生成的香港人口解釋：找出沒有來源的數字、發現「每年都上升」的說法有誤，並用政府統計處的官方數據重畫正確的折線圖。"
+downloads: ["/files/p4-hk-population-graph-worksheet.html"]
 feedback: true
 draft: true
 ---
 
-> ⚠️ **模板／未發佈 — TEMPLATE / UNPUBLISHED.**
-> This page shows the required shape of a resource. It is excluded from every
-> build route while `draft: true`. To publish, an educator (Henry) reviews the
-> content, then the frontmatter drops `draft: true` and gains `reviewer: "<name>"`.
-> The content-collection schema enforces that gate at build time.
+> ⚠️ **草稿 — 待教育工作者審閱（Henry）。**
+> 特別需要審閱：**數字序列須以政府統計處官方數據核實**（見下方「給審閱者」一節）。
+> 未填 `reviewer` 前不會發佈。
+
+## 這個資源解決什麼問題 What this solves
+
+學生很快就會用 AI 取得資料。真正的能力，是**知道要問 AI 的來源，並且真的去核對**。
+
+本課用一個貼近生活的題目（香港人口），讓學生親手發現 AI 的一段解釋**有真有假**，再從官方來源取得數據，重新畫出正確的折線圖。
 
 ## 學習目標 Learning objectives
 
-- 學生能核對 AI 生成的數據描述與官方來源。
-- 學生能指出折線圖中與來源不符的地方。
-- 學生能以證據說明判斷，而不是憑感覺。
+學生能夠：
+
+1. 向 AI 追問資料來源，並判斷回答有沒有指出來源。
+2. 把 AI 提供的數字與政府統計處的官方數據逐一對照。
+3. 指出 AI 解釋中**哪一句是錯的**，並用證據說明。
+4. 用官方數據重畫折線圖，並描述趨勢。
 
 ## 教學步驟 Teaching steps
 
-1. 派發工作紙，先請學生獨立閱讀 AI 生成的解釋。
-2. 請學生到官方來源（政府統計處）核對最少三個數據點。
-3. 以小組形式找出 AI 解釋中與來源不符之處，並寫下證據。
-4. 全班核對答案，並重畫正確的折線圖。
+1. **引起動機（5 分鐘）** — 投影「AI 的解釋」（見下載檔），提問：這段話可信嗎？你會怎樣檢查？
+2. **訂立核對方法（5 分鐘）** — 共同列出核對步驟：找來源 → 對數字 → 看說法是否被數據支持。
+3. **小組核對（15 分鐘）** — 學生使用政府統計處的官方數據核對每一句。
+4. **重畫折線圖（10 分鐘）** — 用官方數據繪畫，並用一句話描述趨勢。
+5. **總結（5 分鐘）** — 討論：如果 AI 的數字對了一半，為什麼仍然危險？
 
-## 答案 Answer key
+## 核對用官方來源 Official source for checking
 
-_（待教育工作者審閱填寫 — to be completed during educator review.）_
+**政府統計處（Census and Statistics Department）**
+人口統計數據表：**Table 110-01001（按年的人口數字）**
+<https://www.censtatd.gov.hk/en/web_table.html?id=110-01001>
+
+> 若連結有更新，可從政府統計處網站 → 統計數據 → 人口 → 人口數字 找到對應的數據表。
+
+**已核實的參考數字（可作對照起點）**
+
+| 年份 | 香港人口 | 來源 |
+|---|---|---|
+| 2021（人口普查） | **7,413,070** | 政府統計處 2021 年人口普查 |
+
+## 下載檔（含 AI 的解釋、核對表、答案） Downloads
+
+**[P4 香港人口折線圖工作紙（可列印）](/files/p4-hk-population-graph-worksheet.html)**
+
+## 答案要點 Answer key — 錯在哪裡
+
+AI 那段解釋有三處問題：
+
+1. **沒有來源。** 通篇沒有說明數字從何而來 —— 這是第一個警號。
+2. **「每年都上升」的講法與數據不符。** 香港人口並非逐年單向上升；核對官方數據後，學生會找到有下跌的年份。這是本課最重要的發現。
+3. **對未來年份的數字沒有依據。** AI 把估算講成事實，混淆了「已發生」與「預測」。
+
+同時要讓學生注意：**AI 說對的部分（2021 年人口數字）不代表整段話可信。** 一段話對了一半，仍可能誤導。
+
+## 給審閱者（Henry）For the reviewer
+
+請在發佈前確認：
+
+```
+□ AI 解釋中的「2021 = 7,413,070」與政府統計處 2021 年人口普查一致
+□ 工作紙上要求學生填寫的年份序列，與 Table 110-01001 現行版本一致
+□ 官方來源連結仍然有效（censtatd.gov.hk 會更新連結）
+□ 「人口並非逐年上升」這個結論，與現行官方數據仍然成立
+□ 課堂時間（35–40 分鐘）是否符合 P4 實際情況
+```
 
 ## 與 EDB 框架的關係 How this relates to the EDB framework
 
-本資源對應 **E, p.6**（應用示例）：以城市人口折線圖為例，要求學生向 AI 追問來源，
-並以可靠網站（如政府統計處）核對，屬於「核實 AI 輸出」的課堂實踐。
+本資源對應 **E, p.6（應用示例）**：以城市人口折線圖為例，要求學生向 AI 追問來源，並用可靠網站（如政府統計處）核對 AI 的輸出。
+
+參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+
+> 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
+
+## 意見 Feedback
+
+你用過這份工作紙嗎？學生最常在哪一步卡住？歡迎告訴我們需要調整的地方。
