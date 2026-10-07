@@ -109,7 +109,7 @@ const ZH_HK = {
   downloadNote: "（可列印，繁體中文版）",
   edbHeading: "與 EDB 框架的關係",
   edbOfficialDoc: "官方文件：",
-  debpLinkText: "EDB 數字教育藍圖",
+  debpLinkText: "《中小學數字教育發展藍圖》",
   feedbackHeading: "意見",
   feedbackBody: "你用過這份資源嗎？歡迎告訴我們需要改善的地方，或建議下一份資源。",
 } as const;
@@ -320,7 +320,7 @@ export const THEME_INFO: Record<Locale, Record<Theme, { audience: string; need: 
   "zh-HK": {
     A: {
       audience: "校長、課程主任及科主任",
-      need: "把人工智能素養框架變成切實可行的學期規劃，並看清課程覆蓋與缺口。",
+      need: "把人工智能素養學習架構變成切實可行的學期規劃，並看清課程覆蓋與缺口。",
     },
     B: {
       audience: "教師、家校協調人員及家長",

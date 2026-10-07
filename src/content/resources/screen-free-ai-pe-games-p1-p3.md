@@ -121,7 +121,7 @@ draft: true
 
 ## 與 EDB 框架的關係
 
-本資源對應 **來源 E（EDB 人工智能教育示例，p.4）** 及 **來源 F（EDB 人工智能素養學習框架，p.1-8）**：兩者都涵蓋初小階段以體能活動及不插電方式認識 AI 的經驗。
+本資源對應 **來源 E（《中小學人工智能素養學習架構（應用場景示例）》，p.4）** 及 **來源 F（《中小學人工智能素養學習架構》，p.1-8）**：兩者都涵蓋初小階段以體能活動及不插電方式認識 AI 的經驗。
 
 參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 

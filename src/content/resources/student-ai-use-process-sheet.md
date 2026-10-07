@@ -6,7 +6,7 @@ lang: "zh-HK"
 type: "resource"
 theme: "C"
 stage: "P4-P6"
-subject: "全科 / Cross-curricular"
+subject: 全科/跨科
 sourceIdea: "#4"
 sources: ["F, p.1-13", "G, p.2-8"]
 prepTime: "10 分鐘說明 + 課業時間"
@@ -72,8 +72,8 @@ draft: true
 
 本資源對應：
 
-- **F（《人工智能素養學習框架》p.1-13）**：重視歷程與真實評估，而非只評最終結果。
-- **G（《在教學中使用人工智能的指引》p.2-8）**：建議以口頭提問及提交思考歷程的方式，檢視學生的學習與 AI 使用情況。
+- **F（《中小學人工智能素養學習架構》p.1-13）**：重視歷程與真實評估，而非只評最終結果。
+- **G（《中小學應用人工智能教學指南》p.2-8）**：建議以口頭提問及提交思考歷程的方式，檢視學生的學習與 AI 使用情況。
 
 參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 

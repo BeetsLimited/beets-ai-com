@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { readdirSync, readFileSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, resolve, relative } from "node:path";
 
 /**
@@ -9,10 +9,26 @@ import { join, resolve, relative } from "node:path";
  * counterpart in the other language — otherwise the switch lands on a 404.
  * And an English page must not contain Chinese text: the whole point of the
  * change is that a reader sees one language at a time.
+ *
+ * The printables are checked here too, because the post-build language gate
+ * treats `files/` as out of scope — and an English worksheet is exactly where a
+ * Chinese sentence would otherwise slip through unnoticed.
  */
 
 const CONTENT = resolve(import.meta.dirname, "../src/content/resources");
+const EN_PRINTABLES = resolve(import.meta.dirname, "../public/files/en");
 const CJK = /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/;
+/** Stricter: printables must carry no full-width forms or CJK punctuation either. */
+const WIDE_CJK = /[\u3000-\u303f\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]/;
+
+/** Descriptive stand-ins used before the official EDB titles were verified. */
+const PLACEHOLDER_TITLES = [
+  "the EDB AI literacy learning framework",
+  "the EDB guidelines on using AI in teaching",
+  "the EDB examples of AI in education",
+  "the EDB examples of AI applications in education",
+  "the Digital Education Blueprint leaflet",
+];
 
 function markdownFiles(dir: string): string[] {
   const out: string[] = [];
@@ -51,14 +67,14 @@ const entries = markdownFiles(CONTENT).map((path) => {
   };
 });
 
+type Entry = (typeof entries)[number];
+
 const zhEntries = entries.filter((entry) => entry.fm.lang === "zh-HK");
 const enEntries = entries.filter((entry) => entry.fm.lang === "en");
 
-function counterpartOf(entry: (typeof entries)[number]): (typeof entries)[number] | undefined {
-  if (entry.fm.lang === "en") {
-    return zhEntries.find((other) => other.fm.address === entry.fm.address);
-  }
-  return enEntries.find((other) => other.fm.address === entry.fm.address);
+function counterpartOf(entry: Entry): Entry | undefined {
+  const pool = entry.fm.lang === "en" ? zhEntries : enEntries;
+  return pool.find((other) => other.fm.address === entry.fm.address);
 }
 
 describe("content language coverage", () => {
@@ -79,8 +95,8 @@ describe("content language coverage", () => {
   });
 
   it("pairs every Traditional Chinese entry with an English one (and vice versa)", () => {
-    const missingEn = zhEntries.filter((entry) => !counterpartOf(entry)).map((e) => e.id);
-    const missingZh = enEntries.filter((entry) => !counterpartOf(entry)).map((e) => e.id);
+    const missingEn = zhEntries.filter((entry) => !counterpartOf(entry)).map((entry) => entry.id);
+    const missingZh = enEntries.filter((entry) => !counterpartOf(entry)).map((entry) => entry.id);
     expect(missingEn, "zh entries with no English counterpart").toEqual([]);
     expect(missingZh, "en entries with no Traditional Chinese counterpart").toEqual([]);
   });
@@ -95,6 +111,13 @@ describe("content language coverage", () => {
     }
   });
 
+  it("documents the English title on the Traditional Chinese entry", () => {
+    for (const entry of enEntries) {
+      const zh = counterpartOf(entry);
+      expect(zh!.fm.title_en, entry.id).toBe(entry.fm.title);
+    }
+  });
+
   it("gives each edition its own language's printable", () => {
     // The Chinese page offers the Chinese file, the English page the English
     // one — same filenames, different folder. Anything else would either show a
@@ -104,39 +127,25 @@ describe("content language coverage", () => {
       expect(en.fm.downloads, zh.id).toBe(zh.fm.downloads.replace(/\/files\//g, "/files/en/"));
     }
   });
-
-  it("documents the English title on the Traditional Chinese entry", () => {
-    for (const entry of enEntries) {
-      const zh = counterpartOf(entry);
-      expect(zh!.fm.title_en, entry.id).toBe(entry.fm.title);
-    }
-  });
 });
 
 describe("English content is English", () => {
-  it("names EDB documents by their official English titles", () => {
-    // The titles were verified on EDB's own publications page. Descriptive
-    // placeholders were the interim state while that was being checked; they
-    // must not come back, because a made-up title reads as authoritative.
-    const placeholders = [
-      "the EDB AI literacy learning framework",
-      "the EDB guidelines on using AI in teaching",
-      "the EDB examples of AI in education",
-      "the EDB examples of AI applications in education",
-      "the Digital Education Blueprint leaflet",
-    ];
-    for (const entry of enEntries) {
-      for (const phrase of placeholders) {
-        expect(entry.raw.includes(phrase), `${entry.id} still says "${phrase}"`).toBe(false);
-      }
-    }
-  });
-
   it("keeps Chinese characters out of English entries", () => {
     for (const entry of enEntries) {
       expect(CJK.test(entry.fm.title), `${entry.id} title`).toBe(false);
       expect(CJK.test(entry.fm.description), `${entry.id} description`).toBe(false);
       expect(CJK.test(entry.body), `${entry.id} body`).toBe(false);
+    }
+  });
+
+  it("names EDB documents by their official English titles", () => {
+    // The titles were verified on EDB's own publications page. Descriptive
+    // placeholders were the interim state while that was being checked; they
+    // must not come back, because an invented title reads as authoritative.
+    for (const entry of enEntries) {
+      for (const phrase of PLACEHOLDER_TITLES) {
+        expect(entry.raw.includes(phrase), `${entry.id} still says "${phrase}"`).toBe(false);
+      }
     }
   });
 
@@ -150,6 +159,41 @@ describe("English content is English", () => {
           /[A-Za-z]{2,}\s+[A-Za-z]{2,}/,
         );
       }
+    }
+  });
+});
+
+describe("English printables", () => {
+  const files = existsSync(EN_PRINTABLES)
+    ? readdirSync(EN_PRINTABLES).filter((name) => name.endsWith(".html"))
+    : [];
+  const read = (name: string) => readFileSync(join(EN_PRINTABLES, name), "utf8");
+
+  it("has at least one", () => {
+    expect(files.length).toBeGreaterThan(0);
+  });
+
+  it("contains no Chinese or full-width characters", () => {
+    for (const name of files) {
+      const match = read(name).match(WIDE_CJK);
+      expect(match?.[0] ?? null, name).toBeNull();
+    }
+  });
+
+  it("names EDB documents by their official English titles", () => {
+    for (const name of files) {
+      const html = read(name);
+      for (const phrase of PLACEHOLDER_TITLES) {
+        expect(html.includes(phrase), `${name} still says "${phrase}"`).toBe(false);
+      }
+    }
+  });
+
+  it("is print-ready and marked as English", () => {
+    for (const name of files) {
+      const html = read(name);
+      expect(html.includes("@media print"), `${name} has no print rules`).toBe(true);
+      expect(html, `${name} is not marked lang="en"`).toMatch(/lang="en"/);
     }
   });
 });

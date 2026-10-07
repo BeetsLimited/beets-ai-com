@@ -5,7 +5,7 @@ lang: "en"
 type: "resource"
 theme: "B"
 stage: "P4-P6"
-subject: "Cross-curricular (incl. digital literacy)"
+subject: "Cross-curricular"
 sourceIdea: "#8"
 sources: ["G, pp.2-4 and 2-9"]
 prepTime: "45 min (can be split across two lessons)"

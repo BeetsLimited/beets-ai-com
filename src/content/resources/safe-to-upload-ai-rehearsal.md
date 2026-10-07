@@ -6,7 +6,7 @@ lang: "zh-HK"
 type: "resource"
 theme: "B"
 stage: "P4-P6"
-subject: "全科 / Cross-curricular（含數位教育）"
+subject: 全科/跨科
 sourceIdea: "#8"
 sources: ["G, pp.2-4 and 2-9"]
 prepTime: "45 分鐘（可分成兩節）"
@@ -74,7 +74,7 @@ draft: true
 
 ## 與 EDB 框架的關係
 
-本資源對應 **G（《在教學中使用人工智能的指引》，pp.2-4 and 2-9）**：文件要求妥善處理學習數據，並在把學生作品上載供 AI 批改前，先移除可識別的部分。
+本資源對應 **G（《中小學應用人工智能教學指南》，pp.2-4 and 2-9）**：文件要求妥善處理學習數據，並在把學生作品上載供 AI 批改前，先移除可識別的部分。
 
 參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
