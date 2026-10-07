@@ -148,7 +148,15 @@ const liveResources = (
       </div>
     </footer>
 
-    <style>
+    <!--
+      The site's design system, deliberately global: this block is the layout's
+      contribution to every page, and Astro scopes component styles by default.
+      Without `is:global`, the class rules here never reach markup rendered by the
+      views (which pass through a slot with their own scope), so buttons, cards
+      and callouts silently went unstyled while inherited properties such as the
+      body font still applied — a confusing half-styled result.
+    -->
+    <style is:global>
       /*
         Brand tokens, taken from beets3d.com: brand red #E10707 as the primary
         accent, brand blue #116DFF secondary, light grey surfaces (#F3F3F3 and
