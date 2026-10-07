@@ -55,11 +55,20 @@ const ZH_HK = {
   footerTerms: "使用條款及私隱",
   footerFeedback: "意見及建議",
 
-  homeTitle: "香港教師 AI 課堂實用資源",
+  homeTitle: "香港免費 AI 教育資源",
   homeDescription:
-    "香港教師 AI 課堂實用資源：按學科、級別和具體教學需要，免費取得可編輯工作紙、教案及校本規劃範例。",
+    "香港免費 AI 教育資源：教師、家長及學生都可下載經審閱的工作紙、教案及校本規劃範例，附答案、來源與審閱記錄。",
   homeLede:
-    "按學科、級別和具體教學需要，免費取得可編輯的工作紙、教案及校本規劃範例。下載不需註冊。",
+    "BEETS AI 是 Beets Limited 為香港教師、家長和學生設立的免費 AI 教育資源庫。我們相信學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術，所以我們把教師真正需要的教案、工作紙和校本規劃範例，做成下載即可使用的教材——全部免費，下載不需註冊。",
+  homeIntro2:
+    "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件、審閱人與版本，並說明它為你解決什麼問題。",
+  homeEyebrow: "教師、家長、學生都合用 · 下載不需註冊",
+  topbarPrefix: "免費資源持續上線：",
+  topbarSuffix: "份已可下載，全部免費、免註冊。",
+  homeAudienceEyebrow: "你想尋找甚麼？",
+  homeAudienceHeading: "由需要出發",
+  homeThemesEyebrow: "免費資源",
+  homeNewestEyebrow: "最新上線",
   homeEmptyTitle: "資源陸續上線。",
   homeEmptyBody: "首批資源正在審閱中，通過事實核實及教育工作者審閱後便會發佈。",
   homeEmptyCta: "了解編輯流程",
@@ -130,11 +139,20 @@ const EN: Record<UIKey, string> = {
   footerTerms: "Reuse and privacy",
   footerFeedback: "Feedback and requests",
 
-  homeTitle: "Practical AI classroom resources for Hong Kong teachers",
+  homeTitle: "Free AI education resources for Hong Kong",
   homeDescription:
-    "Free, educator-reviewed Hong Kong AI teaching resources — by subject, learning stage and specific classroom task.",
+    "Free AI education resources for Hong Kong: teachers, parents and students can download reviewed worksheets, lesson plans and school-planning examples, with answer keys, sources and a review record.",
   homeLede:
-    "Download editable worksheets, lesson plans and school-planning examples by subject, stage and classroom task. No registration.",
+    "BEETS AI is a free library of AI education resources that Beets Limited builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",
+  homeIntro2:
+    "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on, the person who reviewed it and its version, and says what problem it solves.",
+  homeEyebrow: "For teachers, parents and students · no registration to download",
+  topbarPrefix: "Free resources are going live:",
+  topbarSuffix: "ready to download — free, no registration.",
+  homeAudienceEyebrow: "What are you looking for?",
+  homeAudienceHeading: "Start from what you need",
+  homeThemesEyebrow: "Free resources",
+  homeNewestEyebrow: "Just published",
   homeEmptyTitle: "Resources are on the way.",
   homeEmptyBody:
     "The first batch is in review — fact-check, educator sign-off and link checking, then it goes live.",
