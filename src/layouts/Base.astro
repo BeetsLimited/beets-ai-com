@@ -1,30 +1,69 @@
 ---
+import {
+  DEFAULT_LOCALE,
+  HTML_LANG,
+  alternateLinks,
+  alternatePath,
+  localizePath,
+  resourceIndexPath,
+  t,
+  type Locale,
+} from "../lib/i18n";
+import LanguageSwitch from "../components/LanguageSwitch.astro";
+
+/**
+ * One page, one language.
+ *
+ * `lang` decides every chrome string (skip link, navigation, footer) and the
+ * language the search engines are told about. When `multilingual` is on, the
+ * page also advertises both editions with `hreflang` and carries the language
+ * selector. Internal areas (the review hub, which stays bilingual on purpose)
+ * switch it off, so no `hreflang` ever points at a page that does not exist.
+ */
 interface Props {
   title: string;
   description?: string;
-  lang?: string;
+  lang?: Locale;
   /** Keep the page out of search engines (internal review areas). */
   noindex?: boolean;
+  /** Advertise the other language and show the selector. */
+  multilingual?: boolean;
+  /** Where the selector goes, when it is not the same path in the other language. */
+  alternateHref?: string;
 }
 
 const {
   title,
-  description = "香港教師 AI 課堂實用資源：按學科、級別和具體教學需要，免費取得可編輯工作紙、教案及校本規劃範例。",
-  lang = "zh-HK",
+  lang = DEFAULT_LOCALE,
+  description = t(lang, "homeDescription"),
   noindex = false,
+  multilingual = true,
+  alternateHref,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const alternates = multilingual
+  ? alternateLinks(Astro.url.pathname).map((link) => ({
+      ...link,
+      absolute: new URL(link.href, Astro.site).href,
+    }))
+  : [];
+const switchHref = alternateHref ?? alternatePath(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={HTML_LANG[lang]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {
+      alternates.map((link) => (
+        <link rel="alternate" hreflang={link.hreflang} href={link.absolute} />
+      ))
+    }
     {noindex ? <meta name="robots" content="noindex, nofollow" /> : null}
 
     <!-- Brand typography: Quicksand (Latin) + Noto Sans TC (Chinese), as on beets3d.com -->
@@ -41,18 +80,25 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
   <body>
-    <a class="skip" href="#main">跳至內容 Skip to content</a>
+    <a class="skip" href="#main">{t(lang, "skip")}</a>
 
     <header class="site">
       <div class="wrap">
-        <a class="brand" href="/">
+        <a class="brand" href={localizePath("/", lang)}>
           <img class="logo" src="/beets-logo.png" alt="" width="32" height="32" />
           <span class="mark">BEETS</span><span class="mark-alt">AI</span>
         </a>
-        <nav>
-          <a href="/resources/">免費資源 Free resources</a>
-          <a href="/about/">關於 About</a>
-        </nav>
+        <div class="headright">
+          <nav aria-label="BEETS AI">
+            <a href={resourceIndexPath(lang)}>{t(lang, "navResources")}</a>
+            <a href={localizePath("/about/", lang)}>{t(lang, "navAbout")}</a>
+          </nav>
+          {
+            multilingual ? (
+              <LanguageSwitch current={lang} href={switchHref} />
+            ) : null
+          }
+        </div>
       </div>
     </header>
 
@@ -64,13 +110,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 
     <footer class="site">
       <div class="wrap">
-        <p>
-          獨立資源計劃，並非 EDB 官方文件。資源經教育工作者審閱、核實來源，並自動檢查連結。
-        </p>
-        <p class="muted">
-          An independent resource initiative — not an official EDB publication. Materials are
-          educator-reviewed, fact-checked and link-checked.
-        </p>
+        <p>{t(lang, "footerDisclaimer")}</p>
         <p class="muted">
           © Beets Limited · <a href="https://www.beets3d.com/">beets3d.com</a>
         </p>
@@ -140,6 +180,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         padding-top: 1rem;
         padding-bottom: 1rem;
         flex-wrap: wrap;
+      }
+      .headright {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: auto;
       }
       .brand {
         display: inline-flex;

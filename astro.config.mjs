@@ -10,8 +10,23 @@ export default defineConfig({
   build: {
     format: "directory",
   },
+  // One language per page. Traditional Chinese owns the root (the default, and
+  // the URLs teachers already have); English lives under /en/. See src/lib/i18n.ts.
+  i18n: {
+    defaultLocale: "zh-HK",
+    locales: ["zh-HK", "en"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   integrations: [
-    // /review/ holds unreviewed drafts — never submit them for indexing.
-    sitemap({ filter: (page) => !page.includes("/review/") }),
+    // /review/ holds unreviewed drafts — internal, bilingual, never indexed.
+    sitemap({
+      filter: (page) => !page.includes("/review/"),
+      i18n: {
+        defaultLocale: "zh-HK",
+        locales: { "zh-HK": "zh-HK", en: "en" },
+      },
+    }),
   ],
 });

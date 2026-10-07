@@ -1,0 +1,70 @@
+---
+import { HTML_LANG, LANGUAGE_LABELS, otherLocale, t, type Locale } from "../lib/i18n";
+
+/**
+ * The language selector.
+ *
+ * Plain links — no JavaScript. The reader's choice is a URL, so it can be
+ * shared, bookmarked, crawled and cached; and because the language lives in the
+ * path, each page is built once per language with no flash of the wrong one.
+ * Each link carries `hreflang`/`lang` so a screen reader announces the label in
+ * the language it is written in.
+ */
+interface Props {
+  /** Language of the page the switch is shown on. */
+  current: Locale;
+  /** Where the other language lives for this page. */
+  href: string;
+}
+
+const { current, href } = Astro.props;
+const target = otherLocale(current);
+---
+
+<div class="lang" role="group" aria-label={t(current, "langGroup")}>
+  <span class="seg on" aria-current="true" lang={HTML_LANG[current]}>
+    {LANGUAGE_LABELS[current]}
+  </span>
+  <a
+    class="seg"
+    href={href}
+    hreflang={HTML_LANG[target]}
+    lang={HTML_LANG[target]}
+    aria-label={t(current, "switchAria")}
+    rel="alternate"
+  >
+    {LANGUAGE_LABELS[target]}
+  </a>
+</div>
+
+<style>
+  .lang {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--cream);
+    overflow: hidden;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .seg {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.7rem;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .seg.on {
+    background: var(--accent);
+    color: #fff;
+  }
+  a.seg:hover,
+  a.seg:focus-visible {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+</style>

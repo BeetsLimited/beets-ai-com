@@ -2,13 +2,21 @@
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 
-// Renders DRAFTS for internal review. Excluded from search engines and from the
-// public routes: production resources live at /resources/<slug>/ once they pass
-// the fact-check and educator-review gates.
+/**
+ * Internal review hub.
+ *
+ * Deliberately bilingual and excluded from search engines: it is the one page
+ * the team reads in both languages at once. `multilingual={false}` keeps the
+ * language switch and the `hreflang` alternates off it — those links would 404
+ * here, since the review area is not published per language under /en/.
+ */
 const drafts = (await getCollection("content", ({ data }) => data.draft)).sort((a, b) =>
-  a.data.slug.localeCompare(b.data.slug),
+  a.data.address.localeCompare(b.data.address),
 );
 
+const addresses = [...new Set(drafts.map((entry) => entry.data.address))];
+
+/** Per-resource review checklist, keyed by the resource address. */
 const CHECKS: Record<string, { fact: string[]; educator: string[] }> = {
   "safe-to-upload-ai-rehearsal": {
     fact: [
@@ -39,44 +47,67 @@ const CHECKS: Record<string, { fact: string[]; educator: string[] }> = {
       "⚠️ 「人口並非逐年上升」在現行官方數據下仍然成立",
       "⚠️ 要求學生填寫的年份與 Table 110-01001 現行版本一致",
       "⚠️ censtatd.gov.hk 的來源連結仍然有效",
+      "⚠️ 英文版的數字、來源與中文版完全一致（英文版為新譯本）",
     ],
     educator: [
       "35–40 分鐘對 P4 是否合適",
       "「AI 對了一半」這個切入點是否 P4 學生能掌握",
       "方格紙／試算表的器材假設是否合理",
+      "英文版的用語是否適合香港小學教師",
     ],
   },
 };
+
+const editionsOf = (address: string) =>
+  drafts.filter((entry) => entry.data.address === address);
+
+const reviewHref = (address: string, lang: string) =>
+  lang === "en" ? `/review/en/${address}/` : `/review/${address}/`;
 ---
 
-<Base title="內部審閱 Internal review — BEETS AI" noindex>
+<Base title="內部審閱 Internal review — BEETS AI" noindex multilingual={false}>
   <h1>內部審閱 Internal review</h1>
 
   <div class="notice">
     <strong>此區域不對外發佈，亦不會被搜尋引擎收錄。</strong>
     <p>
-      以下 {drafts.length} 份資源已完成草擬，正在等待<strong>事實核實</strong>及<strong>教育工作者審閱</strong>。
-      在兩項完成前，它們不會在正式網址發佈。
+      以下 {addresses.length} 份資源已完成草擬，每份均有<strong>繁體中文版</strong>及<strong>英文版</strong>，
+      兩者正在等待事實核實及教育工作者審閱。在兩項完成前，兩個版本都不會在任何正式網址發佈。
     </p>
     <p class="muted">
-      Not public, excluded from search engines. These {drafts.length} resources are drafted and
-      awaiting fact-check and educator review before publication.
+      Not public, excluded from search engines. These {addresses.length} resources each have a
+      Traditional Chinese and an English edition, both awaiting fact-check and educator review
+      before publication.
     </p>
   </div>
 
   {
-    drafts.map((entry) => {
-      const checks = CHECKS[entry.data.slug];
+    addresses.map((address) => {
+      const editions = editionsOf(address);
+      const zh = editions.find((entry) => entry.data.lang === "zh-HK");
+      const en = editions.find((entry) => entry.data.lang === "en");
+      const lead = zh ?? en;
+      const checks = CHECKS[address];
       return (
         <section>
-          <h2>
-            <a href={`/review/${entry.data.slug}/`}>{entry.data.title}</a>
-          </h2>
+          <h2>{lead?.data.title}</h2>
           <p class="meta">
-            Theme {entry.data.theme} · {entry.data.stage} · {entry.data.subject} · 來源{" "}
-            {entry.data.sources.join("、")}
+            Theme {lead?.data.theme} · {lead?.data.stage} · {lead?.data.subject} · 來源{" "}
+            {lead?.data.sources.join("、")}
           </p>
-          <p>{entry.data.description}</p>
+
+          <ul>
+            {zh ? (
+              <li>
+                <a href={reviewHref(address, "zh-HK")}>繁體中文版 Traditional Chinese →</a>
+              </li>
+            ) : null}
+            {en ? (
+              <li>
+                <a href={reviewHref(address, "en")}>English edition 英文版 →</a>
+              </li>
+            ) : null}
+          </ul>
 
           {checks ? (
             <>
@@ -94,10 +125,6 @@ const CHECKS: Record<string, { fact: string[]; educator: string[] }> = {
               </ul>
             </>
           ) : null}
-
-          <p>
-            <a class="btn" href={`/review/${entry.data.slug}/`}>開啟頁面 Open page →</a>
-          </p>
         </section>
       );
     })
@@ -106,11 +133,11 @@ const CHECKS: Record<string, { fact: string[]; educator: string[] }> = {
   <hr />
   <h2>如何回應 How to respond</h2>
   <p>
-    在 Mattermost 告訴 Ada「#8 可發佈」、「#11 需修改：……」，並註明事實核實者姓名。
-    兩項關卡通過後，我會把該頁設為正式發佈，並提交 Google Search Console 與 Bing IndexNow。
+    在 Mattermost 告訴 Ada「#8 可發佈」、「#11 英文版需修改：……」，並註明事實核實者姓名。
+    兩項關卡通過後，中英文版會同時設為正式發佈，並提交 Google Search Console 與 Bing IndexNow。
   </p>
   <p class="muted">
     Reply in Mattermost with your sign-off (and who did the fact-checking). Once both gates pass,
-    the page is published at its public URL and submitted for indexing.
+    the Chinese and English editions are published together at their public URLs.
   </p>
 </Base>

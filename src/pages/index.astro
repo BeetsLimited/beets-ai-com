@@ -1,48 +1,12 @@
 ---
-import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
+import HomeView from "../components/HomeView.astro";
+import { DEFAULT_LOCALE, t } from "../lib/i18n";
 
-const published = (await getCollection("content", ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
+// Traditional Chinese is the default edition and owns the root.
+const lang = DEFAULT_LOCALE;
 ---
 
-<Base title="BEETS AI — 香港教師 AI 課堂實用資源">
-  <h1>香港教師 AI 課堂實用資源</h1>
-  <p>
-    按學科、級別和具體教學需要，免費取得可編輯工作紙、教案及校本規劃範例。
-  </p>
-  <p class="muted">
-    Free, educator-reviewed Hong Kong AI teaching resources — by subject, stage and specific
-    classroom task.
-  </p>
-
-  {
-    published.length === 0 ? (
-      <div class="panel">
-        <p>
-          <strong>資源陸續上線。</strong>
-          首批資源正在審閱中，通過事實核實與教育工作者審閱後便會發佈。
-        </p>
-        <p class="muted">
-          The first three resources are in review — fact-check, educator sign-off and link
-          checking, then they go live.
-        </p>
-        <p>
-          <a class="btn" href="/about/">了解編輯流程 How we review →</a>
-        </p>
-      </div>
-    ) : (
-      <ul class="cards">
-        {published.map((entry) => (
-          <li>
-            <a href={`/resources/${entry.data.slug}/`}>{entry.data.title}</a>
-            <div class="meta">
-              {entry.data.stage} · {entry.data.subject}
-            </div>
-          </li>
-        ))}
-      </ul>
-    )
-  }
+<Base title={`BEETS AI — ${t(lang, "homeTitle")}`} lang={lang}>
+  <HomeView lang={lang} />
 </Base>

@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import ResourceView from "../../../components/ResourceView.astro";
+import { SECONDARY_LOCALE } from "../../../lib/i18n";
+
+const lang = SECONDARY_LOCALE;
+
+export async function getStaticPaths() {
+  const drafts = await getCollection(
+    "content",
+    ({ data }) => data.draft && data.lang === SECONDARY_LOCALE,
+  );
+  return drafts.map((entry) => ({
+    params: { slug: entry.data.address },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+---
+
+<Base
+  title={`[Draft] ${d.title} — BEETS AI`}
+  description={d.description}
+  lang={lang}
+  noindex
+  multilingual={false}
+>
+  <p class="meta">
+    <a href="/review/">← Back to internal review</a>
+  </p>
+
+  <ResourceView entry={entry} lang={lang} reviewMode />
+
+  <p class="meta">
+    The public URL will be <code>/en/resources/{d.address}/</code> once it passes both gates.
+  </p>
+</Base>

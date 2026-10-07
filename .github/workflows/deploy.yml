@@ -42,6 +42,9 @@ jobs:
       - name: Check internal links
         run: npm run check:links
 
+      - name: Check one language per page
+        run: npm run check:lang
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true

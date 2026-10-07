@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import ResourceView from "../../components/ResourceView.astro";
+import { DEFAULT_LOCALE } from "../../lib/i18n";
+
+const lang = DEFAULT_LOCALE;
+
+// Traditional Chinese drafts, rendered at the same address structure as the
+// review hub. Both editions share the slug, so the language filter is what
+// keeps /review/<slug>/ and /review/en/<slug>/ apart.
+export async function getStaticPaths() {
+  const drafts = await getCollection(
+    "content",
+    ({ data }) => data.draft && data.lang === DEFAULT_LOCALE,
+  );
+  return drafts.map((entry) => ({
+    params: { slug: entry.data.address },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+---
+
+<Base
+  title={`[草稿] ${d.title} — BEETS AI`}
+  description={d.description}
+  lang={lang}
+  noindex
+  multilingual={false}
+>
+  <p class="meta">
+    <a href="/review/">← 返回內部審閱 Back to internal review</a>
+  </p>
+
+  <ResourceView entry={entry} lang={lang} reviewMode />
+
+  <p class="meta">
+    正式網址將為 <code>/resources/{d.address}/</code>（通過兩項關卡後才會生效）。
+  </p>
+</Base>

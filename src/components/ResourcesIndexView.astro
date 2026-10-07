@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+
+/** Resource index body, grouped by theme. Renders one language only. */
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+
+const resources = (
+  await getCollection(
+    "content",
+    ({ data }) => !data.draft && data.type === "resource" && data.lang === lang,
+  )
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const themes = [...new Set(resources.map((entry) => entry.data.theme))]
+  .sort()
+  .map((key) => ({
+    key,
+    label: themeLabel(lang, key),
+    items: resources.filter((entry) => entry.data.theme === key),
+  }));
+---
+
+<h1>{t(lang, "resourcesTitle")}</h1>
+<p>{t(lang, "resourcesLede")}</p>
+
+{
+  themes.length === 0 ? (
+    <div class="panel">
+      <p>{t(lang, "resourcesEmpty")}</p>
+    </div>
+  ) : (
+    themes.map((theme) => (
+      <section>
+        <h2>{theme.label}</h2>
+        <ul class="cards">
+          {theme.items.map((entry) => (
+            <li>
+              <a href={resourcesPath(lang, entry.data.address)}>{entry.data.title}</a>
+              <div class="meta">
+                {entry.data.stage} · {entry.data.subject}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  )
+}

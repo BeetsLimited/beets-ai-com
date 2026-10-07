@@ -1,18 +1,16 @@
 ---
 import { getCollection } from "astro:content";
-import Base from "../../layouts/Base.astro";
-import ResourceView from "../../components/ResourceView.astro";
-import { DEFAULT_LOCALE } from "../../lib/i18n";
-import { alternateHrefFor } from "../../lib/resources";
+import Base from "../../../layouts/Base.astro";
+import ResourceView from "../../../components/ResourceView.astro";
+import { SECONDARY_LOCALE } from "../../../lib/i18n";
+import { alternateHrefFor } from "../../../lib/resources";
 
-const lang = DEFAULT_LOCALE;
+const lang = SECONDARY_LOCALE;
 
-// Published resources only — anything with `draft: true` is served (unindexed)
-// under /review/ instead, until it passes the fact-check and educator gates.
 export async function getStaticPaths() {
   const all = await getCollection("content");
   return all
-    .filter((entry) => !entry.data.draft && entry.data.lang === DEFAULT_LOCALE)
+    .filter((entry) => !entry.data.draft && entry.data.lang === SECONDARY_LOCALE)
     .map((entry) => ({
       params: { slug: entry.data.address },
       props: { entry, alternateHref: alternateHrefFor(entry, all) },

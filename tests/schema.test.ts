@@ -6,6 +6,7 @@ const valid = {
   title: "P4 香港人口折線圖：檢查 AI 生成的解釋",
   title_en: "P4 Hong Kong population line graph: check an AI explanation",
   slug: "p4-hk-population-ai-graph-check",
+  address: "p4-hk-population-ai-graph-check",
   lang: "zh-HK",
   type: "resource",
   theme: "D",
@@ -56,8 +57,8 @@ describe("resourceSchema", () => {
     ).toBe(true);
   });
 
-  it("rejects a slug that is not lowercase-hyphenated", () => {
-    expect(resourceSchema.safeParse({ ...valid, slug: "P4 HK Population" }).success).toBe(
+  it("rejects an address that is not lowercase-hyphenated", () => {
+    expect(resourceSchema.safeParse({ ...valid, address: "P4 HK Population" }).success).toBe(
       false,
     );
   });

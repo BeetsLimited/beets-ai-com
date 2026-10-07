@@ -1,13 +1,22 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
+import { t, themeLabel, type Locale } from "../lib/i18n";
 
+/**
+ * One resource page, in one language.
+ *
+ * `lang` is the language of the page being built; the entry itself carries its
+ * own language, so the two are always the same edition. Shared by the public
+ * route and the internal review route, so what a reviewer sees is what ships.
+ */
 interface Props {
   entry: CollectionEntry<"content">;
-  /** Review mode adds the unreviewed-draft banner and the reviewer checklist. */
+  lang: Locale;
+  /** Review mode adds the unreviewed-draft banner. */
   reviewMode?: boolean;
 }
 
-const { entry, reviewMode = false } = Astro.props;
+const { entry, lang, reviewMode = false } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 ---
@@ -29,24 +38,24 @@ const d = entry.data;
     ) : null
   }
 
-  <p class="meta">
-    Theme {d.theme} · {d.stage} · {d.subject}
-    {d.sourceIdea ? ` · 原始構思 ${d.sourceIdea}` : ""}
-  </p>
   <h1>{d.title}</h1>
-  {d.title_en ? <p class="meta">{d.title_en}</p> : null}
+
+  <p class="meta">
+    {t(lang, "labelTheme")} {d.theme} · {themeLabel(lang, d.theme)} · {d.stage} · {d.subject}
+    {d.sourceIdea ? ` · ${t(lang, "labelOriginalIdea")} ${d.sourceIdea}` : ""}
+  </p>
 
   <p>{d.description}</p>
 
   <dl class="meta">
-    {d.prepTime ? <><dt>準備時間 Preparation</dt><dd>{d.prepTime}</dd></> : null}
-    {d.equipment ? <><dt>所需器材 Equipment</dt><dd>{d.equipment}</dd></> : null}
-    <dt>版本 Version</dt>
+    {d.prepTime ? <><dt>{t(lang, "labelPrep")}</dt><dd>{d.prepTime}</dd></> : null}
+    {d.equipment ? <><dt>{t(lang, "labelEquipment")}</dt><dd>{d.equipment}</dd></> : null}
+    <dt>{t(lang, "labelVersion")}</dt>
     <dd>{d.version}</dd>
     {
       d.reviewer ? (
         <>
-          <dt>審閱 Reviewer</dt>
+          <dt>{t(lang, "labelReviewer")}</dt>
           <dd>{d.reviewer}</dd>
         </>
       ) : null
@@ -54,7 +63,7 @@ const d = entry.data;
     {
       d.factCheckedBy ? (
         <>
-          <dt>事實核實 Fact-checked by</dt>
+          <dt>{t(lang, "labelFactCheck")}</dt>
           <dd>{d.factCheckedBy}</dd>
         </>
       ) : null
@@ -64,15 +73,15 @@ const d = entry.data;
   <Content />
 
   <section>
-    <h2>下載 Downloads</h2>
+    <h2>{t(lang, "downloadsHeading")}</h2>
     {
       d.downloads.length === 0 ? (
-        <p>檔案準備中。Files are being prepared.</p>
+        <p>{t(lang, "downloadsPending")}</p>
       ) : (
         <ul>
           {d.downloads.map((file) => (
             <li>
-              <a href={file}>{file.split("/").pop()}</a>
+              <a href={file}>{file.split("/").pop()}</a> <span class="meta">{t(lang, "downloadNote")}</span>
             </li>
           ))}
         </ul>
@@ -81,19 +90,19 @@ const d = entry.data;
   </section>
 
   <section>
-    <h2>與 EDB 框架的關係 How this relates to the EDB framework</h2>
+    <h2>{t(lang, "edbHeading")}</h2>
     <ul>
       {d.sources.map((source) => (
         <li>{source}</li>
       ))}
     </ul>
     <p class="meta">
-      官方文件：
+      {t(lang, "edbOfficialDoc")}{" "}
       <a
         href="https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html"
         rel="noopener"
       >
-        EDB 數字教育 Digital Education Blueprint
+        {t(lang, "debpLinkText")}
       </a>
     </p>
   </section>
@@ -101,8 +110,8 @@ const d = entry.data;
   {
     d.feedback ? (
       <section>
-        <h2>意見 Feedback</h2>
-        <p>你用過這份資源嗎？歡迎告訴我們需要改善的地方，或建議下一份資源。</p>
+        <h2>{t(lang, "feedbackHeading")}</h2>
+        <p>{t(lang, "feedbackBody")}</p>
       </section>
     ) : null
   }

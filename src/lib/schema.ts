@@ -3,6 +3,8 @@ import { z } from "zod";
 /** The five navigation themes (EXCO-714 content plan). */
 export const THEMES = ["A", "B", "C", "D", "E"] as const;
 
+export type Theme = (typeof THEMES)[number];
+
 /** Traditional Chinese first; English is the companion edition. */
 export const LANGS = ["zh-HK", "en"] as const;
 
@@ -12,9 +14,15 @@ export const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const fields = {
   title: z.string().min(1),
   title_en: z.string().min(1).optional(),
-  slug: z
+  /**
+   * The resource's stable address, identical in every language edition — the
+   * two editions of one resource share it, which is how they are paired. It is
+   * deliberately NOT called `slug`: the content loader reserves that name and
+   * silently drops all but one entry when two share it.
+   */
+  address: z
     .string()
-    .regex(SLUG_PATTERN, "slug must be lowercase and hyphen-separated"),
+    .regex(SLUG_PATTERN, "address must be lowercase and hyphen-separated"),
   lang: z.enum(LANGS),
   /** Resource pages are the primary publishing unit; posts are editorial. */
   type: z.enum(["resource", "post"]),

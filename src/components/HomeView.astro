@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import { localizePath, resourcesPath, t, type Locale } from "../lib/i18n";
+import { assertPairedEditions } from "../lib/resources";
+
+/** Home page body. Renders one language only. */
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+
+const all = await getCollection("content");
+// Build-time guard: a content entry the loader silently discarded must break the
+// build, not quietly halve the library.
+assertPairedEditions(all, "home");
+
+const published = all
+  .filter(({ data }) => !data.draft && data.lang === lang)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<h1>{t(lang, "homeTitle")}</h1>
+<p>{t(lang, "homeLede")}</p>
+
+{
+  published.length === 0 ? (
+    <div class="panel">
+      <p>
+        <strong>{t(lang, "homeEmptyTitle")}</strong> {t(lang, "homeEmptyBody")}
+      </p>
+      <p>
+        <a class="btn" href={localizePath("/about/", lang)}>
+          {t(lang, "homeEmptyCta")} →
+        </a>
+      </p>
+    </div>
+  ) : (
+    <ul class="cards">
+      {published.map((entry) => (
+        <li>
+          <a href={resourcesPath(lang, entry.data.address)}>{entry.data.title}</a>
+          <div class="meta">
+            {entry.data.stage} · {entry.data.subject}
+          </div>
+        </li>
+      ))}
+    </ul>
+  )
+}
