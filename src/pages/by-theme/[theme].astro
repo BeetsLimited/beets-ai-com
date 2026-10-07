@@ -1,0 +1,28 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThemeView from "../../components/ThemeView.astro";
+import { DEFAULT_LOCALE, THEME_SLUGS, themeLabel, themeMeta } from "../../lib/i18n";
+import { THEMES } from "../../lib/schema";
+
+const lang = DEFAULT_LOCALE;
+
+// One page per theme, in both languages. Themes with no published resource yet
+// are simply not linked from the navigation — the page itself still explains the
+// theme and invites a request, so a direct hit is never a dead end.
+export function getStaticPaths() {
+  return THEMES.map((theme) => ({
+    params: { theme: THEME_SLUGS[theme] },
+    props: { theme },
+  }));
+}
+
+const { theme } = Astro.props;
+---
+
+<Base
+  title={`${themeLabel(lang, theme)} — BEETS AI`}
+  description={themeMeta(lang, theme)}
+  lang={lang}
+>
+  <ThemeView lang={lang} theme={theme} />
+</Base>

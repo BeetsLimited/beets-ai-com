@@ -1,0 +1,88 @@
+---
+import { type Locale } from "../lib/i18n";
+
+/**
+ * Feedback and requests.
+ *
+ * The plan asks for a short resource-specific form and an open request form.
+ * This is a static site with no form backend, so the page states exactly what
+ * to send and where, and keeps the two questions that actually steer the next
+ * resource. No student data is collected anywhere on the site.
+ */
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+
+const MAIL = "info@beets3d.com";
+---
+
+{
+  lang === "zh-HK" ? (
+    <>
+      <h1>意見及建議</h1>
+      <p>
+        你用過我們的資源嗎？<strong>哪一份需要改善？你下一份想我們製作什麼？</strong>
+        你的回饋會直接決定下一批資源的選題。
+      </p>
+
+      <h2>資源使用後的三條問題</h2>
+      <ol>
+        <li>你用過哪一份資源？在哪一級、哪一科？</li>
+        <li>有哪一部分需要改動，才真的能在你的課堂使用？</li>
+        <li>下一份最幫到你的資源是什麼？（請寫具體的「級別 + 科目 + 任務」）</li>
+      </ol>
+
+      <h2>提出資源需求</h2>
+      <p>
+        請盡量寫清楚：級別、科目、課堂時間、你現時怎樣處理這個課題。
+        例如「P5 常識，40 分鐘，想教學生核對 AI 講嘅資料」已經足夠具體。
+      </p>
+
+      <h2>怎樣傳送</h2>
+      <p>
+        電郵至 <a href={`mailto:${MAIL}?subject=${encodeURIComponent("BEETS AI 意見")}`}>{MAIL}</a>，
+        或直接在 Mattermost 告訴 Beets 團隊。我們會回覆每一封有關資源內容的意見。
+      </p>
+      <p class="meta">
+        下載不需註冊，我們不會要求你提供學校名稱，亦不收集學生作品或任何可識別學生身分的資料。
+        如你自願提供電郵，只會在取得同意後用作通知新資源。
+      </p>
+    </>
+  ) : (
+    <>
+      <h1>Feedback and requests</h1>
+      <p>
+        Have you used our resources? <strong>What needs changing, and what should we make
+        next?</strong> Your feedback decides the next batch.
+      </p>
+
+      <h2>Three questions after you use a resource</h2>
+      <ol>
+        <li>Which resource did you use — which stage and subject?</li>
+        <li>What would have to change for it to work in your classroom as it stands?</li>
+        <li>What resource would help you most next? (Please be specific: stage + subject +
+          task.)</li>
+      </ol>
+
+      <h2>Request a resource</h2>
+      <p>
+        Tell us the stage, the subject, how long the lesson is, and how you currently teach
+        this topic. For example, "P5 General Studies, 40 minutes, I want pupils to check
+        what an AI says" is already specific enough to act on.
+      </p>
+
+      <h2>How to send it</h2>
+      <p>
+        Email <a href={`mailto:${MAIL}?subject=${encodeURIComponent("BEETS AI feedback")}`}>{MAIL}</a>,
+        or tell the Beets team directly in Mattermost. We reply to every comment about the
+        content of a resource.
+      </p>
+      <p class="meta">
+        Downloading needs no registration. We do not ask for your school's name, and we
+        collect no student work and nothing that could identify a student. If you give us an
+        email address, it is only used, with consent, to tell you about new resources.
+      </p>
+    </>
+  )
+}

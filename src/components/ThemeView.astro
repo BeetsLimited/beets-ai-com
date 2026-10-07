@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+import {
+  feedbackPath,
+  resourceIndexPath,
+  resourcesPath,
+  t,
+  themeInfo,
+  themeLabel,
+  themePath,
+  themesInOrder,
+  type Locale,
+} from "../lib/i18n";
+import { newestFirst } from "../lib/resources";
+import type { Theme } from "../lib/schema";
+
+/**
+ * A theme page: one teacher need, and the resources that answer it.
+ *
+ * Themes are browsing routes and editorial queues, not bundles — a theme page
+ * shows whatever has been published so far and grows as resources are added.
+ */
+interface Props {
+  lang: Locale;
+  theme: Theme;
+}
+const { lang, theme } = Astro.props;
+
+const published = newestFirst(
+  await getCollection(
+    "content",
+    ({ data }) => !data.draft && data.type === "resource" && data.lang === lang,
+  ),
+);
+
+// Only themes that have material are shown, as the plan requires.
+const liveThemes = themesInOrder(lang).filter((entry) =>
+  published.some((item) => item.data.theme === entry.key),
+);
+const items = published.filter((entry) => entry.data.theme === theme);
+const info = themeInfo(lang, theme);
+---
+
+<p class="meta">
+  <a href={resourceIndexPath(lang)}>{t(lang, "themeBackToAll")}</a>
+</p>
+
+<h1>{themeLabel(lang, theme)}</h1>
+
+<dl class="meta">
+  <dt>{t(lang, "themeAudienceLabel")}</dt>
+  <dd>{info.audience}</dd>
+  <dt>{t(lang, "themeNeedLabel")}</dt>
+  <dd>{info.need}</dd>
+</dl>
+
+<h2>{t(lang, "themeResourcesHeading")}</h2>
+
+{
+  items.length === 0 ? (
+    <div class="panel">
+      <p>{t(lang, "themeEmpty")}</p>
+      <p>
+        <a class="btn" href={feedbackPath(lang)}>
+          {t(lang, "homeFeedbackCta")} →
+        </a>
+      </p>
+    </div>
+  ) : (
+    <ul class="cards">
+      {items.map((entry) => (
+        <li>
+          <a href={resourcesPath(lang, entry.data.address)}>{entry.data.title}</a>
+          <div class="meta">
+            {entry.data.stage} · {entry.data.subject}
+          </div>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+{
+  liveThemes.length > 1 ? (
+    <>
+      <hr />
+      <h2>{t(lang, "resourcesThemesHeading")}</h2>
+      <ul>
+        {liveThemes.map((entry) => (
+          <li>
+            {entry.key === theme ? (
+              <span>{entry.label}</span>
+            ) : (
+              <a href={themePath(lang, entry.key)}>{entry.label}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </>
+  ) : null
+}

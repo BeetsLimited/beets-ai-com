@@ -1,7 +1,17 @@
 ---
 import { getCollection } from "astro:content";
-import { localizePath, resourcesPath, t, type Locale } from "../lib/i18n";
-import { assertPairedEditions } from "../lib/resources";
+import {
+  browsePath,
+  feedbackPath,
+  localizePath,
+  resourcesPath,
+  t,
+  themeInfo,
+  themePath,
+  themesInOrder,
+  type Locale,
+} from "../lib/i18n";
+import { assertPairedEditions, newestFirst } from "../lib/resources";
 
 /** Home page body. Renders one language only. */
 interface Props {
@@ -14,16 +24,34 @@ const all = await getCollection("content");
 // build, not quietly halve the library.
 assertPairedEditions(all, "home");
 
-const published = all
-  .filter(({ data }) => !data.draft && data.lang === lang)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const published = newestFirst(all.filter(({ data }) => !data.draft && data.lang === lang));
+
+const themes = themesInOrder(lang);
+// The plan's Home: five theme links, browse by stage/subject, newest resources
+// and one clear feedback invitation. Theme links always work — a theme page
+// explains the theme and invites a request even before its first resource ships.
+const newest = published.slice(0, 6);
 ---
 
 <h1>{t(lang, "homeTitle")}</h1>
 <p>{t(lang, "homeLede")}</p>
 
+<h2>{t(lang, "homeThemesHeading")}</h2>
+<p class="meta">{t(lang, "homeThemesLede")}</p>
+<ul class="cards">
+  {
+    themes.map((theme) => (
+      <li>
+        <a href={themePath(lang, theme.key)}>{theme.label}</a>
+        <div class="meta">{themeInfo(lang, theme.key).need}</div>
+      </li>
+    ))
+  }
+</ul>
+
+<h2>{t(lang, "homeNewestHeading")}</h2>
 {
-  published.length === 0 ? (
+  newest.length === 0 ? (
     <div class="panel">
       <p>
         <strong>{t(lang, "homeEmptyTitle")}</strong> {t(lang, "homeEmptyBody")}
@@ -36,7 +64,7 @@ const published = all
     </div>
   ) : (
     <ul class="cards">
-      {published.map((entry) => (
+      {newest.map((entry) => (
         <li>
           <a href={resourcesPath(lang, entry.data.address)}>{entry.data.title}</a>
           <div class="meta">
@@ -47,3 +75,17 @@ const published = all
     </ul>
   )
 }
+
+<h2>{t(lang, "homeBrowseHeading")}</h2>
+<p>
+  <a class="btn" href={browsePath(lang)}>{t(lang, "homeBrowseCta")} →</a>
+</p>
+
+<div class="panel">
+  <p>
+    <strong>{t(lang, "homeFeedbackHeading")}</strong> {t(lang, "homeFeedbackBody")}
+  </p>
+  <p>
+    <a class="btn" href={feedbackPath(lang)}>{t(lang, "homeFeedbackCta")} →</a>
+  </p>
+</div>

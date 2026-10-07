@@ -13,7 +13,7 @@ equipment: "Printed worksheet (optional: student devices)"
 author: "BeetsBot"
 version: "0.1"
 date: 2026-10-07
-downloads: ["/files/student-ai-use-process-sheet.html"]
+downloads: ["/files/en/student-ai-use-process-sheet.html"]
 feedback: true
 draft: true
 description: "A reusable process sheet that records a student's first attempt, the AI prompt, the checking results, revisions, and final explanation, so teachers can see the student's thinking without having to search through the entire conversation log."

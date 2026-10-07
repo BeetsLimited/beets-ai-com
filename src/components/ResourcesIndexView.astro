@@ -1,6 +1,14 @@
 ---
 import { getCollection } from "astro:content";
-import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+import {
+  resourcesPath,
+  t,
+  themeInfo,
+  themeLabel,
+  themePath,
+  themesInOrder,
+  type Locale,
+} from "../lib/i18n";
 
 /** Resource index body, grouped by theme. Renders one language only. */
 interface Props {
@@ -26,6 +34,18 @@ const themes = [...new Set(resources.map((entry) => entry.data.theme))]
 
 <h1>{t(lang, "resourcesTitle")}</h1>
 <p>{t(lang, "resourcesLede")}</p>
+
+<h2>{t(lang, "resourcesThemesHeading")}</h2>
+<ul class="cards">
+  {
+    themesInOrder(lang).map((theme) => (
+      <li>
+        <a href={themePath(lang, theme.key)}>{theme.label}</a>
+        <div class="meta">{themeInfo(lang, theme.key).need}</div>
+      </li>
+    ))
+  }
+</ul>
 
 {
   themes.length === 0 ? (

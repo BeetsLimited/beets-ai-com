@@ -1,0 +1,25 @@
+---
+import Base from "../../../layouts/Base.astro";
+import ThemeView from "../../../components/ThemeView.astro";
+import { SECONDARY_LOCALE, THEME_SLUGS, themeLabel, themeMeta } from "../../../lib/i18n";
+import { THEMES } from "../../../lib/schema";
+
+const lang = SECONDARY_LOCALE;
+
+export function getStaticPaths() {
+  return THEMES.map((theme) => ({
+    params: { theme: THEME_SLUGS[theme] },
+    props: { theme },
+  }));
+}
+
+const { theme } = Astro.props;
+---
+
+<Base
+  title={`${themeLabel(lang, theme)} — BEETS AI`}
+  description={themeMeta(lang, theme)}
+  lang={lang}
+>
+  <ThemeView lang={lang} theme={theme} />
+</Base>

@@ -1,0 +1,37 @@
+---
+import { resourcesPath, themeLabel, type Locale } from "../lib/i18n";
+
+/**
+ * A grouped list of resources — used by the browse page for "by stage" and
+ * "by subject". Markup lives in a component because Astro frontmatter cannot
+ * contain template syntax.
+ */
+interface Item {
+  data: { address: string; title: string; theme: string };
+}
+
+interface Props {
+  lang: Locale;
+  groups: { label: string; items: Item[] }[];
+}
+
+const { lang, groups } = Astro.props;
+---
+
+{
+  groups.map((group) => (
+    <section>
+      <h3>
+        {group.label} <span class="meta">({group.items.length})</span>
+      </h3>
+      <ul>
+        {group.items.map((entry) => (
+          <li>
+            <a href={resourcesPath(lang, entry.data.address)}>{entry.data.title}</a>{" "}
+            <span class="meta">{themeLabel(lang, entry.data.theme)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))
+}

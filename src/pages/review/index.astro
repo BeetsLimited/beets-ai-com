@@ -1,68 +1,51 @@
 ---
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import {
+  browsePath,
+  feedbackPath,
+  resourceIndexPath,
+  themePath,
+  themesInOrder,
+} from "../../lib/i18n";
+import { EVERY_RESOURCE_CHECKLIST, RESOURCE_CHECKLISTS } from "../../lib/review-checklists";
 
 /**
  * Internal review hub.
  *
- * Deliberately bilingual and excluded from search engines: it is the one page
- * the team reads in both languages at once. `multilingual={false}` keeps the
- * language switch and the `hreflang` alternates off it — those links would 404
- * here, since the review area is not published per language under /en/.
+ * Deliberately bilingual and excluded from search engines: it is the one page the
+ * team reads in both languages at once. `multilingual={false}` keeps the language
+ * switch and the `hreflang` alternates off it — the review area is not published
+ * per language, so those links would 404.
+ *
+ * It lists EVERY resource, drafted or published, with both editions, the
+ * printable files where they exist, the checklist for that resource, and any
+ * `[[VERIFY]]` item the draft left for a human. Nothing is published from here:
+ * a resource goes live only when its `reviewer` and `factCheckedBy` are filled in.
  */
-const drafts = (await getCollection("content", ({ data }) => data.draft)).sort((a, b) =>
-  a.data.address.localeCompare(b.data.address),
-);
+const entries = await getCollection("content");
 
-const addresses = [...new Set(drafts.map((entry) => entry.data.address))];
-
-/** Per-resource review checklist, keyed by the resource address. */
-const CHECKS: Record<string, { fact: string[]; educator: string[] }> = {
-  "safe-to-upload-ai-rehearsal": {
-    fact: [
-      "六份示例全部為虛構，沒有影射任何真實學生或學校個案",
-      "所列的移除手法與 EDB 文件 G（pp.2-4, 2-9）的說法一致",
-      "「檔案名稱 / 中繼資料」的風險描述正確",
-    ],
-    educator: [
-      "「讀寫障礙」示例是否適合香港學校的文化與敏感度",
-      "45 分鐘的課堂時間是否可行",
-      "六份示例的難度是否適合 P4–P6",
-    ],
-  },
-  "student-ai-use-process-sheet": {
-    fact: [
-      "五格架構忠實反映 F（p.1-13）重視歷程、G（p.2-8）以思考歷程檢視學習的要求",
-      "「不必交出完整對話紀錄」符合私隱與資料最小化的做法",
-    ],
-    educator: [
-      "第 4 格是否真的能用一句話寫完",
-      "是否符合實際課業時間",
-      "表內不綁定學科的設計是否合用",
-    ],
-  },
-  "p4-hk-population-ai-graph-check": {
-    fact: [
-      "⚠️ 最重要：2021 年人口 7,413,070 須與政府統計處 2021 年人口普查一致",
-      "⚠️ 「人口並非逐年上升」在現行官方數據下仍然成立",
-      "⚠️ 要求學生填寫的年份與 Table 110-01001 現行版本一致",
-      "⚠️ censtatd.gov.hk 的來源連結仍然有效",
-      "⚠️ 英文版的數字、來源與中文版完全一致（英文版為新譯本）",
-    ],
-    educator: [
-      "35–40 分鐘對 P4 是否合適",
-      "「AI 對了一半」這個切入點是否 P4 學生能掌握",
-      "方格紙／試算表的器材假設是否合理",
-      "英文版的用語是否適合香港小學教師",
-    ],
-  },
-};
-
+const addresses = [...new Set(entries.map((entry) => entry.data.address))].sort();
 const editionsOf = (address: string) =>
-  drafts.filter((entry) => entry.data.address === address);
+  entries.filter((entry) => entry.data.address === address);
 
 const reviewHref = (address: string, lang: string) =>
   lang === "en" ? `/review/en/${address}/` : `/review/${address}/`;
+const publicHref = (address: string, lang: string) =>
+  lang === "en" ? `/en/resources/${address}/` : `/resources/${address}/`;
+const printablePath = (address: string, lang: string) =>
+  lang === "en" ? `/files/en/${address}.html` : `/files/${address}.html`;
+const hasPrintable = (address: string, lang: string) =>
+  existsSync(resolve(process.cwd(), "public", printablePath(address, lang).replace(/^\//, "")));
+
+/** Markers the drafting agent left for a human to check. */
+const verifyItems = (body: string | undefined): string[] =>
+  body ? [...body.matchAll(/\[\[VERIFY[^\]]*\]\]/g)].map((match) => match[0]) : [];
+
+const ZH = "zh-HK";
+const EN = "en";
 ---
 
 <Base title="內部審閱 Internal review — BEETS AI" noindex multilingual={false}>
@@ -71,60 +54,135 @@ const reviewHref = (address: string, lang: string) =>
   <div class="notice">
     <strong>此區域不對外發佈，亦不會被搜尋引擎收錄。</strong>
     <p>
-      以下 {addresses.length} 份資源已完成草擬，每份均有<strong>繁體中文版</strong>及<strong>英文版</strong>，
-      兩者正在等待事實核實及教育工作者審閱。在兩項完成前，兩個版本都不會在任何正式網址發佈。
+      以下 {addresses.length} 份資源已完成草擬，每份均有<strong>繁體中文版</strong>及<strong>英文版</strong>。
+      兩個版本都<strong>未在任何正式網址發佈</strong>：資源只有在填上事實核實者及教育工作者審閱人之後才會上線。
     </p>
     <p class="muted">
-      Not public, excluded from search engines. These {addresses.length} resources each have a
-      Traditional Chinese and an English edition, both awaiting fact-check and educator review
-      before publication.
+      Not public, excluded from search engines. {addresses.length} resources, each with a
+      Traditional Chinese and an English edition. None is live at its public URL: a resource
+      only goes live once a named fact-checker and educator reviewer are recorded.
     </p>
   </div>
 
+  <h2>網站結構 Site structure</h2>
+  <p>
+    以下是對外頁面（未發佈的資源不會出現在這些頁面上，只會顯示「審閱中」狀態）。
+    上線前的清單見計劃文件第一版檢查表。
+  </p>
+  <ul>
+    <li>
+      <a href="/">首頁 Home</a> · <a href="/en/">EN</a>
+    </li>
+    <li>
+      <a href={resourceIndexPath(ZH)}>免費資源 Free resources</a> ·{" "}
+      <a href={resourceIndexPath(EN)}>EN</a>
+    </li>
+    {
+      themesInOrder(ZH).map((theme) => (
+        <li>
+          主題 {theme.key}：<a href={themePath(ZH, theme.key)}>{theme.label}</a> ·{" "}
+          <a href={themePath(EN, theme.key)}>EN</a>
+        </li>
+      ))
+    }
+    <li>
+      <a href={browsePath(ZH)}>按科目及級別 By subject &amp; stage</a> ·{" "}
+      <a href={browsePath(EN)}>EN</a>
+    </li>
+    <li>
+      <a href={feedbackPath(ZH)}>意見及建議 Feedback</a> · <a href={feedbackPath(EN)}>EN</a>
+    </li>
+    <li>
+      <a href="/about/">關於及來源 About</a> · <a href="/en/about/">EN</a>
+    </li>
+  </ul>
+
+  <h2>資源 Resources</h2>
+
   {
-    addresses.map((address) => {
-      const editions = editionsOf(address);
-      const zh = editions.find((entry) => entry.data.lang === "zh-HK");
-      const en = editions.find((entry) => entry.data.lang === "en");
-      const lead = zh ?? en;
-      const checks = CHECKS[address];
+    themesInOrder(ZH).map((theme) => {
+      const items = addresses.filter(
+        (address) => editionsOf(address)[0]?.data.theme === theme.key,
+      );
+      if (items.length === 0) return null;
       return (
         <section>
-          <h2>{lead?.data.title}</h2>
-          <p class="meta">
-            Theme {lead?.data.theme} · {lead?.data.stage} · {lead?.data.subject} · 來源{" "}
-            {lead?.data.sources.join("、")}
-          </p>
+          <h3>
+            主題 {theme.key} · {theme.label}
+          </h3>
+          {items.map((address) => {
+            const zh = editionsOf(address).find((entry) => entry.data.lang === ZH);
+            const en = editionsOf(address).find((entry) => entry.data.lang === EN);
+            const lead = zh ?? en;
+            const checks = RESOURCE_CHECKLISTS[address] ?? EVERY_RESOURCE_CHECKLIST;
+            const flagged = [
+              ...verifyItems(zh?.body).map((item) => `中文版 ${item}`),
+              ...verifyItems(en?.body).map((item) => `English ${item}`),
+            ];
+            return (
+              <div class="panel">
+                <p>
+                  <strong>{lead?.data.title}</strong>
+                </p>
+                <p class="meta">
+                  {lead?.data.stage} · {lead?.data.subject} · 原始構思 {lead?.data.sourceIdea} ·
+                  來源 {lead?.data.sources.join("、")} · v{lead?.data.version}
+                </p>
+                <ul>
+                  <li>
+                    繁體中文版：{" "}
+                    <a href={reviewHref(address, ZH)}>頁面</a> ·{" "}
+                    {hasPrintable(address, ZH) ? (
+                      <a href={printablePath(address, ZH)}>附件</a>
+                    ) : (
+                      <span class="meta">附件待製作</span>
+                    )}{" "}
+                    · <span class="meta">正式網址 {publicHref(address, ZH)}</span>
+                  </li>
+                  <li>
+                    English edition:{" "}
+                    <a href={reviewHref(address, EN)}>page</a> ·{" "}
+                    {hasPrintable(address, EN) ? (
+                      <a href={printablePath(address, EN)}>file</a>
+                    ) : (
+                      <span class="meta">file to produce</span>
+                    )}{" "}
+                    · <span class="meta">public URL {publicHref(address, EN)}</span>
+                  </li>
+                </ul>
 
-          <ul>
-            {zh ? (
-              <li>
-                <a href={reviewHref(address, "zh-HK")}>繁體中文版 Traditional Chinese →</a>
-              </li>
-            ) : null}
-            {en ? (
-              <li>
-                <a href={reviewHref(address, "en")}>English edition 英文版 →</a>
-              </li>
-            ) : null}
-          </ul>
+                <p class="meta">
+                  <strong>① 事實核實 Fact-check</strong>
+                </p>
+                <ul>
+                  {checks.fact.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+                <p class="meta">
+                  <strong>② 教育工作者審閱 Educator review（Henry）</strong>
+                </p>
+                <ul>
+                  {checks.educator.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
 
-          {checks ? (
-            <>
-              <h3>① 事實核實 Fact-check</h3>
-              <ul>
-                {checks.fact.map((item) => (
-                  <li>{item}</li>
-                ))}
-              </ul>
-              <h3>② 教育工作者審閱 Educator review（Henry）</h3>
-              <ul>
-                {checks.educator.map((item) => (
-                  <li>{item}</li>
-                ))}
-              </ul>
-            </>
-          ) : null}
+                {flagged.length > 0 ? (
+                  <>
+                    <p class="meta">
+                      <strong>③ 草擬時標示為待核實 Flagged while drafting</strong>
+                    </p>
+                    <ul>
+                      {flagged.map((item) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : null}
+              </div>
+            );
+          })}
         </section>
       );
     })
@@ -133,11 +191,11 @@ const reviewHref = (address: string, lang: string) =>
   <hr />
   <h2>如何回應 How to respond</h2>
   <p>
-    在 Mattermost 告訴 Ada「#8 可發佈」、「#11 英文版需修改：……」，並註明事實核實者姓名。
-    兩項關卡通過後，中英文版會同時設為正式發佈，並提交 Google Search Console 與 Bing IndexNow。
+    在 Mattermost 告訴 Ada，例如「#8 可發佈」、「p1-p3-screen-free-ai-pe-games 英文版需修改：……」，
+    並註明事實核實者姓名。兩個關卡通過後，中英文版會同時設為正式發佈。
   </p>
   <p class="muted">
-    Reply in Mattermost with your sign-off (and who did the fact-checking). Once both gates pass,
-    the Chinese and English editions are published together at their public URLs.
+    Reply in Mattermost with your sign-off (naming who did the fact-checking). Once both gates
+    pass, the Chinese and English editions are published together at their public URLs.
   </p>
 </Base>

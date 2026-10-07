@@ -1,4 +1,5 @@
 import { resourceIndexPath, resourcesPath, type Locale } from "./i18n";
+import { THEMES, type Theme } from "./schema";
 
 /**
  * Resource routing helpers.
@@ -9,7 +10,16 @@ import { resourceIndexPath, resourcesPath, type Locale } from "./i18n";
  */
 
 export interface LocalizedEntry {
-  data: { address: string; draft: boolean; lang: string };
+  data: {
+    address: string;
+    draft: boolean;
+    lang: string;
+    theme?: string;
+    stage?: string;
+    subject?: string;
+    title?: string;
+    date?: Date;
+  };
 }
 
 /** The same resource in the other language, matched on its address. */
@@ -66,4 +76,56 @@ export function assertPairedEditions<T extends LocalizedEntry>(entries: T[], whe
         `Check for duplicate frontmatter fields the content loader reserves.`,
     );
   }
+}
+
+// ── Browsing ───────────────────────────────────────────────────────────────
+// The browse page and the theme pages are views over the same published set.
+// Filters are labels on the resources, never separate near-identical pages.
+
+/** Newest first. */
+export function newestFirst<T extends { data: { date?: Date } }>(entries: T[]): T[] {
+  return [...entries].sort(
+    (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
+  );
+}
+
+/** Group by a label (stage, subject), skipping blanks, sorted by label. */
+export function groupByLabel<T>(
+  entries: T[],
+  labelOf: (entry: T) => string | undefined,
+): { label: string; items: T[] }[] {
+  const groups = new Map<string, T[]>();
+  for (const entry of entries) {
+    const label = labelOf(entry)?.trim();
+    if (!label) continue;
+    groups.set(label, [...(groups.get(label) ?? []), entry]);
+  }
+  return [...groups.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([label, items]) => ({ label, items }));
+}
+
+/** The labels present in the published set, so empty filters are never shown. */
+export function labelsInUse<T>(
+  entries: T[],
+  labelOf: (entry: T) => string | undefined,
+): string[] {
+  return groupByLabel(entries, labelOf).map((group) => group.label);
+}
+
+/** Theme keys with at least one resource, in A–E order. */
+export function themesInUse<T extends LocalizedEntry>(entries: T[]): Theme[] {
+  return THEMES.filter((theme) => entries.some((entry) => entry.data.theme === theme));
+}
+
+/** Same-theme siblings, excluding the entry itself — "related resources". */
+export function relatedTo<T extends LocalizedEntry>(entry: T, all: T[], limit = 4): T[] {
+  return all
+    .filter(
+      (other) =>
+        other.data.address !== entry.data.address &&
+        other.data.lang === entry.data.lang &&
+        other.data.theme === entry.data.theme,
+    )
+    .slice(0, limit);
 }

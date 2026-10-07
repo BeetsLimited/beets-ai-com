@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import ResourceView from "../../components/ResourceView.astro";
 import { DEFAULT_LOCALE } from "../../lib/i18n";
-import { alternateHrefFor } from "../../lib/resources";
+import { alternateHrefFor, relatedTo } from "../../lib/resources";
 
 const lang = DEFAULT_LOCALE;
 
@@ -15,11 +15,18 @@ export async function getStaticPaths() {
     .filter((entry) => !entry.data.draft && entry.data.lang === DEFAULT_LOCALE)
     .map((entry) => ({
       params: { slug: entry.data.address },
-      props: { entry, alternateHref: alternateHrefFor(entry, all) },
+      props: {
+        entry,
+        alternateHref: alternateHrefFor(entry, all),
+        related: relatedTo(entry, all).map((other) => ({
+          address: other.data.address,
+          title: other.data.title,
+        })),
+      },
     }));
 }
 
-const { entry, alternateHref } = Astro.props;
+const { entry, alternateHref, related } = Astro.props;
 ---
 
 <Base
@@ -28,5 +35,5 @@ const { entry, alternateHref } = Astro.props;
   lang={lang}
   alternateHref={alternateHref}
 >
-  <ResourceView entry={entry} lang={lang} />
+  <ResourceView entry={entry} lang={lang} related={related} />
 </Base>

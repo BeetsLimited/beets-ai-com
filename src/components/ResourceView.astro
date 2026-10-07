@@ -1,6 +1,6 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
-import { t, themeLabel, type Locale } from "../lib/i18n";
+import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
 
 /**
  * One resource page, in one language.
@@ -14,9 +14,11 @@ interface Props {
   lang: Locale;
   /** Review mode adds the unreviewed-draft banner. */
   reviewMode?: boolean;
+  /** Same-theme siblings, supplied by the route (empty in the review area). */
+  related?: { address: string; title: string }[];
 }
 
-const { entry, lang, reviewMode = false } = Astro.props;
+const { entry, lang, reviewMode = false, related = [] } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 ---
@@ -105,6 +107,26 @@ const d = entry.data;
         {t(lang, "debpLinkText")}
       </a>
     </p>
+  </section>
+
+  {
+    related.length > 0 ? (
+      <section>
+        <h2>{t(lang, "relatedHeading")}</h2>
+        <ul>
+          {related.map((other) => (
+            <li>
+              <a href={resourcesPath(lang, other.address)}>{other.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ) : null
+  }
+
+  <section>
+    <h2>{t(lang, "reuseHeading")}</h2>
+    <p>{t(lang, "reuseBody")}</p>
   </section>
 
   {

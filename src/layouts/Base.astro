@@ -4,6 +4,8 @@ import {
   HTML_LANG,
   alternateLinks,
   alternatePath,
+  browsePath,
+  feedbackPath,
   localizePath,
   resourceIndexPath,
   t,
@@ -91,6 +93,7 @@ const switchHref = alternateHref ?? alternatePath(Astro.url.pathname);
         <div class="headright">
           <nav aria-label="BEETS AI">
             <a href={resourceIndexPath(lang)}>{t(lang, "navResources")}</a>
+            <a href={browsePath(lang)}>{t(lang, "navBrowse")}</a>
             <a href={localizePath("/about/", lang)}>{t(lang, "navAbout")}</a>
           </nav>
           {
@@ -112,7 +115,9 @@ const switchHref = alternateHref ?? alternatePath(Astro.url.pathname);
       <div class="wrap">
         <p>{t(lang, "footerDisclaimer")}</p>
         <p class="muted">
-          © Beets Limited · <a href="https://www.beets3d.com/">beets3d.com</a>
+          © Beets Limited · <a href={localizePath("/about/", lang)}>{t(lang, "footerTerms")}</a> ·{" "}
+          <a href={feedbackPath(lang)}>{t(lang, "footerFeedback")}</a> ·{" "}
+          <a href="https://www.beets3d.com/">beets3d.com</a>
         </p>
       </div>
     </footer>

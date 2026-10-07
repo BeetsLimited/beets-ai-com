@@ -92,7 +92,16 @@ describe("content language coverage", () => {
       expect(other!.fm.theme).toBe(entry.fm.theme);
       expect(other!.fm.type).toBe(entry.fm.type);
       expect(other!.fm.sources).toEqual(entry.fm.sources);
-      expect(other!.fm.downloads).toEqual(entry.fm.downloads);
+    }
+  });
+
+  it("gives each edition its own language's printable", () => {
+    // The Chinese page offers the Chinese file, the English page the English
+    // one — same filenames, different folder. Anything else would either show a
+    // Chinese worksheet behind an English label, or 404.
+    for (const zh of zhEntries) {
+      const en = counterpartOf(zh)!;
+      expect(en.fm.downloads, zh.id).toBe(zh.fm.downloads.replace(/\/files\//g, "/files/en/"));
     }
   });
 

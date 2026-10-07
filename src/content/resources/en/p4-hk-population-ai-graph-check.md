@@ -14,7 +14,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-07
 description: "Students check an AI-generated explanation of Hong Kong's population: find the figures with no source, discover that the claim that the population 'rises every year' is wrong, and redraw the correct line graph using official Census and Statistics Department data."
-downloads: ["/files/p4-hk-population-graph-worksheet.html"]
+downloads: ["/files/en/p4-hk-population-graph-worksheet.html"]
 feedback: true
 draft: true
 ---
