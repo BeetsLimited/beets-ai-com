@@ -10,7 +10,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:links": "node scripts/check-links.mjs",
+    "check:links:external": "node scripts/check-external-links.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

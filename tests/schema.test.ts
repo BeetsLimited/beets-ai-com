@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { resourceSchema } from "../src/lib/schema";
 
-/** A realistic first-release resource (#11 Hong Kong population graph lesson). */
+/** A compliant, publishable resource (#11 Hong Kong population graph lesson). */
 const valid = {
   title: "P4 香港人口折線圖：檢查 AI 生成的解釋",
   title_en: "P4 Hong Kong population line graph: check an AI explanation",
@@ -22,10 +22,12 @@ const valid = {
   description: "檢查 AI 生成的香港人口折線圖解釋，找出錯誤並核對來源。",
   downloads: ["/files/p4-hk-population-graph-v1.pdf"],
   feedback: true,
+  factChecked: true,
+  factCheckedBy: "BeetsBot",
 };
 
 describe("resourceSchema", () => {
-  it("accepts a well-formed resource frontmatter block", () => {
+  it("accepts a well-formed published resource", () => {
     expect(resourceSchema.safeParse(valid).success).toBe(true);
   });
 
@@ -68,5 +70,35 @@ describe("resourceSchema", () => {
     const parsed = resourceSchema.safeParse(valid);
     expect(parsed.success).toBe(true);
     if (parsed.success) expect(parsed.data.date).toBeInstanceOf(Date);
+  });
+
+  // ── fact-check gate ───────────────────────────────────────────────────────
+  it("requires a fact-check attestation before publish", () => {
+    expect(resourceSchema.safeParse({ ...valid, factChecked: false }).success).toBe(false);
+  });
+
+  it("requires a NAMED fact-checker before publish", () => {
+    expect(
+      resourceSchema.safeParse({ ...valid, factChecked: true, factCheckedBy: undefined })
+        .success,
+    ).toBe(false);
+  });
+
+  it("applies the fact-check gate to posts too, not just resources", () => {
+    expect(
+      resourceSchema.safeParse({ ...valid, type: "post", factChecked: false }).success,
+    ).toBe(false);
+  });
+
+  it("exempts drafts from the fact-check gate as well", () => {
+    expect(
+      resourceSchema.safeParse({
+        ...valid,
+        draft: true,
+        reviewer: undefined,
+        factChecked: false,
+        factCheckedBy: undefined,
+      }).success,
+    ).toBe(true);
   });
 });

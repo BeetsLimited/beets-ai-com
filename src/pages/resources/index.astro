@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+const resources = (
+  await getCollection("content", ({ data }) => !data.draft && data.type === "resource")
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const THEME_LABELS: Record<string, string> = {
+  A: "A · 校本 AI 教育規劃 School planning",
+  B: "B · 安全及負責任使用 AI Responsible AI use",
+  C: "C · 看見學生思考 Student thinking",
+  D: "D · 用 AI 探究香港 Hong Kong inquiry",
+  E: "E · 共融 AI 課堂 First & inclusive lessons",
+};
+
+const themes = Object.keys(THEME_LABELS)
+  .map((key) => ({ key, label: THEME_LABELS[key], items: resources.filter((r) => r.data.theme === key) }))
+  .filter((t) => t.items.length > 0);
+---
+
+<Base title="免費資源 Free resources — BEETS AI">
+  <h1>免費資源 Free resources</h1>
+  <p>
+    按主題、學科和級別，免費下載可編輯的工作紙、教案及校本規劃範例。全部資源經教育工作者審閱。
+  </p>
+  <p class="meta">
+    Free, educator-reviewed materials by theme, subject and learning stage. Downloading is open
+    — no registration required.
+  </p>
+
+  {
+    themes.length === 0 ? (
+      <p>資源陸續上線，請稍後再來。Resources are being published — check back soon.</p>
+    ) : (
+      themes.map((theme) => (
+        <section>
+          <h2>{theme.label}</h2>
+          <ul>
+            {theme.items.map((entry) => (
+              <li>
+                <a href={`/resources/${entry.data.slug}/`}>{entry.data.title}</a>
+                <div class="meta">
+                  {entry.data.stage} · {entry.data.subject}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    )
+  }
+</Base>

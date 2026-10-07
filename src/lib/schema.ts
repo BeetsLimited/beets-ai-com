@@ -37,24 +37,42 @@ const fields = {
   feedback: z.boolean().default(false),
   /** Unreviewed scaffolding. Drafts must never be published. */
   draft: z.boolean().default(false),
+
+  // ── fact-check gate ───────────────────────────────────────────────────────
+  /** Every claim verified against its source. Required unless draft. */
+  factChecked: z.boolean().default(false),
+  /** Who verified the facts. Required alongside factChecked to publish. */
+  factCheckedBy: z.string().min(1).optional(),
+  /** When the facts were last verified. */
+  factCheckedOn: z.coerce.date().optional(),
 };
 
 /**
  * Frontmatter contract for BEETS AI content.
  *
- * The educator review gate is enforced here: a published `resource` must name
- * its reviewer. Editorial `post` entries are exempt, and so are `draft`
- * resources — the gate applies at publish, not at authoring. See the setup
- * notes in the publishing workflow — AI drafts, a person verifies before
- * publication.
+ * Two gates are enforced here, both at publish time only (drafts are exempt):
+ *
+ * 1. **Fact-check gate** — published content must be verified by a named
+ *    person. No post goes live on unchecked claims.
+ * 2. **Educator review gate** — a published `resource` must name the educator
+ *    who reviewed its learning aim, age fit and usability.
+ *
+ * AI drafts; a person verifies facts and an educator approves before
+ * publication. Broken links are a separate gate, enforced in CI by
+ * `npm run check:links` against the built site.
  */
-export const resourceSchema = z.object(fields).refine(
-  (value) => value.type !== "resource" || value.draft || Boolean(value.reviewer),
-  {
+export const resourceSchema = z
+  .object(fields)
+  .refine((value) => value.draft || (value.factChecked && Boolean(value.factCheckedBy)), {
+    message:
+      "fact-check gate: published content must be fact-checked by a named person " +
+      "(set factChecked: true and factCheckedBy) — or set draft: true",
+    path: ["factChecked"],
+  })
+  .refine((value) => value.draft || value.type !== "resource" || Boolean(value.reviewer), {
     message:
       "educator review gate: a published resource requires a named reviewer (or set draft: true)",
     path: ["reviewer"],
-  },
-);
+  });
 
 export type Resource = z.infer<typeof resourceSchema>;

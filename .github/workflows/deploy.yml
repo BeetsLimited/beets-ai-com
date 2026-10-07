@@ -39,6 +39,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Check internal links
+        run: npm run check:links
+
+      - name: Check external links (non-blocking)
+        run: npm run check:links:external
+        continue-on-error: true
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
