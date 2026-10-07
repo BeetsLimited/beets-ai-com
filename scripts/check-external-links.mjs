@@ -17,6 +17,15 @@ import { join, resolve } from "node:path";
 const DIST = resolve(import.meta.dirname, "..", "dist");
 /** Our own origin is covered by the internal checker — never fetch it here. */
 const SITE_ORIGIN = "https://beets-ai.com";
+
+/** Path component of a URL, or "" when it can't be parsed. */
+function pathOf(url) {
+  try {
+    return new URL(url).pathname;
+  } catch {
+    return "";
+  }
+}
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 6;
 
@@ -42,6 +51,9 @@ for (const file of walk(DIST)) {
   while ((m = attr.exec(html)) !== null) {
     const url = m[1];
     if (url.startsWith(SITE_ORIGIN)) continue; // internal — other checker handles it
+    // Bare-origin URLs are resource hints (preconnect / dns-prefetch), not links:
+    // those hosts legitimately return 404 for "/" and must not be fetched.
+    if (!url.includes("//") || pathOf(url) === "/") continue;
     if (!links.has(url)) links.set(url, new Set());
     links.get(url).add(file.replace(DIST + "/", ""));
   }
