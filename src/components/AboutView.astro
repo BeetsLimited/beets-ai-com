@@ -6,6 +6,9 @@ import { t, type Locale } from "../lib/i18n";
  *
  * Both editions live here, but only one is ever rendered — Astro evaluates the
  * branch at build time, so the built page contains a single language.
+ *
+ * The English document titles are EDB's own, read off its publications page
+ * (verified 2026-10-08) — never a translation of the Chinese title.
  */
 interface Props {
   lang: Locale;
@@ -104,20 +107,26 @@ const DEBP =
 
       <h2>Source documents</h2>
       <p>
-        The source codes on our resource pages refer to these Education Bureau documents (titles
-        translated for this English edition — follow the link below for the official publications):
+        The source codes on our resource pages refer to these Education Bureau publications
+        (titles as published by the EDB):
       </p>
       <ul>
         <li>
-          <strong>B</strong> — Digital Education Blueprint leaflet (the DEBP three-fold leaflet)
+          <strong>B</strong> — <em>Blueprint for Digital Education Development in Primary and
+          Secondary Schools</em> (the DEBP three-fold leaflet)
         </li>
         <li>
-          <strong>F</strong> — the EDB AI literacy learning framework (primary and secondary)
+          <strong>F</strong> — <em>Supplement I: AI Literacy Learning Framework for Primary and
+          Secondary Schools</em>
         </li>
         <li>
-          <strong>G</strong> — the EDB guidelines on using AI in teaching (primary and secondary)
+          <strong>G</strong> — <em>Supplement II: Guide to Using AI in Teaching in Primary and
+          Secondary Schools</em>
         </li>
-        <li><strong>E</strong> — the EDB examples of AI applications in education</li>
+        <li>
+          <strong>E</strong> — <em>AI Literacy Learning Framework for Primary and Secondary
+          Schools (Examples of Application Scenarios)</em>
+        </li>
       </ul>
       <p>
         Official documents and related material:{" "}

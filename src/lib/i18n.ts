@@ -187,7 +187,7 @@ const EN: Record<UIKey, string> = {
   downloadNote: "(Printable, Traditional Chinese edition)",
   edbHeading: "How this relates to the EDB framework",
   edbOfficialDoc: "Official document:",
-  debpLinkText: "EDB Digital Education Blueprint",
+  debpLinkText: "Blueprint for Digital Education Development in Primary and Secondary Schools",
   feedbackHeading: "Feedback",
   feedbackBody:
     "Have you used this resource? Tell us what needs improving, or suggest the next one.",

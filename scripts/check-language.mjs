@@ -11,10 +11,13 @@
  *   3. No English sentence from an English page also appears on its Traditional
  *      Chinese counterpart — the exact failure mode being fixed: the same page
  *      printing both languages at once.
+ *   4. No English printable (files/en/*.html) contains a CJK character either —
+ *      the worksheets are excluded from the page rules above, so without this a
+ *      Chinese-only "English" worksheet would ship unnoticed.
  *
  * Excluded (by design, not by accident):
- *   files/   — printable worksheets, Traditional Chinese only
- *   review/  — the internal hub, which is bilingual on purpose and noindex
+ *   files/*.html   — printable worksheets, Traditional Chinese only
+ *   review/        — the internal hub, which is bilingual on purpose and noindex
  *
  * Exit code 1 if any check fails.
  */
@@ -28,6 +31,9 @@ const CJK = /[\u3000-\u303f\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\
 
 /** Directories that are intentionally not part of the per-language site. */
 const SKIP = new Set(["files", "review"]);
+
+/** Where the English printables live, relative to dist/. */
+const ENGLISH_PRINTABLES = join("files", "en");
 
 /** Text that is legitimately identical on both editions (brand/legal, not prose). */
 const SHARED = new Set(["© Beets Limited · beets3d.com"]);
@@ -156,6 +162,26 @@ console.log(
     `(${pages.filter((p) => p.locale === "en").length} English, ` +
     `${pages.filter((p) => p.locale === "zh-HK").length} Traditional Chinese)`,
 );
+
+// 4. English printables carry no Chinese either. They are skipped as pages, so
+//    they need their own check — otherwise a Chinese worksheet sitting at
+//    /files/en/… would ship behind an English label.
+const printableDir = join(DIST, ENGLISH_PRINTABLES);
+const englishPrintables = existsSync(printableDir) ? walk(printableDir) : [];
+for (const file of englishPrintables) {
+  const html = readFileSync(file, "utf8");
+  const match = html.match(CJK);
+  if (match) {
+    const index = html.indexOf(match[0]);
+    failures.push({
+      page: relative(DIST, file).split("\\").join("/"),
+      why: `English printable contains "${match[0]}" (near: …${html.slice(Math.max(0, index - 40), index + 40)}…)`,
+    });
+  }
+}
+if (englishPrintables.length) {
+  console.log(`             ${englishPrintables.length} English printable(s) checked`);
+}
 
 if (failures.length) {
   console.error(`\n✗ ${failures.length} language problem(s):`);

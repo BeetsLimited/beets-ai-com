@@ -114,6 +114,24 @@ describe("content language coverage", () => {
 });
 
 describe("English content is English", () => {
+  it("names EDB documents by their official English titles", () => {
+    // The titles were verified on EDB's own publications page. Descriptive
+    // placeholders were the interim state while that was being checked; they
+    // must not come back, because a made-up title reads as authoritative.
+    const placeholders = [
+      "the EDB AI literacy learning framework",
+      "the EDB guidelines on using AI in teaching",
+      "the EDB examples of AI in education",
+      "the EDB examples of AI applications in education",
+      "the Digital Education Blueprint leaflet",
+    ];
+    for (const entry of enEntries) {
+      for (const phrase of placeholders) {
+        expect(entry.raw.includes(phrase), `${entry.id} still says "${phrase}"`).toBe(false);
+      }
+    }
+  });
+
   it("keeps Chinese characters out of English entries", () => {
     for (const entry of enEntries) {
       expect(CJK.test(entry.fm.title), `${entry.id} title`).toBe(false);

@@ -71,8 +71,8 @@ Students will be able to:
 
 This resource maps to:
 
-- **F (the EDB AI literacy learning framework, p.1-13)**: values process and authentic assessment rather than judging only the final result.
-- **G (the EDB guidelines on using AI in teaching, p.2-8)**: recommends checking students' learning and AI use through oral questioning and the submission of their thinking process.
+- **F (the AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13)**: values process and authentic assessment rather than judging only the final result.
+- **G (the Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-8)**: recommends checking students' learning and AI use through oral questioning and the submission of their thinking process.
 
 Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 

@@ -73,7 +73,7 @@ Six fictional examples, a printable checklist and the full answer key are in the
 
 ## How this relates to the EDB framework
 
-This resource maps to **G (the EDB guidelines on using AI in teaching, pp.2-4 and 2-9)**: the document requires learning data to be handled properly, and for identifiable parts to be removed before pupil work is uploaded for AI marking.
+This resource maps to **G (the Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-4 and 2-9)**: the document requires learning data to be handled properly, and for identifiable parts to be removed before pupil work is uploaded for AI marking.
 
 Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 

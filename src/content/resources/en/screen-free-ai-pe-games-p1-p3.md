@@ -120,7 +120,7 @@ The printable contains the full card sets for Games 1 and 2 (picture + word, for
 
 ## How this relates to the EDB framework
 
-This resource maps to **source E (the EDB examples of AI in education, p.4)** and **source F (the EDB AI literacy learning framework, p.1-8)**: both cover early-primary experiences of meeting AI through physical and unplugged activities.
+This resource maps to **source E (the AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.4)** and **source F (the AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8)**: both cover early-primary experiences of meeting AI through physical and unplugged activities.
 
 Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 

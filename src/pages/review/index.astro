@@ -21,31 +21,63 @@ import { EVERY_RESOURCE_CHECKLIST, RESOURCE_CHECKLISTS } from "../../lib/review-
  * per language, so those links would 404.
  *
  * It lists EVERY resource, drafted or published, with both editions, the
- * printable files where they exist, the checklist for that resource, and any
- * `[[VERIFY]]` item the draft left for a human. Nothing is published from here:
+ * printable files where they exist, the checklist for that resource and any
+ * `[[VERIFY]]` item a draft left for a human. Nothing is published from here:
  * a resource goes live only when its `reviewer` and `factCheckedBy` are filled in.
  */
-const entries = await getCollection("content");
-
-const addresses = [...new Set(entries.map((entry) => entry.data.address))].sort();
-const editionsOf = (address: string) =>
-  entries.filter((entry) => entry.data.address === address);
-
-const reviewHref = (address: string, lang: string) =>
-  lang === "en" ? `/review/en/${address}/` : `/review/${address}/`;
-const publicHref = (address: string, lang: string) =>
-  lang === "en" ? `/en/resources/${address}/` : `/resources/${address}/`;
-const printablePath = (address: string, lang: string) =>
-  lang === "en" ? `/files/en/${address}.html` : `/files/${address}.html`;
-const hasPrintable = (address: string, lang: string) =>
-  existsSync(resolve(process.cwd(), "public", printablePath(address, lang).replace(/^\//, "")));
-
-/** Markers the drafting agent left for a human to check. */
-const verifyItems = (body: string | undefined): string[] =>
-  body ? [...body.matchAll(/\[\[VERIFY[^\]]*\]\]/g)].map((match) => match[0]) : [];
-
 const ZH = "zh-HK";
 const EN = "en";
+
+const entries = await getCollection("content");
+const addresses = [...new Set(entries.map((entry) => entry.data.address))].sort();
+
+const reviewHref = (address: string, lang: string) =>
+  lang === EN ? `/review/en/${address}/` : `/review/${address}/`;
+const publicHref = (address: string, lang: string) =>
+  lang === EN ? `/en/resources/${address}/` : `/resources/${address}/`;
+
+/**
+ * The printable a resource declares, if it is on disk. `null` means the resource
+ * declares no file; `undefined` means it declares one that is not there yet.
+ * The filename is taken from the entry — older resources do not use their own
+ * address as the filename.
+ */
+function printable(entry: { data: { downloads?: string[] } } | undefined) {
+  const path = entry?.data.downloads?.[0];
+  if (!path) return null;
+  return existsSync(resolve(process.cwd(), "public", path.replace(/^\//, ""))) ? path : undefined;
+}
+
+/** Markers the drafting agent left for a human to check. */
+const flagged = (entry: { body?: string } | undefined, label: string) =>
+  (entry?.body ? [...entry.body.matchAll(/\[\[VERIFY[^\]]*\]\]/g)] : []).map(
+    (match) => `${label} ${match[0]}`,
+  );
+
+const rows = addresses.map((address) => {
+  const editions = entries.filter((entry) => entry.data.address === address);
+  const zh = editions.find((entry) => entry.data.lang === ZH);
+  const en = editions.find((entry) => entry.data.lang === EN);
+  const lead = zh ?? en;
+  return {
+    address,
+    theme: lead?.data.theme,
+    lead,
+    zh,
+    en,
+    zhFile: printable(zh),
+    enFile: printable(en),
+    checks: RESOURCE_CHECKLISTS[address] ?? EVERY_RESOURCE_CHECKLIST,
+    flagged: [...flagged(zh, "中文版"), ...flagged(en, "English")],
+  };
+});
+
+const byTheme = themesInOrder(ZH)
+  .map((theme) => ({
+    theme,
+    items: rows.filter((row) => row.theme === theme.key),
+  }))
+  .filter((group) => group.items.length > 0);
 ---
 
 <Base title="內部審閱 Internal review — BEETS AI" noindex multilingual={false}>
@@ -100,92 +132,83 @@ const EN = "en";
   <h2>資源 Resources</h2>
 
   {
-    themesInOrder(ZH).map((theme) => {
-      const items = addresses.filter(
-        (address) => editionsOf(address)[0]?.data.theme === theme.key,
-      );
-      if (items.length === 0) return null;
-      return (
-        <section>
-          <h3>
-            主題 {theme.key} · {theme.label}
-          </h3>
-          {items.map((address) => {
-            const zh = editionsOf(address).find((entry) => entry.data.lang === ZH);
-            const en = editionsOf(address).find((entry) => entry.data.lang === EN);
-            const lead = zh ?? en;
-            const checks = RESOURCE_CHECKLISTS[address] ?? EVERY_RESOURCE_CHECKLIST;
-            const flagged = [
-              ...verifyItems(zh?.body).map((item) => `中文版 ${item}`),
-              ...verifyItems(en?.body).map((item) => `English ${item}`),
-            ];
-            return (
-              <div class="panel">
-                <p>
-                  <strong>{lead?.data.title}</strong>
-                </p>
-                <p class="meta">
-                  {lead?.data.stage} · {lead?.data.subject} · 原始構思 {lead?.data.sourceIdea} ·
-                  來源 {lead?.data.sources.join("、")} · v{lead?.data.version}
-                </p>
-                <ul>
-                  <li>
-                    繁體中文版：{" "}
-                    <a href={reviewHref(address, ZH)}>頁面</a> ·{" "}
-                    {hasPrintable(address, ZH) ? (
-                      <a href={printablePath(address, ZH)}>附件</a>
-                    ) : (
-                      <span class="meta">附件待製作</span>
-                    )}{" "}
-                    · <span class="meta">正式網址 {publicHref(address, ZH)}</span>
-                  </li>
-                  <li>
-                    English edition:{" "}
-                    <a href={reviewHref(address, EN)}>page</a> ·{" "}
-                    {hasPrintable(address, EN) ? (
-                      <a href={printablePath(address, EN)}>file</a>
-                    ) : (
-                      <span class="meta">file to produce</span>
-                    )}{" "}
-                    · <span class="meta">public URL {publicHref(address, EN)}</span>
-                  </li>
-                </ul>
-
-                <p class="meta">
-                  <strong>① 事實核實 Fact-check</strong>
-                </p>
-                <ul>
-                  {checks.fact.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
-                <p class="meta">
-                  <strong>② 教育工作者審閱 Educator review（Henry）</strong>
-                </p>
-                <ul>
-                  {checks.educator.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
-
-                {flagged.length > 0 ? (
+    byTheme.map((group) => (
+      <section>
+        <h3>
+          主題 {group.theme.key} · {group.theme.label}
+        </h3>
+        {group.items.map((row) => (
+          <div class="panel">
+            <p>
+              <strong>{row.lead?.data.title}</strong>
+            </p>
+            <p class="meta">
+              {row.lead?.data.stage} · {row.lead?.data.subject} · 原始構思{" "}
+              {row.lead?.data.sourceIdea} · 來源 {row.lead?.data.sources.join("、")} · v
+              {row.lead?.data.version}
+            </p>
+            <ul>
+              <li>
+                繁體中文版：{" "}
+                <a href={reviewHref(row.address, ZH)}>頁面</a>
+                {row.zhFile ? (
                   <>
-                    <p class="meta">
-                      <strong>③ 草擬時標示為待核實 Flagged while drafting</strong>
-                    </p>
-                    <ul>
-                      {flagged.map((item) => (
-                        <li>{item}</li>
-                      ))}
-                    </ul>
+                    {" · "}
+                    <a href={row.zhFile}>附件</a>
                   </>
+                ) : row.zhFile === undefined ? (
+                  <span class="meta"> · 附件尚未製作</span>
                 ) : null}
-              </div>
-            );
-          })}
-        </section>
-      );
-    })
+                <span class="meta"> · 正式網址 {publicHref(row.address, ZH)}</span>
+              </li>
+              <li>
+                English edition:{" "}
+                <a href={reviewHref(row.address, EN)}>page</a>
+                {row.enFile ? (
+                  <>
+                    {" · "}
+                    <a href={row.enFile}>file</a>
+                  </>
+                ) : row.enFile === undefined ? (
+                  <span class="meta"> · file not made yet</span>
+                ) : null}
+                <span class="meta"> · public URL {publicHref(row.address, EN)}</span>
+              </li>
+            </ul>
+
+            <p class="meta">
+              <strong>① 事實核實 Fact-check</strong>
+            </p>
+            <ul>
+              {row.checks.fact.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <p class="meta">
+              <strong>② 教育工作者審閱 Educator review（Henry）</strong>
+            </p>
+            <ul>
+              {row.checks.educator.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+
+            {row.flagged.length > 0 ? (
+              <>
+                <p class="meta">
+                  <strong>③ 草擬時標示為待核實 Flagged while drafting</strong>
+                </p>
+                <ul>
+                  {row.flagged.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+          </div>
+        ))}
+      </section>
+    ))
   }
 
   <hr />

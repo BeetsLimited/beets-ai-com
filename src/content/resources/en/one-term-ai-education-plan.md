@@ -89,8 +89,8 @@ Includes: a blank planning table, the completed fictional school example, and a 
 
 This resource maps to:
 
-- **B (the Digital Education Blueprint leaflet, p.2)**: requires digital and AI education strategies in school development plans with a clear implementation timetable.
-- **F (the EDB AI literacy learning framework, pp.1-6 to 1-10)**: sets out cross-subject implementation and progression across four learning stages, to be referenced when planning activities.
+- **B (the Blueprint for Digital Education Development in Primary and Secondary Schools (three-fold leaflet), p.2)**: requires digital and AI education strategies in school development plans with a clear implementation timetable.
+- **F (the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10)**: sets out cross-subject implementation and progression across four learning stages, to be referenced when planning activities.
 
 Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
