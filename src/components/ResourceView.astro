@@ -51,6 +51,21 @@ const showDraftNotice = reviewMode || d.draft;
 
   <p>{d.description}</p>
 
+  {
+    d.image ? (
+      <figure class="hero">
+        <img
+          src={d.image}
+          alt={d.imageAlt ?? d.title}
+          width="1280"
+          height="720"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+    ) : null
+  }
+
   <dl class="meta">
     {d.prepTime ? <><dt>{t(lang, "labelPrep")}</dt><dd>{d.prepTime}</dd></> : null}
     {d.equipment ? <><dt>{t(lang, "labelEquipment")}</dt><dd>{d.equipment}</dd></> : null}
@@ -121,3 +136,22 @@ const showDraftNotice = reviewMode || d.draft;
     <p>{t(lang, "reuseBody")}</p>
   </section>
 </article>
+
+<style>
+  /*
+    Scoped to this component on purpose. A view's OWN class rules work scoped —
+    it was the layout's shared design system that had to be made global in
+    Base.astro, because that markup is rendered through a slot by these views.
+  */
+  .hero {
+    margin: 1.5rem 0 1.8rem;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--surface, #f3f3f3);
+  }
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>

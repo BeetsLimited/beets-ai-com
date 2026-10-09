@@ -42,6 +42,17 @@ const fields = {
   date: z.coerce.date(),
   description: z.string().min(1),
   downloads: z.array(z.string()).default([]),
+  /**
+   * Optional hero image, a path under public/ (e.g. /images/x-hero.webp). Used as
+   * the page hero AND as the page's Open Graph image. Ship WebP: one 1280x720
+   * illustration is 25 KB as WebP and 683 KB as the PNG it was generated as.
+   */
+  image: z.string().optional(),
+  /**
+   * Alt text for the hero. Falls back to the title, which is a poor description
+   * of a picture — write a real one whenever the image carries meaning.
+   */
+  imageAlt: z.string().optional(),
   feedback: z.boolean().default(false),
   /** Unreviewed scaffolding. Drafts must never be published. */
   draft: z.boolean().default(false),

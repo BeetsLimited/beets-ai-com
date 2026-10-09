@@ -38,6 +38,11 @@ interface Props {
   structuredData?: Record<string, unknown>[];
   /** Open Graph object type — "website" unless the page is a dated article. */
   ogType?: string;
+  /** Per-page social image (a resource hero). Falls back to the site card. */
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
 }
 
 const {
@@ -49,6 +54,10 @@ const {
   alternateHref,
   structuredData = [],
   ogType = "website",
+  ogImage,
+  ogImageAlt,
+  ogImageWidth,
+  ogImageHeight,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -67,6 +76,10 @@ const social = socialMeta({
   url: canonical.href,
   locale: lang,
   type: ogType,
+  image: ogImage,
+  imageAlt: ogImageAlt,
+  imageWidth: ogImageWidth,
+  imageHeight: ogImageHeight,
 });
 /**
  * The site's own two nodes on every page, plus whatever the page adds. Kept as

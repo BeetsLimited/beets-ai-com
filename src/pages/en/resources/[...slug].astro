@@ -39,6 +39,8 @@ const resourcesUrl = new URL(resourceIndexPath(lang), Astro.site).href;
   lang={lang}
   alternateHref={alternateHref}
   ogType="article"
+  ogImage={entry.data.image}
+  ogImageAlt={entry.data.imageAlt}
   structuredData={[
     learningResourceLd(entry, lang, canonicalUrl),
     breadcrumbLd([

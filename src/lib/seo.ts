@@ -21,6 +21,13 @@ export const OG_IMAGE = `${SITE_URL}/og-image.png`;
 export const OG_IMAGE_WIDTH = 1200;
 export const OG_IMAGE_HEIGHT = 630;
 
+/**
+ * Resource heroes are generated at 16:9 by scripts + the image skill, so their
+ * size is a known constant rather than something to measure per page.
+ */
+export const HERO_IMAGE_WIDTH = 1280;
+export const HERO_IMAGE_HEIGHT = 720;
+
 const OG_LOCALE: Record<Locale, string> = { "zh-HK": "zh_HK", en: "en_HK" };
 
 const SITE_NAME: Record<Locale, string> = {
@@ -37,9 +44,26 @@ export function socialMeta(opts: {
   type?: string;
   image?: string;
   imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 }) {
   const type = opts.type ?? "website";
-  const image = opts.image ?? OG_IMAGE;
+  /**
+   * Open Graph and Twitter require an ABSOLUTE image URL. A root-relative path
+   * like "/images/x.webp" is silently ignored by most scrapers — the card just
+   * renders with no picture, which looks like "the image didn't upload" rather
+   * than a spec violation. Always absolutise.
+   */
+  const rawImage = opts.image ?? OG_IMAGE;
+  const image = /^https?:\/\//.test(rawImage) ? rawImage : `${SITE_URL}${rawImage}`;
+  /**
+   * A page that supplies its own image is supplying a resource hero, which the
+   * pipeline generates at 16:9. The declared size must follow the image:
+   * advertising the site card's 1200x630 for a 1280x720 hero makes every share
+   * surface crop or letterbox it.
+   */
+  const imageWidth = opts.imageWidth ?? (opts.image ? HERO_IMAGE_WIDTH : OG_IMAGE_WIDTH);
+  const imageHeight = opts.imageHeight ?? (opts.image ? HERO_IMAGE_HEIGHT : OG_IMAGE_HEIGHT);
   const imageAlt =
     opts.imageAlt ?? (opts.locale === "en" ? SITE_NAME.en : SITE_NAME["zh-HK"]);
   return {
@@ -50,8 +74,8 @@ export function socialMeta(opts: {
     url: opts.url,
     image,
     imageAlt,
-    imageWidth: OG_IMAGE_WIDTH,
-    imageHeight: OG_IMAGE_HEIGHT,
+    imageWidth,
+    imageHeight,
     locale: OG_LOCALE[opts.locale],
     /** The other edition, so a share in one language links the other. */
     localeAlternate: opts.locale === "en" ? OG_LOCALE["zh-HK"] : OG_LOCALE.en,
@@ -121,6 +145,7 @@ type ResourceEntry = {
     date: Date | string;
     fileType?: string[];
     downloads?: string[];
+    image?: string;
     type: string;
   };
 };
@@ -163,6 +188,11 @@ export function learningResourceLd(entry: ResourceEntry, lang: Locale, url: stri
   // signal for both audiences, so it is asserted only when a name is present.
   if (d.reviewer) {
     ld.reviewedBy = { "@type": "Person", name: d.reviewer };
+  }
+  // schema.org wants an absolute URL here too.
+  if (d.image) {
+    ld.image = /^https?:\/\//.test(d.image) ? d.image : `${SITE_URL}${d.image}`;
+    ld.thumbnailUrl = ld.image;
   }
   if (d.downloads?.length) {
     ld.encoding = d.downloads.map((path) => ({
