@@ -16,7 +16,7 @@ version: "0.1"
 date: 2026-10-08
 description: "An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting."
 image: "/images/p4-p6-curriculum-gap-map-hero.webp"
-imageAlt: "Two school leaders standing behind a table with three blank cards on it — two deep red and one blue."
+imageAlt: "Two school leaders standing behind a table with three sheets of paper on it — one deep red and two blue."
 downloads: ["/files/en/p4-p6-curriculum-gap-map.xlsx"]
 feedback: true
 factChecked: true

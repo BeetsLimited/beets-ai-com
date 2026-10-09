@@ -16,7 +16,7 @@ version: "0.1"
 date: 2026-10-07
 description: "Students check an AI-generated explanation of Hong Kong's population: find the figures with no source, discover that the claim that the population 'rises every year' is wrong, and redraw the correct line graph using official Census and Statistics Department data."
 image: "/images/p4-hk-population-ai-graph-check-hero.webp"
-imageAlt: "A pupil at a table holding a blue pencil and looking up thoughtfully, with a small plant in a deep red pot beside them."
+imageAlt: "A pupil in school uniform standing at a table holding a blue pencil, looking out of a window at a city skyline, with a small plant on the table."
 downloads: ["/files/en/p4-hk-population-ai-graph-check.docx"]
 feedback: true
 draft: true

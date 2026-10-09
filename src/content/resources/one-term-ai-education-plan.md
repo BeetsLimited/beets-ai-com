@@ -17,7 +17,7 @@ version: "0.1"
 date: 2026-10-08
 description: "一張可編輯的一學期 AI 教育規劃範本：兩項試點活動、負責人、日期與檢討證據，附一個完成的虛構學校示例，供校長及課程統籌直接套用。"
 image: "/images/one-term-ai-education-plan-hero.webp"
-imageAlt: "兩名沒有臉部細節的教師並肩站在淺色牆前，各拿着一個空白文件夾：一個深紅色，一個寶藍色。"
+imageAlt: "兩名沒有臉部細節的教師並肩站在淺色牆前，一人拿着深紅色文件夾，一人拿着寶藍色文件夾，旁邊有一張桌。"
 downloads: ["/files/one-term-ai-education-plan.xlsx"]
 feedback: true
 factChecked: true

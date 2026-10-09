@@ -17,7 +17,7 @@ version: "0.1"
 date: 2026-10-07
 description: "學生核對一段 AI 生成的香港人口解釋：找出沒有來源的數字、發現「每年都上升」的說法有誤，並用政府統計處的官方數據重畫正確的折線圖。"
 image: "/images/p4-hk-population-ai-graph-check-hero.webp"
-imageAlt: "一名學生坐在桌前，手拿藍色鉛筆，抬頭思考；桌上有一盆深紅色花盆的小植物，背後是大窗。"
+imageAlt: "一名穿校服的學生站在桌前，手拿藍色鉛筆，望向窗外的城市景觀；桌上一盆小植物。"
 downloads: ["/files/p4-hk-population-ai-graph-check.docx"]
 feedback: true
 draft: true

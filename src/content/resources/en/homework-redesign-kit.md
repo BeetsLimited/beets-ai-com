@@ -16,7 +16,7 @@ version: "0.1"
 date: 2026-10-08
 description: "Two complete before-and-after assignments (a Chinese Language reading response and a General Studies data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required."
 image: "/images/homework-redesign-kit-hero.webp"
-imageAlt: "A teacher seated at a desk with a blue notebook and a stack of papers, a deep red pencil cup beside them, a whiteboard behind."
+imageAlt: "A teacher seated at a desk holding a clipboard, with a stack of papers and a deep red cup holding pencils on the desk."
 downloads: ["/files/en/homework-redesign-kit.docx"]
 feedback: true
 draft: true

@@ -17,7 +17,7 @@ version: "0.1"
 date: 2026-10-08
 description: "一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科目與學期記錄現有活動、標出缺口並寫下最小的下一步，附三個完成的虛構學校示例，供校長及科主任在課程會議中直接使用。"
 image: "/images/p4-p6-curriculum-gap-map-hero.webp"
-imageAlt: "兩位學校領導站在桌後，桌上有三張空白卡片：兩張深紅色、一張藍色。"
+imageAlt: "兩位學校領導站在桌後，桌上有三張紙：一張深紅色、兩張藍色。"
 downloads: ["/files/p4-p6-curriculum-gap-map.xlsx"]
 feedback: true
 factChecked: true

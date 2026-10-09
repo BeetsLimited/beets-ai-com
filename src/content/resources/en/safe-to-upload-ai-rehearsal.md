@@ -17,7 +17,7 @@ date: 2026-10-07
 description: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps."
 downloads: ["/files/en/safe-to-upload-ai-rehearsal.docx"]
 image: "/images/safe-to-upload-ai-rehearsal-hero.webp"
-imageAlt: "A document with three lines highlighted in red, one being erased, beside a shield with a check mark."
+imageAlt: "A teacher standing at a desk, placing a document into a deep red folder, with a royal blue paper clip, a blank sheet and a small plant on the desk."
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"

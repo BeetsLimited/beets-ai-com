@@ -18,7 +18,7 @@ date: 2026-10-07
 description: "教師實作練習：從六份虛構學校文件中找出並移除可識別學生的資料，再安全地交給 AI 工具。附答案、準備清單與可重用步驟。"
 downloads: ["/files/safe-to-upload-ai-rehearsal.docx"]
 image: "/images/safe-to-upload-ai-rehearsal-hero.webp"
-imageAlt: "示範文件上三行資料被紅色標示，其中一行正被擦去；旁邊有一個帶勾號的盾牌。"
+imageAlt: "一位教師站在桌前，把一份文件放入深紅色文件夾；桌上有藍色夾子、一張空白紙和一盆小植物。"
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"

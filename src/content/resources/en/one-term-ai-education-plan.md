@@ -16,7 +16,7 @@ version: "0.1"
 date: 2026-10-08
 description: "An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy."
 image: "/images/one-term-ai-education-plan-hero.webp"
-imageAlt: "Two simple faceless teachers standing together against a pale wall, each holding a plain folder — one deep red, one royal blue."
+imageAlt: "Two simple faceless teachers standing side by side against a pale wall, one holding a deep red folder and the other a royal blue folder, with a table beside them."
 downloads: ["/files/en/one-term-ai-education-plan.xlsx"]
 feedback: true
 factChecked: true

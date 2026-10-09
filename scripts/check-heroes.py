@@ -18,6 +18,7 @@ is what `imageAlt` must describe.
     ... /tmp/hero-*.png            # or the shipped WebP under public/images/
 """
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -37,6 +38,19 @@ STYLE_Q = (
     "Are there deep red and royal blue accents? Is there generous white space? Are any human "
     "figures simple and faceless? Anything unsettling for a school audience?"
 )
+# The failure that shipped once: the model rendered grey/ashen skin, and a check
+# that only looked for text and style did not notice. A Hong Kong school audience
+# needs people who look like them, so ask about skin tone explicitly.
+# A keyword answer cannot be trusted here — asked "is this grey?", the model tends
+# to answer what you implied. Ask for a NUMBER and compare it instead.
+SKIN_Q = (
+    "Rate the skin tone of every person in this image on this scale: 1 = grey, ashen or pale "
+    "grey; 2 = very pale peach or white; 3 = light warm tan; 4 = medium warm tan; 5 = deep "
+    "brown. Hong Kong Chinese people should read as 3 or 4. Reply with one number per person, "
+    "in the order they appear, and nothing else."
+)
+# Anything rated 2 or below is the European default or the grey failure.
+BAD_SKIN = re.compile(r"\b([12])\b|grey|gray|ashen|blue[- ]?ting", re.I)
 
 
 def ask(image: Path, question: str) -> str:
@@ -55,14 +69,18 @@ def main() -> int:
             continue
         text = ask(path, TEXT_Q)
         style = ask(path, STYLE_Q)
+        skin = ask(path, SKIN_Q)
         lines = [line.strip() for line in text.splitlines() if line.strip()]
         verdict = lines[0] if lines else "(no answer)"
         scene = lines[1] if len(lines) > 1 else ""
         clean = verdict.lower().startswith(("none", "no ", "there is no"))
-        if not clean:
+        bad_skin = BAD_SKIN.search(skin)
+        if not clean or bad_skin:
             flagged.append(path.name)
-        print(f"\n=== {path.name}  {'CLEAN' if clean else 'FLAGGED'}")
+        print(f"\n=== {path.name}  {'CLEAN' if clean and not bad_skin else 'FLAGGED'}")
         print(f"    text : {verdict}")
+        print(f"    skin : {bad_skin.group(0).upper() + ' <- WRONG' if bad_skin else 'ok'}"
+              f" | {' '.join(l.strip() for l in skin.splitlines() if l.strip())[:150]}")
         print(f"    scene: {scene}")
         print(f"    style: {' | '.join(l.strip() for l in style.splitlines() if l.strip())}")
 
@@ -70,7 +88,7 @@ def main() -> int:
     if flagged:
         print(f"⚠️  {len(flagged)} need a look: {', '.join(flagged)}")
         return 1
-    print("no rendered text reported in any hero")
+    print("no rendered text and no wrong skin tone in any hero")
     return 0
 
 

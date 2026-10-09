@@ -17,7 +17,7 @@ version: "0.1"
 date: 2026-10-08
 description: "兩份完整的前後對照課業範例（中文閱讀回應與常識資料整理）加一份功課重設計檢查清單，示範在保留學習目標與作答時間之餘，讓學生的思考歷程看得見。"
 image: "/images/homework-redesign-kit-hero.webp"
-imageAlt: "一位教師坐在桌前，面前是一本藍色筆記簿和一疊紙，旁邊有深紅色筆筒；背景是課室白板。"
+imageAlt: "一位教師坐在桌前，手拿夾紙板，桌上有疊好的紙張和插着鉛筆的深紅色筆筒。"
 downloads: ["/files/homework-redesign-kit.docx"]
 feedback: true
 draft: true
