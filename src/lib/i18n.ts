@@ -44,6 +44,7 @@ export const HTML_LANG: Record<Locale, string> = {
 
 const ZH_HK = {
   skip: "跳至內容",
+  breadcrumbHome: "主頁",
   navResources: "免費資源",
   navBrowse: "按科目及級別",
   navAbout: "關於",
@@ -128,6 +129,7 @@ export type UIKey = keyof typeof ZH_HK;
 
 const EN: Record<UIKey, string> = {
   skip: "Skip to content",
+  breadcrumbHome: "Home",
   navResources: "Free resources",
   navBrowse: "By subject & stage",
   navAbout: "About",

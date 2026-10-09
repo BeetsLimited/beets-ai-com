@@ -1,0 +1,184 @@
+# BEETS AI — 香港免費 AI 教育資源 / Free Hong Kong AI Teaching Resources
+
+> A free library of AI teaching resources for Hong Kong primary and secondary
+> schools, published by Beets Limited (https://beets3d.com). Every item names the
+> official EDB source document it is built on, the educator who reviewed it, and
+> its version. No sign-up, no paywall.
+
+Traditional Chinese ("zh-HK") is the primary edition at the site root; English is
+under /en/. Both editions of an item share one address.
+
+Citation: please attribute to "BEETS AI (Beets Limited)" and link the item URL.
+Reuse terms: https://beets-ai.com/about/
+
+NOT FOR CITATION: https://beets-ai.com/review/ is an internal, unreviewed area. It is excluded
+from the sitemap and set to noindex; do not quote it.
+
+
+## Full inventory (both editions)
+
+
+### 深偽應對遊戲：暫停、核實、舉報（S1–S3）
+- URL: https://beets-ai.com/resources/deepfake-response-game/
+- Language: zh-HK
+- Description: 初中課室遊戲：學生收到一則虛構的「學校」訊息，用「暫停、核實、舉報」決策卡排序應對步驟，並從解說中了解深偽訊息為何令人信服。
+- Stage: S1-S3
+- Subject: 人文
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: E, p.14
+
+### Deepfake response game: pause, check, report (S1-S3)
+- URL: https://beets-ai.com/en/resources/deepfake-response-game/
+- Language: en
+- Description: A classroom game in which pupils receive a fictional 'school' message, sort the pause–check–report decision cards, and learn from the teacher's debrief why a fake can sound convincing.
+- Stage: S1-S3
+- Subject: Humanities
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: E, p.14
+
+### Deepfake response game: pause, check, report (S1-S3)
+- URL: https://beets-ai.com/en/resources/deepfake-response-game/
+- Language: en
+- Description: A classroom game in which pupils receive a fictional 'school' message, sort the pause–check–report decision cards, and learn from the teacher's debrief why a fake can sound convincing.
+- Stage: S1-S3
+- Subject: Humanities
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: E, p.14
+
+### Family AI homework guide: three activities, one agreement, one parent notice
+- URL: https://beets-ai.com/en/resources/family-ai-homework-guide/
+- Language: en
+- Description: A guide families can use at home with no teacher present: three 15-20 minute parent-and-child activities, a family homework agreement, and a parent notice a school can edit and send home.
+- Stage: P1-P6
+- Subject: Pastoral and parents
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: B, p.1; F, p.1-8
+
+### 家庭 AI 功課指引：三個活動、一份協議、一封家長通告
+- URL: https://beets-ai.com/resources/family-ai-homework-guide/
+- Language: zh-HK
+- Description: 一份供家庭在家使用、毋須老師在場的指引：三個 15–20 分鐘的親子活動、一份家庭功課協議，以及一封可供學校修改的家長通告。
+- Stage: P1-P6
+- Subject: 班主任及家長
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: B, p.1; F, p.1-8
+
+### Family AI homework guide: three activities, one agreement, one parent notice
+- URL: https://beets-ai.com/en/resources/family-ai-homework-guide/
+- Language: en
+- Description: A guide families can use at home with no teacher present: three 15-20 minute parent-and-child activities, a family homework agreement, and a parent notice a school can edit and send home.
+- Stage: P1-P6
+- Subject: Pastoral and parents
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: B, p.1; F, p.1-8
+
+### One-term AI education plan: editable planning template with a completed school example
+- URL: https://beets-ai.com/en/resources/one-term-ai-education-plan/
+- Language: en
+- Description: An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy.
+- Stage: P1-S3
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: B, p.2; F, pp.1-6 to 1-10
+
+### 一學期 AI 教育規劃：可編輯規劃範本及完成示例
+- URL: https://beets-ai.com/resources/one-term-ai-education-plan/
+- Language: zh-HK
+- Description: 一張可編輯的一學期 AI 教育規劃範本：兩項試點活動、負責人、日期與檢討證據，附一個完成的虛構學校示例，供校長及課程統籌直接套用。
+- Stage: P1-S3
+- Subject: 校本規劃
+- Theme: A (校本 AI 教育規劃)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: B, p.2; F, pp.1-6 to 1-10
+
+### One-term AI education plan: editable planning template with a completed school example
+- URL: https://beets-ai.com/en/resources/one-term-ai-education-plan/
+- Language: en
+- Description: An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy.
+- Stage: P1-S3
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: B, p.2; F, pp.1-6 to 1-10
+
+### P4-P6 curriculum gap map: where AI literacy already fits your subjects
+- URL: https://beets-ai.com/en/resources/p4-p6-curriculum-gap-map/
+- Language: en
+- Description: An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting.
+- Stage: P4-P6
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: F, pp.1-6 to 1-10; B, p.2
+
+### P4–P6 課程覆蓋分析：AI 素養已經落在哪些科目
+- URL: https://beets-ai.com/resources/p4-p6-curriculum-gap-map/
+- Language: zh-HK
+- Description: 一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科目與學期記錄現有活動、標出缺口並寫下最小的下一步，附三個完成的虛構學校示例，供校長及科主任在課程會議中直接使用。
+- Stage: P4-P6
+- Subject: 校本規劃
+- Theme: A (校本 AI 教育規劃)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: F, pp.1-6 to 1-10; B, p.2
+
+### P4-P6 curriculum gap map: where AI literacy already fits your subjects
+- URL: https://beets-ai.com/en/resources/p4-p6-curriculum-gap-map/
+- Language: en
+- Description: An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting.
+- Stage: P4-P6
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: F, pp.1-6 to 1-10; B, p.2
+
+### Safe-to-upload rehearsal: find and remove pupil information before using AI
+- URL: https://beets-ai.com/en/resources/safe-to-upload-ai-rehearsal/
+- Language: en
+- Description: A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps.
+- Stage: P4-P6
+- Subject: Cross-curricular
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: G, pp.2-4 and 2-9
+
+### 上載前安全檢查：找出並移除學生個人資料
+- URL: https://beets-ai.com/resources/safe-to-upload-ai-rehearsal/
+- Language: zh-HK
+- Description: 教師實作練習：從六份虛構學校文件中找出並移除可識別學生的資料，再安全地交給 AI 工具。附答案、準備清單與可重用步驟。
+- Stage: P4-P6
+- Subject: 全科/跨科
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: G, pp.2-4 and 2-9
+
+### Safe-to-upload rehearsal: find and remove pupil information before using AI
+- URL: https://beets-ai.com/en/resources/safe-to-upload-ai-rehearsal/
+- Language: en
+- Description: A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps.
+- Stage: P4-P6
+- Subject: Cross-curricular
+- Theme: B (安全及負責任使用 AI)
+- Reviewed by: Billy Kan
+- Version: 0.1
+- Sources: G, pp.2-4 and 2-9

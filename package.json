@@ -6,6 +6,7 @@
   "description": "BEETS AI — free Hong Kong AI teaching-resource library (beets-ai.com)",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/gen-llms-txt.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",

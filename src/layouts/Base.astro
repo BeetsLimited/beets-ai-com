@@ -11,6 +11,7 @@ import {
   t,
   type Locale,
 } from "../lib/i18n";
+import { organizationLd, socialMeta, webSiteLd } from "../lib/seo";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
 import { getCollection } from "astro:content";
 
@@ -33,6 +34,10 @@ interface Props {
   multilingual?: boolean;
   /** Where the selector goes, when it is not the same path in the other language. */
   alternateHref?: string;
+  /** Extra JSON-LD nodes for this page. The layout already emits the site's own. */
+  structuredData?: Record<string, unknown>[];
+  /** Open Graph object type — "website" unless the page is a dated article. */
+  ogType?: string;
 }
 
 const {
@@ -42,6 +47,8 @@ const {
   noindex = false,
   multilingual = true,
   alternateHref,
+  structuredData = [],
+  ogType = "website",
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -52,6 +59,20 @@ const alternates = multilingual
     }))
   : [];
 const switchHref = alternateHref ?? alternatePath(Astro.url.pathname);
+
+/** Social-card values, and the JSON-LD graph this page publishes. */
+const social = socialMeta({
+  title,
+  description,
+  url: canonical.href,
+  locale: lang,
+  type: ogType,
+});
+/**
+ * The site's own two nodes on every page, plus whatever the page adds. Kept as
+ * one list so a page never has to remember to repeat the publisher.
+ */
+const structuredDataNodes = [organizationLd(), webSiteLd(lang), ...structuredData];
 
 /**
  * How many resources are live, for the status strip. Addresses are counted once
@@ -80,6 +101,39 @@ const liveResources = (
       ))
     }
     {noindex ? <meta name="robots" content="noindex, nofollow" /> : null}
+
+    <!--
+      Social cards. These also feed the link-preview surfaces that AI answer
+      engines and chat clients render, so they are set on every page rather than
+      only where someone remembered to add them.
+    -->
+    <meta property="og:site_name" content={social.siteName} />
+    <meta property="og:type" content={social.type} />
+    <meta property="og:title" content={social.title} />
+    <meta property="og:description" content={social.description} />
+    <meta property="og:url" content={social.url} />
+    <meta property="og:image" content={social.image} />
+    <meta property="og:image:width" content={String(social.imageWidth)} />
+    <meta property="og:image:height" content={String(social.imageHeight)} />
+    <meta property="og:image:alt" content={social.imageAlt} />
+    <meta property="og:locale" content={social.locale} />
+    <meta property="og:locale:alternate" content={social.localeAlternate} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={social.title} />
+    <meta name="twitter:description" content={social.description} />
+    <meta name="twitter:image" content={social.image} />
+
+    <!--
+      Structured data: what the publisher is, what the site is, and (per page)
+      what this page teaches. Search engines read it for rich results; AI answer
+      engines read it to decide what may be quoted and how to attribute it.
+      Emitted at build time, so a crawler that runs no JavaScript still sees it.
+    -->
+    {
+      structuredDataNodes.map((node) => (
+        <script type="application/ld+json" set:html={JSON.stringify(node)} />
+      ))
+    }
 
     <!-- Brand typography: Quicksand (Latin) + Noto Sans TC (Chinese), as on beets3d.com -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

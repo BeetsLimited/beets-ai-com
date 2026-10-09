@@ -2,8 +2,9 @@
 import { getCollection } from "astro:content";
 import Base from "../../../layouts/Base.astro";
 import ResourceView from "../../../components/ResourceView.astro";
-import { SECONDARY_LOCALE } from "../../../lib/i18n";
+import { SECONDARY_LOCALE, localizePath, resourceIndexPath, t } from "../../../lib/i18n";
 import { alternateHrefFor, relatedTo } from "../../../lib/resources";
+import { breadcrumbLd, learningResourceLd } from "../../../lib/seo";
 
 const lang = SECONDARY_LOCALE;
 
@@ -25,6 +26,11 @@ export async function getStaticPaths() {
 }
 
 const { entry, alternateHref, related } = Astro.props;
+
+/** Absolute URLs for the structured-data graph (relative ones are not valid there). */
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+const homeUrl = new URL(localizePath("/", lang), Astro.site).href;
+const resourcesUrl = new URL(resourceIndexPath(lang), Astro.site).href;
 ---
 
 <Base
@@ -32,6 +38,15 @@ const { entry, alternateHref, related } = Astro.props;
   description={entry.data.description}
   lang={lang}
   alternateHref={alternateHref}
+  ogType="article"
+  structuredData={[
+    learningResourceLd(entry, lang, canonicalUrl),
+    breadcrumbLd([
+      { name: t(lang, "breadcrumbHome"), url: homeUrl },
+      { name: t(lang, "navResources"), url: resourcesUrl },
+      { name: entry.data.title, url: canonicalUrl },
+    ]),
+  ]}
 >
   <ResourceView entry={entry} lang={lang} related={related} />
 </Base>
