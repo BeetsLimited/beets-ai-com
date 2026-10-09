@@ -18,6 +18,20 @@ export const ORG_NAME = "Beets Limited";
 export const ORG_URL = "https://beets3d.com";
 export const ORG_LOGO = `${SITE_URL}/favicon-192.png`;
 export const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
+/**
+ * What a download actually is. Attachments are Office documents now, not
+ * printable web pages, so the format follows the extension — declaring
+ * `text/html` for an .xlsx misdescribes the file to every consumer of the
+ * structured data.
+ */
+const OFFICE_MIME: Record<string, string> = {
+  docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+  pdf: "application/pdf",
+  html: "text/html",
+};
 export const OG_IMAGE_WIDTH = 1200;
 export const OG_IMAGE_HEIGHT = 630;
 
@@ -111,8 +125,8 @@ export function webSiteLd(lang: Locale) {
     publisher: { "@id": `${ORG_URL}/#organization` },
     description:
       lang === "en"
-        ? "A free library of AI teaching resources for Hong Kong schools: worksheets, lesson plans and school-planning templates, each naming its EDB source document and reviewer."
-        : "香港教師免費 AI 教學資源庫：工作紙、教案及校本規劃範本，每份列明所依據的 EDB 官方文件及審閱人。",
+        ? "A free library of AI teaching resources for Hong Kong schools: worksheets, lesson plans and school-planning templates, each naming the official document it is built on."
+        : "香港教師免費 AI 教學資源庫：工作紙、教案及校本規劃範本，每份列明所依據的官方文件。",
     isAccessibleForFree: true,
   };
 }
@@ -184,11 +198,6 @@ export function learningResourceLd(entry: ResourceEntry, lang: Locale, url: stri
     isPartOf: { "@id": `${SITE_URL}/#website` },
   };
 
-  // A named educator reviewed the learning aim and age fit — a real E-E-A-T
-  // signal for both audiences, so it is asserted only when a name is present.
-  if (d.reviewer) {
-    ld.reviewedBy = { "@type": "Person", name: d.reviewer };
-  }
   // schema.org wants an absolute URL here too.
   if (d.image) {
     ld.image = /^https?:\/\//.test(d.image) ? d.image : `${SITE_URL}${d.image}`;
@@ -198,13 +207,8 @@ export function learningResourceLd(entry: ResourceEntry, lang: Locale, url: stri
     ld.encoding = d.downloads.map((path) => ({
       "@type": "MediaObject",
       contentUrl: `${SITE_URL}${path}`,
-      encodingFormat: "text/html",
+      encodingFormat: OFFICE_MIME[path.split(".").pop()?.toLowerCase() ?? ""] ?? "application/octet-stream",
     }));
-  }
-  // The official EDB documents the material is built on. Citing the primary
-  // source is what makes the page quotable rather than merely plausible.
-  if (d.sources?.length) {
-    ld.citation = d.sources;
   }
   return ld;
 }

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { RESOURCE_KINDS } from "./resource-kinds";
 import { reviewRequired } from "./review-gate";
 
 /** The five navigation themes (EXCO-714 content plan). */
@@ -27,6 +28,15 @@ const fields = {
   lang: z.enum(LANGS),
   /** Resource pages are the primary publishing unit; posts are editorial. */
   type: z.enum(["resource", "post"]),
+  /**
+   * What KIND of resource this is. It decides the three section headings that
+   * adapt to the resource ("planning objectives", not "learning objectives")
+   * and the office format of its attachment — see `./resource-kinds.ts`.
+   *
+   * Optional, so a resource written before the redesign keeps its own
+   * headings and still builds; declare it on every new resource.
+   */
+  kind: z.enum(RESOURCE_KINDS).optional(),
   theme: z.enum(THEMES),
   stage: z.string().min(1),
   subject: z.string().min(1),

@@ -4,6 +4,7 @@ title_en: "One-term AI education plan: editable planning template with a complet
 address: "one-term-ai-education-plan"
 lang: "zh-HK"
 type: "resource"
+kind: "planning"
 theme: "A"
 stage: "P1-S3"
 subject: "校本規劃"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "一張可編輯的一學期 AI 教育規劃範本：兩項試點活動、負責人、日期與檢討證據，附一個完成的虛構學校示例，供校長及課程統籌直接套用。"
-downloads: ["/files/one-term-ai-education-plan.html"]
+image: "/images/one-term-ai-education-plan-hero.webp"
+imageAlt: "兩名沒有臉部細節的教師並肩站在淺色牆前，各拿着一個空白文件夾：一個深紅色，一個寶藍色。"
+downloads: ["/files/one-term-ai-education-plan.xlsx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -30,16 +33,16 @@ draft: false
 
 本範本不談大方向，而是把一學期的規劃固定成一張表：**活動、負責人、日期、檢討證據**。填完這張表，校長就能看到這個學期會發生什麼，而不必另行委託顧問。
 
-## 學習目標
+## 規劃目標
 
 完成規劃會議後，學校領導層能夠：
 
 1. 為本學期選定兩項可行的 AI 教育試點活動（例如一項面向教師、一項面向學生，或按校情調整）。
 2. 為每項活動指定負責人、日期，以及可收集的檢討證據。
-3. 把活動連結到 EDB 框架的校本規劃要求（B, p.2）與跨科進程（F, pp.1-6 to 1-10）。
+3. 把活動連結到官方文件的校本規劃要求與跨科學習進程（見文末「官方文件參考」）。
 4. 用完成的虛構示例判斷一份規劃是否「可執行」，而不只是「寫得出來」。
 
-## 教學步驟
+## 規劃步驟
 
 以下是一次約 60 分鐘的規劃會議流程（可合併於科組或行政會議）：
 
@@ -49,9 +52,9 @@ draft: false
 4. **填寫規劃表（15 分鐘）** — 逐欄填寫活動、負責人、日期與檢討證據；空缺處留待會後補上。
 5. **設定檢討機制（10 分鐘）** — 訂出期中／期末檢討會議的日期與議程，確認由誰收齊證據。
 
-## 答案與評分要點
+## 檢核要點
 
-本範本沒有標準答案，但一份「可執行」的規劃可以用下面三件事來核對。
+本範本沒有標準答案，但一份「可執行」的規劃可以用下面幾件事來核對。
 
 **兩項試點活動範例**（學校可直接套用、合併或改寫）：
 
@@ -78,27 +81,25 @@ draft: false
 | 負責人 | 每項活動都有人名（或職位） | 只寫「科組」而無具體負責人 |
 | 日期 | 有起訖週次或具體日期 | 只有「本學期」 |
 | 檢討證據 | 寫得出收集什麼（紀錄、樣本、問卷） | 只有「檢討」二字 |
-| 與框架連結 | 能指出 B p.2 或 F 的進程 | 與框架無關的活動清單 |
+| 與官方文件對應 | 能指出規劃要求或學習進程 | 與官方文件無關的活動清單 |
 
 > 核心判斷：**檢討證據一欄才是關鍵。** 若說不出「事後看什麼」，這項活動就無法檢討，等於沒有規劃。
 
 ## 附件
 
-**[一學期 AI 教育規劃範本（可列印 A4）](/files/one-term-ai-education-plan.html)**
+**[一學期 AI 教育規劃範本（Excel 試算表，可編輯）](/files/one-term-ai-education-plan.xlsx)**
 
-內含：空白規劃表、完成的虛構學校示例，以及領導層檢查清單。
+內含：空白規劃表、領導層檢查清單，以及一個完成的虛構學校示例。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
-本資源對應：
+- **《中小學數字教育發展藍圖》**（三摺頁，p.2）：要求在學校發展計劃中加入數碼與 AI 教育策略，並附清晰的實施時間表。
+- **《中小學人工智能素養學習架構》**（pp.1-6 to 1-10）：訂出跨科實施與四個學習階段的進程，供規劃活動時對應。
 
-- **B（《中小學數字教育發展藍圖》單張，p.2）**：要求在學校發展計劃中加入數碼與 AI 教育策略，並附清晰的實施時間表。
-- **F（《中小學人工智能素養學習架構》，pp.1-6 to 1-10）**：訂出跨科實施與四個學習階段的進程，供規劃活動時對應。
-
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用這份範本準備過實際的學期計劃嗎？哪一欄最花時間？歡迎告訴我們需要調整的地方，或建議下一份資源。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

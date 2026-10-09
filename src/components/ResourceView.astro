@@ -9,6 +9,19 @@ import { reviewRequired } from "../lib/review-gate";
  * `lang` is the language of the page being built; the entry itself carries its
  * own language, so the two are always the same edition. Shared by the public
  * route and the internal review route, so what a reviewer sees is what ships.
+ *
+ * The page is deliberately thin. The content owns its seven sections — and the
+ * middle three of those adapt to the resource's `kind`, so a whole-school
+ * planning template gets "規劃目標 / 規劃步驟 / 檢核要點" rather than being
+ * called a lesson (`../lib/resource-kinds.ts`). This view adds only what the
+ * content does not: the hero, the classification block, the practical details,
+ * same-theme siblings and the reuse terms.
+ *
+ * **No internal record is rendered here.** `sourceIdea`, `sources`, `reviewer`,
+ * `factCheckedBy`, `factCheckedOn` and any `[[VERIFY]]` note stay in the entry
+ * as provenance and audit trail — the numbers, the source codes and the
+ * reviewer's name are working records, not something a teacher needs to read
+ * (Billy, 2026-10-10). They are visible where they belong: `/review/`.
  */
 interface Props {
   entry: CollectionEntry<"content">;
@@ -28,6 +41,19 @@ const d = entry.data;
  * published at their public URLs on purpose.
  */
 const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
+
+/** The three classification lines, in the order the page reads them. */
+const classification = [
+  { label: t(lang, "labelTheme"), value: `${d.theme} · ${themeLabel(lang, d.theme)}` },
+  { label: t(lang, "labelStage"), value: d.stage },
+  { label: t(lang, "labelSubject"), value: d.subject },
+].filter((row) => Boolean(row.value));
+
+const practicals = [
+  d.prepTime ? { label: t(lang, "labelPrep"), value: d.prepTime } : null,
+  d.equipment ? { label: t(lang, "labelEquipment"), value: d.equipment } : null,
+  { label: t(lang, "labelVersion"), value: d.version },
+].filter((row): row is { label: string; value: string } => row !== null);
 ---
 
 <article>
@@ -49,11 +75,6 @@ const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
 
   <h1>{d.title}</h1>
 
-  <p class="meta">
-    {t(lang, "labelTheme")} {d.theme} · {themeLabel(lang, d.theme)} · {d.stage} · {d.subject}
-    {d.sourceIdea ? ` · ${t(lang, "labelOriginalIdea")} ${d.sourceIdea}` : ""}
-  </p>
-
   <p>{d.description}</p>
 
   {
@@ -71,55 +92,30 @@ const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
     ) : null
   }
 
-  <dl class="meta">
-    {d.prepTime ? <><dt>{t(lang, "labelPrep")}</dt><dd>{d.prepTime}</dd></> : null}
-    {d.equipment ? <><dt>{t(lang, "labelEquipment")}</dt><dd>{d.equipment}</dd></> : null}
-    <dt>{t(lang, "labelVersion")}</dt>
-    <dd>{d.version}</dd>
+  {/* 三行分類：主題 / 年級 / 範疇。 One line each, label in a fixed column. */}
+  <ul class="spec">
     {
-      d.reviewer ? (
-        <>
-          <dt>{t(lang, "labelReviewer")}</dt>
-          <dd>{d.reviewer}</dd>
-        </>
-      ) : null
+      classification.map((row) => (
+        <li>
+          <span class="spec-k">{row.label}</span>
+          <span class="spec-v">{row.value}</span>
+        </li>
+      ))
     }
+  </ul>
+
+  <ul class="practical">
     {
-      d.factCheckedBy ? (
-        <>
-          <dt>{t(lang, "labelFactCheck")}</dt>
-          <dd>{d.factCheckedBy}</dd>
-        </>
-      ) : null
+      practicals.map((row) => (
+        <li>
+          <span class="practical-k">{row.label}</span>
+          <span class="practical-v">{row.value}</span>
+        </li>
+      ))
     }
-  </dl>
+  </ul>
 
   <Content />
-
-  {/*
-    The body carries the plan's seven sections — including its own files,
-    framework and feedback sections. This view adds only what the content does
-    not: the raw source list with a link to the official document, same-theme
-    siblings, and the reuse terms. Anything else would print the same heading
-    twice on one page.
-  */}
-  <section>
-    <h2>{t(lang, "sourcesHeading")}</h2>
-    <ul>
-      {d.sources.map((source) => (
-        <li>{source}</li>
-      ))}
-    </ul>
-    <p class="meta">
-      {t(lang, "edbOfficialDoc")}{" "}
-      <a
-        href="https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html"
-        rel="noopener"
-      >
-        {t(lang, "debpLinkText")}
-      </a>
-    </p>
-  </section>
 
   {
     related.length > 0 ? (
@@ -158,5 +154,51 @@ const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .spec,
+  .practical {
+    list-style: none;
+    margin: 1.4rem 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+  }
+  .spec {
+    background: var(--surface, #f3f3f3);
+    border-radius: var(--radius, 18px);
+    padding: 1.1rem 1.35rem;
+  }
+  .spec li,
+  .practical li {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 0.9rem;
+    align-items: baseline;
+  }
+  .spec li {
+    font-size: 0.98rem;
+  }
+  .practical li {
+    font-size: 0.9rem;
+  }
+  .spec-k,
+  .practical-k {
+    color: var(--muted, #6f6f6f);
+    font-weight: 600;
+  }
+  .spec-v {
+    color: var(--ink, #080808);
+  }
+  .practical-v {
+    color: var(--muted, #6f6f6f);
+  }
+  /* A phone has no room for a 7rem label column and a value. */
+  @media (max-width: 30rem) {
+    .spec li,
+    .practical li {
+      grid-template-columns: 1fr;
+      gap: 0.1rem;
+    }
   }
 </style>

@@ -3,6 +3,7 @@ title: "One-term AI education plan: editable planning template with a completed 
 address: "one-term-ai-education-plan"
 lang: "en"
 type: "resource"
+kind: "planning"
 theme: "A"
 stage: "P1-S3"
 subject: "School planning"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy."
-downloads: ["/files/en/one-term-ai-education-plan.html"]
+image: "/images/one-term-ai-education-plan-hero.webp"
+imageAlt: "Two simple faceless teachers standing together against a pale wall, each holding a plain folder — one deep red, one royal blue."
+downloads: ["/files/en/one-term-ai-education-plan.xlsx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -29,16 +32,16 @@ Principals and curriculum coordinators know they are expected to write digital a
 
 This template does not discuss broad direction. It fixes the term's planning into a single table: **activity, owner, dates, evidence of review**. Once the table is filled in, a principal can see what will happen this term without commissioning a consultant.
 
-## Learning objectives
+## Planning objectives
 
 After the planning meeting, the school leadership team can:
 
 1. Choose two feasible AI education pilot activities for the term (for example one for staff and one for pupils, or adjusted to the school's situation).
 2. Assign an owner, dates and collectible review evidence to each activity.
-3. Connect the activities to the EDB framework's school-planning requirement (B, p.2) and its cross-subject progression (F, pp.1-6 to 1-10).
+3. Connect the activities to a school-planning requirement and a cross-subject learning progression in the official documents (see "Official documents" at the end).
 4. Use the completed fictional example to judge whether a plan is executable rather than merely written down.
 
-## Teaching steps
+## Planning steps
 
 This is a planning-meeting agenda of about 60 minutes (it can be folded into a panel or administrative meeting):
 
@@ -48,9 +51,9 @@ This is a planning-meeting agenda of about 60 minutes (it can be folded into a p
 4. **Fill in the planning table (15 min)** — Complete each column: activity, owner, dates and review evidence; leave gaps to be finished after the meeting.
 5. **Set the review mechanism (10 min)** — Fix the dates and agenda of the mid-term and end-of-term review meetings, and confirm who collects the evidence.
 
-## Answer key and marking notes
+## Review checklist
 
-There is no single right answer, but an executable plan can be checked against the three things below.
+There is no single right answer, but an executable plan can be checked against the things below.
 
 **Two worked pilot activities** (a school can copy, combine or adapt these):
 
@@ -77,27 +80,25 @@ There is no single right answer, but an executable plan can be checked against t
 | Owner | A named person (or post) for each | Only "the panel", no specific owner |
 | Dates | Start/end week or specific dates | Only "this term" |
 | Review evidence | Names what to collect (records, samples, questionnaires) | Just "review", no concrete evidence |
-| Framework link | Can point to B p.2 or the F progression | An unrelated activity list |
+| Tied to an official document | Can point to a planning requirement or a learning progression | An unrelated activity list |
 
 > The key judgement: **the evidence column is what matters.** If you cannot say "what we will look at afterwards", the activity cannot be reviewed, which means it has not really been planned.
 
 ## Files
 
-**[One-term AI education plan (printable A4)](/files/en/one-term-ai-education-plan.html)**
+**[One-term AI education plan (editable Excel spreadsheet)](/files/en/one-term-ai-education-plan.xlsx)**
 
-Includes: a blank planning table, the completed fictional school example, and a checklist for the leader.
+Includes: a blank planning table, the leader's checklist, and a completed fictional school example.
 
-## How this relates to the EDB framework
+## Official documents
 
-This resource maps to:
+- **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies in school development plans, with a clear implementation timetable.
+- **AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, for reference when planning activities.
 
-- **B (the Blueprint for Digital Education Development in Primary and Secondary Schools (three-fold leaflet), p.2)**: requires digital and AI education strategies in school development plans with a clear implementation timetable.
-- **F (the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10)**: sets out cross-subject implementation and progression across four learning stages, to be referenced when planning activities.
-
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you used this template to prepare a real term plan? Which column took the most time? Tell us what needs adjusting, or suggest the next resource.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.
