@@ -48,6 +48,9 @@ jobs:
       - name: Check no page repeats a heading
         run: npm run check:structure
 
+      - name: Check no dark blocks on a light-only site
+        run: npm run check:contrast
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true

@@ -406,6 +406,25 @@ const liveResources = (
         padding: 0.1em 0.35em;
         font-size: 0.9em;
       }
+      /*
+        Fenced blocks. Shiki writes `background-color` and `color` INLINE on the
+        <pre>, so a plain class rule cannot override them — hence !important.
+        Astro's default Shiki theme was github-dark, which put a near-black panel
+        with light grey text on a site that is light-only; astro.config.mjs now
+        requests github-light, and this aligns the block with the design system.
+        `scripts/check-contrast.mjs` fails the build if a dark block returns.
+      */
+      pre.astro-code {
+        background: var(--surface) !important;
+        color: var(--ink) !important;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.1rem 1.25rem;
+        margin: 1.5rem 0;
+        font-size: 0.92rem;
+        line-height: 1.75;
+        overflow-x: auto;
+      }
       table {
         border-collapse: collapse;
         width: 100%;

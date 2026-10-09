@@ -19,6 +19,16 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  // Astro highlights fenced code blocks with Shiki, whose DEFAULT theme is
+  // `github-dark` — a near-black panel with light grey text. This site is
+  // light-only, so every resource that used a fenced block (the checklists)
+  // shipped as a dark box, and it was unreadable. Ask for a light theme here;
+  // Base.astro then restyles the block to the brand surface.
+  markdown: {
+    shikiConfig: {
+      theme: "github-light",
+    },
+  },
   integrations: [
     // /review/ holds unreviewed drafts — internal, bilingual, never indexed.
     sitemap({
