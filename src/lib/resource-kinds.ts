@@ -86,14 +86,14 @@ export const KIND_COPY: Record<"zh-HK" | "en", Record<ResourceKind, KindCopy>> =
     lesson: {
       objective: "Learning objectives",
       steps: "Teaching steps",
-      check: "Answers and marking notes",
+      check: "Answer key and marking notes",
       format: "docx",
       formatLabel: "Word document",
     },
     worksheet: {
       objective: "Learning objectives",
       steps: "How to use it",
-      check: "Answers and marking notes",
+      check: "Answer key and marking notes",
       format: "docx",
       formatLabel: "Word document",
     },

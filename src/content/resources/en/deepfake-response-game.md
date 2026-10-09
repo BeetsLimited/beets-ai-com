@@ -3,6 +3,7 @@ title: "Deepfake response game: pause, check, report (S1-S3)"
 address: "deepfake-response-game"
 lang: "en"
 type: "resource"
+kind: "lesson"
 theme: "B"
 stage: "S1-S3"
 subject: "Humanities"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A classroom game in which pupils receive a fictional 'school' message, sort the pause–check–report decision cards, and learn from the teacher's debrief why a fake can sound convincing."
-downloads: ["/files/en/deepfake-response-game.html"]
+image: "/images/deepfake-response-game-hero.webp"
+imageAlt: "Three students in school uniform around a table, one holding up a deep red card, a blue phone lying on the table, a cityscape through the window."
+downloads: ["/files/en/deepfake-response-game.docx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -77,18 +80,18 @@ By the end, pupils can:
 
 The scenario text, five decision cards, the sorting sheet and the full answer key are in the download:
 
-**[Deepfake response game (A4 printable)](/files/en/deepfake-response-game.html)**
+**[Deepfake response game(editable Word document)](/files/en/deepfake-response-game.docx)**
 
 > Everything is fictional and involves no real school, platform or person, and does not describe how to make deepfake content.
 
-## How this relates to the EDB framework
+## Official documents
 
-This resource maps to **E, p.14 (the AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios))**: the example covers deepfakes and verification, asking learners to recognise a convincing but false message and to verify information before acting on or sharing it.
+This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.14): the example covers deepfakes and verification, asking learners to recognise a convincing but false message and to verify information before acting on or sharing it.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is an independent teaching resource produced by Beets, and is not an official EDB document.
 
 ## Feedback
 
-Have you run this game? At which step do pupils most often jump straight to "share it on"? Tell us what needs changing, or suggest the next resource (for example a similar game on phishing or online bullying).
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

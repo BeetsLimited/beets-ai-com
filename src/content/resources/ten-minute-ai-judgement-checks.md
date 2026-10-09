@@ -4,6 +4,7 @@ title_en: "Ten-minute AI judgement checks: three quick formative tasks for P4-P6
 address: "ten-minute-ai-judgement-checks"
 lang: "zh-HK"
 type: "resource"
+kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
 subject: "全科/跨科"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "三個各約十分鐘的形成性小任務：判斷 AI 答案是否可信、找出同學答案中自己能辯護的部分、列出交功課前要檢查的事項。附評分指引與後續活動。"
-downloads: ["/files/ten-minute-ai-judgement-checks.html"]
+image: "/images/ten-minute-ai-judgement-checks-hero.webp"
+imageAlt: "教師在課室內舉起一張深紅色卡片，兩名學生坐在桌前，桌上有一支藍色鉛筆。"
+downloads: ["/files/ten-minute-ai-judgement-checks.docx"]
 feedback: true
 draft: true
 ---
@@ -40,7 +43,7 @@ draft: true
 2. 辨認一段答案中哪些部分是作者能用自己的話解釋的，哪些像「抄回來」。
 3. 在交功課前列出需要檢查的事項（來源、事實、能否解釋），而不只是串字和格式。
 
-## 教學步驟
+## 使用步驟
 
 三個任務可各自作為課堂開場（各約 10 分鐘），也可合併成一節課（約 40 分鐘）。
 
@@ -98,21 +101,21 @@ draft: true
 
 三份可列印工作紙（含刺激材料、作答空間、評分指引與答案）見下載檔：
 
-**[工作紙（可列印 A4）](/files/ten-minute-ai-judgement-checks.html)**
+**[工作紙（Word 文件，可編輯）](/files/ten-minute-ai-judgement-checks.docx)**
 
 > 全部例子均為虛構，不涉及任何真實學生或學校。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
 本資源對應：
 
-- **F（《中小學人工智能素養學習架構》p.1-13）**：提出評估應多元化，重視應用、倫理與思考歷程，而非只記誦最終答案。
-- **G（《中小學應用人工智能教學指南》pp.2-7 to 2-8）**：提出透過口頭提問及提交思考歷程，檢視學生的學習與 AI 使用情況，而非只收成品。
+- **《中小學人工智能素養學習架構》**（p.1-13）：提出評估應多元化，重視應用、倫理與思考歷程，而非只記誦最終答案。
+- **《中小學應用人工智能教學指南》**（pp.2-7 to 2-8）：提出透過口頭提問及提交思考歷程，檢視學生的學習與 AI 使用情況，而非只收成品。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用過這三個小任務嗎？哪一個最能讓你看見學生的思考？歡迎告訴我們需要調整的地方，或建議下一份資源。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

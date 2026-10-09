@@ -3,6 +3,7 @@ title: "Hong Kong then and now: a local history project with an alternative to a
 address: "hk-then-and-now-project"
 lang: "en"
 type: "resource"
+kind: "lesson"
 theme: "D"
 stage: "P4-P6"
 subject: "Humanities"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, a worked source check and a three-level rubric, so every pupil can complete it."
-downloads: ["/files/en/hk-then-and-now-project.html"]
+image: "/images/hk-then-and-now-project-hero.webp"
+imageAlt: "An older family member and a young girl sitting together on a light grey sofa looking at a book, with a deep red cushion and a blue potted plant."
+downloads: ["/files/en/hk-then-and-now-project.docx"]
 feedback: true
 draft: true
 ---
@@ -67,18 +70,18 @@ Conclusion: the AI's answer is partly right and partly wrong, so it cannot be tr
 
 ## Files
 
-**[Worksheet (A4 printable)](/files/en/hk-then-and-now-project.html)**
+**[Worksheet(editable Word document)](/files/en/hk-then-and-now-project.docx)**
 
 > Every street, place and source in the attachment is fictional and involves no real family, address or school.
 
-## How this relates to the EDB framework
+## Official documents
 
-This resource maps to **source E, the AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.8**: the document proposes a Hong Kong "past and present" project in which pupils use AI to help imagine the past, then check the AI's account against oral history and other sources. This resource turns that scenario into a worksheet every pupil can complete, with an added path that needs no family interview.
+This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.8): the document proposes a Hong Kong "past and present" project in which pupils use AI to help imagine the past, then check the AI's account against oral history and other sources. This resource turns that scenario into a worksheet every pupil can complete, with an added path that needs no family interview.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you used this project? Did the public-source path help your class? Tell us what needs changing, or suggest the next resource.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

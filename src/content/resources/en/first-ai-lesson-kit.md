@@ -3,6 +3,7 @@ title: "Your first AI lesson: a self-guided kit for P4-P6 teachers who have neve
 address: "first-ai-lesson-kit"
 lang: "en"
 type: "resource"
+kind: "lesson"
 theme: "E"
 stage: "P4-P6"
 subject: "Cross-curricular"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone."
-downloads: ["/files/en/first-ai-lesson-kit.html"]
+image: "/images/first-ai-lesson-kit-hero.webp"
+imageAlt: "A teacher beside a table handing a stack of worksheets to two students, with a deep red pencil holder and a blue tray on the table."
+downloads: ["/files/en/first-ai-lesson-kit.docx"]
 feedback: true
 draft: true
 ---
@@ -70,19 +73,19 @@ After completing the kit, the teacher can:
 
 ## Files
 
-**[First AI lesson kit (A4 printable)](/files/en/first-ai-lesson-kit.html)** — includes the preparation checklist (with the backup for when the AI tool is unavailable), the slide-by-slide outline, two source cards, the pupil worksheet, the inclusive lesson design and three post-lesson reflection questions.
+**[First AI lesson kit(editable Word document)](/files/en/first-ai-lesson-kit.docx)** — includes the preparation checklist (with the backup for when the AI tool is unavailable), the slide-by-slide outline, two source cards, the pupil worksheet, the inclusive lesson design and three post-lesson reflection questions.
 
 > All examples are fictional demonstrations; teachers can swap in their own school-verified sources and questions.
 
-## How this relates to the EDB framework
+## Official documents
 
-- **G (the Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-3)** encourages collaborative planning, lesson observation and continuing reflection — this kit turns the post-lesson reflection into three questions a teacher can complete alone.
-- **G (the Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-5 and 2-7)** refers to different difficulty levels, visual materials and support to address learning diversity — this kit adds "more support / more challenge" preparation to the slide outline and worksheet.
+- **Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-3) encourages collaborative planning, lesson observation and continuing reflection — this kit turns the post-lesson reflection into three questions a teacher can complete alone.
+- **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7) refers to different difficulty levels, visual materials and support to address learning diversity — this kit adds "more support / more challenge" preparation to the slide outline and worksheet.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you taught this first lesson yet? Which step was hardest, and which ran smoothly? Tell us what needs adjusting, or suggest the next resource (for example a demonstration lesson for another subject).
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

@@ -4,6 +4,7 @@ title_en: "Your first AI lesson: a self-guided kit for P4-P6 teachers who have n
 address: "first-ai-lesson-kit"
 lang: "zh-HK"
 type: "resource"
+kind: "lesson"
 theme: "E"
 stage: "P4-P6"
 subject: "全科/跨科"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "一份自學套件：一個 40 分鐘的 P4–P6 人文科示範課堂、課前準備清單、投影片逐頁大綱、學生工作紙與課後反思三問，讓從未用過 AI 的教師也能獨自上完第一堂 AI 課。"
-downloads: ["/files/first-ai-lesson-kit.html"]
+image: "/images/first-ai-lesson-kit-hero.webp"
+imageAlt: "教師站在桌旁，把一疊工作紙交給兩名學生；桌上有深紅色筆筒和藍色托盤，背景是課室白板。"
+downloads: ["/files/first-ai-lesson-kit.docx"]
 feedback: true
 draft: true
 ---
@@ -71,19 +74,19 @@ draft: true
 
 ## 附件
 
-**[第一堂 AI 課套件（可列印 A4）](/files/first-ai-lesson-kit.html)** — 含課前準備清單（連 AI 工具用不到時的後備方案）、投影片逐頁大綱、兩張來源卡、學生工作紙、共融課堂設計與課後反思三問。
+**[第一堂 AI 課套件（Word 文件，可編輯）](/files/first-ai-lesson-kit.docx)** — 含課前準備清單（連 AI 工具用不到時的後備方案）、投影片逐頁大綱、兩張來源卡、學生工作紙、共融課堂設計與課後反思三問。
 
 > 全部示例均為虛構示範，教師可換成自己已核實的校本來源與問題。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
-- **G（《中小學應用人工智能教學指南》，p.2-3）** 鼓勵教師協作備課、觀課與持續反思——本套件把課後反思寫成三條問題，方便教師獨自完成。
-- **G（《中小學應用人工智能教學指南》，pp.2-5 and 2-7）** 提到以不同難度、視覺材料與支援照顧學習多樣性——本套件在投影片大綱與工作紙加入「更多支援／更多挑戰」兩套準備。
+- **《中小學應用人工智能教學指南》**（p.2-3） 鼓勵教師協作備課、觀課與持續反思——本套件把課後反思寫成三條問題，方便教師獨自完成。
+- **《中小學應用人工智能教學指南》**（pp.2-5 and 2-7） 提到以不同難度、視覺材料與支援照顧學習多樣性——本套件在投影片大綱與工作紙加入「更多支援／更多挑戰」兩套準備。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你上完這第一堂課了嗎？哪一步最難、哪一步最順？告訴我們需要調整的地方，或建議下一份資源（例如另一科目的示範課堂）。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

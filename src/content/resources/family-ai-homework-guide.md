@@ -4,6 +4,7 @@ title_en: "Family AI homework guide: three activities, one agreement, one parent
 address: "family-ai-homework-guide"
 lang: "zh-HK"
 type: "resource"
+kind: "guide"
 theme: "B"
 stage: "P1-P6"
 subject: "班主任及家長"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "一份供家庭在家使用、毋須老師在場的指引：三個 15–20 分鐘的親子活動、一份家庭功課協議，以及一封可供學校修改的家長通告。"
-downloads: ["/files/family-ai-homework-guide.html"]
+image: "/images/family-ai-homework-guide-hero.webp"
+imageAlt: "一位家長與孩子坐在桌前一起學習，桌上有深紅色杯子、筆記本、藍色筆筒和一部平板電腦。"
+downloads: ["/files/family-ai-homework-guide.docx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -28,7 +31,7 @@ draft: false
 
 孩子做功課時想用 AI，家長往往不知道該放手還是阻止：何時可以求助、可以問什麼、拿到答案後要怎樣處理。這份指引毋須老師在場，讓家長與孩子在家用三個 15–20 分鐘的活動，建立一個簡單而一致的習慣：**先自己試、請求幫助（而非答案）、檢查後才使用**。另附一份家庭功課協議及一封可供學校修改的家長通告。
 
-## 學習目標
+## 目的
 
 完成三個活動後，家長與孩子能夠：
 
@@ -37,7 +40,7 @@ draft: false
 3. 在使用 AI 給出的答案前，先檢查它是否正確、是否合適。
 4. 共同簽署一份家庭功課協議，並明白這份協議須配合學校本身的功課及 AI 使用規則。
 
-## 教學步驟
+## 使用步驟
 
 三個活動各需 15–20 分鐘，可分開在不同日子進行，毋須任何帳戶或特別器材，只需紙筆及家長與孩子一同參與。
 
@@ -48,7 +51,7 @@ draft: false
 
 > **教師備註（家長晚會）**：在家長晚會上，可用約 5 分鐘示範「活動三」的檢查步驟，再請家長回家先做「活動一」。須向家長說明：本指引是協助工具，**不能取代學校本身的功課及 AI 使用政策**；如學校已有規則，以學校規則為準。
 
-## 答案與評分要點
+## 檢核要點
 
 這份指引不設計分，以下是家長判斷孩子是否「做到」的具體標記：
 
@@ -61,18 +64,18 @@ draft: false
 
 三個活動的完整步驟、可列印的功課協議、可供學校修改的家長通告及教師備註，見下載檔：
 
-**[家庭 AI 功課指引（可列印 A4）](/files/family-ai-homework-guide.html)**
+**[家庭 AI 功課指引（Word 文件，可編輯）](/files/family-ai-homework-guide.docx)**
 
 > 檔內所有示例均為虛構（例如「某小學 P3 班」），不涉及任何真實學生或學校。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
-本資源對應 **B（《中小學數字教育發展藍圖》三摺頁，p.1）** 所提出的家校合作，以及 **F（《中小學人工智能素養學習架構》，p.1-8）** 對初小階段須由成人陪同使用 AI 的要求。
+本資源對應 **《中小學數字教育發展藍圖》**（三摺頁，p.1） 所提出的家校合作，以及 **《中小學人工智能素養學習架構》**（p.1-8） 對初小階段須由成人陪同使用 AI 的要求。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本指引為 Beets 獨立製作的教學資源，並非 EDB 官方文件，也不能取代學校本身的功課及 AI 使用政策。
 
 ## 意見
 
-你用過這份指引嗎？哪個活動對你的孩子最有效？歡迎告訴我們需要調整的地方、下一份想要什麼資源，或希望我們補充哪些級別或語言版本。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

@@ -4,6 +4,7 @@ title_en: "P4-P6 curriculum gap map: where AI literacy already fits your subject
 address: "p4-p6-curriculum-gap-map"
 lang: "zh-HK"
 type: "resource"
+kind: "planning"
 theme: "A"
 stage: "P4-P6"
 subject: "校本規劃"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科目與學期記錄現有活動、標出缺口並寫下最小的下一步，附三個完成的虛構學校示例，供校長及科主任在課程會議中直接使用。"
-downloads: ["/files/p4-p6-curriculum-gap-map.html"]
+image: "/images/p4-p6-curriculum-gap-map-hero.webp"
+imageAlt: "兩位學校領導站在桌後，桌上有三張空白卡片：兩張深紅色、一張藍色。"
+downloads: ["/files/p4-p6-curriculum-gap-map.xlsx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -30,7 +33,7 @@ draft: false
 
 本工作簿把這一步變成一次約 60 分鐘的課程會議：先在「科目 × 學期」表格裏記錄各科現有的 AI 素養活動，再對照 P4–P6 的階段目標，標出缺口，並為每個缺口寫下最小的下一步。填完這張表，科主任就能看到 P4–P6 的 AI 素養已經落在哪些科目、哪些仍然空白。
 
-## 學習目標
+## 規劃目標
 
 完成課程會議後，校長、課程統籌與科主任能夠：
 
@@ -39,7 +42,7 @@ draft: false
 3. 為每個缺口寫出「下一步」（一項最小的課堂或活動改動），並指定負責人。
 4. 用三個完成的虛構學校示例，判斷一份覆蓋分析是否「讀得出下一步」，而不只是一張活動清單。
 
-## 教學步驟
+## 規劃步驟
 
 以下是一次約 60 分鐘的課程會議流程（可合併於科組或行政會議）：
 
@@ -49,13 +52,13 @@ draft: false
 4. **標出缺口（15 分鐘）** — 對照目標清單，標出「未覆蓋」與「重複」的位置。
 5. **寫下一步（10 分鐘）** — 為每個缺口寫一項最小的下一步並指定負責人；空缺處留待會後補上。
 
-## 答案與評分要點
+## 檢核要點
 
 本工作簿沒有標準答案，但一份「讀得出下一步」的覆蓋分析可以用下面的核對表來判斷。
 
-**P4–P6 階段目標（建議清單）**：以下目標是本工作簿的建議框架，並非教育局文件的原文；請先對照 F（《中小學人工智能素養學習架構》pp.1-6 to 1-10）的 P4–P6 階段目標，再按校情調整採用。
+**P4–P6 階段目標（建議清單）**：以下目標是本工作簿的建議框架，並非教育局文件的原文；請先對照《中小學人工智能素養學習架構》（pp.1-6 to 1-10）的 P4–P6 階段目標，再按校情調整採用。
 
-| 目標編號 | 建議的 P4–P6 目標（請與 F pp.1-6 to 1-10 核對） |
+| 目標編號 | 建議的 P4–P6 目標（請與《中小學人工智能素養學習架構》pp.1-6 to 1-10 核對） |
 |---|---|
 | G1 | 認識 AI 是什麼，以及它在日常生活中的常見應用 |
 | G2 | 安全及負責任地使用 AI，知道什麼資料不應輸入或公開 |
@@ -78,21 +81,21 @@ draft: false
 
 ## 附件
 
-**[P4–P6 課程覆蓋工作簿（可列印 A4）](/files/p4-p6-curriculum-gap-map.html)**
+**[P4–P6 課程覆蓋工作簿（Excel 試算表，可編輯）](/files/p4-p6-curriculum-gap-map.xlsx)**
 
 內含：空白覆蓋表、空白缺口與下一步表、三個完成的虛構學校示例，以及會議核對清單。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
 本資源對應：
 
-- **F（《中小學人工智能素養學習架構》，pp.1-6 to 1-10）**：訂出跨科實施與四個學習階段的進程，供學校把本科活動對照到階段目標。
-- **B（《中小學數字教育發展藍圖》單張，p.2）**：要求在學校發展計劃中加入數碼與 AI 教育策略，並附清晰的實施時間表。
+- **《中小學人工智能素養學習架構》**（pp.1-6 to 1-10）：訂出跨科實施與四個學習階段的進程，供學校把本科活動對照到階段目標。
+- **《中小學數字教育發展藍圖》**（三摺頁，p.2）：要求在學校發展計劃中加入數碼與 AI 教育策略，並附清晰的實施時間表。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用這份工作簿分析過學校的課程覆蓋嗎？哪一個目標最難判斷「已覆蓋」還是「空白」？歡迎告訴我們需要調整的地方，或建議下一份資源。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

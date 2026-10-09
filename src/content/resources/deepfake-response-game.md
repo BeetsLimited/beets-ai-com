@@ -4,6 +4,7 @@ title_en: "Deepfake response game: pause, check, report (S1-S3)"
 address: "deepfake-response-game"
 lang: "zh-HK"
 type: "resource"
+kind: "lesson"
 theme: "B"
 stage: "S1-S3"
 subject: "人文"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "初中課室遊戲：學生收到一則虛構的「學校」訊息，用「暫停、核實、舉報」決策卡排序應對步驟，並從解說中了解深偽訊息為何令人信服。"
-downloads: ["/files/deepfake-response-game.html"]
+image: "/images/deepfake-response-game-hero.webp"
+imageAlt: "三名穿校服的學生圍坐桌旁，一人舉起深紅色卡片，桌上放着一部藍色手機，窗外是城市景觀。"
+downloads: ["/files/deepfake-response-game.docx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -78,18 +81,18 @@ draft: false
 
 情境文字、五張決策卡、排序工作紙與完整答案，見下載檔：
 
-**[深偽應對遊戲（可列印 A4）](/files/deepfake-response-game.html)**
+**[深偽應對遊戲（Word 文件，可編輯）](/files/deepfake-response-game.docx)**
 
 > 全部內容均為虛構，不涉及任何真實學校、平台或人物，亦不說明如何製作深偽內容。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
-本資源對應 **E, p.14（《中小學人工智能素養學習架構（應用場景示例）》的應用示例）**：該示例涵蓋深偽與核實資訊，要求學習者識別令人信服的虛假訊息，並在行動或轉發前先核實。
+本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.14）：該示例涵蓋深偽與核實資訊，要求學習者識別令人信服的虛假訊息，並在行動或轉發前先核實。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用過這個遊戲嗎？學生在哪一步最易「直接轉發」？歡迎告訴我們需要調整的地方，或建議下一份資源（例如針對網絡欺凌或釣魚訊息的同類遊戲）。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

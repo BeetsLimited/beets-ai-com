@@ -4,6 +4,7 @@ title_en: "Student AI-use process sheet: first attempt, prompt, check, revise"
 address: "student-ai-use-process-sheet"
 lang: "zh-HK"
 type: "resource"
+kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
 subject: 全科/跨科
@@ -15,19 +16,19 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-07
 description: "一張可重用的歷程表，記錄學生第一次嘗試、AI 提示、核對結果、修訂與最後解釋，讓教師看得見學生的思考，而不必翻查整個對話紀錄。"
-downloads: ["/files/student-ai-use-process-sheet.html"]
+image: "/images/student-ai-use-process-sheet-hero.webp"
+imageAlt: "一名學生托着頭坐在桌前，看着面前一張空白紙；桌上有深紅色筆筒和藍色鉛筆。"
+downloads: ["/files/student-ai-use-process-sheet.docx"]
 feedback: true
 draft: true
 ---
 
 ## 這個資源解決什麼問題
-
 當學生用 AI 完成課業，教師看到的往往只是最後的成品 —— 無法判斷學生自己想了什麼、AI 貢獻了什麼、學生有沒有核對過。要求學生交出整個對話紀錄，既不實際，也涉及私隱。
 
 這張歷程表用**五格**把過程固定下來，學生寫得完，教師看得見。
 
 ## 學習目標
-
 學生能夠：
 
 1. 先自行嘗試，才使用 AI（保留自己的初步想法）。
@@ -35,15 +36,12 @@ draft: true
 3. 核對 AI 的輸出，指出至少一處需要查證或修改的地方。
 4. 說明最後版本與第一次嘗試的分別，以及原因。
 
-## 教學步驟
-
+## 使用步驟
 1. **說明（5 分鐘）** — 投影歷程表，說明五格各自要寫什麼；強調「第一次嘗試」必須在開 AI 之前寫。
 2. **示範（5 分鐘）** — 用一題示範如何核對 AI 的答案（例如把 AI 的說法與課本 / 官方來源對照）。
 3. **課業（學生自行完成）** — 學生邊做邊填。
 4. **收取與回饋** — 教師只看歷程表即可判斷學習過程，不必翻對話。
 5. **可選延伸** — 抽三份歷程表（匿名）全班討論：哪一組的核對最有說服力？
-
-## 五格歷程表
 
 | 格 | 學生寫什麼 | 為什麼要這一格 |
 |---|---|---|
@@ -55,28 +53,25 @@ draft: true
 
 > 第 4 格是整份表的關鍵。若學生交不出第 4 格，代表他沒有核對，教師可即時跟進。
 
-## 附件
-
-**[學生 AI 使用歷程表（可列印 A4）](/files/student-ai-use-process-sheet.html)**
-
-## 給教師的提示
-
+## 答案與評分要點
 - **先寫第 1 格。** 若學生先開 AI 才寫，這份表就失去意義；建議課堂上先集體完成第 1 格。
 - **第 4 格不必很長。** 一句「我查了課本 p.42，AI 把年份說錯了」已經足夠。
 - **不要要求交出完整對話紀錄。** 歷程表的目的正是取代這個做法，同時減少收集學生資料。
 - **可用於任何科目。** 表內不綁定學科，數學、常識、語文皆可。
 
-## 與 EDB 框架的關係
+## 附件
+**[學生 AI 使用歷程表（Word 文件，可編輯）](/files/student-ai-use-process-sheet.docx)**
 
+## 官方文件參考
 本資源對應：
 
-- **F（《中小學人工智能素養學習架構》p.1-13）**：重視歷程與真實評估，而非只評最終結果。
-- **G（《中小學應用人工智能教學指南》p.2-8）**：建議以口頭提問及提交思考歷程的方式，檢視學生的學習與 AI 使用情況。
+- **《中小學人工智能素養學習架構》**（p.1-13）：重視歷程與真實評估，而非只評最終結果。
+- **《中小學應用人工智能教學指南》**（p.2-8）：建議以口頭提問及提交思考歷程的方式，檢視學生的學習與 AI 使用情況。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用過這份表嗎？學生填寫時哪一格最困難？歡迎告訴我們，或建議下一份資源。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

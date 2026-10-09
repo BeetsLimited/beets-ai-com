@@ -4,6 +4,7 @@ title_en: "P1-P3 PE: two screen-free AI games (no devices needed)"
 address: "screen-free-ai-pe-games-p1-p3"
 lang: "zh-HK"
 type: "resource"
+kind: "lesson"
 theme: "E"
 stage: "P1-P3"
 subject: "體育"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "兩個不插電運動遊戲：學生跑向「用 AI／不用 AI」標記筒學習分類，再以全班當「訓練數據」，看一個錯誤例子如何令模型學錯。附器材清單、教師指引、共融調適與兩分鐘理解檢查。"
-downloads: ["/files/screen-free-ai-pe-games-p1-p3.html"]
+image: "/images/screen-free-ai-pe-games-p1-p3-hero.webp"
+imageAlt: "三名學生在體育館內舉高手臂做動作，前方有一個深紅色球和藍色地面標記。"
+downloads: ["/files/screen-free-ai-pe-games-p1-p3.docx"]
 feedback: true
 draft: true
 ---
@@ -113,18 +116,18 @@ draft: true
 
 ## 附件
 
-**[兩頁可列印圖卡與指引（A4）](/files/screen-free-ai-pe-games-p1-p3.html)**
+**[兩頁可列印圖卡與指引（Word 文件，可編輯）](/files/screen-free-ai-pe-games-p1-p3.docx)**
 
 附件包含：遊戲一與遊戲二的全套圖卡（圖示 + 中文字，方便未識字學生）、教師指引、共融調適清單與兩分鐘理解檢查。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
-本資源對應 **來源 E（《中小學人工智能素養學習架構（應用場景示例）》，p.4）** 及 **來源 F（《中小學人工智能素養學習架構》，p.1-8）**：兩者都涵蓋初小階段以體能活動及不插電方式認識 AI 的經驗。
+本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.4） 及 **《中小學人工智能素養學習架構》**（p.1-8）：兩者都涵蓋初小階段以體能活動及不插電方式認識 AI 的經驗。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你有用過這兩個遊戲嗎？哪一張圖卡最令學生混淆？歡迎告訴我們需要調整的地方，或建議下一份不插電 AI 資源。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

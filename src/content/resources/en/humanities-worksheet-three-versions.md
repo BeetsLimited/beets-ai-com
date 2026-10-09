@@ -3,6 +3,7 @@ title: "One Humanities worksheet, three versions: standard, scaffolded and visua
 address: "humanities-worksheet-three-versions"
 lang: "en"
 type: "resource"
+kind: "worksheet"
 theme: "E"
 stage: "P4-P6"
 subject: "Humanities"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A single P4-P6 Humanities worksheet in three versions — standard, scaffolded and visual — with notes explaining the changes and a comparison table."
-downloads: ["/files/en/humanities-worksheet-three-versions.html"]
+image: "/images/humanities-worksheet-three-versions-hero.webp"
+imageAlt: "A hand reaching towards three blank folders on a table, the left marked with a deep red tab and the middle with a blue tab."
+downloads: ["/files/en/humanities-worksheet-three-versions.docx"]
 feedback: true
 draft: true
 ---
@@ -36,7 +39,7 @@ All three versions aim at the same learning objective; only the level of support
 3. State one change in the community and give a possible reason for it.
 4. Name one community feature worth keeping and give a simple reason.
 
-## Teaching steps
+## How to use it
 
 1. **Introduction (5 min)** — Project two contrasting pictures (one old, one new; sketches are fine) and ask: "What is different about this community?" Let pupils answer freely, without judging.
 2. **Handing out versions (2 min)** — Give out the standard, scaffolded or visual version according to need. All three can run in the same classroom at once.
@@ -55,16 +58,18 @@ All three versions aim at the same learning objective; only the level of support
 
 The three worksheet versions, the teacher notes for each version and the comparison table are in the download file:
 
-**[Worksheet (A4 printable)](/files/en/humanities-worksheet-three-versions.html)**
+**[Worksheet(editable Word document)](/files/en/humanities-worksheet-three-versions.docx)**
 
 > The neighbourhood and all the people, places and dates in it are fictional.
 
-## How this relates to the EDB framework
+## Official documents
 
-This resource maps to **G (the Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-5 and 2-7)**: this part of the guide discusses providing differentiated resources and support for diverse learners.
+This resource maps to **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7): this part of the guide discusses providing differentiated resources and support for diverse learners.
+
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you tried these three versions? Which one suited your class best? Tell us what needs adjusting, or suggest the next resource (for example a levelled worksheet for another subject or stage).
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, resolve, relative } from "node:path";
 
@@ -16,7 +17,10 @@ import { join, resolve, relative } from "node:path";
  */
 
 const CONTENT = resolve(import.meta.dirname, "../src/content/resources");
-const EN_PRINTABLES = resolve(import.meta.dirname, "../public/files/en");
+const FILES = resolve(import.meta.dirname, "../public/files");
+const EN_FILES = resolve(FILES, "en");
+/** Attachments are Office documents; the HTML printables are gone (2026-10-10). */
+const OFFICE = /\.(docx|xlsx|pptx)$/;
 const CJK = /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/;
 /** Stricter: printables must carry no full-width forms or CJK punctuation either. */
 const WIDE_CJK = /[\u3000-\u303f\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]/;
@@ -198,37 +202,72 @@ describe("published content", () => {
   });
 });
 
-describe("English printables", () => {
-  const files = existsSync(EN_PRINTABLES)
-    ? readdirSync(EN_PRINTABLES).filter((name) => name.endsWith(".html"))
-    : [];
-  const read = (name: string) => readFileSync(join(EN_PRINTABLES, name), "utf8");
+describe("English attachments", () => {
+  /*
+   * Attachments are editable Office documents now, not print-optimised web
+   * pages (Billy, 2026-10-10). Every check the printables had still matters, so
+   * they are kept — the text just has to be read out of the OOXML container
+   * first. An English worksheet remains exactly where a Chinese sentence would
+   * otherwise slip through unnoticed, and the post-build language gate treats
+   * `files/` as out of scope.
+   */
+  const names = (dir: string) =>
+    existsSync(dir) ? readdirSync(dir).filter((name) => OFFICE.test(name)).sort() : [];
+  const files = names(EN_FILES);
+  const chinese = names(FILES);
 
-  it("has at least one", () => {
+  /** An .docx/.xlsx is a zip; unzip its XML parts and strip the tags. */
+  const textOf = (dir: string, name: string): string =>
+    execFileSync("unzip", ["-p", join(dir, name), "*.xml"], {
+      encoding: "utf8",
+      maxBuffer: 64 * 1024 * 1024,
+    }).replace(/<[^>]+>/g, " ");
+
+  it("has one for every resource, in both languages", () => {
     expect(files.length).toBeGreaterThan(0);
+    expect(chinese.length).toBe(files.length);
+    for (const name of files) expect(chinese, `${name} has no Chinese edition`).toContain(name);
+  });
+
+  it("leaves no HTML printable behind", () => {
+    for (const dir of [FILES, EN_FILES]) {
+      if (!existsSync(dir)) continue;
+      expect(readdirSync(dir).filter((name) => name.endsWith(".html")), dir).toEqual([]);
+    }
   });
 
   it("contains no Chinese or full-width characters", () => {
     for (const name of files) {
-      const match = read(name).match(WIDE_CJK);
+      const match = textOf(EN_FILES, name).match(WIDE_CJK);
       expect(match?.[0] ?? null, name).toBeNull();
     }
   });
 
   it("names EDB documents by their official English titles", () => {
     for (const name of files) {
-      const html = read(name);
+      const text = textOf(EN_FILES, name);
       for (const phrase of PLACEHOLDER_TITLES) {
-        expect(html.includes(phrase), `${name} still says "${phrase}"`).toBe(false);
+        expect(text.includes(phrase), `${name} still says "${phrase}"`).toBe(false);
       }
     }
   });
 
-  it("is print-ready and marked as English", () => {
+  it("carries none of the internal record", () => {
+    // The printables shipped an internal status note ("this file is a draft and
+    // must be reviewed by an educator") and the resource's idea number.
+    // "BEETS AI · an independent teaching resource…" is legitimate boilerplate;
+    // what must never survive is the meta line, which carries "· Theme C · #3".
+    const internal = [
+      /VERIFY/,
+      /reviewed by an educator/i,
+      /This (page|file) is a draft/i,
+      /BEETS AI · Theme/,
+    ];
     for (const name of files) {
-      const html = read(name);
-      expect(html.includes("@media print"), `${name} has no print rules`).toBe(true);
-      expect(html, `${name} is not marked lang="en"`).toMatch(/lang="en"/);
+      const text = textOf(EN_FILES, name);
+      for (const pattern of internal) {
+        expect(pattern.test(text), `${name} still matches ${pattern}`).toBe(false);
+      }
     }
   });
 });

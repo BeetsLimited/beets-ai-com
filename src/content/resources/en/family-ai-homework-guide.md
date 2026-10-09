@@ -3,6 +3,7 @@ title: "Family AI homework guide: three activities, one agreement, one parent no
 address: "family-ai-homework-guide"
 lang: "en"
 type: "resource"
+kind: "guide"
 theme: "B"
 stage: "P1-P6"
 subject: "Pastoral and parents"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A guide families can use at home with no teacher present: three 15-20 minute parent-and-child activities, a family homework agreement, and a parent notice a school can edit and send home."
-downloads: ["/files/en/family-ai-homework-guide.html"]
+image: "/images/family-ai-homework-guide-hero.webp"
+imageAlt: "A parent and child at a table together, with a deep red mug, a notebook, a blue cup holding a pencil, and a tablet."
+downloads: ["/files/en/family-ai-homework-guide.docx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -27,7 +30,7 @@ draft: false
 
 When a child wants to use AI for homework, parents are often unsure whether to allow it or stop it: when help is acceptable, what to ask, and what to do with the answer once it arrives. This guide needs no teacher present. It lets a parent and child build one simple, consistent habit at home through three 15-20 minute activities: **try it yourself first, ask for help (not answers), check before you use**. It also includes a family homework agreement and a parent notice a school can edit.
 
-## Learning objectives
+## Purpose
 
 After the three activities, a parent and child can:
 
@@ -36,7 +39,7 @@ After the three activities, a parent and child can:
 3. Check an AI answer before using it, for both correctness and suitability.
 4. Sign a family homework agreement together, and understand that it must sit alongside the school's own homework and AI-use rules.
 
-## Teaching steps
+## How to use it
 
 Each activity takes 15-20 minutes and can be done on separate days. No accounts or special equipment are needed — just pen and paper, with a parent and child working together.
 
@@ -47,7 +50,7 @@ Each activity takes 15-20 minutes and can be done on separate days. No accounts 
 
 > **Teacher notes (parents' evening):** At a parents' evening, spend about 5 minutes demonstrating the Activity 3 check, then ask parents to start with Activity 1 at home. Tell parents clearly that this guide is a helping tool and **is not a substitute for the school's own homework and AI-use policy**; where the school already has rules, the school's rules take precedence.
 
-## Answer key and marking notes
+## Review checklist
 
 This guide is not marked. The points below are the concrete signs a parent can use to judge whether the child has "got it":
 
@@ -60,18 +63,18 @@ This guide is not marked. The points below are the concrete signs a parent can u
 
 The full steps for the three activities, a printable homework agreement, a parent notice a school can edit, and the teacher notes are in the download:
 
-**[Family AI homework guide (A4 printable)](/files/en/family-ai-homework-guide.html)**
+**[Family AI homework guide(editable Word document)](/files/en/family-ai-homework-guide.docx)**
 
 > Every example in the file is fictional (for example "a fictional P3 class") and does not involve any real pupil or school.
 
-## How this relates to the EDB framework
+## Official documents
 
-This resource maps to **the Blueprint for Digital Education Development in Primary and Secondary Schools (source B, the three-fold leaflet), p.1**, which calls for home-school cooperation, and **the AI Literacy Learning Framework for Primary and Secondary Schools (source F, Supplement I), p.1-8**, which calls for adult accompaniment in early primary.
+This resource maps to **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.1), which calls for home-school cooperation, and **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8), which calls for adult accompaniment in early primary.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This guide is a teaching resource independently produced by Beets and is not an official EDB document, nor a substitute for the school's own homework and AI-use policy.
 
 ## Feedback
 
-Have you used this guide at home? Which activity worked best for your child? Tell us what needs adjusting, which resource you would like next, and which year bands or languages we should add.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

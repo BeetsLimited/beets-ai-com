@@ -3,6 +3,7 @@ title: "Campus plants: observe first, then check what the AI says"
 address: "campus-plant-truth-check"
 lang: "en"
 type: "resource"
+kind: "lesson"
 theme: "D"
 stage: "P4-P6"
 subject: "Science"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Students first observe a plant with their own eyes in the playground or from a window and record its features, then check what an AI says about a plant photo: which answer is right, which is wrong, and which photo is too unclear to decide."
-downloads: ["/files/en/campus-plant-truth-check.html"]
+image: "/images/campus-plant-truth-check-hero.webp"
+imageAlt: "Two pupils kneeling at a window sill examining a potted plant, one using a magnifying glass on a leaf, with a blue watering can and a deep red plant pot."
+downloads: ["/files/en/campus-plant-truth-check.docx"]
 feedback: true
 draft: true
 ---
@@ -61,18 +64,18 @@ Core idea: **a plant's name is a claim that needs a source**, not something that
 
 ## Files
 
-**[Observation record sheet, plant photo cards and teacher notes (A4 printable)](/files/en/campus-plant-truth-check.html)**
+**[Observation record sheet, plant photo cards and teacher notes(editable Word document)](/files/en/campus-plant-truth-check.docx)**
 
 > All "plant photo cards" in the download are illustrative examples, not a correct identification of any plant. Teachers should swap in their own campus photos.
 
-## How this relates to the EDB framework
+## Official documents
 
-This resource maps to **the AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios) (source E), p.7**: using campus plants as the context, it asks pupils to observe and record features for themselves before checking an AI's identification output, and to question the AI about its sources and judge whether an answer is trustworthy.
+This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.7): using campus plants as the context, it asks pupils to observe and record features for themselves before checking an AI's identification output, and to question the AI about its sources and judge whether an answer is trustworthy.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is an independent teaching resource produced by Beets, and is not an official EDB document.
 
 ## Feedback
 
-Have you used this worksheet? Where do pupils most often get stuck? Which photo card is closest to your own campus? Let us know what needs changing, or suggest the next resource.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

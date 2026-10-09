@@ -4,6 +4,7 @@ title_en: "P4 Hong Kong population line graph: check an AI explanation"
 address: "p4-hk-population-ai-graph-check"
 lang: "zh-HK"
 type: "resource"
+kind: "worksheet"
 theme: "D"
 stage: "P4"
 subject: 數學
@@ -15,22 +16,21 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-07
 description: "學生核對一段 AI 生成的香港人口解釋：找出沒有來源的數字、發現「每年都上升」的說法有誤，並用政府統計處的官方數據重畫正確的折線圖。"
-downloads: ["/files/p4-hk-population-graph-worksheet.html"]
+image: "/images/p4-hk-population-ai-graph-check-hero.webp"
+imageAlt: "一名學生坐在桌前，手拿藍色鉛筆，抬頭思考；桌上有一盆深紅色花盆的小植物，背後是大窗。"
+downloads: ["/files/p4-hk-population-ai-graph-check.docx"]
 feedback: true
 draft: true
 ---
 
-> 特別需要審閱：**數字序列須以政府統計處官方數據核實**（見下方「給審閱者」一節）。
-> 未填 `reviewer` 前不會發佈。
+> 課堂重點：**數字序列必須以政府統計處的官方數據核實**，不要直接採用 AI 提供的數字。
 
 ## 這個資源解決什麼問題
-
 學生很快就會用 AI 取得資料。真正的能力，是**知道要問 AI 的來源，並且真的去核對**。
 
 本課用一個貼近生活的題目（香港人口），讓學生親手發現 AI 的一段解釋**有真有假**，再從官方來源取得數據，重新畫出正確的折線圖。
 
 ## 學習目標
-
 學生能夠：
 
 1. 向 AI 追問資料來源，並判斷回答有沒有指出來源。
@@ -38,15 +38,12 @@ draft: true
 3. 指出 AI 解釋中**哪一句是錯的**，並用證據說明。
 4. 用官方數據重畫折線圖，並描述趨勢。
 
-## 教學步驟
-
+## 使用步驟
 1. **引起動機（5 分鐘）** — 投影「AI 的解釋」（見下載檔），提問：這段話可信嗎？你會怎樣檢查？
 2. **訂立核對方法（5 分鐘）** — 共同列出核對步驟：找來源 → 對數字 → 看說法是否被數據支持。
 3. **小組核對（15 分鐘）** — 學生使用政府統計處的官方數據核對每一句。
 4. **重畫折線圖（10 分鐘）** — 用官方數據繪畫，並用一句話描述趨勢。
 5. **總結（5 分鐘）** — 討論：如果 AI 的數字對了一半，為什麼仍然危險？
-
-## 核對用官方來源
 
 **政府統計處（Census and Statistics Department）**
 人口統計數據表：**Table 110-01001（按年的人口數字）**
@@ -60,12 +57,7 @@ draft: true
 |---|---|---|
 | 2021（人口普查） | **7,413,070** | 政府統計處 2021 年人口普查 |
 
-## 下載檔（含 AI 的解釋、核對表、答案）
-
-**[P4 香港人口折線圖工作紙（可列印）](/files/p4-hk-population-graph-worksheet.html)**
-
-## 答案要點：錯在哪裡
-
+## 答案與評分要點
 AI 那段解釋有三處問題：
 
 1. **沒有來源。** 通篇沒有說明數字從何而來 —— 這是第一個警號。
@@ -74,26 +66,16 @@ AI 那段解釋有三處問題：
 
 同時要讓學生注意：**AI 說對的部分（2021 年人口數字）不代表整段話可信。** 一段話對了一半，仍可能誤導。
 
-## 給審閱者（Henry）
+## 附件
+**[P4 香港人口折線圖工作紙（Word 文件，可編輯）](/files/p4-hk-population-ai-graph-check.docx)**
 
-請在發佈前確認：
+## 官方文件參考
+本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.6）：以城市人口折線圖為例，要求學生向 AI 追問來源，並用可靠網站（如政府統計處）核對 AI 的輸出。
 
-```
-□ AI 解釋中的「2021 = 7,413,070」與政府統計處 2021 年人口普查一致
-□ 工作紙上要求學生填寫的年份序列，與 Table 110-01001 現行版本一致
-□ 官方來源連結仍然有效（censtatd.gov.hk 會更新連結）
-□ 「人口並非逐年上升」這個結論，與現行官方數據仍然成立
-□ 課堂時間（35–40 分鐘）是否符合 P4 實際情況
-```
-
-## 與 EDB 框架的關係
-
-本資源對應 **E, p.6（應用示例）**：以城市人口折線圖為例，要求學生向 AI 追問來源，並用可靠網站（如政府統計處）核對 AI 的輸出。
-
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用過這份工作紙嗎？學生最常在哪一步卡住？歡迎告訴我們需要調整的地方。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

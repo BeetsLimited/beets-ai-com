@@ -4,6 +4,7 @@ title_en: "Homework redesign kit: two before-and-after assignments that show stu
 address: "homework-redesign-kit"
 lang: "zh-HK"
 type: "resource"
+kind: "guide"
 theme: "C"
 stage: "P4-P6"
 subject: "全科/跨科"
@@ -15,21 +16,21 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "兩份完整的前後對照課業範例（中文閱讀回應與常識資料整理）加一份功課重設計檢查清單，示範在保留學習目標與作答時間之餘，讓學生的思考歷程看得見。"
-downloads: ["/files/homework-redesign-kit.html"]
+image: "/images/homework-redesign-kit-hero.webp"
+imageAlt: "一位教師坐在桌前，面前是一本藍色筆記簿和一疊紙，旁邊有深紅色筆筒；背景是課室白板。"
+downloads: ["/files/homework-redesign-kit.docx"]
 feedback: true
 draft: true
 ---
 
 ## 這個資源解決什麼問題
-
 AI 普及之後，一份只要求「找出答案」的功課，學生可以照抄同學、上網搜尋，或直接交給 AI 代做。教師改到的只是**成品**，看不見學生到底懂不懂、哪裡卡住。
 
 本套件不叫你「禁止用 AI」，而是示範一個更實際的辦法：**把功課重寫一遍**，在保留原有學習目標和作答時間的前提下，加入「引用證據、用自己的話、給出個人理由、下堂課口頭解釋」四個元素，令照抄或 AI 代寫不再有用，學生的思考歷程自然浮現。
 
 套件包含：兩份完整的前後對照課業範例（中文閱讀回應、常識資料整理），以及一份可套用到任何現有功課的「功課重設計檢查清單」。
 
-## 學習目標
-
+## 目的
 完成後，教師能夠：
 
 1. 說出「照抄型」功課的三個常見特徵，並在自己的功課中辨認出來。
@@ -37,16 +38,13 @@ AI 普及之後，一份只要求「找出答案」的功課，學生可以照�
 3. 改寫後核對：學習目標有沒有保留？作答時間有沒有改變？
 4. 用「功課重設計檢查清單」檢視自己改寫的成果。
 
-## 教學步驟
-
+## 使用步驟
 以下是一個約 40 分鐘的自學流程（可個人完成，亦可作科組集體備課）：
 
 1. **認識問題（5 分鐘）** — 讀「範例一」的原文版，問自己：學生能否照抄或交給 AI 完成？哪一題最容易被代做？
 2. **對照改寫（10 分鐘）** — 讀「範例一」的改寫版和「改了什麼」，圈出每一處令思考「看得見」的改動。
 3. **第二個範例（10 分鐘）** — 用同一方法讀「範例二」（常識資料整理）的前後對照。
 4. **應用於自己的功課（15 分鐘）** — 拿出一份你自己的現有功課，用「功課重設計檢查清單」逐項檢查，改寫出一個新版本。
-
-## 答案與評分要點
 
 以下兩份前後對照就是本套件的「答案」——示範什麼才算一份好改寫，以及改寫後的功課，學生「好答案」要包含什麼。
 
@@ -103,8 +101,7 @@ AI 普及之後，一份只要求「找出答案」的功課，學生可以照�
 
 > 注意：範例二中的數字以教師提供的來源為準；本套件不預設任何真實統計數字，以免過時或誤導。
 
-## 功課重設計檢查清單
-
+## 檢核要點
 ```text
 □ 學習目標 — 改寫前寫下「這份功課要學生學會什麼」；改寫後仍達致同一目標？
 □ 引用證據 — 有沒有要求學生指出／引用某句、某個數字、某個來源，而不只是給結論？
@@ -117,22 +114,20 @@ AI 普及之後，一份只要求「找出答案」的功課，學生可以照�
 ```
 
 ## 附件
-
-**[功課重設計套件（可列印 A4）](/files/homework-redesign-kit.html)**
+**[功課重設計套件（Word 文件，可編輯）](/files/homework-redesign-kit.docx)**
 
 > 附件包含兩份完整前後對照範例、檢查清單，以及供教師寫改寫版本的空白欄位。範例均為虛構，不涉及任何真實學生或學校。
 
-## 與 EDB 框架的關係
-
+## 官方文件參考
 本資源對應：
 
-- **the AI Literacy Learning Framework for Primary and Secondary Schools（source F，Supplement I）p.1-13**：重視真實、多元的評估與學習過程，而非只評成品。
-- **the Guide to Using AI in Teaching in Primary and Secondary Schools（source G，Supplement II）pp.2-7 to 2-8**：不鼓勵直接提交 AI 生成的功課，建議以過程證據、口頭提問及調整評估方式來檢視學習。
+- **《中小學人工智能素養學習架構》**（p.1-13）：重視真實、多元的評估與學習過程，而非只評成品。
+- **《中小學應用人工智能教學指南》**（pp.2-7 to 2-8）：不鼓勵直接提交 AI 生成的功課，建議以過程證據、口頭提問及調整評估方式來檢視學習。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用過這個套件嗎？哪一份範例最貼近你的學科？改寫後學生最常在哪一題「卡住」？歡迎告訴我們需要調整的地方，或建議下一份資源。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

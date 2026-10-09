@@ -4,6 +4,7 @@ title_en: "One Humanities worksheet, three versions: standard, scaffolded and vi
 address: "humanities-worksheet-three-versions"
 lang: "zh-HK"
 type: "resource"
+kind: "worksheet"
 theme: "E"
 stage: "P4-P6"
 subject: "人文"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "一份同一主題的 P4–P6 人文科工作紙，示範標準、扶助、圖像三個版本的差異，並附各版本的改動說明與比較表。"
-downloads: ["/files/humanities-worksheet-three-versions.html"]
+image: "/images/humanities-worksheet-three-versions-hero.webp"
+imageAlt: "一隻手伸向桌上三份空白文件夾，左邊一份有深紅色標籤，中間一份有藍色標籤。"
+downloads: ["/files/humanities-worksheet-three-versions.docx"]
 feedback: true
 draft: true
 ---
@@ -37,7 +40,7 @@ draft: true
 3. 說出社區的其中一個改變，並提出一個可能的原因。
 4. 提出一個值得保留的社區特色，並簡單說明理由。
 
-## 教學步驟
+## 使用步驟
 
 1. **引入（5 分鐘）** — 投影兩張對比圖（一張舊、一張新，可用示意圖），問：「這個社區有什麼不同？」讓學生自由說，不評價。
 2. **分派版本（2 分鐘）** — 按學生需要派發標準、扶助或圖像版。三個版本可在同一課室並行使用。
@@ -56,16 +59,18 @@ draft: true
 
 三個版本的工作紙、各版本的教師註解與比較表，見下載檔：
 
-**[工作紙（可列印 A4）](/files/humanities-worksheet-three-versions.html)**
+**[工作紙（Word 文件，可編輯）](/files/humanities-worksheet-three-versions.docx)**
 
 > 社區「安和邨」及其中的人物、地名、年份均為虛構，不涉及任何真實社區。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
-本資源對應 **G（《中小學應用人工智能教學指南》，pp.2-5 and 2-7）**：該部分討論如何為不同學習需要的學生提供差異化的資源與支援，讓所有學生都能投入同一學習任務。
+本資源對應 **《中小學應用人工智能教學指南》**（pp.2-5 and 2-7）：該部分討論如何為不同學習需要的學生提供差異化的資源與支援，讓所有學生都能投入同一學習任務。
+
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用過這三個版本嗎？哪個版本最適合你班上的學生？歡迎告訴我們需要調整的地方，或建議下一份資源（例如其他科目或年級的分層工作紙）。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

@@ -3,6 +3,7 @@ title: "Ten-minute AI judgement checks: three quick formative tasks for P4-P6"
 address: "ten-minute-ai-judgement-checks"
 lang: "en"
 type: "resource"
+kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
 subject: "Cross-curricular"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Three short formative tasks (about ten minutes each): judge whether an AI answer is trustworthy, spot the part of a classmate's answer the writer can actually defend, and list what still needs checking before handing work in. With scoring guidance and follow-up activities."
-downloads: ["/files/en/ten-minute-ai-judgement-checks.html"]
+image: "/images/ten-minute-ai-judgement-checks-hero.webp"
+imageAlt: "A teacher in a classroom holding up a deep red card to two pupils seated at a desk with a blue pencil on it."
+downloads: ["/files/en/ten-minute-ai-judgement-checks.docx"]
 feedback: true
 draft: true
 ---
@@ -39,7 +42,7 @@ By the end, pupils can:
 2. Tell which parts of an answer the writer could explain in their own words, and which parts look copied.
 3. List what to check before handing in work (sources, facts, can-I-explain-it), not just spelling and layout.
 
-## Teaching steps
+## How to use it
 
 The three tasks can each run as a ten-minute lesson opener, or all together in one lesson (about 40 minutes).
 
@@ -97,21 +100,21 @@ All three tasks are open-ended, but good answers share checkable features. The e
 
 Three printable worksheets (with the stimulus, space to write, the scoring guide and the answer notes) are in the download file:
 
-**[Worksheet (A4 printable)](/files/en/ten-minute-ai-judgement-checks.html)**
+**[Worksheet(editable Word document)](/files/en/ten-minute-ai-judgement-checks.docx)**
 
 > All examples are fictional and do not involve any real pupils or schools.
 
-## How this relates to the EDB framework
+## Official documents
 
 This resource maps to:
 
-- **F (the AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13)**: calls for varied, authentic assessment that covers application, ethics and thinking processes, rather than memorising the final answer alone.
-- **G (the Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-7 to 2-8)**: recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.
+- **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): calls for varied, authentic assessment that covers application, ethics and thinking processes, rather than memorising the final answer alone.
+- **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you used these three tasks? Which one let you see pupils' thinking most clearly? Tell us what needs adjusting, or suggest the next resource.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

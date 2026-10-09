@@ -3,6 +3,7 @@ title: "P4-P6 curriculum gap map: where AI literacy already fits your subjects"
 address: "p4-p6-curriculum-gap-map"
 lang: "en"
 type: "resource"
+kind: "planning"
 theme: "A"
 stage: "P4-P6"
 subject: "School planning"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting."
-downloads: ["/files/en/p4-p6-curriculum-gap-map.html"]
+image: "/images/p4-p6-curriculum-gap-map-hero.webp"
+imageAlt: "Two school leaders standing behind a table with three blank cards on it — two deep red and one blue."
+downloads: ["/files/en/p4-p6-curriculum-gap-map.xlsx"]
 feedback: true
 factChecked: true
 factCheckedBy: "Billy Kan"
@@ -29,7 +32,7 @@ Many schools already teach AI-literacy-related content in different subjects —
 
 This workbook turns that step into a single curriculum meeting of about 60 minutes: first record each subject's existing AI-literacy activities in a "subject × term" table, then check them against the P4-P6 stage goals, mark the gaps, and write the smallest next step for each gap. Once the table is filled in, a panel head can see where P4-P6 AI literacy already fits across the subjects, and where it is still empty.
 
-## Learning objectives
+## Planning objectives
 
 After the curriculum meeting, principals, curriculum coordinators and panel heads can:
 
@@ -38,7 +41,7 @@ After the curriculum meeting, principals, curriculum coordinators and panel head
 3. Write a "next step" for each gap (one small lesson or activity change) and assign an owner.
 4. Use the three completed fictional school examples to judge whether a coverage map "leads to a next step" rather than just listing activities.
 
-## Teaching steps
+## Planning steps
 
 This is a curriculum-meeting agenda of about 60 minutes (it can be folded into a panel or administrative meeting):
 
@@ -48,13 +51,13 @@ This is a curriculum-meeting agenda of about 60 minutes (it can be folded into a
 4. **Mark the gaps (15 min)** — Against the goal list, mark the "not covered" and "repeated" positions.
 5. **Write the next steps (10 min)** — For each gap, write one small next step and assign an owner; leave blanks to be finished after the meeting.
 
-## Answer key and marking notes
+## Review checklist
 
 There is no single right answer, but a coverage map that "leads to a next step" can be judged against the checklist below.
 
 **P4-P6 stage goals (suggested list)**: the rows below are this workbook's suggested scaffold, not the framework's own wording. Check them against the P4-P6 stage goals in F (the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10) before you quote them.
 
-| Goal | Suggested P4-P6 goal (check against F pp.1-6 to 1-10) |
+| Goal | Suggested P4-P6 goal (check against the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10) |
 |---|---|
 | G1 | Understand what AI is and where it appears in everyday life |
 | G2 | Use AI safely and responsibly, and know what information should not be entered or shared |
@@ -77,21 +80,21 @@ There is no single right answer, but a coverage map that "leads to a next step" 
 
 ## Files
 
-**[P4-P6 curriculum coverage workbook (printable A4)](/files/en/p4-p6-curriculum-gap-map.html)**
+**[P4-P6 curriculum coverage workbook(editable Excel spreadsheet)](/files/en/p4-p6-curriculum-gap-map.xlsx)**
 
 Includes: a blank coverage table, a blank gap-and-next-step table, three completed fictional school examples, and a meeting checklist.
 
-## How this relates to the EDB framework
+## Official documents
 
 This resource maps to:
 
-- **F (the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10)**: sets out cross-subject implementation and progression across four learning stages, to be used when checking a school's own activities against the stage goals.
-- **B (the Blueprint for Digital Education Development in Primary and Secondary Schools (three-fold leaflet), p.2)**: requires digital and AI education strategies in school development plans with a clear implementation timetable.
+- **AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, to be used when checking a school's own activities against the stage goals.
+- **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies in school development plans with a clear implementation timetable.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you used this workbook to map your school's coverage? Which goal was hardest to judge as "covered" or "empty"? Tell us what needs adjusting, or suggest the next resource.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

@@ -22,9 +22,9 @@ import {
  * (`sourceIdea`, `sources`, `reviewer`, `factChecked*`) stays in the entry and
  * off the page, and its document shorthand ("B, p.2") never reaches a reader.
  *
- * A resource **without** a `kind` is skipped. The redesign is rolling out one
- * resource at a time, and a gate that fails on work nobody has started yet gets
- * switched off rather than obeyed.
+ * Every resource is on the standard: the rollout finished on 2026-10-10 and the
+ * test now covers all of them, so a new resource that forgets `kind` fails here
+ * rather than quietly shipping a page with headings it invented itself.
  */
 
 const ROOT = resolve(import.meta.dirname, "..");
@@ -68,7 +68,7 @@ function parse(file: string): Entry {
 }
 
 const all = markdownFiles(CONTENT).map(parse);
-const declared = all.filter((entry) => entry.fm.kind !== undefined);
+const declared = all;
 const downloadsOf = (entry: Entry): string[] => {
   const inline = entry.fm.downloads?.match(/^\[(.*)\]$/);
   if (!inline) return [];
@@ -81,10 +81,12 @@ const h2sOf = (entry: Entry): string[] =>
     .map((line) => line.replace(/^##\s+/, "").trim());
 
 describe("resource page standard", () => {
-  it("has at least one resource on the new standard", () => {
-    // Guards the filter: if `kind:` were written in a form this parser cannot
-    // read, every test below would silently check nothing.
-    expect(declared.length).toBeGreaterThan(0);
+  it("puts every resource on the standard", () => {
+    // Guards the parser: if `kind:` were written in a form this reader cannot
+    // see, every test below would silently check nothing. Equality with the
+    // number of files on disk is the real invariant — the rollout is complete.
+    expect(declared.length).toBe(all.length);
+    expect(markdownFiles(CONTENT).length).toBe(all.length);
   });
 
   it("declares a known kind", () => {

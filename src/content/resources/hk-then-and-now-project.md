@@ -4,6 +4,7 @@ title_en: "Hong Kong then and now: a local history project with an alternative t
 address: "hk-then-and-now-project"
 lang: "zh-HK"
 type: "resource"
+kind: "lesson"
 theme: "D"
 stage: "P4-P6"
 subject: "人文"
@@ -15,7 +16,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "P4-P6 人文科「香港今昔」專題：提供訪談提示、不需訪談家人的公開資料路徑、一次來源核對示例與三級評分表，讓每位學生都能完成。"
-downloads: ["/files/hk-then-and-now-project.html"]
+image: "/images/hk-then-and-now-project-hero.webp"
+imageAlt: "一位長者與一名女孩同坐在淺灰色沙發上一起看書，身旁有深紅色坐墊和一盆藍色花盆的植物。"
+downloads: ["/files/hk-then-and-now-project.docx"]
 feedback: true
 draft: true
 ---
@@ -68,18 +71,18 @@ draft: true
 
 ## 附件
 
-**[工作紙（可列印 A4）](/files/hk-then-and-now-project.html)**
+**[工作紙（Word 文件，可編輯）](/files/hk-then-and-now-project.docx)**
 
 > 附件內所有街道、地點與資料均為虛構，不涉及任何真實家庭、地址或學校。
 
-## 與 EDB 框架的關係
+## 官方文件參考
 
-本資源對應 **E（《人工智能素養學習架構（應用情境示例）》，p.8）**：文件提出香港「今昔」專題，讓學生借助 AI 想像昔日景象，再把 AI 的說法與口述歷史及其他來源核對。本資源把這情境變成一份每名學生都能完成的工作紙，並加入「不需訪談家人」的替代路徑。
+本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.8）：文件提出香港「今昔」專題，讓學生借助 AI 想像昔日景象，再把 AI 的說法與口述歷史及其他來源核對。本資源把這情境變成一份每名學生都能完成的工作紙，並加入「不需訪談家人」的替代路徑。
 
-參考：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
 ## 意見
 
-你用過這份專題嗎？「公開資料路徑」對你的班級有沒有幫助？歡迎告訴我們需要調整的地方，或建議下一份資源。
+如對本資源有任何意見或疑問，歡迎電郵至 <enquiry@beets-ai.com>。

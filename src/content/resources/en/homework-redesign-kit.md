@@ -3,6 +3,7 @@ title: "Homework redesign kit: two before-and-after assignments that show studen
 address: "homework-redesign-kit"
 lang: "en"
 type: "resource"
+kind: "guide"
 theme: "C"
 stage: "P4-P6"
 subject: "Cross-curricular"
@@ -14,21 +15,21 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Two complete before-and-after assignments (a Chinese Language reading response and a General Studies data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required."
-downloads: ["/files/en/homework-redesign-kit.html"]
+image: "/images/homework-redesign-kit-hero.webp"
+imageAlt: "A teacher seated at a desk with a blue notebook and a stack of papers, a deep red pencil cup beside them, a whiteboard behind."
+downloads: ["/files/en/homework-redesign-kit.docx"]
 feedback: true
 draft: true
 ---
 
 ## What this solves
-
 Now that AI is common, an assignment that only asks students to "find the answer" can be completed by copying a classmate, searching online, or handing it straight to an AI. Teachers mark only the finished product, and cannot see what the student understood or where they got stuck.
 
 This kit does not ask you to ban AI. It shows a more practical move: **rewrite the assignment** so that, while keeping the same learning objective and the same time required, you add four elements — quote evidence, use your own words, give a personal reason, and explain briefly in class. Copying or AI-generated work stops being useful, and the student's thinking becomes visible.
 
 The kit contains two complete before-and-after assignment examples (a Chinese Language reading response and a General Studies data task), plus a homework-redesign checklist you can apply to any existing assignment.
 
-## Learning objectives
-
+## Purpose
 By the end, teachers can:
 
 1. Name three common features of "copy-friendly" assignments and spot them in their own tasks.
@@ -36,16 +37,13 @@ By the end, teachers can:
 3. Check after rewriting: has the learning objective been kept? Has the time required changed?
 4. Use the homework-redesign checklist to review their own rewrite.
 
-## Teaching steps
-
+## How to use it
 A self-guided flow of about 40 minutes (individual, or as a subject-panel planning session):
 
 1. **Name the problem (5 min)** — Read the "before" version of Example 1 and ask: could a student copy this or hand it to an AI? Which question is easiest to have done for them?
 2. **Compare the rewrite (10 min)** — Read the "after" version and the "what changed" notes, and circle each change that makes thinking visible.
 3. **Second example (10 min)** — Read Example 2 (the General Studies data task) the same way.
 4. **Apply it to your own assignment (15 min)** — Take one of your existing assignments, work through the homework-redesign checklist, and write a new version.
-
-## Answer key and marking notes
 
 The two before-and-after pairs below are the "answer key" of this kit — they show what a good rewrite looks like, and what a good student answer to the rewritten task contains.
 
@@ -102,8 +100,7 @@ The two before-and-after pairs below are the "answer key" of this kit — they s
 
 > Note: the figures in Example 2 come from the sources the teacher supplies; this kit does not assume any real statistics, so nothing goes out of date or misleads.
 
-## Homework-redesign checklist
-
+## Review checklist
 ```text
 □ Learning objective — before rewriting, write down "what this assignment is for"; does the rewrite still reach it?
 □ Quote evidence — does it ask the student to point to or quote a sentence, a figure or a source, rather than only give a conclusion?
@@ -116,22 +113,20 @@ The two before-and-after pairs below are the "answer key" of this kit — they s
 ```
 
 ## Files
-
-**[Homework redesign kit (printable A4)](/files/en/homework-redesign-kit.html)**
+**[Homework redesign kit(editable Word document)](/files/en/homework-redesign-kit.docx)**
 
 > The file contains the two complete before-and-after examples, the checklist, and blank space for writing your own rewrite. All examples are fictional and involve no real pupils or schools.
 
-## How this relates to the EDB framework
-
+## Official documents
 This resource maps to:
 
-- **the AI Literacy Learning Framework for Primary and Secondary Schools (source F, Supplement I), p.1-13**: it values authentic, varied assessment and the learning process, not only the finished product.
-- **the Guide to Using AI in Teaching in Primary and Secondary Schools (source G, Supplement II), pp.2-7 to 2-8**: it discourages the direct submission of AI-generated work and recommends process evidence, oral questioning and adjusted assessment arrangements.
+- **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): it values authentic, varied assessment and the learning process, not only the finished product.
+- **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): it discourages the direct submission of AI-generated work and recommends process evidence, oral questioning and adjusted assessment arrangements.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you used this kit? Which example is closest to your subject? Where do students most often get stuck after you rewrite a task? Tell us what needs adjusting, or suggest the next resource.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.

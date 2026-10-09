@@ -3,6 +3,7 @@ title: "P1-P3 PE: two screen-free AI games (no devices needed)"
 address: "screen-free-ai-pe-games-p1-p3"
 lang: "en"
 type: "resource"
+kind: "lesson"
 theme: "E"
 stage: "P1-P3"
 subject: "PE"
@@ -14,7 +15,9 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Two screen-free movement games: pupils run to a labelled cone to sort everyday items into 'uses AI / does not use AI', then the whole class acts as training data to see how one wrong example skews the model. Includes an equipment list, teacher instructions, inclusion notes and a two-minute understanding check."
-downloads: ["/files/en/screen-free-ai-pe-games-p1-p3.html"]
+image: "/images/screen-free-ai-pe-games-p1-p3-hero.webp"
+imageAlt: "Three pupils in a school hall with arms raised, a deep red ball on a blue floor marker in front of them."
+downloads: ["/files/en/screen-free-ai-pe-games-p1-p3.docx"]
 feedback: true
 draft: true
 ---
@@ -112,18 +115,18 @@ By the end, pupils can:
 
 ## Files
 
-**[Two-page picture cards and instructions (A4 printable)](/files/en/screen-free-ai-pe-games-p1-p3.html)**
+**[Two-page picture cards and instructions(editable Word document)](/files/en/screen-free-ai-pe-games-p1-p3.docx)**
 
 The printable contains the full card sets for Games 1 and 2 (picture + word, for pre-readers), the teacher instructions, the inclusion-notes checklist and the two-minute check.
 
-## How this relates to the EDB framework
+## Official documents
 
-This resource maps to **source E (the AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.4)** and **source F (the AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8)**: both cover early-primary experiences of meeting AI through physical and unplugged activities.
+This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.4) and **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): both cover early-primary experiences of meeting AI through physical and unplugged activities.
 
-Reference: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is a teaching resource independently produced by Beets and is not an official EDB document.
 
 ## Feedback
 
-Have you used these two games? Which card confused your pupils the most? Tell us what needs adjusting, or suggest the next screen-free AI resource.
+If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.
