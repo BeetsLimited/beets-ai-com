@@ -3,10 +3,13 @@ import { getCollection } from "astro:content";
 import Base from "../../../layouts/Base.astro";
 import ResourceView from "../../../components/ResourceView.astro";
 import { SECONDARY_LOCALE } from "../../../lib/i18n";
+import { reviewRequired } from "../../../lib/review-gate";
 
 const lang = SECONDARY_LOCALE;
 
 export async function getStaticPaths() {
+  // No mirrors while the review gate is off — see src/lib/review-gate.ts.
+  if (!reviewRequired()) return [];
   const drafts = await getCollection(
     "content",
     ({ data }) => data.draft && data.lang === SECONDARY_LOCALE,

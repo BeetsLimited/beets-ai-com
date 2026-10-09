@@ -1,0 +1,4 @@
+{
+  "_comment": "⚠️  THE REVIEW-GATE SWITCH — the ONE place the policy lives. reviewRequired=false means unreviewed content publishes automatically (temporarily disabled for Billy on 2026-10-10; set back to true before the public rollout). Read by both src/lib/review-gate.ts (the site build) and scripts/gen-llms-txt.mjs (the prebuild). Full rationale: src/lib/review-gate.ts.",
+  "reviewRequired": false
+}

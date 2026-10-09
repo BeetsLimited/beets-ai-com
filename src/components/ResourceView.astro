@@ -1,6 +1,7 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
 import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+import { reviewRequired } from "../lib/review-gate";
 
 /**
  * One resource page, in one language.
@@ -21,8 +22,12 @@ interface Props {
 const { entry, lang, reviewMode = false, related = [] } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
-/** The draft warning follows the `draft` flag, so publishing removes it. */
-const showDraftNotice = reviewMode || d.draft;
+/**
+ * The draft warning follows the `draft` flag, so publishing removes it — and it
+ * is suppressed entirely while the review gate is off, because those pages are
+ * published at their public URLs on purpose.
+ */
+const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
 ---
 
 <article>

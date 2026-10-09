@@ -14,6 +14,7 @@ import {
 import { organizationLd, socialMeta, webSiteLd } from "../lib/seo";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
 import { getCollection } from "astro:content";
+import { isPublished } from "../lib/review-gate";
 
 /**
  * One page, one language.
@@ -95,7 +96,7 @@ const structuredDataNodes = [organizationLd(), webSiteLd(lang), ...structuredDat
 const liveResources = (
   await getCollection(
     "content",
-    ({ data }) => data.lang === DEFAULT_LOCALE && !data.draft && data.type === "resource",
+    ({ data }) => data.lang === DEFAULT_LOCALE && isPublished(data) && data.type === "resource",
   )
 ).length;
 ---

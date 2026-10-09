@@ -9,7 +9,10 @@
  * description and cited source documents.
  *
  * Runs as `prebuild`, so the two files are regenerated on every build and can
- * never drift from the content. Excluded: drafts (unreviewed) and /review/.
+ * never drift from the content. Excluded: /review/. Unreviewed drafts are also
+ * excluded — unless the review gate is off (src/lib/review-gate.config.json), in
+ * which case they are published and must be listed, or llms.txt would describe a
+ * site that does not exist.
  *
  *   node scripts/gen-llms-txt.mjs
  */
@@ -20,6 +23,17 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "src", "content", "resources");
 const SITE = "https://beets-ai.com";
+
+/**
+ * Read the review-gate switch from its single source of truth, so this file
+ * cannot advertise a page the site build left 404 (or hide one that is live).
+ * Mirrors `reviewRequired()` in src/lib/review-gate.ts.
+ */
+const gateConfig = JSON.parse(
+  readFileSync(join(ROOT, "src", "lib", "review-gate.config.json"), "utf8"),
+);
+const REVIEW_REQUIRED =
+  (process.env.REVIEW_REQUIRED ?? String(gateConfig.reviewRequired)) !== "false";
 
 const THEME_NAMES = {
   "zh-HK": {
@@ -87,14 +101,19 @@ function readDir(dir, lang) {
     if (!name.endsWith(".md")) continue;
     const data = parseFrontmatter(readFileSync(full, "utf8"));
     if (!data?.address) continue;
-    if (String(data.draft).toLowerCase() === "true") continue; // unreviewed
+    // Unreviewed, and the review gate is on → not on the site yet.
+    if (REVIEW_REQUIRED && String(data.draft).toLowerCase() === "true") continue;
     out.push({ ...data, lang });
   }
   return out;
 }
 
-const all = [...readDir(CONTENT, "zh-HK"), ...readDir(join(CONTENT, "en"), "en")];
-const live = all.filter((e) => String(e.draft).toLowerCase() !== "true");
+// readDir walks the `en/` subdirectory itself and tags those entries "en", so
+// calling it once is enough. Reading the English directory a second time was
+// listing every English item twice in llms.txt and llms-full.txt.
+const all = readDir(CONTENT, "zh-HK");
+// readDir has already applied the review gate; there is nothing further to drop.
+const live = all;
 const byLang = (lang) =>
   live
     .filter((e) => e.lang === lang)
@@ -103,12 +122,17 @@ const byLang = (lang) =>
 const zh = byLang("zh-HK");
 const en = byLang("en");
 
+/**
+ * Only claim educator review when the gate is on — with it off, items are live
+ * before anyone has reviewed them, and llms.txt must not say otherwise.
+ */
+const REVIEW_LINE = REVIEW_REQUIRED ? ", the educator who reviewed it," : "";
+
 const HEADER = `# BEETS AI — ${"香港免費 AI 教育資源"} / Free Hong Kong AI Teaching Resources
 
 > A free library of AI teaching resources for Hong Kong primary and secondary
 > schools, published by Beets Limited (https://beets3d.com). Every item names the
-> official EDB source document it is built on, the educator who reviewed it, and
-> its version. No sign-up, no paywall.
+> official EDB source document it is built on${REVIEW_LINE} and its version. No sign-up, no paywall.
 
 Traditional Chinese ("zh-HK") is the primary edition at the site root; English is
 under /en/. Both editions of an item share one address.
@@ -180,5 +204,6 @@ writeFileSync(join(ROOT, "public", "llms-full.txt"), `${full}\n`);
 
 console.log(
   `llms.txt: ${live.length} published resource edition(s) listed ` +
-    `(${zh.length} zh-HK, ${en.length} en); drafts excluded`,
+    `(${zh.length} zh-HK, ${en.length} en); ` +
+    (REVIEW_REQUIRED ? "drafts excluded" : "REVIEW GATE OFF — drafts included"),
 );

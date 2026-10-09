@@ -1,5 +1,6 @@
 ---
 import { t, type Locale } from "../lib/i18n";
+import { reviewRequired } from "../lib/review-gate";
 
 /**
  * About page body.
@@ -9,11 +10,17 @@ import { t, type Locale } from "../lib/i18n";
  *
  * The English document titles are EDB's own, read off its publications page
  * (verified 2026-10-08) — never a translation of the Chinese title.
+ *
+ * `reviewOff` keeps the editorial-process claims true: while the review gate is
+ * off, resources are live before fact-check and educator review, so the page
+ * must say so rather than assert a gate that is not being enforced.
  */
 interface Props {
   lang: Locale;
 }
 const { lang } = Astro.props;
+
+const reviewOff = !reviewRequired();
 
 const DEBP =
   "https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html";
@@ -37,7 +44,22 @@ const DEBP =
         <li>審閱：由教育工作者審核學習目標、準確度、年齡適切性和課堂可行性。</li>
         <li>發佈：通過上述關卡後才會上線。</li>
       </ol>
-      <p class="meta">每次建置都會自動檢查連結；每份資源在發佈前都對照其列明的來源逐項核實。</p>
+      {
+        reviewOff ? (
+          <p class="notice">
+            <strong>審閱關卡目前暫時關閉。</strong>
+            部分已上線資源尚未完成教育工作者審閱及最後的事實核實 —— 它們由 AI 協助草擬，仍可能出錯。
+            正式對外推出前會全部完成審閱；發現問題請告訴我們。
+          </p>
+        ) : null
+      }
+      <p class="meta">
+        {
+          reviewOff
+            ? "每次建置都會自動檢查連結。審閱關卡目前暫時關閉，部分資源在完成事實核實及教育工作者審閱前已經上線。"
+            : "每次建置都會自動檢查連結；每份資源在發佈前都對照其列明的來源逐項核實。"
+        }
+      </p>
 
       <h2>獨立性</h2>
       <p>
@@ -92,9 +114,22 @@ const DEBP =
         </li>
         <li>Publish: nothing goes live until it has passed those gates.</li>
       </ol>
+      {
+        reviewOff ? (
+          <p class="notice">
+            <strong>The review gate is temporarily off.</strong> Some live resources have not yet had
+            their fact-check and educator review completed — they were drafted with AI assistance
+            and may still contain errors. All of them are reviewed before the public rollout; tell
+            us if you spot a problem.
+          </p>
+        ) : null
+      }
       <p class="meta">
-        Links are checked automatically on every build, and every resource is fact-checked against
-        its cited sources before publication.
+        {
+          reviewOff
+            ? "Links are checked automatically on every build. The review gate is temporarily off, so some resources are live before their fact-check and educator review are complete."
+            : "Links are checked automatically on every build, and every resource is fact-checked against its cited sources before publication."
+        }
       </p>
 
       <h2>Independence</h2>

@@ -11,6 +11,7 @@ import {
   themesInOrder,
 } from "../../lib/i18n";
 import { EVERY_RESOURCE_CHECKLIST, RESOURCE_CHECKLISTS } from "../../lib/review-checklists";
+import { isPublished, reviewRequired } from "../../lib/review-gate";
 
 /**
  * Internal review hub.
@@ -22,8 +23,11 @@ import { EVERY_RESOURCE_CHECKLIST, RESOURCE_CHECKLISTS } from "../../lib/review-
  *
  * It lists EVERY resource, drafted or published, with both editions, the
  * printable files where they exist, the checklist for that resource and any
- * `[[VERIFY]]` item a draft left for a human. Nothing is published from here:
- * a resource goes live only when its `reviewer` and `factCheckedBy` are filled in.
+ * `[[VERIFY]]` item a draft left for a human. Nothing is published from here: a
+ * resource goes live only when its `reviewer` and `factCheckedBy` are filled in
+ * — except while the review gate is off (`src/lib/review-gate.ts`, Billy
+ * 2026-10-10), when every resource is published and this page becomes the list
+ * of what is live but still unreviewed.
  */
 const ZH = "zh-HK";
 const EN = "en";
@@ -69,12 +73,14 @@ const rows = addresses.map((address) => {
     enFile: printable(en),
     checks: RESOURCE_CHECKLISTS[address] ?? EVERY_RESOURCE_CHECKLIST,
     flagged: [...flagged(zh, "中文版"), ...flagged(en, "English")],
-    published: !lead?.data.draft,
+    published: lead ? isPublished(lead.data) : false,
   };
 });
 
 const liveCount = rows.filter((row) => row.published).length;
 const draftCount = rows.length - liveCount;
+/** The review gate is off, so everything above is live — see review-gate.ts. */
+const reviewOff = !reviewRequired();
 
 const byTheme = themesInOrder(ZH)
   .map((theme) => ({
@@ -87,23 +93,56 @@ const byTheme = themesInOrder(ZH)
 <Base title="內部審閱 Internal review — BEETS AI" noindex multilingual={false}>
   <h1>內部審閱 Internal review</h1>
 
+  {
+    reviewOff ? (
+      <div class="notice">
+        <strong>⚠️ 審閱關卡暫時關閉 — 資源已自動上線（Billy，2026-10-10）。</strong>
+        <p>
+          目前 {addresses.length} 份資源（中英文版）全部已在正式網址發佈，<strong>未經事實核實及教育工作者審閱</strong>。
+          公開推出網站前會重新開啟關卡；屆時仍未審閱的資源會回復為未發佈。開關在{" "}
+          <code>src/lib/review-gate.ts</code>。
+        </p>
+        <p class="muted">
+          The review gate is temporarily OFF, so every resource is published at its public URL
+          without fact-check or educator approval. It is switched back on before the public
+          rollout, at which point unreviewed resources revert to unpublished.
+        </p>
+      </div>
+    ) : null
+  }
+
   <div class="notice">
     <strong>此區域不對外發佈，亦不會被搜尋引擎收錄。</strong>
     <p>
-      以下 {addresses.length} 份資源，每份均有<strong>繁體中文版</strong>及<strong>英文版</strong>：已發佈{" "}
-      <strong>{liveCount}</strong> 份、審閱中（草稿，未在任何正式網址發佈）<strong>{draftCount}</strong> 份。
-      草稿只有在填上事實核實者及教育工作者審閱人之後才會上線。
+      以下 {addresses.length} 份資源，每份均有<strong>繁體中文版</strong>及<strong>英文版</strong>：
+      {
+        reviewOff ? (
+          <>
+            全部 <strong>{addresses.length}</strong> 份均已發佈，其中 <strong>{draftCount}</strong>{" "}
+            份尚未審閱。
+          </>
+        ) : (
+          <>
+            已發佈 <strong>{liveCount}</strong> 份、審閱中（草稿，未在任何正式網址發佈）
+            <strong>{draftCount}</strong> 份。草稿只有在填上事實核實者及教育工作者審閱人之後才會上線。
+          </>
+        )
+      }
     </p>
     <p class="muted">
       Not public, excluded from search engines. {addresses.length} resources, each with a
-      Traditional Chinese and an English edition: {liveCount} live, {draftCount} in review. A
-      draft only goes live once a named fact-checker and educator reviewer are recorded.
+      Traditional Chinese and an English edition:{" "}
+      {
+        reviewOff
+          ? `all ${liveCount} live, ${draftCount} of them not yet reviewed.`
+          : `${liveCount} live, ${draftCount} in review — a draft only goes live once a named fact-checker and educator reviewer are recorded.`
+      }
     </p>
   </div>
 
   <h2>網站結構 Site structure</h2>
   <p>
-    以下是對外頁面（未發佈的資源不會出現在這些頁面上，只會顯示「審閱中」狀態）。
+    以下是對外頁面。{reviewOff ? "審閱關卡目前關閉，所有資源都會出現在這些頁面上。" : "未發佈的資源不會出現在這些頁面上，只會顯示「審閱中」狀態。"}
     上線前的清單見計劃文件第一版檢查表。
   </p>
   <ul>
@@ -233,9 +272,15 @@ const byTheme = themesInOrder(ZH)
   <p>
     在 Mattermost 告訴 Ada，例如「#8 可發佈」、「p1-p3-screen-free-ai-pe-games 英文版需修改：……」，
     並註明事實核實者姓名。兩個關卡通過後，中英文版會同時設為正式發佈。
+    {reviewOff ? "（審閱關卡目前關閉，資源已在線上；核實結果仍請記錄下來，以便日後補回。）" : ""}
   </p>
   <p class="muted">
     Reply in Mattermost with your sign-off (naming who did the fact-checking). Once both gates
     pass, the Chinese and English editions are published together at their public URLs.
+    {
+      reviewOff
+        ? " (The gate is off and the pages are already live — still record the sign-off, so the review can be closed out later.)"
+        : ""
+    }
   </p>
 </Base>

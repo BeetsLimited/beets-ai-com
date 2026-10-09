@@ -1,10 +1,14 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { alternateHrefFor, assertPairedEditions, findCounterpart } from "../src/lib/resources";
 
 /**
  * The language switch must never point at a page that does not exist. A resource
  * whose counterpart edition is still a draft has no public page in the other
  * language, so the switch falls back to that language's resource index.
+ *
+ * With the review gate off every edition is published, so a draft no longer
+ * blocks the cross-language link. Both modes are pinned here explicitly rather
+ * than inherited from the repo's current setting — see src/lib/review-gate.ts.
  */
 
 interface Stub {
@@ -29,7 +33,10 @@ describe("findCounterpart", () => {
   });
 });
 
-describe("alternateHrefFor", () => {
+describe("alternateHrefFor (review gate ON)", () => {
+  beforeEach(() => vi.stubEnv("REVIEW_REQUIRED", "true"));
+  afterEach(() => vi.unstubAllEnvs());
+
   it("links both published editions to each other", () => {
     const zh = entry("foo", false, "zh-HK");
     const en = entry("foo", false, "en");
@@ -44,6 +51,23 @@ describe("alternateHrefFor", () => {
   });
 
   it("falls back when there is no counterpart at all", () => {
+    const zh = entry("foo", false, "zh-HK");
+    expect(alternateHrefFor(zh, [zh])).toBe("/en/resources/");
+  });
+});
+
+describe("alternateHrefFor (review gate OFF — every edition is live)", () => {
+  beforeEach(() => vi.stubEnv("REVIEW_REQUIRED", "false"));
+  afterEach(() => vi.unstubAllEnvs());
+
+  it("links across even when the counterpart is still an unreviewed draft", () => {
+    const zh = entry("foo", false, "zh-HK");
+    const enDraft = entry("foo", true, "en");
+    expect(alternateHrefFor(zh, [zh, enDraft])).toBe("/en/resources/foo/");
+    expect(alternateHrefFor(enDraft, [zh, enDraft])).toBe("/resources/foo/");
+  });
+
+  it("still falls back when there is no counterpart", () => {
     const zh = entry("foo", false, "zh-HK");
     expect(alternateHrefFor(zh, [zh])).toBe("/en/resources/");
   });

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { isPublished } from "../lib/review-gate";
 import {
   resourcesPath,
   t,
@@ -19,7 +20,7 @@ const { lang } = Astro.props;
 const resources = (
   await getCollection(
     "content",
-    ({ data }) => !data.draft && data.type === "resource" && data.lang === lang,
+    ({ data }) => isPublished(data) && data.type === "resource" && data.lang === lang,
   )
 ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 

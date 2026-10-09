@@ -1,4 +1,13 @@
 import { THEMES, type Theme } from "./schema";
+import { reviewRequired } from "./review-gate";
+
+/**
+ * The review gate is temporarily off (Billy, 2026-10-10), so resources go live
+ * before fact-check and educator review. The strings below that assert EVERY
+ * resource is educator-reviewed would then be false on a public page, so they
+ * are written to hold either way. See `src/lib/review-gate.ts`.
+ */
+const REVIEW_ON = reviewRequired();
 
 /**
  * Single-language i18n for beets-ai.com.
@@ -51,18 +60,21 @@ const ZH_HK = {
   langGroup: "語言",
   switchAria: "切換至英文版",
 
-  footerDisclaimer:
-    "獨立資源計劃，並非 EDB 官方文件。資源經教育工作者審閱、核實來源，並自動檢查連結。",
+  footerDisclaimer: REVIEW_ON
+    ? "獨立資源計劃，並非 EDB 官方文件。資源經教育工作者審閱、核實來源，並自動檢查連結。"
+    : "獨立資源計劃，並非 EDB 官方文件。資源已核實來源並自動檢查連結；部分資源尚待教育工作者審閱。",
   footerTerms: "使用條款及私隱",
   footerFeedback: "意見及建議",
 
   homeTitle: "香港免費 AI 教育資源",
-  homeDescription:
-    "香港免費 AI 教育資源：教師、家長及學生都可下載經審閱的工作紙、教案及校本規劃範例，附答案、來源與審閱記錄。",
+  homeDescription: REVIEW_ON
+    ? "香港免費 AI 教育資源：教師、家長及學生都可下載經審閱的工作紙、教案及校本規劃範例，附答案、來源與審閱記錄。"
+    : "香港免費 AI 教育資源：教師、家長及學生都可下載工作紙、教案及校本規劃範例，附答案及來源，全部免費。",
   homeLede:
     "BEETS AI 是 Beets Limited 為香港教師、家長和學生設立的免費 AI 教育資源庫。我們相信學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術，所以我們把教師真正需要的教案、工作紙和校本規劃範例，做成下載即可使用的教材——全部免費，下載不需註冊。",
-  homeIntro2:
-    "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件、審閱人與版本，並說明它為你解決什麼問題。",
+  homeIntro2: REVIEW_ON
+    ? "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件、審閱人與版本，並說明它為你解決什麼問題。"
+    : "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件與版本，並說明它為你解決什麼問題。",
   homeEyebrow: "教師、家長、學生都合用 · 下載不需註冊",
   topbarPrefix: "免費資源持續上線：",
   topbarSuffix: "份已可下載，全部免費、免註冊。",
@@ -83,10 +95,12 @@ const ZH_HK = {
   homeFeedbackCta: "提出資源需求",
 
   resourcesTitle: "免費資源",
-  resourcesDescription:
-    "免費下載經教育工作者審閱的香港 AI 教學資源，按主題、學科和級別分類。",
-  resourcesLede:
-    "按主題、學科和級別，免費下載可編輯的工作紙、教案及校本規劃範例。全部資源經教育工作者審閱。",
+  resourcesDescription: REVIEW_ON
+    ? "免費下載經教育工作者審閱的香港 AI 教學資源，按主題、學科和級別分類。"
+    : "免費下載香港 AI 教學資源，按主題、學科和級別分類。",
+  resourcesLede: REVIEW_ON
+    ? "按主題、學科和級別，免費下載可編輯的工作紙、教案及校本規劃範例。全部資源經教育工作者審閱。"
+    : "按主題、學科和級別，免費下載可編輯的工作紙、教案及校本規劃範例。資源持續增加，部分尚待教育工作者審閱。",
   resourcesEmpty: "資源陸續上線，請稍後再來。首批資源正在審閱中。",
   resourcesThemesHeading: "按主題瀏覽",
 
@@ -136,18 +150,21 @@ const EN: Record<UIKey, string> = {
   langGroup: "Language",
   switchAria: "Switch to the Traditional Chinese version",
 
-  footerDisclaimer:
-    "An independent resource initiative — not an official EDB publication. Materials are educator-reviewed, fact-checked and link-checked.",
+  footerDisclaimer: REVIEW_ON
+    ? "An independent resource initiative — not an official EDB publication. Materials are educator-reviewed, fact-checked and link-checked."
+    : "An independent resource initiative — not an official EDB publication. Materials are fact-checked and link-checked; some have not yet been educator-reviewed.",
   footerTerms: "Reuse and privacy",
   footerFeedback: "Feedback and requests",
 
   homeTitle: "Free AI education resources for Hong Kong",
-  homeDescription:
-    "Free AI education resources for Hong Kong: teachers, parents and students can download reviewed worksheets, lesson plans and school-planning examples, with answer keys, sources and a review record.",
+  homeDescription: REVIEW_ON
+    ? "Free AI education resources for Hong Kong: teachers, parents and students can download reviewed worksheets, lesson plans and school-planning examples, with answer keys, sources and a review record."
+    : "Free AI education resources for Hong Kong: teachers, parents and students can download worksheets, lesson plans and school-planning examples, with answer keys and sources.",
   homeLede:
     "BEETS AI is a free library of AI education resources that Beets Limited builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",
-  homeIntro2:
-    "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on, the person who reviewed it and its version, and says what problem it solves.",
+  homeIntro2: REVIEW_ON
+    ? "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on, the person who reviewed it and its version, and says what problem it solves."
+    : "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on and its version, and says what problem it solves.",
   homeEyebrow: "For teachers, parents and students · no registration to download",
   topbarPrefix: "Free resources are going live:",
   topbarSuffix: "ready to download — free, no registration.",
@@ -171,10 +188,12 @@ const EN: Record<UIKey, string> = {
   homeFeedbackCta: "Request a resource",
 
   resourcesTitle: "Free resources",
-  resourcesDescription:
-    "Free, educator-reviewed Hong Kong AI teaching resources, organised by theme, subject and learning stage.",
-  resourcesLede:
-    "Download editable worksheets, lesson plans and school-planning examples by theme, subject and stage. Every resource is educator-reviewed.",
+  resourcesDescription: REVIEW_ON
+    ? "Free, educator-reviewed Hong Kong AI teaching resources, organised by theme, subject and learning stage."
+    : "Free Hong Kong AI teaching resources, organised by theme, subject and learning stage.",
+  resourcesLede: REVIEW_ON
+    ? "Download editable worksheets, lesson plans and school-planning examples by theme, subject and stage. Every resource is educator-reviewed."
+    : "Download editable worksheets, lesson plans and school-planning examples by theme, subject and stage. More are added regularly; some have not yet been educator-reviewed.",
   resourcesEmpty: "Resources are being published — the first batch is in review.",
   resourcesThemesHeading: "Browse by theme",
 

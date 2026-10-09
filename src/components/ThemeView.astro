@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { isPublished } from "../lib/review-gate";
 import {
   feedbackPath,
   resourceIndexPath,
@@ -29,7 +30,7 @@ const { lang, theme } = Astro.props;
 const published = newestFirst(
   await getCollection(
     "content",
-    ({ data }) => !data.draft && data.type === "resource" && data.lang === lang,
+    ({ data }) => isPublished(data) && data.type === "resource" && data.lang === lang,
   ),
 );
 

@@ -164,6 +164,12 @@ describe("English content is English", () => {
 });
 
 describe("published content", () => {
+  /**
+   * Content-level contract: an entry that declares itself published must carry
+   * its attestations. Note this keys on the frontmatter, not on what the site
+   * publishes — while the review gate is off (`src/lib/review-gate.ts`) the
+   * build also publishes drafts, and those deliberately have no reviewer.
+   */
   const published = entries.filter((entry) => entry.fm.draft === "false");
 
   it("has at least one published resource once publishing has started", () => {

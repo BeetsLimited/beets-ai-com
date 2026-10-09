@@ -2,8 +2,7 @@
 
 > A free library of AI teaching resources for Hong Kong primary and secondary
 > schools, published by Beets Limited (https://beets3d.com). Every item names the
-> official EDB source document it is built on, the educator who reviewed it, and
-> its version. No sign-up, no paywall.
+> official EDB source document it is built on and its version. No sign-up, no paywall.
 
 Traditional Chinese ("zh-HK") is the primary edition at the site root; English is
 under /en/. Both editions of an item share one address.
@@ -18,23 +17,32 @@ from the sitemap and set to noindex; do not quote it.
 ## Full inventory (both editions)
 
 
+### 校園植物：先觀察，再核對 AI 的說法
+- URL: https://beets-ai.com/resources/campus-plant-truth-check/
+- Language: zh-HK
+- Description: 學生先在操場或窗邊親眼觀察一株植物並填寫紀錄表，再核對 AI 的辨識說法：找出說得對、說得錯、以及照片太模糊無從判斷的情況。
+- Stage: P4-P6
+- Subject: 科學
+- Theme: D (用 AI 探究香港)
+- Version: 0.1
+- Sources: E, p.7
+
+### Campus plants: observe first, then check what the AI says
+- URL: https://beets-ai.com/en/resources/campus-plant-truth-check/
+- Language: en
+- Description: Students first observe a plant with their own eyes in the playground or from a window and record its features, then check what an AI says about a plant photo: which answer is right, which is wrong, and which photo is too unclear to decide.
+- Stage: P4-P6
+- Subject: Science
+- Theme: D (用 AI 探究香港)
+- Version: 0.1
+- Sources: E, p.7
+
 ### 深偽應對遊戲：暫停、核實、舉報（S1–S3）
 - URL: https://beets-ai.com/resources/deepfake-response-game/
 - Language: zh-HK
 - Description: 初中課室遊戲：學生收到一則虛構的「學校」訊息，用「暫停、核實、舉報」決策卡排序應對步驟，並從解說中了解深偽訊息為何令人信服。
 - Stage: S1-S3
 - Subject: 人文
-- Theme: B (安全及負責任使用 AI)
-- Reviewed by: Billy Kan
-- Version: 0.1
-- Sources: E, p.14
-
-### Deepfake response game: pause, check, report (S1-S3)
-- URL: https://beets-ai.com/en/resources/deepfake-response-game/
-- Language: en
-- Description: A classroom game in which pupils receive a fictional 'school' message, sort the pause–check–report decision cards, and learn from the teacher's debrief why a fake can sound convincing.
-- Stage: S1-S3
-- Subject: Humanities
 - Theme: B (安全及負責任使用 AI)
 - Reviewed by: Billy Kan
 - Version: 0.1
@@ -73,16 +81,85 @@ from the sitemap and set to noindex; do not quote it.
 - Version: 0.1
 - Sources: B, p.1; F, p.1-8
 
-### Family AI homework guide: three activities, one agreement, one parent notice
-- URL: https://beets-ai.com/en/resources/family-ai-homework-guide/
+### Your first AI lesson: a self-guided kit for P4-P6 teachers who have never taught with AI
+- URL: https://beets-ai.com/en/resources/first-ai-lesson-kit/
 - Language: en
-- Description: A guide families can use at home with no teacher present: three 15-20 minute parent-and-child activities, a family homework agreement, and a parent notice a school can edit and send home.
-- Stage: P1-P6
-- Subject: Pastoral and parents
-- Theme: B (安全及負責任使用 AI)
-- Reviewed by: Billy Kan
+- Description: A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone.
+- Stage: P4-P6
+- Subject: Cross-curricular
+- Theme: E (共融 AI 課堂)
 - Version: 0.1
-- Sources: B, p.1; F, p.1-8
+- Sources: G, p.2-3; G, pp.2-5 and 2-7
+
+### 第一堂 AI 課：從未用過 AI 的 P4–P6 教師自學套件
+- URL: https://beets-ai.com/resources/first-ai-lesson-kit/
+- Language: zh-HK
+- Description: 一份自學套件：一個 40 分鐘的 P4–P6 人文科示範課堂、課前準備清單、投影片逐頁大綱、學生工作紙與課後反思三問，讓從未用過 AI 的教師也能獨自上完第一堂 AI 課。
+- Stage: P4-P6
+- Subject: 全科/跨科
+- Theme: E (共融 AI 課堂)
+- Version: 0.1
+- Sources: G, p.2-3; G, pp.2-5 and 2-7
+
+### Hong Kong then and now: a local history project with an alternative to a family interview
+- URL: https://beets-ai.com/en/resources/hk-then-and-now-project/
+- Language: en
+- Description: A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, a worked source check and a three-level rubric, so every pupil can complete it.
+- Stage: P4-P6
+- Subject: Humanities
+- Theme: D (用 AI 探究香港)
+- Version: 0.1
+- Sources: E, p.8
+
+### 香港今昔：本地歷史專題（不需訪談家人的替代方案）
+- URL: https://beets-ai.com/resources/hk-then-and-now-project/
+- Language: zh-HK
+- Description: P4-P6 人文科「香港今昔」專題：提供訪談提示、不需訪談家人的公開資料路徑、一次來源核對示例與三級評分表，讓每位學生都能完成。
+- Stage: P4-P6
+- Subject: 人文
+- Theme: D (用 AI 探究香港)
+- Version: 0.1
+- Sources: E, p.8
+
+### Homework redesign kit: two before-and-after assignments that show student thinking
+- URL: https://beets-ai.com/en/resources/homework-redesign-kit/
+- Language: en
+- Description: Two complete before-and-after assignments (a Chinese Language reading response and a General Studies data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required.
+- Stage: P4-P6
+- Subject: Cross-curricular
+- Theme: C (看見學生思考)
+- Version: 0.1
+- Sources: F, p.1-13; G, pp.2-7 to 2-8
+
+### 功課重設計套件：兩份前後對照的課業範例
+- URL: https://beets-ai.com/resources/homework-redesign-kit/
+- Language: zh-HK
+- Description: 兩份完整的前後對照課業範例（中文閱讀回應與常識資料整理）加一份功課重設計檢查清單，示範在保留學習目標與作答時間之餘，讓學生的思考歷程看得見。
+- Stage: P4-P6
+- Subject: 全科/跨科
+- Theme: C (看見學生思考)
+- Version: 0.1
+- Sources: F, p.1-13; G, pp.2-7 to 2-8
+
+### One Humanities worksheet, three versions: standard, scaffolded and visual
+- URL: https://beets-ai.com/en/resources/humanities-worksheet-three-versions/
+- Language: en
+- Description: A single P4-P6 Humanities worksheet in three versions — standard, scaffolded and visual — with notes explaining the changes and a comparison table.
+- Stage: P4-P6
+- Subject: Humanities
+- Theme: E (共融 AI 課堂)
+- Version: 0.1
+- Sources: G, pp.2-5 and 2-7
+
+### 同一份人文科工作紙，三個版本：標準、扶助、圖像（P4–P6）
+- URL: https://beets-ai.com/resources/humanities-worksheet-three-versions/
+- Language: zh-HK
+- Description: 一份同一主題的 P4–P6 人文科工作紙，示範標準、扶助、圖像三個版本的差異，並附各版本的改動說明與比較表。
+- Stage: P4-P6
+- Subject: 人文
+- Theme: E (共融 AI 課堂)
+- Version: 0.1
+- Sources: G, pp.2-5 and 2-7
 
 ### One-term AI education plan: editable planning template with a completed school example
 - URL: https://beets-ai.com/en/resources/one-term-ai-education-plan/
@@ -106,16 +183,25 @@ from the sitemap and set to noindex; do not quote it.
 - Version: 0.1
 - Sources: B, p.2; F, pp.1-6 to 1-10
 
-### One-term AI education plan: editable planning template with a completed school example
-- URL: https://beets-ai.com/en/resources/one-term-ai-education-plan/
+### P4 Hong Kong population line graph: check an AI explanation
+- URL: https://beets-ai.com/en/resources/p4-hk-population-ai-graph-check/
 - Language: en
-- Description: An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy.
-- Stage: P1-S3
-- Subject: School planning
-- Theme: A (校本 AI 教育規劃)
-- Reviewed by: Billy Kan
+- Description: Students check an AI-generated explanation of Hong Kong's population: find the figures with no source, discover that the claim that the population 'rises every year' is wrong, and redraw the correct line graph using official Census and Statistics Department data.
+- Stage: P4
+- Subject: Mathematics
+- Theme: D (用 AI 探究香港)
 - Version: 0.1
-- Sources: B, p.2; F, pp.1-6 to 1-10
+- Sources: E, p.6
+
+### P4 香港人口折線圖：檢查 AI 生成的解釋
+- URL: https://beets-ai.com/resources/p4-hk-population-ai-graph-check/
+- Language: zh-HK
+- Description: 學生核對一段 AI 生成的香港人口解釋：找出沒有來源的數字、發現「每年都上升」的說法有誤，並用政府統計處的官方數據重畫正確的折線圖。
+- Stage: P4
+- Subject: 數學
+- Theme: D (用 AI 探究香港)
+- Version: 0.1
+- Sources: E, p.6
 
 ### P4-P6 curriculum gap map: where AI literacy already fits your subjects
 - URL: https://beets-ai.com/en/resources/p4-p6-curriculum-gap-map/
@@ -134,17 +220,6 @@ from the sitemap and set to noindex; do not quote it.
 - Description: 一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科目與學期記錄現有活動、標出缺口並寫下最小的下一步，附三個完成的虛構學校示例，供校長及科主任在課程會議中直接使用。
 - Stage: P4-P6
 - Subject: 校本規劃
-- Theme: A (校本 AI 教育規劃)
-- Reviewed by: Billy Kan
-- Version: 0.1
-- Sources: F, pp.1-6 to 1-10; B, p.2
-
-### P4-P6 curriculum gap map: where AI literacy already fits your subjects
-- URL: https://beets-ai.com/en/resources/p4-p6-curriculum-gap-map/
-- Language: en
-- Description: An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting.
-- Stage: P4-P6
-- Subject: School planning
 - Theme: A (校本 AI 教育規劃)
 - Reviewed by: Billy Kan
 - Version: 0.1
@@ -172,13 +247,62 @@ from the sitemap and set to noindex; do not quote it.
 - Version: 0.1
 - Sources: G, pp.2-4 and 2-9
 
-### Safe-to-upload rehearsal: find and remove pupil information before using AI
-- URL: https://beets-ai.com/en/resources/safe-to-upload-ai-rehearsal/
+### P1-P3 PE: two screen-free AI games (no devices needed)
+- URL: https://beets-ai.com/en/resources/screen-free-ai-pe-games-p1-p3/
 - Language: en
-- Description: A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps.
+- Description: Two screen-free movement games: pupils run to a labelled cone to sort everyday items into 'uses AI / does not use AI', then the whole class acts as training data to see how one wrong example skews the model. Includes an equipment list, teacher instructions, inclusion notes and a two-minute understanding check.
+- Stage: P1-P3
+- Subject: PE
+- Theme: E (共融 AI 課堂)
+- Version: 0.1
+- Sources: E, p.4; F, p.1-8
+
+### P1–P3 體育：兩個不插電 AI 遊戲（無需裝置）
+- URL: https://beets-ai.com/resources/screen-free-ai-pe-games-p1-p3/
+- Language: zh-HK
+- Description: 兩個不插電運動遊戲：學生跑向「用 AI／不用 AI」標記筒學習分類，再以全班當「訓練數據」，看一個錯誤例子如何令模型學錯。附器材清單、教師指引、共融調適與兩分鐘理解檢查。
+- Stage: P1-P3
+- Subject: 體育
+- Theme: E (共融 AI 課堂)
+- Version: 0.1
+- Sources: E, p.4; F, p.1-8
+
+### Student AI-use process sheet: first attempt, prompt, check, revise
+- URL: https://beets-ai.com/en/resources/student-ai-use-process-sheet/
+- Language: en
+- Description: A reusable process sheet that records a student's first attempt, the AI prompt, the checking results, revisions, and final explanation, so teachers can see the student's thinking without having to search through the entire conversation log.
 - Stage: P4-P6
 - Subject: Cross-curricular
-- Theme: B (安全及負責任使用 AI)
-- Reviewed by: Billy Kan
+- Theme: C (看見學生思考)
 - Version: 0.1
-- Sources: G, pp.2-4 and 2-9
+- Sources: F, p.1-13; G, p.2-8
+
+### 學生 AI 使用歷程表：第一次嘗試、提示、核對、修訂
+- URL: https://beets-ai.com/resources/student-ai-use-process-sheet/
+- Language: zh-HK
+- Description: 一張可重用的歷程表，記錄學生第一次嘗試、AI 提示、核對結果、修訂與最後解釋，讓教師看得見學生的思考，而不必翻查整個對話紀錄。
+- Stage: P4-P6
+- Subject: 全科/跨科
+- Theme: C (看見學生思考)
+- Version: 0.1
+- Sources: F, p.1-13; G, p.2-8
+
+### Ten-minute AI judgement checks: three quick formative tasks for P4-P6
+- URL: https://beets-ai.com/en/resources/ten-minute-ai-judgement-checks/
+- Language: en
+- Description: Three short formative tasks (about ten minutes each): judge whether an AI answer is trustworthy, spot the part of a classmate's answer the writer can actually defend, and list what still needs checking before handing work in. With scoring guidance and follow-up activities.
+- Stage: P4-P6
+- Subject: Cross-curricular
+- Theme: C (看見學生思考)
+- Version: 0.1
+- Sources: F, p.1-13; G, pp.2-7 to 2-8
+
+### 十分鐘 AI 判斷小測：三個 P4–P6 形成性評估任務
+- URL: https://beets-ai.com/resources/ten-minute-ai-judgement-checks/
+- Language: zh-HK
+- Description: 三個各約十分鐘的形成性小任務：判斷 AI 答案是否可信、找出同學答案中自己能辯護的部分、列出交功課前要檢查的事項。附評分指引與後續活動。
+- Stage: P4-P6
+- Subject: 全科/跨科
+- Theme: C (看見學生思考)
+- Version: 0.1
+- Sources: F, p.1-13; G, pp.2-7 to 2-8

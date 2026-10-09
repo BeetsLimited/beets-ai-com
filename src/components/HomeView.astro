@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { isPublished, reviewRequired } from "../lib/review-gate";
 import {
   browsePath,
   feedbackPath,
@@ -34,10 +35,12 @@ const all = await getCollection("content");
 // build, not quietly halve the library.
 assertPairedEditions(all, "home");
 
-const published = newestFirst(all.filter(({ data }) => !data.draft && data.lang === lang));
+const published = newestFirst(all.filter(({ data }) => isPublished(data) && data.lang === lang));
 const themes = themesInOrder(lang);
 const newest = published.slice(0, 6);
 const isZh = lang === "zh-HK";
+/** Review gate off → a card must not promise a review record it has not got. */
+const reviewOff = !reviewRequired();
 
 /** The three audiences, each sent somewhere that actually helps them. */
 const audiences = [
@@ -45,8 +48,12 @@ const audiences = [
     key: "teachers",
     title: isZh ? "教師" : "Teachers",
     body: isZh
-      ? "備課用得着的教案、工作紙和校本規劃範例，附答案、來源與審閱記錄。"
-      : "Lesson plans, worksheets and school-planning examples, with answer keys, sources and a review record.",
+      ? reviewOff
+        ? "備課用得着的教案、工作紙和校本規劃範例，附答案及來源。"
+        : "備課用得着的教案、工作紙和校本規劃範例，附答案、來源與審閱記錄。"
+      : reviewOff
+        ? "Lesson plans, worksheets and school-planning examples, with answer keys and sources."
+        : "Lesson plans, worksheets and school-planning examples, with answer keys, sources and a review record.",
     href: resourceIndexPath(lang),
     link: isZh ? "瀏覽免費資源" : "Browse the free resources",
   },

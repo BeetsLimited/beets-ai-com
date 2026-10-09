@@ -3,13 +3,19 @@ import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import ResourceView from "../../components/ResourceView.astro";
 import { DEFAULT_LOCALE } from "../../lib/i18n";
+import { reviewRequired } from "../../lib/review-gate";
 
 const lang = DEFAULT_LOCALE;
 
 // Traditional Chinese drafts, rendered at the same address structure as the
 // review hub. Both editions share the slug, so the language filter is what
 // keeps /review/<slug>/ and /review/en/<slug>/ apart.
+//
+// While the review gate is off there is nothing to mirror — an unreviewed draft
+// is published at its public URL like any other resource — so no review page is
+// built. See src/lib/review-gate.ts.
 export async function getStaticPaths() {
+  if (!reviewRequired()) return [];
   const drafts = await getCollection(
     "content",
     ({ data }) => data.draft && data.lang === DEFAULT_LOCALE,

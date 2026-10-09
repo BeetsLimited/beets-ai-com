@@ -1,4 +1,5 @@
 import { resourceIndexPath, resourcesPath, type Locale } from "./i18n";
+import { isPublished } from "./review-gate";
 import { THEMES, type Theme } from "./schema";
 
 /**
@@ -45,7 +46,10 @@ function otherLocaleOf(entry: LocalizedEntry): Locale {
 export function alternateHrefFor<T extends LocalizedEntry>(entry: T, all: T[]): string {
   const target = otherLocaleOf(entry);
   const counterpart = findCounterpart(entry, all);
-  if (!counterpart || counterpart.data.draft !== entry.data.draft) {
+  // Reachable in the other language only while the two editions share a publish
+  // state. With the review gate off every edition is published, so a resource
+  // that is still an unreviewed draft links across like any other.
+  if (!counterpart || isPublished(counterpart.data) !== isPublished(entry.data)) {
     return resourceIndexPath(target);
   }
   return resourcesPath(target, entry.data.address);

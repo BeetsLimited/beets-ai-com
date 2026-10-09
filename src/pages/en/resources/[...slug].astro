@@ -4,6 +4,7 @@ import Base from "../../../layouts/Base.astro";
 import ResourceView from "../../../components/ResourceView.astro";
 import { SECONDARY_LOCALE, localizePath, resourceIndexPath, t } from "../../../lib/i18n";
 import { alternateHrefFor, relatedTo } from "../../../lib/resources";
+import { isPublished } from "../../../lib/review-gate";
 import { breadcrumbLd, learningResourceLd } from "../../../lib/seo";
 
 const lang = SECONDARY_LOCALE;
@@ -11,7 +12,7 @@ const lang = SECONDARY_LOCALE;
 export async function getStaticPaths() {
   const all = await getCollection("content");
   return all
-    .filter((entry) => !entry.data.draft && entry.data.lang === SECONDARY_LOCALE)
+    .filter((entry) => isPublished(entry.data) && entry.data.lang === SECONDARY_LOCALE)
     .map((entry) => ({
       params: { slug: entry.data.address },
       props: {

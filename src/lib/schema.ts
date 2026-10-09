@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { reviewRequired } from "./review-gate";
 
 /** The five navigation themes (EXCO-714 content plan). */
 export const THEMES = ["A", "B", "C", "D", "E"] as const;
@@ -36,7 +37,7 @@ const fields = {
   prepTime: z.string().optional(),
   equipment: z.string().optional(),
   author: z.string().min(1),
-  /** Named educator who checked the content. Required for type: resource. */
+  /** Named educator who checked the content. Required for a published resource. */
   reviewer: z.string().min(1).optional(),
   version: z.string().default("1.0"),
   date: z.coerce.date(),
@@ -54,7 +55,7 @@ const fields = {
    */
   imageAlt: z.string().optional(),
   feedback: z.boolean().default(false),
-  /** Unreviewed scaffolding. Drafts must never be published. */
+  /** Unreviewed scaffolding. Excluded from public routes while the gate is on. */
   draft: z.boolean().default(false),
 
   // ── fact-check gate ───────────────────────────────────────────────────────
@@ -69,29 +70,41 @@ const fields = {
 /**
  * Frontmatter contract for BEETS AI content.
  *
- * Two gates are enforced here, both at publish time only (drafts are exempt):
+ * `reviewRequired` selects whether the two human gates below are enforced:
  *
  * 1. **Fact-check gate** — published content must be verified by a named
  *    person. No post goes live on unchecked claims.
  * 2. **Educator review gate** — a published `resource` must name the educator
  *    who reviewed its learning aim, age fit and usability.
  *
- * AI drafts; a person verifies facts and an educator approves before
- * publication. Broken links are a separate gate, enforced in CI by
- * `npm run check:links` against the built site.
+ * While the gate is on, AI drafts, a person verifies facts and an educator
+ * approves before publication. While it is off (see `./review-gate.ts`, Billy
+ * 2026-10-10) both gates are skipped and content publishes as authored — the
+ * fields stay optional so nothing false has to be recorded to publish.
+ *
+ * Broken links are a separate gate, enforced in CI by `npm run check:links`
+ * against the built site.
  */
-export const resourceSchema = z
-  .object(fields)
-  .refine((value) => value.draft || (value.factChecked && Boolean(value.factCheckedBy)), {
-    message:
-      "fact-check gate: published content must be fact-checked by a named person " +
-      "(set factChecked: true and factCheckedBy) — or set draft: true",
-    path: ["factChecked"],
-  })
-  .refine((value) => value.draft || value.type !== "resource" || Boolean(value.reviewer), {
-    message:
-      "educator review gate: a published resource requires a named reviewer (or set draft: true)",
-    path: ["reviewer"],
-  });
+export function createResourceSchema(reviewRequiredFlag: boolean) {
+  return z
+    .object(fields)
+    .refine((value) => !reviewRequiredFlag || value.draft || (value.factChecked && Boolean(value.factCheckedBy)), {
+      message:
+        "fact-check gate: published content must be fact-checked by a named person " +
+        "(set factChecked: true and factCheckedBy) — or set draft: true",
+      path: ["factChecked"],
+    })
+    .refine((value) => !reviewRequiredFlag || value.draft || value.type !== "resource" || Boolean(value.reviewer), {
+      message:
+        "educator review gate: a published resource requires a named reviewer (or set draft: true)",
+      path: ["reviewer"],
+    });
+}
+
+/**
+ * The schema the content collection is actually built with — the review gate's
+ * current state decides whether the human gates apply. See `./review-gate.ts`.
+ */
+export const resourceSchema = createResourceSchema(reviewRequired());
 
 export type Resource = z.infer<typeof resourceSchema>;
