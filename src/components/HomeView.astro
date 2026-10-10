@@ -30,6 +30,11 @@ import { assertPairedEditions, newestFirst } from "../lib/resources";
  * headings are labelling text, not links — the button is the single, obvious
  * place to click (Billy, 2026-10-10). Resource cards reuse the resource's own
  * hero so the home page and the resource page show the same picture.
+ *
+ * Sections are separated by a thin dark-grey rule, not by a small eyebrow label,
+ * and every card shares one box style — a 4px corporate-colour rule across the
+ * top. "Newest resources" puts its 更多資源 button beside the heading rather
+ * than under the grid (Billy, 2026-10-10).
  */
 interface Props {
   lang: Locale;
@@ -120,8 +125,9 @@ const audiences = [
   </div>
 </section>
 
+<hr class="section-rule" />
+
 <section class="audiences">
-  <p class="eyebrow blue">{t(lang, "homeAudienceEyebrow")}</p>
   <h2>{t(lang, "homeAudienceHeading")}</h2>
   <ul class="grid aud-grid">
     {
@@ -149,8 +155,9 @@ const audiences = [
   </ul>
 </section>
 
+<hr class="section-rule" />
+
 <section class="themes">
-  <p class="eyebrow grey">{t(lang, "homeThemesEyebrow")}</p>
   <h2>{t(lang, "homeThemesHeading")}</h2>
   <p class="lede">{t(lang, "homeThemesLede")}</p>
   <ul class="grid theme-grid">
@@ -182,9 +189,13 @@ const audiences = [
   </ul>
 </section>
 
+<hr class="section-rule" />
+
 <section class="newest">
-  <p class="eyebrow grey">{t(lang, "homeNewestEyebrow")}</p>
-  <h2>{t(lang, "homeNewestHeading")}</h2>
+  <div class="section-head">
+    <h2>{t(lang, "homeNewestHeading")}</h2>
+    <a class="btn card-cta" href={resourceIndexPath(lang)}>{t(lang, "homeMoreResourcesCta")}</a>
+  </div>
   {
     newest.length === 0 ? (
       <div class="panel">
@@ -224,9 +235,6 @@ const audiences = [
           </li>
         ))}
       </ul>
-      <div class="btn-row">
-        <a class="btn" href={resourceIndexPath(lang)}>{t(lang, "homeMoreResourcesCta")}</a>
-      </div>
     )
   }
 </section>
@@ -272,16 +280,39 @@ const audiences = [
   .newest-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  /* The three section headings that carry the corporate colour. */
+  /* The three section headings that carry the corporate colour. The rule above
+     each one is what separates the sections now the eyebrow labels are gone, so
+     the heading does not add a large top margin of its own on top of it. */
   .audiences h2,
   .themes h2,
   .newest h2 {
     color: var(--corporate);
+    margin-top: 1.5rem;
+  }
+  .section-rule {
+    border: 0;
+    border-top: 1px solid var(--divider);
+    margin: 2.4rem 0 0;
+  }
+  /* A heading with its CTA on the same line: 最新資源 + 更多資源. */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  .section-head h2 {
+    margin: 0;
   }
   .aud-grid li,
   .theme-grid li,
   .newest-grid li {
     border: 1px solid var(--line);
+    /* One box style for every card: a 4px corporate-colour rule across the top.
+       This replaced the per-audience red / blue / grey rules. */
+    border-top: 4px solid var(--corporate);
     border-radius: var(--radius);
     padding: 1.3rem 1.4rem;
     background: var(--bg);
@@ -313,16 +344,6 @@ const audiences = [
     margin: 0 0 0.75rem;
     color: #333;
     font-size: 0.95rem;
-  }
-  /* A coloured rule per audience, using the two brand colours. */
-  .aud-grid li {
-    border-top: 4px solid var(--surface-2);
-  }
-  .aud-teachers {
-    border-top-color: var(--accent) !important;
-  }
-  .aud-parents {
-    border-top-color: var(--blue) !important;
   }
   .theme-card .badge {
     display: inline-flex;
