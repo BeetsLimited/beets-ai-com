@@ -8,8 +8,11 @@ import {
   localizePath,
   resourceIndexPath,
   t,
+  themeLabel,
+  themePath,
   type Locale,
 } from "../lib/i18n";
+import { THEMES } from "../lib/schema";
 import { organizationLd, socialMeta, webSiteLd } from "../lib/seo";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
 import { getCollection } from "astro:content";
@@ -186,6 +189,31 @@ const liveResources = (
         <div class="headright">
           <nav aria-label="BEETS AI">
             <a href={resourceIndexPath(lang)}>{t(lang, "navResources")}</a>
+            {/* The five theme pages live in one menu. Their labels are long — the
+                longest is ten characters — so five of them in the row beside the
+                brand and the language switch would not fit on a desktop and would
+                wrap to three lines on a phone. The trigger is a real link to the
+                themes overview rather than a button that does nothing without
+                JavaScript; the menu opens on hover and on keyboard focus, and the
+                footer lists the same five links so nothing is hover-only. */}
+            <div class="nav-group">
+              <a class="nav-trigger" href={`${resourceIndexPath(lang)}#themes`}>
+                {t(lang, "navThemes")}
+                <span class="nav-chevron" aria-hidden="true">▾</span>
+              </a>
+              <ul class="nav-menu">
+                {THEMES.map((theme) => (
+                  <li>
+                    <a
+                      href={themePath(lang, theme)}
+                      aria-current={Astro.url.pathname === themePath(lang, theme) ? "page" : undefined}
+                    >
+                      {themeLabel(lang, theme)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <a href={localizePath("/about/", lang)}>{t(lang, "navAbout")}</a>
           </nav>
           {
@@ -206,6 +234,15 @@ const liveResources = (
     <footer class="site">
       <div class="wrap">
         <p>{t(lang, "footerDisclaimer")}</p>
+        <p class="muted footer-themes">
+          {t(lang, "navThemes")} ·{" "}
+          {THEMES.map((theme, index) => (
+            <>
+              {index > 0 ? " · " : ""}
+              <a href={themePath(lang, theme)}>{themeLabel(lang, theme)}</a>
+            </>
+          ))}
+        </p>
         <p class="muted">
           © Beets Limited · <a href={localizePath("/about/", lang)}>{t(lang, "footerTerms")}</a> ·{" "}
           <a href={feedbackPath(lang)}>{t(lang, "footerFeedback")}</a> ·{" "}
@@ -343,6 +380,56 @@ const liveResources = (
         color: var(--accent);
         text-decoration: underline;
         text-underline-offset: 4px;
+      }
+      .nav-group {
+        position: relative;
+        display: inline-block;
+      }
+      .nav-chevron {
+        font-size: 0.7em;
+        margin-left: 0.15em;
+      }
+      /* Opens on hover, and on focus-within so the keyboard reaches the five
+         links by tabbing. The box starts a little above the trigger so that
+         moving the pointer down from the link never crosses a gap and closes it. */
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% - 0.35rem);
+        left: 0;
+        z-index: 30;
+        list-style: none;
+        margin: 0;
+        padding: 0.35rem 0;
+        min-width: 13rem;
+        max-width: min(22rem, calc(100vw - 2rem));
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        text-align: left;
+      }
+      .nav-group:hover .nav-menu,
+      .nav-group:focus-within .nav-menu {
+        display: block;
+      }
+      .nav-menu a {
+        display: block;
+        margin-left: 0;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .nav-menu a:hover,
+      .nav-menu a:focus-visible {
+        background: var(--accent-tint);
+        text-decoration: none;
+      }
+      .nav-menu a[aria-current="page"] {
+        color: var(--accent);
+      }
+      .footer-themes {
+        margin-top: 0.6rem;
       }
 
       /* ── Typography ───────────────────────────────────────────────────── */

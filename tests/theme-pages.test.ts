@@ -102,8 +102,15 @@ describe("theme page copy", () => {
 });
 
 describe("themePageCopy", () => {
-  it("returns undefined for a theme with no copy yet", () => {
-    expect(themePageCopy("zh-HK", "C")).toBeUndefined();
+  it("has copy for every theme, in every language the site publishes", () => {
+    // The map stays PARTIAL and the view still degrades gracefully, but as of
+    // 2026-10-10 all five themes are written. A sixth theme must arrive with its
+    // copy, or this fails and says so.
+    for (const locale of LOCALES) {
+      for (const theme of THEMES) {
+        expect(themePageCopy(locale, theme), `${locale}/${theme}`).toBeDefined();
+      }
+    }
   });
 
   it("returns the copy for a theme that has it, per language", () => {

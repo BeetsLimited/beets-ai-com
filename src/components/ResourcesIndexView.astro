@@ -40,7 +40,7 @@ const liveThemes = themesInOrder(lang).filter((theme) =>
 
 {
   liveThemes.length > 0 ? (
-    <section class="theme-routes">
+    <section class="theme-routes" id="themes">
       <h2>{t(lang, "resourcesThemesHeading")}</h2>
       <ThemeCardGrid lang={lang} themes={liveThemes.map((theme) => theme.key)} />
     </section>
