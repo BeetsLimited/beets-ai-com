@@ -96,6 +96,7 @@ const ZH_HK = {
     "插圖：左邊並排站着教師、家長和學生三人，各自拿着書本；右邊是一整排原木書架，放滿書本。",
   cardCtaTheme: "瀏覽此主題",
   cardCtaResource: "查看資源",
+  homeMoreResourcesCta: "更多資源",
   homeFeedbackCta: "提出資源需求",
 
   resourcesTitle: "免費資源",
@@ -190,6 +191,7 @@ const EN: Record<UIKey, string> = {
     "Illustration: a teacher, a parent and a pupil standing side by side on the left, each holding a book; on the right, a tall wooden bookshelf filled with books.",
   cardCtaTheme: "Browse this theme",
   cardCtaResource: "View this resource",
+  homeMoreResourcesCta: "More resources",
   homeFeedbackCta: "Request a resource",
 
   resourcesTitle: "Free resources",

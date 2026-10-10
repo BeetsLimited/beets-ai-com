@@ -232,7 +232,14 @@ const liveResources = (
         cards. Quicksand for headings, generous line height, plenty of space.
       */
       :root {
-        --accent: #e10707; /* brand red */
+        /*
+          Beets' corporate colour is #e10707 (Billy, 2026-10-10). It is the single
+          accent on this site; everything red derives from it, so the value lives
+          here once.
+        */
+        --corporate: #e10707;
+        --corporate-tint: rgba(225, 7, 7, 0.15); /* the "highlight" button fill */
+        --accent: var(--corporate); /* brand red */
         --accent-ink: #b00505;
         --accent-tint: rgba(225, 7, 7, 0.08);
         --blue: #116dff; /* brand blue */
@@ -487,33 +494,42 @@ const liveResources = (
       }
 
       /* ── Buttons, bands and callouts ───────────────────────────────────── */
+      /*
+        ONE button standard for the whole site (Billy, 2026-10-10) — there is no
+        longer a ghost or blue variant, because every CTA should look like the
+        same control:
+
+          normal       white fill, corporate-colour text, thin corporate border
+          hover/active text and fill SWAP, the border does not change
+                       (hover = pointer on desktop, active = press on mobile)
+          highlight    a normal button whose fill is the corporate colour at 15%
+
+        Use `.btn` for a normal CTA and add `.highlight` to pull the eye to the
+        page's primary action (the hero's "免費資源" button).
+      */
       .btn {
         display: inline-block;
-        background: var(--accent);
-        color: #fff !important;
+        background: #fff;
+        color: var(--corporate) !important;
+        border: 1px solid var(--corporate);
         text-decoration: none;
         font-weight: 600;
         padding: 0.75rem 1.5rem;
         border-radius: 999px;
+        transition: background-color 0.15s ease, color 0.15s ease;
       }
-      .btn:hover {
-        background: var(--accent-ink);
-        box-shadow: var(--shadow);
+      .btn.highlight {
+        background: var(--corporate-tint);
       }
-      .btn.ghost {
-        background: #fff;
-        color: var(--ink) !important;
-        border: 1px solid var(--line);
-      }
-      .btn.ghost:hover {
-        background: var(--surface);
-        border-color: var(--ink);
-      }
-      .btn.blue {
-        background: var(--blue);
-      }
-      .btn.blue:hover {
-        background: var(--blue-ink);
+      /* The flip. Listed after `.btn.highlight` and at higher specificity, so a
+         highlighted button flips too rather than staying tinted on hover. */
+      .btn:hover,
+      .btn:active,
+      .btn.highlight:hover,
+      .btn.highlight:active {
+        background: var(--corporate);
+        color: #fff !important;
+        border-color: var(--corporate);
       }
       .btn-row {
         display: flex;

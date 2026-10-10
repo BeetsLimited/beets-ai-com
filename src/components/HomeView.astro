@@ -115,8 +115,8 @@ const audiences = [
   <p class="lede">{t(lang, "homeLede")}</p>
   <p class="lede">{t(lang, "homeIntro2")}</p>
   <div class="btn-row">
-    <a class="btn" href={resourceIndexPath(lang)}>{t(lang, "resourcesTitle")}</a>
-    <a class="btn ghost" href={browsePath(lang)}>{t(lang, "homeBrowseCta")}</a>
+    <a class="btn highlight" href={resourceIndexPath(lang)}>{t(lang, "resourcesTitle")}</a>
+    <a class="btn" href={browsePath(lang)}>{t(lang, "homeBrowseCta")}</a>
   </div>
 </section>
 
@@ -139,7 +139,7 @@ const audiences = [
           <h3>{audience.title}</h3>
           <p>{audience.body}</p>
           <div class="card-cta-row">
-            <a class="btn ghost card-cta" href={audience.href}>
+            <a class="btn card-cta" href={audience.href}>
               {audience.link}
             </a>
           </div>
@@ -172,7 +172,7 @@ const audiences = [
           <h3>{theme.label}</h3>
           <p>{themeInfo(lang, theme.key).need}</p>
           <div class="card-cta-row">
-            <a class="btn ghost card-cta" href={themePath(lang, theme.key)}>
+            <a class="btn card-cta" href={themePath(lang, theme.key)}>
               {t(lang, "cardCtaTheme")}
             </a>
           </div>
@@ -192,7 +192,7 @@ const audiences = [
           <strong>{t(lang, "homeEmptyTitle")}</strong> {t(lang, "homeEmptyBody")}
         </p>
         <p>
-          <a class="btn ghost" href={localizePath("/about/", lang)}>
+          <a class="btn" href={localizePath("/about/", lang)}>
             {t(lang, "homeEmptyCta")} →
           </a>
         </p>
@@ -217,13 +217,16 @@ const audiences = [
               {entry.data.stage} · {entry.data.subject} · {themeLabel(lang, entry.data.theme)}
             </p>
             <div class="card-cta-row">
-              <a class="btn ghost card-cta" href={resourcesPath(lang, entry.data.address)}>
+              <a class="btn card-cta" href={resourcesPath(lang, entry.data.address)}>
                 {t(lang, "cardCtaResource")}
               </a>
             </div>
           </li>
         ))}
       </ul>
+      <div class="btn-row">
+        <a class="btn" href={resourceIndexPath(lang)}>{t(lang, "homeMoreResourcesCta")}</a>
+      </div>
     )
   }
 </section>
@@ -231,7 +234,7 @@ const audiences = [
 <section class="band grey browse-band">
   <h2>{t(lang, "homeBrowseHeading")}</h2>
   <p>{t(lang, "browseLede")}</p>
-  <a class="btn blue" href={browsePath(lang)}>{t(lang, "homeBrowseCta")}</a>
+  <a class="btn" href={browsePath(lang)}>{t(lang, "homeBrowseCta")}</a>
 </section>
 
 <section class="band feedback-band">
@@ -265,8 +268,15 @@ const audiences = [
   .theme-grid {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
+  /* Desktop: three across, so the six newest resources read as two even rows. */
   .newest-grid {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* The three section headings that carry the corporate colour. */
+  .audiences h2,
+  .themes h2,
+  .newest h2 {
+    color: var(--corporate);
   }
   .aud-grid li,
   .theme-grid li,
@@ -354,6 +364,18 @@ const audiences = [
   .band > .btn,
   .band > p > .btn {
     margin-top: 0.5rem;
+  }
+  /* Narrower than the container's own max width: 3 across stops fitting well
+     before the layout itself collapses. */
+  @media (max-width: 48rem) {
+    .newest-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 30rem) {
+    .newest-grid {
+      grid-template-columns: 1fr;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     .aud-grid li,
