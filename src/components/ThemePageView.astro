@@ -1,0 +1,169 @@
+---
+import { resourceIndexPath, t, themeImageAlt, themeInfo, themeLabel, themesInOrder, type Locale } from "../lib/i18n";
+import { themePageCopy } from "../lib/theme-pages";
+import type { Theme } from "../lib/schema";
+import ResourceCatalogueView from "./ResourceCatalogueView.astro";
+import ThemeCardGrid from "./ThemeCardGrid.astro";
+
+/**
+ * A theme page — one of the five, and the same six elements in the same order
+ * (Billy, 2026-10-10):
+ *
+ *   1. the heading       — the theme's name
+ *   2. the sub-title     — the one-sentence need this theme answers (THEME_INFO)
+ *   3. a hero image      — the theme's own card artwork, so the card a visitor
+ *                          clicked and the page they landed on show one picture
+ *   4. the description   — long-form, written for search (src/lib/theme-pages.ts)
+ *   5. the resource catalogue, locked to this theme
+ *   6. the FAQs          — the questions this theme's visitors actually ask
+ *
+ * Elements 1, 2 and 5 come from the catalogue template, which owns the h1 and the
+ * locked criteria; the hero and the description are slotted between them so the
+ * order above is the DOM order. Elements 4 and 6 are absent for a theme whose copy
+ * has not been written yet — the page still renders and is still useful.
+ */
+interface Props {
+  lang: Locale;
+  theme: Theme;
+}
+
+const { lang, theme } = Astro.props;
+
+const info = themeInfo(lang, theme);
+const copy = themePageCopy(lang, theme);
+const heroImage = `/images/home-theme-${theme.toLowerCase()}.webp`;
+/** The other four, so a reader who landed on the wrong theme can move sideways. */
+const otherThemes = themesInOrder(lang)
+  .map((entry) => entry.key)
+  .filter((key) => key !== theme);
+---
+
+<p class="theme-back">
+  <a href={resourceIndexPath(lang)}>{t(lang, "themeBackToAll")}</a>
+</p>
+
+<ResourceCatalogueView
+  lang={lang}
+  heading={themeLabel(lang, theme)}
+  lede={info.need}
+  locked={{ theme }}
+>
+  <p class="theme-audience">
+    <span class="theme-audience-label">{t(lang, "themeAudienceLabel")}</span>
+    {info.audience}
+  </p>
+
+  <figure class="theme-hero">
+    <img
+      src={heroImage}
+      alt={themeImageAlt(lang, theme)}
+      width="1280"
+      height="720"
+      loading="eager"
+      decoding="async"
+    />
+  </figure>
+
+  {
+    copy ? (
+      <div class="theme-intro">
+        {copy.intro.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+    ) : null
+  }
+</ResourceCatalogueView>
+
+{
+  copy ? (
+    <section class="theme-faqs">
+      <h2>{t(lang, "themeFaqHeading")}</h2>
+      {copy.faqs.map((faq) => (
+        <div class="faq">
+          <h3>{faq.question}</h3>
+          <p>{faq.answer}</p>
+        </div>
+      ))}
+    </section>
+  ) : null
+}
+
+<section class="theme-others">
+  <h2>{t(lang, "resourcesThemesHeading")}</h2>
+  <ThemeCardGrid lang={lang} themes={otherThemes} />
+</section>
+
+<style>
+  .theme-back {
+    margin: 0 0 0.75rem;
+  }
+  .theme-back a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .theme-back a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  /* Who the theme is for, kept to one line above the picture. */
+  .theme-audience {
+    margin: 1.1rem 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .theme-audience-label {
+    font-weight: 600;
+    color: var(--ink);
+    margin-right: 0.35rem;
+  }
+  .theme-hero {
+    margin: 1.1rem 0 1.5rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .theme-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  /* The searchable description: prose, one paragraph per idea, at a comfortable
+     measure — this is the text a search engine or an answer engine quotes. */
+  .theme-intro {
+    margin: 0 0 1.75rem;
+  }
+  .theme-intro p {
+    margin: 0 0 0.9rem;
+    color: #333;
+  }
+  .theme-faqs {
+    margin: 2.5rem 0 0;
+    border-top: 1px solid var(--divider);
+    padding-top: 1.75rem;
+  }
+  .theme-faqs h2 {
+    margin-top: 0;
+  }
+  .faq {
+    margin: 0 0 1.35rem;
+  }
+  .faq h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .faq p {
+    margin: 0;
+    color: #333;
+  }
+  .theme-others {
+    margin: 2.5rem 0 0;
+    border-top: 1px solid var(--divider);
+    padding-top: 1.75rem;
+  }
+  .theme-others h2 {
+    margin-top: 0;
+  }
+</style>

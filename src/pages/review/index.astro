@@ -4,7 +4,6 @@ import { resolve } from "node:path";
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import {
-  browsePath,
   feedbackPath,
   resourceIndexPath,
   themePath,
@@ -161,10 +160,6 @@ const byTheme = themesInOrder(ZH)
         </li>
       ))
     }
-    <li>
-      <a href={browsePath(ZH)}>按科目及級別 By subject &amp; stage</a> ·{" "}
-      <a href={browsePath(EN)}>EN</a>
-    </li>
     <li>
       <a href={feedbackPath(ZH)}>意見及建議 Feedback</a> · <a href={feedbackPath(EN)}>EN</a>
     </li>

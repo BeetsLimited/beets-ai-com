@@ -17,7 +17,6 @@ from the sitemap and set to noindex; do not quote it.
 
 - [https://beets-ai.com/](https://beets-ai.com/): the resource library, grouped by theme (Traditional Chinese)
 - [https://beets-ai.com/resources/](https://beets-ai.com/resources/): every free resource
-- [https://beets-ai.com/browse/](https://beets-ai.com/browse/): browse by learning stage and subject
 - [https://beets-ai.com/about/](https://beets-ai.com/about/): editorial process, independence, source documents, reuse
 - [https://beets-ai.com/feedback/](https://beets-ai.com/feedback/): request a resource
 

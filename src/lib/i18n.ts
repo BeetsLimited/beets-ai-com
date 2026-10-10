@@ -55,7 +55,6 @@ const ZH_HK = {
   skip: "跳至內容",
   breadcrumbHome: "主頁",
   navResources: "免費資源",
-  navBrowse: "按科目及級別",
   navAbout: "關於",
   langGroup: "語言",
   switchAria: "切換至英文版",
@@ -84,8 +83,6 @@ const ZH_HK = {
   homeEmptyCta: "了解編輯流程",
   homeThemesHeading: "五大主題",
   homeThemesLede: "按你在校內的工作選擇主題，每個主題都是一條逐步擴充的資源隊列。",
-  homeBrowseHeading: "按科目及級別尋找",
-  homeBrowseCta: "按科目及級別瀏覽",
   homeNewestHeading: "最新資源",
   homeFeedbackHeading: "找不到你需要的資源？",
   homeFeedbackBody: "告訴我們你正在準備的課堂，我們會優先製作。下載始終不需註冊。",
@@ -122,18 +119,9 @@ const ZH_HK = {
   catalogueNoScript: "啟用 JavaScript 才能篩選及分頁；以下列出全部資源。",
 
   themeAudienceLabel: "對象",
-  themeNeedLabel: "這個主題解答什麼問題",
-  themeResourcesHeading: "本主題資源",
-  themeEmpty: "本主題的首批資源正在審閱中。",
+  themeFaqHeading: "常見問題",
   themeBackToAll: "← 所有免費資源",
 
-  browseTitle: "按科目及級別",
-  browseDescription: "按學習階段和科目瀏覽香港 AI 教學資源。",
-  browseLede: "選擇級別或科目。只會顯示已有資源的選項。",
-  browseStagesHeading: "按學習階段",
-  browseSubjectsHeading: "按科目",
-  browseEmpty: "資源陸續上線，請稍後再來。",
-  browseSeeAll: "查看所有免費資源",
 
   relatedHeading: "同類資源",
   reuseHeading: "使用條款",
@@ -159,7 +147,6 @@ const EN: Record<UIKey, string> = {
   skip: "Skip to content",
   breadcrumbHome: "Home",
   navResources: "Free resources",
-  navBrowse: "By subject & stage",
   navAbout: "About",
   langGroup: "Language",
   switchAria: "Switch to the Traditional Chinese version",
@@ -190,8 +177,6 @@ const EN: Record<UIKey, string> = {
   homeThemesHeading: "Five themes",
   homeThemesLede:
     "Pick the theme that matches your work at school. Each one is a growing queue of resources.",
-  homeBrowseHeading: "Find your exact classroom fit",
-  homeBrowseCta: "Browse by subject and stage",
   homeNewestHeading: "Newest resources",
   homeFeedbackHeading: "Can't find what you need?",
   homeFeedbackBody:
@@ -229,18 +214,9 @@ const EN: Record<UIKey, string> = {
   catalogueNoScript: "Turn on JavaScript to filter and page through the catalogue; every resource is listed below.",
 
   themeAudienceLabel: "Who it's for",
-  themeNeedLabel: "What this theme answers",
-  themeResourcesHeading: "Resources in this theme",
-  themeEmpty: "The first resources in this theme are in review.",
+  themeFaqHeading: "Frequently asked questions",
   themeBackToAll: "← All free resources",
 
-  browseTitle: "By subject and stage",
-  browseDescription: "Browse Hong Kong AI teaching resources by learning stage and subject.",
-  browseLede: "Pick a learning stage or a subject. Only options with material are shown.",
-  browseStagesHeading: "By learning stage",
-  browseSubjectsHeading: "By subject",
-  browseEmpty: "Resources are on the way — please check back.",
-  browseSeeAll: "See all free resources",
 
   relatedHeading: "Related resources",
   reuseHeading: "Reuse",
@@ -359,11 +335,6 @@ export function resourceIndexPath(locale: Locale): string {
 /** A resource page for a locale (content addresses stay ASCII in both languages). */
 export function resourcesPath(locale: Locale, slug: string): string {
   return localizePath(`/resources/${slug}/`, locale);
-}
-
-/** The browse-by-subject-and-stage page. */
-export function browsePath(locale: Locale): string {
-  return localizePath("/browse/", locale);
 }
 
 /** The feedback / request-a-resource page. */

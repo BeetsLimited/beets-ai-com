@@ -164,7 +164,6 @@ const index = [`${HEADER}
 
 - [${SITE}/](${SITE}/): the resource library, grouped by theme (Traditional Chinese)
 - [${SITE}/resources/](${SITE}/resources/): every free resource
-- [${SITE}/browse/](${SITE}/browse/): browse by learning stage and subject
 - [${SITE}/about/](${SITE}/about/): editorial process, independence, source documents, reuse
 - [${SITE}/feedback/](${SITE}/feedback/): request a resource
 `];

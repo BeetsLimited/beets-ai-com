@@ -150,6 +150,10 @@ const lockedChips = [
   <h1>{heading}</h1>
   <p class="lede">{lede}</p>
 
+  {/* A page that composes this template puts its own material here: a theme page
+      has a hero, a description and its audience line above the criteria box. */}
+  <slot />
+
   <form class="filters" data-filters>
     <h2 class="filters-title">{t(lang, "catalogueSearchHeading")}</h2>
     <p class="filters-hint">{t(lang, "catalogueMultiHint")}</p>
@@ -159,7 +163,10 @@ const lockedChips = [
         <ul class="chips">
           {lockedChips.map((chip) => (
             <li class="chip">
-              {chip.label}：<strong>{chip.display}</strong>
+              {/* No punctuation between the label and the value: a full-width
+                  colon is right in Chinese and wrong on the English page, and a
+                  separator cannot live in i18n without being one of the two. */}
+              {chip.label} <strong>{chip.display}</strong>
               <span class="muted"> · {t(lang, "catalogueLockedNote")}</span>
             </li>
           ))}
@@ -596,7 +603,12 @@ const lockedChips = [
       render(page);
 
       // The filtered view is linkable: a teacher can paste it into the staff room.
-      const query = writeState({ filters: state.filters, page: state.page });
+      // This page's LOCKED criteria are left out: the path already says which
+      // theme this is, so ?theme=A on the school-planning page is noise, and a
+      // reader who arrived that way would wonder what it meant.
+      const shareable: CatalogueFilters = { ...state.filters };
+      for (const facet of Object.keys(locked) as CatalogueFacet[]) delete shareable[facet];
+      const query = writeState({ filters: shareable, page: state.page });
       window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
     };
 

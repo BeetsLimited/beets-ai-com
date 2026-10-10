@@ -20,6 +20,25 @@ export const ORG_LOGO = `${SITE_URL}/favicon-192.png`;
 export const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 /**
+ * FAQ rich result for a page whose questions are visible on it.
+ *
+ * The answers must be the text the page shows — Google treats markup that hides
+ * or paraphrases content as spam, and an AI answer engine that quotes us will
+ * quote what it can read. So this is built from the same array the page renders.
+ */
+export function faqLd(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+}
+
+/**
  * What a download actually is. Attachments are Office documents now, not
  * printable web pages, so the format follows the extension — declaring
  * `text/html` for an .xlsx misdescribes the file to every consumer of the

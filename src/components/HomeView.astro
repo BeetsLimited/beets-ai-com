@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import { isPublished, reviewRequired } from "../lib/review-gate";
 import {
-  browsePath,
   feedbackPath,
   localizePath,
   resourceIndexPath,
@@ -98,7 +97,7 @@ const audiences = [
     body: isZh
       ? "做專題前先學會核對：按科目和級別找到可用的工作紙與步驟，確認 AI 給你的答案。"
       : "For projects and for checking what an AI tells you: find worksheets and steps by subject and learning stage.",
-    href: browsePath(lang),
+    href: resourceIndexPath(lang),
     link: isZh ? "按科目及級別尋找" : "Find by subject and stage",
   },
 ];
@@ -120,7 +119,6 @@ const audiences = [
   <p class="lede">{t(lang, "homeIntro2")}</p>
   <div class="btn-row">
     <a class="btn highlight" href={resourceIndexPath(lang)}>{t(lang, "resourcesTitle")}</a>
-    <a class="btn" href={browsePath(lang)}>{t(lang, "homeBrowseCta")}</a>
   </div>
 </section>
 
@@ -210,12 +208,6 @@ const audiences = [
       </ul>
     )
   }
-</section>
-
-<section class="band grey browse-band">
-  <h2>{t(lang, "homeBrowseHeading")}</h2>
-  <p>{t(lang, "browseLede")}</p>
-  <a class="btn" href={browsePath(lang)}>{t(lang, "homeBrowseCta")}</a>
 </section>
 
 <section class="band feedback-band">

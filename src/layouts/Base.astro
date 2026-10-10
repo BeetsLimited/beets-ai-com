@@ -4,7 +4,6 @@ import {
   HTML_LANG,
   alternateLinks,
   alternatePath,
-  browsePath,
   feedbackPath,
   localizePath,
   resourceIndexPath,
@@ -187,7 +186,6 @@ const liveResources = (
         <div class="headright">
           <nav aria-label="BEETS AI">
             <a href={resourceIndexPath(lang)}>{t(lang, "navResources")}</a>
-            <a href={browsePath(lang)}>{t(lang, "navBrowse")}</a>
             <a href={localizePath("/about/", lang)}>{t(lang, "navAbout")}</a>
           </nav>
           {

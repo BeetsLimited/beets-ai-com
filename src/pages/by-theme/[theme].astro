@@ -1,8 +1,19 @@
 ---
 import Base from "../../layouts/Base.astro";
-import ThemeView from "../../components/ThemeView.astro";
-import { DEFAULT_LOCALE, THEME_SLUGS, themeLabel, themeMeta } from "../../lib/i18n";
+import ThemePageView from "../../components/ThemePageView.astro";
+import {
+  DEFAULT_LOCALE,
+  THEME_SLUGS,
+  localizePath,
+  resourceIndexPath,
+  t,
+  themeImageAlt,
+  themeLabel,
+  themeMeta,
+} from "../../lib/i18n";
+import { themePageCopy } from "../../lib/theme-pages";
 import { THEMES } from "../../lib/schema";
+import { breadcrumbLd, faqLd } from "../../lib/seo";
 
 const lang = DEFAULT_LOCALE;
 
@@ -17,12 +28,38 @@ export function getStaticPaths() {
 }
 
 const { theme } = Astro.props;
+
+/** The hero is the theme's own card artwork — the picture the visitor clicked. */
+const heroImage = `/images/home-theme-${theme.toLowerCase()}.webp`;
+const copy = themePageCopy(lang, theme);
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+const homeUrl = new URL(localizePath("/", lang), Astro.site).href;
+const indexUrl = new URL(resourceIndexPath(lang), Astro.site).href;
+
+/**
+ * The FAQs go out as FAQ structured data as well as being rendered on the page.
+ * The answers are the same strings in both places: markup that paraphrases or
+ * hides the visible text is treated as spam, and an answer engine will quote what
+ * it can actually read.
+ */
+const structuredData = [
+  ...(copy ? [faqLd(copy.faqs)] : []),
+  breadcrumbLd([
+    { name: t(lang, "breadcrumbHome"), url: homeUrl },
+    { name: t(lang, "resourcesTitle"), url: indexUrl },
+    { name: themeLabel(lang, theme), url: canonicalUrl },
+  ]),
+];
 ---
 
 <Base
   title={`${themeLabel(lang, theme)} — BEETS AI`}
   description={themeMeta(lang, theme)}
   lang={lang}
+  ogImage={heroImage}
+  ogImageAlt={themeImageAlt(lang, theme)}
+  structuredData={structuredData}
 >
-  <ThemeView lang={lang} theme={theme} />
+  <ThemePageView lang={lang} theme={theme} />
 </Base>
