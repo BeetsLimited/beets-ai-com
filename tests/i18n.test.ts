@@ -12,8 +12,11 @@ import {
   alternateLinks,
   resourcesPath,
   resourceIndexPath,
+  themeLabel,
+  themeNavLabel,
   type UIKey,
 } from "../src/lib/i18n";
+import { THEMES } from "../src/lib/schema";
 
 /**
  * The site shows exactly ONE language per page. These tests pin the rules that
@@ -94,6 +97,48 @@ describe("theme labels", () => {
     }
     for (const [key, label] of Object.entries(THEME_LABELS.en)) {
       expect(CJK.test(label), key).toBe(false);
+    }
+  });
+});
+
+describe("theme labels in the navigation", () => {
+  /*
+   * The nav is one row 816px wide, and a wrapped second row would strand a
+   * separator at its start. Measured at a 1280px viewport, the FULL English theme
+   * labels put the eight nav items at 982px, so the nav carries shorter English
+   * labels (`themeNavLabel`) while pages, cards and breadcrumbs keep the full ones
+   * (`themeLabel`).
+   *
+   * Pixel widths cannot be asserted from here, so this holds the budget that
+   * produced them: the eight English nav items measured 85 characters against
+   * 982px — roughly 7.4px per character at this type size plus the separators.
+   * Lengthening an English nav label past that budget is what this catches.
+   */
+  const navChars = (locale: string) =>
+    ["Home", "Free resources", ...THEMES.map((theme) => themeNavLabel(locale as never, theme)), "About"]
+      .join("").length;
+
+  it("gives every theme a nav label in every language", () => {
+    for (const locale of LOCALES) {
+      for (const theme of THEMES) {
+        expect(themeNavLabel(locale, theme).trim().length, `${locale}/${theme}`).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("never lets an English nav label be longer than the full label", () => {
+    for (const theme of THEMES) {
+      expect(themeNavLabel("en", theme).length, theme).toBeLessThanOrEqual(themeLabel("en", theme).length);
+    }
+  });
+
+  it("keeps the English nav inside the row's character budget", () => {
+    expect(navChars("en")).toBeLessThanOrEqual(90);
+  });
+
+  it("uses the theme's full label in Chinese, where it already fits", () => {
+    for (const theme of THEMES) {
+      expect(themeNavLabel("zh-HK", theme)).toBe(themeLabel("zh-HK", theme));
     }
   });
 });

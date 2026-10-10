@@ -8,7 +8,7 @@ import {
   localizePath,
   resourceIndexPath,
   t,
-  themeLabel,
+  themeNavLabel,
   themePath,
   type Locale,
 } from "../lib/i18n";
@@ -205,6 +205,14 @@ const liveResources = (
           themes, then about.
         */}
         <nav aria-label="BEETS AI" class="site-nav">
+          {/* 主頁 first (Billy, 2026-10-10): clicking the wordmark does return
+              home, but nothing said so. */}
+          <a
+            href={localizePath("/", lang)}
+            aria-current={Astro.url.pathname === localizePath("/", lang) ? "page" : undefined}
+          >
+            {t(lang, "navHome")}
+          </a>
           <a
             href={resourceIndexPath(lang)}
             aria-current={Astro.url.pathname === resourceIndexPath(lang) ? "page" : undefined}
@@ -216,7 +224,7 @@ const liveResources = (
               href={themePath(lang, theme)}
               aria-current={Astro.url.pathname === themePath(lang, theme) ? "page" : undefined}
             >
-              {themeLabel(lang, theme)}
+              {themeNavLabel(lang, theme)}
             </a>
           ))}
           <a
@@ -389,12 +397,47 @@ const liveResources = (
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 0.3rem 1.15rem;
+        /* The column gap is the space BEFORE a separator, which adds its own
+           margin after itself, so an item is spaced evenly either side of it.
+           Kept tight deliberately: the rule does the separating, and the width it
+           frees is what lets eight items sit on one line. */
+        gap: 0.3rem 0.6rem;
         margin-top: 0.1rem;
       }
       .site-nav a {
         margin-left: 0;
-        font-size: 0.93rem;
+        font-size: 0.9rem;
+      }
+      /*
+        A light rule between items, drawn as an empty box rather than a character:
+        `content: "·"` would be read aloud by some screen readers as part of the
+        link, and this is decoration. `.site-nav a + a` means no rule before the
+        first item, and the rule belongs to the item that FOLLOWS it, so it
+        travels with that item when the row wraps.
+      */
+      .site-nav a + a::before {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 0.85em;
+        margin-right: 0.6rem;
+        background: var(--line);
+        vertical-align: -0.08em;
+      }
+      /*
+        Hide the rules as soon as the nav can wrap, because a rule that lands at
+        the start of a wrapped line reads as a stray mark rather than a separator.
+
+        The breakpoint is measured, not guessed. The eight labels need 777px with
+        their separators, and the row offers `min(viewport, 54rem) - 3rem` of it,
+        so one line holds only above ~825px of viewport — 52rem. A smaller number
+        here (48rem was the first attempt) leaves a window between 768px and 864px
+        where the row wraps AND the rules are still drawn.
+      */
+      @media (max-width: 52rem) {
+        .site-nav a + a::before {
+          display: none;
+        }
       }
       /* The page you are on, marked in the nav. */
       .site-nav a[aria-current="page"] {

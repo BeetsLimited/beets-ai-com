@@ -54,6 +54,7 @@ export const HTML_LANG: Record<Locale, string> = {
 const ZH_HK = {
   skip: "跳至內容",
   breadcrumbHome: "主頁",
+  navHome: "主頁",
   navResources: "免費資源",
   navAbout: "關於",
   langGroup: "語言",
@@ -146,6 +147,7 @@ export type UIKey = keyof typeof ZH_HK;
 const EN: Record<UIKey, string> = {
   skip: "Skip to content",
   breadcrumbHome: "Home",
+  navHome: "Home",
   navResources: "Free resources",
   navAbout: "About",
   langGroup: "Language",
@@ -272,6 +274,34 @@ export const THEME_LABELS: Record<Locale, Record<Theme, string>> = {
 export function themeLabel(locale: Locale, theme: string): string {
   const dict = THEME_LABELS[locale] as Record<string, string>;
   return dict[theme] ?? theme;
+}
+
+/**
+ * The theme label for the NAVIGATION.
+ *
+ * English needs a shorter set than the rest of the site. Measured in a browser at
+ * a 1280px viewport, the eight nav items need 982px at the nav's type size and the
+ * row offers 816px, so the full English labels wrap to a second line — and the
+ * separator then lands at the start of that line, where it reads as a stray mark
+ * rather than a divider. Per item: "First & inclusive lessons" 172px,
+ * "Hong Kong inquiry" 140px, "Responsible AI use" 139px, "School planning" 121px.
+ *
+ * A nav label is allowed to be shorter than the page it points at: page headings,
+ * cards and breadcrumbs keep the full label from `themeLabel`. The Chinese labels
+ * already fit, so they are used unchanged.
+ */
+const EN_THEME_NAV_LABELS: Partial<Record<Theme, string>> = {
+  A: "Planning",
+  B: "Safe AI use",
+  D: "HK inquiry",
+  E: "Inclusive lessons",
+};
+
+export function themeNavLabel(locale: Locale, theme: Theme): string {
+  if (locale === SECONDARY_LOCALE) {
+    return EN_THEME_NAV_LABELS[theme] ?? themeLabel(locale, theme);
+  }
+  return themeLabel(locale, theme);
 }
 
 /** All five themes, keyed, in the given language. */
