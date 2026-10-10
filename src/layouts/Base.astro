@@ -495,6 +495,72 @@ const liveResources = (
         margin-top: 0.15rem;
       }
 
+      /* ── The card (one box style, used by the homepage and the catalogue) ──
+         Promoted out of HomeView so the resource catalogue renders the same card
+         a visitor just saw on the homepage. A card is: a 4px corporate rule across
+         the top over the usual 1px border, an inset picture, a heading, a meta
+         line and one CTA. */
+      .card-grid {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      }
+      /* A card the catalogue has paged out must actually disappear — its own
+         `display` rule would otherwise win over the UA stylesheet's [hidden]. */
+      .card-grid > [hidden] {
+        display: none !important;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-top: 4px solid var(--corporate);
+        border-radius: var(--radius);
+        padding: 1.3rem 1.4rem;
+        background: var(--bg);
+        transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+      .card:hover {
+        /* All sides, so the corporate top rule survives the hover. */
+        border-color: var(--corporate);
+        box-shadow: var(--shadow);
+        transform: translateY(-2px);
+      }
+      .card-art {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0.9rem;
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+      .card h3 {
+        margin: 0.35rem 0 0.4rem;
+        font-size: 1.1rem;
+      }
+      .card p {
+        margin: 0 0 0.75rem;
+        font-size: 0.95rem;
+      }
+      .card .meta {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .card-cta-row {
+        margin-top: 0.9rem;
+      }
+      .card-cta {
+        padding: 0.5rem 1.15rem;
+        font-size: 0.9rem;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .card {
+          transition: none;
+        }
+      }
+
       /* ── Buttons, bands and callouts ───────────────────────────────────── */
       /*
         ONE button standard for the whole site (Billy, 2026-10-10) — there is no

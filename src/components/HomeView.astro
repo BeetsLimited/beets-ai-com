@@ -129,10 +129,10 @@ const audiences = [
 
 <section class="audiences">
   <h2>{t(lang, "homeAudienceHeading")}</h2>
-  <ul class="grid aud-grid">
+  <ul class="card-grid aud-grid">
     {
       audiences.map((audience) => (
-        <li class={`aud aud-${audience.key}`}>
+        <li class={`card aud aud-${audience.key}`}>
           <img
             class="card-art"
             src={audience.image}
@@ -160,10 +160,10 @@ const audiences = [
 <section class="themes">
   <h2>{t(lang, "homeThemesHeading")}</h2>
   <p class="lede">{t(lang, "homeThemesLede")}</p>
-  <ul class="grid theme-grid">
+  <ul class="card-grid theme-grid">
     {
       themes.map((theme) => (
-        <li class="theme-card">
+        <li class="card theme-card">
           <img
             class="card-art"
             src={`/images/home-theme-${theme.key.toLowerCase()}.webp`}
@@ -209,9 +209,9 @@ const audiences = [
         </p>
       </div>
     ) : (
-      <ul class="grid newest-grid">
+      <ul class="card-grid newest-grid">
         {newest.map((entry) => (
-          <li class="resource-card">
+          <li class="card resource-card">
             {entry.data.image ? (
               <img
                 class="card-art"
@@ -265,17 +265,9 @@ const audiences = [
     border-radius: var(--radius-lg);
     background: var(--surface);
   }
-  .grid {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0;
-    display: grid;
-    gap: 1rem;
-  }
-  .aud-grid,
-  .theme-grid {
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  }
+  /* The card box, the grid and the CTA all come from the layout's `.card` /
+     `.card-grid` / `.card-cta`, so the homepage and the resource catalogue render
+     the same card. Only the column count is the homepage's own business. */
   /* Desktop: three across, so the six newest resources read as two even rows. */
   .newest-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -305,35 +297,6 @@ const audiences = [
   }
   .section-head h2 {
     margin: 0;
-  }
-  .aud-grid li,
-  .theme-grid li,
-  .newest-grid li {
-    border: 1px solid var(--line);
-    /* One box style for every card: a 4px corporate-colour rule across the top.
-       This replaced the per-audience red / blue / grey rules. */
-    border-top: 4px solid var(--corporate);
-    border-radius: var(--radius);
-    padding: 1.3rem 1.4rem;
-    background: var(--bg);
-    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-  .aud-grid li:hover,
-  .theme-grid li:hover,
-  .newest-grid li:hover {
-    border-color: var(--accent);
-    box-shadow: var(--shadow);
-    transform: translateY(-2px);
-  }
-  /* Card pictures are inset with the card's own radius — the card keeps its
-     edge, the 4px audience rule below stays the first thing you see. */
-  .card-art {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.9rem;
-    border-radius: var(--radius);
-    background: var(--surface);
   }
   .aud-grid h3,
   .theme-card h3 {
@@ -374,14 +337,6 @@ const audiences = [
   .newest-grid .meta {
     margin: 0;
   }
-  /* One CTA style for every card on the page. */
-  .card-cta-row {
-    margin-top: 0.9rem;
-  }
-  .card-cta {
-    padding: 0.5rem 1.15rem;
-    font-size: 0.9rem;
-  }
   .band > .btn,
   .band > p > .btn {
     margin-top: 0.5rem;
@@ -396,13 +351,6 @@ const audiences = [
   @media (max-width: 30rem) {
     .newest-grid {
       grid-template-columns: 1fr;
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .aud-grid li,
-    .theme-grid li,
-    .newest-grid li {
-      transition: none;
     }
   }
 </style>

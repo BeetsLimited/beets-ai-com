@@ -1,73 +1,54 @@
 ---
 import { getCollection } from "astro:content";
 import { isPublished } from "../lib/review-gate";
-import {
-  resourcesPath,
-  t,
-  themeInfo,
-  themeLabel,
-  themePath,
-  themesInOrder,
-  type Locale,
-} from "../lib/i18n";
+import { t, themeInfo, themePath, themesInOrder, type Locale } from "../lib/i18n";
+import { assertPairedEditions, newestFirst } from "../lib/resources";
+import ResourceCatalogueView from "./ResourceCatalogueView.astro";
 
-/** Resource index body, grouped by theme. Renders one language only. */
+/**
+ * The /resources/ page body — the catalogue, then the theme routes.
+ *
+ * The catalogue itself is `ResourceCatalogueView`, the shared template: this view
+ * only composes it and adds what is specific to the full index. A theme page uses
+ * the same template with `locked={{ theme }}`, so a visitor meets one browsing UI
+ * everywhere instead of a different one per page. Renders one language only.
+ */
 interface Props {
   lang: Locale;
 }
 const { lang } = Astro.props;
 
-const resources = (
-  await getCollection(
-    "content",
-    ({ data }) => isPublished(data) && data.type === "resource" && data.lang === lang,
-  )
-).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const all = await getCollection("content");
+assertPairedEditions(all, "resources-index");
 
-const themes = [...new Set(resources.map((entry) => entry.data.theme))]
-  .sort()
-  .map((key) => ({
-    key,
-    label: themeLabel(lang, key),
-    items: resources.filter((entry) => entry.data.theme === key),
-  }));
+const published = newestFirst(
+  all.filter(({ data }) => isPublished(data) && data.type === "resource" && data.lang === lang),
+);
+
+/**
+ * Only themes with material are linked. The theme pages all exist, so this is not
+ * a broken-link question — it is that a theme route with nothing behind it is a
+ * dead end for a teacher who followed it.
+ */
+const liveThemes = themesInOrder(lang).filter((theme) =>
+  published.some((entry) => entry.data.theme === theme.key),
+);
 ---
 
-<h1>{t(lang, "resourcesTitle")}</h1>
-<p>{t(lang, "resourcesLede")}</p>
-
-<h2>{t(lang, "resourcesThemesHeading")}</h2>
-<ul class="cards">
-  {
-    themesInOrder(lang).map((theme) => (
-      <li>
-        <a href={themePath(lang, theme.key)}>{theme.label}</a>
-        <div class="meta">{themeInfo(lang, theme.key).need}</div>
-      </li>
-    ))
-  }
-</ul>
+<ResourceCatalogueView lang={lang} />
 
 {
-  themes.length === 0 ? (
-    <div class="panel">
-      <p>{t(lang, "resourcesEmpty")}</p>
-    </div>
-  ) : (
-    themes.map((theme) => (
-      <section>
-        <h2>{theme.label}</h2>
-        <ul class="cards">
-          {theme.items.map((entry) => (
-            <li>
-              <a href={resourcesPath(lang, entry.data.address)}>{entry.data.title}</a>
-              <div class="meta">
-                {entry.data.stage} · {entry.data.subject}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))
-  )
+  liveThemes.length > 0 ? (
+    <section class="theme-routes">
+      <h2>{t(lang, "resourcesThemesHeading")}</h2>
+      <ul class="cards">
+        {liveThemes.map((theme) => (
+          <li>
+            <a href={themePath(lang, theme.key)}>{theme.label}</a>
+            <div class="meta">{themeInfo(lang, theme.key).need}</div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ) : null
 }

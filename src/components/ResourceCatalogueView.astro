@@ -1,0 +1,524 @@
+---
+import { getCollection } from "astro:content";
+import { isPublished } from "../lib/review-gate";
+import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+import { assertPairedEditions, newestFirst } from "../lib/resources";
+import {
+  PAGE_SIZE,
+  filterItems,
+  filterOptions,
+  haystackFor,
+  paginate,
+  type CatalogueFilters,
+} from "../lib/catalogue";
+
+/**
+ * The resource catalogue — ONE template for every listing/search page.
+ *
+ * A page composes it and passes what it wants to fix or pre-select:
+ *
+ *   <ResourceCatalogueView lang={lang} />                          ← /resources/
+ *   <ResourceCatalogueView lang={lang} locked={{ theme: "A" }}     ← /by-theme/school-planning/
+ *                          heading={themeLabel(lang, "A")} />
+ *
+ * `locked` criteria are held fixed and shown as a chip, not as a control the
+ * reader can contradict. `initial` criteria are pre-selected but the reader can
+ * change them. So a theme page and the full index share one UI while only
+ * differing in what they start with.
+ *
+ * **Every card is in the HTML.** The filtering and paging below are applied by a
+ * small script that HIDES cards it was already given — never by fetching them.
+ * A crawler with no JavaScript, and a reader with a broken script, still see the
+ * whole catalogue with working links. `scripts/check-catalogue.mjs` fails the
+ * build if that ever stops being true.
+ */
+interface Props {
+  lang: Locale;
+  /** Defaults to the resource-index copy. */
+  heading?: string;
+  lede?: string;
+  /** Criteria this page fixes. Rendered as a chip, never as a control. */
+  locked?: { theme?: string; stage?: string; subject?: string };
+  /** Criteria pre-selected but still changeable. */
+  initial?: CatalogueFilters;
+  pageSize?: number;
+}
+
+const {
+  lang,
+  heading = t(lang, "resourcesTitle"),
+  lede = t(lang, "resourcesLede"),
+  locked = {},
+  initial = {},
+  pageSize = PAGE_SIZE,
+} = Astro.props;
+
+const all = await getCollection("content");
+// Build-time guard: an edition the loader silently dropped must break the build.
+assertPairedEditions(all, "catalogue");
+
+const published = newestFirst(
+  all.filter(({ data }) => isPublished(data) && data.type === "resource" && data.lang === lang),
+);
+
+const items = published.map((entry) => ({
+  address: entry.data.address,
+  title: entry.data.title,
+  image: entry.data.image,
+  imageAlt: entry.data.imageAlt,
+  theme: entry.data.theme,
+  stage: entry.data.stage,
+  subject: entry.data.subject,
+  /** What the keyword box searches. Built by the same helper the tests drive. */
+  haystack: haystackFor([entry.data.title, entry.data.description]),
+}));
+
+const options = filterOptions(items);
+/** What this page starts with: its locked criteria, then its pre-selections. */
+const defaults: CatalogueFilters = { ...locked, ...initial };
+const firstPage = paginate(filterItems(items, defaults), 1, pageSize);
+
+const countText = (from: number, to: number, total: number) =>
+  t(lang, "catalogueCountTemplate")
+    .replace("{from}", String(from))
+    .replace("{to}", String(to))
+    .replace("{total}", String(total));
+
+/**
+ * A control is only rendered when it can change the result: not locked, and with
+ * more than one value to choose from. A page narrowed to one theme shows no theme
+ * dropdown, because a dropdown with a single option is a lie about choice.
+ */
+const showTheme = !locked.theme && options.themes.length > 1;
+const showStage = !locked.stage && options.stages.length > 1;
+const showSubject = !locked.subject && options.subjects.length > 1;
+
+const lockedChips = (
+  [
+    ["theme", locked.theme, t(lang, "catalogueFilterTheme")],
+    ["stage", locked.stage, t(lang, "catalogueFilterStage")],
+    ["subject", locked.subject, t(lang, "catalogueFilterSubject")],
+  ] as const
+)
+  .filter(([, value]) => Boolean(value))
+  .map(([key, value, label]) => ({
+    key,
+    label,
+    value: key === "theme" ? themeLabel(lang, value as string) : (value as string),
+  }));
+---
+
+<section
+  class="catalogue"
+  data-catalogue
+  data-page-size={String(pageSize)}
+  data-locked={JSON.stringify(locked)}
+  data-defaults={JSON.stringify(defaults)}
+  data-count-template={t(lang, "catalogueCountTemplate")}
+  data-label-prev={t(lang, "cataloguePrevAria")}
+  data-label-next={t(lang, "catalogueNextAria")}
+  data-label-pager={t(lang, "cataloguePagerAria")}
+>
+  <h1>{heading}</h1>
+  <p class="lede">{lede}</p>
+
+  <form class="filters" data-filters>
+    <h2 class="filters-title">{t(lang, "catalogueSearchHeading")}</h2>
+
+    {
+      lockedChips.length > 0 ? (
+        <ul class="chips">
+          {lockedChips.map((chip) => (
+            <li class="chip">
+              {chip.label}：<strong>{chip.value}</strong>
+              <span class="muted"> · {t(lang, "catalogueLockedNote")}</span>
+            </li>
+          ))}
+        </ul>
+      ) : null
+    }
+
+    <div class="filter-row">
+      {
+        showTheme ? (
+          <label class="filter-field">
+            {t(lang, "catalogueFilterTheme")}
+            <select data-filter="theme">
+              <option value="">{t(lang, "catalogueFilterAll")}</option>
+              {options.themes.map((value) => (
+                <option value={value} selected={defaults.theme === value}>
+                  {themeLabel(lang, value)}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null
+      }
+      {
+        showStage ? (
+          <label class="filter-field">
+            {t(lang, "catalogueFilterStage")}
+            <select data-filter="stage">
+              <option value="">{t(lang, "catalogueFilterAll")}</option>
+              {options.stages.map((value) => (
+                <option value={value} selected={defaults.stage === value}>
+                  {value}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null
+      }
+      {
+        showSubject ? (
+          <label class="filter-field">
+            {t(lang, "catalogueFilterSubject")}
+            <select data-filter="subject">
+              <option value="">{t(lang, "catalogueFilterAll")}</option>
+              {options.subjects.map((value) => (
+                <option value={value} selected={defaults.subject === value}>
+                  {value}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null
+      }
+      <label class="filter-field filter-search">
+        {t(lang, "catalogueFilterKeyword")}
+        <input
+          type="search"
+          data-filter="q"
+          value={defaults.q ?? ""}
+          placeholder={t(lang, "catalogueFilterKeywordPlaceholder")}
+        />
+      </label>
+      <div class="filter-actions">
+        <button type="reset" class="btn card-cta">{t(lang, "catalogueResetFilters")}</button>
+      </div>
+    </div>
+  </form>
+
+  <p class="catalogue-count" data-count aria-live="polite">
+    {countText(firstPage.from, firstPage.to, firstPage.total)}
+  </p>
+
+  <ul class="card-grid" data-grid>
+    {
+      items.map((item) => (
+        <li
+          class="card resource-card"
+          data-card
+          data-theme={item.theme}
+          data-stage={item.stage}
+          data-subject={item.subject}
+          data-haystack={item.haystack}
+        >
+          {item.image ? (
+            <img
+              class="card-art"
+              src={item.image}
+              alt={item.imageAlt ?? item.title}
+              width="1280"
+              height="720"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : null}
+          <h3>{item.title}</h3>
+          <p class="meta">
+            {item.stage} · {item.subject} · {themeLabel(lang, item.theme)}
+          </p>
+          <div class="card-cta-row">
+            <a class="btn card-cta" href={resourcesPath(lang, item.address)}>
+              {t(lang, "cardCtaResource")}
+            </a>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="panel" data-empty hidden>
+    <p>{t(lang, "catalogueEmpty")}</p>
+  </div>
+
+  <nav class="pager" data-pager aria-label={t(lang, "cataloguePagerAria")} hidden></nav>
+
+  <noscript>
+    <div class="notice">
+      <p>{t(lang, "catalogueNoScript")}</p>
+    </div>
+  </noscript>
+</section>
+
+<style>
+  /* Catalogue-only chrome. The cards themselves are the site-wide `.card`,
+     `.card-grid` and `.card-cta` from the layout, so this page and the homepage
+     cannot drift apart. */
+  .filters {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.4rem;
+    margin: 1.5rem 0 1.25rem;
+  }
+  .filters-title {
+    margin: 0 0 0.9rem;
+    font-size: 1.05rem;
+  }
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.9rem 1.1rem;
+  }
+  .filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .filter-field select,
+  .filter-field input {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 0.5rem 0.7rem;
+    min-width: 9.5rem;
+  }
+  .filter-field input {
+    min-width: 15rem;
+  }
+  .filter-field select:focus-visible,
+  .filter-field input:focus-visible {
+    outline: 2px solid var(--corporate);
+    outline-offset: 1px;
+  }
+  .filter-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .chips {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .chip {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.85rem;
+  }
+  .catalogue-count {
+    margin: 0 0 0.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .pager {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 1.5rem 0 0;
+  }
+  /* Numbered pager: digits and arrows only, so it needs no localised strings
+     beyond the aria-labels, which come from the page. */
+  .pager button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-width: 2.5rem;
+    padding: 0.45rem 0.7rem;
+    color: var(--corporate);
+    background: #fff;
+    border: 1px solid var(--corporate);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .pager button:hover:not([disabled]),
+  .pager button:active:not([disabled]) {
+    background: var(--corporate);
+    color: #fff;
+  }
+  .pager button[aria-current="page"] {
+    background: var(--corporate);
+    color: #fff;
+  }
+  .pager button[disabled] {
+    color: var(--muted);
+    border-color: var(--line);
+    cursor: default;
+  }
+</style>
+
+<script>
+  /**
+   * The catalogue's behaviour: filter, page, and keep the URL in step.
+   *
+   * It imports the very rules `tests/catalogue.test.ts` drives, so the browser
+   * cannot disagree with the tests about what matches or what page 2 holds. The
+   * cards are already in the DOM — this only decides which of them are shown.
+   */
+  import {
+    clampPage,
+    matches,
+    paginate,
+    readState,
+    withLocked,
+    writeState,
+    type CatalogueFilters,
+    type CatalogueItem,
+  } from "../lib/catalogue";
+
+  const KEYWORD_DELAY = 150;
+
+  function initCatalogue(root: HTMLElement) {
+    const pairs = Array.from(root.querySelectorAll<HTMLElement>("[data-card]")).map((card) => ({
+      card,
+      item: {
+        theme: card.dataset.theme ?? "",
+        stage: card.dataset.stage ?? "",
+        subject: card.dataset.subject ?? "",
+        haystack: card.dataset.haystack ?? "",
+      } satisfies CatalogueItem,
+    }));
+
+    const countEl = root.querySelector<HTMLElement>("[data-count]");
+    const emptyEl = root.querySelector<HTMLElement>("[data-empty]");
+    const pagerEl = root.querySelector<HTMLElement>("[data-pager]");
+    const form = root.querySelector<HTMLFormElement>("form[data-filters]");
+    const controls = Array.from(root.querySelectorAll<HTMLInputElement | HTMLSelectElement>("[data-filter]"));
+
+    const pageSize = Math.max(1, Number(root.dataset.pageSize) || 10);
+    const template = root.dataset.countTemplate ?? "";
+    const locked = JSON.parse(root.dataset.locked ?? "{}") as CatalogueFilters;
+    const defaults = JSON.parse(root.dataset.defaults ?? "{}") as CatalogueFilters;
+
+    let state = { filters: { ...defaults }, page: 1 };
+
+    /** What the controls currently say, with this page's defaults for blanks. */
+    const readControls = (): CatalogueFilters => {
+      let filters: CatalogueFilters = {};
+      for (const control of controls) {
+        const key = control.dataset.filter as keyof CatalogueFilters | undefined;
+        if (!key) continue;
+        const value = control.value.trim() || defaults[key] || "";
+        if (value) filters[key] = value;
+      }
+      return withLocked(filters, locked);
+    };
+
+    const writeControls = () => {
+      for (const control of controls) {
+        const key = control.dataset.filter as keyof CatalogueFilters | undefined;
+        if (key) control.value = state.filters[key] ?? "";
+      }
+    };
+
+    const render = (page: ReturnType<typeof paginate<(typeof pairs)[number]>>) => {
+      if (countEl) {
+        countEl.textContent = template
+          .replace("{from}", String(page.from))
+          .replace("{to}", String(page.to))
+          .replace("{total}", String(page.total));
+      }
+      if (emptyEl) emptyEl.hidden = page.total > 0;
+      if (!pagerEl) return;
+
+      pagerEl.replaceChildren();
+      if (page.pages <= 1) {
+        pagerEl.hidden = true;
+        return;
+      }
+      pagerEl.hidden = false;
+
+      const step = (glyph: string, target: number, aria: string | undefined, disabled: boolean) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = glyph;
+        if (aria) button.setAttribute("aria-label", aria);
+        button.disabled = disabled;
+        if (!disabled) {
+          button.addEventListener("click", () => {
+            state.page = target;
+            apply();
+          });
+        }
+        return button;
+      };
+
+      pagerEl.append(
+        step("←", page.page - 1, root.dataset.labelPrev, page.page === 1),
+      );
+      for (let number = 1; number <= page.pages; number += 1) {
+        const button = step(String(number), number, undefined, false);
+        if (number === page.page) {
+          button.setAttribute("aria-current", "page");
+          button.disabled = true;
+        }
+        pagerEl.append(button);
+      }
+      pagerEl.append(
+        step("→", page.page + 1, root.dataset.labelNext, page.page === page.pages),
+      );
+    };
+
+    const apply = () => {
+      const shown = pairs.filter(({ item }) => matches(item, state.filters));
+      state.page = clampPage(state.page, shown.length, pageSize);
+      const page = paginate(shown, state.page, pageSize);
+
+      for (const { card } of pairs) card.hidden = true;
+      for (const { card } of page.items) card.hidden = false;
+
+      render(page);
+
+      // The filtered view is linkable: a teacher can paste it into the staff room.
+      const query = writeState({ filters: state.filters, page: state.page });
+      window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
+    };
+
+    let keywordTimer: number | undefined;
+    for (const control of controls) {
+      control.addEventListener(control instanceof HTMLSelectElement ? "change" : "input", () => {
+        window.clearTimeout(keywordTimer);
+        const update = () => {
+          state = { filters: readControls(), page: 1 };
+          apply();
+        };
+        if (control instanceof HTMLSelectElement) update();
+        else keywordTimer = window.setTimeout(update, KEYWORD_DELAY);
+      });
+    }
+
+    form?.addEventListener("submit", (event) => event.preventDefault());
+    // A native reset restores the server-rendered defaults; read them back after.
+    form?.addEventListener("reset", () => window.setTimeout(() => {
+      state = { filters: readControls(), page: 1 };
+      apply();
+    }, 0));
+
+    // Arriving with a link: the query string beats this page's *defaults*, but
+    // never this page's locked criteria.
+    const fromUrl = readState(window.location.search, defaults);
+    state = { filters: withLocked(fromUrl.filters, locked), page: fromUrl.page };
+    writeControls();
+    apply();
+  }
+
+  for (const root of Array.from(document.querySelectorAll<HTMLElement>("[data-catalogue]"))) {
+    initCatalogue(root);
+  }
+</script>

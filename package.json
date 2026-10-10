@@ -16,7 +16,8 @@
     "check:links:external": "node scripts/check-external-links.mjs",
     "check:lang": "node scripts/check-language.mjs",
     "check:structure": "node scripts/check-structure.mjs",
-    "check:contrast": "node scripts/check-contrast.mjs"
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "check:catalogue": "node scripts/check-catalogue.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
