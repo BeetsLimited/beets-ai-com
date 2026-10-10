@@ -8,14 +8,13 @@ import {
   resourceIndexPath,
   resourcesPath,
   t,
-  themeImageAlt,
-  themeInfo,
   themeLabel,
   themePath,
   themesInOrder,
   type Locale,
 } from "../lib/i18n";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
+import ThemeCardGrid from "./ThemeCardGrid.astro";
 
 /**
  * Home page body, one language only.
@@ -160,33 +159,7 @@ const audiences = [
 <section class="themes">
   <h2>{t(lang, "homeThemesHeading")}</h2>
   <p class="lede">{t(lang, "homeThemesLede")}</p>
-  <ul class="card-grid theme-grid">
-    {
-      themes.map((theme) => (
-        <li class="card theme-card">
-          <img
-            class="card-art"
-            src={`/images/home-theme-${theme.key.toLowerCase()}.webp`}
-            alt={themeImageAlt(lang, theme.key)}
-            width="1280"
-            height="720"
-            loading="lazy"
-            decoding="async"
-          />
-          <span class="badge" aria-hidden="true">
-            {theme.key}
-          </span>
-          <h3>{theme.label}</h3>
-          <p>{themeInfo(lang, theme.key).need}</p>
-          <div class="card-cta-row">
-            <a class="btn card-cta" href={themePath(lang, theme.key)}>
-              {t(lang, "cardCtaTheme")}
-            </a>
-          </div>
-        </li>
-      ))
-    }
-  </ul>
+  <ThemeCardGrid lang={lang} themes={themes.map((theme) => theme.key)} />
 </section>
 
 <hr class="section-rule" />
@@ -298,8 +271,7 @@ const audiences = [
   .section-head h2 {
     margin: 0;
   }
-  .aud-grid h3,
-  .theme-card h3 {
+  .aud-grid h3 {
     margin: 0.35rem 0 0.4rem;
     font-size: 1.2rem;
   }
@@ -307,27 +279,6 @@ const audiences = [
     margin: 0 0 0.75rem;
     color: #333;
     font-size: 0.95rem;
-  }
-  .theme-card .badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 999px;
-    background: var(--accent-tint);
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 0.9rem;
-  }
-  .theme-card h3 {
-    margin: 0.6rem 0 0.3rem;
-    font-size: 1.1rem;
-  }
-  .theme-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.92rem;
   }
   .newest-grid h3 {
     margin: 0 0 0.3rem;

@@ -4,12 +4,15 @@ import { isPublished } from "../lib/review-gate";
 import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
 import {
+  FACETS,
   PAGE_SIZE,
   filterItems,
   filterOptions,
   haystackFor,
   paginate,
+  type CatalogueFacet,
   type CatalogueFilters,
+  type CatalogueLocked,
 } from "../lib/catalogue";
 
 /**
@@ -21,10 +24,14 @@ import {
  *   <ResourceCatalogueView lang={lang} locked={{ theme: "A" }}     ← /by-theme/school-planning/
  *                          heading={themeLabel(lang, "A")} />
  *
- * `locked` criteria are held fixed and shown as a chip, not as a control the
- * reader can contradict. `initial` criteria are pre-selected but the reader can
- * change them. So a theme page and the full index share one UI while only
- * differing in what they start with.
+ * `locked` criteria are held fixed and shown as a chip, not as tags the reader
+ * can contradict. `initial` criteria are pre-selected but the reader can change
+ * them. So a theme page and the full index share one UI while only differing in
+ * what they start with.
+ *
+ * Criteria are chosen as TAGS, and a group can hold several: tags inside a group
+ * are OR-ed (科學 + 數學 → either), groups are AND-ed with each other. The UI says
+ * so rather than leaving the reader to guess.
  *
  * **Every card is in the HTML.** The filtering and paging below are applied by a
  * small script that HIDES cards it was already given — never by fetching them.
@@ -37,8 +44,8 @@ interface Props {
   /** Defaults to the resource-index copy. */
   heading?: string;
   lede?: string;
-  /** Criteria this page fixes. Rendered as a chip, never as a control. */
-  locked?: { theme?: string; stage?: string; subject?: string };
+  /** Criteria this page fixes. Rendered as a chip, never as tags. */
+  locked?: CatalogueLocked;
   /** Criteria pre-selected but still changeable. */
   initial?: CatalogueFilters;
   pageSize?: number;
@@ -75,7 +82,10 @@ const items = published.map((entry) => ({
 
 const options = filterOptions(items);
 /** What this page starts with: its locked criteria, then its pre-selections. */
-const defaults: CatalogueFilters = { ...locked, ...initial };
+const defaults: CatalogueFilters = { ...initial };
+for (const facet of FACETS) {
+  if (locked[facet]) defaults[facet] = [locked[facet] as string];
+}
 const firstPage = paginate(filterItems(items, defaults), 1, pageSize);
 
 const countText = (from: number, to: number, total: number) =>
@@ -85,26 +95,44 @@ const countText = (from: number, to: number, total: number) =>
     .replace("{total}", String(total));
 
 /**
- * A control is only rendered when it can change the result: not locked, and with
- * more than one value to choose from. A page narrowed to one theme shows no theme
- * dropdown, because a dropdown with a single option is a lie about choice.
+ * One tag group per facet, and only when it can change the result: a locked facet
+ * is shown as a chip instead, and a facet with a single value offers nothing to
+ * choose between.
  */
-const showTheme = !locked.theme && options.themes.length > 1;
-const showStage = !locked.stage && options.stages.length > 1;
-const showSubject = !locked.subject && options.subjects.length > 1;
+const tagGroups = [
+  {
+    facet: "theme" as CatalogueFacet,
+    label: t(lang, "catalogueFilterTheme"),
+    values: options.themes,
+    localise: (value: string) => themeLabel(lang, value),
+  },
+  {
+    facet: "stage" as CatalogueFacet,
+    label: t(lang, "catalogueFilterStage"),
+    values: options.stages,
+    localise: (value: string) => value,
+  },
+  {
+    facet: "subject" as CatalogueFacet,
+    label: t(lang, "catalogueFilterSubject"),
+    values: options.subjects,
+    localise: (value: string) => value,
+  },
+].filter((group) => !locked[group.facet] && group.values.length > 1);
 
-const lockedChips = (
-  [
-    ["theme", locked.theme, t(lang, "catalogueFilterTheme")],
-    ["stage", locked.stage, t(lang, "catalogueFilterStage")],
-    ["subject", locked.subject, t(lang, "catalogueFilterSubject")],
-  ] as const
-)
-  .filter(([, value]) => Boolean(value))
-  .map(([key, value, label]) => ({
-    key,
-    label,
-    value: key === "theme" ? themeLabel(lang, value as string) : (value as string),
+const lockedChips = [
+  { facet: "theme" as CatalogueFacet, label: t(lang, "catalogueFilterTheme"), value: locked.theme },
+  { facet: "stage" as CatalogueFacet, label: t(lang, "catalogueFilterStage"), value: locked.stage },
+  {
+    facet: "subject" as CatalogueFacet,
+    label: t(lang, "catalogueFilterSubject"),
+    value: locked.subject,
+  },
+]
+  .filter((chip) => Boolean(chip.value))
+  .map((chip) => ({
+    ...chip,
+    display: chip.facet === "theme" ? themeLabel(lang, chip.value as string) : (chip.value as string),
   }));
 ---
 
@@ -124,13 +152,14 @@ const lockedChips = (
 
   <form class="filters" data-filters>
     <h2 class="filters-title">{t(lang, "catalogueSearchHeading")}</h2>
+    <p class="filters-hint">{t(lang, "catalogueMultiHint")}</p>
 
     {
       lockedChips.length > 0 ? (
         <ul class="chips">
           {lockedChips.map((chip) => (
             <li class="chip">
-              {chip.label}：<strong>{chip.value}</strong>
+              {chip.label}：<strong>{chip.display}</strong>
               <span class="muted"> · {t(lang, "catalogueLockedNote")}</span>
             </li>
           ))}
@@ -138,52 +167,34 @@ const lockedChips = (
       ) : null
     }
 
+    {
+      tagGroups.map((group) => (
+        <div class="tag-group" role="group" aria-label={group.label}>
+          <p class="tag-label">{group.label}</p>
+          <ul class="tags">
+            {group.values.map((value) => {
+              const pressed = (defaults[group.facet] ?? []).includes(value);
+              return (
+                <li>
+                  <button
+                    type="button"
+                    class="tag"
+                    data-tag
+                    data-facet={group.facet}
+                    data-value={value}
+                    aria-pressed={pressed ? "true" : "false"}
+                  >
+                    {group.localise(value)}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))
+    }
+
     <div class="filter-row">
-      {
-        showTheme ? (
-          <label class="filter-field">
-            {t(lang, "catalogueFilterTheme")}
-            <select data-filter="theme">
-              <option value="">{t(lang, "catalogueFilterAll")}</option>
-              {options.themes.map((value) => (
-                <option value={value} selected={defaults.theme === value}>
-                  {themeLabel(lang, value)}
-                </option>
-              ))}
-            </select>
-          </label>
-        ) : null
-      }
-      {
-        showStage ? (
-          <label class="filter-field">
-            {t(lang, "catalogueFilterStage")}
-            <select data-filter="stage">
-              <option value="">{t(lang, "catalogueFilterAll")}</option>
-              {options.stages.map((value) => (
-                <option value={value} selected={defaults.stage === value}>
-                  {value}
-                </option>
-              ))}
-            </select>
-          </label>
-        ) : null
-      }
-      {
-        showSubject ? (
-          <label class="filter-field">
-            {t(lang, "catalogueFilterSubject")}
-            <select data-filter="subject">
-              <option value="">{t(lang, "catalogueFilterAll")}</option>
-              {options.subjects.map((value) => (
-                <option value={value} selected={defaults.subject === value}>
-                  {value}
-                </option>
-              ))}
-            </select>
-          </label>
-        ) : null
-      }
       <label class="filter-field filter-search">
         {t(lang, "catalogueFilterKeyword")}
         <input
@@ -203,7 +214,7 @@ const lockedChips = (
     {countText(firstPage.from, firstPage.to, firstPage.total)}
   </p>
 
-  <ul class="card-grid" data-grid>
+  <ul class="card-grid catalogue-grid" data-grid>
     {
       items.map((item) => (
         <li
@@ -259,18 +270,64 @@ const lockedChips = (
   .filters {
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 1.25rem 1.4rem;
+    padding: 1.25rem 1.4rem 1.15rem;
     margin: 1.5rem 0 1.25rem;
   }
   .filters-title {
-    margin: 0 0 0.9rem;
+    margin: 0 0 0.35rem;
     font-size: 1.05rem;
+  }
+  .filters-hint {
+    margin: 0 0 1.1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .tag-group {
+    margin: 0 0 0.9rem;
+  }
+  .tag-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  /* A tag is the standard button as a toggle: white fill and corporate text when
+     unselected, corporate fill and white text when selected. */
+  .tag {
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    cursor: pointer;
+    color: var(--corporate);
+    background: #fff;
+    border: 1px solid var(--corporate);
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .tag:hover {
+    background: var(--corporate-tint);
+  }
+  .tag[aria-pressed="true"] {
+    background: var(--corporate);
+    color: #fff;
   }
   .filter-row {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     gap: 0.9rem 1.1rem;
+    margin-top: 0.35rem;
   }
   .filter-field {
     display: flex;
@@ -281,7 +338,6 @@ const lockedChips = (
     color: var(--muted);
     letter-spacing: 0.02em;
   }
-  .filter-field select,
   .filter-field input {
     font-family: inherit;
     font-size: 0.95rem;
@@ -291,12 +347,8 @@ const lockedChips = (
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 0.5rem 0.7rem;
-    min-width: 9.5rem;
-  }
-  .filter-field input {
     min-width: 15rem;
   }
-  .filter-field select:focus-visible,
   .filter-field input:focus-visible {
     outline: 2px solid var(--corporate);
     outline-offset: 1px;
@@ -321,6 +373,57 @@ const lockedChips = (
     padding: 0.3rem 0.9rem;
     font-size: 0.85rem;
   }
+
+  /* ── Five across: ten resources are two rows, and paging shows the next ten ──
+     The column count is ENCODED, not left to auto-fit: in this container
+     auto-fit silently yields four columns, which is a different page. */
+  .catalogue-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  /* A 160px card needs its own rhythm: the site-wide card padding and type sizes
+     are set for three across. */
+  .catalogue-grid .card {
+    padding: 0.9rem 0.95rem;
+  }
+  .catalogue-grid .card-art {
+    margin-bottom: 0.6rem;
+    border-radius: 12px;
+  }
+  .catalogue-grid .card h3 {
+    margin: 0.25rem 0 0.3rem;
+    font-size: 0.95rem;
+  }
+  .catalogue-grid .card .meta {
+    font-size: 0.8rem;
+  }
+  .catalogue-grid .card-cta-row {
+    margin-top: 0.65rem;
+  }
+  .catalogue-grid .card-cta {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.82rem;
+  }
+  @media (max-width: 60rem) {
+    .catalogue-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 48rem) {
+    .catalogue-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 36rem) {
+    .catalogue-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 26rem) {
+    .catalogue-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .catalogue-count {
     margin: 0 0 0.5rem;
     color: var(--muted);
@@ -365,7 +468,8 @@ const lockedChips = (
 
 <script>
   /**
-   * The catalogue's behaviour: filter, page, and keep the URL in step.
+   * The catalogue's behaviour: toggle tags, filter, page, and keep the URL in
+   * step.
    *
    * It imports the very rules `tests/catalogue.test.ts` drives, so the browser
    * cannot disagree with the tests about what matches or what page 2 holds. The
@@ -376,10 +480,13 @@ const lockedChips = (
     matches,
     paginate,
     readState,
+    toggleValue,
     withLocked,
     writeState,
+    type CatalogueFacet,
     type CatalogueFilters,
     type CatalogueItem,
+    type CatalogueLocked,
   } from "../lib/catalogue";
 
   const KEYWORD_DELAY = 150;
@@ -395,36 +502,43 @@ const lockedChips = (
       } satisfies CatalogueItem,
     }));
 
+    const tags = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-tag]"));
+    const keyword = root.querySelector<HTMLInputElement>('input[data-filter="q"]');
     const countEl = root.querySelector<HTMLElement>("[data-count]");
     const emptyEl = root.querySelector<HTMLElement>("[data-empty]");
     const pagerEl = root.querySelector<HTMLElement>("[data-pager]");
     const form = root.querySelector<HTMLFormElement>("form[data-filters]");
-    const controls = Array.from(root.querySelectorAll<HTMLInputElement | HTMLSelectElement>("[data-filter]"));
 
     const pageSize = Math.max(1, Number(root.dataset.pageSize) || 10);
     const template = root.dataset.countTemplate ?? "";
-    const locked = JSON.parse(root.dataset.locked ?? "{}") as CatalogueFilters;
-    const defaults = JSON.parse(root.dataset.defaults ?? "{}") as CatalogueFilters;
+    const locked = JSON.parse(root.dataset.locked ?? "{}") as CatalogueLocked;
 
-    let state = { filters: { ...defaults }, page: 1 };
+    let state: { filters: CatalogueFilters; page: number } = { filters: {}, page: 1 };
 
-    /** What the controls currently say, with this page's defaults for blanks. */
+    /** What the tags and the keyword box currently say. */
     const readControls = (): CatalogueFilters => {
-      let filters: CatalogueFilters = {};
-      for (const control of controls) {
-        const key = control.dataset.filter as keyof CatalogueFilters | undefined;
-        if (!key) continue;
-        const value = control.value.trim() || defaults[key] || "";
-        if (value) filters[key] = value;
+      const filters: CatalogueFilters = {};
+      for (const tag of tags) {
+        const facet = tag.dataset.facet as CatalogueFacet | undefined;
+        const value = tag.dataset.value ?? "";
+        if (!facet || !value || tag.getAttribute("aria-pressed") !== "true") continue;
+        filters[facet] = [...(filters[facet] ?? []), value];
       }
+      const query = keyword?.value.trim();
+      if (query) filters.q = query;
+      // A locked facet is never read from the tags: the page owns it.
       return withLocked(filters, locked);
     };
 
+    /** Paint the controls from the state. */
     const writeControls = () => {
-      for (const control of controls) {
-        const key = control.dataset.filter as keyof CatalogueFilters | undefined;
-        if (key) control.value = state.filters[key] ?? "";
+      for (const tag of tags) {
+        const facet = tag.dataset.facet as CatalogueFacet | undefined;
+        if (!facet) continue;
+        const selected = (state.filters[facet] ?? []).includes(tag.dataset.value ?? "");
+        tag.setAttribute("aria-pressed", selected ? "true" : "false");
       }
+      if (keyword) keyword.value = state.filters.q ?? "";
     };
 
     const render = (page: ReturnType<typeof paginate<(typeof pairs)[number]>>) => {
@@ -459,9 +573,7 @@ const lockedChips = (
         return button;
       };
 
-      pagerEl.append(
-        step("←", page.page - 1, root.dataset.labelPrev, page.page === 1),
-      );
+      pagerEl.append(step("←", page.page - 1, root.dataset.labelPrev, page.page === 1));
       for (let number = 1; number <= page.pages; number += 1) {
         const button = step(String(number), number, undefined, false);
         if (number === page.page) {
@@ -470,9 +582,7 @@ const lockedChips = (
         }
         pagerEl.append(button);
       }
-      pagerEl.append(
-        step("→", page.page + 1, root.dataset.labelNext, page.page === page.pages),
-      );
+      pagerEl.append(step("→", page.page + 1, root.dataset.labelNext, page.page === page.pages));
     };
 
     const apply = () => {
@@ -490,29 +600,51 @@ const lockedChips = (
       window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
     };
 
-    let keywordTimer: number | undefined;
-    for (const control of controls) {
-      control.addEventListener(control instanceof HTMLSelectElement ? "change" : "input", () => {
-        window.clearTimeout(keywordTimer);
-        const update = () => {
-          state = { filters: readControls(), page: 1 };
-          apply();
-        };
-        if (control instanceof HTMLSelectElement) update();
-        else keywordTimer = window.setTimeout(update, KEYWORD_DELAY);
-      });
-    }
-
-    form?.addEventListener("submit", (event) => event.preventDefault());
-    // A native reset restores the server-rendered defaults; read them back after.
-    form?.addEventListener("reset", () => window.setTimeout(() => {
+    const update = () => {
       state = { filters: readControls(), page: 1 };
       apply();
-    }, 0));
+    };
+
+    /**
+     * Clicking a tag toggles it. `aria-pressed` on a <button> is NOT flipped by
+     * the browser — nothing happens unless we flip it — so the click is turned
+     * into state first and the tags are painted back from that state. The toggle
+     * itself is `toggleValue`, the same function the tests drive.
+     */
+    const toggleTag = (tag: HTMLButtonElement) => {
+      const facet = tag.dataset.facet as CatalogueFacet | undefined;
+      const value = tag.dataset.value ?? "";
+      if (!facet || !value) return;
+      const filters = readControls();
+      filters[facet] = toggleValue(filters[facet], value);
+      state = { filters: withLocked(filters, locked), page: 1 };
+      writeControls();
+      apply();
+    };
+
+    for (const tag of tags) tag.addEventListener("click", () => toggleTag(tag));
+
+    let keywordTimer: number | undefined;
+    keyword?.addEventListener("input", () => {
+      window.clearTimeout(keywordTimer);
+      keywordTimer = window.setTimeout(update, KEYWORD_DELAY);
+    });
+
+    form?.addEventListener("submit", (event) => event.preventDefault());
+    /**
+     * A native reset clears the keyword box, but the tags are buttons and know
+     * nothing about it — so unpress them here, after the browser has finished.
+     */
+    form?.addEventListener("reset", () =>
+      window.setTimeout(() => {
+        for (const tag of tags) tag.setAttribute("aria-pressed", "false");
+        update();
+      }, 0),
+    );
 
     // Arriving with a link: the query string beats this page's *defaults*, but
     // never this page's locked criteria.
-    const fromUrl = readState(window.location.search, defaults);
+    const fromUrl = readState(window.location.search, readControls());
     state = { filters: withLocked(fromUrl.filters, locked), page: fromUrl.page };
     writeControls();
     apply();

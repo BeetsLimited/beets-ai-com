@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import {
   PAGE_SIZE,
   clampPage,
+  facetMatches,
   filterItems,
   filterOptions,
   haystackFor,
@@ -10,6 +11,7 @@ import {
   pageCount,
   paginate,
   readState,
+  toggleValue,
   withLocked,
   writeState,
   type CatalogueItem,
@@ -21,6 +23,9 @@ import {
  * not show. So "which cards are visible" is decided by these functions — and if
  * one of them is wrong, the page lies about the catalogue in a way no gate looks
  * for. They are therefore pinned here rather than left to the browser.
+ *
+ * The selection rule is the one most easily got wrong: tags inside a group are
+ * OR-ed, groups are AND-ed with each other.
  */
 
 const item = (over: Partial<CatalogueItem> = {}): CatalogueItem => ({
@@ -43,18 +48,38 @@ describe("haystackFor / normaliseQuery", () => {
   });
 });
 
+describe("facetMatches", () => {
+  it("treats an empty selection as no opinion", () => {
+    expect(facetMatches(undefined, "D")).toBe(true);
+    expect(facetMatches([], "D")).toBe(true);
+  });
+
+  it("accepts any of the selected values — OR inside a group", () => {
+    expect(facetMatches(["A", "D"], "D")).toBe(true);
+    expect(facetMatches(["A", "D"], "C")).toBe(false);
+  });
+});
+
 describe("matches", () => {
-  it("matches everything when no filter is set", () => {
+  it("matches everything when nothing is selected", () => {
     expect(matches(item(), {})).toBe(true);
   });
 
-  it("compares theme, stage and subject exactly", () => {
-    expect(matches(item(), { theme: "D" })).toBe(true);
-    expect(matches(item(), { theme: "A" })).toBe(false);
-    expect(matches(item(), { stage: "P4-P6" })).toBe(true);
-    expect(matches(item(), { stage: "P4" })).toBe(false);
-    expect(matches(item(), { subject: "科學" })).toBe(true);
-    expect(matches(item(), { subject: "數學" })).toBe(false);
+  it("ORs the tags inside one group", () => {
+    expect(matches(item(), { theme: ["D"] })).toBe(true);
+    expect(matches(item(), { theme: ["A", "D"] })).toBe(true);
+    expect(matches(item(), { theme: ["A", "B"] })).toBe(false);
+    expect(matches(item(), { stage: ["P4-P6", "S1-S3"] })).toBe(true);
+    expect(matches(item(), { subject: ["科學", "數學"] })).toBe(true);
+    expect(matches(item(), { subject: ["數學"] })).toBe(false);
+  });
+
+  it("ANDs the groups with each other", () => {
+    // 科學 + P4-P6: both hold → shown. 科學 + (another theme) → not shown.
+    expect(matches(item(), { theme: ["D"], stage: ["P4-P6"], subject: ["科學"] })).toBe(true);
+    expect(matches(item(), { theme: ["A"], stage: ["P4-P6"], subject: ["科學"] })).toBe(false);
+    expect(matches(item(), { theme: ["D"], stage: ["S1-S3"] })).toBe(false);
+    expect(matches(item(), { theme: ["D"], subject: ["數學"] })).toBe(false);
   });
 
   it("searches the keyword case-insensitively, including in Chinese", () => {
@@ -66,23 +91,63 @@ describe("matches", () => {
     expect(matches(english, { q: "  campus " })).toBe(true);
   });
 
-  it("requires every set filter to hold", () => {
-    expect(matches(item(), { theme: "D", stage: "P4-P6", q: "植物" })).toBe(true);
-    expect(matches(item(), { theme: "D", stage: "S1-S3", q: "植物" })).toBe(false);
+  it("ANDs the keyword with the tags", () => {
+    expect(matches(item(), { theme: ["D"], q: "植物" })).toBe(true);
+    expect(matches(item(), { theme: ["A"], q: "植物" })).toBe(false);
   });
 });
 
 describe("filterItems", () => {
+  const items = [
+    item({ stage: "P4-P6" }),
+    item({ stage: "S1-S3", subject: "人文", haystack: "深偽應對遊戲" }),
+    item({ theme: "A", stage: "P1-P6", subject: "校本規劃", haystack: "學期規劃" }),
+  ];
+
   it("keeps only the matching items", () => {
-    const items = [
-      item({ stage: "P4-P6" }),
-      item({ stage: "S1-S3", haystack: "深偽應對遊戲" }),
-      item({ theme: "A", stage: "P1-P6", haystack: "學期規劃" }),
-    ];
     expect(filterItems(items, {}).length).toBe(3);
-    expect(filterItems(items, { theme: "A" }).map((i) => i.stage)).toEqual(["P1-P6"]);
+    expect(filterItems(items, { theme: ["A"] }).map((i) => i.stage)).toEqual(["P1-P6"]);
     expect(filterItems(items, { q: "規劃" }).length).toBe(1);
     expect(filterItems(items, { q: "nothing here" })).toEqual([]);
+  });
+
+  it("unions a multi-tag group and intersects the groups", () => {
+    // 科學 OR 人文 → two items; narrowed to S1-S3 → one.
+    expect(filterItems(items, { subject: ["科學", "人文"] }).length).toBe(2);
+    expect(filterItems(items, { subject: ["科學", "人文"], stage: ["S1-S3"] }).length).toBe(1);
+  });
+});
+
+describe("toggleValue", () => {
+  it("adds an unselected tag", () => {
+    expect(toggleValue(undefined, "A")).toEqual(["A"]);
+    expect(toggleValue(["A"], "D")).toEqual(["A", "D"]);
+  });
+
+  it("removes a selected tag, including the last one", () => {
+    expect(toggleValue(["A", "D"], "A")).toEqual(["D"]);
+    expect(toggleValue(["A"], "A")).toEqual([]);
+  });
+});
+
+describe("withLocked", () => {
+  it("a locked criterion wins over the reader's own choice", () => {
+    // The defect this pins: the school-planning page rendered theme-C resources
+    // under a 校本 AI 教育規劃 heading when the URL said ?theme=C.
+    expect(withLocked({ theme: ["C"] }, { theme: "A" }).theme).toEqual(["A"]);
+    expect(withLocked({ theme: ["C", "D"] }, { theme: "A" }).theme).toEqual(["A"]);
+  });
+
+  it("leaves the facets the page does not lock", () => {
+    expect(withLocked({ theme: ["C"], stage: ["P4-P6"], q: "植物" }, { theme: "A" })).toEqual({
+      theme: ["A"],
+      stage: ["P4-P6"],
+      q: "植物",
+    });
+  });
+
+  it("is a no-op for a page that locks nothing", () => {
+    expect(withLocked({ theme: ["C"] }, {})).toEqual({ theme: ["C"] });
   });
 });
 
@@ -150,37 +215,29 @@ describe("filterOptions", () => {
   });
 });
 
-describe("withLocked", () => {
-  it("a locked criterion wins over the reader's own choice", () => {
-    // The defect this pins: the school-planning page rendered theme-C resources
-    // under a 校本 AI 教育規劃 heading when the URL said ?theme=C.
-    expect(withLocked({ theme: "C" }, { theme: "A" }).theme).toBe("A");
-  });
-
-  it("leaves the reader's criteria that the page does not lock", () => {
-    expect(withLocked({ theme: "C", stage: "P4-P6", q: "植物" }, { theme: "A" })).toEqual({
-      theme: "A",
-      stage: "P4-P6",
-      q: "植物",
-    });
-  });
-
-  it("is a no-op for a page that locks nothing", () => {
-    expect(withLocked({ theme: "C" }, {})).toEqual({ theme: "C" });
-  });
-});
-
 describe("URL state", () => {
-  it("reads filters and a page out of a query string", () => {
-    const state = readState("?theme=A&stage=P4-P6&q=%E6%A4%8D%E7%89%A9&page=2");
-    expect(state.filters).toEqual({ theme: "A", stage: "P4-P6", subject: undefined, q: "植物" });
+  it("reads a facet selected twice as a two-tag group", () => {
+    const state = readState("?theme=A&theme=D&stage=P4-P6");
+    expect(state.filters.theme).toEqual(["A", "D"]);
+    expect(state.filters.stage).toEqual(["P4-P6"]);
+    expect(state.filters.subject).toBeUndefined();
+  });
+
+  it("also accepts a comma-separated facet, for a hand-written link", () => {
+    expect(readState("?theme=A,D").filters.theme).toEqual(["A", "D"]);
+    expect(readState("?theme=A,A").filters.theme).toEqual(["A"]);
+  });
+
+  it("reads the keyword and the page", () => {
+    const state = readState(`?q=${encodeURIComponent("植物")}&page=2`);
+    expect(state.filters.q).toBe("植物");
     expect(state.page).toBe(2);
   });
 
   it("falls back to the page's defaults when a parameter is absent or blank", () => {
-    const state = readState("?stage=", { theme: "A", stage: "P4-P6" });
-    expect(state.filters.theme).toBe("A"); // absent → default
-    expect(state.filters.stage).toBe("P4-P6"); // blank → default
+    const state = readState("?stage=", { theme: ["A"], stage: ["P4-P6"] });
+    expect(state.filters.theme).toEqual(["A"]); // absent → default
+    expect(state.filters.stage).toEqual(["P4-P6"]); // blank → default
     expect(state.page).toBe(1);
   });
 
@@ -189,17 +246,18 @@ describe("URL state", () => {
     expect(readState("?page=-2").page).toBe(1);
   });
 
-  it("writes only the filters that are set, and the page only when it matters", () => {
+  it("writes only what is selected, and the page only when it matters", () => {
     expect(writeState({ filters: {}, page: 1 })).toBe("");
-    expect(writeState({ filters: { theme: "A" }, page: 1 })).toBe("theme=A");
-    expect(writeState({ filters: { theme: "A", q: "植物" }, page: 3 })).toBe(
-      `theme=A&q=${encodeURIComponent("植物")}&page=3`,
-    );
-    expect(writeState({ filters: { stage: "  " }, page: 1 })).toBe("");
+    expect(writeState({ filters: { theme: ["A"] }, page: 1 })).toBe("theme=A");
+    expect(writeState({ filters: { theme: ["A", "D"] }, page: 3 })).toBe("theme=A&theme=D&page=3");
+    expect(writeState({ filters: { stage: ["  "] }, page: 1 })).toBe("");
   });
 
   it("round-trips through a query string", () => {
-    const state = { filters: { theme: "D", stage: "P4-P6", subject: "科學", q: "植物" }, page: 4 };
+    const state = {
+      filters: { theme: ["A", "D"], stage: ["P4-P6"], subject: ["科學"], q: "植物" },
+      page: 4,
+    };
     const back = readState(writeState(state));
     expect(back.filters).toEqual(state.filters);
     expect(back.page).toBe(4);

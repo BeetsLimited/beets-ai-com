@@ -1,9 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import { isPublished } from "../lib/review-gate";
-import { t, themeInfo, themePath, themesInOrder, type Locale } from "../lib/i18n";
+import { t, themesInOrder, type Locale } from "../lib/i18n";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
 import ResourceCatalogueView from "./ResourceCatalogueView.astro";
+import ThemeCardGrid from "./ThemeCardGrid.astro";
 
 /**
  * The /resources/ page body — the catalogue, then the theme routes.
@@ -41,14 +42,7 @@ const liveThemes = themesInOrder(lang).filter((theme) =>
   liveThemes.length > 0 ? (
     <section class="theme-routes">
       <h2>{t(lang, "resourcesThemesHeading")}</h2>
-      <ul class="cards">
-        {liveThemes.map((theme) => (
-          <li>
-            <a href={themePath(lang, theme.key)}>{theme.label}</a>
-            <div class="meta">{themeInfo(lang, theme.key).need}</div>
-          </li>
-        ))}
-      </ul>
+      <ThemeCardGrid lang={lang} themes={liveThemes.map((theme) => theme.key)} />
     </section>
   ) : null
 }

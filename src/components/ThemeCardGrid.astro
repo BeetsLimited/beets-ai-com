@@ -1,0 +1,89 @@
+---
+import { t, themeImageAlt, themeInfo, themeLabel, themePath, type Locale } from "../lib/i18n";
+import type { Theme } from "../lib/schema";
+
+/**
+ * The theme cards — the homepage's 「五大主題」 grid and the resource index's
+ * 「按主題瀏覽」 are the SAME block, so a visitor meets one design for the themes
+ * instead of two designs for the same five things.
+ *
+ * The caller decides which themes to show (the homepage lists them all, the index
+ * only those with material) and supplies its own heading. This component is just
+ * the presentation, and it is the only place the theme-card markup lives.
+ */
+interface Props {
+  lang: Locale;
+  /** Theme keys to render, in order. */
+  themes: Theme[];
+  /** CTA label; defaults to 「瀏覽此主題」 / "Browse this theme". */
+  cta?: string;
+}
+const { lang, themes, cta = t(lang, "cardCtaTheme") } = Astro.props;
+---
+
+<ul class="card-grid theme-grid">
+  {
+    themes.map((theme) => (
+      <li class="card theme-card">
+        <img
+          class="card-art"
+          src={`/images/home-theme-${theme.toLowerCase()}.webp`}
+          alt={themeImageAlt(lang, theme)}
+          width="1280"
+          height="720"
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="badge" aria-hidden="true">
+          {theme}
+        </span>
+        <h3>{themeLabel(lang, theme)}</h3>
+        <p>{themeInfo(lang, theme).need}</p>
+        <div class="card-cta-row">
+          <a class="btn card-cta" href={themePath(lang, theme)}>
+            {cta}
+          </a>
+        </div>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  /* Three across — the count is encoded rather than left to auto-fit, so the
+     homepage and the index cannot disagree about the layout. */
+  .theme-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background: var(--accent-tint);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .theme-card h3 {
+    margin: 0.6rem 0 0.3rem;
+    font-size: 1.1rem;
+  }
+  .theme-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  @media (max-width: 48rem) {
+    .theme-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 30rem) {
+    .theme-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
