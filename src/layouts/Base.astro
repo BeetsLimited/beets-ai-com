@@ -187,41 +187,45 @@ const liveResources = (
           <span class="mark">BEETS</span><span class="mark-alt">AI</span>
         </a>
         <div class="headright">
-          <nav aria-label="BEETS AI">
-            <a href={resourceIndexPath(lang)}>{t(lang, "navResources")}</a>
-            {/* The five theme pages live in one menu. Their labels are long — the
-                longest is ten characters — so five of them in the row beside the
-                brand and the language switch would not fit on a desktop and would
-                wrap to three lines on a phone. The trigger is a real link to the
-                themes overview rather than a button that does nothing without
-                JavaScript; the menu opens on hover and on keyboard focus, and the
-                footer lists the same five links so nothing is hover-only. */}
-            <div class="nav-group">
-              <a class="nav-trigger" href={`${resourceIndexPath(lang)}#themes`}>
-                {t(lang, "navThemes")}
-                <span class="nav-chevron" aria-hidden="true">▾</span>
-              </a>
-              <ul class="nav-menu">
-                {THEMES.map((theme) => (
-                  <li>
-                    <a
-                      href={themePath(lang, theme)}
-                      aria-current={Astro.url.pathname === themePath(lang, theme) ? "page" : undefined}
-                    >
-                      {themeLabel(lang, theme)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <a href={localizePath("/about/", lang)}>{t(lang, "navAbout")}</a>
-          </nav>
           {
             multilingual ? (
               <LanguageSwitch current={lang} href={switchHref} />
             ) : null
           }
         </div>
+        {/*
+          The five themes are TOP-LEVEL items, not a submenu (Billy, 2026-10-10).
+          They were briefly collapsed under 五大主題; hiding the site's five main
+          sections behind a hover was the wrong trade, and the trigger linked
+          somewhere other than what its label said.
+
+          Seven items do not fit in the row beside the brand and the language
+          switch, so the nav is its own row in the masthead and wraps from there.
+          The order is the order a visitor needs: everything free, then the five
+          themes, then about.
+        */}
+        <nav aria-label="BEETS AI" class="site-nav">
+          <a
+            href={resourceIndexPath(lang)}
+            aria-current={Astro.url.pathname === resourceIndexPath(lang) ? "page" : undefined}
+          >
+            {t(lang, "navResources")}
+          </a>
+          {THEMES.map((theme) => (
+            <a
+              href={themePath(lang, theme)}
+              aria-current={Astro.url.pathname === themePath(lang, theme) ? "page" : undefined}
+            >
+              {themeLabel(lang, theme)}
+            </a>
+          ))}
+          <a
+            href={localizePath("/about/", lang)}
+            aria-current={Astro.url.pathname === localizePath("/about/", lang) ? "page" : undefined}
+          >
+            {t(lang, "navAbout")}
+          </a>
+        </nav>
       </div>
     </header>
 
@@ -234,15 +238,6 @@ const liveResources = (
     <footer class="site">
       <div class="wrap">
         <p>{t(lang, "footerDisclaimer")}</p>
-        <p class="muted footer-themes">
-          {t(lang, "navThemes")} ·{" "}
-          {THEMES.map((theme, index) => (
-            <>
-              {index > 0 ? " · " : ""}
-              <a href={themePath(lang, theme)}>{themeLabel(lang, theme)}</a>
-            </>
-          ))}
-        </p>
         <p class="muted">
           © Beets Limited · <a href={localizePath("/about/", lang)}>{t(lang, "footerTerms")}</a> ·{" "}
           <a href={feedbackPath(lang)}>{t(lang, "footerFeedback")}</a> ·{" "}
@@ -336,9 +331,9 @@ const liveResources = (
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        gap: 0.6rem 1rem;
+        padding-top: 0.85rem;
+        padding-bottom: 0.7rem;
         flex-wrap: wrap;
       }
       .headright {
@@ -381,55 +376,31 @@ const liveResources = (
         text-decoration: underline;
         text-underline-offset: 4px;
       }
-      .nav-group {
-        position: relative;
-        display: inline-block;
+      /*
+        The nav is its own row in the masthead. Seven items — 免費資源, the five
+        themes, 關於 — do not fit in the row beside the brand and the language
+        switch, so it takes a full-width line and wraps from there. That is why
+        the header is a two-row masthead rather than a single bar: every item
+        stays visible, and a phone gets two or three tidy lines instead of a
+        hamburger the site has no JavaScript to open.
+      */
+      header.site .site-nav {
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.3rem 1.15rem;
+        margin-top: 0.1rem;
       }
-      .nav-chevron {
-        font-size: 0.7em;
-        margin-left: 0.15em;
-      }
-      /* Opens on hover, and on focus-within so the keyboard reaches the five
-         links by tabbing. The box starts a little above the trigger so that
-         moving the pointer down from the link never crosses a gap and closes it. */
-      .nav-menu {
-        display: none;
-        position: absolute;
-        top: calc(100% - 0.35rem);
-        left: 0;
-        z-index: 30;
-        list-style: none;
-        margin: 0;
-        padding: 0.35rem 0;
-        min-width: 13rem;
-        max-width: min(22rem, calc(100vw - 2rem));
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        text-align: left;
-      }
-      .nav-group:hover .nav-menu,
-      .nav-group:focus-within .nav-menu {
-        display: block;
-      }
-      .nav-menu a {
-        display: block;
+      .site-nav a {
         margin-left: 0;
-        padding: 0.5rem 1rem;
-        font-weight: 600;
-        white-space: nowrap;
+        font-size: 0.93rem;
       }
-      .nav-menu a:hover,
-      .nav-menu a:focus-visible {
-        background: var(--accent-tint);
-        text-decoration: none;
-      }
-      .nav-menu a[aria-current="page"] {
+      /* The page you are on, marked in the nav. */
+      .site-nav a[aria-current="page"] {
         color: var(--accent);
-      }
-      .footer-themes {
-        margin-top: 0.6rem;
+        text-decoration: underline;
+        text-underline-offset: 4px;
       }
 
       /* ── Typography ───────────────────────────────────────────────────── */
