@@ -1,0 +1,49 @@
+{
+  "_comment": "Prompts for the beets-ai.com HOME page artwork (site hero + 3 audience cards + 5 theme cards). Same house style and same skin-tone clause as scripts/hero-prompts.json — see the skill beets-ai-blog-images / references/educational-style.md. Kept in the repo so an image can be REGENERATED rather than re-invented. Extra rule learned on the resource heroes: no screens, boards, grids, books or documents with writing on them — those surfaces make the model add garbled lettering. Bookshelves are needed for the hero, so 'blank spines, no lettering' is stated in the scene AND the negative prompt, and every image is probe-checked twice.",
+  "system": "Flat vector editorial illustration for a Hong Kong education website. {scene} Every person shown is ethnically Chinese with warm LIGHT-TO-MEDIUM TAN skin, in the warm beige-to-tan range typical of Hong Kong — not pale peach, not white, and never grey, ashen, washed-out or blue-tinted. Skin colour is saturated and warm. Clean geometric shapes, soft flat colour, no lettering anywhere, generous white space, calm and encouraging mood.",
+  "negative": "text, letters, words, numbers, captions, label, signage, poster, book titles, book spine text, spine labels, whiteboard writing, screen interface, chart labels, writing on paper, watermark, signature, logo, photorealistic, hyperrealistic, 3D render, glossy plastic, neon, cluttered, busy background, distorted face, extra fingers, uncanny, scary, dark, moody, horror, gibberish signage, copyrighted character, facial features, eyes, nose, mouth, eyebrows, detailed face, visible eyes, grey skin, grey skin tone, ashen skin, greyish complexion, pale washed-out skin, white skin, blue-tinted skin, desaturated skin, sickly complexion",
+  "model": "wan2.5-t2i-preview",
+  "size": "1280*720",
+  "images": {
+    "home-hero": {
+      "scenes": [
+        "Wide composition in two halves. On the LEFT, three simple faceless people standing together: an adult teacher in a plain pale blouse holding a plain deep red folder, an adult parent in a plain pale shirt beside her, and a younger student in front holding a plain royal blue book bag. On the RIGHT, a calm library corner: tall pale wooden shelves holding several rows of plain completely blank book spines in soft neutral, deep red and royal blue tones, every book completely blank with no lettering of any kind. Generous empty space between the three people and the shelves.",
+        "Wide composition. On the LEFT, three simple faceless people standing side by side — a simple faceless teacher in a plain pale shirt, a simple faceless parent, and a simple faceless primary pupil holding a plain deep red book — all facing forward together. On the RIGHT, a tall wall of pale wooden library shelves filled with rows of plain completely blank book spines in soft neutral, deep red and royal blue, with one simple potted plant in front. Every book completely blank, no lettering of any kind, generous white space between the group and the shelves.",
+        "Wide composition. On the LEFT, a simple faceless teacher, a simple faceless parent and a simple faceless pupil standing close together, each holding one plain blank pale book, seen from the front with simple friendly poses. On the RIGHT, an open library alcove: pale wooden shelves with several rows of plain completely blank books, a small plain royal blue reading chair in front, a deep red bookend. Every book completely blank, no lettering of any kind, calm and welcoming, generous white space.",
+        "Wide composition, two clearly separated halves. The LEFT HALF holds three separate simple faceless people of clearly different ages standing in a row, clearly not a family: a teacher holding a plain deep red folder under one arm, a parent holding a plain pale tote bag, and a primary pupil in a plain royal blue school shirt with a plain backpack, each holding a plain completely blank book. The RIGHT HALF is entirely library: tall pale wooden shelves holding rows of plain completely blank books in soft neutral, deep red and royal blue, with empty floor in front of them. Every book completely blank, no lettering of any kind anywhere, generous white space between the group on the left and the shelves on the right."
+      ]
+    },
+    "home-aud-teachers": {
+      "scene": "A simple faceless teacher standing beside a plain pale table in a bright classroom, one hand resting on a small neat stack of plain completely blank pale sheets, a deep red pencil cup and a royal blue paper tray on the table. Plain pale walls, nothing written anywhere."
+    },
+    "home-aud-parents": {
+      "scene": "A simple faceless parent and a simple faceless child sitting side by side at a plain pale dining table in a small bright home, both looking together at one plain blank pale sheet, a plain tablet lying face-down on the table, a deep red mug and a royal blue pencil cup beside them. Plain pale walls, nothing written anywhere."
+    },
+    "home-aud-students": {
+      "scenes": [
+        "A simple faceless secondary student seated at a plain pale desk with a plain completely blank notebook open in front of them and a royal blue pencil in one hand, looking up thoughtfully, a deep red pencil pot on the desk. Plain pale wall, nothing written anywhere.",
+        "A simple faceless secondary student seated at a plain pale desk with a plain completely blank notebook open in front of them and a royal blue pencil in one hand, seen in profile, looking up thoughtfully, a deep red pencil pot on the desk. The student's face is completely blank and featureless: no eyes, no nose, no mouth, no facial features at all, the head is a plain smooth shape with plain hair. Plain pale wall, nothing written anywhere."
+      ]
+    },
+    "home-theme-a": {
+      "scene": "Two simple faceless school leaders standing at a plain pale table with a neat row of plain completely blank pale cards arranged between them, one card deep red and one royal blue, every card blank, the one on the left holding a plain deep red folder. Bright plain staff room, nothing written anywhere."
+    },
+    "home-theme-b": {
+      "scene": "A simple faceless teacher standing at a plain pale table, placing one plain blank pale sheet into a deep red folder, with a plain royal blue shield shape resting on the table beside a plain tablet lying face-down. Bright plain room, nothing written anywhere."
+    },
+    "home-theme-c": {
+      "scene": "A simple faceless pupil seated at a plain pale desk, chin resting on one hand, looking thoughtfully at a single plain completely blank pale card standing upright in front of them, a royal blue pencil and a deep red pencil cup on the desk. Plain pale wall, nothing written anywhere."
+    },
+    "home-theme-d": {
+      "scene": "A simple faceless pupil standing at a plain pale table, holding a magnifying glass up to a plain deep red paper shape, with a small plain royal blue model tram silhouette standing on the table beside a plain potted plant. Plain pale wall, nothing written anywhere."
+    },
+    "home-theme-e": {
+      "scene": "A simple faceless teacher kneeling beside two simple faceless primary pupils at a low plain pale table, one pupil seated in a simple wheelchair, all three looking together at a plain blank pale card, a deep red pencil pot and a royal blue ball on the table. Bright plain room, nothing written anywhere."
+    }
+  },
+  "pick": {
+    "_comment": "Which candidate of each multi-candidate image was shipped. Home-hero is generated 3 times and one is chosen — record the winner here so a re-run reproduces it. Chosen from the probe results: hero c4 is the one where the three audiences stand clearly to the LEFT of the bookshelf and read as teacher + parent + pupil rather than a family (c1/c2/c3 all read as 'a family of three'); students c2 is the faceless re-generation (c1 had drawn eyes, nose and mouth, which breaks the faceless-figures rule).",
+    "home-hero": 4,
+    "home-aud-students": 2
+  }
+}

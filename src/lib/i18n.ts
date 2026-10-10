@@ -92,6 +92,10 @@ const ZH_HK = {
   homeNewestHeading: "最新資源",
   homeFeedbackHeading: "找不到你需要的資源？",
   homeFeedbackBody: "告訴我們你正在準備的課堂，我們會優先製作。下載始終不需註冊。",
+  homeHeroAlt:
+    "插圖：左邊並排站着教師、家長和學生三人，各自拿着書本；右邊是一整排原木書架，放滿書本。",
+  cardCtaTheme: "瀏覽此主題",
+  cardCtaResource: "查看資源",
   homeFeedbackCta: "提出資源需求",
 
   resourcesTitle: "免費資源",
@@ -182,6 +186,10 @@ const EN: Record<UIKey, string> = {
   homeFeedbackHeading: "Can't find what you need?",
   homeFeedbackBody:
     "Tell us the lesson you are preparing and we will prioritise it. Downloading never needs registration.",
+  homeHeroAlt:
+    "Illustration: a teacher, a parent and a pupil standing side by side on the left, each holding a book; on the right, a tall wooden bookshelf filled with books.",
+  cardCtaTheme: "Browse this theme",
+  cardCtaResource: "View this resource",
   homeFeedbackCta: "Request a resource",
 
   resourcesTitle: "Free resources",
@@ -414,6 +422,32 @@ export const THEME_META: Record<Locale, Record<Theme, string>> = {
     E: "Unplugged AI lessons for early primary and scaffolded primary worksheets.",
   },
 };
+
+/**
+ * Alt text for each theme's card illustration on the home page. It describes the
+ * picture, not the theme — a screen reader reads this aloud, so it must match
+ * what is actually in the image (write it from the image, not from the prompt).
+ */
+export const THEME_IMAGE_ALT: Record<Locale, Record<Theme, string>> = {
+  "zh-HK": {
+    A: "插圖：兩位學校領導站在桌前，桌上排列着白、紅、藍色的方塊，他們手持紅色文件夾。",
+    B: "插圖：教師把一張空白紙張放入深紅色文件夾，桌上有藍色盾牌圖案和反轉放下的平板。",
+    C: "插圖：一位學生單手托腮坐在書桌前，望着面前一張空白紙張。",
+    D: "插圖：一位學生手持放大鏡細看一張紅色卡紙，桌上有藍色玩具火車和綠色盆栽。",
+    E: "插圖：教師蹲在矮桌前，與兩位學生一起活動，其中一位學生坐着輪椅。",
+  },
+  en: {
+    A: "Illustration: two school leaders standing at a table with white, red and blue blocks laid out between them, holding red folders.",
+    B: "Illustration: a teacher placing a blank sheet into a deep red folder, with a blue shield shape and a face-down tablet on the table.",
+    C: "Illustration: a student sitting at a desk with a hand under their chin, looking at a blank sheet of paper.",
+    D: "Illustration: a student holding a magnifying glass over a red card, with a blue toy train and a green potted plant on the table.",
+    E: "Illustration: a teacher kneeling at a low table working with two pupils, one of them using a wheelchair.",
+  },
+};
+
+export function themeImageAlt(locale: Locale, theme: Theme): string {
+  return THEME_IMAGE_ALT[locale][theme];
+}
 
 export function themePath(locale: Locale, theme: Theme): string {
   return localizePath(`/by-theme/${THEME_SLUGS[theme]}/`, locale);

@@ -8,6 +8,7 @@ import {
   resourceIndexPath,
   resourcesPath,
   t,
+  themeImageAlt,
   themeInfo,
   themeLabel,
   themePath,
@@ -20,10 +21,15 @@ import { assertPairedEditions, newestFirst } from "../lib/resources";
  * Home page body, one language only.
  *
  * Layout follows beets3d.com: a status strip (in the layout), a hero of eyebrow
- * label → large light headline → two short paragraphs → pill buttons, then
- * "start from what you need" audience cards, the five themes, the newest
- * resources and a feedback invitation. The intro paragraphs are the site's
- * statement of purpose, written for the three audiences it serves.
+ * label → large light headline → the site illustration → two short paragraphs →
+ * pill buttons, then "start from what you need" audience cards, the five themes,
+ * the newest resources and a feedback invitation. The intro paragraphs are the
+ * site's statement of purpose, written for the three audiences it serves.
+ *
+ * Every card carries a picture and its own call-to-action button. The card
+ * headings are labelling text, not links — the button is the single, obvious
+ * place to click (Billy, 2026-10-10). Resource cards reuse the resource's own
+ * hero so the home page and the resource page show the same picture.
  */
 interface Props {
   lang: Locale;
@@ -42,11 +48,19 @@ const isZh = lang === "zh-HK";
 /** Review gate off → a card must not promise a review record it has not got. */
 const reviewOff = !reviewRequired();
 
-/** The three audiences, each sent somewhere that actually helps them. */
+/**
+ * The three audiences, each with a picture and sent somewhere that helps them.
+ * Alt text describes what is actually in the illustration — it is read aloud by
+ * a screen reader, so it must match the picture, not the section's intent.
+ */
 const audiences = [
   {
     key: "teachers",
     title: isZh ? "教師" : "Teachers",
+    image: "/images/home-aud-teachers.webp",
+    alt: isZh
+      ? "插圖：一位教師站在課室桌前，手按一疊空白紙張，桌上有深紅色筆筒和藍色文件盤。"
+      : "Illustration: a teacher standing at a classroom table with one hand on a stack of blank sheets, a deep red pencil cup and a blue paper tray on the table.",
     body: isZh
       ? reviewOff
         ? "備課用得着的教案、工作紙和校本規劃範例，附答案及來源。"
@@ -60,6 +74,10 @@ const audiences = [
   {
     key: "parents",
     title: isZh ? "家長" : "Parents",
+    image: "/images/home-aud-parents.webp",
+    alt: isZh
+      ? "插圖：家長與孩子並排坐在家中飯桌前，一起看一張空白紙張，桌上有平板、深紅色杯和藍色筆筒。"
+      : "Illustration: a parent and child sitting side by side at a home dining table looking at one blank sheet, with a tablet, a deep red mug and a blue pencil cup.",
     body: isZh
       ? "子女用 AI 做功課時，你可以怎樣引導、怎樣檢查——由家長通告到家庭功課協議。"
       : "How to guide and check AI homework at home — from a parent notice to a family homework agreement.",
@@ -69,6 +87,10 @@ const audiences = [
   {
     key: "students",
     title: isZh ? "學生" : "Students",
+    image: "/images/home-aud-students.webp",
+    alt: isZh
+      ? "插圖：一位學生坐在書桌前，用藍色鉛筆在攤開的筆記本上書寫，桌上有深紅色筆筒。"
+      : "Illustration: a student sitting at a desk writing in an open notebook with a blue pencil, with a deep red pencil cup on the desk.",
     body: isZh
       ? "做專題前先學會核對：按科目和級別找到可用的工作紙與步驟，確認 AI 給你的答案。"
       : "For projects and for checking what an AI tells you: find worksheets and steps by subject and learning stage.",
@@ -81,6 +103,15 @@ const audiences = [
 <section class="hero">
   <p class="eyebrow">{t(lang, "homeEyebrow")}</p>
   <h1>{t(lang, "homeTitle")}</h1>
+  <img
+    class="hero-art"
+    src="/images/home-hero.webp"
+    alt={t(lang, "homeHeroAlt")}
+    width="1280"
+    height="720"
+    loading="eager"
+    decoding="async"
+  />
   <p class="lede">{t(lang, "homeLede")}</p>
   <p class="lede">{t(lang, "homeIntro2")}</p>
   <div class="btn-row">
@@ -96,9 +127,22 @@ const audiences = [
     {
       audiences.map((audience) => (
         <li class={`aud aud-${audience.key}`}>
+          <img
+            class="card-art"
+            src={audience.image}
+            alt={audience.alt}
+            width="1280"
+            height="720"
+            loading="lazy"
+            decoding="async"
+          />
           <h3>{audience.title}</h3>
           <p>{audience.body}</p>
-          <a href={audience.href}>{audience.link} →</a>
+          <div class="card-cta-row">
+            <a class="btn ghost card-cta" href={audience.href}>
+              {audience.link}
+            </a>
+          </div>
         </li>
       ))
     }
@@ -113,13 +157,25 @@ const audiences = [
     {
       themes.map((theme) => (
         <li class="theme-card">
-          <a href={themePath(lang, theme.key)}>
-            <span class="badge" aria-hidden="true">
-              {theme.key}
-            </span>
-            <h3>{theme.label}</h3>
-          </a>
+          <img
+            class="card-art"
+            src={`/images/home-theme-${theme.key.toLowerCase()}.webp`}
+            alt={themeImageAlt(lang, theme.key)}
+            width="1280"
+            height="720"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="badge" aria-hidden="true">
+            {theme.key}
+          </span>
+          <h3>{theme.label}</h3>
           <p>{themeInfo(lang, theme.key).need}</p>
+          <div class="card-cta-row">
+            <a class="btn ghost card-cta" href={themePath(lang, theme.key)}>
+              {t(lang, "cardCtaTheme")}
+            </a>
+          </div>
         </li>
       ))
     }
@@ -144,11 +200,27 @@ const audiences = [
     ) : (
       <ul class="grid newest-grid">
         {newest.map((entry) => (
-          <li>
-            <a href={resourcesPath(lang, entry.data.address)}>{entry.data.title}</a>
+          <li class="resource-card">
+            {entry.data.image ? (
+              <img
+                class="card-art"
+                src={entry.data.image}
+                alt={entry.data.imageAlt ?? entry.data.title}
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : null}
+            <h3>{entry.data.title}</h3>
             <p class="meta">
               {entry.data.stage} · {entry.data.subject} · {themeLabel(lang, entry.data.theme)}
             </p>
+            <div class="card-cta-row">
+              <a class="btn ghost card-cta" href={resourcesPath(lang, entry.data.address)}>
+                {t(lang, "cardCtaResource")}
+              </a>
+            </div>
           </li>
         ))}
       </ul>
@@ -172,6 +244,15 @@ const audiences = [
   /* Homepage-only layout; the tokens and shared pieces live in Base. */
   .hero {
     padding-bottom: 0.5rem;
+  }
+  /* The site illustration sits directly under the headline, above the lede. */
+  .hero-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1.35rem 0 1.5rem;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
   }
   .grid {
     list-style: none;
@@ -203,7 +284,18 @@ const audiences = [
     box-shadow: var(--shadow);
     transform: translateY(-2px);
   }
-  .aud-grid h3 {
+  /* Card pictures are inset with the card's own radius — the card keeps its
+     edge, the 4px audience rule below stays the first thing you see. */
+  .card-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.9rem;
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  .aud-grid h3,
+  .theme-card h3 {
     margin: 0.35rem 0 0.4rem;
     font-size: 1.2rem;
   }
@@ -211,10 +303,6 @@ const audiences = [
     margin: 0 0 0.75rem;
     color: #333;
     font-size: 0.95rem;
-  }
-  .aud-grid a {
-    font-weight: 600;
-    text-decoration: none;
   }
   /* A coloured rule per audience, using the two brand colours. */
   .aud-grid li {
@@ -225,11 +313,6 @@ const audiences = [
   }
   .aud-parents {
     border-top-color: var(--blue) !important;
-  }
-  .theme-card > a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
   }
   .theme-card .badge {
     display: inline-flex;
@@ -252,13 +335,21 @@ const audiences = [
     color: var(--muted);
     font-size: 0.92rem;
   }
-  .newest-grid a {
-    font-weight: 600;
-    text-decoration: none;
+  .newest-grid h3 {
+    margin: 0 0 0.3rem;
     font-size: 1.05rem;
+    font-weight: 600;
   }
   .newest-grid .meta {
-    margin: 0.35rem 0 0;
+    margin: 0;
+  }
+  /* One CTA style for every card on the page. */
+  .card-cta-row {
+    margin-top: 0.9rem;
+  }
+  .card-cta {
+    padding: 0.5rem 1.15rem;
+    font-size: 0.9rem;
   }
   .band > .btn,
   .band > p > .btn {
