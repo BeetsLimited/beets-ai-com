@@ -8,6 +8,7 @@ kind: "guide"
 theme: "B"
 stage: "P4-P6"
 subject: 全科/跨科
+audience: [teachers]
 sourceIdea: "#8"
 sources: ["G, pp.2-4 and 2-9"]
 prepTime: "45 分鐘（可分成兩節）"

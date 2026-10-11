@@ -30,6 +30,7 @@ import {
 
 const item = (over: Partial<CatalogueItem> = {}): CatalogueItem => ({
   theme: "D",
+  audience: ["teachers"],
   stage: "P4-P6",
   subject: "科學",
   haystack: haystackFor(["校園植物：先觀察，再核對 AI 的說法", "學生先觀察一株植物"]),
@@ -57,6 +58,14 @@ describe("facetMatches", () => {
   it("accepts any of the selected values — OR inside a group", () => {
     expect(facetMatches(["A", "D"], "D")).toBe(true);
     expect(facetMatches(["A", "D"], "C")).toBe(false);
+  });
+
+  it("matches a LIST-valued facet when ONE of the item's values is selected", () => {
+    // The 對象 facet: a P4 worksheet is for teachers AND for students, so a
+    // reader filtering on either one has to find it.
+    expect(facetMatches(["students"], ["teachers", "students"])).toBe(true);
+    expect(facetMatches(["parents"], ["teachers", "students"])).toBe(false);
+    expect(facetMatches(["teachers"], [])).toBe(false);
   });
 });
 
@@ -94,6 +103,16 @@ describe("matches", () => {
   it("ANDs the keyword with the tags", () => {
     expect(matches(item(), { theme: ["D"], q: "植物" })).toBe(true);
     expect(matches(item(), { theme: ["A"], q: "植物" })).toBe(false);
+  });
+
+  it("ORs the audiences inside the 對象 group, and ANDs them with the other groups", () => {
+    expect(matches(item(), { audience: ["teachers"] })).toBe(true);
+    expect(matches(item(), { audience: ["teachers", "parents"] })).toBe(true);
+    expect(matches(item(), { audience: ["parents"] })).toBe(false);
+    // theme D AND audience students: both hold → shown.
+    const multi = item({ audience: ["teachers", "students"] });
+    expect(matches(multi, { theme: ["D"], audience: ["students"] })).toBe(true);
+    expect(matches(multi, { theme: ["A"], audience: ["students"] })).toBe(false);
   });
 });
 
@@ -200,18 +219,20 @@ describe("paginate", () => {
 describe("filterOptions", () => {
   it("offers each value once, sorted, with nothing blank", () => {
     const items = [
-      item({ theme: "D", stage: "P4-P6", subject: "科學" }),
-      item({ theme: "A", stage: "P4-P6", subject: "科學" }),
-      item({ theme: "D", stage: "S1-S3", subject: "" }),
+      item({ theme: "D", audience: ["teachers"], stage: "P4-P6", subject: "科學" }),
+      item({ theme: "A", audience: ["parents", "teachers"], stage: "P4-P6", subject: "科學" }),
+      item({ theme: "D", audience: ["students"], stage: "S1-S3", subject: "" }),
     ];
     const options = filterOptions(items);
     expect(options.themes).toEqual(["A", "D"]);
+    // The audience values are flattened out of the list-valued field, once each.
+    expect(options.audiences).toEqual(["parents", "students", "teachers"]);
     expect(options.stages).toEqual(["P4-P6", "S1-S3"]);
     expect(options.subjects).toEqual(["科學"]);
   });
 
   it("offers nothing for an empty catalogue", () => {
-    expect(filterOptions([])).toEqual({ themes: [], stages: [], subjects: [] });
+    expect(filterOptions([])).toEqual({ themes: [], audiences: [], stages: [], subjects: [] });
   });
 });
 
@@ -253,9 +274,21 @@ describe("URL state", () => {
     expect(writeState({ filters: { stage: ["  "] }, page: 1 })).toBe("");
   });
 
+  it("carries the 對象 group through the URL like any other facet", () => {
+    const state = { filters: { audience: ["teachers", "parents"] }, page: 1 };
+    expect(writeState(state)).toBe("audience=teachers&audience=parents");
+    expect(readState("?audience=parents,students").filters.audience).toEqual(["parents", "students"]);
+  });
+
   it("round-trips through a query string", () => {
     const state = {
-      filters: { theme: ["A", "D"], stage: ["P4-P6"], subject: ["科學"], q: "植物" },
+      filters: {
+        theme: ["A", "D"],
+        audience: ["teachers"],
+        stage: ["P4-P6"],
+        subject: ["科學"],
+        q: "植物",
+      },
       page: 4,
     };
     const back = readState(writeState(state));

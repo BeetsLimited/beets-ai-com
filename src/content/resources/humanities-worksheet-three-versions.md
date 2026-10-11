@@ -8,6 +8,7 @@ kind: "worksheet"
 theme: "E"
 stage: "P4-P6"
 subject: "人文"
+audience: [teachers, students]
 sourceIdea: "#6"
 sources: ["G, pp.2-5 and 2-7"]
 prepTime: "1 節（約 35–40 分鐘）；另需時間預先列印三種版本"

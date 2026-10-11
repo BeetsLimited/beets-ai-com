@@ -7,6 +7,7 @@ kind: "planning"
 theme: "A"
 stage: "P4-P6"
 subject: "School planning"
+audience: [teachers]
 sourceIdea: "#2"
 sources: ["F, pp.1-6 to 1-10", "B, p.2"]
 prepTime: "One curriculum meeting (about 60 min) + follow-up fill-in time"

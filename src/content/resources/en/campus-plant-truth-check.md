@@ -7,6 +7,7 @@ kind: "lesson"
 theme: "D"
 stage: "P4-P6"
 subject: "Science"
+audience: [teachers, students]
 sourceIdea: "#12"
 sources: ["E, p.7"]
 prepTime: "1 lesson (about 35–40 min)"

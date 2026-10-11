@@ -7,6 +7,7 @@ kind: "lesson"
 theme: "E"
 stage: "P1-P3"
 subject: "PE"
+audience: [teachers]
 sourceIdea: "#10"
 sources: ["E, p.4", "F, p.1-8"]
 prepTime: "One PE lesson (about 35 min)"

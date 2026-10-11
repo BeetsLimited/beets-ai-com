@@ -4,6 +4,8 @@ import {
   HTML_LANG,
   alternateLinks,
   alternatePath,
+  audienceLabel,
+  audiencePath,
   feedbackPath,
   localizePath,
   resourceIndexPath,
@@ -12,7 +14,7 @@ import {
   themePath,
   type Locale,
 } from "../lib/i18n";
-import { THEMES } from "../lib/schema";
+import { AUDIENCES, THEMES } from "../lib/schema";
 import { organizationLd, socialMeta, webSiteLd } from "../lib/seo";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
 import { getCollection } from "astro:content";
@@ -95,6 +97,18 @@ const structuredDataNodes = [organizationLd(), webSiteLd(lang), ...structuredDat
  * (Traditional Chinese owns the root), so publishing a resource moves the number
  * by one in both languages rather than two.
  */
+/**
+ * Which nav item points at the page being rendered.
+ *
+ * `aria-current` is never hardcoded: a group marks itself when one of its own
+ * pages is open, so a reader who followed 主題 → a theme can see where they are
+ * without the group having to be open.
+ */
+const currentPath = Astro.url.pathname;
+const isCurrent = (href: string) => currentPath === href;
+const onThemePage = THEMES.some((theme) => isCurrent(themePath(lang, theme)));
+const onAudiencePage = AUDIENCES.some((audience) => isCurrent(audiencePath(lang, audience)));
+
 const liveResources = (
   await getCollection(
     "content",
@@ -194,44 +208,82 @@ const liveResources = (
           }
         </div>
         {/*
-          The five themes are TOP-LEVEL items, not a submenu (Billy, 2026-10-10).
-          They were briefly collapsed under 五大主題; hiding the site's five main
-          sections behind a hover was the wrong trade, and the trigger linked
-          somewhere other than what its label said.
+          The bar: 主頁 · 免費資源 · 主題 (the five themes) · 對象 (the three
+          audiences) · 關於 · 意見及建議.
 
-          Seven items do not fit in the row beside the brand and the language
-          switch, so the nav is its own row in the masthead and wraps from there.
-          The order is the order a visitor needs: everything free, then the five
-          themes, then about.
+          The five themes were flat, top-level items until 2026-10-11, when the
+          three audiences arrived with index pages of their own and the row had to
+          carry both groups plus two more items. Billy asked for them folded:
+
+            *"revert back to fold the 5 themes under a 主題 menu. Then add a 對象
+             menu with the 3 對象 under it."*
+
+          Each group is a native <details>, i.e. it opens on a CLICK or a tap and
+          needs no JavaScript — this site has none, and there is no hamburger.
+          Nothing is reachable by hover alone, and the links inside a closed group
+          are still in the HTML, so a crawler (and a reader whose script failed)
+          sees every page. The trigger is a <summary>, never a link, so its label
+          cannot point somewhere other than what it says.
         */}
         <nav aria-label="BEETS AI" class="site-nav">
           {/* 主頁 first (Billy, 2026-10-10): clicking the wordmark does return
               home, but nothing said so. */}
           <a
             href={localizePath("/", lang)}
-            aria-current={Astro.url.pathname === localizePath("/", lang) ? "page" : undefined}
+            aria-current={isCurrent(localizePath("/", lang)) ? "page" : undefined}
           >
             {t(lang, "navHome")}
           </a>
           <a
             href={resourceIndexPath(lang)}
-            aria-current={Astro.url.pathname === resourceIndexPath(lang) ? "page" : undefined}
+            aria-current={isCurrent(resourceIndexPath(lang)) ? "page" : undefined}
           >
             {t(lang, "navResources")}
           </a>
-          {THEMES.map((theme) => (
-            <a
-              href={themePath(lang, theme)}
-              aria-current={Astro.url.pathname === themePath(lang, theme) ? "page" : undefined}
-            >
-              {themeNavLabel(lang, theme)}
-            </a>
-          ))}
+
+          <details class="nav-group" data-current={onThemePage ? "group" : undefined}>
+            <summary>{t(lang, "navThemes")}</summary>
+            <ul class="nav-menu">
+              {THEMES.map((theme) => (
+                <li>
+                  <a
+                    href={themePath(lang, theme)}
+                    aria-current={isCurrent(themePath(lang, theme)) ? "page" : undefined}
+                  >
+                    {themeNavLabel(lang, theme)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+
+          <details class="nav-group" data-current={onAudiencePage ? "group" : undefined}>
+            <summary>{t(lang, "navAudiences")}</summary>
+            <ul class="nav-menu">
+              {AUDIENCES.map((audience) => (
+                <li>
+                  <a
+                    href={audiencePath(lang, audience)}
+                    aria-current={isCurrent(audiencePath(lang, audience)) ? "page" : undefined}
+                  >
+                    {audienceLabel(lang, audience)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+
           <a
             href={localizePath("/about/", lang)}
-            aria-current={Astro.url.pathname === localizePath("/about/", lang) ? "page" : undefined}
+            aria-current={isCurrent(localizePath("/about/", lang)) ? "page" : undefined}
           >
             {t(lang, "navAbout")}
+          </a>
+          <a
+            href={feedbackPath(lang)}
+            aria-current={isCurrent(feedbackPath(lang)) ? "page" : undefined}
+          >
+            {t(lang, "navFeedback")}
           </a>
         </nav>
       </div>
@@ -385,12 +437,12 @@ const liveResources = (
         text-underline-offset: 4px;
       }
       /*
-        The nav is its own row in the masthead. Seven items — 免費資源, the five
-        themes, 關於 — do not fit in the row beside the brand and the language
-        switch, so it takes a full-width line and wraps from there. That is why
-        the header is a two-row masthead rather than a single bar: every item
-        stays visible, and a phone gets two or three tidy lines instead of a
-        hamburger the site has no JavaScript to open.
+        The nav is its own row in the masthead: 主頁 · 免費資源 · 主題 · 對象 ·
+        關於 · 意見及建議 do not fit beside the brand and the language switch, so
+        the nav takes a full-width line and wraps from there. That is why the
+        header is a two-row masthead rather than a single bar: every item stays
+        visible, and a phone gets two tidy lines instead of a hamburger the site
+        has no JavaScript to open.
       */
       header.site .site-nav {
         flex-basis: 100%;
@@ -399,8 +451,7 @@ const liveResources = (
         align-items: center;
         /* The column gap is the space BEFORE a separator, which adds its own
            margin after itself, so an item is spaced evenly either side of it.
-           Kept tight deliberately: the rule does the separating, and the width it
-           frees is what lets eight items sit on one line. */
+           Kept tight deliberately: the rule does the separating. */
         gap: 0.3rem 0.6rem;
         margin-top: 0.1rem;
       }
@@ -411,11 +462,11 @@ const liveResources = (
       /*
         A light rule between items, drawn as an empty box rather than a character:
         `content: "·"` would be read aloud by some screen readers as part of the
-        link, and this is decoration. `.site-nav a + a` means no rule before the
-        first item, and the rule belongs to the item that FOLLOWS it, so it
-        travels with that item when the row wraps.
+        link, and this is decoration. `> * + *` rather than `a + a` because the row
+        now mixes links with the two disclosure groups — the rule belongs to
+        whatever FOLLOWS it, so it travels with that item when the row wraps.
       */
-      .site-nav a + a::before {
+      .site-nav > * + *::before {
         content: "";
         display: inline-block;
         width: 1px;
@@ -424,18 +475,89 @@ const liveResources = (
         background: var(--line);
         vertical-align: -0.08em;
       }
+
+      /*
+        ── The two disclosure groups (主題 / 對象) ─────────────────────────────
+        Each is a native <details>: it opens on a click or a tap and from the
+        keyboard, and it needs no JavaScript — this site has none, and there is no
+        hamburger. Nothing here is hover-only, so a phone reader reaches the five
+        themes and the three audiences exactly as a desktop reader does.
+      */
+      .site-nav .nav-group {
+        position: relative;
+        display: inline-block;
+      }
+      .site-nav .nav-group > summary {
+        display: inline-block;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--ink);
+        /* The UA's disclosure triangle is drawn as nothing at all: this is a menu
+           label, and the marker read as clutter beside the plain links. The open
+           state is carried by the colour and the underline instead. */
+        list-style: none;
+      }
+      .site-nav .nav-group > summary::-webkit-details-marker {
+        display: none;
+      }
+      .site-nav .nav-group > summary::marker {
+        content: "";
+      }
+      .site-nav .nav-group > summary:hover,
+      .site-nav .nav-group > summary:focus-visible,
+      .site-nav .nav-group[open] > summary,
+      .site-nav .nav-group[data-current] > summary {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      /*
+        The panel. Absolute, so opening a group never pushes the page down, and
+        the offset clears the row's own height.
+      */
+      .site-nav .nav-menu {
+        position: absolute;
+        top: calc(100% + 0.45rem);
+        left: 0;
+        z-index: 20;
+        min-width: 11rem;
+        max-width: calc(100vw - 3rem);
+        margin: 0;
+        padding: 0.4rem 0.35rem;
+        list-style: none;
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .site-nav .nav-menu li {
+        margin: 0;
+      }
+      .site-nav .nav-menu a {
+        display: block;
+        padding: 0.4rem 0.75rem;
+        border-radius: 12px;
+        white-space: nowrap;
+      }
+      .site-nav .nav-menu a:hover,
+      .site-nav .nav-menu a:focus-visible {
+        background: var(--surface);
+        text-decoration: none;
+      }
       /*
         Hide the rules as soon as the nav can wrap, because a rule that lands at
         the start of a wrapped line reads as a stray mark rather than a separator.
 
-        The breakpoint is measured, not guessed. The eight labels need 777px with
-        their separators, and the row offers `min(viewport, 54rem) - 3rem` of it,
-        so one line holds only above ~825px of viewport — 52rem. A smaller number
-        here (48rem was the first attempt) leaves a window between 768px and 864px
-        where the row wraps AND the rules are still drawn.
+        The breakpoint is measured, not guessed. Six top-level items need far less
+        than the row offers, but the row still has to hold the labels beside the
+        brand and the language switch on the narrowest laptop, so the measured wrap
+        point from the seven-item bar (52rem) is kept as the conservative value: a
+        smaller number here leaves a window where the row wraps AND the rules are
+        still drawn.
       */
       @media (max-width: 52rem) {
-        .site-nav a + a::before {
+        .site-nav > * + *::before {
           display: none;
         }
       }

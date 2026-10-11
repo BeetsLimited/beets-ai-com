@@ -7,6 +7,7 @@ kind: "worksheet"
 theme: "E"
 stage: "P4-P6"
 subject: "Humanities"
+audience: [teachers, students]
 sourceIdea: "#6"
 sources: ["G, pp.2-5 and 2-7"]
 prepTime: "1 lesson (about 35-40 min); plus time to copy the three versions in advance"

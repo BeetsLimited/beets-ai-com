@@ -7,6 +7,7 @@ kind: "lesson"
 theme: "E"
 stage: "P4-P6"
 subject: "Cross-curricular"
+audience: [teachers]
 sourceIdea: "#9"
 sources: ["G, p.2-3", "G, pp.2-5 and 2-7"]
 prepTime: "1 lesson (40 min); about 15 min preparation"

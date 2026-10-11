@@ -24,6 +24,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 科學
 - Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: E, p.7
 
@@ -34,6 +35,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Science
 - Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: E, p.7
 
@@ -44,6 +46,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: S1-S3
 - Subject: 人文
 - Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: E, p.14
@@ -55,6 +58,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: S1-S3
 - Subject: Humanities
 - Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: E, p.14
@@ -66,6 +70,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P1-P6
 - Subject: Pastoral and parents
 - Theme: B (安全及負責任使用 AI)
+- Audience: parents (家長), teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: B, p.1; F, p.1-8
@@ -77,6 +82,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P1-P6
 - Subject: 班主任及家長
 - Theme: B (安全及負責任使用 AI)
+- Audience: parents (家長), teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: B, p.1; F, p.1-8
@@ -88,6 +94,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Cross-curricular
 - Theme: E (共融 AI 課堂)
+- Audience: teachers (教師)
 - Version: 0.1
 - Sources: G, p.2-3; G, pp.2-5 and 2-7
 
@@ -98,6 +105,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 全科/跨科
 - Theme: E (共融 AI 課堂)
+- Audience: teachers (教師)
 - Version: 0.1
 - Sources: G, p.2-3; G, pp.2-5 and 2-7
 
@@ -108,6 +116,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Humanities
 - Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: E, p.8
 
@@ -118,6 +127,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 人文
 - Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: E, p.8
 
@@ -128,6 +138,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Cross-curricular
 - Theme: C (看見學生思考)
+- Audience: teachers (教師)
 - Version: 0.1
 - Sources: F, p.1-13; G, pp.2-7 to 2-8
 
@@ -138,6 +149,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 全科/跨科
 - Theme: C (看見學生思考)
+- Audience: teachers (教師)
 - Version: 0.1
 - Sources: F, p.1-13; G, pp.2-7 to 2-8
 
@@ -148,6 +160,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Humanities
 - Theme: E (共融 AI 課堂)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: G, pp.2-5 and 2-7
 
@@ -158,6 +171,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 人文
 - Theme: E (共融 AI 課堂)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: G, pp.2-5 and 2-7
 
@@ -168,6 +182,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P1-S3
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: B, p.2; F, pp.1-6 to 1-10
@@ -179,6 +194,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P1-S3
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: B, p.2; F, pp.1-6 to 1-10
@@ -190,6 +206,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4
 - Subject: Mathematics
 - Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: E, p.6
 
@@ -200,6 +217,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4
 - Subject: 數學
 - Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: E, p.6
 
@@ -210,6 +228,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: F, pp.1-6 to 1-10; B, p.2
@@ -221,6 +240,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: F, pp.1-6 to 1-10; B, p.2
@@ -232,6 +252,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Cross-curricular
 - Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: G, pp.2-4 and 2-9
@@ -243,6 +264,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 全科/跨科
 - Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師)
 - Reviewed by: Billy Kan
 - Version: 0.1
 - Sources: G, pp.2-4 and 2-9
@@ -254,6 +276,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P1-P3
 - Subject: PE
 - Theme: E (共融 AI 課堂)
+- Audience: teachers (教師)
 - Version: 0.1
 - Sources: E, p.4; F, p.1-8
 
@@ -264,6 +287,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P1-P3
 - Subject: 體育
 - Theme: E (共融 AI 課堂)
+- Audience: teachers (教師)
 - Version: 0.1
 - Sources: E, p.4; F, p.1-8
 
@@ -274,6 +298,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Cross-curricular
 - Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: F, p.1-13; G, p.2-8
 
@@ -284,6 +309,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 全科/跨科
 - Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: F, p.1-13; G, p.2-8
 
@@ -294,6 +320,7 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: Cross-curricular
 - Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: F, p.1-13; G, pp.2-7 to 2-8
 
@@ -304,5 +331,6 @@ from the sitemap and set to noindex; do not quote it.
 - Stage: P4-P6
 - Subject: 全科/跨科
 - Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
 - Version: 0.1
 - Sources: F, p.1-13; G, pp.2-7 to 2-8

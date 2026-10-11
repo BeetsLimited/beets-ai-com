@@ -8,6 +8,7 @@ kind: "guide"
 theme: "B"
 stage: "P1-P6"
 subject: "班主任及家長"
+audience: [parents, teachers]
 sourceIdea: "#7"
 sources: ["B, p.1", "F, p.1-8"]
 prepTime: "每節 15–20 分鐘，共三節（可分開不同日子進行）"

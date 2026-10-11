@@ -1,0 +1,88 @@
+---
+import {
+  audienceImageAlt,
+  audienceImagePath,
+  audienceInfo,
+  audienceLabel,
+  audiencePath,
+  type Locale,
+} from "../lib/i18n";
+import type { Audience } from "../lib/schema";
+
+/**
+ * The audience cards — the homepage's 「由需要出發」 grid, the resource index's
+ * 「按對象瀏覽」 and an audience page's "the other two" are the SAME block.
+ *
+ * This was the homepage's own markup until 2026-10-11, when the three blocks
+ * started linking to the three audience index pages: one component, three
+ * callers, so a visitor meets one design for the three audiences instead of a
+ * design per page. The caller decides which audiences to show and, if it wants,
+ * its own CTA label.
+ *
+ * The card body and the CTA label come from `AUDIENCE_INFO`, so the words on the
+ * homepage and the words on the page it links to cannot drift apart.
+ */
+interface Props {
+  lang: Locale;
+  /** Audience keys to render, in order. */
+  audiences: Audience[];
+  /** One CTA label for every card; defaults to each audience's own. */
+  cta?: string;
+}
+const { lang, audiences, cta } = Astro.props;
+---
+
+<ul class="card-grid aud-grid">
+  {
+    audiences.map((audience) => {
+      const info = audienceInfo(lang, audience);
+      return (
+        <li class="card aud-card">
+          <img
+            class="card-art"
+            src={audienceImagePath(audience)}
+            alt={audienceImageAlt(lang, audience)}
+            width="1280"
+            height="720"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>{audienceLabel(lang, audience)}</h3>
+          <p>{info.cardBody}</p>
+          <div class="card-cta-row">
+            <a class="btn card-cta" href={audiencePath(lang, audience)}>
+              {cta ?? info.cardCta}
+            </a>
+          </div>
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style>
+  /* Three across, encoded rather than left to auto-fit, so the homepage, the
+     index and an audience page cannot disagree about the layout. */
+  .aud-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .aud-card h3 {
+    margin: 0.35rem 0 0.4rem;
+    font-size: 1.2rem;
+  }
+  .aud-card p {
+    margin: 0 0 0.75rem;
+    color: #333;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 48rem) {
+    .aud-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 30rem) {
+    .aud-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

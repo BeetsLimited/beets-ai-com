@@ -8,6 +8,7 @@ kind: "lesson"
 theme: "D"
 stage: "P4-P6"
 subject: "人文"
+audience: [teachers, students]
 sourceIdea: "#13"
 sources: ["E, p.8"]
 prepTime: "1 節（約 35–40 分鐘）；專題在課外完成"

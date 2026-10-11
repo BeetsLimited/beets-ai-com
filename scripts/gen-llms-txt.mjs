@@ -35,6 +35,22 @@ const gateConfig = JSON.parse(
 const REVIEW_REQUIRED =
   (process.env.REVIEW_REQUIRED ?? String(gateConfig.reviewRequired)) !== "false";
 
+/**
+ * The three audiences (對象), in the site's own words. Mirrors `AUDIENCE_LABELS`
+ * in src/lib/i18n.ts — keep the two in step when either changes.
+ */
+const AUDIENCE_NAMES = {
+  "zh-HK": { teachers: "教師", parents: "家長", students: "學生" },
+  en: { teachers: "Teachers", parents: "Parents", students: "Students" },
+};
+
+/** One line per audience index page, for the "Main pages" list. */
+const AUDIENCE_PAGES = [
+  { path: "/by-audience/teachers/", zh: "教師適用的資源", en: "Resources for teachers" },
+  { path: "/by-audience/parents/", zh: "家長適用的資源", en: "Resources for parents" },
+  { path: "/by-audience/students/", zh: "學生適用的資源", en: "Resources for students" },
+];
+
 const THEME_NAMES = {
   "zh-HK": {
     A: "校本 AI 教育規劃",
@@ -164,6 +180,7 @@ const index = [`${HEADER}
 
 - [${SITE}/](${SITE}/): the resource library, grouped by theme (Traditional Chinese)
 - [${SITE}/resources/](${SITE}/resources/): every free resource
+${AUDIENCE_PAGES.map((page) => `- [${SITE}${page.path}](${SITE}${page.path}): ${page.zh} (${page.en})`).join("\n")}
 - [${SITE}/about/](${SITE}/about/): editorial process, independence, source documents, reuse
 - [${SITE}/feedback/](${SITE}/feedback/): request a resource
 `];
@@ -189,6 +206,11 @@ const full = [
         e.stage ? `- Stage: ${e.stage}` : null,
         e.subject ? `- Subject: ${e.subject}` : null,
         e.theme ? `- Theme: ${e.theme} (${THEME_NAMES["zh-HK"][e.theme] ?? e.theme})` : null,
+        Array.isArray(e.audience) && e.audience.length
+          ? `- Audience: ${e.audience
+              .map((key) => `${key} (${AUDIENCE_NAMES["zh-HK"][key] ?? key})`)
+              .join(", ")}`
+          : null,
         e.reviewer ? `- Reviewed by: ${e.reviewer}` : null,
         e.version ? `- Version: ${e.version}` : null,
         Array.isArray(e.sources) && e.sources.length ? `- Sources: ${e.sources.join("; ")}` : null,

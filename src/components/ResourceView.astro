@@ -1,6 +1,6 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
-import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+import { audienceLabel, audiencePath, resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
 import { reviewRequired } from "../lib/review-gate";
 
 /**
@@ -42,7 +42,7 @@ const d = entry.data;
  */
 const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
 
-/** The three classification lines, in the order the page reads them. */
+/** The classification lines, in the order the page reads them. */
 const classification = [
   { label: t(lang, "labelTheme"), value: `${d.theme} · ${themeLabel(lang, d.theme)}` },
   { label: t(lang, "labelStage"), value: d.stage },
@@ -92,8 +92,25 @@ const practicals = [
     ) : null
   }
 
-  {/* 三行分類：主題 / 年級 / 範疇。 One line each, label in a fixed column. */}
+  {/*
+    分類：主題 / 對象 / 年級 / 範疇。 One line each, label in a fixed column.
+     The audience is the one that links: each value is a browsing route (its own
+    index page), so it behaves like a link rather than dead text.
+  */}
   <ul class="spec">
+    <li>
+      <span class="spec-k">{t(lang, "labelAudience")}</span>
+      <span class="spec-v">
+        {
+          d.audience.map((key, index) => (
+            <>
+              <a href={audiencePath(lang, key)}>{audienceLabel(lang, key)}</a>
+              {index < d.audience.length - 1 ? " " : null}
+            </>
+          ))
+        }
+      </span>
+    </li>
     {
       classification.map((row) => (
         <li>

@@ -7,6 +7,7 @@ kind: "worksheet"
 theme: "D"
 stage: "P4"
 subject: "Mathematics"
+audience: [teachers, students]
 sourceIdea: "#11"
 sources: ["E, p.6"]
 prepTime: "1 lesson (about 35–40 min)"

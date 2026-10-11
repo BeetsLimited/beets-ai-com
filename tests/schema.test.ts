@@ -19,6 +19,7 @@ const valid = {
   lang: "zh-HK",
   type: "resource",
   theme: "D",
+  audience: ["teachers", "students"],
   stage: "P4",
   subject: "數學 / Mathematics",
   sourceIdea: "#11",
@@ -68,6 +69,23 @@ describe("resourceSchema (review gate ON)", () => {
 
   it("requires at least one EDB source reference", () => {
     expect(strict.safeParse({ ...valid, sources: [] }).success).toBe(false);
+  });
+
+  it("requires at least one audience — a resource nobody is classified for is the defect", () => {
+    expect(strict.safeParse({ ...valid, audience: [] }).success).toBe(false);
+    expect(strict.safeParse({ ...valid, audience: undefined }).success).toBe(false);
+  });
+
+  it("rejects an audience that is not one of the three", () => {
+    expect(strict.safeParse({ ...valid, audience: ["teachers", "parents", "governors"] }).success).toBe(
+      false,
+    );
+  });
+
+  it("accepts a resource that serves more than one audience", () => {
+    expect(strict.safeParse({ ...valid, audience: ["teachers", "parents", "students"] }).success).toBe(
+      true,
+    );
   });
 
   it("coerces an ISO date string into a Date", () => {

@@ -8,6 +8,7 @@ kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
 subject: "全科/跨科"
+audience: [teachers, students]
 sourceIdea: "#3"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "每題約 10 分鐘；三題可在一節（約 40 分鐘）內完成"

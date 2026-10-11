@@ -7,6 +7,19 @@ export const THEMES = ["A", "B", "C", "D", "E"] as const;
 
 export type Theme = (typeof THEMES)[number];
 
+/**
+ * Who a resource is FOR — the 對象 dimension (Billy, 2026-10-11).
+ *
+ * The three audiences are the ones the home page's 「由需要出發」 blocks address
+ * (teachers, parents, students), and they are what the catalogue's 對象 filter
+ * and the three audience index pages are built from. A resource can serve more
+ * than one: a P4 worksheet is a teacher's teaching instrument AND something the
+ * pupil works in.
+ */
+export const AUDIENCES = ["teachers", "parents", "students"] as const;
+
+export type Audience = (typeof AUDIENCES)[number];
+
 /** Traditional Chinese first; English is the companion edition. */
 export const LANGS = ["zh-HK", "en"] as const;
 
@@ -38,6 +51,12 @@ const fields = {
    */
   kind: z.enum(RESOURCE_KINDS).optional(),
   theme: z.enum(THEMES),
+  /**
+   * Who the resource is for: one or more of the three audiences. Required, so a
+   * resource can never be invisible to every 對象 route and filter — an
+   * unclassified resource is the thing this field exists to prevent.
+   */
+  audience: z.array(z.enum(AUDIENCES)).min(1, "at least one audience (對象) is required"),
   stage: z.string().min(1),
   subject: z.string().min(1),
   /** Ties the page back to the 14-idea launch inventory, e.g. "#11". */

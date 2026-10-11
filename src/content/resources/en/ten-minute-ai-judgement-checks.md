@@ -7,6 +7,7 @@ kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
 subject: "Cross-curricular"
+audience: [teachers, students]
 sourceIdea: "#3"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "About 10 min per task; all three fit one lesson (about 40 min)"

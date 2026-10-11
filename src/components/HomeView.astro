@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { isPublished, reviewRequired } from "../lib/review-gate";
+import { isPublished } from "../lib/review-gate";
 import {
   feedbackPath,
   localizePath,
@@ -8,11 +8,12 @@ import {
   resourcesPath,
   t,
   themeLabel,
-  themePath,
   themesInOrder,
   type Locale,
 } from "../lib/i18n";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
+import { AUDIENCES } from "../lib/schema";
+import AudienceCardGrid from "./AudienceCardGrid.astro";
 import ThemeCardGrid from "./ThemeCardGrid.astro";
 
 /**
@@ -47,60 +48,7 @@ assertPairedEditions(all, "home");
 const published = newestFirst(all.filter(({ data }) => isPublished(data) && data.lang === lang));
 const themes = themesInOrder(lang);
 const newest = published.slice(0, 6);
-const isZh = lang === "zh-HK";
-/** Review gate off → a card must not promise a review record it has not got. */
-const reviewOff = !reviewRequired();
 
-/**
- * The three audiences, each with a picture and sent somewhere that helps them.
- * Alt text describes what is actually in the illustration — it is read aloud by
- * a screen reader, so it must match the picture, not the section's intent.
- */
-const audiences = [
-  {
-    key: "teachers",
-    title: isZh ? "教師" : "Teachers",
-    image: "/images/home-aud-teachers.webp",
-    alt: isZh
-      ? "插圖：一位教師站在課室桌前，手按一疊空白紙張，桌上有深紅色筆筒和藍色文件盤。"
-      : "Illustration: a teacher standing at a classroom table with one hand on a stack of blank sheets, a deep red pencil cup and a blue paper tray on the table.",
-    body: isZh
-      ? reviewOff
-        ? "備課用得着的教案、工作紙和校本規劃範例，附答案及來源。"
-        : "備課用得着的教案、工作紙和校本規劃範例，附答案、來源與審閱記錄。"
-      : reviewOff
-        ? "Lesson plans, worksheets and school-planning examples, with answer keys and sources."
-        : "Lesson plans, worksheets and school-planning examples, with answer keys, sources and a review record.",
-    href: resourceIndexPath(lang),
-    link: isZh ? "瀏覽免費資源" : "Browse the free resources",
-  },
-  {
-    key: "parents",
-    title: isZh ? "家長" : "Parents",
-    image: "/images/home-aud-parents.webp",
-    alt: isZh
-      ? "插圖：家長與孩子並排坐在家中飯桌前，一起看一張空白紙張，桌上有平板、深紅色杯和藍色筆筒。"
-      : "Illustration: a parent and child sitting side by side at a home dining table looking at one blank sheet, with a tablet, a deep red mug and a blue pencil cup.",
-    body: isZh
-      ? "子女用 AI 做功課時，你可以怎樣引導、怎樣檢查——由家長通告到家庭功課協議。"
-      : "How to guide and check AI homework at home — from a parent notice to a family homework agreement.",
-    href: themePath(lang, "B"),
-    link: isZh ? "安全及負責任使用 AI" : "Using AI safely and responsibly",
-  },
-  {
-    key: "students",
-    title: isZh ? "學生" : "Students",
-    image: "/images/home-aud-students.webp",
-    alt: isZh
-      ? "插圖：一位學生坐在書桌前，用藍色鉛筆在攤開的筆記本上書寫，桌上有深紅色筆筒。"
-      : "Illustration: a student sitting at a desk writing in an open notebook with a blue pencil, with a deep red pencil cup on the desk.",
-    body: isZh
-      ? "做專題前先學會核對：按科目和級別找到可用的工作紙與步驟，確認 AI 給你的答案。"
-      : "For projects and for checking what an AI tells you: find worksheets and steps by subject and learning stage.",
-    href: resourceIndexPath(lang),
-    link: isZh ? "按科目及級別尋找" : "Find by subject and stage",
-  },
-];
 ---
 
 <section class="hero">
@@ -126,30 +74,9 @@ const audiences = [
 
 <section class="audiences">
   <h2>{t(lang, "homeAudienceHeading")}</h2>
-  <ul class="card-grid aud-grid">
-    {
-      audiences.map((audience) => (
-        <li class={`card aud aud-${audience.key}`}>
-          <img
-            class="card-art"
-            src={audience.image}
-            alt={audience.alt}
-            width="1280"
-            height="720"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>{audience.title}</h3>
-          <p>{audience.body}</p>
-          <div class="card-cta-row">
-            <a class="btn card-cta" href={audience.href}>
-              {audience.link}
-            </a>
-          </div>
-        </li>
-      ))
-    }
-  </ul>
+  {/* One component, three callers: the same cards render here, on /resources/
+      and on each audience page (Billy, 2026-10-11). */}
+  <AudienceCardGrid lang={lang} audiences={[...AUDIENCES]} />
 </section>
 
 <hr class="section-rule" />
@@ -262,15 +189,6 @@ const audiences = [
   }
   .section-head h2 {
     margin: 0;
-  }
-  .aud-grid h3 {
-    margin: 0.35rem 0 0.4rem;
-    font-size: 1.2rem;
-  }
-  .aud-grid p {
-    margin: 0 0 0.75rem;
-    color: #333;
-    font-size: 0.95rem;
   }
   .newest-grid h3 {
     margin: 0 0 0.3rem;

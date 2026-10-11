@@ -1,0 +1,57 @@
+---
+import Base from "../../../layouts/Base.astro";
+import AudiencePageView from "../../../components/AudiencePageView.astro";
+import {
+  SECONDARY_LOCALE,
+  audienceImageAlt,
+  audienceImagePath,
+  audienceInfo,
+  audienceMeta,
+  localizePath,
+  resourceIndexPath,
+  t,
+} from "../../../lib/i18n";
+import { audiencePageCopy } from "../../../lib/audience-pages";
+import { AUDIENCES } from "../../../lib/schema";
+import { breadcrumbLd, faqLd } from "../../../lib/seo";
+
+const lang = SECONDARY_LOCALE;
+
+// One page per audience, in both languages (the audience's own index page).
+export function getStaticPaths() {
+  return AUDIENCES.map((audience) => ({
+    params: { audience },
+    props: { audience },
+  }));
+}
+
+const { audience } = Astro.props;
+
+/** The hero is the audience's own home-page illustration — the picture clicked. */
+const heroImage = audienceImagePath(audience);
+const copy = audiencePageCopy(lang, audience);
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+const homeUrl = new URL(localizePath("/", lang), Astro.site).href;
+const indexUrl = new URL(resourceIndexPath(lang), Astro.site).href;
+
+const structuredData = [
+  ...(copy ? [faqLd(copy.faqs)] : []),
+  breadcrumbLd([
+    { name: t(lang, "breadcrumbHome"), url: homeUrl },
+    { name: t(lang, "resourcesTitle"), url: indexUrl },
+    { name: audienceInfo(lang, audience).heading, url: canonicalUrl },
+  ]),
+];
+---
+
+<Base
+  title={`${audienceInfo(lang, audience).heading} — BEETS AI`}
+  description={audienceMeta(lang, audience)}
+  lang={lang}
+  ogImage={heroImage}
+  ogImageAlt={audienceImageAlt(lang, audience)}
+  structuredData={structuredData}
+>
+  <AudiencePageView lang={lang} audience={audience} />
+</Base>

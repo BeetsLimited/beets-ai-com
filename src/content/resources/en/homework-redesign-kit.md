@@ -7,6 +7,7 @@ kind: "guide"
 theme: "C"
 stage: "P4-P6"
 subject: "Cross-curricular"
+audience: [teachers]
 sourceIdea: "#5"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "About 40 min (self-guided; can be used for panel planning)"

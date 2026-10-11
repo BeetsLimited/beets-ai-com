@@ -7,6 +7,7 @@ kind: "lesson"
 theme: "D"
 stage: "P4-P6"
 subject: "Humanities"
+audience: [teachers, students]
 sourceIdea: "#13"
 sources: ["E, p.8"]
 prepTime: "1 lesson (about 35-40 min); the project itself is completed outside class"

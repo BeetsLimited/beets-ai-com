@@ -1,4 +1,4 @@
-import { THEMES, type Theme } from "./schema";
+import { AUDIENCES, THEMES, type Audience, type Theme } from "./schema";
 import { reviewRequired } from "./review-gate";
 
 /**
@@ -56,7 +56,15 @@ const ZH_HK = {
   breadcrumbHome: "主頁",
   navHome: "主頁",
   navResources: "免費資源",
+  /*
+   * The nav groups (Billy, 2026-10-11). The five themes and the three audiences
+   * are now folded under one trigger each, because the bar has to hold both
+   * groups AND 免費資源, 關於 and 意見及建議 as flat items as well.
+   */
+  navThemes: "主題",
+  navAudiences: "對象",
   navAbout: "關於",
+  navFeedback: "意見及建議",
   langGroup: "語言",
   switchAria: "切換至英文版",
 
@@ -103,8 +111,10 @@ const ZH_HK = {
     : "按主題、學科和級別，免費下載可編輯的工作紙、教案及校本規劃範例。資源持續增加，部分尚待教育工作者審閱。",
   resourcesEmpty: "資源陸續上線，請稍後再來。首批資源正在審閱中。",
   resourcesThemesHeading: "按主題瀏覽",
+  resourcesAudiencesHeading: "按對象瀏覽",
   catalogueSearchHeading: "搜尋資源",
   catalogueFilterTheme: "主題",
+  catalogueFilterAudience: "對象",
   catalogueFilterStage: "學習階段",
   catalogueFilterSubject: "科目",
   catalogueFilterKeyword: "關鍵字",
@@ -128,6 +138,7 @@ const ZH_HK = {
   reuseHeading: "使用條款",
   reuseBody: "資源可免費下載，供教學使用及改編；請保留來源標示。",
   labelTheme: "主題",
+  labelAudience: "對象",
   labelStage: "年級",
   labelSubject: "範疇／科目",
   labelPrep: "準備時間",
@@ -149,7 +160,10 @@ const EN: Record<UIKey, string> = {
   breadcrumbHome: "Home",
   navHome: "Home",
   navResources: "Free resources",
+  navThemes: "Themes",
+  navAudiences: "Audience",
   navAbout: "About",
+  navFeedback: "Feedback",
   langGroup: "Language",
   switchAria: "Switch to the Traditional Chinese version",
 
@@ -199,8 +213,10 @@ const EN: Record<UIKey, string> = {
     : "Download editable worksheets, lesson plans and school-planning examples by theme, subject and stage. More are added regularly; some have not yet been educator-reviewed.",
   resourcesEmpty: "Resources are being published — the first batch is in review.",
   resourcesThemesHeading: "Browse by theme",
+  resourcesAudiencesHeading: "Browse by audience",
   catalogueSearchHeading: "Search the catalogue",
   catalogueFilterTheme: "Theme",
+  catalogueFilterAudience: "Audience",
   catalogueFilterStage: "Learning stage",
   catalogueFilterSubject: "Subject",
   catalogueFilterKeyword: "Keyword",
@@ -224,6 +240,7 @@ const EN: Record<UIKey, string> = {
   reuseHeading: "Reuse",
   reuseBody: "Download and adapt these resources freely for teaching; please keep the attribution.",
   labelTheme: "Theme",
+  labelAudience: "Audience",
   labelStage: "Stage",
   labelSubject: "Domain / subject",
   labelPrep: "Preparation",
@@ -486,4 +503,149 @@ export function themeInfo(locale: Locale, theme: Theme) {
 
 export function themeMeta(locale: Locale, theme: Theme): string {
   return THEME_META[locale][theme];
+}
+
+// ── Audiences (對象) ───────────────────────────────────────────────────────
+// The three audiences are the ones the home page's 「由需要出發」 blocks address.
+// They are a classification IN THEIR OWN RIGHT (Billy, 2026-10-11): a resource
+// carries one or more of them, the catalogue can filter on them, and each has its
+// own index page — a browsing route like a theme, not a label on a theme.
+//
+// The audience KEY is also its URL segment (`/by-audience/teachers/`), so the
+// key must stay lowercase and stable.
+
+/** The audience's own name — on the nav, on cards, and in the catalogue tags. */
+export const AUDIENCE_LABELS: Record<Locale, Record<Audience, string>> = {
+  "zh-HK": { teachers: "教師", parents: "家長", students: "學生" },
+  en: { teachers: "Teachers", parents: "Parents", students: "Students" },
+};
+
+export function audienceLabel(locale: Locale, audience: Audience): string {
+  return AUDIENCE_LABELS[locale][audience];
+}
+
+/** Every audience, keyed, in the order the site presents them. */
+export function audiencesInOrder(locale: Locale): { key: Audience; label: string }[] {
+  return AUDIENCES.map((key) => ({ key, label: audienceLabel(locale, key) }));
+}
+
+/** The card / hero illustration for an audience, generated as a set with the home page. */
+export function audienceImagePath(audience: Audience): string {
+  return `/images/home-aud-${audience}.webp`;
+}
+
+/**
+ * Alt text for each audience's illustration. It describes the PICTURE, not the
+ * audience — a screen reader reads this aloud, so it must match what is in the
+ * image. Written from the image itself.
+ */
+export const AUDIENCE_IMAGE_ALT: Record<Locale, Record<Audience, string>> = {
+  "zh-HK": {
+    teachers:
+      "插圖：一位教師站在課室桌前，手按一疊空白紙張，桌上有深紅色筆筒和藍色文件盤。",
+    parents:
+      "插圖：家長與孩子並排坐在家中飯桌前，一起看一張空白紙張，桌上有平板、深紅色杯和藍色筆筒。",
+    students: "插圖：一位學生坐在書桌前，用藍色鉛筆在攤開的筆記本上書寫，桌上有深紅色筆筒。",
+  },
+  en: {
+    teachers:
+      "Illustration: a teacher standing at a classroom table with one hand on a stack of blank sheets, a deep red pencil cup and a blue paper tray on the table.",
+    parents:
+      "Illustration: a parent and child sitting side by side at a home dining table looking at one blank sheet, with a tablet, a deep red mug and a blue pencil cup.",
+    students:
+      "Illustration: a student sitting at a desk writing in an open notebook with a blue pencil, with a deep red pencil cup on the desk.",
+  },
+};
+
+export function audienceImageAlt(locale: Locale, audience: Audience): string {
+  return AUDIENCE_IMAGE_ALT[locale][audience];
+}
+
+/**
+ * The audience page's heading, its one-sentence need (`lede`, which is also the
+ * catalogue's intro on that page) and the home card's own copy.
+ *
+ * The heading is not just the audience's name: 「教師」 alone says nothing about
+ * what is behind it, and it is the page's h1.
+ */
+export const AUDIENCE_INFO: Record<
+  Locale,
+  Record<Audience, { heading: string; need: string; cardBody: string; cardCta: string }>
+> = {
+  "zh-HK": {
+    teachers: {
+      heading: "教師適用的資源",
+      need: "備課、施教與校本規劃用得着的教案、工作紙和範例——全部免費，下載可直接修改。",
+      cardBody: REVIEW_ON
+        ? "備課用得着的教案、工作紙和校本規劃範例，附答案、來源與審閱記錄。"
+        : "備課用得着的教案、工作紙和校本規劃範例，附答案及來源。",
+      cardCta: "瀏覽教師資源",
+    },
+    parents: {
+      heading: "家長適用的資源",
+      need: "子女用 AI 做功課時，你可以怎樣引導、怎樣檢查——由家長通告到家庭功課協議。",
+      cardBody: "子女用 AI 做功課時，你可以怎樣引導、怎樣檢查——由家長通告到家庭功課協議。",
+      cardCta: "瀏覽家長資源",
+    },
+    students: {
+      heading: "學生適用的資源",
+      need: "做專題與核對 AI 答案時，你可以直接使用的工作紙、步驟與紀錄表。",
+      cardBody: "做專題前先學會核對：按科目和級別找到可用的工作紙與步驟，確認 AI 給你的答案。",
+      cardCta: "瀏覽學生資源",
+    },
+  },
+  en: {
+    teachers: {
+      heading: "Resources for teachers",
+      need: "Lesson plans, worksheets and school-planning examples you can prepare with — free, and editable once downloaded.",
+      cardBody: REVIEW_ON
+        ? "Lesson plans, worksheets and school-planning examples, with answer keys, sources and a review record."
+        : "Lesson plans, worksheets and school-planning examples, with answer keys and sources.",
+      cardCta: "Browse teacher resources",
+    },
+    parents: {
+      heading: "Resources for parents",
+      need: "How to guide and check AI homework at home — from a parent notice to a family homework agreement.",
+      cardBody:
+        "How to guide and check AI homework at home — from a parent notice to a family homework agreement.",
+      cardCta: "Browse parent resources",
+    },
+    students: {
+      heading: "Resources for students",
+      need: "Worksheets, steps and record sheets you can use yourself for a project — and for checking what an AI told you.",
+      cardBody:
+        "For projects and for checking what an AI tells you: find worksheets and steps by subject and learning stage.",
+      cardCta: "Browse student resources",
+    },
+  },
+};
+
+export function audienceInfo(locale: Locale, audience: Audience) {
+  return AUDIENCE_INFO[locale][audience];
+}
+
+/** Audience page meta descriptions, in the words the audience itself searches with. */
+export const AUDIENCE_META: Record<Locale, Record<Audience, string>> = {
+  "zh-HK": {
+    teachers: "免費下載香港教師適用的 AI 教學資源：教案、工作紙、校本規劃範例及評估工具，附答案及來源。",
+    parents: "家長適用的免費 AI 資源：在家引導子女使用 AI 做功課的親子活動、家庭功課協議及家長通告。",
+    students: "學生適用的免費資源：核對 AI 答案、做專題時可直接使用的工作紙、步驟與紀錄表。",
+  },
+  en: {
+    teachers:
+      "Free Hong Kong AI teaching resources for teachers: lesson plans, worksheets, school-planning examples and assessment tasks, with answer keys and sources.",
+    parents:
+      "Free AI resources for parents: activities to do at home with your child, a family homework agreement and a parent notice.",
+    students:
+      "Free resources for students: worksheets, steps and record sheets for projects and for checking what an AI tells you.",
+  },
+};
+
+export function audienceMeta(locale: Locale, audience: Audience): string {
+  return AUDIENCE_META[locale][audience];
+}
+
+/** An audience index page. The key is the URL segment, in both languages. */
+export function audiencePath(locale: Locale, audience: Audience): string {
+  return localizePath(`/by-audience/${audience}/`, locale);
 }

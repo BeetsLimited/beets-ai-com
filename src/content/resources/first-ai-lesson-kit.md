@@ -8,6 +8,7 @@ kind: "lesson"
 theme: "E"
 stage: "P4-P6"
 subject: "全科/跨科"
+audience: [teachers]
 sourceIdea: "#9"
 sources: ["G, p.2-3", "G, pp.2-5 and 2-7"]
 prepTime: "1 節（40 分鐘）；課前準備約 15 分鐘"

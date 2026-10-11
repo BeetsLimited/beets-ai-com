@@ -7,6 +7,7 @@ kind: "guide"
 theme: "B"
 stage: "P1-P6"
 subject: "Pastoral and parents"
+audience: [parents, teachers]
 sourceIdea: "#7"
 sources: ["B, p.1", "F, p.1-8"]
 prepTime: "15-20 min per session, three sessions (can be spread across different days)"

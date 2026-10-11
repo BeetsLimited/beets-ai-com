@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import { isPublished } from "../lib/review-gate";
-import { t, themesInOrder, type Locale } from "../lib/i18n";
+import { audiencesInOrder, t, themesInOrder, type Locale } from "../lib/i18n";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
+import AudienceCardGrid from "./AudienceCardGrid.astro";
 import ResourceCatalogueView from "./ResourceCatalogueView.astro";
 import ThemeCardGrid from "./ThemeCardGrid.astro";
 
@@ -34,9 +35,27 @@ const published = newestFirst(
 const liveThemes = themesInOrder(lang).filter((theme) =>
   published.some((entry) => entry.data.theme === theme.key),
 );
+
+/**
+ * An audience route is only linked when something is behind it. Every audience
+ * page exists, so this is not a broken-link question — it is that a route with
+ * nothing on it is a dead end for the reader who followed it.
+ */
+const liveAudiences = audiencesInOrder(lang).filter((audience) =>
+  published.some((entry) => entry.data.audience.includes(audience.key)),
+);
 ---
 
 <ResourceCatalogueView lang={lang} />
+
+{
+  liveAudiences.length > 0 ? (
+    <section class="audience-routes" id="audiences">
+      <h2>{t(lang, "resourcesAudiencesHeading")}</h2>
+      <AudienceCardGrid lang={lang} audiences={liveAudiences.map((audience) => audience.key)} />
+    </section>
+  ) : null
+}
 
 {
   liveThemes.length > 0 ? (

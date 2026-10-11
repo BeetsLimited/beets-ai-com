@@ -8,6 +8,7 @@ kind: "lesson"
 theme: "D"
 stage: "P4-P6"
 subject: "科學"
+audience: [teachers, students]
 sourceIdea: "#12"
 sources: ["E, p.7"]
 prepTime: "1 節（約 35–40 分鐘）"

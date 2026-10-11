@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import { isPublished } from "../lib/review-gate";
-import { resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+import { audienceLabel, resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+import type { Audience } from "../lib/schema";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
 import {
   FACETS,
@@ -74,6 +75,7 @@ const items = published.map((entry) => ({
   image: entry.data.image,
   imageAlt: entry.data.imageAlt,
   theme: entry.data.theme,
+  audience: entry.data.audience,
   stage: entry.data.stage,
   subject: entry.data.subject,
   /** What the keyword box searches. Built by the same helper the tests drive. */
@@ -107,6 +109,12 @@ const tagGroups = [
     localise: (value: string) => themeLabel(lang, value),
   },
   {
+    facet: "audience" as CatalogueFacet,
+    label: t(lang, "catalogueFilterAudience"),
+    values: options.audiences,
+    localise: (value: string) => audienceLabel(lang, value as Audience),
+  },
+  {
     facet: "stage" as CatalogueFacet,
     label: t(lang, "catalogueFilterStage"),
     values: options.stages,
@@ -122,6 +130,11 @@ const tagGroups = [
 
 const lockedChips = [
   { facet: "theme" as CatalogueFacet, label: t(lang, "catalogueFilterTheme"), value: locked.theme },
+  {
+    facet: "audience" as CatalogueFacet,
+    label: t(lang, "catalogueFilterAudience"),
+    value: locked.audience,
+  },
   { facet: "stage" as CatalogueFacet, label: t(lang, "catalogueFilterStage"), value: locked.stage },
   {
     facet: "subject" as CatalogueFacet,
@@ -132,7 +145,12 @@ const lockedChips = [
   .filter((chip) => Boolean(chip.value))
   .map((chip) => ({
     ...chip,
-    display: chip.facet === "theme" ? themeLabel(lang, chip.value as string) : (chip.value as string),
+    display:
+      chip.facet === "theme"
+        ? themeLabel(lang, chip.value as string)
+        : chip.facet === "audience"
+          ? audienceLabel(lang, chip.value as Audience)
+          : (chip.value as string),
   }));
 ---
 
@@ -228,6 +246,7 @@ const lockedChips = [
           class="card resource-card"
           data-card
           data-theme={item.theme}
+          data-audience={item.audience.join(" ")}
           data-stage={item.stage}
           data-subject={item.subject}
           data-haystack={item.haystack}
@@ -503,6 +522,8 @@ const lockedChips = [
       card,
       item: {
         theme: card.dataset.theme ?? "",
+        // A space-separated list: a resource can be for more than one audience.
+        audience: (card.dataset.audience ?? "").split(/\s+/).filter(Boolean),
         stage: card.dataset.stage ?? "",
         subject: card.dataset.subject ?? "",
         haystack: card.dataset.haystack ?? "",

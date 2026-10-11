@@ -14,9 +14,14 @@ import {
   resourceIndexPath,
   themeLabel,
   themeNavLabel,
+  AUDIENCE_LABELS,
+  audienceImagePath,
+  audienceLabel,
+  audiencePath,
+  type Locale,
   type UIKey,
 } from "../src/lib/i18n";
-import { THEMES } from "../src/lib/schema";
+import { AUDIENCES, THEMES } from "../src/lib/schema";
 
 /**
  * The site shows exactly ONE language per page. These tests pin the rules that
@@ -101,27 +106,39 @@ describe("theme labels", () => {
   });
 });
 
-describe("theme labels in the navigation", () => {
+describe("the navigation's labels and character budget", () => {
   /*
-   * The nav is one row 816px wide, and a wrapped second row would strand a
-   * separator at its start. Measured at a 1280px viewport, the FULL English theme
-   * labels put the eight nav items at 982px, so the nav carries shorter English
-   * labels (`themeNavLabel`) while pages, cards and breadcrumbs keep the full ones
-   * (`themeLabel`).
+   * The bar is one row inside a 54rem content column, so its labels are on a
+   * measured budget. Until 2026-10-11 the bar carried the five themes as flat
+   * items; they now sit inside the 主題 disclosure group and the three audiences
+   * inside 對象 (Billy asked for that on 2026-10-11, reversing his earlier
+   * "make them top-level" call once the row had to hold both groups). So the six
+   * top-level labels are short by design, and what has to stay in budget are the
+   * PANEL labels: a panel is nowrap, so a label wider than the viewport is a
+   * menu nobody can read.
    *
    * Pixel widths cannot be asserted from here, so this holds the budget that
-   * produced them: the eight English nav items measured 85 characters against
-   * 982px — roughly 7.4px per character at this type size plus the separators.
-   * Lengthening an English nav label past that budget is what this catches.
+   * produced them — the six English top-level items measure 45 characters, and
+   * the nav's type size is 0.9rem.
    */
-  const navChars = (locale: string) =>
-    ["Home", "Free resources", ...THEMES.map((theme) => themeNavLabel(locale as never, theme)), "About"]
-      .join("").length;
+  const topLevel = (locale: Locale) => [
+    t(locale, "navHome"),
+    t(locale, "navResources"),
+    t(locale, "navThemes"),
+    t(locale, "navAudiences"),
+    t(locale, "navAbout"),
+    t(locale, "navFeedback"),
+  ];
 
-  it("gives every theme a nav label in every language", () => {
+  it("gives every theme and every audience a label in every language", () => {
     for (const locale of LOCALES) {
       for (const theme of THEMES) {
         expect(themeNavLabel(locale, theme).trim().length, `${locale}/${theme}`).toBeGreaterThan(0);
+      }
+      for (const audience of AUDIENCES) {
+        expect(audienceLabel(locale, audience).trim().length, `${locale}/${audience}`).toBeGreaterThan(
+          0,
+        );
       }
     }
   });
@@ -132,14 +149,59 @@ describe("theme labels in the navigation", () => {
     }
   });
 
-  it("keeps the English nav inside the row's character budget", () => {
-    expect(navChars("en")).toBeLessThanOrEqual(90);
+  it("keeps the six top-level items inside the row's character budget", () => {
+    expect(topLevel("en").join("").length).toBeLessThanOrEqual(60);
+    expect(topLevel("zh-HK").join("").length).toBeLessThanOrEqual(20);
+  });
+
+  it("keeps the dropdown labels short enough to sit in a panel", () => {
+    // 20 characters is roughly 150px at this size, i.e. the panel's own width.
+    for (const theme of THEMES) {
+      expect(themeNavLabel("en", theme).length, theme).toBeLessThanOrEqual(20);
+    }
+    for (const audience of AUDIENCES) {
+      expect(audienceLabel("en", audience).length, audience).toBeLessThanOrEqual(20);
+    }
   });
 
   it("uses the theme's full label in Chinese, where it already fits", () => {
     for (const theme of THEMES) {
       expect(themeNavLabel("zh-HK", theme)).toBe(themeLabel("zh-HK", theme));
     }
+  });
+
+  it("names the two disclosure groups", () => {
+    // The 主題 and 對象 triggers, i.e. the labels a reader has to understand
+    // before they can find the five themes or the three audiences at all.
+    for (const locale of LOCALES) {
+      expect(t(locale, "navThemes").trim().length, locale).toBeGreaterThan(0);
+      expect(t(locale, "navAudiences").trim().length, locale).toBeGreaterThan(0);
+      expect(CJK.test(t(locale, "navThemes")), locale).toBe(locale === "zh-HK");
+    }
+  });
+});
+
+describe("audience labels and routes", () => {
+  it("labels all three audiences in every language, each in its own script", () => {
+    for (const locale of LOCALES) {
+      expect(Object.keys(AUDIENCE_LABELS[locale]).sort()).toEqual([...AUDIENCES].sort());
+    }
+    for (const audience of AUDIENCES) {
+      expect(CJK.test(audienceLabel("zh-HK", audience)), audience).toBe(true);
+      expect(CJK.test(audienceLabel("en", audience)), audience).toBe(false);
+    }
+  });
+
+  it("routes each audience to its own index page, in each language", () => {
+    expect(audiencePath("zh-HK", "teachers")).toBe("/by-audience/teachers/");
+    expect(audiencePath("zh-HK", "students")).toBe("/by-audience/students/");
+    expect(audiencePath("en", "parents")).toBe("/en/by-audience/parents/");
+  });
+
+  it("points an audience card at that audience's own illustration", () => {
+    // The card a visitor clicks and the page they land on show one picture.
+    expect(audienceImagePath("teachers")).toBe("/images/home-aud-teachers.webp");
+    expect(audienceImagePath("students")).toBe("/images/home-aud-students.webp");
   });
 });
 

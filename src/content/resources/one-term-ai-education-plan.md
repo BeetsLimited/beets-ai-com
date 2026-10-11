@@ -8,6 +8,7 @@ kind: "planning"
 theme: "A"
 stage: "P1-S3"
 subject: "校本規劃"
+audience: [teachers]
 sourceIdea: "#1"
 sources: ["B, p.2", "F, pp.1-6 to 1-10"]
 prepTime: "一次規劃會議（約 60 分鐘）＋ 會後個別填寫"

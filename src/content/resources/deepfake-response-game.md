@@ -8,6 +8,7 @@ kind: "lesson"
 theme: "B"
 stage: "S1-S3"
 subject: "人文"
+audience: [teachers]
 sourceIdea: "#16"
 sources: ["E, p.14"]
 prepTime: "1 節（約 40 分鐘）"

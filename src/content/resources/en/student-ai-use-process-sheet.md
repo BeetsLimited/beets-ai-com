@@ -7,6 +7,7 @@ kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
 subject: "Cross-curricular"
+audience: [teachers, students]
 sourceIdea: "#4"
 sources: ["F, p.1-13", "G, p.2-8"]
 prepTime: "10 min briefing + task time"

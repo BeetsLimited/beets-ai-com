@@ -8,6 +8,7 @@ kind: "worksheet"
 theme: "D"
 stage: "P4"
 subject: 數學
+audience: [teachers, students]
 sourceIdea: "#11"
 sources: ["E, p.6"]
 prepTime: "1 節（約 35–40 分鐘）"

@@ -7,6 +7,7 @@ kind: "lesson"
 theme: "B"
 stage: "S1-S3"
 subject: "Humanities"
+audience: [teachers]
 sourceIdea: "#16"
 sources: ["E, p.14"]
 prepTime: "1 lesson (about 40 min)"

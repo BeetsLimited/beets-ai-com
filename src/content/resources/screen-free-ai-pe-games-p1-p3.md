@@ -8,6 +8,7 @@ kind: "lesson"
 theme: "E"
 stage: "P1-P3"
 subject: "體育"
+audience: [teachers]
 sourceIdea: "#10"
 sources: ["E, p.4", "F, p.1-8"]
 prepTime: "一節體育課（約 35 分鐘）"

@@ -21,11 +21,13 @@
 /** Ten cards a page — two rows of five, the catalogue's contract with the reader. */
 export const PAGE_SIZE = 10;
 
-export type CatalogueFacet = "theme" | "stage" | "subject";
+export type CatalogueFacet = "theme" | "audience" | "stage" | "subject";
 
 export interface CatalogueFilters {
   /** Theme keys, "A"–"E". Several are OR-ed. */
   theme?: string[];
+  /** Audience keys, "teachers" | "parents" | "students". Several are OR-ed. */
+  audience?: string[];
   /** Learning stages as published, e.g. "P4-P6". Several are OR-ed. */
   stage?: string[];
   /** Subjects as published, e.g. "科學" or "Science". Several are OR-ed. */
@@ -40,13 +42,19 @@ export type CatalogueLocked = Partial<Record<CatalogueFacet, string>>;
 /** The minimum a card must expose for the rules below to work on it. */
 export interface CatalogueItem {
   theme: string;
+  /**
+   * One or more audience keys. The only LIST-valued facet: a resource can be for
+   * teachers and for students at once, so `facetMatches` accepts either shape.
+   */
+  audience: string[];
   stage: string;
   subject: string;
   /** Lower-cased title + description, precomputed so matching is a substring test. */
   haystack: string;
 }
 
-export const FACETS: CatalogueFacet[] = ["theme", "stage", "subject"];
+/** Facet order is also the order of the tag groups in the criteria box. */
+export const FACETS: CatalogueFacet[] = ["theme", "audience", "stage", "subject"];
 
 /**
  * Build the searchable text for one resource. Deliberately title + description
@@ -61,9 +69,16 @@ export function normaliseQuery(q: string | undefined): string {
   return (q ?? "").trim().toLowerCase();
 }
 
-/** Is this facet satisfied? An empty selection means "no opinion" — show all. */
-export function facetMatches(selected: string[] | undefined, value: string): boolean {
-  return !selected || selected.length === 0 || selected.includes(value);
+/**
+ * Is this facet satisfied? An empty selection means "no opinion" — show all.
+ *
+ * A value may be a LIST (the 對象 facet): a resource that is for teachers and
+ * for students must be found by a reader filtering on either one.
+ */
+export function facetMatches(selected: string[] | undefined, value: string | string[]): boolean {
+  if (!selected || selected.length === 0) return true;
+  const values = Array.isArray(value) ? value : [value];
+  return values.some((entry) => selected.includes(entry));
 }
 
 /**
@@ -72,6 +87,7 @@ export function facetMatches(selected: string[] | undefined, value: string): boo
  */
 export function matches(item: CatalogueItem, filters: CatalogueFilters): boolean {
   if (!facetMatches(filters.theme, item.theme)) return false;
+  if (!facetMatches(filters.audience, item.audience)) return false;
   if (!facetMatches(filters.stage, item.stage)) return false;
   if (!facetMatches(filters.subject, item.subject)) return false;
   const q = normaliseQuery(filters.q);
@@ -148,13 +164,14 @@ export function paginate<T>(items: T[], page: number, pageSize: number = PAGE_SI
 /** The values actually present, so a tag never offers a dead end. */
 export function filterOptions<T extends CatalogueItem>(
   items: T[],
-): { themes: string[]; stages: string[]; subjects: string[] } {
+): { themes: string[]; audiences: string[]; stages: string[]; subjects: string[] } {
   const unique = (values: string[]) =>
     Array.from(new Set(values.filter((value) => value && value.trim()))).sort((a, b) =>
       a.localeCompare(b),
     );
   return {
     themes: unique(items.map((item) => item.theme)),
+    audiences: unique(items.flatMap((item) => item.audience ?? [])),
     stages: unique(items.map((item) => item.stage)),
     subjects: unique(items.map((item) => item.subject)),
   };
