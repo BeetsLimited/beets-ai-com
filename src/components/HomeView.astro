@@ -12,6 +12,7 @@ import {
   type Locale,
 } from "../lib/i18n";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
+import { ORG_SITE } from "../lib/seo";
 import { AUDIENCES } from "../lib/schema";
 import AudienceCardGrid from "./AudienceCardGrid.astro";
 import ThemeCardGrid from "./ThemeCardGrid.astro";
@@ -63,10 +64,17 @@ const newest = published.slice(0, 6);
     loading="eager"
     decoding="async"
   />
-  <p class="lede">{t(lang, "homeLede")}</p>
+  <p class="lede">
+    {t(lang, "homeLedeBefore")}<a href={ORG_SITE} target="_blank" rel="noopener noreferrer"
+      >Beets Limited</a
+    >{t(lang, "homeLedeAfter")}
+  </p>
   <p class="lede">{t(lang, "homeIntro2")}</p>
   <div class="btn-row">
     <a class="btn highlight" href={resourceIndexPath(lang)}>{t(lang, "resourcesTitle")}</a>
+    {/* Internal, so it navigates in place, and the path is localised: an English
+        reader stays in the English edition (Billy, 2026-10-11). */}
+    <a class="btn" href={localizePath("/about/", lang)}>{t(lang, "homeAboutCta")}</a>
   </div>
 </section>
 

@@ -1,5 +1,6 @@
 ---
 import { audienceLabel, audiencePath, feedbackPath, t, type Locale } from "../lib/i18n";
+import { ORG_SITE } from "../lib/seo";
 
 /**
  * About page body (rewritten 2026-10-11, Billy).
@@ -32,7 +33,6 @@ const { lang } = Astro.props;
 /** Parent department page, so a reader can reach the documents we draw on. */
 const EDB_BLUEPRINT =
   "https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html";
-const BEETS_SITE = "https://www.beets3d.com/";
 const AUDIENCES = ["teachers", "parents", "students"] as const;
 ---
 
@@ -53,7 +53,7 @@ const AUDIENCES = ["teachers", "parents", "students"] as const;
       </p>
       <p>
         資源參考教育局已發布的官方文件，例如《中小學人工智能素養學習架構》與{" "}
-        <a href={EDB_BLUEPRINT} rel="noopener">{t(lang, "debpLinkText")}</a>
+        <a href={EDB_BLUEPRINT} target="_blank" rel="noopener noreferrer">{t(lang, "debpLinkText")}</a>
         ，並在每份資源列明它依據哪份文件，方便你回到原始資料核對。本網站是 Beets
         的獨立計劃，<strong>並非教育局官方文件</strong>；教材的內容與判斷由我們負責。
       </p>
@@ -91,7 +91,7 @@ const AUDIENCES = ["teachers", "parents", "students"] as const;
         beets3d.com。
       </p>
       <p>
-        <a class="btn" href={BEETS_SITE} rel="noopener">
+        <a class="btn" href={ORG_SITE} target="_blank" rel="noopener noreferrer">
           beets3d.com →
         </a>
       </p>
@@ -126,7 +126,7 @@ const AUDIENCES = ["teachers", "parents", "students"] as const;
       <p>
         The material draws on official documents published by the Education Bureau, such as the AI
         Literacy Learning Framework for Primary and Secondary Schools and the{" "}
-        <a href={EDB_BLUEPRINT} rel="noopener">{t(lang, "debpLinkText")}</a>, and every resource
+        <a href={EDB_BLUEPRINT} target="_blank" rel="noopener noreferrer">{t(lang, "debpLinkText")}</a>, and every resource
         names the document it is built on so you can check it at source. This site is an independent
         initiative by Beets and is <strong>not an official EDB publication</strong>; the teaching
         material and the judgements in it are ours.
@@ -170,7 +170,7 @@ const AUDIENCES = ["teachers", "parents", "students"] as const;
         services and products, visit beets3d.com.
       </p>
       <p>
-        <a class="btn" href={BEETS_SITE} rel="noopener">
+        <a class="btn" href={ORG_SITE} target="_blank" rel="noopener noreferrer">
           beets3d.com →
         </a>
       </p>

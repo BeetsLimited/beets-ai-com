@@ -150,8 +150,12 @@ describe("the navigation's labels and character budget", () => {
   });
 
   it("keeps the six top-level items inside the row's character budget", () => {
+    // The Chinese budget rose from 20 to 30 on 2026-10-11: Billy asked for 關於 to
+    // read 關於 Beets AI in the menu ("change 關於 in the site menu to 關於 Beets AI"),
+    // which is +9 characters. Measured after the change: the six labels still fit
+    // one line with room to spare (see site-chrome.md for the probe).
     expect(topLevel("en").join("").length).toBeLessThanOrEqual(60);
-    expect(topLevel("zh-HK").join("").length).toBeLessThanOrEqual(20);
+    expect(topLevel("zh-HK").join("").length).toBeLessThanOrEqual(30);
   });
 
   it("keeps the dropdown labels short enough to sit in a panel", () => {

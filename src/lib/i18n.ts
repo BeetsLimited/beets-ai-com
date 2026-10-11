@@ -63,7 +63,7 @@ const ZH_HK = {
    */
   navThemes: "主題",
   navAudiences: "對象",
-  navAbout: "關於",
+  navAbout: "關於 Beets AI",
   navFeedback: "意見及建議",
   langGroup: "語言",
   switchAria: "切換至英文版",
@@ -83,8 +83,15 @@ const ZH_HK = {
   homeTitle: "香港免費 AI 教育資源",
   homeDescription:
     "香港免費 AI 教育資源：教師、家長及學生都可下載工作紙、教案及校本規劃範例，附答案及來源，全部免費。",
-  homeLede:
-    "Beets AI 是 Beets Limited 為香港教師、家長和學生設立的免費 AI 教育資源庫。我們相信學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術，所以我們把教師真正需要的教案、工作紙和校本規劃範例，做成下載即可使用的教材——全部免費，下載不需註冊。",
+  /*
+    The intro is split so the company name can be a LINK (Billy, 2026-10-11).
+    The two halves are joined around it, so the sentence still reads as one
+    sentence — never assemble a sentence from fragments that only work in one
+    language.
+  */
+  homeLedeBefore: "Beets AI 是 ",
+  homeLedeAfter:
+    " 為香港教師、家長和學生設立的免費 AI 教育資源庫。我們相信學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術，所以我們把教師真正需要的教案、工作紙和校本規劃範例，做成下載即可使用的教材——全部免費，下載不需註冊。",
   homeIntro2:
     "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件與版本，並說明它為你解決什麼問題。",
   homeEyebrow: "教師、家長、學生都合用 · 下載不需註冊",
@@ -104,6 +111,7 @@ const ZH_HK = {
   cardCtaTheme: "瀏覽此主題",
   cardCtaResource: "查看資源",
   homeMoreResourcesCta: "更多資源",
+  homeAboutCta: "關於 Beets AI",
   homeFeedbackCta: "提出資源需求",
 
   resourcesTitle: "免費資源",
@@ -164,7 +172,7 @@ const EN: Record<UIKey, string> = {
   navResources: "Free resources",
   navThemes: "Themes",
   navAudiences: "Audience",
-  navAbout: "About",
+  navAbout: "About Beets AI",
   navFeedback: "Feedback",
   langGroup: "Language",
   switchAria: "Switch to the Traditional Chinese version",
@@ -180,8 +188,9 @@ const EN: Record<UIKey, string> = {
   homeTitle: "Free AI education resources for Hong Kong",
   homeDescription:
     "Free AI education resources for Hong Kong: teachers, parents and students can download worksheets, lesson plans and school-planning examples, with answer keys and sources.",
-  homeLede:
-    "Beets AI is a free library of AI education resources that Beets Limited builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",
+  homeLedeBefore: "Beets AI is a free library of AI education resources that ",
+  homeLedeAfter:
+    " builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",
   homeIntro2:
     "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on and its version, and says what problem it solves.",
   homeEyebrow: "For teachers, parents and students · no registration to download",
@@ -204,6 +213,7 @@ const EN: Record<UIKey, string> = {
   cardCtaTheme: "Browse this theme",
   cardCtaResource: "View this resource",
   homeMoreResourcesCta: "More resources",
+  homeAboutCta: "About Beets AI",
   homeFeedbackCta: "Request a resource",
 
   resourcesTitle: "Free resources",

@@ -15,7 +15,7 @@ import {
   type Locale,
 } from "../lib/i18n";
 import { AUDIENCES, THEMES } from "../lib/schema";
-import { organizationLd, socialMeta, webSiteLd } from "../lib/seo";
+import { ORG_SITE, organizationLd, socialMeta, webSiteLd } from "../lib/seo";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
 import { getCollection } from "astro:content";
 import { isPublished } from "../lib/review-gate";
@@ -301,7 +301,8 @@ const liveResources = (
         <p class="muted">
           © Beets Limited · <a href={localizePath("/about/", lang)}>{t(lang, "footerTerms")}</a> ·{" "}
           <a href={feedbackPath(lang)}>{t(lang, "footerFeedback")}</a> ·{" "}
-          <a href="https://www.beets3d.com/">beets3d.com</a>
+          {/* Off-site, so it opens in a new tab; `check:links` enforces that. */}
+          <a href={ORG_SITE} target="_blank" rel="noopener noreferrer">beets3d.com</a>
         </p>
       </div>
     </footer>

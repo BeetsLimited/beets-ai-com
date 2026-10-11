@@ -17,6 +17,13 @@ import type { Theme } from "./schema";
 export const SITE_URL = "https://beets-ai.com";
 export const ORG_NAME = "Beets Limited";
 export const ORG_URL = "https://beets3d.com";
+/**
+ * The company's own site as a LINK — the footer, /about/ and the home page send
+ * readers to it. Note the `www`: `beets3d.com` 301-redirects there, so linking
+ * the final URL saves the reader a hop. Not the same thing as `ORG_URL`, which is
+ * the identifier used in the structured data and must stay as it is.
+ */
+export const ORG_SITE = "https://www.beets3d.com/";
 export const ORG_LOGO = `${SITE_URL}/favicon-192.png`;
 export const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
