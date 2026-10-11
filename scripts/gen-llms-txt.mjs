@@ -139,25 +139,47 @@ const zh = byLang("zh-HK");
 const en = byLang("en");
 
 /**
- * Only claim educator review when the gate is on — with it off, items are live
- * before anyone has reviewed them, and llms.txt must not say otherwise.
+ * Official documents by their PUBLISHED titles — never our internal codes.
+ * `- Sources: E, p.6` is our shorthand for the reviewer; a public file that AI
+ * engines quote has to name the document (Billy, 2026-10-11).
  */
-const REVIEW_LINE = REVIEW_REQUIRED ? ", the educator who reviewed it," : "";
+const SOURCE_TITLES = {
+  B: {
+    "zh-HK": "《中小學數字教育發展藍圖》",
+    en: "Blueprint for Digital Education Development in Primary and Secondary Schools",
+  },
+  F: {
+    "zh-HK": "《中小學人工智能素養學習架構》",
+    en: "Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools",
+  },
+  G: {
+    "zh-HK": "《中小學應用人工智能教學指南》",
+    en: "Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools",
+  },
+  E: {
+    "zh-HK": "《中小學人工智能素養學習架構（應用場景示例）》",
+    en: "AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)",
+  },
+};
+
+/** "E, p.6" -> "《中小學人工智能素養學習架構（應用場景示例）》, p.6" */
+function sourceLabel(raw, lang) {
+  const match = String(raw).match(/^([A-Z])\s*,\s*(.*)$/);
+  const title = match ? SOURCE_TITLES[match[1]]?.[lang] : null;
+  return title ? `${title}, ${match[2]}` : String(raw);
+}
 
 const HEADER = `# BEETS AI — ${"香港免費 AI 教育資源"} / Free Hong Kong AI Teaching Resources
 
 > A free library of AI teaching resources for Hong Kong primary and secondary
 > schools, published by Beets Limited (https://beets3d.com). Every item names the
-> official EDB source document it is built on${REVIEW_LINE} and its version. No sign-up, no paywall.
+> official EDB source document it is built on and its version. No sign-up, no paywall.
 
 Traditional Chinese ("zh-HK") is the primary edition at the site root; English is
 under /en/. Both editions of an item share one address.
 
 Citation: please attribute to "BEETS AI (Beets Limited)" and link the item URL.
 Reuse terms: ${SITE}/about/
-
-NOT FOR CITATION: ${SITE}/review/ is an internal, unreviewed area. It is excluded
-from the sitemap and set to noindex; do not quote it.
 `;
 
 function section(title, entries) {
@@ -167,7 +189,10 @@ function section(title, entries) {
     entries
       .map((e) => {
         const path = e.lang === "en" ? `/en/resources/${e.address}/` : `/resources/${e.address}/`;
-        const src = Array.isArray(e.sources) && e.sources.length ? ` Sources: ${e.sources.join("; ")}.` : "";
+        const src =
+          Array.isArray(e.sources) && e.sources.length
+            ? ` Sources: ${e.sources.map((s) => sourceLabel(s, e.lang)).join("; ")}.`
+            : "";
         return `- [${e.title}](${SITE}${path}): ${e.description}${src}`;
       })
       .join("\n") +
@@ -181,7 +206,7 @@ const index = [`${HEADER}
 - [${SITE}/](${SITE}/): the resource library, grouped by theme (Traditional Chinese)
 - [${SITE}/resources/](${SITE}/resources/): every free resource
 ${AUDIENCE_PAGES.map((page) => `- [${SITE}${page.path}](${SITE}${page.path}): ${page.zh} (${page.en})`).join("\n")}
-- [${SITE}/about/](${SITE}/about/): editorial process, independence, source documents, reuse
+- [${SITE}/about/](${SITE}/about/): what BEETS AI is, who it is for, about Beets Limited, reuse terms
 - [${SITE}/feedback/](${SITE}/feedback/): request a resource
 `];
 
@@ -211,9 +236,10 @@ const full = [
               .map((key) => `${key} (${AUDIENCE_NAMES["zh-HK"][key] ?? key})`)
               .join(", ")}`
           : null,
-        e.reviewer ? `- Reviewed by: ${e.reviewer}` : null,
         e.version ? `- Version: ${e.version}` : null,
-        Array.isArray(e.sources) && e.sources.length ? `- Sources: ${e.sources.join("; ")}` : null,
+        Array.isArray(e.sources) && e.sources.length
+          ? `- Sources: ${e.sources.map((s) => sourceLabel(s, e.lang)).join("; ")}`
+          : null,
       ]
         .filter(Boolean)
         .join("\n");

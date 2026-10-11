@@ -1,4 +1,5 @@
-import { HTML_LANG, type Locale } from "./i18n";
+import { HTML_LANG, themeLabel, type Locale } from "./i18n";
+import type { Theme } from "./schema";
 
 /**
  * SEO / AI-search surface: social meta + structured data.
@@ -170,7 +171,7 @@ type ResourceEntry = {
     description: string;
     subject: string;
     stage: string;
-    theme: string;
+    theme: Theme;
     sources?: string[];
     author: string;
     reviewer?: string;
@@ -206,12 +207,25 @@ export function learningResourceLd(entry: ResourceEntry, lang: Locale, url: stri
     learningResourceType: d.type === "post" ? "Article" : "Worksheet",
     educationalLevel: d.stage,
     about: { "@type": "Thing", name: d.subject },
-    keywords: [d.theme, d.stage, d.subject].filter(Boolean).join(", "),
+    /**
+     * The PUBLIC name of the theme, never its key. The A–E letters are the
+     * internal lettering of our own content plan: a search engine or an answer
+     * engine reading "D, P4, 數學" learns nothing, and it is internal shorthand
+     * on a customer-facing surface (Billy, 2026-10-11).
+     */
+    keywords: [themeLabel(lang, d.theme), d.stage, d.subject].filter(Boolean).join(", "),
     datePublished: published,
     dateModified: published,
     version: d.version,
     publisher: { "@id": `${ORG_URL}/#organization` },
-    author: { "@type": "Organization", name: d.author },
+    /**
+     * The ORGANISATION is the author, not the frontmatter field `d.author`
+     * ("BeetsBot", a drafting persona). Publishing that put our internal
+     * authorship in the structured data of all 14 resource pages — machine-read
+     * by search and AI answer engines, i.e. the internal material Billy ruled
+     * out of customer-facing pages on 2026-10-11.
+     */
+    author: { "@type": "Organization", name: ORG_NAME, url: ORG_URL },
     /** Reuse terms live on the about page. */
     license: `${SITE_URL}/about/`,
     isPartOf: { "@id": `${SITE_URL}/#website` },

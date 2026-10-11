@@ -57,6 +57,12 @@ jobs:
       - name: Check the nav items share one baseline
         run: npm run check:nav
 
+      # Billy, 2026-10-11: never put internal process, internal codes or internal
+      # records on a customer-facing surface. See the script header for what it
+      # catches and what it deliberately leaves alone.
+      - name: Check no internal material is published
+        run: npm run check:public-copy
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true

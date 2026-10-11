@@ -1,187 +1,184 @@
 ---
-import { t, type Locale } from "../lib/i18n";
-import { reviewRequired } from "../lib/review-gate";
+import { audienceLabel, audiencePath, feedbackPath, t, type Locale } from "../lib/i18n";
 
 /**
- * About page body.
+ * About page body (rewritten 2026-10-11, Billy).
+ *
+ * Because it is the page a stranger, a search engine and an AI answer engine
+ * read to decide what this site IS, it is written as a direct, quotable
+ * statement: what the library is, who it is for, why we build it, who Beets is,
+ * how the material relates to the official documents, the reuse terms, and a way
+ * to reach us. Nothing else.
+ *
+ * **No internal material — this is the page that carried the most of it.**
+ * Billy, 2026-10-11: *"remove all content about internal process and information
+ * and do not use any internal reference codes like B, F, G, E for the reference
+ * document. In future, NEVER put any internal processing notes or information in
+ * customer facing website."* So: no editorial pipeline, no build or link-check
+ * talk, no review-area URL, no source-code table (the documents are named by
+ * their published titles instead), no reviewer names, no version-of-record
+ * fields. `scripts/check-public-copy.mjs` fails the build if any of that
+ * reappears on a public page.
  *
  * Both editions live here, but only one is ever rendered — Astro evaluates the
  * branch at build time, so the built page contains a single language.
- *
- * The English document titles are EDB's own, read off its publications page
- * (verified 2026-10-08) — never a translation of the Chinese title.
- *
- * `reviewOff` keeps the editorial-process claims true: while the review gate is
- * off, resources are live before fact-check and educator review, so the page
- * must say so rather than assert a gate that is not being enforced.
+ * `npm run check:lang` enforces that.
  */
 interface Props {
   lang: Locale;
 }
 const { lang } = Astro.props;
 
-const reviewOff = !reviewRequired();
-
-const DEBP =
+/** Parent department page, so a reader can reach the documents we draw on. */
+const EDB_BLUEPRINT =
   "https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html";
+const BEETS_SITE = "https://www.beets3d.com/";
+const AUDIENCES = ["teachers", "parents", "students"] as const;
 ---
 
 {
   lang === "zh-HK" ? (
     <>
-      <h1>{t(lang, "navAbout")}</h1>
+      <h1>關於 BEETS AI</h1>
 
+      <p class="lead">
+        BEETS AI 是 Beets Limited 為香港教師、家長和學生設立的<strong>免費 AI 教育資源庫</strong>
+        ：教案、工作紙、校本規劃範例與評估任務，全部免費下載、不需註冊。
+      </p>
+
+      <h2>這個網站是什麼</h2>
       <p>
-        BEETS AI 是一個<strong>免費的香港 AI 教學資源庫</strong>，按學科、級別和具體教學需要，
-        提供可編輯的工作紙、教案及校本規劃範例。
+        BEETS AI 是一個免費的香港 AI 教學資源庫。每份資源對應一個具體的教學需要——某一級、某一科、某一項課堂任務——而不是泛泛的主題；內容包括可以直接編輯的教案、工作紙、校本規劃範例與評估任務，附件以 Word、Excel 或 PowerPoint
+        格式提供，下載後即可按校情修改。每份資源都有繁體中文及英文版本。
       </p>
-
-      <h2>編輯流程</h2>
-      <ol>
-        <li>選題：以教師的具體需要為單位（級別 + 學科 + 任務），而不是泛泛的主題。</li>
-        <li>草擬：內容由 AI 協助草擬與排版。</li>
-        <li>核實：每一項事實與數字，均對照列明的官方來源逐項核對。</li>
-        <li>審閱：由教育工作者審核學習目標、準確度、年齡適切性和課堂可行性。</li>
-        <li>發佈：通過上述關卡後才會上線。</li>
-      </ol>
-      {
-        reviewOff ? (
-          <p class="notice">
-            <strong>審閱關卡目前暫時關閉。</strong>
-            部分已上線資源尚未完成教育工作者審閱及最後的事實核實 —— 它們由 AI 協助草擬，仍可能出錯。
-            正式對外推出前會全部完成審閱；發現問題請告訴我們。
-          </p>
-        ) : null
-      }
-      <p class="meta">
-        {
-          reviewOff
-            ? "每次建置都會自動檢查連結。審閱關卡目前暫時關閉，部分資源在完成事實核實及教育工作者審閱前已經上線。"
-            : "每次建置都會自動檢查連結；每份資源在發佈前都對照其列明的來源逐項核實。"
-        }
-      </p>
-
-      <h2>獨立性</h2>
       <p>
-        本網站為 Beets 獨立製作的資源計劃，<strong>並非 EDB 官方文件</strong>。
-        我們引用並連結官方文件，但教材內容與判斷由我們自行負責。如發現錯誤，歡迎聯絡我們更正。
+        資源參考教育局已發布的官方文件，例如《中小學人工智能素養學習架構》與{" "}
+        <a href={EDB_BLUEPRINT} rel="noopener">{t(lang, "debpLinkText")}</a>
+        ，並在每份資源列明它依據哪份文件，方便你回到原始資料核對。本網站是 Beets
+        的獨立計劃，<strong>並非教育局官方文件</strong>；教材的內容與判斷由我們負責。
       </p>
 
-      <h2>來源文件</h2>
-      <p>資源頁所列的來源代碼，對應以下教育局文件（名稱依教育局正式用語）：</p>
-      <ul>
-        <li><strong>B</strong> —《中小學數字教育發展藍圖》三摺頁（DEBP；單張只有中文版）</li>
-        <li><strong>F</strong> — 附篇一：《中小學人工智能素養學習架構》</li>
-        <li><strong>G</strong> — 附篇二：《中小學應用人工智能教學指南》</li>
-        <li><strong>E</strong> —《中小學人工智能素養學習架構（應用場景示例）》</li>
+      <h2>給教師、家長和學生</h2>
+      <ul class="cards">
+        {AUDIENCES.map((audience) => (
+          <li>
+            <a href={audiencePath(lang, audience)}>{audienceLabel(lang, audience)}</a>
+            <p class="meta">
+              {audience === "teachers"
+                ? "備課、施教與校本規劃：教案、工作紙、課程覆蓋分析與評估工具。"
+                : audience === "parents"
+                  ? "在家引導子女用 AI 做功課：親子活動、家庭功課協議與家長通告。"
+                  : "做專題與核對 AI 答案：可以直接使用的工作紙、步驟與紀錄表。"}
+            </p>
+          </li>
+        ))}
       </ul>
+
+      <h2>為什麼我們做這個網站</h2>
       <p>
-        官方文件與相關資源：<a href={DEBP} rel="noopener">{t(lang, "debpLinkText")}</a>
+        學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術。課堂上真正花時間的一步，是把官方文件與指引變成明天就可以用的教材——我們把這一步做完，讓教師、家長和學生直接下載使用。如果這裡沒有你需要的材料，歡迎
+        <a href={feedbackPath(lang)}>告訴我們</a>，我們會優先製作。
       </p>
 
-      <h2>回饋與請求</h2>
+      <h2>關於 Beets Limited</h2>
       <p>
-        你用過我們的資源嗎？哪一份需要改善？想我們製作哪一份？歡迎在任一資源頁留言告訴我們，
-        或直接聯絡 Beets 團隊。你的回饋會直接影響下一批資源的選題。
+        Beets Limited 是香港的創意科技教育公司。我們以 AI、3D 設計及 3D
+        打印，協助學校、家庭、企業及創作者把意念變成成品：學校 STEM 課程、3D 與 AI
+        創意工作坊、3D 設計及打印服務，以及相關設備與耗材。
+      </p>
+      <p>
+        這個資源庫是同一份工作的另一面。我們把在課室與工作坊累積下來的做法，整理成任何人都可以下載使用的教材。想了解我們的課程、服務與產品，請到
+        beets3d.com。
+      </p>
+      <p>
+        <a class="btn" href={BEETS_SITE} rel="noopener">
+          beets3d.com →
+        </a>
       </p>
 
       <h2>使用條款與私隱</h2>
       <ul>
         <li>資源可免費下載，供教學使用及改編；請保留來源標示。</li>
-        <li>若引用第三方教材，我們會連結原始來源；重製前會先確認授權。</li>
-        <li>本站不收集學生作品或任何可識別學生身分的資料。</li>
-        <li>下載不需註冊；如有提供電郵，只會在取得同意後用作通知新資源。</li>
+        <li>如引用第三方教材，我們會連結原始來源。</li>
+        <li>本站不收集學生作品，也不收集任何可識別學生身分的資料。</li>
+        <li>下載不需註冊；如你留下電郵，只會在取得同意後用作通知新資源。</li>
       </ul>
     </>
   ) : (
     <>
-      <h1>{t(lang, "navAbout")}</h1>
+      <h1>About BEETS AI</h1>
 
+      <p class="lead">
+        BEETS AI is a <strong>free library of AI teaching resources</strong> that Beets Limited
+        builds for Hong Kong teachers, parents and students — lesson plans, worksheets,
+        school-planning examples and assessment tasks, all free to download and with no
+        registration.
+      </p>
+
+      <h2>What this site is</h2>
       <p>
-        BEETS AI is a <strong>free library of Hong Kong AI teaching resources</strong>, organised by
-        subject, learning stage and specific classroom task — editable worksheets, lesson plans and
-        school-planning examples.
+        BEETS AI is a free library of Hong Kong AI teaching resources. Each resource answers one
+        specific teaching need — a learning stage, a subject, a classroom task — rather than a vague
+        theme. The material includes editable lesson plans, worksheets, school-planning examples and
+        assessment tasks, provided as Word, Excel or PowerPoint files you can adapt to your own
+        school. Every resource exists in Traditional Chinese and in English.
       </p>
-
-      <h2>Editorial process</h2>
-      <ol>
-        <li>Choose the topic: one teacher need (stage + subject + task), never a vague theme.</li>
-        <li>Draft: the content is drafted and typeset with AI assistance.</li>
-        <li>Verify: every fact and figure is checked against the official source cited on the page.</li>
-        <li>
-          Review: an educator checks the learning aim, accuracy, age-appropriateness and classroom
-          fit.
-        </li>
-        <li>Publish: nothing goes live until it has passed those gates.</li>
-      </ol>
-      {
-        reviewOff ? (
-          <p class="notice">
-            <strong>The review gate is temporarily off.</strong> Some live resources have not yet had
-            their fact-check and educator review completed — they were drafted with AI assistance
-            and may still contain errors. All of them are reviewed before the public rollout; tell
-            us if you spot a problem.
-          </p>
-        ) : null
-      }
-      <p class="meta">
-        {
-          reviewOff
-            ? "Links are checked automatically on every build. The review gate is temporarily off, so some resources are live before their fact-check and educator review are complete."
-            : "Links are checked automatically on every build, and every resource is fact-checked against its cited sources before publication."
-        }
-      </p>
-
-      <h2>Independence</h2>
       <p>
-        This site is an independent resource initiative by Beets. It is{" "}
-        <strong>not an official EDB publication</strong>. We quote and link the official documents,
-        but the teaching material and the judgements in it are ours. If you find an error, tell us
-        and we will correct it.
+        The material draws on official documents published by the Education Bureau, such as the AI
+        Literacy Learning Framework for Primary and Secondary Schools and the{" "}
+        <a href={EDB_BLUEPRINT} rel="noopener">{t(lang, "debpLinkText")}</a>, and every resource
+        names the document it is built on so you can check it at source. This site is an independent
+        initiative by Beets and is <strong>not an official EDB publication</strong>; the teaching
+        material and the judgements in it are ours.
       </p>
 
-      <h2>Source documents</h2>
-      <p>
-        The source codes on our resource pages refer to these Education Bureau publications
-        (titles as published by the EDB):
-      </p>
-      <ul>
-        <li>
-          <strong>B</strong> — <em>Blueprint for Digital Education Development in Primary and
-          Secondary Schools</em> (the DEBP three-fold leaflet, which EDB publishes in Chinese only)
-        </li>
-        <li>
-          <strong>F</strong> — <em>Supplement I: AI Literacy Learning Framework for Primary and
-          Secondary Schools</em>
-        </li>
-        <li>
-          <strong>G</strong> — <em>Supplement II: Guide to Using AI in Teaching in Primary and
-          Secondary Schools</em>
-        </li>
-        <li>
-          <strong>E</strong> — <em>AI Literacy Learning Framework for Primary and Secondary
-          Schools (Examples of Application Scenarios)</em>
-        </li>
+      <h2>For teachers, parents and students</h2>
+      <ul class="cards">
+        {AUDIENCES.map((audience) => (
+          <li>
+            <a href={audiencePath(lang, audience)}>{audienceLabel(lang, audience)}</a>
+            <p class="meta">
+              {audience === "teachers"
+                ? "Preparation, teaching and school planning: lesson plans, worksheets, curriculum coverage analysis and assessment tools."
+                : audience === "parents"
+                  ? "Guiding AI homework at home: activities to do together, a family homework agreement and a parent notice."
+                  : "Projects and checking what an AI tells you: worksheets, steps and record sheets to use directly."}
+            </p>
+          </li>
+        ))}
       </ul>
+
+      <h2>Why we build it</h2>
       <p>
-        Official documents and related material:{" "}
-        <a href={DEBP} rel="noopener">{t(lang, "debpLinkText")}</a>
+        Learning to use AI well should not depend on how much a school can budget for it, or on how
+        much a parent knows about technology. The slow step in a classroom is turning official
+        documents and guidance into material that can be used tomorrow — so we do that step, and
+        teachers, parents and students can download the result directly. If the material you need is
+        not here, <a href={feedbackPath(lang)}>tell us</a> and we will prioritise it.
       </p>
 
-      <h2>Feedback and requests</h2>
+      <h2>About Beets Limited</h2>
       <p>
-        Have you used our resources? Which one needs improving? Which one should we make next? Tell
-        us on any resource page, or contact the Beets team directly. Your feedback decides what we
-        build next.
+        Beets Limited is a Hong Kong creative-technology education company. We use AI, 3D design and
+        3D printing to help schools, families, businesses and makers turn an idea into a finished
+        thing: STEM programmes for schools, 3D and AI creative workshops, 3D design and printing
+        services, and the equipment and materials that go with them.
+      </p>
+      <p>
+        This library is the other side of that work. We take what we have learned in classrooms and
+        workshops and turn it into material anyone can download and use. To see our courses,
+        services and products, visit beets3d.com.
+      </p>
+      <p>
+        <a class="btn" href={BEETS_SITE} rel="noopener">
+          beets3d.com →
+        </a>
       </p>
 
       <h2>Reuse and privacy</h2>
       <ul>
         <li>Download and adapt the resources freely for teaching; please keep the attribution.</li>
-        <li>
-          Where third-party material is used, we link the original source and confirm reuse terms
-          before republishing.
-        </li>
+        <li>Where third-party material is used, we link the original source.</li>
         <li>We collect no student work and nothing that could identify a student.</li>
         <li>
           Downloads need no registration; an email address is only used, with consent, to tell you
@@ -191,3 +188,13 @@ const DEBP =
     </>
   )
 }
+
+<style>
+  /* One block of prose, so the page reads as a statement rather than a form. */
+  h2 {
+    margin-top: 2.5rem;
+  }
+  .lead {
+    font-size: 1.1rem;
+  }
+</style>

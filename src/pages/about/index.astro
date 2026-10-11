@@ -6,6 +6,10 @@ import { DEFAULT_LOCALE, t } from "../../lib/i18n";
 const lang = DEFAULT_LOCALE;
 ---
 
-<Base title={`${t(lang, "navAbout")} — BEETS AI`} lang={lang}>
+<Base
+  title={t(lang, "aboutTitle")}
+  description={t(lang, "aboutDescription")}
+  lang={lang}
+>
   <AboutView lang={lang} />
 </Base>

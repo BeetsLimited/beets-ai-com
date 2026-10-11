@@ -44,7 +44,8 @@ const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
 
 /** The classification lines, in the order the page reads them. */
 const classification = [
-  { label: t(lang, "labelTheme"), value: `${d.theme} · ${themeLabel(lang, d.theme)}` },
+  // The theme's public name. The A–E key is internal lettering, not for a reader.
+  { label: t(lang, "labelTheme"), value: themeLabel(lang, d.theme) },
   { label: t(lang, "labelStage"), value: d.stage },
   { label: t(lang, "labelSubject"), value: d.subject },
 ].filter((row) => Boolean(row.value));
