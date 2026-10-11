@@ -51,6 +51,12 @@ jobs:
       - name: Check no dark blocks on a light-only site
         run: npm run check:contrast
 
+      # Asserts a RELATIONSHIP between two rules in the built CSS (the nav's links
+      # and its two <details> groups must set the same font-size, or the group
+      # labels sit 1.7px low). No other gate can see it: see the script header.
+      - name: Check the nav items share one baseline
+        run: npm run check:nav
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true
