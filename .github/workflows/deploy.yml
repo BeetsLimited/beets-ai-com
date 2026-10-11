@@ -63,6 +63,11 @@ jobs:
       - name: Check no internal material is published
         run: npm run check:public-copy
 
+      # The one gate that was missing from CI while this file said it was
+      # blocking; added 2026-10-11 when the file was next open.
+      - name: Check the catalogue lists exactly what was built
+        run: npm run check:catalogue
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true
