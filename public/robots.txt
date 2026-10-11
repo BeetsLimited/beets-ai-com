@@ -1,4 +1,4 @@
-# BEETS AI — robots.txt
+# Beets AI — robots.txt
 # beets-ai.com is a free teaching-resource library. We WANT to be read, cited and
 # linked by search engines and by AI answer engines, so the content pages are open
 # to every crawler. Only the internal review area (/review/) is disallowed.

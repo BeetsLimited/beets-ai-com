@@ -14,7 +14,7 @@ if (!reviewRequired()) {
 }
 
 /**
- * BEETS AI content collection.
+ * Beets AI content collection.
  *
  * Resource pages and editorial posts share one frontmatter contract
  * (`resourceSchema`). Pagination of the full library happens through the

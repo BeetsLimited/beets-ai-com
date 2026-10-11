@@ -73,7 +73,7 @@ const ZH_TEACHERS: AudiencePageCopy = {
     {
       question: "可以直接改編成自己學校的版本嗎？",
       answer:
-        "可以。資源供教學使用及改編，請保留來源標示，寫明材料來自 BEETS AI（Beets Limited）。改編後的版本不需要交回給我們，但如果你願意告訴我們改了什麼，會幫我們把下一份做得更合用。",
+        "可以。資源供教學使用及改編，請保留來源標示，寫明材料來自 Beets AI（Beets Limited）。改編後的版本不需要交回給我們，但如果你願意告訴我們改了什麼，會幫我們把下一份做得更合用。",
     },
   ],
 };
@@ -109,7 +109,7 @@ const EN_TEACHERS: AudiencePageCopy = {
     {
       question: "May I adapt a resource for my own school?",
       answer:
-        "Yes. Download and adapt these resources freely for teaching; please keep the attribution to BEETS AI (Beets Limited). You do not need to send your version back to us, but telling us what you changed helps us make the next one more useful.",
+        "Yes. Download and adapt these resources freely for teaching; please keep the attribution to Beets AI (Beets Limited). You do not need to send your version back to us, but telling us what you changed helps us make the next one more useful.",
     },
   ],
 };

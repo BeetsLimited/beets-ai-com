@@ -1,4 +1,4 @@
-# BEETS AI — beets-ai.com
+# Beets AI — beets-ai.com
 
 Free, educator-reviewed **Hong Kong AI teaching resources** — by subject, learning
 stage and specific classroom task. Each resource answers one recognisable teacher

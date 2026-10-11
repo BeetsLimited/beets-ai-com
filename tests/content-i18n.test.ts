@@ -255,13 +255,13 @@ describe("English attachments", () => {
   it("carries none of the internal record", () => {
     // The printables shipped an internal status note ("this file is a draft and
     // must be reviewed by an educator") and the resource's idea number.
-    // "BEETS AI · an independent teaching resource…" is legitimate boilerplate;
+    // "Beets AI · an independent teaching resource…" is legitimate boilerplate;
     // what must never survive is the meta line, which carries "· Theme C · #3".
     const internal = [
       /VERIFY/,
       /reviewed by an educator/i,
       /This (page|file) is a draft/i,
-      /BEETS AI · Theme/,
+      /Beets AI · Theme/,
     ];
     for (const name of files) {
       const text = textOf(EN_FILES, name);

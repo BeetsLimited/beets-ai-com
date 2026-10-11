@@ -76,15 +76,15 @@ const ZH_HK = {
   footerDisclaimer: "獨立資源計劃，並非 EDB 官方文件。資源免費下載，不需註冊。",
   footerTerms: "使用條款及私隱",
   footerFeedback: "意見及建議",
-  aboutTitle: "關於 BEETS AI",
+  aboutTitle: "關於 Beets AI",
   aboutDescription:
-    "BEETS AI 是 Beets Limited 為香港教師、家長和學生設立的免費 AI 教育資源庫：教案、工作紙及校本規劃範例，每份列明所依據的官方文件，免費下載、不需註冊。",
+    "Beets AI 是 Beets Limited 為香港教師、家長和學生設立的免費 AI 教育資源庫：教案、工作紙及校本規劃範例，每份列明所依據的官方文件，免費下載、不需註冊。",
 
   homeTitle: "香港免費 AI 教育資源",
   homeDescription:
     "香港免費 AI 教育資源：教師、家長及學生都可下載工作紙、教案及校本規劃範例，附答案及來源，全部免費。",
   homeLede:
-    "BEETS AI 是 Beets Limited 為香港教師、家長和學生設立的免費 AI 教育資源庫。我們相信學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術，所以我們把教師真正需要的教案、工作紙和校本規劃範例，做成下載即可使用的教材——全部免費，下載不需註冊。",
+    "Beets AI 是 Beets Limited 為香港教師、家長和學生設立的免費 AI 教育資源庫。我們相信學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術，所以我們把教師真正需要的教案、工作紙和校本規劃範例，做成下載即可使用的教材——全部免費，下載不需註冊。",
   homeIntro2:
     "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件與版本，並說明它為你解決什麼問題。",
   homeEyebrow: "教師、家長、學生都合用 · 下載不需註冊",
@@ -173,15 +173,15 @@ const EN: Record<UIKey, string> = {
     "An independent resource initiative — not an official EDB publication. Free to download, no registration.",
   footerTerms: "Reuse and privacy",
   footerFeedback: "Feedback and requests",
-  aboutTitle: "About BEETS AI",
+  aboutTitle: "About Beets AI",
   aboutDescription:
-    "BEETS AI is a free library of Hong Kong AI teaching resources for teachers, parents and students — lesson plans, worksheets and school-planning examples, each naming the official document it draws on.",
+    "Beets AI is a free library of Hong Kong AI teaching resources for teachers, parents and students — lesson plans, worksheets and school-planning examples, each naming the official document it draws on.",
 
   homeTitle: "Free AI education resources for Hong Kong",
   homeDescription:
     "Free AI education resources for Hong Kong: teachers, parents and students can download worksheets, lesson plans and school-planning examples, with answer keys and sources.",
   homeLede:
-    "BEETS AI is a free library of AI education resources that Beets Limited builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",
+    "Beets AI is a free library of AI education resources that Beets Limited builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",
   homeIntro2:
     "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on and its version, and says what problem it solves.",
   homeEyebrow: "For teachers, parents and students · no registration to download",

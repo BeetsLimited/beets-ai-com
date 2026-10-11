@@ -65,8 +65,8 @@ export const HERO_IMAGE_HEIGHT = 720;
 const OG_LOCALE: Record<Locale, string> = { "zh-HK": "zh_HK", en: "en_HK" };
 
 const SITE_NAME: Record<Locale, string> = {
-  "zh-HK": "BEETS AI — 香港免費 AI 教育資源",
-  en: "BEETS AI — Free Hong Kong AI Teaching Resources",
+  "zh-HK": "Beets AI — 香港免費 AI 教育資源",
+  en: "Beets AI — Free Hong Kong AI Teaching Resources",
 };
 
 /** Open Graph + Twitter Card values for one page. */
@@ -126,7 +126,7 @@ export function organizationLd() {
     url: ORG_URL,
     logo: ORG_LOGO,
     description:
-      "Hong Kong STEM, AI and 3D-printing education company. Publishes BEETS AI, a free library of Hong Kong AI teaching resources.",
+      "Hong Kong STEM, AI and 3D-printing education company. Publishes Beets AI, a free library of Hong Kong AI teaching resources.",
     areaServed: { "@type": "Place", name: "Hong Kong" },
     knowsLanguage: ["zh-HK", "en"],
     sameAs: [ORG_URL],

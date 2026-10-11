@@ -1,5 +1,5 @@
 /**
- * Stable, human-readable URL slugs for BEETS AI resources.
+ * Stable, human-readable URL slugs for Beets AI resources.
  *
  * Slugs are built from the ENGLISH title so URLs stay ASCII and shareable.
  * Chinese titles are preserved in the page content, not the address.

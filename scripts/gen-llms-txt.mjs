@@ -169,7 +169,7 @@ function sourceLabel(raw, lang) {
   return title ? `${title}, ${match[2]}` : String(raw);
 }
 
-const HEADER = `# BEETS AI — ${"香港免費 AI 教育資源"} / Free Hong Kong AI Teaching Resources
+const HEADER = `# Beets AI — ${"香港免費 AI 教育資源"} / Free Hong Kong AI Teaching Resources
 
 > A free library of AI teaching resources for Hong Kong primary and secondary
 > schools, published by Beets Limited (https://beets3d.com). Every item names the
@@ -178,7 +178,7 @@ const HEADER = `# BEETS AI — ${"香港免費 AI 教育資源"} / Free Hong Kon
 Traditional Chinese ("zh-HK") is the primary edition at the site root; English is
 under /en/. Both editions of an item share one address.
 
-Citation: please attribute to "BEETS AI (Beets Limited)" and link the item URL.
+Citation: please attribute to "Beets AI (Beets Limited)" and link the item URL.
 Reuse terms: ${SITE}/about/
 `;
 
@@ -206,7 +206,7 @@ const index = [`${HEADER}
 - [${SITE}/](${SITE}/): the resource library, grouped by theme (Traditional Chinese)
 - [${SITE}/resources/](${SITE}/resources/): every free resource
 ${AUDIENCE_PAGES.map((page) => `- [${SITE}${page.path}](${SITE}${page.path}): ${page.zh} (${page.en})`).join("\n")}
-- [${SITE}/about/](${SITE}/about/): what BEETS AI is, who it is for, about Beets Limited, reuse terms
+- [${SITE}/about/](${SITE}/about/): what Beets AI is, who it is for, about Beets Limited, reuse terms
 - [${SITE}/feedback/](${SITE}/feedback/): request a resource
 `];
 

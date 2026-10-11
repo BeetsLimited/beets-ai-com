@@ -39,7 +39,7 @@ def main() -> None:
     # Logo + wordmark
     logo = Image.open(LOGO).convert("RGBA").resize((96, 96), Image.LANCZOS)
     img.paste(logo, (72, 64), logo)
-    d.text((188, 88), "BEETS AI", font=font(LATIN, 46, index=1), fill=INK)
+    d.text((188, 88), "Beets AI", font=font(LATIN, 46, index=1), fill=INK)
     d.text((190, 142), "beets-ai.com", font=font(LATIN, 24), fill=MUTED)
 
     # Headline (Traditional Chinese) + English counterpart
@@ -56,7 +56,7 @@ def main() -> None:
     d.rectangle([72, H - 96, 72 + 96, H - 90], fill=RED)
     d.text(
         (74, H - 62),
-        "免費下載 · 免註冊 · 經教育工作者審閱及事實核實",
+        "免費下載 · 免註冊 · 附答案及來源",
         font=font(CJK, 28),
         fill=INK,
     )

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "BEETS AI — free Hong Kong AI teaching-resource library (beets-ai.com)",
+  "description": "Beets AI — free Hong Kong AI teaching-resource library (beets-ai.com)",
   "scripts": {
     "dev": "astro dev",
     "prebuild": "node scripts/gen-llms-txt.mjs",

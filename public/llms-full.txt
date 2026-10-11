@@ -1,4 +1,4 @@
-# BEETS AI — 香港免費 AI 教育資源 / Free Hong Kong AI Teaching Resources
+# Beets AI — 香港免費 AI 教育資源 / Free Hong Kong AI Teaching Resources
 
 > A free library of AI teaching resources for Hong Kong primary and secondary
 > schools, published by Beets Limited (https://beets3d.com). Every item names the
@@ -7,7 +7,7 @@
 Traditional Chinese ("zh-HK") is the primary edition at the site root; English is
 under /en/. Both editions of an item share one address.
 
-Citation: please attribute to "BEETS AI (Beets Limited)" and link the item URL.
+Citation: please attribute to "Beets AI (Beets Limited)" and link the item URL.
 Reuse terms: https://beets-ai.com/about/
 
 

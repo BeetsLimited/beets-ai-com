@@ -97,7 +97,7 @@ const fields = {
 };
 
 /**
- * Frontmatter contract for BEETS AI content.
+ * Frontmatter contract for Beets AI content.
  *
  * `reviewRequired` selects whether the two human gates below are enforced:
  *
