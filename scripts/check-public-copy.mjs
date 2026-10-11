@@ -15,7 +15,9 @@
  *     persona, published as the author of the material, in the structured data
  *     that search and AI answer engines read;
  *   · `llms-full.txt` carried `Sources: E, p.6` and `Reviewed by: <a person>`,
- *     from our internal record.
+ *     from our internal record;
+ *   · every resource page and /feedback/ told readers to write to
+ *     `enquiry@beets-ai.com` — a domain we run no mailbox on.
  *
  * So this gate reads the BUILT site — what is actually published, not what the
  * source says it publishes — and fails if any of that reappears. It reads
@@ -71,6 +73,16 @@ const FORBIDDEN = [
   {
     pattern: /"keywords":"[A-E],/,
     why: "a bare A–E theme key in structured data — publish the theme's name instead",
+  },
+  {
+    /*
+     * `enquiry@beets-ai.com` was on all 28 resource pages and on /feedback/ — an
+     * address at a domain we do not run a mailbox on (Billy, 2026-10-11). The
+     * public address lives at beets3d.com, and a dead address on a teaching
+     * resource is a reader who never gets a reply.
+     */
+    pattern: /[A-Za-z0-9._%+-]+@beets-ai\.com/,
+    why: "an email address at a domain with no mailbox — the public address is at beets3d.com",
   },
 ];
 

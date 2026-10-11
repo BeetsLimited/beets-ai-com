@@ -14,7 +14,7 @@ interface Props {
 }
 const { lang } = Astro.props;
 
-const MAIL = "info@beets3d.com";
+const MAIL = "enquiry@beets3d.com";
 ---
 
 {
@@ -41,12 +41,8 @@ const MAIL = "info@beets3d.com";
 
       <h2>怎樣傳送</h2>
       <p>
-        電郵至 <a href={`mailto:${MAIL}?subject=${encodeURIComponent("Beets AI 意見")}`}>{MAIL}</a>，
-        或直接在 Mattermost 告訴 Beets 團隊。我們會回覆每一封有關資源內容的意見。
-      </p>
-      <p class="meta">
-        下載不需註冊，我們不會要求你提供學校名稱，亦不收集學生作品或任何可識別學生身分的資料。
-        如你自願提供電郵，只會在取得同意後用作通知新資源。
+        電郵至 <a href={`mailto:${MAIL}?subject=${encodeURIComponent("Beets AI 意見")}`}>{MAIL}</a>。
+        我們會回覆每一封有關資源內容的意見。
       </p>
     </>
   ) : (
@@ -74,14 +70,8 @@ const MAIL = "info@beets3d.com";
 
       <h2>How to send it</h2>
       <p>
-        Email <a href={`mailto:${MAIL}?subject=${encodeURIComponent("Beets AI feedback")}`}>{MAIL}</a>,
-        or tell the Beets team directly in Mattermost. We reply to every comment about the
-        content of a resource.
-      </p>
-      <p class="meta">
-        Downloading needs no registration. We do not ask for your school's name, and we
-        collect no student work and nothing that could identify a student. If you give us an
-        email address, it is only used, with consent, to tell you about new resources.
+        Email <a href={`mailto:${MAIL}?subject=${encodeURIComponent("Beets AI feedback")}`}>{MAIL}</a>.
+        We reply to every comment about the content of a resource.
       </p>
     </>
   )

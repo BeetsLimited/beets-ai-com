@@ -102,4 +102,4 @@ Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary
 
 ## Feedback
 
-If you have any comments or questions about this resource, please email <enquiry@beets-ai.com>.
+If you have any comments or questions about this resource, or an idea for the next one, tell us on the [feedback page](/en/feedback/).
