@@ -486,6 +486,21 @@ const liveResources = (
       .site-nav .nav-group {
         position: relative;
         display: inline-block;
+        /*
+          The group must carry the NAV's own type, not the body's 17px/1.75 that it
+          would otherwise inherit. A <details> whose font-size is not set here
+          keeps the body's: its line-box STRUT is then 29.75px tall against the
+          plain links' 25.2px, and `align-items: center` lands the summary's text
+          1.7px BELOW 免費資源 and 關於 beside it. Sub-pixel in theory, plainly
+          visible in practice — Billy reported it on 2026-10-11 ("the middle two
+          are at different levels from the others"), and the tell is that the two
+          groups, and only they, are 1.7px low.
+
+          Setting the size here makes the strut and the summary the same 25.2px
+          line the links occupy, so all six labels share one baseline. The
+          separator's ::before inside a group aligns with it for the same reason.
+        */
+        font-size: 0.9rem;
       }
       .site-nav .nav-group > summary {
         display: inline-block;
