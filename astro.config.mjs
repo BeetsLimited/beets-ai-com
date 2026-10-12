@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import openExternalLinks from "./src/lib/open-external-links.mjs";
+import prettySitemap from "./src/lib/pretty-sitemap.mjs";
 
 // BEETS AI — free Hong Kong AI teaching-resource library.
 // Static output, deployed to GitHub Pages at beets-ai.com.
@@ -46,5 +47,13 @@ export default defineConfig({
         locales: { "zh-HK": "zh-HK", en: "en" },
       },
     }),
+    /*
+      The sitemap ships minified, which makes it unreadable in a browser: the
+      generated file is one 15 KB line, so a reader sees a run of URLs with no
+      tags and reasonably concludes it is broken. This pass puts one element per
+      line — whitespace between elements only, asserted not to touch a tag or a
+      URL. See src/lib/pretty-sitemap.mjs.
+    */
+    prettySitemap(),
   ],
 });
