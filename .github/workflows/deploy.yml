@@ -68,6 +68,13 @@ jobs:
       - name: Check the catalogue lists exactly what was built
         run: npm run check:catalogue
 
+      # Billy, 2026-10-12: every page must carry the metadata a search engine
+      # needs — one h1, a title, a description, alt text on every image, ASCII
+      # slugs. None of the seven gates above reads any of it. See the script
+      # header for the budgets and for the width model behind them.
+      - name: Check page metadata
+        run: npm run check:meta
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true

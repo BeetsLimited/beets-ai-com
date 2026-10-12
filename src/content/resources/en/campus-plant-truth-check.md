@@ -1,5 +1,6 @@
 ---
 title: "Campus plants: observe first, then check what the AI says"
+metaTitle: "Campus plants: observe first, check the AI"
 address: "campus-plant-truth-check"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Students first observe a plant with their own eyes in the playground or from a window and record its features, then check what an AI says about a plant photo: which answer is right, which is wrong, and which photo is too unclear to decide."
+metaDescription: "Students observe a plant with their own eyes and record its features, then check what an AI says about a photo: which answer is right, which is wrong."
 image: "/images/campus-plant-truth-check-hero.webp"
 imageAlt: "Two pupils kneeling at a window sill examining a potted plant, one using a magnifying glass on a leaf, with a blue watering can and a deep red plant pot."
 downloads: ["/files/en/campus-plant-truth-check.docx"]

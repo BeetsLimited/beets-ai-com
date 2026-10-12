@@ -1,5 +1,6 @@
 ---
 title: "Student AI-use process sheet: first attempt, prompt, check, revise"
+metaTitle: "Student AI-use process sheet: attempt to revise"
 address: "student-ai-use-process-sheet"
 lang: "en"
 type: "resource"
@@ -19,6 +20,7 @@ downloads: ["/files/en/student-ai-use-process-sheet.docx"]
 feedback: true
 draft: true
 description: "A reusable process sheet that records a student's first attempt, the AI prompt, the checking results, revisions, and final explanation, so teachers can see the student's thinking without having to search through the entire conversation log."
+metaDescription: "A reusable process sheet that records a student's first attempt, the AI prompt, the checking results, revisions and final explanation."
 image: "/images/student-ai-use-process-sheet-hero.webp"
 imageAlt: "A pupil sitting at a desk with a hand under their chin, looking at a blank sheet, a deep red cup holding a blue pencil beside them."
 ---

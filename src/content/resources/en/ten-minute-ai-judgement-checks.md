@@ -1,5 +1,6 @@
 ---
 title: "Ten-minute AI judgement checks: three quick formative tasks for P4-P6"
+metaTitle: "Ten-minute AI judgement checks for P4-P6"
 address: "ten-minute-ai-judgement-checks"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Three short formative tasks (about ten minutes each): judge whether an AI answer is trustworthy, spot the part of a classmate's answer the writer can actually defend, and list what still needs checking before handing work in. With scoring guidance and follow-up activities."
+metaDescription: "Three quick formative tasks for P4-P6: judge whether an AI answer is trustworthy, spot what a classmate can defend, and list what still needs checking."
 image: "/images/ten-minute-ai-judgement-checks-hero.webp"
 imageAlt: "A teacher in a classroom holding up a deep red card to two pupils seated at a desk with a blue pencil on it."
 downloads: ["/files/en/ten-minute-ai-judgement-checks.docx"]

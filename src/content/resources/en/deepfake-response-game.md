@@ -1,5 +1,6 @@
 ---
 title: "Deepfake response game: pause, check, report (S1-S3)"
+metaTitle: "Deepfake response game: pause, check, report"
 address: "deepfake-response-game"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A classroom game in which pupils receive a fictional 'school' message, sort the pause–check–report decision cards, and learn from the teacher's debrief why a fake can sound convincing."
+metaDescription: "A classroom game in which pupils receive a fictional 'school' message, sort the pause-check-report cards, and learn why a fake can sound convincing."
 image: "/images/deepfake-response-game-hero.webp"
 imageAlt: "Three students in school uniform around a table, one holding up a deep red card, a blue phone lying on the table, a cityscape through the window."
 downloads: ["/files/en/deepfake-response-game.docx"]

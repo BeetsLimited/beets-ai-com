@@ -17,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "兩個不插電運動遊戲：學生跑向「用 AI／不用 AI」標記筒學習分類，再以全班當「訓練數據」，看一個錯誤例子如何令模型學錯。附器材清單、教師指引、共融調適與兩分鐘理解檢查。"
+metaDescription: "兩個不插電運動遊戲：學生跑向「用 AI／不用 AI」標記筒學習分類，再以全班當訓練數據，看一個錯誤例子如何令模型學錯。附器材清單與教師指引。"
 image: "/images/screen-free-ai-pe-games-p1-p3-hero.webp"
 imageAlt: "三名學生在體育館內舉高手臂做動作，前方有一個深紅色球和藍色地面標記。"
 downloads: ["/files/screen-free-ai-pe-games-p1-p3.docx"]

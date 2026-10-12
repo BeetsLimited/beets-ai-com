@@ -1,5 +1,6 @@
 ---
 title: "One Humanities worksheet, three versions: standard, scaffolded and visual"
+metaTitle: "One Humanities worksheet, three versions"
 address: "humanities-worksheet-three-versions"
 lang: "en"
 type: "resource"

@@ -1,5 +1,6 @@
 ---
 title: "P1-P3 PE: two screen-free AI games (no devices needed)"
+metaTitle: "P1-P3 PE: two screen-free AI games"
 address: "screen-free-ai-pe-games-p1-p3"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Two screen-free movement games: pupils run to a labelled cone to sort everyday items into 'uses AI / does not use AI', then the whole class acts as training data to see how one wrong example skews the model. Includes an equipment list, teacher instructions, inclusion notes and a two-minute understanding check."
+metaDescription: "Two screen-free movement games: pupils sort everyday items into 'uses AI / does not use AI', then see how one wrong example skews the model."
 image: "/images/screen-free-ai-pe-games-p1-p3-hero.webp"
 imageAlt: "Three pupils in a school hall with arms raised, a deep red ball on a blue floor marker in front of them."
 downloads: ["/files/en/screen-free-ai-pe-games-p1-p3.docx"]

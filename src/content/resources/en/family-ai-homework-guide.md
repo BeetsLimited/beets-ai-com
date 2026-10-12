@@ -1,5 +1,6 @@
 ---
 title: "Family AI homework guide: three activities, one agreement, one parent notice"
+metaTitle: "Family AI homework guide: three activities"
 address: "family-ai-homework-guide"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A guide families can use at home with no teacher present: three 15-20 minute parent-and-child activities, a family homework agreement, and a parent notice a school can edit and send home."
+metaDescription: "A guide families can use at home with no teacher present: three 15-20 minute parent-and-child activities, a homework agreement and a parent notice."
 image: "/images/family-ai-homework-guide-hero.webp"
 imageAlt: "A parent and child at a table together, with a deep red mug, a notebook, a blue cup holding a pencil, and a tablet."
 downloads: ["/files/en/family-ai-homework-guide.docx"]

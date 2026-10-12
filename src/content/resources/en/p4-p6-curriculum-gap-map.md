@@ -1,5 +1,6 @@
 ---
 title: "P4-P6 curriculum gap map: where AI literacy already fits your subjects"
+metaTitle: "P4-P6 curriculum gap map: where AI fits"
 address: "p4-p6-curriculum-gap-map"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting."
+metaDescription: "An editable P4-P6 AI literacy coverage workbook: record activities by subject and term, mark the gaps and write the smallest next step for each."
 image: "/images/p4-p6-curriculum-gap-map-hero.webp"
 imageAlt: "Two school leaders standing behind a table with three sheets of paper on it — one deep red and two blue."
 downloads: ["/files/en/p4-p6-curriculum-gap-map.xlsx"]

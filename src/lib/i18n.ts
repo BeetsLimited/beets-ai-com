@@ -182,12 +182,17 @@ const EN: Record<UIKey, string> = {
   footerTerms: "Reuse and privacy",
   footerFeedback: "Feedback and requests",
   aboutTitle: "About Beets AI",
+  /* Inside the 155-unit snippet budget. `npm run check:meta` holds the line. */
   aboutDescription:
-    "Beets AI is a free library of Hong Kong AI teaching resources for teachers, parents and students — lesson plans, worksheets and school-planning examples, each naming the official document it draws on.",
+    "Beets AI is a free library of Hong Kong AI teaching resources for teachers, parents and students — lesson plans, worksheets, planning examples.",
 
   homeTitle: "Free AI education resources for Hong Kong",
+  /*
+    Kept inside the 155-unit snippet budget — the longer form was cut off in a
+    search result mid-sentence. `npm run check:meta` holds the line.
+  */
   homeDescription:
-    "Free AI education resources for Hong Kong: teachers, parents and students can download worksheets, lesson plans and school-planning examples, with answer keys and sources.",
+    "Free AI education resources for Hong Kong: teachers, parents and students can download worksheets, lesson plans and school-planning examples.",
   homeLedeBefore: "Beets AI is a free library of AI education resources that ",
   homeLedeAfter:
     " builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",

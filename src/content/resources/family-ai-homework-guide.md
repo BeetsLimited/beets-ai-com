@@ -1,5 +1,6 @@
 ---
 title: "家庭 AI 功課指引：三個活動、一份協議、一封家長通告"
+metaTitle: "家庭 AI 功課指引：三個活動"
 title_en: "Family AI homework guide: three activities, one agreement, one parent notice"
 address: "family-ai-homework-guide"
 lang: "zh-HK"

@@ -1,5 +1,6 @@
 ---
 title: "同一份人文科工作紙，三個版本：標準、扶助、圖像（P4–P6）"
+metaTitle: "人文科工作紙三個版本（P4–P6）"
 title_en: "One Humanities worksheet, three versions: standard, scaffolded and visual"
 address: "humanities-worksheet-three-versions"
 lang: "zh-HK"

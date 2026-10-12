@@ -18,8 +18,39 @@ export interface LocalizedEntry {
     stage?: string;
     subject?: string;
     title?: string;
+    /** Shorter <title>, when the visible title is too long for a search result. */
+    metaTitle?: string;
+    /** Snippet-sized summary, when the visible lede is too long for one. */
+    metaDescription?: string;
     date?: Date;
   };
+}
+
+/** Appended to every page <title>. Counts against the title budget. */
+export const TITLE_SUFFIX = " — Beets AI";
+
+/**
+ * The <title> for a resource page.
+ *
+ * `metaTitle` wins over the visible `title` because the two have different
+ * jobs: the H1 is read on the page and has no length limit, while the <title>
+ * is truncated by a search engine at roughly 60 display units. A resource whose
+ * heading is specific and long therefore keeps both — a complete heading, and a
+ * front-loaded title that is read to the end. See `scripts/check-meta.mjs`.
+ */
+export function pageTitle(entry: LocalizedEntry): string {
+  return `${entry.data.metaTitle ?? entry.data.title ?? ""}${TITLE_SUFFIX}`;
+}
+
+/**
+ * The meta description for a resource page.
+ *
+ * `metaDescription` wins over `description` because `description` is also the
+ * lede paragraph rendered on the page: written for a reader, and too long for
+ * the ~155 display units a snippet shows.
+ */
+export function pageDescription(entry: { data: { description?: string; metaDescription?: string } }): string {
+  return entry.data.metaDescription ?? entry.data.description ?? "";
 }
 
 /** The same resource in the other language, matched on its address. */

@@ -1,5 +1,6 @@
 ---
 title: "Homework redesign kit: two before-and-after assignments that show student thinking"
+metaTitle: "Homework redesign kit: before-and-after tasks"
 address: "homework-redesign-kit"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "Two complete before-and-after assignments (a Chinese Language reading response and a General Studies data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required."
+metaDescription: "Two complete before-and-after assignments, plus a homework-redesign checklist, showing how to make student thinking visible without adding time."
 image: "/images/homework-redesign-kit-hero.webp"
 imageAlt: "A teacher seated at a desk holding a clipboard, with a stack of papers and a deep red cup holding pencils on the desk."
 downloads: ["/files/en/homework-redesign-kit.docx"]

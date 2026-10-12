@@ -1,5 +1,6 @@
 ---
 title: "Safe-to-upload rehearsal: find and remove pupil information before using AI"
+metaTitle: "Safe-to-upload rehearsal: remove pupil data"
 address: "safe-to-upload-ai-rehearsal"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-07
 description: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps."
+metaDescription: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to AI."
 downloads: ["/files/en/safe-to-upload-ai-rehearsal.docx"]
 image: "/images/safe-to-upload-ai-rehearsal-hero.webp"
 imageAlt: "A teacher standing at a desk, placing a document into a deep red folder, with a royal blue paper clip, a blank sheet and a small plant on the desk."

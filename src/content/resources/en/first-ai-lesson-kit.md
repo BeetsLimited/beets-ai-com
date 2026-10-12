@@ -1,5 +1,6 @@
 ---
 title: "Your first AI lesson: a self-guided kit for P4-P6 teachers who have never taught with AI"
+metaTitle: "Your first AI lesson: a self-guided kit (P4-P6)"
 address: "first-ai-lesson-kit"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone."
+metaDescription: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a worksheet and reflection questions."
 image: "/images/first-ai-lesson-kit-hero.webp"
 imageAlt: "A teacher beside a table handing a stack of worksheets to two students, with a deep red pencil holder and a blue tray on the table."
 downloads: ["/files/en/first-ai-lesson-kit.docx"]

@@ -71,6 +71,26 @@ const fields = {
   version: z.string().default("1.0"),
   date: z.coerce.date(),
   description: z.string().min(1),
+  /**
+   * The <title> TAG only, for when it has to differ from the visible `title`.
+   *
+   * The H1 and the <title> do different jobs. A heading has no length limit and
+   * should say what the page is; a <title> is truncated by a search engine at
+   * roughly 60 display units, so a long, specific heading leaves the end of its
+   * title unread. Write the front-loaded version a searcher actually sees here;
+   * the brand suffix is still appended. The visible heading is not shortened to
+   * satisfy a search result. Enforced by `npm run check:meta`.
+   */
+  metaTitle: z.string().min(1).optional(),
+  /**
+   * The meta description only, for when it has to differ from `description`.
+   *
+   * `description` is ALSO the lede paragraph printed on the page (see
+   * ResourceView), so it is written for a reader — and a reader is not a search
+   * result: a snippet truncates at roughly 155 display units. Use this for a
+   * snippet-sized summary and leave the lede alone.
+   */
+  metaDescription: z.string().min(1).optional(),
   downloads: z.array(z.string()).default([]),
   /**
    * Optional hero image, a path under public/ (e.g. /images/x-hero.webp). Used as

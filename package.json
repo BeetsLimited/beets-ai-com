@@ -19,7 +19,8 @@
     "check:contrast": "node scripts/check-contrast.mjs",
     "check:catalogue": "node scripts/check-catalogue.mjs",
     "check:nav": "node scripts/check-nav-align.mjs",
-    "check:public-copy": "node scripts/check-public-copy.mjs"
+    "check:public-copy": "node scripts/check-public-copy.mjs",
+    "check:meta": "node scripts/check-meta.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

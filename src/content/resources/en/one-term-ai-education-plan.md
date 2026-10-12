@@ -1,5 +1,6 @@
 ---
 title: "One-term AI education plan: editable planning template with a completed school example"
+metaTitle: "One-term AI education plan: editable template"
 address: "one-term-ai-education-plan"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy."
+metaDescription: "An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed school example."
 image: "/images/one-term-ai-education-plan-hero.webp"
 imageAlt: "Two simple faceless teachers standing side by side against a pale wall, one holding a deep red folder and the other a royal blue folder, with a table beside them."
 downloads: ["/files/en/one-term-ai-education-plan.xlsx"]

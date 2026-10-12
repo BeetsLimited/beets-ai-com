@@ -1,5 +1,6 @@
 ---
 title: "Hong Kong then and now: a local history project with an alternative to a family interview"
+metaTitle: "Hong Kong then and now: a local history project"
 address: "hk-then-and-now-project"
 lang: "en"
 type: "resource"
@@ -16,6 +17,7 @@ author: "BeetsBot"
 version: "0.1"
 date: 2026-10-08
 description: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, a worked source check and a three-level rubric, so every pupil can complete it."
+metaDescription: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, and a rubric."
 image: "/images/hk-then-and-now-project-hero.webp"
 imageAlt: "An older family member and a young girl sitting together on a light grey sofa looking at a book, with a deep red cushion and a blue potted plant."
 downloads: ["/files/en/hk-then-and-now-project.docx"]
