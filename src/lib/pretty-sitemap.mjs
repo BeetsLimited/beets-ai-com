@@ -40,6 +40,31 @@
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
+/**
+ * The one line that actually makes the file readable in a browser.
+ *
+ * Whitespace does NOT do it. A browser renders an XML document with the UA
+ * default `white-space: normal`, so the newlines this file inserts between
+ * elements COLLAPSE INTO SPACES — measured, not assumed: after pretty-printing,
+ * Chromium still laid the document out as a single wrapped block (root element
+ * height 270px, no vertical scroll) showing `url url url` on one line. To see
+ * the pages you have to hand the browser a stylesheet to apply, which is what
+ * /sitemap.xsl is for. Crawlers ignore this processing instruction and read the
+ * XML, so it changes nothing for a search engine.
+ */
+const STYLESHEET = '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>';
+
+/** Second line, or first — right after the XML declaration. */
+function withStylesheet(xml) {
+  if (xml.includes("xml-stylesheet")) return xml;
+  const lines = xml.split("\n");
+  if (lines[0].startsWith("<?xml")) {
+    lines.splice(1, 0, STYLESHEET);
+    return lines.join("\n");
+  }
+  return `${STYLESHEET}\n${xml}`;
+}
+
 /** Every `<loc>` value, in order — the payload a sitemap exists to deliver. */
 const locsOf = (xml) => [...xml.matchAll(/<loc>([\s\S]*?)<\/loc>/g)].map((m) => m[1]);
 
@@ -89,19 +114,30 @@ export default function prettySitemap() {
         for (const name of names) {
           const file = join(root, name);
           const before = readFileSync(file, "utf8");
-          const after = prettify(before);
+          const beforeLocs = locsOf(before);
 
-          // Assertion 1: no character inside a tag or a text node moved.
-          if (countOf(before, "<") !== countOf(after, "<") || countOf(before, ">") !== countOf(after, ">")) {
+          // ── transform 1: whitespace only ──────────────────────────────────
+          const indented = prettify(before);
+
+          // No character inside a tag or inside a text node may move. Asserted
+          // against the whitespace pass ALONE: the stylesheet line added next is
+          // itself a `<?…?>` and would shift these counts by one, which is how
+          // this assertion first failed — correctly, rather than silently.
+          if (
+            countOf(before, "<") !== countOf(indented, "<") ||
+            countOf(before, ">") !== countOf(indented, ">")
+          ) {
             throw new Error(
               `pretty-sitemap: ${name} changed a tag character count — refusing to write a ` +
                 `mangled sitemap. Before ${countOf(before, "<")} '<' / ${countOf(before, ">")} '>', ` +
-                `after ${countOf(after, "<")} '<' / ${countOf(after, ">")} '>'.`,
+                `after ${countOf(indented, "<")} '<' / ${countOf(indented, ">")} '>'.`,
             );
           }
 
-          // Assertion 2: the URLs the sitemap exists to deliver are untouched.
-          const beforeLocs = locsOf(before);
+          // ── transform 2: the stylesheet instruction, and nothing else ─────
+          const after = withStylesheet(indented);
+
+          // The URLs the sitemap exists to deliver must survive BOTH passes.
           const afterLocs = locsOf(after);
           if (beforeLocs.length !== afterLocs.length || beforeLocs.some((v, i) => v !== afterLocs[i])) {
             throw new Error(
@@ -111,7 +147,10 @@ export default function prettySitemap() {
           }
 
           writeFileSync(file, after);
-          console.log(`pretty-sitemap: ${name} — ${afterLocs.length} URL(s) on their own lines`);
+          console.log(
+            `pretty-sitemap: ${name} — ${afterLocs.length} URL(s) on their own lines, ` +
+              `stylesheet applied`,
+          );
         }
       },
     },
