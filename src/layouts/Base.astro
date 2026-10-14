@@ -18,25 +18,21 @@ import { AUDIENCES, THEMES } from "../lib/schema";
 import { ORG_SITE, organizationLd, socialMeta, webSiteLd } from "../lib/seo";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
 import { getCollection } from "astro:content";
-import { isPublished } from "../lib/review-gate";
 
 /**
  * One page, one language.
  *
  * `lang` decides every chrome string (skip link, navigation, footer) and the
- * language the search engines are told about. When `multilingual` is on, the
- * page also advertises both editions with `hreflang` and carries the language
- * selector. Internal areas (the review hub, which stays bilingual on purpose)
- * switch it off, so no `hreflang` ever points at a page that does not exist.
+ * language the search engines are told about. Every page advertises both
+ * editions with `hreflang` and carries the language selector — the internal
+ * bilingual review area, the only page that ever switched that off, is gone.
  */
 interface Props {
   title: string;
   description?: string;
   lang?: Locale;
-  /** Keep the page out of search engines (internal review areas). */
+  /** Keep the page out of search engines. */
   noindex?: boolean;
-  /** Advertise the other language and show the selector. */
-  multilingual?: boolean;
   /** Where the selector goes, when it is not the same path in the other language. */
   alternateHref?: string;
   /** Extra JSON-LD nodes for this page. The layout already emits the site's own. */
@@ -55,7 +51,6 @@ const {
   lang = DEFAULT_LOCALE,
   description = t(lang, "homeDescription"),
   noindex = false,
-  multilingual = true,
   alternateHref,
   structuredData = [],
   ogType = "website",
@@ -66,12 +61,10 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const alternates = multilingual
-  ? alternateLinks(Astro.url.pathname).map((link) => ({
-      ...link,
-      absolute: new URL(link.href, Astro.site).href,
-    }))
-  : [];
+const alternates = alternateLinks(Astro.url.pathname).map((link) => ({
+  ...link,
+  absolute: new URL(link.href, Astro.site).href,
+}));
 const switchHref = alternateHref ?? alternatePath(Astro.url.pathname);
 
 /** Social-card values, and the JSON-LD graph this page publishes. */
@@ -112,7 +105,7 @@ const onAudiencePage = AUDIENCES.some((audience) => isCurrent(audiencePath(lang,
 const liveResources = (
   await getCollection(
     "content",
-    ({ data }) => data.lang === DEFAULT_LOCALE && isPublished(data) && data.type === "resource",
+    ({ data }) => data.lang === DEFAULT_LOCALE && data.type === "resource",
   )
 ).length;
 ---
@@ -207,11 +200,7 @@ const liveResources = (
           <span class="mark">Beets</span><span class="mark-alt">AI</span>
         </a>
         <div class="headright">
-          {
-            multilingual ? (
-              <LanguageSwitch current={lang} href={switchHref} />
-            ) : null
-          }
+          <LanguageSwitch current={lang} href={switchHref} />
         </div>
         {/*
           The bar: 主頁 · 免費資源 · 主題 (the five themes) · 對象 (the three

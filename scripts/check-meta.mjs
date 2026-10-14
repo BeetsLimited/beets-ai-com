@@ -41,8 +41,7 @@
  *   - <title> containing the brand. The suffix is added by the route; asserting
  *     it here would fight the fallbacks on the pages that legitimately omit it.
  *
- * SKIPPED: dist/files/** (printable downloads, not pages), dist/review/** (the
- * internal review area — deliberately bilingual and noindex) and _astro/**.
+ * SKIPPED: dist/files/** (printable downloads, not pages) and _astro/**.
  *
  * Run after `astro build` (reads dist/). Exit code 1 on any failure.
  */
@@ -53,7 +52,7 @@ import { join, relative, resolve } from "node:path";
 const DIST = resolve(import.meta.dirname, "..", "dist");
 
 /** Directories that are not published pages. */
-const SKIP_DIRS = new Set(["files", "review", "_astro"]);
+const SKIP_DIRS = new Set(["files", "_astro"]);
 
 /** Search-result display budgets, in display units. See the header. */
 const TITLE_MAX = 60;

@@ -22,7 +22,6 @@ image: "/images/humanities-worksheet-three-versions-hero.webp"
 imageAlt: "一隻手伸向桌上三份空白文件夾，左邊一份有深紅色標籤，中間一份有藍色標籤。"
 downloads: ["/files/humanities-worksheet-three-versions.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

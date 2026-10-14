@@ -22,7 +22,6 @@ image: "/images/first-ai-lesson-kit-hero.webp"
 imageAlt: "A teacher beside a table handing a stack of worksheets to two students, with a deep red pencil holder and a blue tray on the table."
 downloads: ["/files/en/first-ai-lesson-kit.docx"]
 feedback: true
-draft: true
 ---
 
 ## What this solves

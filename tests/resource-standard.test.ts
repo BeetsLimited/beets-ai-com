@@ -178,14 +178,17 @@ describe("the internal record stays internal", () => {
   });
 
   it("still keeps the record, so the audit trail survives", () => {
-    // Hidden, not deleted: the source codes and the attestations are what the
-    // review hub and any future audit read.
+    // Hidden, not deleted: the source codes and any attestation are provenance
+    // for a future audit. Nothing requires them any more — the review gate was
+    // removed permanently on 2026-10-15 — but an entry that RECORDS a check must
+    // keep the record.
     for (const entry of declared) {
       expect(entry.fm.sources, `${entry.id} must keep its sources`).toMatch(/[BFGE]/);
-      if (entry.fm.draft === "false") {
-        expect(entry.fm.reviewer, `${entry.id} must keep its reviewer`).toBeTruthy();
-        expect(entry.fm.factChecked, `${entry.id} must keep factChecked`).toBe("true");
-        expect(entry.fm.factCheckedBy, `${entry.id} must keep factCheckedBy`).toBeTruthy();
+      if (entry.fm.reviewer) {
+        expect(entry.fm.factChecked, `${entry.id} records a reviewer, so it must keep factChecked`).toBe(
+          "true",
+        );
+        expect(entry.fm.factCheckedBy, `${entry.id} records a reviewer, so it must keep factCheckedBy`).toBeTruthy();
       }
     }
   });

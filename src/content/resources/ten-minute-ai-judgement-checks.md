@@ -21,7 +21,6 @@ image: "/images/ten-minute-ai-judgement-checks-hero.webp"
 imageAlt: "教師在課室內舉起一張深紅色卡片，兩名學生坐在桌前，桌上有一支藍色鉛筆。"
 downloads: ["/files/ten-minute-ai-judgement-checks.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

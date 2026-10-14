@@ -1,14 +1,13 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
 import { audienceLabel, audiencePath, resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
-import { reviewRequired } from "../lib/review-gate";
 
 /**
  * One resource page, in one language.
  *
  * `lang` is the language of the page being built; the entry itself carries its
- * own language, so the two are always the same edition. Shared by the public
- * route and the internal review route, so what a reviewer sees is what ships.
+ * own language, so the two are always the same edition. There is no separate
+ * review rendering: this IS the published page.
  *
  * The page is deliberately thin. The content owns its seven sections — and the
  * middle three of those adapt to the resource's `kind`, so a whole-school
@@ -21,27 +20,19 @@ import { reviewRequired } from "../lib/review-gate";
  * `factCheckedBy`, `factCheckedOn` and any `[[VERIFY]]` note stay in the entry
  * as provenance and audit trail — the numbers, the source codes and the
  * reviewer's name are working records, not something a teacher needs to read
- * (Billy, 2026-10-10). They are visible where they belong: `/review/`.
+ * (Billy, 2026-10-10). They stay in the entry as the internal audit trail, and
+ * `npm run check:public-copy` fails the build if one ever reaches `dist/`.
  */
 interface Props {
   entry: CollectionEntry<"content">;
   lang: Locale;
-  /** Review mode adds the unreviewed-draft banner. */
-  reviewMode?: boolean;
-  /** Same-theme siblings, supplied by the route (empty in the review area). */
+  /** Same-theme siblings, supplied by the route. */
   related?: { address: string; title: string }[];
 }
 
-const { entry, lang, reviewMode = false, related = [] } = Astro.props;
+const { entry, lang, related = [] } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
-/**
- * The draft warning follows the `draft` flag, so publishing removes it — and it
- * is suppressed entirely while the review gate is off, because those pages are
- * published at their public URLs on purpose.
- */
-const showDraftNotice = reviewMode || (reviewRequired() && d.draft);
-
 /** The classification lines, in the order the page reads them. */
 const classification = [
   // The theme's public name. The A–E key is internal lettering, not for a reader.
@@ -58,22 +49,6 @@ const practicals = [
 ---
 
 <article>
-  {
-    showDraftNotice ? (
-      <div class="notice">
-        <strong>⚠️ 草稿 · 未經審閱 — DRAFT, NOT REVIEWED</strong>
-        <p>
-          此頁僅供內部審閱。尚未完成事實核實及教育工作者審閱，因此<strong>未在正式網址發佈</strong>，
-          亦已排除於搜尋引擎之外。
-        </p>
-        <p class="muted">
-          For internal review only. Not yet fact-checked or educator-reviewed, so it is not
-          published at its public URL and is excluded from search engines.
-        </p>
-      </div>
-    ) : null
-  }
-
   <h1>{d.title}</h1>
 
   <p>{d.description}</p>

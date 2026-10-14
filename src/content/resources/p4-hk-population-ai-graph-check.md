@@ -21,7 +21,6 @@ image: "/images/p4-hk-population-ai-graph-check-hero.webp"
 imageAlt: "一名穿校服的學生站在桌前，手拿藍色鉛筆，望向窗外的城市景觀；桌上一盆小植物。"
 downloads: ["/files/p4-hk-population-ai-graph-check.docx"]
 feedback: true
-draft: true
 ---
 
 > 課堂重點：**數字序列必須以政府統計處的官方數據核實**，不要直接採用 AI 提供的數字。

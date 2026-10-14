@@ -1,20 +1,26 @@
 import { describe, it, expect } from "vitest";
-import { createResourceSchema } from "../src/lib/schema";
+import { resourceSchema } from "../src/lib/schema";
 
 /**
- * The two human gates are enforced through the schema, and the schema is built
- * either strict or permissive depending on the review gate
- * (`src/lib/review-gate.ts`). Both modes are pinned here explicitly, so these
- * assertions do not depend on the repo's current gate setting.
+ * The frontmatter contract, now that the review gate is gone.
+ *
+ * There is exactly ONE schema and it has no gate in it: no fact-check
+ * requirement, no educator-attestation requirement, and no `draft` flag to
+ * exempt anything. Billy removed the review process permanently on 2026-10-15 —
+ * *"I actually want to remove the review gate permanently. We do not need that
+ * anymore."* — so these assertions pin the contract that replaced it: the
+ * structural rules still bite, and the human-review fields are optional
+ * provenance rather than a condition of publication.
+ *
+ * The old suite was built around `createResourceSchema(true|false)` and the
+ * `REVIEW_REQUIRED` environment variable. Both are deleted; a test that still
+ * stubbed the env var would be asserting about a switch that no longer exists.
  */
-const strict = createResourceSchema(true); // review on — the normal contract
-const permissive = createResourceSchema(false); // review temporarily off
 
-/** A compliant, publishable resource (#11 Hong Kong population graph lesson). */
+/** A compliant resource (#11 Hong Kong population graph lesson). */
 const valid = {
   title: "P4 香港人口折線圖：檢查 AI 生成的解釋",
   title_en: "P4 Hong Kong population line graph: check an AI explanation",
-  slug: "p4-hk-population-ai-graph-check",
   address: "p4-hk-population-ai-graph-check",
   lang: "zh-HK",
   type: "resource",
@@ -27,121 +33,101 @@ const valid = {
   prepTime: "10 min",
   equipment: "投影 / 打印",
   author: "BeetsBot",
-  reviewer: "Henry",
+  reviewer: "Billy Kan",
   version: "1.0",
   date: "2026-10-07",
   description: "檢查 AI 生成的香港人口折線圖解釋，找出錯誤並核對來源。",
-  downloads: ["/files/p4-hk-population-graph-v1.pdf"],
+  downloads: ["/files/p4-hk-population-graph-v1.docx"],
   feedback: true,
   factChecked: true,
-  factCheckedBy: "BeetsBot",
+  factCheckedBy: "Billy Kan",
 };
 
-describe("resourceSchema (review gate ON)", () => {
-  it("accepts a well-formed published resource", () => {
-    expect(strict.safeParse(valid).success).toBe(true);
+describe("resourceSchema — structure", () => {
+  it("accepts a well-formed resource", () => {
+    expect(resourceSchema.safeParse(valid).success).toBe(true);
   });
 
   it("rejects an unknown theme", () => {
-    expect(strict.safeParse({ ...valid, theme: "Z" }).success).toBe(false);
+    expect(resourceSchema.safeParse({ ...valid, theme: "Z" }).success).toBe(false);
   });
 
   it("rejects an unknown lang", () => {
-    expect(strict.safeParse({ ...valid, lang: "fr-FR" }).success).toBe(false);
-  });
-
-  it("enforces the educator review gate: a resource needs a named reviewer", () => {
-    const noReviewer = { ...valid, reviewer: undefined };
-    expect(strict.safeParse(noReviewer).success).toBe(false);
-  });
-
-  it("allows an editorial blog post without a reviewer", () => {
-    expect(strict.safeParse({ ...valid, type: "post", reviewer: undefined }).success).toBe(true);
-  });
-
-  it("allows an unreviewed DRAFT — the gate applies at publish, not at authoring", () => {
-    expect(strict.safeParse({ ...valid, reviewer: undefined, draft: true }).success).toBe(true);
+    expect(resourceSchema.safeParse({ ...valid, lang: "fr-FR" }).success).toBe(false);
   });
 
   it("rejects an address that is not lowercase-hyphenated", () => {
-    expect(strict.safeParse({ ...valid, address: "P4 HK Population" }).success).toBe(false);
+    expect(resourceSchema.safeParse({ ...valid, address: "P4 HK Population" }).success).toBe(false);
   });
 
   it("requires at least one EDB source reference", () => {
-    expect(strict.safeParse({ ...valid, sources: [] }).success).toBe(false);
+    expect(resourceSchema.safeParse({ ...valid, sources: [] }).success).toBe(false);
   });
 
   it("requires at least one audience — a resource nobody is classified for is the defect", () => {
-    expect(strict.safeParse({ ...valid, audience: [] }).success).toBe(false);
-    expect(strict.safeParse({ ...valid, audience: undefined }).success).toBe(false);
+    expect(resourceSchema.safeParse({ ...valid, audience: [] }).success).toBe(false);
+    expect(resourceSchema.safeParse({ ...valid, audience: undefined }).success).toBe(false);
   });
 
   it("rejects an audience that is not one of the three", () => {
-    expect(strict.safeParse({ ...valid, audience: ["teachers", "parents", "governors"] }).success).toBe(
-      false,
-    );
+    expect(
+      resourceSchema.safeParse({ ...valid, audience: ["teachers", "parents", "governors"] }).success,
+    ).toBe(false);
   });
 
   it("accepts a resource that serves more than one audience", () => {
-    expect(strict.safeParse({ ...valid, audience: ["teachers", "parents", "students"] }).success).toBe(
+    expect(resourceSchema.safeParse({ ...valid, audience: ["teachers", "parents", "students"] }).success).toBe(
       true,
     );
   });
 
   it("coerces an ISO date string into a Date", () => {
-    const parsed = strict.safeParse(valid);
+    const parsed = resourceSchema.safeParse(valid);
     expect(parsed.success).toBe(true);
     if (parsed.success) expect(parsed.data.date).toBeInstanceOf(Date);
   });
 
-  // ── fact-check gate ───────────────────────────────────────────────────────
-  it("requires a fact-check attestation before publish", () => {
-    expect(strict.safeParse({ ...valid, factChecked: false }).success).toBe(false);
-  });
-
-  it("requires a NAMED fact-checker before publish", () => {
-    expect(strict.safeParse({ ...valid, factChecked: true, factCheckedBy: undefined }).success).toBe(
-      false,
-    );
-  });
-
-  it("applies the fact-check gate to posts too, not just resources", () => {
-    expect(strict.safeParse({ ...valid, type: "post", factChecked: false }).success).toBe(false);
-  });
-
-  it("exempts drafts from the fact-check gate as well", () => {
-    expect(
-      strict.safeParse({
-        ...valid,
-        draft: true,
-        reviewer: undefined,
-        factChecked: false,
-        factCheckedBy: undefined,
-      }).success,
-    ).toBe(true);
+  it("has no `draft` field — there is no unpublished state to declare", () => {
+    // The flag is stripped from the schema, so it is not in the parsed output
+    // whatever the file says. Leaving it in a file would be a silent no-op,
+    // which is why every entry was swept clean in the same change.
+    const parsed = resourceSchema.safeParse({ ...valid, draft: true });
+    expect(parsed.success).toBe(true);
+    if (parsed.success) expect("draft" in parsed.data).toBe(false);
   });
 });
 
-describe("resourceSchema (review gate OFF — temporary, Billy 2026-10-10)", () => {
-  const unreviewed = {
-    ...valid,
-    reviewer: undefined,
-    factChecked: false,
-    factCheckedBy: undefined,
-    factCheckedOn: undefined,
-  };
-
-  it("publishes an unreviewed, unfact-checked resource without attestation", () => {
-    expect(permissive.safeParse(unreviewed).success).toBe(true);
+describe("resourceSchema — the review gate is gone", () => {
+  it("publishes without any human attestation at all", () => {
+    const noAttestation = {
+      ...valid,
+      reviewer: undefined,
+      factChecked: undefined,
+      factCheckedBy: undefined,
+      factCheckedOn: undefined,
+    };
+    expect(resourceSchema.safeParse(noAttestation).success).toBe(true);
   });
 
-  it("still ignores `draft` — the flag no longer decides publication on its own", () => {
-    expect(permissive.safeParse({ ...unreviewed, draft: true }).success).toBe(true);
+  it("accepts a resource that records no idea number — `sourceIdea` is provenance, not a gate", () => {
+    expect(resourceSchema.safeParse({ ...valid, sourceIdea: undefined }).success).toBe(true);
   });
 
-  it("still rejects structurally invalid content", () => {
-    expect(permissive.safeParse({ ...unreviewed, theme: "Z" }).success).toBe(false);
-    expect(permissive.safeParse({ ...unreviewed, sources: [] }).success).toBe(false);
-    expect(permissive.safeParse({ ...unreviewed, address: "Not An Address" }).success).toBe(false);
+  it("still rejects a reviewer recorded as an empty string", () => {
+    // `min(1)` matters because the sweeps write `reviewer: ""` when a field is
+    // meant to be absent: an empty attestation must be no attestation, not a
+    // blank name published as one.
+    expect(resourceSchema.safeParse({ ...valid, reviewer: "" }).success).toBe(false);
+  });
+
+  it("defaults the fact-check record to false when unset", () => {
+    const parsed = resourceSchema.safeParse({ ...valid, factChecked: undefined });
+    expect(parsed.success).toBe(true);
+    if (parsed.success) expect(parsed.data.factChecked).toBe(false);
+  });
+
+  it("applies the structural rules to posts too", () => {
+    expect(resourceSchema.safeParse({ ...valid, type: "post" }).success).toBe(true);
+    expect(resourceSchema.safeParse({ ...valid, type: "post", sources: [] }).success).toBe(false);
   });
 });

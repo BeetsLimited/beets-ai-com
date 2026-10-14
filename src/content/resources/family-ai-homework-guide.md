@@ -26,7 +26,6 @@ factChecked: true
 factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
 reviewer: "Billy Kan"
-draft: false
 ---
 
 ## 這個資源解決什麼問題

@@ -21,7 +21,6 @@ image: "/images/student-ai-use-process-sheet-hero.webp"
 imageAlt: "一名學生托着頭坐在桌前，看着面前一張空白紙；桌上有深紅色筆筒和藍色鉛筆。"
 downloads: ["/files/student-ai-use-process-sheet.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

@@ -21,7 +21,6 @@ image: "/images/homework-redesign-kit-hero.webp"
 imageAlt: "一位教師坐在桌前，手拿夾紙板，桌上有疊好的紙張和插着鉛筆的深紅色筆筒。"
 downloads: ["/files/homework-redesign-kit.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

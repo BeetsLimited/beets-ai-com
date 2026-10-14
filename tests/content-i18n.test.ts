@@ -167,37 +167,38 @@ describe("English content is English", () => {
   });
 });
 
-describe("published content", () => {
+describe("every entry is published", () => {
   /**
-   * Content-level contract: an entry that declares itself published must carry
-   * its attestations. Note this keys on the frontmatter, not on what the site
-   * publishes — while the review gate is off (`src/lib/review-gate.ts`) the
-   * build also publishes drafts, and those deliberately have no reviewer.
+   * There is no review gate and no `draft` flag any more (Billy, 2026-10-15:
+   * *"I actually want to remove the review gate permanently. We do not need that
+   * anymore."*), so EVERY entry in the collection is live at its public URL.
+   *
+   * The suite used to filter on `draft: "false"` and assert attestations on that
+   * subset. Both the filter and the attestation requirement are gone with the
+   * gate — the point of this block is now that nothing is held back and nothing
+   * announces itself as unpublished.
    */
-  const published = entries.filter((entry) => entry.fm.draft === "false");
 
-  it("has at least one published resource once publishing has started", () => {
-    // Guards the filter itself: if `draft:` were written in a form this parser
-    // does not read, this would silently check nothing.
-    expect(published.length).toBeGreaterThan(0);
+  it("has content — the collection is not empty", () => {
+    expect(entries.length).toBeGreaterThan(0);
   });
 
-  it("carries no draft warning in its body", () => {
-    // The warning is rendered by ResourceView from the `draft` flag. A warning
-    // written into the body stays there after publication — which is how five
-    // live pages came to announce themselves as unpublished drafts.
-    for (const entry of published) {
-      expect(/待教育工作者審閱|awaiting educator review|DRAFT, NOT REVIEWED/.test(entry.body), entry.id).toBe(
-        false,
-      );
+  it("declares no draft state — the flag was removed from the schema", () => {
+    // A `draft:` line left behind would be a silent no-op: nothing reads it, so
+    // the file would claim a state the site does not have.
+    for (const entry of entries) {
+      expect(entry.fm.draft, `${entry.id} still declares a draft state`).toBeUndefined();
     }
   });
 
-  it("records who reviewed and fact-checked it", () => {
-    for (const entry of published) {
-      expect(entry.fm.reviewer, `${entry.id} needs a named reviewer`).toBeTruthy();
-      expect(entry.fm.factChecked, `${entry.id} needs factChecked: true`).toBe("true");
-      expect(entry.fm.factCheckedBy, `${entry.id} needs factCheckedBy`).toBeTruthy();
+  it("carries no draft warning in its body", () => {
+    // The warning used to be rendered from the `draft` flag. Written into the
+    // body it would survive publication — which is how five live pages once came
+    // to announce themselves as unpublished drafts.
+    for (const entry of entries) {
+      expect(/待教育工作者審閱|awaiting educator review|DRAFT, NOT REVIEWED/.test(entry.body), entry.id).toBe(
+        false,
+      );
     }
   });
 });

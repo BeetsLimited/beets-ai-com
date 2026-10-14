@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { isPublished } from "../lib/review-gate";
 import { audienceLabel, resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
 import type { Audience } from "../lib/schema";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
@@ -66,7 +65,7 @@ const all = await getCollection("content");
 assertPairedEditions(all, "catalogue");
 
 const published = newestFirst(
-  all.filter(({ data }) => isPublished(data) && data.type === "resource" && data.lang === lang),
+  all.filter(({ data }) => data.type === "resource" && data.lang === lang),
 );
 
 const items = published.map((entry) => ({

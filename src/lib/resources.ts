@@ -1,5 +1,4 @@
 import { resourceIndexPath, resourcesPath, type Locale } from "./i18n";
-import { isPublished } from "./review-gate";
 
 /**
  * Resource routing helpers.
@@ -12,7 +11,6 @@ import { isPublished } from "./review-gate";
 export interface LocalizedEntry {
   data: {
     address: string;
-    draft: boolean;
     lang: string;
     theme?: string;
     stage?: string;
@@ -67,21 +65,15 @@ function otherLocaleOf(entry: LocalizedEntry): Locale {
 /**
  * Where the language switch goes from a resource page.
  *
- * Switching must never land on a 404, and publication state is per language: a
- * resource can be published in Traditional Chinese while its English edition is
- * still a draft. So the counterpart is only a valid target when both editions
- * share the same state — otherwise the switch falls back to that language's
- * resource index, which always exists.
+ * Switching must never land on a 404, so a missing counterpart edition falls
+ * back to that language's resource index, which always exists. There is no
+ * unpublished state any more — every entry in the collection is live — so a
+ * counterpart, when it exists, is always a valid target.
  */
 export function alternateHrefFor<T extends LocalizedEntry>(entry: T, all: T[]): string {
   const target = otherLocaleOf(entry);
   const counterpart = findCounterpart(entry, all);
-  // Reachable in the other language only while the two editions share a publish
-  // state. With the review gate off every edition is published, so a resource
-  // that is still an unreviewed draft links across like any other.
-  if (!counterpart || isPublished(counterpart.data) !== isPublished(entry.data)) {
-    return resourceIndexPath(target);
-  }
+  if (!counterpart) return resourceIndexPath(target);
   return resourcesPath(target, entry.data.address);
 }
 

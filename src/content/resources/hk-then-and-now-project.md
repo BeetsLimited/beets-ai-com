@@ -21,7 +21,6 @@ image: "/images/hk-then-and-now-project-hero.webp"
 imageAlt: "一位長者與一名女孩同坐在淺灰色沙發上一起看書，身旁有深紅色坐墊和一盆藍色花盆的植物。"
 downloads: ["/files/hk-then-and-now-project.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

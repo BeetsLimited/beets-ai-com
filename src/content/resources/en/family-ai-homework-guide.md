@@ -26,7 +26,6 @@ factChecked: true
 factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
 reviewer: "Billy Kan"
-draft: false
 ---
 
 ## What this solves

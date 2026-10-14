@@ -24,9 +24,10 @@
  * `dist/` (run after `astro build`).
  *
  * ── What it deliberately does NOT cover ──────────────────────────────────────
- * `dist/review/**` is skipped: that area IS the internal record (it exists to
- * show a reviewer the codes, the reviewer names and the checklists), it is
- * noindex, it is disallowed in robots.txt and it is excluded from the sitemap.
+ * Nothing is skipped but the asset directory. `dist/review/**` used to be
+ * exempt — it WAS the internal record — and that area no longer exists: the
+ * review gate was removed permanently on 2026-10-15 (Billy), so there is no
+ * internal page to exempt and no publish state left to explain.
  *
  * The theme cards still print an A–E letter in their `.badge` — the internal
  * lettering of our content plan. That is a VISUAL design element Billy approved
@@ -41,8 +42,8 @@ import { join, relative, resolve } from "node:path";
 
 const DIST = resolve(import.meta.dirname, "..", "dist");
 
-/** Directories that are not published pages. `review/` is the internal record. */
-const SKIP_DIRS = new Set(["review", "_astro"]);
+/** Directories that are not published pages. */
+const SKIP_DIRS = new Set(["_astro"]);
 /** Public machine-readable files that are still customer-facing. */
 const EXTRA_FILES = ["llms.txt", "llms-full.txt"];
 
@@ -57,7 +58,7 @@ const FORBIDDEN = [
   },
   { pattern: /\[\[VERIFY\]\]/, why: "an unresolved [[VERIFY]] marker meant for a reviewer" },
   { pattern: /\bBeetsBot\b/, why: "the internal authoring persona" },
-  { pattern: /\/review\//, why: "the internal review area's URL" },
+  { pattern: /\/review\//, why: "the internal review area's URL — that area was removed on 2026-10-15" },
   {
     pattern: /\bbeets-ai-build\b|\bbeets-ai-brief\b/,
     why: "an internal build profile or brief file",

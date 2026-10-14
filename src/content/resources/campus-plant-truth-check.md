@@ -21,7 +21,6 @@ image: "/images/campus-plant-truth-check-hero.webp"
 imageAlt: "兩名學生跪在窗台旁觀察盆栽，其中一人用放大鏡細看葉片，旁邊有一個藍色澆水壺；花盆是深紅色。"
 downloads: ["/files/campus-plant-truth-check.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

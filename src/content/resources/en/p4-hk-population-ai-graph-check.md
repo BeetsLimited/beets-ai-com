@@ -22,7 +22,6 @@ image: "/images/p4-hk-population-ai-graph-check-hero.webp"
 imageAlt: "A pupil in school uniform standing at a table holding a blue pencil, looking out of a window at a city skyline, with a small plant on the table."
 downloads: ["/files/en/p4-hk-population-ai-graph-check.docx"]
 feedback: true
-draft: true
 ---
 
 > Classroom focus: **the number series must be verified against official Census and Statistics Department data** — do not take the AI's figures at face value.

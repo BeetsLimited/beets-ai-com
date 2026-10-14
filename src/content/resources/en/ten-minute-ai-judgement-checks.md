@@ -22,7 +22,6 @@ image: "/images/ten-minute-ai-judgement-checks-hero.webp"
 imageAlt: "A teacher in a classroom holding up a deep red card to two pupils seated at a desk with a blue pencil on it."
 downloads: ["/files/en/ten-minute-ai-judgement-checks.docx"]
 feedback: true
-draft: true
 ---
 
 ## What this solves

@@ -22,7 +22,6 @@ image: "/images/hk-then-and-now-project-hero.webp"
 imageAlt: "An older family member and a young girl sitting together on a light grey sofa looking at a book, with a deep red cushion and a blue potted plant."
 downloads: ["/files/en/hk-then-and-now-project.docx"]
 feedback: true
-draft: true
 ---
 
 ## What this solves

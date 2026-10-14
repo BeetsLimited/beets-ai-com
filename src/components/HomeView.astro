@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { isPublished } from "../lib/review-gate";
 import {
   feedbackPath,
   localizePath,
@@ -46,7 +45,7 @@ const all = await getCollection("content");
 // build, not quietly halve the library.
 assertPairedEditions(all, "home");
 
-const published = newestFirst(all.filter(({ data }) => isPublished(data) && data.lang === lang));
+const published = newestFirst(all.filter(({ data }) => data.lang === lang));
 const themes = themesInOrder(lang);
 const newest = published.slice(0, 6);
 

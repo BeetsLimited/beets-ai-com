@@ -17,7 +17,6 @@
  *
  * Excluded (by design, not by accident):
  *   files/*.html   — printable worksheets, Traditional Chinese only
- *   review/        — the internal hub, which is bilingual on purpose and noindex
  *
  * Exit code 1 if any check fails.
  */
@@ -30,7 +29,7 @@ const DIST = resolve(import.meta.dirname, "..", "dist");
 const CJK = /[\u3000-\u303f\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]/;
 
 /** Directories that are intentionally not part of the per-language site. */
-const SKIP = new Set(["files", "review"]);
+const SKIP = new Set(["files"]);
 
 /** Where the English printables live, relative to dist/. */
 const ENGLISH_PRINTABLES = join("files", "en");

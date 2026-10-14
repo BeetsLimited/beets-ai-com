@@ -22,7 +22,6 @@ image: "/images/screen-free-ai-pe-games-p1-p3-hero.webp"
 imageAlt: "三名學生在體育館內舉高手臂做動作，前方有一個深紅色球和藍色地面標記。"
 downloads: ["/files/screen-free-ai-pe-games-p1-p3.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

@@ -22,7 +22,6 @@ image: "/images/screen-free-ai-pe-games-p1-p3-hero.webp"
 imageAlt: "Three pupils in a school hall with arms raised, a deep red ball on a blue floor marker in front of them."
 downloads: ["/files/en/screen-free-ai-pe-games-p1-p3.docx"]
 feedback: true
-draft: true
 ---
 
 ## What this solves

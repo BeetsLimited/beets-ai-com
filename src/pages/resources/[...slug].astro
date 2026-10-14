@@ -4,18 +4,16 @@ import Base from "../../layouts/Base.astro";
 import ResourceView from "../../components/ResourceView.astro";
 import { DEFAULT_LOCALE, localizePath, resourceIndexPath, t } from "../../lib/i18n";
 import { alternateHrefFor, pageDescription, pageTitle, relatedTo } from "../../lib/resources";
-import { isPublished } from "../../lib/review-gate";
 import { breadcrumbLd, learningResourceLd } from "../../lib/seo";
 
 const lang = DEFAULT_LOCALE;
 
-// Every resource is published while the review gate is off; with it on, an
-// unreviewed `draft: true` resource 404s here and is served (unindexed) under
-// /review/ instead, until it passes the fact-check and educator gates.
+// Every resource in the collection is published — there is no review gate and
+// no draft state (Billy, 2026-10-15), so the route is simply every zh-HK entry.
 export async function getStaticPaths() {
   const all = await getCollection("content");
   return all
-    .filter((entry) => isPublished(entry.data) && entry.data.lang === DEFAULT_LOCALE)
+    .filter((entry) => entry.data.lang === DEFAULT_LOCALE)
     .map((entry) => ({
       params: { slug: entry.data.address },
       props: {

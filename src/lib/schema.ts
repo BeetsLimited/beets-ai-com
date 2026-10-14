@@ -1,6 +1,34 @@
 import { z } from "zod";
 import { RESOURCE_KINDS } from "./resource-kinds";
-import { reviewRequired } from "./review-gate";
+
+/**
+ * Frontmatter contract for Beets AI content.
+ *
+ * **There is no review gate.** Content publishes as authored: a resource page
+ * is live at its public URL the moment it is committed, with no fact-check or
+ * educator sign-off required, and there is no draft state that holds a page
+ * back. Billy removed the process permanently on 2026-10-15 — *"I actually want
+ * to remove the review gate permanently. We do not need that anymore."* The
+ * switch, the `/review/` area, the schema gates and the `draft` flag are all
+ * gone; nothing in the build reads a review state.
+ *
+ * What survives is the RECORD, as provenance rather than as a gate:
+ * `sourceIdea`, `sources`, `reviewer`, `factChecked*` and `author` stay in the
+ * entry as the internal audit trail, and are never rendered on a page
+ * (`ResourceView` does not print them; `npm run check:public-copy` fails the
+ * build if one reaches `dist/`). They are optional — an entry that has never
+ * been through any check simply has no attestation, which is honest — and
+ * nothing requires them to be filled in to publish.
+ *
+ * Editorial quality is still asserted, just not by a blocking gate: the
+ * seven-section resource standard (`tests/resource-standard.test.ts`), the
+ * single-language gate, the duplicate-heading gate, the metadata gate and the
+ * public-copy gate all still fail the build. What is gone is the human
+ * approval step, not the quality bar.
+ *
+ * Broken links are a separate gate, enforced in CI by `npm run check:links`
+ * against the built site.
+ */
 
 /** The five navigation themes (EXCO-714 content plan). */
 export const THEMES = ["A", "B", "C", "D", "E"] as const;
@@ -59,14 +87,25 @@ const fields = {
   audience: z.array(z.enum(AUDIENCES)).min(1, "at least one audience (對象) is required"),
   stage: z.string().min(1),
   subject: z.string().min(1),
-  /** Ties the page back to the 14-idea launch inventory, e.g. "#11". */
+  /**
+   * The 20-idea launch inventory this page came from, e.g. "#11".
+   *
+   * INTERNAL, and kept as provenance: the idea number and the source codes
+   * below are working records, never something a teacher reads. They are *not*
+   * a gate — the field is optional and nothing requires it.
+   */
   sourceIdea: z.string().optional(),
   /** EDB document code + page, e.g. ["E, p.6"]. At least one is required. */
   sources: z.array(z.string().min(1)).min(1, "at least one EDB source reference is required"),
   prepTime: z.string().optional(),
   equipment: z.string().optional(),
+  /** Our internal record. Never published — structured data names the org. */
   author: z.string().min(1),
-  /** Named educator who checked the content. Required for a published resource. */
+  /**
+   * Named educator who checked the content. INTERNAL provenance, optional, and
+   * it no longer gates publication — record it when someone did the check, and
+   * leave it out when nobody did. It is never rendered on the page.
+   */
   reviewer: z.string().min(1).optional(),
   version: z.string().default("1.0"),
   date: z.coerce.date(),
@@ -104,56 +143,19 @@ const fields = {
    */
   imageAlt: z.string().optional(),
   feedback: z.boolean().default(false),
-  /** Unreviewed scaffolding. Excluded from public routes while the gate is on. */
-  draft: z.boolean().default(false),
 
-  // ── fact-check gate ───────────────────────────────────────────────────────
-  /** Every claim verified against its source. Required unless draft. */
+  // ── fact-check record ─────────────────────────────────────────────────────
+  // INTERNAL provenance, no longer a gate (Billy, 2026-10-15). The fields stay
+  // so a page that was checked keeps its record and an audit can read it, but
+  // publishing never requires them and `/review/` no longer exists to show them.
+  /** Whether someone verified the page's claims against their sources. */
   factChecked: z.boolean().default(false),
-  /** Who verified the facts. Required alongside factChecked to publish. */
+  /** Who verified the facts. */
   factCheckedBy: z.string().min(1).optional(),
   /** When the facts were last verified. */
   factCheckedOn: z.coerce.date().optional(),
 };
 
-/**
- * Frontmatter contract for Beets AI content.
- *
- * `reviewRequired` selects whether the two human gates below are enforced:
- *
- * 1. **Fact-check gate** — published content must be verified by a named
- *    person. No post goes live on unchecked claims.
- * 2. **Educator review gate** — a published `resource` must name the educator
- *    who reviewed its learning aim, age fit and usability.
- *
- * While the gate is on, AI drafts, a person verifies facts and an educator
- * approves before publication. While it is off (see `./review-gate.ts`, Billy
- * 2026-10-10) both gates are skipped and content publishes as authored — the
- * fields stay optional so nothing false has to be recorded to publish.
- *
- * Broken links are a separate gate, enforced in CI by `npm run check:links`
- * against the built site.
- */
-export function createResourceSchema(reviewRequiredFlag: boolean) {
-  return z
-    .object(fields)
-    .refine((value) => !reviewRequiredFlag || value.draft || (value.factChecked && Boolean(value.factCheckedBy)), {
-      message:
-        "fact-check gate: published content must be fact-checked by a named person " +
-        "(set factChecked: true and factCheckedBy) — or set draft: true",
-      path: ["factChecked"],
-    })
-    .refine((value) => !reviewRequiredFlag || value.draft || value.type !== "resource" || Boolean(value.reviewer), {
-      message:
-        "educator review gate: a published resource requires a named reviewer (or set draft: true)",
-      path: ["reviewer"],
-    });
-}
-
-/**
- * The schema the content collection is actually built with — the review gate's
- * current state decides whether the human gates apply. See `./review-gate.ts`.
- */
-export const resourceSchema = createResourceSchema(reviewRequired());
+export const resourceSchema = z.object(fields);
 
 export type Resource = z.infer<typeof resourceSchema>;

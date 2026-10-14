@@ -9,10 +9,9 @@
  * description and cited source documents.
  *
  * Runs as `prebuild`, so the two files are regenerated on every build and can
- * never drift from the content. Excluded: /review/. Unreviewed drafts are also
- * excluded — unless the review gate is off (src/lib/review-gate.config.json), in
- * which case they are published and must be listed, or llms.txt would describe a
- * site that does not exist.
+ * never drift from the content. Every entry in the collection is listed: there
+ * is no review gate and no draft state (Billy, 2026-10-15), so a resource the
+ * site builds is a resource llms.txt advertises.
  *
  *   node scripts/gen-llms-txt.mjs
  */
@@ -23,17 +22,6 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "src", "content", "resources");
 const SITE = "https://beets-ai.com";
-
-/**
- * Read the review-gate switch from its single source of truth, so this file
- * cannot advertise a page the site build left 404 (or hide one that is live).
- * Mirrors `reviewRequired()` in src/lib/review-gate.ts.
- */
-const gateConfig = JSON.parse(
-  readFileSync(join(ROOT, "src", "lib", "review-gate.config.json"), "utf8"),
-);
-const REVIEW_REQUIRED =
-  (process.env.REVIEW_REQUIRED ?? String(gateConfig.reviewRequired)) !== "false";
 
 /**
  * The three audiences (對象), in the site's own words. Mirrors `AUDIENCE_LABELS`
@@ -117,8 +105,6 @@ function readDir(dir, lang) {
     if (!name.endsWith(".md")) continue;
     const data = parseFrontmatter(readFileSync(full, "utf8"));
     if (!data?.address) continue;
-    // Unreviewed, and the review gate is on → not on the site yet.
-    if (REVIEW_REQUIRED && String(data.draft).toLowerCase() === "true") continue;
     out.push({ ...data, lang });
   }
   return out;
@@ -251,6 +237,5 @@ writeFileSync(join(ROOT, "public", "llms-full.txt"), `${full}\n`);
 
 console.log(
   `llms.txt: ${live.length} published resource edition(s) listed ` +
-    `(${zh.length} zh-HK, ${en.length} en); ` +
-    (REVIEW_REQUIRED ? "drafts excluded" : "REVIEW GATE OFF — drafts included"),
+    `(${zh.length} zh-HK, ${en.length} en)`,
 );

@@ -22,7 +22,6 @@ image: "/images/homework-redesign-kit-hero.webp"
 imageAlt: "A teacher seated at a desk holding a clipboard, with a stack of papers and a deep red cup holding pencils on the desk."
 downloads: ["/files/en/homework-redesign-kit.docx"]
 feedback: true
-draft: true
 ---
 
 ## What this solves

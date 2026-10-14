@@ -1,6 +1,6 @@
 # Beets AI — beets-ai.com
 
-Free, educator-reviewed **Hong Kong AI teaching resources** — by subject, learning
+Free **Hong Kong AI teaching resources** — by subject, learning
 stage and specific classroom task. Each resource answers one recognisable teacher
 need ("P4 population line graph: check an AI-generated explanation") rather than
 being a generic toolkit.
@@ -45,9 +45,11 @@ wired to the collection in `src/content.config.ts`. Two publishing units:
 | `resource` | The primary unit — one specific classroom task, with a downloadable file |
 | `post` | Short editorial/SEO prose that links to resources |
 
-**The educator review gate is enforced by the schema:** a published `resource` must
-name its `reviewer`. Set `draft: true` while authoring; drop it and add
-`reviewer: "<name>"` to publish. Drafts are excluded from every build route.
+**There is no review gate.** Content publishes as authored: every entry in the
+collection is live at its public URL, with no approval step and no draft state
+(Billy removed the process permanently on 2026-10-15). `reviewer`, `factChecked*`,
+`sources` and `sourceIdea` remain as an optional internal audit trail and are
+never rendered on a page.
 
 Resource URLs are stable: `/resources/<stage>-<subject>-<task>/` (see
 `src/lib/slug.ts`). Keep the page when a file is revised — version it instead.

@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { isPublished } from "../lib/review-gate";
 import { audiencesInOrder, t, themesInOrder, type Locale } from "../lib/i18n";
 import { assertPairedEditions, newestFirst } from "../lib/resources";
 import AudienceCardGrid from "./AudienceCardGrid.astro";
@@ -24,7 +23,7 @@ const all = await getCollection("content");
 assertPairedEditions(all, "resources-index");
 
 const published = newestFirst(
-  all.filter(({ data }) => isPublished(data) && data.type === "resource" && data.lang === lang),
+  all.filter(({ data }) => data.type === "resource" && data.lang === lang),
 );
 
 /**

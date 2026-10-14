@@ -21,7 +21,6 @@ image: "/images/first-ai-lesson-kit-hero.webp"
 imageAlt: "教師站在桌旁，把一疊工作紙交給兩名學生；桌上有深紅色筆筒和藍色托盤，背景是課室白板。"
 downloads: ["/files/first-ai-lesson-kit.docx"]
 feedback: true
-draft: true
 ---
 
 ## 這個資源解決什麼問題

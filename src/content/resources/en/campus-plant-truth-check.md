@@ -22,7 +22,6 @@ image: "/images/campus-plant-truth-check-hero.webp"
 imageAlt: "Two pupils kneeling at a window sill examining a potted plant, one using a magnifying glass on a leaf, with a blue watering can and a deep red plant pot."
 downloads: ["/files/en/campus-plant-truth-check.docx"]
 feedback: true
-draft: true
 ---
 
 ## What this solves

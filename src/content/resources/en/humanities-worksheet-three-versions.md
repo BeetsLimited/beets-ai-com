@@ -21,7 +21,6 @@ image: "/images/humanities-worksheet-three-versions-hero.webp"
 imageAlt: "A hand reaching towards three blank folders on a table, the left marked with a deep red tab and the middle with a blue tab."
 downloads: ["/files/en/humanities-worksheet-three-versions.docx"]
 feedback: true
-draft: true
 ---
 
 ## What this solves
