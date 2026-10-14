@@ -39,9 +39,13 @@ export default defineConfig({
       off-site anchor was missed.
     */
     openExternalLinks(),
-    // /review/ holds unreviewed drafts — internal, bilingual, never indexed.
+    /*
+      The sitemap used to filter /review/ out — the internal bilingual area that held
+      unreviewed drafts. That area was deleted with the review gate on 2026-10-15 and every
+      remaining page belongs in the sitemap, so the filter is gone rather than left inert: a
+      stale filter reads as a policy that no longer exists.
+    */
     sitemap({
-      filter: (page) => !page.includes("/review/"),
       i18n: {
         defaultLocale: "zh-HK",
         locales: { "zh-HK": "zh-HK", en: "en" },

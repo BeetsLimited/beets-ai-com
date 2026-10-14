@@ -8,7 +8,16 @@ Pillow available for the WebP step (see the beets-ai-blog-images skill):
     ~/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/bin/python3 \
         scripts/gen-heroes.py            # generate any that are missing
 
-    node scripts/gen-heroes.py --convert # PNG -> WebP into public/images/
+    ~/.venvs/office/bin/python3 scripts/gen-heroes.py --convert                  # ALL prompts
+    ~/.venvs/office/bin/python3 scripts/gen-heroes.py --convert <address> [...]  # only these
+
+PASS THE ADDRESSES. `--convert` with no arguments rewrites every file named in
+hero-prompts.json from whatever happens to be in /tmp — and a /tmp PNG left by an
+earlier session is a DIFFERENT GENERATION of that hero, not a re-compression. On
+2026-10-15 that silently re-encoded 14 live heroes, one of them 40% smaller than the
+image it replaced. Only convert what you generated:
+
+    git status --porcelain public/images        # then restore everything you did not add
 """
 import json
 import pathlib
@@ -45,12 +54,20 @@ def generate_all() -> None:
             print("FAIL", address, error, flush=True)
 
 
-def convert_all() -> None:
+def convert_all(only: list[str] | None = None) -> None:
     from PIL import Image
 
     target = REPO / "public" / "images"
     target.mkdir(parents=True, exist_ok=True)
+    # `only` is the guard: an unnamed address is left ALONE, because its /tmp PNG may be a
+    # different generation of the hero rather than the one that is live.
+    if only is not None:
+        unknown = [a for a in only if a not in SPEC["prompts"]]
+        if unknown:
+            raise SystemExit(f"not in hero-prompts.json: {', '.join(unknown)}")
     for address in SPEC["prompts"]:
+        if only is not None and address not in only:
+            continue
         png = OUT / f"hero-{address}.png"
         if not png.exists():
             print("missing", address)
@@ -61,4 +78,9 @@ def convert_all() -> None:
 
 
 if __name__ == "__main__":
-    convert_all() if "--convert" in sys.argv else generate_all()
+    if "--convert" in sys.argv:
+        # Addresses after --convert restrict the pass; no addresses means all of them,
+        # which is only right when every prompt was just regenerated.
+        convert_all([a for a in sys.argv[1:] if a != "--convert"] or None)
+    else:
+        generate_all()
