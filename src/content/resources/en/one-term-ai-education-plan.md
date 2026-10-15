@@ -98,6 +98,7 @@ This resource maps to:
 
 - **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies in school development plans, with a clear implementation timetable.
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, for reference when planning activities.
+- **EDBCM No. 156/2026** (2026/27 School Year Holistic Planning of School-based Digital Education and Related Teacher Training): states that schools must build digital education into the School Development Plan and/or the Annual School Plan in the 2026/27 school year; this resource turns that requirement into a single term's school-based plan.
 
 **Learning strand**: fundamental operating principles of AI / human-AI communication and collaboration / reflection on the application of AI
 
