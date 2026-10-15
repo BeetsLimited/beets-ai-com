@@ -73,6 +73,8 @@ Six fictional examples, a printable checklist and the full answer key are in the
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-4 and 2-9): the document requires learning data to be handled properly, and for identifiable parts to be removed before pupil work is uploaded for AI marking.

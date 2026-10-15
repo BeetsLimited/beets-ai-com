@@ -116,6 +116,8 @@ A printable worksheet (with the stimulus, the evidence-trail record, answer spac
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): calls for assessment that values application, ethics and thinking processes, rather than memorising the final answer alone.

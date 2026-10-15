@@ -73,6 +73,8 @@ Also draw students' attention to this: **the part the AI got right (the 2021 pop
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.6): using a city population line graph as an example, it asks students to question the AI about its sources and to check the AI's output against a reliable website (such as the Census and Statistics Department).

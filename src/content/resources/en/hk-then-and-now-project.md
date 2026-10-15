@@ -78,6 +78,8 @@ Conclusion: the AI's answer is partly right and partly wrong, so it cannot be tr
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.8): the document proposes a Hong Kong "past and present" project in which pupils use AI to help imagine the past, then check the AI's account against oral history and other sources. This resource turns that scenario into a worksheet every pupil can complete, with an added path that needs no family interview.

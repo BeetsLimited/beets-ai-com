@@ -134,6 +134,8 @@ The worksheet and the full answer notes are in the download file:
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): covers the ethics and responsibility strand of AI literacy, asking learners to understand that AI systems are designed by people, that their outputs can be traced back to design choices, and to be aware of data, bias and fairness.

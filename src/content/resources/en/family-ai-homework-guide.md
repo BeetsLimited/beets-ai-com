@@ -71,6 +71,8 @@ The full steps for the three activities, a printable homework agreement, a paren
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.1): calls for home-school cooperation on homework.

@@ -117,6 +117,8 @@ The full three-lesson worksheet (observation record, criteria worksheet, design 
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): pupils should understand AI's abilities and limits, use it responsibly, and check its output critically rather than accepting it as given.

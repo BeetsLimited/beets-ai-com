@@ -123,6 +123,8 @@ The printable contains the full card sets for Games 1 and 2 (picture + word, for
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.4): an early-primary example of meeting AI through unplugged activity.

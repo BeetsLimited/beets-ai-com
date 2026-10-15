@@ -119,6 +119,8 @@ The worksheet (with the interview question bank, the AI-use boundary checklist, 
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): sets out pupils' AI literacy — knowing, applying, and using AI ethically and responsibly — which this resource turns into a checklist pupils can tick themselves.

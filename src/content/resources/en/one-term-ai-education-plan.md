@@ -94,6 +94,8 @@ Includes: a blank planning table, the leader's checklist, and a completed fictio
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies in school development plans, with a clear implementation timetable.

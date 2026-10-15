@@ -72,6 +72,8 @@ Core idea: **a plant's name is a claim that needs a source**, not something that
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.7): using campus plants as the context, it asks pupils to observe and record features for themselves before checking an AI's identification output, and to question the AI about its sources and judge whether an answer is trustworthy.

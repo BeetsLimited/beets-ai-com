@@ -121,6 +121,8 @@ A controlled prompt has three parts: **fix the level** (one thing only), **name 
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.

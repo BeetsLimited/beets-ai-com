@@ -139,6 +139,8 @@ The boundary rule (teachers must state it): the idea the teacher performs is **t
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): sets out the AI literacy competencies pupils should develop — using AI appropriately and understanding its limits, rather than treating it as a box that only produces answers. This pack practises exactly that: pupils describe in their own words, then judge the AI's output.

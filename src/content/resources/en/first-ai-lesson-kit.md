@@ -81,6 +81,8 @@ After completing the kit, the teacher can:
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-3): encourages collaborative planning, lesson observation and continuing reflection — this kit turns the post-lesson reflection into three questions a teacher can complete alone.

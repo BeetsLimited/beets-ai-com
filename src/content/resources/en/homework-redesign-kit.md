@@ -121,6 +121,8 @@ The two before-and-after pairs below are the "answer key" of this kit — they s
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): it values authentic, varied assessment and the learning process, not only the finished product.

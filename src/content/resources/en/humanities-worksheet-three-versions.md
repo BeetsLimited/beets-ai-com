@@ -65,6 +65,8 @@ The three worksheet versions, the teacher notes for each version and the compari
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7): this part of the guide discusses providing differentiated resources and support for diverse learners.

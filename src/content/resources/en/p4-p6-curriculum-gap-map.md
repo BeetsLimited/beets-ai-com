@@ -88,6 +88,8 @@ Includes: a blank coverage table, a blank gap-and-next-step table, three complet
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, to be used when checking a school's own activities against the stage goals.

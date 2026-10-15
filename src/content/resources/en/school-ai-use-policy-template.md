@@ -91,6 +91,8 @@ Three parts: the staff edition (eleven sections), the student edition, and a com
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies to be built into the School Development Plan, with a clear implementation timetable.

@@ -88,6 +88,8 @@ The scenario text, five decision cards, the sorting sheet and the full answer ke
 
 ## Official documents
 
+Every resource in this library is written to the AI Literacy Learning Framework for Primary and Secondary Schools and falls within the policy scope of the Blueprint for Digital Education Development in Primary and Secondary Schools.
+
 This resource maps to:
 
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.14): the example covers deepfakes and verification, asking learners to recognise a convincing but false message and to verify information before acting on or sharing it.
