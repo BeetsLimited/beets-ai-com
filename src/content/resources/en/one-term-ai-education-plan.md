@@ -34,7 +34,7 @@ Principals and curriculum coordinators know they are expected to write digital a
 
 This template does not discuss broad direction. It fixes the term's planning into a single table: **activity, owner, dates, evidence of review**. Once the table is filled in, a principal can see what will happen this term without commissioning a consultant.
 
-The template answers the school-based planning requirement of the School Development Plan and digital education directly, putting what will happen, who owns it and how it is accounted for on one table, as the AI + Curriculum step from framework to term.
+The template answers the school-based planning requirement of the School Development Plan and digital education directly, putting what will happen, who owns it and how it is accounted for on one table, so that every subject's teaching and learning and assessment rest on the same school-based record, as the AI + Curriculum step from framework to term.
 
 ## Planning objectives
 
@@ -45,7 +45,7 @@ After the planning meeting, the school leadership team can:
 3. Connect the activities to a school-planning requirement and a cross-subject learning progression in the official documents (see "Official documents" at the end).
 4. Use the completed fictional example to judge whether a plan is executable rather than merely written down.
 
-The planning rests on the AI literacy learning framework and sets targets by learning stage, with evidence of review kept alongside the workload it adds.
+The planning rests on the AI literacy learning framework and sets targets by learning stage, in the spirit of human judgement, timely and appropriate use and human-AI collaboration, with evidence of review kept alongside the workload it adds.
 
 ## Planning steps
 

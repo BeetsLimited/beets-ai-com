@@ -14,6 +14,11 @@ import { join, resolve, relative } from "node:path";
  * The printables are checked here too, because the post-build language gate
  * treats `files/` as out of scope — and an English worksheet is exactly where a
  * Chinese sentence would otherwise slip through unnoticed.
+ *
+ * Exactly one bilingual element is allowed in an English attachment: a STUDENT
+ * FILL-IN FIELD LABEL, which reads the same in both editions (content owner,
+ * 2026-10-15). It is a narrow exception with its own rule below — a Chinese label
+ * must be one of the designated labels AND must carry its own English label.
  */
 
 const CONTENT = resolve(import.meta.dirname, "../src/content/resources");
@@ -22,8 +27,26 @@ const EN_FILES = resolve(FILES, "en");
 /** Attachments are Office documents; the HTML printables are gone (2026-10-10). */
 const OFFICE = /\.(docx|xlsx|pptx)$/;
 const CJK = /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/;
-/** Stricter: printables must carry no full-width forms or CJK punctuation either. */
-const WIDE_CJK = /[\u3000-\u303f\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]/;
+/** Full-width punctuation, CJK punctuation and kana: never allowed in an English file. */
+const WIDE_PUNCT = /[\u3000-\u303f\u3040-\u30ff\uff00-\uffef]/;
+/** Han runs. Each one must be a designated fill-in label, and carry its English label. */
+const HAN_RUNS = /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+/g;
+/**
+ * The designated student fill-in field labels — the ONE bilingual element the house
+ * style allows in an English edition, so that both editions of the same form read the
+ * same and a school can mix them. Each entry is `label in the form : its English label`.
+ */
+const FIELD_LABELS: Record<string, string> = {
+  姓名: "Name",
+  班別: "Class",
+  日期: "Date",
+  科目: "Subject",
+  題目: "Task",
+  組員: "Partner",
+  班級: "Class",
+  組別: "Group",
+  學校名稱: "School name",
+};
 
 /** Descriptive stand-ins used before the official EDB titles were verified. */
 const PLACEHOLDER_TITLES = [
@@ -237,10 +260,31 @@ describe("English attachments", () => {
     }
   });
 
-  it("contains no Chinese or full-width characters", () => {
+  it("stays English, except the student fill-in field labels", () => {
+    // The rule used to be "no Chinese or full-width character at all". The content
+    // owner made one exception — the student fill-in field label, which must read
+    // 姓名 Name: in BOTH editions — so the guard now permits exactly that and
+    // nothing else. It is tighter, not looser: it also asserts that every Chinese
+    // label carries its own English label, so a lone "規則 Rules:" style leak still
+    // fails (the Chinese run is not a designated label).
     for (const name of files) {
-      const match = textOf(EN_FILES, name).match(WIDE_CJK);
-      expect(match?.[0] ?? null, name).toBeNull();
+      const text = textOf(EN_FILES, name);
+
+      const punct = text.match(WIDE_PUNCT);
+      expect(punct?.[0] ?? null, `${name} carries a full-width character`).toBeNull();
+
+      for (const run of text.matchAll(HAN_RUNS)) {
+        const chinese = run[0];
+        const english = FIELD_LABELS[chinese];
+        expect(
+          english,
+          `${name} — "${chinese}" is not a student fill-in field label`,
+        ).toBeDefined();
+        const after = text.slice((run.index ?? 0) + chinese.length);
+        expect(after, `${name} — "${chinese}" must be followed by "${english}"`).toMatch(
+          new RegExp(`^\\s*${english}\\b`),
+        );
+      }
     }
   });
 

@@ -173,4 +173,24 @@ describe("one citation format", () => {
       );
     }
   });
+
+  it("names the Blueprint by its official title", () => {
+    // The first-layer line tells a school which document the page sits under, so the
+    // name has to be the one the school is answerable to. All 21 Chinese pages carried
+    // the abbreviated 《中小學數字教育藍圖》 — EDB's title carries 發展, and a school
+    // searching the official name found nothing. A real defect, and invisible on any
+    // single page, because every page read perfectly on its own.
+    for (const page of pages) {
+      expect(
+        page.body.includes("中小學數字教育藍圖"),
+        `${page.id} uses the abbreviated Blueprint title`,
+      ).toBe(false);
+      if (page.locale === "zh-HK") {
+        expect(
+          page.body.includes("《中小學數字教育發展藍圖》"),
+          `${page.id} does not name the Blueprint by its official title`,
+        ).toBe(true);
+      }
+    }
+  });
 });
