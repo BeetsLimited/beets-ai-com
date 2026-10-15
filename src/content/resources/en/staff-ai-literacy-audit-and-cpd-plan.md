@@ -41,7 +41,7 @@ After one baseline self-audit and one planning meeting, school leaders can:
 3. Arrange the gaps into an ordered one-term plan with hours attached, measured against the target of not fewer than 30 hours of digital-education CPD within each three-year cycle.
 4. Use a worked example from a fictional school to judge whether a plan can actually be carried out.
 
-The audit and the plan keep nurturing the whole person, literacy first, application-oriented use and technology for good as their guiding principles, and put teaching and learning, assessment and learning data at the centre of the training rather than stopping at tool handling.
+The audit and the plan keep nurturing the whole person, literacy first, application-oriented use and technology for good as their guiding principles, and put teaching and learning, assessment and learning data at the centre of the training rather than stopping at tool handling. They use tiered and formative assessment to meet staff at different starting points, and aim to give every teacher the confidence to exercise professional gatekeeping in class: to recognise an AI hallucination, to check a claim against a source, and to avoid over-reliance and the outsourcing of thinking.
 
 ## Planning steps
 

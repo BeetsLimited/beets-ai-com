@@ -34,7 +34,7 @@ Many schools already teach AI-literacy-related content in different subjects —
 
 This workbook turns that step into a single curriculum meeting of about 60 minutes: first record each subject's existing AI-literacy activities in a "subject × term" table, then check them against the P4-P6 stage goals, mark the gaps, and write the smallest next step for each gap. Once the table is filled in, a panel head can see where P4-P6 AI literacy already fits across the subjects, and where it is still empty.
 
-The workbook connects the school-based planning of digital education and AI literacy in one line: from the requirement in the School Development Plan, to the teaching and learning already happening in each subject, to the gaps still open, as an AI + Curriculum review; the gap list also names the tiered and learning-diversity arrangements and who carries the professional gatekeeping.
+The workbook connects the school-based planning of digital education and AI literacy in one line: from the requirement in the School Development Plan, to the teaching and learning already happening in each subject, to the gaps still open, as an AI + Curriculum review; the gap list also names the tiered and learning-diversity arrangements, the formative assessment evidence a panel would collect, and who carries the professional gatekeeping, so that no year level drifts into over-reliance on the tool.
 
 ## Planning objectives
 
