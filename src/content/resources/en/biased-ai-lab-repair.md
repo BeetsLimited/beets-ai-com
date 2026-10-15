@@ -31,7 +31,7 @@ This resource turns the question into a **debugging lab done on paper**. The cla
 
 Because the whole system is one they built, every input and every line of the rule can be seen and changed. What pupils learn is this: **a biased output can be traced back to a choice someone made** - not an empty warning that "AI is dangerous". No AI tool is used at any point, and nothing involves a real pupil, school or product.
 
-This resource can sit inside a school's digital education planning and its School Development Plan, as one unit of ICT teaching and learning with professional judgement built in.
+This resource can sit inside a school's digital education planning and its School Development Plan, as one unit of ICT teaching and learning with professional judgement built in: pupils build a small machine-learning system from training data of their own and trace how data bias is learned into it.
 
 ## Learning objectives
 

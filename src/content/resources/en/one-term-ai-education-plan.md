@@ -34,7 +34,7 @@ Principals and curriculum coordinators know they are expected to write digital a
 
 This template does not discuss broad direction. It fixes the term's planning into a single table: **activity, owner, dates, evidence of review**. Once the table is filled in, a principal can see what will happen this term without commissioning a consultant.
 
-The template answers the school-based planning requirement of the School Development Plan and digital education directly, putting what will happen, who owns it and how it is accounted for on one table, so that every subject's teaching and learning and assessment rest on the same school-based record, as the AI + Curriculum step from framework to term.
+The template answers the school-based planning requirement of the School Development Plan and digital education directly, putting what will happen, who owns it and how it is accounted for on one table, so that every subject's teaching and learning and assessment rest on the same school-based record, as the AI + Curriculum step from framework to term. The plan also shows how professional gatekeeping is applied to an AI output in teaching and learning, with tiered arrangements that keep the added workload in hand.
 
 ## Planning objectives
 

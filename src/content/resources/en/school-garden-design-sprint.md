@@ -31,7 +31,7 @@ This resource puts observation before asking the AI, across three lessons: pupil
 
 The core message: **the AI's images are not a plan, not evidence and not the finished work — the pupil's own revised drawing and written justification are.**
 
-The resource can sit inside a school's digital education planning and run in a visual arts lesson, assessed through the pupil's own redrawing and written defence.
+The resource can sit inside a school's digital education planning and run in a visual arts lesson, assessed through the pupil's own redrawing and written defence: pupils spell out their design criteria in a written prompt, then check the AI's image recognition and generated options, and settle on their own redrawn version with copyright in mind.
 
 ## Learning objectives
 

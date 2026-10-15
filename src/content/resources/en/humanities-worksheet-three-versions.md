@@ -31,7 +31,7 @@ This resource turns the "same" worksheet into three ready versions — **standar
 
 The topic is change in a fictional neighbourhood, suitable for P4-P6 Humanities.
 
-The resource can sit in a school's digital education planning as a worked example of differentiated lesson design in humanities, supporting learning diversity.
+The resource can sit in a school's digital education planning as a worked example of tiered lesson design in humanities, catering for learner diversity through three versions.
 
 ## Learning objectives
 
@@ -73,7 +73,7 @@ Every resource in this library is written to the AI Literacy Learning Framework 
 
 This resource maps to:
 
-- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7): this part of the guide discusses providing differentiated resources and support for diverse learners.
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7): this part of the guide discusses providing tiered resources and support that cater for learner diversity.
 
 **Learning strand**: human-AI communication and collaboration
 

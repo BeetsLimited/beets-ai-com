@@ -29,7 +29,7 @@ When students use AI to complete their work, teachers often see only the finishe
 
 This process sheet fixes the process in place with **five boxes** — manageable for students to fill in, and visible to teachers.
 
-The sheet can sit in a school's digital education planning and be used across subjects as a formative assessment tool, with learning data handled in a school-based way.
+The sheet can sit in a school's digital education planning and be used across subjects as a formative assessment tool, with learning data handled in a school-based way. It records the prompt the pupil wrote, the questions they put to the AI and their reflection, and closes with a statement that makes them answerable for the academic integrity of the work.
 
 ## Learning objectives
 Students will be able to:

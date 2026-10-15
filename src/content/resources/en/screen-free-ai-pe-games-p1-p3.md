@@ -32,7 +32,7 @@ This resource uses **two screen-free movement games** so that P1–P3 pupils "ru
 
 No device or screen is needed at any point — only ordinary PE kit — so it works in classrooms without tablets or a network, and in classes with a wide range of learning needs.
 
-The two games can form part of a school's digital education planning as an early encounter with AI, run in a PE lesson and usable as a lesson design for an inclusive class.
+The two games can form part of a school's digital education planning as an early encounter with AI, run in a PE lesson and usable as a lesson design for an inclusive class: pupils act out machine learning while the teacher reads their movements as training data, the way a sensor would, so they feel how the data decides the judgement.
 
 ## Learning objectives
 

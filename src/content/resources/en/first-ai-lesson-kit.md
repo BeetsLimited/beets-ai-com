@@ -30,7 +30,7 @@ Many primary teachers (especially non-ICT subject teachers who also support lear
 
 The kit uses a **Humanities "Hong Kong transport"** demonstration topic. It was chosen because the answers are concrete and checkable in everyday life, so pupils can judge an AI answer using common knowledge or a single source card — the safest kind of first AI lesson. The "ask, then check, then trust" method transfers to any subject.
 
-The kit can be a school's first step into AI under its digital education planning, delivered in a Humanities or Science lesson with differentiation for learning diversity and professional judgement by the teacher.
+The kit can be a school's first step into AI under its digital education planning, delivered in a Humanities or Science lesson: pupils write a clear prompt, question the AI and verify the answer, while the teacher keeps professional judgement and uses tiered tasks that cater for learner diversity.
 
 ## Learning objectives
 

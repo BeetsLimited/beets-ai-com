@@ -31,7 +31,7 @@ Students will soon be using AI to get information. The real skill is **knowing t
 
 This lesson uses a topic close to everyday life (Hong Kong's population) to let students discover for themselves that an AI explanation is **partly right and partly wrong**, then get the data from an official source and redraw the correct line graph.
 
-The lesson can sit inside a school's digital education planning and run in a maths lesson, showing how to check a figure an AI gives, with official data as the basis for assessment; the part of the explanation that is wrong is an AI hallucination the pupils catch for themselves.
+The lesson can sit inside a school's digital education planning and run in a maths lesson, showing how to check a figure an AI gives, with official data as the basis for assessment; the part of the explanation that is wrong is an AI hallucination the pupils catch for themselves, and the only way to remove it is to verify and fact-check it against the official figures.
 
 ## Learning objectives
 Students will be able to:

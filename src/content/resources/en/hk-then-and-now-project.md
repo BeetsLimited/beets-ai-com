@@ -30,7 +30,7 @@ feedback: true
 
 This resource turns "interview a relative" from a **requirement** into **one of two paths**. Pupils who can and want to interview someone use the interview prompts; everyone else uses the public-source path, marked exactly the same, and completes the project from street views, old maps, old newspapers and library records. It also includes a worked source check and a three-level rubric.
 
-The project can be one part of a school's digital education planning and school-based curriculum, run in a humanities lesson and designed around learning diversity.
+The project can be one part of a school's digital education planning and school-based curriculum, run in a humanities lesson and designed around learning diversity: pupils check an AI's claim against a real source, practise verifying and fact-checking, and name the source for every claim.
 
 ## Learning objectives
 

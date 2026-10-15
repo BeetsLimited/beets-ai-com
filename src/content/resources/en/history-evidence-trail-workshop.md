@@ -32,7 +32,7 @@ This workshop makes provenance something pupils can see and write down: three li
 
 The stimulus uses a famous, textbook-level historical episode, and is deliberately written as a "can this claim stand" judgement rather than a task that asks pupils to verify a date or figure no one can check. Every school and example is fictional.
 
-The workshop can sit inside a school's digital education planning and be run in a senior-secondary history lesson, assessed through process evidence rather than learning data alone; the fluent but unsourced answer it works on is exactly the shape an AI hallucination takes.
+The workshop can sit inside a school's digital education planning and be run in a senior-secondary history lesson, assessed through process evidence rather than learning data alone; the fluent but unsourced answer it works on is exactly the shape an AI hallucination takes, and pupils learn to verify each claim and fact-check it against a source.
 
 ## Learning objectives
 

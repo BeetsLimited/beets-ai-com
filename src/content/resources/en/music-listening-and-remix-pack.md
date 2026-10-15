@@ -31,7 +31,7 @@ This pack turns listening into a **describable object**: pupils record a short m
 
 The whole resource needs **no audio file at all**, and works with no playback: the teacher plays, sings, claps or writes out a short musical idea, or simply writes a rhythm pattern on the board. Pupils who cannot hear pitch accurately, or who are not confident singing, take part through rhythm, dynamics and structure alone and can still complete all four steps.
 
-The pack can sit in the digital education part of a School Development Plan and run in a music lesson, with the pupil's written description as assessable evidence of learning.
+The pack can sit in the digital education part of a School Development Plan and run in a music lesson, with the pupil's written description as assessable evidence of learning: pupils set out the musical elements in a full prompt, the AI works only from their own words, and a copyright and intellectual property discussion reminds them not to use protected recordings or a living composer's work.
 
 ## Learning objectives
 

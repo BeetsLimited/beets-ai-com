@@ -29,7 +29,7 @@ The most common way AI goes wrong in a maths lesson is a pupil asking one questi
 
 These cards turn the AI from an answer-giver into a hint-giver: the teacher writes a controlled prompt first, the AI replies with one hint at the level the teacher asked for, and the teacher decides when and how far to release it. The thinking stays with the pupil, and the stall becomes visible to the teacher as a lead for the next lesson.
 
-The cards can sit inside a school's digital education planning as a classroom-observation and feedback tool for AI + Subject in a maths lesson.
+The cards can sit inside a school's digital education planning as a classroom-observation, formative assessment and feedback tool for AI + Subject in a maths lesson: the teacher sets a controlled prompt, and how far the questioning may go is the teacher's call.
 
 ## Purpose
 

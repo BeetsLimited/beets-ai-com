@@ -31,7 +31,7 @@ This kit does not ask you to ban AI. It shows a more practical move: **rewrite t
 
 The kit contains two complete before-and-after assignment examples (a Chinese Language reading response and a Humanities data task), plus a homework-redesign checklist you can apply to any existing assignment.
 
-The kit fits the digital education part of a School Development Plan, as material for teacher professional development and lesson design, and answers a school's accountability for AI use.
+The kit fits the digital education part of a School Development Plan, as material for teacher professional development and lesson design, and answers a school's accountability for AI use: the redesign targets the outsourcing of thinking and over-reliance, and uses formative assessment to collect the pupil's thinking process.
 
 ## Purpose
 By the end, teachers can:

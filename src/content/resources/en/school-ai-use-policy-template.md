@@ -31,7 +31,7 @@ In the 2026/27 school year, schools must build digital education into the School
 
 This template breaks a school AI-use policy into eleven sections, each one anchored to a document the Education Bureau has already published, and adds a staff edition, a student edition and a completed example. The school fills in only its name, date, version, owner and review date.
 
-The template delivers what a School Development Plan asks of digital education and school-based accountability, writing the AI literacy learning framework, teaching and learning, and assessment into one document, and it is where AI + Curriculum starts at school level.
+The template delivers what a School Development Plan asks of digital education and school-based accountability, writing the AI literacy learning framework, teaching and learning, and assessment into one document, and it is where AI + Curriculum starts at school level. The policy text also deals with the outsourcing of thinking, over-reliance and academic integrity, and writes the teacher's professional gatekeeping into the rules.
 
 ## Purpose
 By the end of this template a school will be able to:

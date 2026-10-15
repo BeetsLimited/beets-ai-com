@@ -34,7 +34,7 @@ On social platforms and in group chats, teenagers can receive a voice note or sh
 
 This resource turns the response into a **screen-free sorting game**: pupils first receive a fictional school message, then sort five decision cards into the correct order of response, and finally hear a step-by-step debrief from the teacher. No device is needed at any point. It suits junior-secondary (S1–S3) Citizenship, Economics and Society teachers, and also works in a form-teacher period or a parent session.
 
-It fits the digital education part of a School Development Plan, as a form-teacher or Citizenship, Economics and Society activity with clear school-based accountability for information literacy.
+It fits the digital education part of a School Development Plan, as a form-teacher or Citizenship, Economics and Society activity with clear school-based accountability for information literacy: pupils learn to spot messages that fish for identifiable information and weigh the privacy risk, replacing “does it look real” with checking the claim against a source — a deepfake and an AI hallucination both persuade through convincing output, so the source is the only defence.
 
 > The scenario, and every person, school, phone and account number in it, is fictional.
 

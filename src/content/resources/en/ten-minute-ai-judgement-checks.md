@@ -36,7 +36,7 @@ These three short tasks (about ten minutes each) let a teacher see pupils' judge
 
 Each task comes with a simple scoring guide (strong / developing / needs help) and a follow-up activity, and fits any subject: a teacher only swaps in a short AI answer, a classmate's answer, or a piece of draft work from their own subject.
 
-The three tasks can form part of a school's digital education planning and be used in any subject as a short assessment of judgement.
+The three tasks can form part of a school's digital education planning and be used in any subject as a short assessment of judgement: pupils decide which claims are AI hallucinations, practise verifying and fact-checking them, and write down what they still need to question.
 
 ## Learning objectives
 
