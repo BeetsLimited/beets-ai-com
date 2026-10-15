@@ -57,7 +57,7 @@ This is a curriculum-meeting agenda of about 60 minutes (it can be folded into a
 
 There is no single right answer, but a coverage map that "leads to a next step" can be judged against the checklist below.
 
-**P4-P6 stage goals (suggested list)**: the rows below are this workbook's suggested scaffold, not the framework's own wording. Check them against the P4-P6 stage goals in F (the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10) before you quote them.
+**P4-P6 stage goals (suggested list)**: the rows below are this workbook's suggested scaffold, not the framework's own wording. Check them against the P4-P6 stage goals in the AI Literacy Learning Framework for Primary and Secondary Schools (pp.1-6 to 1-10) before you quote them.
 
 | Goal | Suggested P4-P6 goal (check against the AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10) |
 |---|---|

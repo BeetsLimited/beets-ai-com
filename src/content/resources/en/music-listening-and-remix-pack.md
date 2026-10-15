@@ -141,7 +141,7 @@ The boundary rule (teachers must state it): the idea the teacher performs is **t
 
 This resource maps to:
 
-- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-8): sets out the AI literacy competencies pupils should develop — using AI appropriately and understanding its limits, rather than treating it as a box that only produces answers. This pack practises exactly that: pupils describe in their own words, then judge the AI's output.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): sets out the AI literacy competencies pupils should develop — using AI appropriately and understanding its limits, rather than treating it as a box that only produces answers. This pack practises exactly that: pupils describe in their own words, then judge the AI's output.
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.15): a Music scenario for junior and senior secondary in which pupils listen, describe each track in musical terms, and rework the passage into their own version; this resource applies the describe–rework–judge loop to Music.
 
 **Learning strand**: human-AI communication and collaboration

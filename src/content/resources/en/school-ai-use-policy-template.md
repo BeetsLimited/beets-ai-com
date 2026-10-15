@@ -93,9 +93,11 @@ Three parts: the staff edition (eleven sections), the student edition, and a com
 
 This resource maps to:
 
-- **Blueprint for Digital Education Development in Primary and Secondary Schools** (leaflet, p.2): requires digital and AI education strategies to be built into the School Development Plan, with a clear implementation timetable.
+- **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies to be built into the School Development Plan, with a clear implementation timetable.
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and the four learning-stage progressions, for a school planning the teaching and learning of AI literacy.
 - **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-4 and 2-9): requires learning data to be handled properly, and the identifiable parts removed before student work is uploaded for AI marking.
+- **"Information Literacy for Hong Kong Students" Learning Framework (2024)** (issued under EDBCM No. 075/2024): adds the literacy area "Recognise the ethical issues arising from the application of emerging and advanced information technologies", which covers the laws-and-regulations, academic-integrity and over-reliance concerns that AI raises, and advises schools to adopt a whole-school approach to information literacy. Sections 4 and 6 of this template (student code of conduct; academic integrity and assessment) are written to it.
+- **Values Education Curriculum Framework (2026)**: sets the overall direction and the content focus for planning and implementing values education; the integrity and responsibility behind this template's student code of conduct rest on it.
 - **EDBCM No. 156/2026** (2026/27 School Year Holistic Planning of School-based Digital Education and Related Teacher Training): states that schools must build digital education into the School Development Plan and/or the Annual School Plan in the 2026/27 school year.
 - **EDBCM No. 107/2026** (Training on Implementing Artificial Intelligence Education Planning in Schools and Teacher Professional Training in Artificial Intelligence): sets out the training arrangements for a school planning AI education.
 
