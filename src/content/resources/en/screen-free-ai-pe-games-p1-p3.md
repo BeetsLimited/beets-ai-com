@@ -24,6 +24,10 @@ downloads: ["/files/en/screen-free-ai-pe-games-p1-p3.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Physical Education | movement, fitness, games, competition, safety, cooperation | Use tools with care, and build information literacy: the teacher reads the pupils' movement as training data to show how a sensor collects data, and the class says why a wrong example teaches the model wrongly. |
+
 ## What this solves
 
 Young pupils often treat "AI" as meaning "anything electronic" or "any machine", and they do not know that AI learns from examples. If a wrong idea is fixed at the start, it is harder later to tell the limits and risks of AI apart.

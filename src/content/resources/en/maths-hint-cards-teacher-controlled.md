@@ -23,6 +23,10 @@ downloads: ["/files/en/maths-hint-cards-teacher-controlled.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Mathematics Education | data, charts, relations, patterns, proof | Fact-check: check whether the AI reply has slipped in a value or the answer, and avoid over-reliance, because the teacher controls the hint level and the thinking stays with the pupil. |
+
 ## What this solves
 
 The most common way AI goes wrong in a maths lesson is a pupil asking one question and getting the whole worked solution with the answer in a single reply — the thinking stops the moment the question is asked. The teacher marks a "correct" answer but cannot see whether the pupil understood it or where they stalled.

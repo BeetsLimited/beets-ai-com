@@ -23,6 +23,10 @@ downloads: ["/files/en/music-listening-and-remix-pack.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Arts Education (Music) | listening, creating, musical elements, rhythm, appreciation | Over-reliance and the outsourcing of thinking: the AI reworks only the description the pupil has written, and the pupil judges which variation to keep; mind copyright, and use no protected recording or living composer's work. |
+
 ## What this solves
 
 In many secondary music lessons, listening practice boils down to "tell me the mood of this piece", and the class produces a pile of adjectives — happy, tense, sad — without any musical vocabulary. The teacher is left unsure what, if anything, the pupils actually heard.

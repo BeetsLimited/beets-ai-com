@@ -28,6 +28,10 @@ factCheckedOn: 2026-10-08
 reviewer: "Billy Kan"
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Personal, Social and Humanities Education | fact-checking, information literacy | Information literacy and fact-checking: verify with a second source outside the message, and never hand over identifiable personal data a message asks for (privacy protection). |
+
 ## What this solves
 
 On social platforms and in group chats, teenagers can receive a voice note or short clip that claims to be from their school — the office chasing a payment, a form teacher asking for personal details. Deepfake technology makes this kind of message **harder and harder to spot just by whether it sounds or looks right**.

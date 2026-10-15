@@ -23,6 +23,10 @@ downloads: ["/files/en/biased-ai-lab-repair.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Technology Education | information processing, programming, debugging | Data bias: bias can be traced back to a choice made in the training data or in a rule, and a biased output is not a fact; check it (fact-check). |
+
 ## What this solves
 
 The hardest part of teaching AI ethics in a secondary ICT lesson is that the ideas go in but the pupils have nothing to work on: the teacher says "AI can be biased", the pupils nod, but they cannot see where the bias is or what they could change. Getting pupils to try a real AI tool raises privacy and safety concerns, and any company's system changes its behaviour, so the teacher cannot guarantee what the demonstration will show.

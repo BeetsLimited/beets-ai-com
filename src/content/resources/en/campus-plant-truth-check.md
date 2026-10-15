@@ -24,6 +24,10 @@ downloads: ["/files/en/campus-plant-truth-check.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Science Education | scientific investigation, observation, prediction, measurement, evidence | Fact-check: check any name the AI gives against your own observation; a confident name with no basis is an AI hallucination. |
+
 ## What this solves
 
 Students will soon photograph a plant and ask an AI, "What is this?" The real skill is not memorising plant names, but **observing with your own eyes first, then using that observation to check the AI's answer**.

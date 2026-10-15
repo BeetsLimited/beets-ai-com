@@ -23,6 +23,10 @@ downloads: ["/files/en/humanities-worksheet-three-versions.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Personal, Social and Humanities Education | project learning, context, fact-checking | Cater for learner diversity: the three versions share one learning objective; if AI generates a supporting image or example, the teacher verifies the content (fact-check). |
+
 ## What this solves
 
 Same topic, same learning objective — but the pupils in a class have different abilities and needs. Some can compare and reason directly, some need sentence frames and a word bank, and some need pictures and a hands-on sorting task to stay engaged. Teachers often end up re-making three worksheets by hand.

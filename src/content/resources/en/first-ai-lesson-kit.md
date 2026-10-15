@@ -24,6 +24,10 @@ downloads: ["/files/en/first-ai-lesson-kit.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Cross-KLA | fact-checking, information literacy, over-reliance | Fact-check and information literacy: ask first, then check, and only then believe; when unsure, ask the teacher or check a second source, and do not over-rely on the AI. |
+
 ## What this solves
 
 Many primary teachers (especially non-ICT subject teachers who also support learning diversity) want to use AI with their class once, but do not know where to start: they worry the tool will fail, the class will get out of hand, or pupils with learning needs will fall behind. This kit needs **no trainer present** — a teacher can run the full 40-minute lesson just by following it.

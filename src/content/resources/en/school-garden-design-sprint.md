@@ -23,6 +23,10 @@ downloads: ["/files/en/school-garden-design-sprint.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Arts Education (Visual Arts) | creating, appreciation, design, visual elements | Fact-check: an AI-generated image is not a design drawing, not evidence and not a finished piece; check it item by item against your own design criteria, and record honestly where the AI was wrong or could not know (AI hallucination). |
+
 ## What this solves
 
 Pupils will soon ask an AI to "design a school garden for me" and hand in the pretty picture it makes as if it were their own design. Real design ability is not collecting images; it is **observing a real place with your own eyes first, setting criteria, and then using judgement to check what the AI proposes**.

@@ -24,6 +24,10 @@ downloads: ["/files/en/hk-then-and-now-project.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Personal, Social and Humanities Education | project learning, historical sources, fact-checking | Fact-check: check what the AI says about the place against one real source, and write down the source of every claim; anything unconfirmed is not a fact. |
+
 ## What this solves
 
 "Hong Kong then and now" is a popular local history project, but the usual version asks every pupil to go home and interview a relative. Not every pupil can or should do that: pupils from newly arrived or cross-border families may have relatives unfamiliar with old Hong Kong, and looked-after children, pupils who have been bereaved, and families with language barriers can all find the task difficult or distressing.

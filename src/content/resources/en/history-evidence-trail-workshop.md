@@ -24,6 +24,10 @@ downloads: ["/files/en/history-evidence-trail-workshop.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Personal, Social and Humanities Education | historical sources, fact-checking | Fact-check: a fluent passage with no source is the typical form of an AI hallucination; trace the evidence for every sentence and verify it. |
+
 ## What this solves
 
 The hardest thing in senior-secondary history is often not whether pupils use AI, but that the AI's answer comes back as a **fluent paragraph with no provenance**. Pupils cannot tell which sentence is backed by evidence and which only sounds right; reading through a chat history is slow, and it does not show whether the pupil actually made a judgement.

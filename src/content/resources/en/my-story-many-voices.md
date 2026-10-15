@@ -24,6 +24,10 @@ downloads: ["/files/en/my-story-many-voices.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Chinese Language Education | listening, speaking, reading, writing, expression | Academic integrity and the outsourcing of thinking: the AI may help with the three named tasks only, and must never add an event, place or detail the family did not mention; the story stays the pupil's own writing. |
+
 ## What this solves
 
 Every pupil already owns a story worth writing — a grandparent's move to Hong Kong, a family trade, a neighbourhood that changed. But the gap between the spoken account and a written paragraph is exactly where P4-P6 writers stall: the words came out of a real person's mouth, and the page is supposed to be the pupil's own.

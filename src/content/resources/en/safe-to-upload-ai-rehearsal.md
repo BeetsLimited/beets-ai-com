@@ -28,6 +28,10 @@ factCheckedOn: 2026-10-08
 reviewer: "Billy Kan"
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Cross-KLA | personal data, privacy, identifiability | Privacy protection: remove identifiable personal data and anonymise it before uploading, and note the residual risk that remains after a name is removed. |
+
 ## What this solves
 Teachers want to hand worksheets, reports or class photos to an AI tool for marking or organising, but these files often contain **pupils' names, student numbers, class, contact details, photos, or medical / special educational needs records**. Once uploaded, this information can leave the school's control.
 

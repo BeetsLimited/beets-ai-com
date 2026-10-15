@@ -26,6 +26,10 @@ feedback: true
 
 > Classroom focus: **the number series must be verified against official Census and Statistics Department data** — do not take the AI's figures at face value.
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Mathematics Education | data, charts, statistics, comparison, problem-solving | Fact-check: check the figures and trends the AI gives against the official Census and Statistics Department data, and watch for AI hallucinations and data bias. |
+
 ## What this solves
 Students will soon be using AI to get information. The real skill is **knowing to ask AI where its information comes from — and actually checking it**.
 
