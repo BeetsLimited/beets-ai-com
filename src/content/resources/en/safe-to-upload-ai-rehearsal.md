@@ -33,6 +33,8 @@ Teachers want to hand worksheets, reports or class photos to an AI tool for mark
 
 This exercise does not lecture on abstract principles; instead it lets teachers **practise once, hands-on**: find the identifiable information in six fictional documents, remove it, and then judge what risks remain.
 
+The exercise can be part of the digital education in a School Development Plan, as staff training that turns how we handle learning data into workable school-based rules and accountability.
+
 ## Purpose
 By the end, teachers can:
 
@@ -40,6 +42,8 @@ By the end, teachers can:
 2. Use the three techniques "remove → replace → blur" to turn a document into a version that is safe to upload.
 3. Judge the residual risks that **remain** after names have been removed (for example a combination of class + date + a special event).
 4. State the three checks to carry out before uploading.
+
+It covers the reflection on the application of AI strand of AI literacy, with critical thinking, responsibility and professional judgement at the centre.
 
 ## How to use it
 1. **Introduction (5 min)** — Ask: "If you were going to hand a pupil's composition to an AI for marking, what would you do first?" Collect the answers without judging them.

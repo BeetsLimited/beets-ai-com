@@ -31,6 +31,8 @@ This kit does not ask you to ban AI. It shows a more practical move: **rewrite t
 
 The kit contains two complete before-and-after assignment examples (a Chinese Language reading response and a General Studies data task), plus a homework-redesign checklist you can apply to any existing assignment.
 
+The kit fits the digital education part of a School Development Plan, as material for teacher professional development and lesson design, and answers a school's accountability for AI use.
+
 ## Purpose
 By the end, teachers can:
 
@@ -38,6 +40,8 @@ By the end, teachers can:
 2. Use the four moves (quote evidence, use your own words, give a personal reason, explain orally) to rewrite an existing assignment into a "thinking-visible" version.
 3. Check after rewriting: has the learning objective been kept? Has the time required changed?
 4. Use the homework-redesign checklist to review their own rewrite.
+
+It belongs to the reflection on the application of AI strand of AI literacy, changing assessment so that critical thinking becomes visible, in a people-oriented way.
 
 ## How to use it
 A self-guided flow of about 40 minutes (individual, or as a subject-panel planning session):

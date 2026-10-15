@@ -31,6 +31,8 @@ Students will soon be using AI to get information. The real skill is **knowing t
 
 This lesson uses a topic close to everyday life (Hong Kong's population) to let students discover for themselves that an AI explanation is **partly right and partly wrong**, then get the data from an official source and redraw the correct line graph.
 
+The lesson can sit inside a school's digital education planning and run in a maths lesson, showing how to check a figure an AI gives, with official data as the basis for assessment; the part of the explanation that is wrong is an AI hallucination the pupils catch for themselves.
+
 ## Learning objectives
 Students will be able to:
 
@@ -38,6 +40,8 @@ Students will be able to:
 2. Compare each figure the AI provides against the official Census and Statistics Department data.
 3. Point out **which statement** in the AI explanation is wrong, and explain why using evidence.
 4. Redraw the line graph using the official data, and describe the trend.
+
+Written for the upper-primary learning stage, it covers the reflection on the application of AI strand of AI literacy, building critical thinking and keeping human judgement first.
 
 ## How to use it
 1. **Hook (5 minutes)** — Project "the AI's explanation" (see the download), and ask: can this be trusted? How would you check it?

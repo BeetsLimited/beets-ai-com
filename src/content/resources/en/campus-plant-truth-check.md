@@ -30,6 +30,8 @@ Students will soon photograph a plant and ask an AI, "What is this?" The real sk
 
 This lesson deliberately puts observation before asking the AI: pupils first go to the school grounds (or a window) and record a plant's leaf shape, leaf edge, leaf arrangement, flowers or fruit, and where it grows, and only then look at what an AI says about a photo. In doing so they discover for themselves that **an AI's answer is second-hand information, while their own eyes are first-hand information**.
 
+It fits a school's digital education planning as an early encounter with AI, showing in a General Studies lesson how a teacher applies professional judgement to an AI answer that is an AI hallucination rather than a fact.
+
 ## Learning objectives
 
 Pupils will be able to:
@@ -38,6 +40,8 @@ Pupils will be able to:
 2. Judge whether an AI identification claim matches the photo or their observation.
 3. Tell apart three cases: the AI is right, the AI is wrong, and the photo is too unclear to decide.
 4. Explain that a plant's "name" is a claim that needs a source, and know to ask where that source is.
+
+The task belongs to the reflection on the application of AI strand of AI literacy, building critical thinking and keeping human judgement first.
 
 ## Teaching steps
 

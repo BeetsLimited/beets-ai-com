@@ -31,6 +31,8 @@ This resource turns the "same" worksheet into three ready versions — **standar
 
 The topic is change in a fictional neighbourhood, suitable for P4-P6 Humanities (the "society" strand of General Studies).
 
+The resource can sit in a school's digital education planning as a worked example of differentiated lesson design in humanities, supporting learning diversity.
+
 ## Learning objectives
 
 All three versions aim at the same learning objective; only the level of support differs. By the end, pupils can:
@@ -39,6 +41,8 @@ All three versions aim at the same learning objective; only the level of support
 2. Sort community features into three groups: "then", "now" and "both then and now".
 3. State one change in the community and give a possible reason for it.
 4. Name one community feature worth keeping and give a simple reason.
+
+All three versions are framed by AI literacy and pitched at the upper-primary learning stage, building pupils' sense of responsibility and critical thinking.
 
 ## How to use it
 

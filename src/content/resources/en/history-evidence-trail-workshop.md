@@ -32,6 +32,8 @@ This workshop makes provenance something pupils can see and write down: three li
 
 The stimulus uses a famous, textbook-level historical episode, and is deliberately written as a "can this claim stand" judgement rather than a task that asks pupils to verify a date or figure no one can check. Every school and example is fictional.
 
+The workshop can sit inside a school's digital education planning and be run in a senior-secondary history lesson, assessed through process evidence rather than learning data alone; the fluent but unsourced answer it works on is exactly the shape an AI hallucination takes.
+
 ## Learning objectives
 
 By the end, pupils can:
@@ -39,6 +41,8 @@ By the end, pupils can:
 1. Split an AI history statement sentence by sentence into "fact claim" and "interpretation", and mark every place a source is missing.
 2. For two claims they judge traceable, say what kind of primary or secondary source would settle each one and where in Hong Kong they would look for it (for example the school library, Hong Kong Public Libraries, the Government Records Service, or a museum archive).
 3. Rewrite the AI paragraph into a version they can stand behind, deleting or clearly hedging every claim with no trail.
+
+It targets the reflection on the application of AI strand of AI literacy and builds critical thinking about Technology for Good.
 
 ## How to use it
 

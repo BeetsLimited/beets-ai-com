@@ -36,6 +36,8 @@ These three short tasks (about ten minutes each) let a teacher see pupils' judge
 
 Each task comes with a simple scoring guide (strong / developing / needs help) and a follow-up activity, and fits any subject: a teacher only swaps in a short AI answer, a classmate's answer, or a piece of draft work from their own subject.
 
+The three tasks can form part of a school's digital education planning and be used in any subject as a short assessment of judgement.
+
 ## Learning objectives
 
 By the end, pupils can:
@@ -43,6 +45,8 @@ By the end, pupils can:
 1. Judge sentence by sentence which claims in an AI answer are trustworthy, and say what evidence is missing.
 2. Tell which parts of an answer the writer could explain in their own words, and which parts look copied.
 3. List what to check before handing in work (sources, facts, can-I-explain-it), not just spelling and layout.
+
+They cover the reflection on the application of AI strand of AI literacy and build critical thinking about timely and appropriate use and human judgement first.
 
 ## How to use it
 

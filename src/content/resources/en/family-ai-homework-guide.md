@@ -32,6 +32,8 @@ reviewer: "Billy Kan"
 
 When a child wants to use AI for homework, parents are often unsure whether to allow it or stop it: when help is acceptable, what to ask, and what to do with the answer once it arrives. This guide needs no teacher present. It lets a parent and child build one simple, consistent habit at home through three 15-20 minute activities: **try it yourself first, ask for help (not answers), check before you use**. It also includes a family homework agreement and a parent notice a school can edit.
 
+A school can build this guide into the parent-education part of its School Development Plan, alongside its school-based rules on AI use in teaching and learning.
+
 ## Purpose
 
 After the three activities, a parent and child can:
@@ -40,6 +42,8 @@ After the three activities, a parent and child can:
 2. Ask AI for help rather than for an answer.
 3. Check an AI answer before using it, for both correctness and suitability.
 4. Sign a family homework agreement together, and understand that it must sit alongside the school's own homework and AI-use rules.
+
+It is written for the primary learning stage and covers the human-AI communication and reflection on the application of AI strands of AI literacy, with critical thinking, human-AI collaboration and timely and appropriate use at the centre.
 
 ## How to use it
 

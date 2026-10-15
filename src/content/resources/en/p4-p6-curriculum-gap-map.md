@@ -34,6 +34,8 @@ Many schools already teach AI-literacy-related content in different subjects —
 
 This workbook turns that step into a single curriculum meeting of about 60 minutes: first record each subject's existing AI-literacy activities in a "subject × term" table, then check them against the P4-P6 stage goals, mark the gaps, and write the smallest next step for each gap. Once the table is filled in, a panel head can see where P4-P6 AI literacy already fits across the subjects, and where it is still empty.
 
+The workbook connects the school-based planning of digital education and AI literacy in one line: from the requirement in the School Development Plan, to the teaching and learning already happening in each subject, to the gaps still open, as an AI + Curriculum review.
+
 ## Planning objectives
 
 After the curriculum meeting, principals, curriculum coordinators and panel heads can:
@@ -42,6 +44,8 @@ After the curriculum meeting, principals, curriculum coordinators and panel head
 2. Check them against the P4-P6 stage goals and judge which goals are covered, which are repeated, and which are empty.
 3. Write a "next step" for each gap (one small lesson or activity change) and assign an owner.
 4. Use the three completed fictional school examples to judge whether a coverage map "leads to a next step" rather than just listing activities.
+
+The goals it maps are arranged by the learning framework's learning stages, with a school-based review as the basis for the next step.
 
 ## Planning steps
 

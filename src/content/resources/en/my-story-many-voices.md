@@ -35,6 +35,8 @@ This two-lesson unit turns that gap into a staged writing task and gives AI a de
 3. **Draft** — pupils write the story in the first person, in their own words. AI may be used for three named jobs only: suggesting an opening line, rephrasing a sentence that sounds like a transcript, and checking that a paragraph keeps a consistent tense. AI may not add an event, place, name or detail the family member did not say — the class writes that rule together.
 4. **Compare voices** — pupils compare how the same event sounds in the family member's spoken words and in their own written version, and note in one sentence what changed and why. This is the heart of the resource: writing is translation, not transcription.
 
+The unit can sit inside a school's digital education planning and run in a Chinese Language lesson, with a school-based agreement on what AI may and may not do.
+
 ## Learning objectives
 
 By the end, pupils can:
@@ -44,6 +46,8 @@ By the end, pupils can:
 3. Write the story in the first person in their own words, marking which sentences came from the person and which are their own.
 4. Tell the three jobs AI may do apart from the things it must never do (adding a detail the person did not say).
 5. Compare the same event in the person's spoken words and in their own written version, and say in one sentence what changed and why.
+
+Written for the upper-primary learning stage, it covers the reflection on the application of AI strand of AI literacy, building empathy, responsibility and critical thinking.
 
 ## How to use it
 

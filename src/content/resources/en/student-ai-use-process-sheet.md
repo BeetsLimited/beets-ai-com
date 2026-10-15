@@ -29,6 +29,8 @@ When students use AI to complete their work, teachers often see only the finishe
 
 This process sheet fixes the process in place with **five boxes** — manageable for students to fill in, and visible to teachers.
 
+The sheet can sit in a school's digital education planning and be used across subjects as a formative assessment tool, with learning data handled in a school-based way.
+
 ## Learning objectives
 Students will be able to:
 
@@ -36,6 +38,8 @@ Students will be able to:
 2. Record the prompt they used and explain why they asked it that way.
 3. Check the AI's output and point out at least one place that needs verifying or changing.
 4. Explain how the final version differs from the first attempt, and why.
+
+It covers the reflection on the application of AI strand of AI literacy, with critical thinking and responsibility, keeping human judgement first.
 
 ## How to use it
 1. **Briefing (5 min)** — Project the process sheet and explain what to write in each of the five boxes; stress that the "first attempt" must be written before opening the AI.

@@ -34,6 +34,8 @@ On social platforms and in group chats, teenagers can receive a voice note or sh
 
 This resource turns the response into a **screen-free sorting game**: pupils first receive a fictional school message, then sort five decision cards into the correct order of response, and finally hear a step-by-step debrief from the teacher. No device is needed at any point. It suits junior-secondary (S1–S3) Citizenship, Economics and Society teachers, and also works in a form-teacher period or a parent session.
 
+It fits the digital education part of a School Development Plan, as a form-teacher or Citizenship, Economics and Society activity with clear school-based accountability for information literacy.
+
 > The scenario, and every person, school, phone and account number in it, is fictional.
 
 ## Learning objectives
@@ -45,6 +47,8 @@ By the end, pupils can:
 3. Put the steps into the correct order: **pause → check → report**.
 4. Point out that "share it on" spreads the fake to more people and should not be done.
 5. Say in a sentence or two why a fake voice note or clip can be convincing.
+
+It maps to the reflection on the application of AI strand of AI literacy and builds critical thinking about Technology for Good.
 
 ## Teaching steps
 

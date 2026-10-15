@@ -31,6 +31,8 @@ This resource puts observation before asking the AI, across three lessons: pupil
 
 The core message: **the AI's images are not a plan, not evidence and not the finished work — the pupil's own revised drawing and written justification are.**
 
+The resource can sit inside a school's digital education planning and run in a visual arts lesson, assessed through the pupil's own redrawing and written defence.
+
 ## Learning objectives
 
 By the end, pupils can:
@@ -40,6 +42,8 @@ By the end, pupils can:
 3. Write a design brief in their own words and use the school's approved AI tool to ask for several layout options.
 4. State, option by option, which of their own criteria each one meets, and mark anything they cannot justify as unsupported.
 5. Improve one option by hand and write a critique naming at least one thing the AI got wrong or could not know.
+
+Written for the junior-secondary learning stage, it covers the reflection on the application of AI strand of AI literacy, with human-AI collaboration and critical thinking at the centre.
 
 ## How to use it
 

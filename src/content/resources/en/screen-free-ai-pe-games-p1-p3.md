@@ -32,6 +32,8 @@ This resource uses **two screen-free movement games** so that P1–P3 pupils "ru
 
 No device or screen is needed at any point — only ordinary PE kit — so it works in classrooms without tablets or a network, and in classes with a wide range of learning needs.
 
+The two games can form part of a school's digital education planning as an early encounter with AI, run in a PE lesson and usable as a lesson design for an inclusive class.
+
 ## Learning objectives
 
 By the end, pupils can:
@@ -40,6 +42,8 @@ By the end, pupils can:
 2. Sort everyday examples into "uses AI" and "does not use AI".
 3. Act out "learning from examples": AI learns to judge from examples (data).
 4. Say that a wrong example makes the AI learn wrongly ("bad data in, bad answer out").
+
+They cover the fundamental operating principles of AI strand of AI literacy at the early-primary learning stage, building critical thinking and timely and appropriate use.
 
 ## Teaching steps
 

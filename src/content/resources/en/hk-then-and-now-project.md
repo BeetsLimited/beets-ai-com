@@ -30,6 +30,8 @@ feedback: true
 
 This resource turns "interview a relative" from a **requirement** into **one of two paths**. Pupils who can and want to interview someone use the interview prompts; everyone else uses the public-source path, marked exactly the same, and completes the project from street views, old maps, old newspapers and library records. It also includes a worked source check and a three-level rubric.
 
+The project can be one part of a school's digital education planning and school-based curriculum, run in a humanities lesson and designed around learning diversity.
+
 ## Learning objectives
 
 By the end, pupils can:
@@ -38,6 +40,8 @@ By the end, pupils can:
 2. Use one of two paths — interviewing a relative or using public sources — to gather information about the place.
 3. Check an AI's claim about the place against a real source and say what is right, wrong or unverified.
 4. Explain that the project can be completed without interviewing family, and respect classmates' different situations.
+
+Written for the upper-primary learning stage, it covers the reflection on the application of AI strand of AI literacy, building empathy and critical thinking and keeping human judgement first.
 
 ## Teaching steps
 

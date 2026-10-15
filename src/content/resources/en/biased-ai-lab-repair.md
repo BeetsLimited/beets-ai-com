@@ -31,6 +31,8 @@ This resource turns the question into a **debugging lab done on paper**. The cla
 
 Because the whole system is one they built, every input and every line of the rule can be seen and changed. What pupils learn is this: **a biased output can be traced back to a choice someone made** - not an empty warning that "AI is dangerous". No AI tool is used at any point, and nothing involves a real pupil, school or product.
 
+This resource can sit inside a school's digital education planning and its School Development Plan, as one unit of ICT teaching and learning with professional judgement built in.
+
 ## Learning objectives
 
 By the end of the two lessons, pupils can:
@@ -40,6 +42,8 @@ By the end of the two lessons, pupils can:
 3. Run the rule step by step on a new example and point to the line of the rule that decided the outcome.
 4. Propose a fix (change the rule or the data), say who it helps and who it may disadvantage, and name one thing it still cannot do.
 5. Write a release note of four to six sentences: what the system may be used for, what it must not be used for, and when a human must look at the decision.
+
+It targets the reflection on the application of AI strand of AI literacy, asking pupils to apply critical thinking to a system they built themselves and to keep human judgement first.
 
 ## Teaching steps
 

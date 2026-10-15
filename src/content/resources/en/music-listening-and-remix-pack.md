@@ -31,6 +31,8 @@ This pack turns listening into a **describable object**: pupils record a short m
 
 The whole resource needs **no audio file at all**, and works with no playback: the teacher plays, sings, claps or writes out a short musical idea, or simply writes a rhythm pattern on the board. Pupils who cannot hear pitch accurately, or who are not confident singing, take part through rhythm, dynamics and structure alone and can still complete all four steps.
 
+The pack can sit in the digital education part of a School Development Plan and run in a music lesson, with the pupil's written description as assessable evidence of learning.
+
 ## Learning objectives
 
 By the end of the two lessons, pupils can:
@@ -39,6 +41,8 @@ By the end of the two lessons, pupils can:
 2. Turn their notes into a precise 4–6 sentence description, precise enough that someone who never heard it could reconstruct its shape.
 3. Hand that description to the school's approved AI tool, ask for at least one change (change the metre, invert the contour, thicken the texture), and say that the AI works only from their own words.
 4. Compare the variation with their description and the original idea, and justify in writing which one they would keep and why, naming at least two musical elements.
+
+Written for the junior- and senior-secondary learning stages, it covers the human-AI communication and reflection on the application of AI strands of AI literacy, with human-AI collaboration and critical thinking at its centre.
 
 ## Teaching steps
 
