@@ -14,7 +14,7 @@ sources: ["E, p.4", "F, p.1-8"]
 prepTime: "一節體育課（約 35 分鐘）"
 equipment: "禮堂或操場、普通體育用品（雪糕筒、呼啦圈／地墊、圖卡），無需任何裝置"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "兩個不插電運動遊戲：學生跑向「用 AI／不用 AI」標記筒學習分類，再以全班當「訓練數據」，看一個錯誤例子如何令模型學錯。附器材清單、教師指引、共融調適與兩分鐘理解檢查。"
 metaDescription: "兩個不插電運動遊戲：學生跑向「用 AI／不用 AI」標記筒學習分類，再以全班當訓練數據，看一個錯誤例子如何令模型學錯。附器材清單與教師指引。"
@@ -123,9 +123,14 @@ feedback: true
 
 ## 官方文件參考
 
-本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.4） 及 **《中小學人工智能素養學習架構》**（p.1-8）：兩者都涵蓋初小階段以體能活動及不插電方式認識 AI 的經驗。
+本資源對應：
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+- **《中小學人工智能素養學習架構（應用場景示例）》**（p.4）：以不插電活動讓初小學生認識 AI 的應用示例。
+- **《中小學人工智能素養學習架構》**（p.1-8）：初小階段的學習進程涵蓋以體能活動及不插電方式認識 AI。
+
+**學習範疇**：人工智能的基本運作原理
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

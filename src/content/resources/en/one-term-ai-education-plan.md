@@ -1,5 +1,5 @@
 ---
-title: "One-term AI education plan: editable planning template with a completed school example"
+title: "One-term AI education plan: editable planning template with a completed school example (P1-S3)"
 metaTitle: "One-term AI education plan: editable template"
 address: "one-term-ai-education-plan"
 lang: "en"
@@ -14,7 +14,7 @@ sources: ["B, p.2", "F, pp.1-6 to 1-10"]
 prepTime: "One planning meeting (about 60 min) + follow-up fill-in time"
 equipment: "Editable spreadsheet (the planning template), a projector or large screen; also runs on printouts"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed fictional school example that a principal or curriculum coordinator can copy."
 metaDescription: "An editable one-term AI education planning template: two pilot activities with owners, dates and review evidence, plus a completed school example."
@@ -94,12 +94,16 @@ Includes: a blank planning table, the leader's checklist, and a completed fictio
 
 ## Official documents
 
+This resource maps to:
+
 - **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies in school development plans, with a clear implementation timetable.
-- **AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, for reference when planning activities.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, for reference when planning activities.
+
+**Learning strand**: fundamental operating principles of AI / human-AI communication and collaboration / reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

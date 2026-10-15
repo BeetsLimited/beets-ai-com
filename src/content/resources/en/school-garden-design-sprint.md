@@ -122,9 +122,11 @@ This resource maps to:
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): pupils should understand AI's abilities and limits, use it responsibly, and check its output critically rather than accepting it as given.
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.7): shows AI applied to real settings such as the school environment, with pupils' own observation as first-hand information and the AI as a tool to be checked and corrected.
 
+**Learning strand**: reflection on the application of AI
+
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

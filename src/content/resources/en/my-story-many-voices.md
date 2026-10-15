@@ -124,6 +124,8 @@ This resource maps to:
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): sets out pupils' AI literacy — knowing, applying, and using AI ethically and responsibly — which this resource turns into a checklist pupils can tick themselves.
 - **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.4): shows, through classroom scenarios, how AI literacy is put into practice — which this resource narrows to three named writing jobs.
 
+**Learning strand**: human-AI communication and collaboration
+
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is an independent Beets teaching resource, not an official EDB document.

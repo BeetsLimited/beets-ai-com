@@ -123,12 +123,14 @@ A controlled prompt has three parts: **fix the level** (one thing only), **name 
 
 This resource maps to:
 
-- **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.
-- **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): calls for varied assessment that covers application, ethics and thinking processes, rather than memorising the final answer alone.
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): calls for varied assessment that covers application, ethics and thinking processes, rather than memorising the final answer alone.
+
+**Learning strand**: human-AI communication and collaboration
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

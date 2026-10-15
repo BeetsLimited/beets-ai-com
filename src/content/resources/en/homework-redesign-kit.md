@@ -1,5 +1,5 @@
 ---
-title: "Homework redesign kit: two before-and-after assignments that show student thinking"
+title: "Homework redesign kit: two before-and-after assignments that show student thinking (P4-P6)"
 metaTitle: "Homework redesign kit: before-and-after tasks"
 address: "homework-redesign-kit"
 lang: "en"
@@ -14,7 +14,7 @@ sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "About 40 min (self-guided; can be used for panel planning)"
 equipment: "Projector or printed examples; a copy of an existing assignment you want to redesign"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "Two complete before-and-after assignments (a Chinese Language reading response and a General Studies data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required."
 metaDescription: "Two complete before-and-after assignments, plus a homework-redesign checklist, showing how to make student thinking visible without adding time."
@@ -120,14 +120,17 @@ The two before-and-after pairs below are the "answer key" of this kit — they s
 > The file contains the two complete before-and-after examples, the checklist, and blank space for writing your own rewrite. All examples are fictional and involve no real pupils or schools.
 
 ## Official documents
+
 This resource maps to:
 
-- **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): it values authentic, varied assessment and the learning process, not only the finished product.
-- **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): it discourages the direct submission of AI-generated work and recommends process evidence, oral questioning and adjusted assessment arrangements.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): it values authentic, varied assessment and the learning process, not only the finished product.
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): it discourages the direct submission of AI-generated work and recommends process evidence, oral questioning and adjusted assessment arrangements.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

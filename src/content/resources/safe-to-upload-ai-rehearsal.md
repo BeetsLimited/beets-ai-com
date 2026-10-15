@@ -1,6 +1,6 @@
 ---
-title: "上載前安全檢查：找出並移除學生個人資料"
-title_en: "Safe-to-upload rehearsal: find and remove pupil information before using AI"
+title: "上載前安全檢查：找出並移除學生個人資料（P4–P6）"
+title_en: "Safe-to-upload rehearsal: find and remove pupil information before using AI (P4-P6)"
 address: "safe-to-upload-ai-rehearsal"
 lang: "zh-HK"
 type: "resource"
@@ -14,7 +14,7 @@ sources: ["G, pp.2-4 and 2-9"]
 prepTime: "45 分鐘（可分成兩節）"
 equipment: "投影或電腦；亦可純列印操作"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-07
 description: "教師實作練習：從六份虛構學校文件中找出並移除可識別學生的資料，再安全地交給 AI 工具。附答案、準備清單與可重用步驟。"
 downloads: ["/files/safe-to-upload-ai-rehearsal.docx"]
@@ -71,9 +71,14 @@ reviewer: "Billy Kan"
 > 全部示例均為虛構，不涉及任何真實學生。
 
 ## 官方文件參考
-本資源對應 **《中小學應用人工智能教學指南》**（pp.2-4 and 2-9）：文件要求妥善處理學習數據，並在把學生作品上載供 AI 批改前，先移除可識別的部分。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+本資源對應：
+
+- **《中小學應用人工智能教學指南》**（pp.2-4 及 2-9）：文件要求妥善處理學習數據，並在把學生作品上載供 AI 批改前，先移除可識別的部分。
+
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

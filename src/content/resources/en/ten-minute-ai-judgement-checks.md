@@ -14,7 +14,7 @@ sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "About 10 min per task; all three fit one lesson (about 40 min)"
 equipment: "Printed worksheets only; a projector helps if you model a task"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "Three short formative tasks (about ten minutes each): judge whether an AI answer is trustworthy, spot the part of a classmate's answer the writer can actually defend, and list what still needs checking before handing work in. With scoring guidance and follow-up activities."
 metaDescription: "Three quick formative tasks for P4-P6: judge whether an AI answer is trustworthy, spot what a classmate can defend, and list what still needs checking."
@@ -110,12 +110,14 @@ Three printable worksheets (with the stimulus, space to write, the scoring guide
 
 This resource maps to:
 
-- **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): calls for varied, authentic assessment that covers application, ethics and thinking processes, rather than memorising the final answer alone.
-- **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): calls for varied, authentic assessment that covers application, ethics and thinking processes, rather than memorising the final answer alone.
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

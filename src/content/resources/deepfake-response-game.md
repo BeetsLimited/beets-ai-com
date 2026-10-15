@@ -7,14 +7,14 @@ type: "resource"
 kind: "lesson"
 theme: "B"
 stage: "S1-S3"
-subject: "人文"
+subject: "公民、經濟與社會科"
 audience: [teachers]
 sourceIdea: "#16"
 sources: ["E, p.14"]
 prepTime: "1 節（約 40 分鐘）"
 equipment: "投影（播放或展示情境）；決策卡列印一套（每組一份）；白板或電子白板"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "初中課室遊戲：學生收到一則虛構的「學校」訊息，用「暫停、核實、舉報」決策卡排序應對步驟，並從解說中了解深偽訊息為何令人信服。"
 image: "/images/deepfake-response-game-hero.webp"
@@ -87,9 +87,13 @@ reviewer: "Billy Kan"
 
 ## 官方文件參考
 
-本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.14）：該示例涵蓋深偽與核實資訊，要求學習者識別令人信服的虛假訊息，並在行動或轉發前先核實。
+本資源對應：
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+- **《中小學人工智能素養學習架構（應用場景示例）》**（p.14）：該示例涵蓋深偽與核實資訊，要求學習者識別令人信服的虛假訊息，並在行動或轉發前先核實。
+
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

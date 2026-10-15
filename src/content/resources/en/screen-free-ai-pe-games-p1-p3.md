@@ -14,7 +14,7 @@ sources: ["E, p.4", "F, p.1-8"]
 prepTime: "One PE lesson (about 35 min)"
 equipment: "Hall or playground and everyday PE kit only (cones, hoops or floor mats, picture cards) — no devices"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "Two screen-free movement games: pupils run to a labelled cone to sort everyday items into 'uses AI / does not use AI', then the whole class acts as training data to see how one wrong example skews the model. Includes an equipment list, teacher instructions, inclusion notes and a two-minute understanding check."
 metaDescription: "Two screen-free movement games: pupils sort everyday items into 'uses AI / does not use AI', then see how one wrong example skews the model."
@@ -123,11 +123,16 @@ The printable contains the full card sets for Games 1 and 2 (picture + word, for
 
 ## Official documents
 
-This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.4) and **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): both cover early-primary experiences of meeting AI through physical and unplugged activities.
+This resource maps to:
+
+- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.4): an early-primary example of meeting AI through unplugged activity.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): the early-primary stage of the learning progression covers meeting AI through physical and unplugged activities.
+
+**Learning strand**: fundamental operating principles of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

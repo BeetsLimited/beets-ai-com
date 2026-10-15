@@ -1,7 +1,7 @@
 ---
-title: "家庭 AI 功課指引：三個活動、一份協議、一封家長通告"
+title: "家庭 AI 功課指引：三個活動、一份協議、一封家長通告（P1–P6）"
 metaTitle: "家庭 AI 功課指引：三個活動"
-title_en: "Family AI homework guide: three activities, one agreement, one parent notice"
+title_en: "Family AI homework guide: three activities, one agreement, one parent notice (P1-P6)"
 address: "family-ai-homework-guide"
 lang: "zh-HK"
 type: "resource"
@@ -15,7 +15,7 @@ sources: ["B, p.1", "F, p.1-8"]
 prepTime: "每節 15–20 分鐘，共三節（可分開不同日子進行）"
 equipment: "無需帳戶或特別器材；只需紙、筆及家長與孩子一同參與"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "一份供家庭在家使用、毋須老師在場的指引：三個 15–20 分鐘的親子活動、一份家庭功課協議，以及一封可供學校修改的家長通告。"
 image: "/images/family-ai-homework-guide-hero.webp"
@@ -71,9 +71,14 @@ reviewer: "Billy Kan"
 
 ## 官方文件參考
 
-本資源對應 **《中小學數字教育發展藍圖》**（三摺頁，p.1） 所提出的家校合作，以及 **《中小學人工智能素養學習架構》**（p.1-8） 對初小階段須由成人陪同使用 AI 的要求。
+本資源對應：
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+- **《中小學數字教育發展藍圖》**（三摺頁，p.1）：提出家校合作，讓家長在功課上與學校配合。
+- **《中小學人工智能素養學習架構》**（p.1-8）：要求初小階段由成人陪同使用 AI。
+
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本指引為 Beets 獨立製作的教學資源，並非 EDB 官方文件，也不能取代學校本身的功課及 AI 使用政策。
 

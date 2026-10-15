@@ -14,7 +14,7 @@ sources: ["G, p.2-3", "G, pp.2-5 and 2-7"]
 prepTime: "1 lesson (40 min); about 15 min preparation"
 equipment: "Projector or computer; worksheet and source cards; no live internet needed (a pre-printed AI answer can replace using an AI tool on the day)"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone."
 metaDescription: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a worksheet and reflection questions."
@@ -81,12 +81,16 @@ After completing the kit, the teacher can:
 
 ## Official documents
 
-- **Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-3) encourages collaborative planning, lesson observation and continuing reflection — this kit turns the post-lesson reflection into three questions a teacher can complete alone.
-- **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7) refers to different difficulty levels, visual materials and support to address learning diversity — this kit adds "more support / more challenge" preparation to the slide outline and worksheet.
+This resource maps to:
+
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-3): encourages collaborative planning, lesson observation and continuing reflection — this kit turns the post-lesson reflection into three questions a teacher can complete alone.
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7): refers to different difficulty levels, visual materials and support to address learning diversity — this kit adds "more support / more challenge" preparation to the slide outline and worksheet.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

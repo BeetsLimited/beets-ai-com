@@ -1,12 +1,12 @@
 ---
-title: "P4 Hong Kong population line graph: check an AI explanation"
+title: "P4-P6 Hong Kong population line graph: check an AI explanation"
 metaTitle: "P4 population graph: check an AI explanation"
 address: "p4-hk-population-ai-graph-check"
 lang: "en"
 type: "resource"
 kind: "worksheet"
 theme: "D"
-stage: "P4"
+stage: "P4-P6"
 subject: "Mathematics"
 audience: [teachers, students]
 sourceIdea: "#11"
@@ -14,7 +14,7 @@ sources: ["E, p.6"]
 prepTime: "1 lesson (about 35–40 min)"
 equipment: "Projector; printed student worksheet (graph paper or spreadsheet)"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-07
 description: "Students check an AI-generated explanation of Hong Kong's population: find the figures with no source, discover that the claim that the population 'rises every year' is wrong, and redraw the correct line graph using official Census and Statistics Department data."
 metaDescription: "Students check an AI explanation of Hong Kong's population: find the figures with no source, spot the wrong claim, and redraw the graph from official data."
@@ -72,11 +72,16 @@ Also draw students' attention to this: **the part the AI got right (the 2021 pop
 **[P4 Hong Kong population line graph worksheet(editable Word document)](/files/en/p4-hk-population-ai-graph-check.docx)**
 
 ## Official documents
-This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.6): using a city population line graph as an example, it asks students to question the AI about its sources and to check the AI's output against a reliable website (such as the Census and Statistics Department).
+
+This resource maps to:
+
+- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.6): using a city population line graph as an example, it asks students to question the AI about its sources and to check the AI's output against a reliable website (such as the Census and Statistics Department).
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is an independent teaching resource produced by Beets, and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

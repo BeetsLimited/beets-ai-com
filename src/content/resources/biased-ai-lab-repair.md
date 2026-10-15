@@ -139,7 +139,9 @@ feedback: true
 - **《中小學人工智能素養學習架構》**（p.1-13）：涵蓋人工智能素養中的倫理與責任面向，要求學習者明白 AI 系統由人設計、其輸出可追溯至設計選擇，並對資料、偏差與公平有所覺察。
 - **《中小學應用人工智能教學指南》**（p.2-9）：提示教師以活動與討論引導學生安全、負責任地使用 AI，透過動手做而非單向講授培養判斷力。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：人工智能的基本運作原理
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

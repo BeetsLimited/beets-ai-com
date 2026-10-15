@@ -136,8 +136,10 @@ The worksheet and the full answer notes are in the download file:
 
 This resource maps to:
 
-- **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): covers the ethics and responsibility strand of AI literacy, asking learners to understand that AI systems are designed by people, that their outputs can be traced back to design choices, and to be aware of data, bias and fairness.
-- **Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-9): prompts teachers to guide pupils toward safe and responsible AI use through activities and discussion, building judgement by doing rather than by being told.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): covers the ethics and responsibility strand of AI literacy, asking learners to understand that AI systems are designed by people, that their outputs can be traced back to design choices, and to be aware of data, bias and fairness.
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-9): prompts teachers to guide pupils toward safe and responsible AI use through activities and discussion, building judgement by doing rather than by being told.
+
+**Learning strand**: fundamental operating principles of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 

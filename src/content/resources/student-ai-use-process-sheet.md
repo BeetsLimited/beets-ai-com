@@ -1,6 +1,6 @@
 ---
-title: "學生 AI 使用歷程表：第一次嘗試、提示、核對、修訂"
-title_en: "Student AI-use process sheet: first attempt, prompt, check, revise"
+title: "學生 AI 使用歷程表：第一次嘗試、提示、核對、修訂（P4–P6）"
+title_en: "Student AI-use process sheet: first attempt, prompt, check, revise (P4-P6)"
 address: "student-ai-use-process-sheet"
 lang: "zh-HK"
 type: "resource"
@@ -14,13 +14,14 @@ sources: ["F, p.1-13", "G, p.2-8"]
 prepTime: "10 分鐘說明 + 課業時間"
 equipment: "工作紙列印（可選：學生裝置）"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-07
 description: "一張可重用的歷程表，記錄學生第一次嘗試、AI 提示、核對結果、修訂與最後解釋，讓教師看得見學生的思考，而不必翻查整個對話紀錄。"
 image: "/images/student-ai-use-process-sheet-hero.webp"
 imageAlt: "一名學生托着頭坐在桌前，看着面前一張空白紙；桌上有深紅色筆筒和藍色鉛筆。"
 downloads: ["/files/student-ai-use-process-sheet.docx"]
 feedback: true
+metaTitle: "學生 AI 使用歷程表（P4–P6）"
 ---
 
 ## 這個資源解決什麼問題
@@ -63,12 +64,15 @@ feedback: true
 **[學生 AI 使用歷程表（Word 文件，可編輯）](/files/student-ai-use-process-sheet.docx)**
 
 ## 官方文件參考
+
 本資源對應：
 
 - **《中小學人工智能素養學習架構》**（p.1-13）：重視歷程與真實評估，而非只評最終結果。
 - **《中小學應用人工智能教學指南》**（p.2-8）：建議以口頭提問及提交思考歷程的方式，檢視學生的學習與 AI 使用情況。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

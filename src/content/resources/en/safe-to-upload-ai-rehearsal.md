@@ -1,5 +1,5 @@
 ---
-title: "Safe-to-upload rehearsal: find and remove pupil information before using AI"
+title: "Safe-to-upload rehearsal: find and remove pupil information before using AI (P4-P6)"
 metaTitle: "Safe-to-upload rehearsal: remove pupil data"
 address: "safe-to-upload-ai-rehearsal"
 lang: "en"
@@ -14,7 +14,7 @@ sources: ["G, pp.2-4 and 2-9"]
 prepTime: "45 min (can be split across two lessons)"
 equipment: "Projector or computer; also runs on printouts alone"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-07
 description: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps."
 metaDescription: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to AI."
@@ -72,11 +72,16 @@ Six fictional examples, a printable checklist and the full answer key are in the
 > All examples are fictional and do not involve any real pupils.
 
 ## Official documents
-This resource maps to **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-4 and 2-9): the document requires learning data to be handled properly, and for identifiable parts to be removed before pupil work is uploaded for AI marking.
+
+This resource maps to:
+
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-4 and 2-9): the document requires learning data to be handled properly, and for identifiable parts to be removed before pupil work is uploaded for AI marking.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

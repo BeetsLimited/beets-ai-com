@@ -1,5 +1,5 @@
 ---
-title: "Campus plants: observe first, then check what the AI says"
+title: "Campus plants: observe first, then check what the AI says (P4-P6)"
 metaTitle: "Campus plants: observe first, check the AI"
 address: "campus-plant-truth-check"
 lang: "en"
@@ -14,7 +14,7 @@ sources: ["E, p.7"]
 prepTime: "1 lesson (about 35–40 min)"
 equipment: "Printed observation record sheet; plant photo cards (swap in your own campus photos); optional tablet or phone for the checking stage"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "Students first observe a plant with their own eyes in the playground or from a window and record its features, then check what an AI says about a plant photo: which answer is right, which is wrong, and which photo is too unclear to decide."
 metaDescription: "Students observe a plant with their own eyes and record its features, then check what an AI says about a photo: which answer is right, which is wrong."
@@ -72,11 +72,15 @@ Core idea: **a plant's name is a claim that needs a source**, not something that
 
 ## Official documents
 
-This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.7): using campus plants as the context, it asks pupils to observe and record features for themselves before checking an AI's identification output, and to question the AI about its sources and judge whether an answer is trustworthy.
+This resource maps to:
+
+- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.7): using campus plants as the context, it asks pupils to observe and record features for themselves before checking an AI's identification output, and to question the AI about its sources and judge whether an answer is trustworthy.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is an independent teaching resource produced by Beets, and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

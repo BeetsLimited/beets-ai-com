@@ -145,7 +145,9 @@ feedback: true
 - **《中小學人工智能素養學習架構》**（pp.1-8）：提出學生應具備的 AI 素養——懂得適當地使用 AI 並明白其限制，而非把它當作只會給答案的黑盒。本工作包正是讓學生練習這一點：用自己的文字描述，再判斷 AI 的輸出。
 - **《中小學人工智能素養學習架構（應用場景示例）》**（p.4）：示範如何把這些素養帶進不同科目的課堂活動；本資源把「描述—重混—判斷」的循環應用到音樂科。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：人機溝通和協作
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

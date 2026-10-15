@@ -1,5 +1,5 @@
 ---
-title: "S1-S3 視覺藝術：校園花園設計衝刺（觀察、提案、改良）"
+title: "S1–S3 視覺藝術：校園花園設計衝刺（觀察、提案、改良）"
 title_en: "S1-S3 Visual Arts: school garden design sprint (observe, propose, improve)"
 address: "school-garden-design-sprint"
 lang: "zh-HK"
@@ -123,7 +123,9 @@ feedback: true
 - **《中小學人工智能素養學習架構》**（p.1-8）：提出學生應理解 AI 的能力與局限、負責任地使用 AI，並以批判態度核對其輸出，而非照單全收。
 - **《中小學人工智能素養學習架構（應用場景示例）》**（p.7）：示範把 AI 應用到校園環境等真實情境，讓學生以親身觀察為一手資料、AI 為輔助，再核對與修正 AI 的輸出。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

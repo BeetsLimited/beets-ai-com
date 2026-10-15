@@ -14,7 +14,7 @@ sources: ["G, p.2-3", "G, pp.2-5 and 2-7"]
 prepTime: "1 節（40 分鐘）；課前準備約 15 分鐘"
 equipment: "投影或電腦；工作紙與來源卡；毋須即場上網（可用預先印好的 AI 答案代替即場使用 AI 工具）"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "一份自學套件：一個 40 分鐘的 P4–P6 人文科示範課堂、課前準備清單、投影片逐頁大綱、學生工作紙與課後反思三問，讓從未用過 AI 的教師也能獨自上完第一堂 AI 課。"
 image: "/images/first-ai-lesson-kit-hero.webp"
@@ -80,10 +80,14 @@ feedback: true
 
 ## 官方文件參考
 
-- **《中小學應用人工智能教學指南》**（p.2-3） 鼓勵教師協作備課、觀課與持續反思——本套件把課後反思寫成三條問題，方便教師獨自完成。
-- **《中小學應用人工智能教學指南》**（pp.2-5 and 2-7） 提到以不同難度、視覺材料與支援照顧學習多樣性——本套件在投影片大綱與工作紙加入「更多支援／更多挑戰」兩套準備。
+本資源對應：
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+- **《中小學應用人工智能教學指南》**（p.2-3）：鼓勵教師協作備課、觀課與持續反思——本套件把課後反思寫成三條問題，方便教師獨自完成。
+- **《中小學應用人工智能教學指南》**（pp.2-5 及 2-7）：提到以不同難度、視覺材料與支援照顧學習多樣性——本套件在投影片大綱與工作紙加入「更多支援／更多挑戰」兩套準備。
+
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

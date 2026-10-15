@@ -1,5 +1,5 @@
 ---
-title: "Student AI-use process sheet: first attempt, prompt, check, revise"
+title: "Student AI-use process sheet: first attempt, prompt, check, revise (P4-P6)"
 metaTitle: "Student AI-use process sheet: attempt to revise"
 address: "student-ai-use-process-sheet"
 lang: "en"
@@ -14,7 +14,7 @@ sources: ["F, p.1-13", "G, p.2-8"]
 prepTime: "10 min briefing + task time"
 equipment: "Printed worksheet (optional: student devices)"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-07
 downloads: ["/files/en/student-ai-use-process-sheet.docx"]
 feedback: true
@@ -64,14 +64,17 @@ Students will be able to:
 **[Student AI-use process sheet(editable Word document)](/files/en/student-ai-use-process-sheet.docx)**
 
 ## Official documents
+
 This resource maps to:
 
-- **AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): values process and authentic assessment rather than judging only the final result.
-- **Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-8): recommends checking students' learning and AI use through oral questioning and the submission of their thinking process.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): values process and authentic assessment rather than judging only the final result.
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (p.2-8): recommends checking students' learning and AI use through oral questioning and the submission of their thinking process.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

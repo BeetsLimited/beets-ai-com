@@ -1,12 +1,12 @@
 ---
-title: "P4 香港人口折線圖：檢查 AI 生成的解釋"
-title_en: "P4 Hong Kong population line graph: check an AI explanation"
+title: "P4–P6 香港人口折線圖：檢查 AI 生成的解釋"
+title_en: "P4-P6 Hong Kong population line graph: check an AI explanation"
 address: "p4-hk-population-ai-graph-check"
 lang: "zh-HK"
 type: "resource"
 kind: "worksheet"
 theme: "D"
-stage: "P4"
+stage: "P4-P6"
 subject: 數學
 audience: [teachers, students]
 sourceIdea: "#11"
@@ -14,7 +14,7 @@ sources: ["E, p.6"]
 prepTime: "1 節（約 35–40 分鐘）"
 equipment: "投影；學生工作紙列印（方格紙或試算表）"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-07
 description: "學生核對一段 AI 生成的香港人口解釋：找出沒有來源的數字、發現「每年都上升」的說法有誤，並用政府統計處的官方數據重畫正確的折線圖。"
 image: "/images/p4-hk-population-ai-graph-check-hero.webp"
@@ -70,9 +70,14 @@ AI 那段解釋有三處問題：
 **[P4 香港人口折線圖工作紙（Word 文件，可編輯）](/files/p4-hk-population-ai-graph-check.docx)**
 
 ## 官方文件參考
-本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.6）：以城市人口折線圖為例，要求學生向 AI 追問來源，並用可靠網站（如政府統計處）核對 AI 的輸出。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+本資源對應：
+
+- **《中小學人工智能素養學習架構（應用場景示例）》**（p.6）：以城市人口折線圖為例，要求學生向 AI 追問來源，並用可靠網站（如政府統計處）核對 AI 的輸出。
+
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

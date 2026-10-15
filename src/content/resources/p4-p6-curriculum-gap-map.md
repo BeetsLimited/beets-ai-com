@@ -14,7 +14,7 @@ sources: ["F, pp.1-6 to 1-10", "B, p.2"]
 prepTime: "一次課程會議（約 60 分鐘）＋ 會後個別補填"
 equipment: "可編輯試算表（覆蓋分析工作簿）、投影機或大螢幕；亦可純列印操作"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科目與學期記錄現有活動、標出缺口並寫下最小的下一步，附三個完成的虛構學校示例，供校長及科主任在課程會議中直接使用。"
 metaDescription: "一張可編輯的 P4–P6 AI 素養課程覆蓋工作簿：按科目與學期記錄現有活動、標出缺口並寫下最小的下一步，附三個虛構學校示例。"
@@ -90,10 +90,12 @@ reviewer: "Billy Kan"
 
 本資源對應：
 
-- **《中小學人工智能素養學習架構》**（pp.1-6 to 1-10）：訂出跨科實施與四個學習階段的進程，供學校把本科活動對照到階段目標。
+- **《中小學人工智能素養學習架構》**（pp.1-6 至 1-10）：訂出跨科實施與四個學習階段的進程，供學校把本科活動對照到階段目標。
 - **《中小學數字教育發展藍圖》**（三摺頁，p.2）：要求在學校發展計劃中加入數碼與 AI 教育策略，並附清晰的實施時間表。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：人工智能的基本運作原理／人機溝通和協作／應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

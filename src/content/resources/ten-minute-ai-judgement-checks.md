@@ -14,7 +14,7 @@ sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "每題約 10 分鐘；三題可在一節（約 40 分鐘）內完成"
 equipment: "只需列印工作紙；如想示範可用投影"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "三個各約十分鐘的形成性小任務：判斷 AI 答案是否可信、找出同學答案中自己能辯護的部分、列出交功課前要檢查的事項。附評分指引與後續活動。"
 image: "/images/ten-minute-ai-judgement-checks-hero.webp"
@@ -110,9 +110,11 @@ feedback: true
 本資源對應：
 
 - **《中小學人工智能素養學習架構》**（p.1-13）：提出評估應多元化，重視應用、倫理與思考歷程，而非只記誦最終答案。
-- **《中小學應用人工智能教學指南》**（pp.2-7 to 2-8）：提出透過口頭提問及提交思考歷程，檢視學生的學習與 AI 使用情況，而非只收成品。
+- **《中小學應用人工智能教學指南》**（pp.2-7 至 2-8）：提出透過口頭提問及提交思考歷程，檢視學生的學習與 AI 使用情況，而非只收成品。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

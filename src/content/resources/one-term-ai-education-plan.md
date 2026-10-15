@@ -1,6 +1,6 @@
 ---
-title: "一學期 AI 教育規劃：可編輯規劃範本及完成示例"
-title_en: "One-term AI education plan: editable planning template with a completed school example"
+title: "一學期 AI 教育規劃：可編輯規劃範本及完成示例（P1–S3）"
+title_en: "One-term AI education plan: editable planning template with a completed school example (P1-S3)"
 address: "one-term-ai-education-plan"
 lang: "zh-HK"
 type: "resource"
@@ -14,7 +14,7 @@ sources: ["B, p.2", "F, pp.1-6 to 1-10"]
 prepTime: "一次規劃會議（約 60 分鐘）＋ 會後個別填寫"
 equipment: "可編輯試算表（規劃範本）、投影機或大螢幕；亦可純列印操作"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "一張可編輯的一學期 AI 教育規劃範本：兩項試點活動、負責人、日期與檢討證據，附一個完成的虛構學校示例，供校長及課程統籌直接套用。"
 image: "/images/one-term-ai-education-plan-hero.webp"
@@ -25,6 +25,7 @@ factChecked: true
 factCheckedBy: "Billy Kan"
 factCheckedOn: 2026-10-08
 reviewer: "Billy Kan"
+metaTitle: "一學期 AI 教育規劃（P1–S3）"
 ---
 
 ## 這個資源解決什麼問題
@@ -93,10 +94,14 @@ reviewer: "Billy Kan"
 
 ## 官方文件參考
 
-- **《中小學數字教育發展藍圖》**（三摺頁，p.2）：要求在學校發展計劃中加入數碼與 AI 教育策略，並附清晰的實施時間表。
-- **《中小學人工智能素養學習架構》**（pp.1-6 to 1-10）：訂出跨科實施與四個學習階段的進程，供規劃活動時對應。
+本資源對應：
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+- **《中小學數字教育發展藍圖》**（三摺頁，p.2）：要求在學校發展計劃中加入數碼與 AI 教育策略，並附清晰的實施時間表。
+- **《中小學人工智能素養學習架構》**（pp.1-6 至 1-10）：訂出跨科實施與四個學習階段的進程，供規劃活動時對應。
+
+**學習範疇**：人工智能的基本運作原理／人機溝通和協作／應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

@@ -14,7 +14,7 @@ sources: ["F, pp.1-6 to 1-10", "B, p.2"]
 prepTime: "One curriculum meeting (about 60 min) + follow-up fill-in time"
 equipment: "Editable spreadsheet (the coverage workbook), a projector or large screen; also runs on printouts"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "An editable P4-P6 AI literacy coverage workbook: record existing activities by subject and term, mark the gaps and write the smallest next step for each, with three completed fictional school examples for a principal or panel head to use in a curriculum meeting."
 metaDescription: "An editable P4-P6 AI literacy coverage workbook: record activities by subject and term, mark the gaps and write the smallest next step for each."
@@ -90,12 +90,14 @@ Includes: a blank coverage table, a blank gap-and-next-step table, three complet
 
 This resource maps to:
 
-- **AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, to be used when checking a school's own activities against the stage goals.
+- **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (pp.1-6 to 1-10): sets out cross-subject implementation and progression across four learning stages, to be used when checking a school's own activities against the stage goals.
 - **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.2): requires digital and AI education strategies in school development plans with a clear implementation timetable.
+
+**Learning strand**: fundamental operating principles of AI / human-AI communication and collaboration / reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

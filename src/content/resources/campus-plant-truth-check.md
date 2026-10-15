@@ -1,6 +1,6 @@
 ---
-title: "校園植物：先觀察，再核對 AI 的說法"
-title_en: "Campus plants: observe first, then check what the AI says"
+title: "校園植物：先觀察，再核對 AI 的說法（P4–P6）"
+title_en: "Campus plants: observe first, then check what the AI says (P4-P6)"
 address: "campus-plant-truth-check"
 lang: "zh-HK"
 type: "resource"
@@ -14,7 +14,7 @@ sources: ["E, p.7"]
 prepTime: "1 節（約 35–40 分鐘）"
 equipment: "觀察紀錄表列印；植物圖卡（可改用校園照片）；可選：平板或手機（核對階段用）"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "學生先在操場或窗邊親眼觀察一株植物並填寫紀錄表，再核對 AI 的辨識說法：找出說得對、說得錯、以及照片太模糊無從判斷的情況。"
 image: "/images/campus-plant-truth-check-hero.webp"
@@ -71,9 +71,13 @@ feedback: true
 
 ## 官方文件參考
 
-本資源對應 **《中小學人工智能素養學習架構（應用場景示例）》**（p.7）：以校園植物為情境，要求學生先親自觀察、記錄特徵，再核對 AI 的辨識輸出，並懂得向 AI 追問來源、判斷回答是否可信。
+本資源對應：
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+- **《中小學人工智能素養學習架構（應用場景示例）》**（p.7）：以校園植物為情境，要求學生先親自觀察、記錄特徵，再核對 AI 的辨識輸出，並懂得向 AI 追問來源、判斷回答是否可信。
+
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

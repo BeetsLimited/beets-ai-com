@@ -7,14 +7,14 @@ type: "resource"
 kind: "lesson"
 theme: "B"
 stage: "S1-S3"
-subject: "Humanities"
+subject: "Citizenship, Economics and Society"
 audience: [teachers]
 sourceIdea: "#16"
 sources: ["E, p.14"]
 prepTime: "1 lesson (about 40 min)"
 equipment: "Projector (to play or show the scenario); one printed set of decision cards per group; whiteboard or interactive board"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "A classroom game in which pupils receive a fictional 'school' message, sort the pause–check–report decision cards, and learn from the teacher's debrief why a fake can sound convincing."
 metaDescription: "A classroom game in which pupils receive a fictional 'school' message, sort the pause-check-report cards, and learn why a fake can sound convincing."
@@ -88,11 +88,15 @@ The scenario text, five decision cards, the sorting sheet and the full answer ke
 
 ## Official documents
 
-This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.14): the example covers deepfakes and verification, asking learners to recognise a convincing but false message and to verify information before acting on or sharing it.
+This resource maps to:
+
+- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.14): the example covers deepfakes and verification, asking learners to recognise a convincing but false message and to verify information before acting on or sharing it.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is an independent teaching resource produced by Beets, and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

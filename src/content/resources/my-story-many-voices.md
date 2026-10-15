@@ -123,7 +123,9 @@ feedback: true
 - **《中小學人工智能素養學習架構》**（p.1-8）：提出學生須具備人工智能素養，涵蓋認識、應用，以及合乎倫理與負責任的使用——本資源把「負責任使用」寫成學生可自行勾選的 AI 界線清單。
 - **《中小學人工智能素養學習架構（應用場景示例）》**（p.4）：以具體課堂情境示例說明人工智能素養如何落實——本資源把 AI 的角色收窄為寫作中的三件指定工作。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：人機溝通和協作
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

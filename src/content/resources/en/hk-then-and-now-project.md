@@ -1,5 +1,5 @@
 ---
-title: "Hong Kong then and now: a local history project with an alternative to a family interview"
+title: "Hong Kong then and now: a local history project with an alternative to a family interview (P4-P6)"
 metaTitle: "Hong Kong then and now: a local history project"
 address: "hk-then-and-now-project"
 lang: "en"
@@ -14,7 +14,7 @@ sources: ["E, p.8"]
 prepTime: "1 lesson (about 35-40 min); the project itself is completed outside class"
 equipment: "Projector or computer; printable worksheet; a street map or online map if available"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, a worked source check and a three-level rubric, so every pupil can complete it."
 metaDescription: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, and a rubric."
@@ -78,11 +78,15 @@ Conclusion: the AI's answer is partly right and partly wrong, so it cannot be tr
 
 ## Official documents
 
-This resource maps to **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.8): the document proposes a Hong Kong "past and present" project in which pupils use AI to help imagine the past, then check the AI's account against oral history and other sources. This resource turns that scenario into a worksheet every pupil can complete, with an added path that needs no family interview.
+This resource maps to:
+
+- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.8): the document proposes a Hong Kong "past and present" project in which pupils use AI to help imagine the past, then check the AI's account against oral history and other sources. This resource turns that scenario into a worksheet every pupil can complete, with an added path that needs no family interview.
+
+**Learning strand**: reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

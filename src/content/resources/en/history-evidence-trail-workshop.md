@@ -121,6 +121,8 @@ This resource maps to:
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-13): calls for assessment that values application, ethics and thinking processes, rather than memorising the final answer alone.
 - **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-7 to 2-8): recommends checking pupils' learning and AI use through oral questioning and the submission of thinking processes, rather than collecting finished work alone.
 
+**Learning strand**: reflection on the application of AI
+
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > This page is an independent Beets teaching resource, not an official EDB document.

@@ -15,7 +15,7 @@ sources: ["G, pp.2-5 and 2-7"]
 prepTime: "1 節（約 35–40 分鐘）；另需時間預先列印三種版本"
 equipment: "列印三種版本的工作紙；圖像版另需剪刀與膠水；投影（可選）"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "一份同一主題的 P4–P6 人文科工作紙，示範標準、扶助、圖像三個版本的差異，並附各版本的改動說明與比較表。"
 image: "/images/humanities-worksheet-three-versions-hero.webp"
@@ -66,9 +66,13 @@ feedback: true
 
 ## 官方文件參考
 
-本資源對應 **《中小學應用人工智能教學指南》**（pp.2-5 and 2-7）：該部分討論如何為不同學習需要的學生提供差異化的資源與支援，讓所有學生都能投入同一學習任務。
+本資源對應：
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+- **《中小學應用人工智能教學指南》**（pp.2-5 及 2-7）：該部分討論如何為不同學習需要的學生提供差異化的資源與支援，讓所有學生都能投入同一學習任務。
+
+**學習範疇**：人機溝通和協作
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 

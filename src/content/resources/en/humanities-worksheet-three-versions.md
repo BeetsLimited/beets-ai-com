@@ -14,7 +14,7 @@ sources: ["G, pp.2-5 and 2-7"]
 prepTime: "1 lesson (about 35-40 min); plus time to copy the three versions in advance"
 equipment: "Printouts of the three worksheet versions; scissors and glue for the visual version; projector (optional)"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "A single P4-P6 Humanities worksheet in three versions — standard, scaffolded and visual — with notes explaining the changes and a comparison table."
 image: "/images/humanities-worksheet-three-versions-hero.webp"
@@ -65,11 +65,15 @@ The three worksheet versions, the teacher notes for each version and the compari
 
 ## Official documents
 
-This resource maps to **Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7): this part of the guide discusses providing differentiated resources and support for diverse learners.
+This resource maps to:
+
+- **Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools** (pp.2-5 and 2-7): this part of the guide discusses providing differentiated resources and support for diverse learners.
+
+**Learning strand**: human-AI communication and collaboration
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
-> This page is a teaching resource independently produced by Beets and is not an official EDB document.
+> This page is an independent Beets teaching resource, not an official EDB document.
 
 ## Feedback
 

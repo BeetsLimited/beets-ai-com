@@ -1,6 +1,6 @@
 ---
-title: "功課重設計套件：兩份前後對照的課業範例"
-title_en: "Homework redesign kit: two before-and-after assignments that show student thinking"
+title: "功課重設計套件：兩份前後對照的課業範例（P4–P6）"
+title_en: "Homework redesign kit: two before-and-after assignments that show student thinking (P4-P6)"
 address: "homework-redesign-kit"
 lang: "zh-HK"
 type: "resource"
@@ -14,7 +14,7 @@ sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "約 40 分鐘（自學流程，可作科組備課）"
 equipment: "投影或列印的範例；教師自備一份想改寫的現有功課"
 author: "BeetsBot"
-version: "0.1"
+version: "1.0"
 date: 2026-10-08
 description: "兩份完整的前後對照課業範例（中文閱讀回應與常識資料整理）加一份功課重設計檢查清單，示範在保留學習目標與作答時間之餘，讓學生的思考歷程看得見。"
 image: "/images/homework-redesign-kit-hero.webp"
@@ -119,12 +119,15 @@ AI 普及之後，一份只要求「找出答案」的功課，學生可以照�
 > 附件包含兩份完整前後對照範例、檢查清單，以及供教師寫改寫版本的空白欄位。範例均為虛構，不涉及任何真實學生或學校。
 
 ## 官方文件參考
+
 本資源對應：
 
 - **《中小學人工智能素養學習架構》**（p.1-13）：重視真實、多元的評估與學習過程，而非只評成品。
-- **《中小學應用人工智能教學指南》**（pp.2-7 to 2-8）：不鼓勵直接提交 AI 生成的功課，建議以過程證據、口頭提問及調整評估方式來檢視學習。
+- **《中小學應用人工智能教學指南》**（pp.2-7 至 2-8）：不鼓勵直接提交 AI 生成的功課，建議以過程證據、口頭提問及調整評估方式來檢視學習。
 
-官方文件頁面：<https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
+**學習範疇**：應用人工智能的反思
+
+官方文件頁面：<https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
 > 本頁為 Beets 獨立製作的教學資源，並非 EDB 官方文件。
 
