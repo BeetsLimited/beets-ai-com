@@ -156,6 +156,7 @@ const EN_PARENTS: AudiencePageCopy = {
     "The starting point is simple. When a child uses AI for homework, what a parent usually wants to know is not what AI is, but how much of it should be allowed, and whether the work handed in is still the child's own. The guide turns those two questions into a few things you can do together: agree what is allowed first, then agree how you will check.",
     "The family homework agreement is one page for exactly that. Parent and child fill it in together and write down which homework AI may be used for, what it may be used to do, what has to be checked before the work is handed in, and who to ask when nobody is sure. It does not decide the boundary for you — it writes the boundary down, so the family does not have to argue it out again every evening.",
     "Everything is free to download and needs no registration. The guide is designed to be used at home, with no teacher present. If you are a teacher, the same material also sits in the teacher resources, and the parent notice in it can be adapted for your school and sent out.",
+    "The material follows Hong Kong's official documents — above all the Education Bureau's AI Literacy Learning Framework for Primary and Secondary Schools and its Blueprint for Digital Education Development in Primary and Secondary Schools. At home the practical points are the framework's strands around reflection on the use of AI and human-machine communication and collaboration, and the values the documents set out — nurturing the whole person, literacy first, application-oriented use and technology for good — checked against your own judgement about what your child should do with a tool.",
   ],
   faqs: [
     {
@@ -190,7 +191,7 @@ const ZH_STUDENTS: AudiencePageCopy = {
   intro: [
     "這一頁收集你可以自己直接使用的資源：核對 AI 給你的答案、記錄你怎樣用 AI、做專題時一步一步跟着做的紀錄表和工作紙。這些不是給老師或家長看的說明，而是你真的會寫在上面的東西。",
     "AI 可以很快給你一個答案，但快不等於準確：它有時沒有交代來源，有時把不確定的事用一個聽起來很肯定的說法講出來。這裡的幾份資源練的都是同一件事——先問來源，再對照官方資料，最後自己寫下確認過的結論。",
-    "不知道從哪一份開始？做數學或常識專題之前，先用「學生 AI 使用歷程表」記下第一次嘗試、你用過的提示、核對結果與最後的修訂；要找出 AI 的錯處，用「十分鐘 AI 判斷小測」；做香港本地專題（例如香港人口、香港今昔）時，頁面裡有可以直接跟着做的步驟與評分表。",
+    "不知道從哪一份開始？做數學或科學專題之前，先用「學生 AI 使用歷程表」記下第一次嘗試、你用過的提示、核對結果與最後的修訂；要找出 AI 的錯處，用「十分鐘 AI 判斷小測」；做香港本地專題（例如香港人口、香港今昔）時，頁面裡有可以直接跟着做的步驟與評分表。",
     "全部免費下載、不需註冊，也沒有隱藏收費。附件可以列印，也可以在電腦上填寫；工作紙和紀錄表都寫成可以直接交回學校的形式。如果你覺得某一份不夠清楚，歡迎用頁面底部的意見區告訴我們，我們會優先處理。",
   ],
   faqs: [
@@ -226,8 +227,9 @@ const EN_STUDENTS: AudiencePageCopy = {
   intro: [
     "This page collects the resources you can use yourself: for checking what an AI tells you, for recording how you used it, and for working through a project step by step with a record sheet and a worksheet. These are not explanations for a teacher or a parent — they are the pages you actually write on.",
     "An AI can give you an answer very quickly, but quick does not mean accurate. Sometimes it does not say where a number came from, and sometimes it states something uncertain in a way that sounds certain. The resources here practise one thing: ask for the source first, then compare it with official data, then write down the conclusion you checked yourself.",
-    "Not sure where to begin? Before a maths or general studies project, start with the student AI use process sheet, which records your first attempt, the prompts you used, what you checked and what you changed; to hunt for an AI's mistakes, use the ten-minute AI judgement checks; and for a Hong Kong project such as population or then-and-now local history, the steps and marking schemes are ready to follow.",
+    "Not sure where to begin? Before a maths or science project, start with the student AI use process sheet, which records your first attempt, the prompts you used, what you checked and what you changed; to hunt for an AI's mistakes, use the ten-minute AI judgement checks; and for a Hong Kong project such as population or then-and-now local history, the steps and marking schemes are ready to follow.",
     "Everything is free and needs no registration. Attachments can be printed or filled in on a computer, and the worksheets and record sheets are written so they can be handed in as they are. If one of them is not clear, tell us through the feedback form at the bottom of the page.",
+    "The tasks come from the Education Bureau's AI Literacy Learning Framework for Primary and Secondary Schools, within its Blueprint for Digital Education Development in Primary and Secondary Schools. They practise the framework's learning strands — the basic operating principles of AI, human-machine communication and collaboration, and reflection on the use of AI — and ask you to check data and evidence yourself, at your own learning stage, so that using AI stays a responsible, human-led habit rather than an answer machine.",
   ],
   faqs: [
     {

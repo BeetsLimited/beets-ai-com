@@ -30,7 +30,7 @@ reviewer: "Billy Kan"
 
 ## What this solves
 
-Many schools already teach AI-literacy-related content in different subjects — General Studies teaches "checking a source", ICT teaches "not giving away personal data", Chinese Language teaches "telling true from false information" — but these scattered activities sit in different subjects, and no one knows which goals are already covered, which are repeated, and which are not taught at all.
+Many schools already teach AI-literacy-related content in different subjects — Science teaches "checking a source", ICT teaches "not giving away personal data", Chinese Language teaches "telling true from false information" — but these scattered activities sit in different subjects, and no one knows which goals are already covered, which are repeated, and which are not taught at all.
 
 This workbook turns that step into a single curriculum meeting of about 60 minutes: first record each subject's existing AI-literacy activities in a "subject × term" table, then check them against the P4-P6 stage goals, mark the gaps, and write the smallest next step for each gap. Once the table is filled in, a panel head can see where P4-P6 AI literacy already fits across the subjects, and where it is still empty.
 

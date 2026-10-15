@@ -66,14 +66,14 @@ There is no single right answer, but an executable plan can be checked against t
 | Pilot activity | Owner | Dates | Evidence of review |
 |---|---|---|---|
 | Staff consensus workshop: understand the AI literacy framework and the school's direction | Curriculum coordinator | Week 2 (90 min) | Attendance record, post-session questionnaire, a first draft of the school's AI-use agreement |
-| Cross-subject pilot lesson: one period on "checking an AI answer" (for example in a primary General Studies or junior-secondary Humanities class) | Panel head + the class teacher | Weeks 5-7 (one period per class) | Three anonymised pupil worksheets + a panel review note |
+| Cross-subject pilot lesson: one period on "checking an AI answer" (for example in a primary Science or junior-secondary Humanities class) | Panel head + the class teacher | Weeks 5-7 (one period per class) | Three anonymised pupil worksheets + a panel review note |
 
 **Completed example (a fictional primary school, one term of about 12 weeks)**:
 
 | Pilot activity | Owner | Dates | Evidence of review |
 |---|---|---|---|
 | Whole-school staff workshop on the AI literacy framework | Ms Chan, curriculum coordinator | Week 2 | Attendance record, questionnaire, draft AI-use agreement |
-| P5 General Studies lesson: check an AI answer against a source | Mr Lee, General Studies panel head, with the P5 teachers | Weeks 5-7 | Three anonymised worksheets + a panel review note |
+| P5 Science lesson: check an AI answer against a source | Mr Lee, Science panel head, with the P5 teachers | Weeks 5-7 | Three anonymised worksheets + a panel review note |
 | Mid-term and end-of-term review | Ms Chan | Weeks 6 and 12 | Evidence folder + a decision on next term's scope |
 
 > All examples are fictional and do not refer to any real school or person.

@@ -62,7 +62,7 @@ It covers the reflection on the application of AI strand of AI literacy, with cr
 - **Complete box 1 first.** If a student opens the AI before writing, the sheet loses its point; it is worth completing box 1 together in class first.
 - **Box 4 does not need to be long.** One sentence — "I checked textbook p.42, and the AI got the year wrong" — is already enough.
 - **Do not ask for the full conversation log.** The whole point of the process sheet is to replace that practice, and to reduce the collection of student data.
-- **Works for any subject.** The sheet is not tied to a particular subject — mathematics, general studies, and languages all work.
+- **Works for any subject.** The sheet is not tied to a particular subject — mathematics, science, and languages all work.
 
 ## Files
 **[Student AI-use process sheet(editable Word document)](/files/en/student-ai-use-process-sheet.docx)**

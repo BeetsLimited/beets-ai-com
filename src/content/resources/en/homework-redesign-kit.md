@@ -16,7 +16,7 @@ equipment: "Projector or printed examples; a copy of an existing assignment you 
 author: "BeetsBot"
 version: "1.0"
 date: 2026-10-08
-description: "Two complete before-and-after assignments (a Chinese Language reading response and a General Studies data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required."
+description: "Two complete before-and-after assignments (a Chinese Language reading response and a Humanities data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required."
 metaDescription: "Two complete before-and-after assignments, plus a homework-redesign checklist, showing how to make student thinking visible without adding time."
 image: "/images/homework-redesign-kit-hero.webp"
 imageAlt: "A teacher seated at a desk holding a clipboard, with a stack of papers and a deep red cup holding pencils on the desk."
@@ -29,7 +29,7 @@ Now that AI is common, an assignment that only asks students to "find the answer
 
 This kit does not ask you to ban AI. It shows a more practical move: **rewrite the assignment** so that, while keeping the same learning objective and the same time required, you add four elements — quote evidence, use your own words, give a personal reason, and explain briefly in class. Copying or AI-generated work stops being useful, and the student's thinking becomes visible.
 
-The kit contains two complete before-and-after assignment examples (a Chinese Language reading response and a General Studies data task), plus a homework-redesign checklist you can apply to any existing assignment.
+The kit contains two complete before-and-after assignment examples (a Chinese Language reading response and a Humanities data task), plus a homework-redesign checklist you can apply to any existing assignment.
 
 The kit fits the digital education part of a School Development Plan, as material for teacher professional development and lesson design, and answers a school's accountability for AI use.
 
@@ -48,7 +48,7 @@ A self-guided flow of about 40 minutes (individual, or as a subject-panel planni
 
 1. **Name the problem (5 min)** — Read the "before" version of Example 1 and ask: could a student copy this or hand it to an AI? Which question is easiest to have done for them?
 2. **Compare the rewrite (10 min)** — Read the "after" version and the "what changed" notes, and circle each change that makes thinking visible.
-3. **Second example (10 min)** — Read Example 2 (the General Studies data task) the same way.
+3. **Second example (10 min)** — Read Example 2 (the Humanities data task) the same way.
 4. **Apply it to your own assignment (15 min)** — Take one of your existing assignments, work through the homework-redesign checklist, and write a new version.
 
 The two before-and-after pairs below are the "answer key" of this kit — they show what a good rewrite looks like, and what a good student answer to the rewritten task contains.
@@ -80,7 +80,7 @@ The two before-and-after pairs below are the "answer key" of this kit — they s
 
 **What a good answer contains (what to look for when marking)**: (1) the quoted sentence is genuinely relevant to the main idea; (2) the "own words" explanation differs from the original but is correct in meaning; (3) the personal reason is specific and tied to the text; (4) the oral explanation survives a follow-up question without stalling.
 
-### Example 2 — General Studies data task (P6)
+### Example 2 — Humanities data task (P6)
 
 **Before (the version teachers commonly set)**
 

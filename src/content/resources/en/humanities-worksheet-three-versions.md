@@ -29,7 +29,7 @@ Same topic, same learning objective — but the pupils in a class have different
 
 This resource turns the "same" worksheet into three ready versions — **standard, scaffolded and visual** — with teacher notes explaining **what changed in each version and why**, plus a comparison table. Teachers can print them as they are, or use them as a template for their own class versions.
 
-The topic is change in a fictional neighbourhood, suitable for P4-P6 Humanities (the "society" strand of General Studies).
+The topic is change in a fictional neighbourhood, suitable for P4-P6 Humanities.
 
 The resource can sit in a school's digital education planning as a worked example of differentiated lesson design in humanities, supporting learning diversity.
 

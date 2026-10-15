@@ -131,7 +131,7 @@ export const THEME_PAGES: Record<Locale, Partial<Record<Theme, ThemePageCopy>>> 
         "學生交回來的功課愈來愈完整，但教師最想知道的其實是另一件事：這份答案背後，學生自己想過什麼？如果只批改最後的成品，教師看到的是工具的輸出，而不是學生的思考，也很難判斷學生是否真的學到了。",
         "這個主題的資源把「思考」變成看得見的證據：學生第一次嘗試寫了什麼、用了什麼提示、如何核對、最後怎樣修訂。做法不是禁止使用 AI，而是要求學生把過程記錄下來，教師則按過程而不只是成品去給回饋。",
         "三份材料分別對應三個日常場景：重新設計課業並附上兩份前後對照的範例（功課重設計套件）、讓學生填寫 AI 使用歷程表，以及三個可在十分鐘內完成的判斷小測，用來檢查學生會不會核對 AI 的說法。",
-        "全部免費下載、不需註冊，可直接以 Word 或 Excel 開啟修改，適合高小的常識、數學及人文科，也適合初中科目。你可以在下方按學習階段和科目篩選，找出配合你現有單元的材料。",
+        "全部免費下載、不需註冊，可直接以 Word 或 Excel 開啟修改，適合高小的數學、人文及科學科，也適合初中科目。你可以在下方按學習階段和科目篩選，找出配合你現有單元的材料。",
       ],
       faqs: [
         {
@@ -182,7 +182,7 @@ export const THEME_PAGES: Record<Locale, Partial<Record<Theme, ThemePageCopy>>> 
         {
           question: "這些活動需要額外的課時嗎？",
           answer:
-            "三份材料都按現有課題設計，可以置入常識、科學、人文或數學科的既有單元。若你只有一節課，建議先做「校園植物」或「香港人口折線圖」，兩者都可以在一節課內完成，並留下一份學生的核對記錄。",
+            "三份材料都按現有課題設計，可以置入科學、人文或數學科的既有單元。若你只有一節課，建議先做「校園植物」或「香港人口折線圖」，兩者都可以在一節課內完成，並留下一份學生的核對記錄。",
         },
         {
           question: "學生需要自己開設 AI 帳戶嗎？",
@@ -239,6 +239,7 @@ export const THEME_PAGES: Record<Locale, Partial<Record<Theme, ThemePageCopy>>> 
         `Hong Kong's official documents already set the direction. The ${SOURCE_BLUEPRINT_EN} describes how digital education develops across a school, and the ${SOURCE_FRAMEWORK_EN} describes the learning students are expected to reach. The step that takes the time is translating those into a term plan that fits your own school, which is where many schools stop: the framework has been read, but nothing has changed yet.`,
         "The resources in this theme exist for that step — an editable one-term plan template with a completed school example, and a curriculum coverage analysis that shows where AI literacy already sits in your subjects and where the gaps are. They are written for principals, curriculum coordinators and panel heads: the people who have to tell colleagues what happens next term.",
         "Everything is free to download with no registration, and opens in Word or Excel so you can adapt it to your school. If you are not sure where to start, begin with the one-term plan template and then use the curriculum coverage analysis to see where you stand; you can also filter by theme, learning stage and subject below.",
+        "Planning here follows the Education Bureau's AI Literacy Learning Framework for Primary and Secondary Schools and sits inside its Blueprint for Digital Education Development in Primary and Secondary Schools. The framework sets out the learning strands — the basic operating principles of AI, human-machine communication and collaboration, and reflection on the use of AI — and stage goals from junior primary and upper primary through junior secondary and senior secondary. A plan built on them supports teaching and learning, assessment and learning diversity, and keeps the guiding principles of nurturing the whole person, literacy first, application-oriented use and technology for good in view.",
       ],
       faqs: [
         {
@@ -309,6 +310,7 @@ export const THEME_PAGES: Record<Locale, Partial<Record<Theme, ThemePageCopy>>> 
         "The resources in this theme turn thinking into evidence: what the student tried first, which prompts they used, how they checked the answer, and what they changed afterwards. The approach is not to ban AI; it is to require the process to be recorded, so that feedback and marking can rest on the process rather than only the product.",
         "Three resources cover three everyday situations: redesigning a piece of homework, with two before-and-after examples of the same task; a log sheet students fill in as they work; and three ten-minute judgement tasks that show whether students check what AI tells them.",
         "Everything is free to download with no registration and opens in Word or Excel, so you can put your own wording on it. Filter by learning stage and subject below to find the materials that fit a unit you are already teaching.",
+        "The resources sit inside the same frame as the rest of the library: the Education Bureau's AI Literacy Learning Framework for Primary and Secondary Schools, under the Blueprint for Digital Education Development in Primary and Secondary Schools. Assessment here works with the framework's learning strands — the basic operating principles of AI, human-machine communication and collaboration, and reflection on the use of AI — and treats the process, not only the finished product, as the evidence, with differentiation for learning diversity and the teacher's professional judgement as the safeguard.",
       ],
       faqs: [
         {
@@ -344,6 +346,7 @@ export const THEME_PAGES: Record<Locale, Partial<Record<Theme, ThemePageCopy>>> 
         "Three resources cover science, Humanities and maths: observing plants on the school campus and then checking what AI says about them; a local history project on how Hong Kong changed, with an alternative that does not require interviewing family members; and a line-graph activity on Hong Kong population data asking students to test whether the AI's explanation holds up.",
         "All three fit topics already in the curriculum and need no extra equipment. The material is local, so students have first-hand experience to compare against — the plants in their own playground, how their district has changed, the population figures — which makes it far easier for them to see where an AI answer goes wrong.",
         `The ${SOURCE_SCENARIOS_EN} is one of the sources these activities draw on. Everything is free to download with no registration and opens in Word or Excel; filter by learning stage and subject below, or take the checking checklist from the Responsible and safe AI use theme first.`,
+        "Every task keeps the strand of reflection on the use of AI in view, across the learning stages from upper primary to junior secondary, and treats the teacher's professional judgement and responsible, technology for good use as part of the learning rather than an afterthought. The library as a whole is written around the Education Bureau's AI Literacy Learning Framework for Primary and Secondary Schools and its Blueprint for Digital Education Development in Primary and Secondary Schools.",
       ],
       faqs: [
         {
@@ -359,7 +362,7 @@ export const THEME_PAGES: Record<Locale, Partial<Record<Theme, ThemePageCopy>>> 
         {
           question: "Do these activities need extra lesson time?",
           answer:
-            "All three are designed around topics that already exist, so they slot into an existing General Studies, Science, Humanities or Maths unit. If you have only one lesson, start with the campus plants activity or the population line graph; both fit in a single period and leave a written record of what the class checked.",
+            "All three are designed around topics that already exist, so they slot into an existing Science, Humanities or Maths unit. If you have only one lesson, start with the campus plants activity or the population line graph; both fit in a single period and leave a written record of what the class checked.",
         },
         {
           question: "Do students need their own AI accounts?",
@@ -379,6 +382,7 @@ export const THEME_PAGES: Record<Locale, Partial<Record<Theme, ThemePageCopy>>> 
         "The first AI lesson is a self-study kit for teachers that walks through preparing and leading that first lesson. One Humanities worksheet, three versions (standard, supported, visual) shows how to hold one task open to different learners in the same room. And P1-P3 PE: two unplugged AI games needs no devices at all, which suits the earliest years or a classroom with very little equipment.",
         "All three assume only what most classrooms already have: a worksheet, a projector, or simply a whiteboard and floor space. That is the practical starting point for an inclusive lesson — get every student into the same activity first, then add the tool where it helps.",
         `The ${SOURCE_GUIDE_EN} and the ${SOURCE_SCENARIOS_EN} are the sources this theme draws on. Everything is free to download with no registration and can be edited into your own class's wording; filter by learning stage and subject below.`,
+        "These lessons follow the Education Bureau's AI Literacy Learning Framework for Primary and Secondary Schools and the Guide to Using AI in Teaching in Primary and Secondary Schools, within the Blueprint for Digital Education Development in Primary and Secondary Schools. They cover the learning strands for the earliest stages — the basic operating principles of AI and human-machine communication and collaboration — with differentiation for learning diversity and the teacher's professional judgement throughout, so that every learner can take part.",
       ],
       faqs: [
         {

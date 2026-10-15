@@ -171,7 +171,7 @@ Reuse terms: https://beets-ai.com/about/
 ### Homework redesign kit: two before-and-after assignments that show student thinking (P4-P6)
 - URL: https://beets-ai.com/en/resources/homework-redesign-kit/
 - Language: en
-- Description: Two complete before-and-after assignments (a Chinese Language reading response and a General Studies data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required.
+- Description: Two complete before-and-after assignments (a Chinese Language reading response and a Humanities data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required.
 - Stage: P4-P6
 - Subject: Cross-curricular
 - Theme: C (看見學生思考)
@@ -182,7 +182,7 @@ Reuse terms: https://beets-ai.com/about/
 ### 功課重設計套件：兩份前後對照的課業範例（P4–P6）
 - URL: https://beets-ai.com/resources/homework-redesign-kit/
 - Language: zh-HK
-- Description: 兩份完整的前後對照課業範例（中文閱讀回應與常識資料整理）加一份功課重設計檢查清單，示範在保留學習目標與作答時間之餘，讓學生的思考歷程看得見。
+- Description: 兩份完整的前後對照課業範例（中文閱讀回應與小學人文科資料整理）加一份功課重設計檢查清單，示範在保留學習目標與作答時間之餘，讓學生的思考歷程看得見。
 - Stage: P4-P6
 - Subject: 全科/跨科
 - Theme: C (看見學生思考)

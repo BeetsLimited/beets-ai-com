@@ -28,9 +28,9 @@ feedback: true
 
 Many primary teachers (especially non-ICT subject teachers who also support learning diversity) want to use AI with their class once, but do not know where to start: they worry the tool will fail, the class will get out of hand, or pupils with learning needs will fall behind. This kit needs **no trainer present** — a teacher can run the full 40-minute lesson just by following it.
 
-The kit uses a **Humanities (General Studies) "Hong Kong transport"** demonstration topic. It was chosen because the answers are concrete and checkable in everyday life, so pupils can judge an AI answer using common knowledge or a single source card — the safest kind of first AI lesson. The "ask, then check, then trust" method transfers to any subject.
+The kit uses a **Humanities "Hong Kong transport"** demonstration topic. It was chosen because the answers are concrete and checkable in everyday life, so pupils can judge an AI answer using common knowledge or a single source card — the safest kind of first AI lesson. The "ask, then check, then trust" method transfers to any subject.
 
-The kit can be a school's first step into AI under its digital education planning, delivered in a General Studies lesson with differentiation for learning diversity and professional judgement by the teacher.
+The kit can be a school's first step into AI under its digital education planning, delivered in a Humanities or Science lesson with differentiation for learning diversity and professional judgement by the teacher.
 
 ## Learning objectives
 

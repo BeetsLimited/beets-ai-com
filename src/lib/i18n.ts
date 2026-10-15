@@ -93,7 +93,7 @@ const ZH_HK = {
   homeLedeAfter:
     " 為香港教師、家長和學生設立的免費 AI 教育資源庫。我們相信學好 AI 不應該取決於學校有多少預算，或者家長懂不懂技術，所以我們把教師真正需要的教案、工作紙和校本規劃範例，做成下載即可使用的教材——全部免費，下載不需註冊。",
   homeIntro2:
-    "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件與版本，並說明它為你解決什麼問題。",
+    "無論你是明天要上第一堂 AI 課的教師、想知道子女該怎樣用 AI 做功課的家長，還是要找資料做專題的學生，都可以按科目、級別或你面對的難題，找到今天就能用的資源。每份資源都列明所依據的官方文件與版本，並說明它為你解決什麼問題。資源按香港教育局《中小學人工智能素養學習架構》及《中小學數字教育發展藍圖》等官方文件編寫，涵蓋人工智能的基本運作原理、人機溝通和協作、應用人工智能的反思三個學習範疇，配合初小、高小、初中、高中各學習階段，支援課堂的學與教、評估與學習多樣性，並以育人為本、素養為先、應用導向、智能向善為價值取向。",
   homeEyebrow: "教師、家長、學生都合用 · 下載不需註冊",
   topbarPrefix: "免費資源持續上線：",
   topbarSuffix: "份已可下載，全部免費、免註冊。",
@@ -197,7 +197,7 @@ const EN: Record<UIKey, string> = {
   homeLedeAfter:
     " builds for Hong Kong teachers, parents and students. We believe learning to use AI well should not depend on how much a school can budget for it, or on how much a parent knows about technology — so we turn the lesson plans, worksheets and planning examples teachers actually ask for into materials you can download and use straight away. Everything is free, and nothing needs registration.",
   homeIntro2:
-    "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on and its version, and says what problem it solves.",
+    "Whether you are a teacher running your first AI lesson tomorrow, a parent working out how your child should use AI for homework, or a student looking for material for a project, you can search by subject, learning stage or the difficulty you are facing — and find something you can use today. Every resource names the official document it draws on and its version, and says what problem it solves. The library is written around the Education Bureau's AI Literacy Learning Framework for Primary and Secondary Schools, within the Blueprint for Digital Education Development in Primary and Secondary Schools. It covers the framework's three learning strands — the basic operating principles of AI, human-machine communication and collaboration, and reflection on the use of AI — from junior primary through upper primary, junior secondary and senior secondary, and supports teaching and learning, assessment and learning diversity, with the guiding principles of nurturing the whole person, literacy first, application-oriented use and technology for good.",
   homeEyebrow: "For teachers, parents and students · no registration to download",
   topbarPrefix: "Free resources are going live:",
   topbarSuffix: "ready to download — free, no registration.",
