@@ -120,7 +120,7 @@ The full three-lesson worksheet (observation record, criteria worksheet, design 
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): pupils should understand AI's abilities and limits, use it responsibly, and check its output critically rather than accepting it as given.
-- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.7): shows AI applied to real settings such as the school environment, with pupils' own observation as first-hand information and the AI as a tool to be checked and corrected.
+- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.16): a Visual Arts scenario for junior and senior secondary in which pupils design a bench for the school garden, interview the people who will use it, and use AI to see how a design sits in the real setting; this resource applies the same loop to a garden design sprint.
 
 **Learning strand**: reflection on the application of AI
 

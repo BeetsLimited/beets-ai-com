@@ -122,7 +122,7 @@ The worksheet (with the interview question bank, the AI-use boundary checklist, 
 This resource maps to:
 
 - **Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools** (p.1-8): sets out pupils' AI literacy — knowing, applying, and using AI ethically and responsibly — which this resource turns into a checklist pupils can tick themselves.
-- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.4): shows, through classroom scenarios, how AI literacy is put into practice — which this resource narrows to three named writing jobs.
+- **AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios)** (p.5): an upper-primary Chinese Language scenario in which pupils review and revise AI-generated content and then practise with it; this resource narrows the AI's role to three named writing jobs.
 
 **Learning strand**: human-AI communication and collaboration
 
