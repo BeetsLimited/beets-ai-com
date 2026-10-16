@@ -25,7 +25,7 @@ feedback: true
 
 | Key learning area | Learning elements | Points to note when using AI |
 |---|---|---|
-| Personal, Social and Humanities Education | project learning, context, fact-checking | Cater for learner diversity: the three versions share one learning objective; if AI generates a supporting image or example, the teacher verifies the content (fact-check). |
+| Personal, Social and Humanities Education | project learning, context, fact-checking | Cater for learner diversity: the three versions share one learning objective; if AI generates a supporting image or example, the teacher must verify the content (fact-check). |
 
 ## What this solves
 
@@ -46,7 +46,7 @@ All three versions aim at the same learning objective; only the level of support
 3. State one change in the community and give a possible reason for it.
 4. Name one community feature worth keeping and give a simple reason.
 
-All three versions are framed by AI literacy and pitched at the upper-primary learning stage, building pupils' sense of responsibility and critical thinking.
+All three versions are framed by AI literacy and pitched at the upper-primary learning stage, building pupils' sense of responsibility, critical thinking and reflection on the application of AI.
 
 ## How to use it
 
