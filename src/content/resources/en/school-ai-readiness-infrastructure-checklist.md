@@ -120,9 +120,9 @@ Every resource in this library is written to the AI Literacy Learning Framework 
 
 This resource maps to:
 
-- **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.1): sets out the vision and overall objectives for digital education and its four development focuses; this checklist turns its groundwork (devices, network, accounts, filtering, storage) into items a school can check one by one.
+- **Blueprint for Digital Education Development in Primary and Secondary Schools** (three-fold leaflet, p.1): calls for enhancing infrastructure and resource provision, and asks for digital education infrastructure that is safe, efficient and equitably accessible to all. This checklist turns that requirement into five school-level areas (devices, network, accounts, filtering, storage); the five areas are the school's own framework, not a list given in the document.
 
-**Learning strand**: reflection on the application of AI
+**Learning strand**: fundamental operating principles of AI / human-AI communication and collaboration / reflection on the application of AI
 
 Official documents page: <https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/it-in-edu/debp.html>
 
