@@ -30,9 +30,11 @@ feedback: true
 
 Pupils walk the same streets every day and rarely wonder how the names got there. Ask an AI "where did this street name come from?" and it answers at once with a complete, fluent story, complete with a year and a person - and no source for any of it.
 
+An answer that fluent, that confident and that sourceless is what an AI hallucination looks like from the pupil's side.
+
 That makes it one of the best exercises in junior-secondary humanities. Pupils have to break a plausible-sounding answer into sentences they can check one at a time, then go and find a first-hand or official record and see which sentence holds. What they usually find is not that the AI was wholly wrong, but that **some sentences are supported, some are stated far too confidently, and some cannot be traced at all** - and telling those three apart is the whole point of the worksheet.
 
-The worksheet uses a local-community inquiry, the kind that sits inside a junior-secondary Citizenship, Economics and Society topic, so that pupils practise asking where a claim comes from on a subject small enough to check themselves.
+The worksheet uses a local-community inquiry, the kind that sits inside a junior-secondary Citizenship, Economics and Society topic; it fits the digital education part of a School Development Plan and the teaching and learning of junior-secondary Humanities, and it takes only one prompt and one answer before the checking starts, so that pupils practise asking where a claim comes from on a subject small enough to check themselves.
 
 ## Learning objectives
 
@@ -44,7 +46,7 @@ Pupils will be able to:
 4. Mark each sentence as supported by the record, contradicted by it, or impossible to check, and give a reason.
 5. Write a short account of what they found, naming the sentence most in need of caution.
 
-Written for the junior-secondary stage, it covers the reflection on the application of AI strand of AI literacy, with human judgement first and the tool second.
+Written for the junior-secondary stage, it covers the reflection on the application of AI strand of AI literacy and the values of critical discernment and technology for good, with human judgement first and the tool second: pupils fact-check a fluent claim instead of accepting it, so that they do not drift into over-reliance on the tool.
 
 ## How to use it
 

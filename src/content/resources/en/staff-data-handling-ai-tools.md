@@ -30,7 +30,7 @@ feedback: true
 
 Teachers now paste text into an AI tool all day: to draft a set of practice questions, to rewrite an explanation, to turn a record into a report. The accident is rarely the tool. It is the paragraph that went in. A pupil's name, a pupil's number, a mark, a parent's contact details, a recording, a photograph — once any of it has left the school's own systems, that is already a personal data breach, and uploading someone else's article, music or video is already a copyright problem.
 
-Nothing about this gives a warning. The tool is working, the teacher was not careless, and the school has simply never had one page that says what may be entered, what may not, and what has to happen first.
+Nothing about this gives a warning. The tool is working, the teacher was not careless, and the school has simply never had one page that says what may be entered, what may not, and what has to happen first. This is not a preference: it sits inside the digital education part of a School Development Plan and applies to the teaching and learning of every subject.
 
 This guide is that page: seven things that must never go in, the content that is safe to enter and how to anonymise it, four school procedures left blank for the school to fill in, and a one-page printable staff summary at the end that can be copied for the staff room, the photocopier or the computer room.
 
@@ -44,6 +44,8 @@ By the end of this guide, a school will be able to:
 2. Say what is safe to enter, and what has to be done to it first.
 3. Put an owner and a review cycle against each of the four school procedures (the approved-tool list, the approval route and its owner, incident handling and reporting, and the review cycle for tools' default privacy settings).
 4. Tell a colleague which part of a pupil's work has to come out before it is uploaded.
+
+The guide is built on the reflection on the application of AI strand of AI literacy and on the values of technology for good, critical discernment, human-AI collaboration and timely and appropriate use: handling data well is how a school shows that judgement, not convenience, decides what an AI tool is given.
 
 ## How to use it
 

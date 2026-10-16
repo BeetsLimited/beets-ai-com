@@ -32,7 +32,7 @@ What stops AI in a classroom is usually not the teaching material. It is the lay
 
 This checklist splits school AI infrastructure into five areas — **devices, network, accounts, filtering, storage** — and writes each one as an item a school can check face to face. It is not a tick-box exercise: each item asks for the current state and an owner, so every gap becomes something a named person is following up.
 
-It is the part of a School Development Plan that is easiest to skip: get the groundwork in place first, then design the teaching. Do it the other way round and the teacher blames themselves for a lesson that was never going to work.
+It is the part of a School Development Plan and its digital education planning that is easiest to skip: get the groundwork in place first, then design the teaching and learning. Filling it in also settles where pupils' prompts and learning data are kept, and who does the professional gatekeeping before a tool's answer reaches a pupil. Do it the other way round and the teacher blames themselves for a lesson that was never going to work.
 
 ## Purpose
 
@@ -42,6 +42,8 @@ By the end of this checklist a school will be able to:
 2. Give every gap an owner and a target date.
 3. Tell which gaps affect the whole school and which affect a single panel or class, and set the order of work accordingly.
 4. Check progress item by item against the same list at the next review.
+
+The checklist is built on the three learning strands of AI literacy (the fundamental operating principles of AI, human-AI communication and collaboration, and reflection on the application of AI), and on the values of technology for good, critical discernment, human-AI collaboration and timely and appropriate use: the devices and the network decide whether a pupil can do the task at all, while the account and storage items decide whether a school is set up for over-reliance or for pupils who can still do the work themselves.
 
 Fill it in against "a lesson really can do this", not against "this is technically possible".
 
