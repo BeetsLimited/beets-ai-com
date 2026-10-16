@@ -520,6 +520,28 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.0
 - Sources: 《中小學人工智能素養學習架構》, p.1-2; 《中小學應用人工智能教學指南》, pp.2-2 to 2-5
 
+### P1-S6 School planning: staff data-handling guide — what may and may not be put into an AI tool
+- URL: https://beets-ai.com/en/resources/staff-data-handling-ai-tools/
+- Language: en
+- Description: Turns what may and may not be put into an AI tool into a seven-item negative list a school can check line by line, with the compliance requirements, the content that is safe to enter and how to anonymise it, and four school procedures left for the school to fill in.
+- Stage: P1-S6
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-4, 2-7 and 2-9; AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), pp.11 and 17
+
+### P1–S6 校本規劃：教職員資料處理須知（可／不可輸入 AI 工具的內容）
+- URL: https://beets-ai.com/resources/staff-data-handling-ai-tools/
+- Language: zh-HK
+- Description: 把「可以輸入、不可以輸入」寫成校內可逐項對照的負面清單七項，附合規要求、可輸入的內容與匿名化做法，以及四項留給學校填寫的校內程序，末頁附一頁教師摘要。
+- Stage: P1-S6
+- Subject: 校本規劃
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學應用人工智能教學指南》, pp.2-4, 2-7 and 2-9; 《中小學人工智能素養學習架構（應用場景示例）》, pp.11 and 17
+
 ### S1-S3 Humanities: street names as evidence, checking an AI's account of their origin
 - URL: https://beets-ai.com/en/resources/street-names-as-evidence-ai-etymology-check/
 - Language: en
