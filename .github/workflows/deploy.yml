@@ -21,6 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history: every resource's version, datePublished and dateModified
+          # is derived from the commit log (scripts/gen-revisions.mjs). A shallow
+          # checkout reports one commit per file, i.e. every page silently reverts
+          # to "1.0, published today".
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:

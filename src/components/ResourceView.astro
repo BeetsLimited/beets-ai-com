@@ -1,6 +1,7 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
 import { audienceLabel, audiencePath, resourcesPath, t, themeLabel, type Locale } from "../lib/i18n";
+import { pageFacts } from "../lib/resource-facts";
 
 /**
  * One resource page, in one language.
@@ -35,16 +36,37 @@ const { Content } = await render(entry);
 const d = entry.data;
 /** A calendar date as a reader reads it: one format in both editions. */
 const isoDate = (value: Date | string) => new Date(value).toISOString().slice(0, 10);
-/** The classification lines, in the order the page reads them. */
+
+/**
+ * The five facts that answer "is this a teaching resource for me?" — 學習階段 ·
+ * 科目 · 學習範疇 · 對應官方文件 · 一節時間 (Henry, 2026-10-17: a teacher
+ * sampling five pages found four whose first 300 characters named no official
+ * document at all). They print above the lede, so they are the first thing on
+ * the page after the heading.
+ *
+ * The strand and the document titles are read out of the page's own 官方文件
+ * 參考 section rather than typed here — see `../lib/resource-facts.ts`.
+ */
+const facts = pageFacts(d, entry.body ?? "", lang);
+const factsRows = [
+  { label: t(lang, "labelStage"), value: facts.stage },
+  { label: t(lang, "labelSubject"), value: facts.subject },
+  { label: t(lang, "labelStrand"), value: facts.strand },
+  { label: t(lang, "labelDocs"), value: facts.documents.join(" · ") || undefined },
+  { label: t(lang, "labelSessionTime"), value: facts.time },
+].filter((row): row is { label: string; value: string } => Boolean(row.value));
+
+/**
+ * The browsing lines below the hero. Stage and subject moved UP into the facts
+ * block, and preparation time with them, so no page prints the same value twice
+ * on one screen.
+ */
 const classification = [
   // The theme's public name. The A–E key is internal lettering, not for a reader.
   { label: t(lang, "labelTheme"), value: themeLabel(lang, d.theme) },
-  { label: t(lang, "labelStage"), value: d.stage },
-  { label: t(lang, "labelSubject"), value: d.subject },
 ].filter((row) => Boolean(row.value));
 
 const practicals = [
-  d.prepTime ? { label: t(lang, "labelPrep"), value: d.prepTime } : null,
   d.equipment ? { label: t(lang, "labelEquipment"), value: d.equipment } : null,
   { label: t(lang, "labelVersion"), value: d.version },
   /**
@@ -59,6 +81,18 @@ const practicals = [
 
 <article>
   <h1>{d.title}</h1>
+
+  {/* 五行：學習階段 · 科目 · 學習範疇 · 對應官方文件 · 一節時間 */}
+  <ul class="facts">
+    {
+      factsRows.map((row) => (
+        <li>
+          <span class="facts-k">{row.label}</span>
+          <span class="facts-v">{row.value}</span>
+        </li>
+      ))
+    }
+  </ul>
 
   <p>{d.description}</p>
 
@@ -158,6 +192,37 @@ const practicals = [
     height: auto;
   }
 
+  /*
+    The five-line answer. Deliberately the first thing under the h1: a teacher
+    deciding whether this page is a lesson for their class reads it before the
+    lede (Henry, 2026-10-17).
+  */
+  .facts {
+    list-style: none;
+    margin: 1.1rem 0 1.4rem;
+    padding: 0.9rem 1.25rem;
+    display: grid;
+    gap: 0.35rem;
+    background: var(--surface, #f3f3f3);
+    border-left: 4px solid var(--corporate, #e10707);
+    border-radius: 0 var(--radius, 18px) var(--radius, 18px) 0;
+  }
+  .facts li {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 0.9rem;
+    align-items: baseline;
+    font-size: 0.95rem;
+  }
+  .facts-k {
+    color: var(--muted, #6f6f6f);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .facts-v {
+    color: var(--ink, #080808);
+  }
+
   .spec,
   .practical {
     list-style: none;
@@ -197,6 +262,7 @@ const practicals = [
   }
   /* A phone has no room for a 7rem label column and a value. */
   @media (max-width: 30rem) {
+    .facts li,
     .spec li,
     .practical li {
       grid-template-columns: 1fr;

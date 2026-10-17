@@ -22,7 +22,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 資訊科技
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.7
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; 《中小學應用人工智能教學指南》, p.2-9
 
 ### S1-S3 ICT: repair the biased AI (four debugging tasks)
@@ -33,7 +33,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: ICT
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.7
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-9
 
 ### 校園植物：先觀察，再核對 AI 的說法（P4–P6）
@@ -44,7 +44,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 科學
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 2.4
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.7
 
 ### Campus plants: observe first, then check what the AI says (P4-P6)
@@ -55,7 +55,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Science
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 2.4
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.7
 
 ### P1–S6 跨科 AI 素養覆蓋審核表：哪一科教哪個學習範疇，缺口在哪裡
@@ -66,7 +66,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 跨科
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.1
 - Sources: 《中小學人工智能素養學習架構》, p.1-4; 《中小學人工智能素養學習架構》, pp.1-6 to 1-10
 
 ### P1-S6 cross-subject AI-literacy coverage audit: which subject teaches which strand, and where the gaps are
@@ -77,7 +77,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-subject
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.1
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10
 
 ### P4–S6 全科：最少資料檢查表（輸入前先刪去）
@@ -88,7 +88,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 1.2
 - Sources: 《中小學應用人工智能教學指南》, pp.2-4 and 2-7; 《中小學人工智能素養學習架構（應用場景示例）》, p.17
 
 ### P4-S6 cross-subject: data-minimisation checklist — strip it before you type it
@@ -99,7 +99,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-curricular
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 1.2
 - Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-4 and 2-7; AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.17
 
 ### 深偽應對遊戲：暫停、核實、舉報（S1–S3）
@@ -110,7 +110,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 公民、經濟與社會科
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 2.5
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.14
 
 ### Deepfake response game: pause, check, report (S1-S3)
@@ -121,7 +121,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Citizenship, Economics and Society
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 2.5
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.14
 
 ### Family AI homework guide: three activities, one agreement, one parent notice (P1-P6)
@@ -132,7 +132,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Pastoral and parents
 - Theme: B (安全及負責任使用 AI)
 - Audience: parents (家長), teachers (教師)
-- Version: 1.0
+- Version: 2.3
 - Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.1; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8
 
 ### 家庭 AI 功課指引：三個活動、一份協議、一封家長通告（P1–P6）
@@ -143,7 +143,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 班主任及家長
 - Theme: B (安全及負責任使用 AI)
 - Audience: parents (家長), teachers (教師)
-- Version: 1.0
+- Version: 2.3
 - Sources: 《中小學數字教育發展藍圖》, p.1; 《中小學人工智能素養學習架構》, p.1-8
 
 ### Your first AI lesson: a self-guided kit for P4-P6 teachers who have never taught with AI
@@ -154,7 +154,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-curricular
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 2.6
 - Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-3; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-5 and 2-7
 
 ### 第一堂 AI 課：從未用過 AI 的 P4–P6 教師自學套件
@@ -165,7 +165,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 2.6
 - Sources: 《中小學應用人工智能教學指南》, p.2-3; 《中小學應用人工智能教學指南》, pp.2-5 and 2-7
 
 ### S1-S6 ICT: hidden-instruction safety drill — when a prompt carries more than you wrote
@@ -198,7 +198,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: History
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.8
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-7 to 2-8
 
 ### S4–S6 歷史：AI 答案證據鏈工作坊（三個課堂任務）
@@ -209,7 +209,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 歷史
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.8
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; 《中小學應用人工智能教學指南》, pp.2-7 to 2-8
 
 ### S1-S3 Where Hong Kong lives: comparing housing choices with a scoring model
@@ -242,7 +242,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Primary Humanities
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.3
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.8
 
 ### 香港今昔：本地歷史專題（不需訪談家人的替代方案）（P4–P6）
@@ -253,7 +253,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 人文科
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.3
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.8
 
 ### Homework redesign kit: two before-and-after assignments that show student thinking (P4-P6)
@@ -264,7 +264,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-curricular
 - Theme: C (看見學生思考)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 2.4
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-7 to 2-8
 
 ### 功課重設計套件：兩份前後對照的課業範例（P4–P6）
@@ -275,7 +275,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: C (看見學生思考)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 2.4
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; 《中小學應用人工智能教學指南》, pp.2-7 to 2-8
 
 ### One Humanities worksheet, three versions: standard, scaffolded and visual
@@ -286,7 +286,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Primary Humanities
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.7
 - Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-5 and 2-7
 
 ### 同一份人文科工作紙，三個版本：標準、扶助、圖像（P4–P6）
@@ -297,7 +297,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 人文科
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.7
 - Sources: 《中小學應用人工智能教學指南》, pp.2-5 and 2-7
 
 ### S4-S6 Mathematics: teacher-controlled AI hint cards (four levels, never the answer)
@@ -308,7 +308,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Mathematics
 - Theme: C (看見學生思考)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.6
 - Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-7 to 2-8; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13
 
 ### S4–S6 數學：教師控制的 AI 提示卡（不給答案的四級提示）
@@ -319,7 +319,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 數學
 - Theme: C (看見學生思考)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.6
 - Sources: 《中小學應用人工智能教學指南》, pp.2-7 to 2-8; 《中小學人工智能素養學習架構》, p.1-13
 
 ### S1-S3 Music: listening and remix pack (describe and rework a musical idea)
@@ -330,7 +330,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Music
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.9
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.4; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8
 
 ### S1–S3 音樂：聆聽與重混工作包（用 AI 描述及改造一個音樂意念）
@@ -341,7 +341,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 音樂
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.9
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.4; 《中小學人工智能素養學習架構》, p.1-8
 
 ### P4-P6 Chinese Language: my story, many voices (interview and record)
@@ -352,7 +352,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Chinese Language
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.8
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8; AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.4
 
 ### P4–P6 中文：我的故事，多元聲音（訪談與記錄）
@@ -363,7 +363,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 中文
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.8
 - Sources: 《中小學人工智能素養學習架構》, p.1-8; 《中小學人工智能素養學習架構（應用場景示例）》, p.4
 
 ### One-term AI education plan: editable planning template with a completed school example (P1-S3)
@@ -374,7 +374,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 3.0
 - Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10
 
 ### 一學期 AI 教育規劃：可編輯規劃範本及完成示例（P1–S3）
@@ -385,7 +385,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 3.0
 - Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, pp.1-6 to 1-10
 
 ### P4-P6 Hong Kong population line graph: check an AI explanation
@@ -396,7 +396,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Mathematics
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.8
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.6
 
 ### P4–P6 香港人口折線圖：檢查 AI 生成的解釋
@@ -407,7 +407,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 數學
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.8
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.6
 
 ### P4-P6 curriculum gap map: where AI literacy already fits your subjects
@@ -418,7 +418,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 3.0
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10; Blueprint for Digital Education Development in Primary and Secondary Schools, p.2
 
 ### P4–P6 課程覆蓋分析：AI 素養已經落在哪些科目
@@ -429,7 +429,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 3.0
 - Sources: 《中小學人工智能素養學習架構》, pp.1-6 to 1-10; 《中小學數字教育發展藍圖》, p.2
 
 ### P4-P6 Mathematics: what we throw away — building a broken line graph from official figures
@@ -462,7 +462,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-curricular
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 3.2
 - Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-4 and 2-9
 
 ### 上載前安全檢查：找出並移除學生個人資料（P4–P6）
@@ -473,7 +473,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師)
-- Version: 1.1
+- Version: 3.2
 - Sources: 《中小學應用人工智能教學指南》, pp.2-4 and 2-9
 
 ### P1-S6 School planning: AI-readiness infrastructure checklist (devices, network, accounts, filtering, storage)
@@ -484,7 +484,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.2
 - Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.1
 
 ### P1–S6 校本規劃：AI 基建就緒檢查表（裝置、網絡、帳號、過濾、儲存）
@@ -495,7 +495,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.2
 - Sources: 《中小學數字教育發展藍圖》, p.1
 
 ### P1-S6 School planning: AI-use policy template for staff and students
@@ -506,7 +506,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.5
 - Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-4 and 2-9
 
 ### P1–S6 校本規劃：AI 使用政策範本（教職員版＋學生版）
@@ -517,7 +517,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.5
 - Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, pp.1-6 to 1-10; 《中小學應用人工智能教學指南》, pp.2-4 and 2-9
 
 ### S1-S3 Visual Arts: school garden design sprint (observe, propose, improve)
@@ -528,7 +528,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Visual Arts
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.8
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.7; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8
 
 ### S1–S3 視覺藝術：校園花園設計衝刺（觀察、提案、改良）
@@ -539,7 +539,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 視覺藝術
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.8
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.7; 《中小學人工智能素養學習架構》, p.1-8
 
 ### P1-P3 PE: two screen-free AI games (no devices needed)
@@ -550,7 +550,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: PE
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 2.4
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.4; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8
 
 ### P1–P3 體育：兩個不插電 AI 遊戲（無需裝置）
@@ -561,7 +561,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 體育
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 2.4
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.4; 《中小學人工智能素養學習架構》, p.1-8
 
 ### Whole-staff AI-literacy baseline self-audit and one-term CPD plan (P1-S6)
@@ -572,7 +572,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.1
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-2; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5
 
 ### 全校教職員 AI 素養基線自評及一學期培訓計劃（P1–S6）
@@ -583,7 +583,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.1
 - Sources: 《中小學人工智能素養學習架構》, p.1-2; 《中小學應用人工智能教學指南》, pp.2-2 to 2-5
 
 ### P1-S6 School planning: staff data-handling guide — what may and may not be put into an AI tool
@@ -594,7 +594,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: School planning
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.2
 - Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-4, 2-7 and 2-9; AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), pp.11 and 17
 
 ### P1–S6 校本規劃：教職員資料處理須知（可／不可輸入 AI 工具的內容）
@@ -605,7 +605,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 校本規劃
 - Theme: A (校本 AI 教育規劃)
 - Audience: teachers (教師)
-- Version: 1.0
+- Version: 1.2
 - Sources: 《中小學應用人工智能教學指南》, pp.2-4, 2-7 and 2-9; 《中小學人工智能素養學習架構（應用場景示例）》, pp.11 and 17
 
 ### S1-S3 Humanities: street names as evidence, checking an AI's account of their origin
@@ -616,7 +616,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: History
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.3
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.14
 
 ### S1–S3 人文：街名作為證據，核實 AI 的來源說法
@@ -627,7 +627,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 歷史
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.3
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.14
 
 ### Student AI-use process sheet: first attempt, prompt, check, revise (P4-P6)
@@ -638,7 +638,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-curricular
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.7
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-8
 
 ### 學生 AI 使用歷程表：第一次嘗試、提示、核對、修訂（P4–P6）
@@ -649,7 +649,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.7
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; 《中小學應用人工智能教學指南》, p.2-8
 
 ### Ten-minute AI judgement checks: three quick formative tasks for P4-P6
@@ -660,7 +660,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-curricular
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.4
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-7 to 2-8
 
 ### 十分鐘 AI 判斷小測：三個 P4–P6 形成性評估任務
@@ -671,5 +671,5 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 2.4
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; 《中小學應用人工智能教學指南》, pp.2-7 to 2-8

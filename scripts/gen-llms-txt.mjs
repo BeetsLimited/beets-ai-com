@@ -15,7 +15,7 @@
  *
  *   node scripts/gen-llms-txt.mjs
  */
-import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -116,6 +116,22 @@ function readDir(dir, lang) {
 const all = readDir(CONTENT, "zh-HK");
 // readDir has already applied the review gate; there is nothing further to drop.
 const live = all;
+
+/**
+ * The version a model reads has to be the version the page shows. Both come
+ * from the publish log (`scripts/gen-revisions.mjs`, which `prebuild` runs
+ * first), so llms-full.txt cannot advertise a stale number the page has moved
+ * past — Henry, 2026-10-17: 版本號由發佈流程自動寫入.
+ */
+const REVISIONS_FILE = join(ROOT, "src", "data", "revisions.json");
+const REVISIONS = existsSync(REVISIONS_FILE)
+  ? (JSON.parse(readFileSync(REVISIONS_FILE, "utf8")).resources ?? {})
+  : {};
+for (const entry of live) {
+  const revision = REVISIONS[entry.address];
+  if (revision?.version) entry.version = revision.version;
+}
+
 const byLang = (lang) =>
   live
     .filter((e) => e.lang === lang)

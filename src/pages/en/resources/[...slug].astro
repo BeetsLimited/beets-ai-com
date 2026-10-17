@@ -5,6 +5,7 @@ import ResourceView from "../../../components/ResourceView.astro";
 import { SECONDARY_LOCALE, localizePath, resourceIndexPath, t } from "../../../lib/i18n";
 import { alternateHrefFor, pageDescription, pageTitle, relatedTo } from "../../../lib/resources";
 import { breadcrumbLd, learningResourceLd } from "../../../lib/seo";
+import { withRevision } from "../../../lib/revisions";
 
 const lang = SECONDARY_LOCALE;
 
@@ -25,7 +26,10 @@ export async function getStaticPaths() {
     }));
 }
 
-const { entry, alternateHref, related } = Astro.props;
+const { entry: rawEntry, alternateHref, related } = Astro.props;
+
+/** Version and both dates come from the publish log — see src/lib/revisions.ts. */
+const entry = withRevision(rawEntry);
 
 /** Absolute URLs for the structured-data graph (relative ones are not valid there). */
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
