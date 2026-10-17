@@ -11,12 +11,12 @@ stage: "S1-S3"
 subject: "Visual Arts"
 sourceIdea: "#19"
 sources: ["E, p.7", "F, p.1-8"]
-prepTime: "About three 40-minute lessons: observe, propose, improve"
+prepTime: "One 60-minute lesson: observe, propose, improve"
 equipment: "Access to one real outdoor spot on campus; printed worksheets; the school's approved AI tool"
 author: "BeetsBot"
 version: "1.0"
 date: 2026-10-15
-description: "Three-lesson design sprint: pupils observe their campus, set criteria, use the school's approved AI tool to propose options, improve and critique one."
+description: "Design sprint: pupils observe their campus, set criteria, use the school's approved AI tool to propose options, improve and critique one."
 image: "/images/school-garden-design-sprint-hero.webp"
 imageAlt: "Three pupils kneel around a wooden planter box of seedlings; one holds a small blue trowel and another rests a hand on a red plant pot."
 downloads: ["/files/en/school-garden-design-sprint.docx"]
@@ -31,7 +31,7 @@ feedback: true
 
 Pupils will soon ask an AI to "design a school garden for me" and hand in the pretty picture it makes as if it were their own design. Real design ability is not collecting images; it is **observing a real place with your own eyes first, setting criteria, and then using judgement to check what the AI proposes**.
 
-This resource puts observation before asking the AI, across three lessons: pupils go to one real outdoor spot on campus and record the things they can actually see — sun, ground surface, drainage, wind, who walks through, and what already grows there. Where they cannot tell, they write a question instead of inventing a number. They then turn those observations into four to six design criteria, ask the school's approved AI tool for several layout options, and check each one against their criteria — anything they cannot justify is marked unsupported. Finally, they improve one option by hand and write a critique naming at least one thing the AI got wrong or could not know.
+This resource puts observation before asking the AI, across four segments: pupils go to one real outdoor spot on campus and record the things they can actually see — sun, ground surface, drainage, wind, who walks through, and what already grows there. Where they cannot tell, they write a question instead of inventing a number. They then turn those observations into four to six design criteria, ask the school's approved AI tool for several layout options, and check each one against their criteria — anything they cannot justify is marked unsupported. Finally, they improve one option by hand and write a critique naming at least one thing the AI got wrong or could not know.
 
 The core message: **the AI's images are not a plan, not evidence and not the finished work — the pupil's own revised drawing and written justification are.**
 
@@ -51,25 +51,12 @@ Written for the junior-secondary learning stage, it covers the reflection on the
 
 ## How to use it
 
-Three lessons, about 40 minutes each.
+One 60-minute lesson, in four segments.
 
-**Lesson 1: observe and set criteria (40 min)**
-
-1. **Introduction (5 min)** — Set the rule: "We record what we see; where we cannot tell, we write a question, not a number." Make clear the finished work is the pupil's own revised drawing and writing, not the AI's image.
-2. **Outdoor observation (20 min)** — The whole class goes to one real outdoor spot on campus and each pupil fills in the observation record: sun (at two named times of day), ground (paved, soil or planted), drainage, wind, who walks through, and what already grows there. Circulate and remind pupils to write "I cannot tell" as a question.
-3. **Set criteria (15 min)** — Pool the observations and agree four to six design criteria as a class, filling in the criteria worksheet (for example: shade at midday, low watering need, plants that survive a windy corridor, somewhere to sit, accessible to a wheelchair).
-
-**Lesson 2: propose and check (40 min)**
-
-4. **Write the brief (10 min)** — Each pupil writes a design brief in their own words, from their observations and criteria, using the brief template.
-5. **Propose with AI (15 min)** — Give the brief to the school's approved AI tool and ask for several layout concepts (not finished images). Remind pupils: the AI's image is an option, not an answer.
-6. **Check option by option (15 min)** — Fill in the concept-comparison table: which of my criteria does this option meet? What can I not account for? Mark anything I cannot justify as unsupported.
-
-**Lesson 3: improve and critique (40 min)**
-
-7. **Improve by hand (20 min)** — Choose one option and revise it by hand on the revision page, annotating against the criteria and the site's constraints.
-8. **Write the critique (15 min)** — Write a short critique naming at least one thing the AI got wrong or could not know (for example it could not know the drainage you observed, the wind, or the walk-through route).
-9. **Share and wrap up (5 min)** — Share the revised drawings and critiques, and restate: the AI's image is not the finished work; the pupil's own drawing and reasons are.
+1. **Introduction and outdoor observation (10 min)** — Set the rule: "We record what we see; where we cannot tell, we write a question, not a number." Make clear the finished work is the pupil's own revised drawing and writing, not the AI's image. The whole class goes to one real outdoor spot on campus and each pupil fills in the observation record: sun (at two named times of day), ground (paved, soil or planted), drainage, wind, who walks through, and what already grows there. Circulate and remind pupils to write "I cannot tell" as a question.
+2. **Set criteria and write the brief (15 min)** — Pool the observations and agree four to six design criteria as a class, filling in the criteria worksheet (for example: shade at midday, low watering need, plants that survive a windy corridor, somewhere to sit, accessible to a wheelchair). Each pupil writes a design brief in their own words, from their observations and criteria, using the brief template.
+3. **Propose with AI and check option by option (15 min)** — Give the brief to the school's approved AI tool and ask for several layout concepts (not finished images). Remind pupils: the AI's image is an option, not an answer. Fill in the concept-comparison table: which of my criteria does this option meet? What can I not account for? Mark anything I cannot justify as unsupported.
+4. **Improve by hand, critique and share (20 min)** — Choose one option and revise it by hand on the revision page, annotating against the criteria and the site's constraints. Write a short critique naming at least one thing the AI got wrong or could not know (for example it could not know the drainage you observed, the wind, or the walk-through route). Share the revised drawings and critiques, and restate: the AI's image is not the finished work; the pupil's own drawing and reasons are.
 
 ## Answer key and marking notes
 
@@ -117,7 +104,7 @@ A good critique names at least one thing the AI got wrong or could not know, and
 
 ## Files
 
-The full three-lesson worksheet (observation record, criteria worksheet, design brief template, concept-comparison table, revision page and marking guide) is in the download file:
+The full worksheet (observation record, criteria worksheet, design brief template, concept-comparison table, revision page and marking guide) is in the download file:
 
 **[Worksheet (Word document, editable)](/files/en/school-garden-design-sprint.docx)**
 

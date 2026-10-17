@@ -11,7 +11,7 @@ subject: "Cross-curricular"
 audience: [teachers, students]
 sourceIdea: "#3"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
-prepTime: "About 10 min per task; all three fit one lesson (about 40 min)"
+prepTime: "One lesson (60 min)"
 equipment: "Printed worksheets only; a projector helps if you model a task"
 author: "BeetsBot"
 version: "1.1"
@@ -51,13 +51,12 @@ They cover the reflection on the application of AI strand of AI literacy and bui
 
 ## How to use it
 
-The three tasks can each run as a ten-minute lesson opener, or all together in one lesson (about 40 minutes).
+One 60-minute lesson, in four segments.
 
-1. **Introduction (5 min)** — Set the goal: "We are not judging whether AI was used; we are learning to judge." Agree the ground rule: these tasks do not grade whether a pupil used AI.
-2. **Task 1: Trustworthy or not? (10 min)** — Hand out the sheet. Pupils circle the claims they trust and the ones they doubt, and write what evidence is missing.
-3. **Task 2: What can you defend? (10 min)** — Pupils underline the part of a classmate's answer that the writer could explain in their own words, and write one sentence saying why.
-4. **Task 3: Ready to hand in? (10 min)** — Pupils read a draft piece of work and list what to check before handing it in.
-5. **Wrap-up and follow-up (5 min)** — Choose one follow-up activity (below) and collect the answers as evidence for what to teach next.
+1. **Introduction and Task 1: trustworthy or not? (15 min)** — Set the goal: "We are not judging whether AI was used; we are learning to judge." Agree the ground rule: these tasks do not grade whether a pupil used AI. Hand out the sheet. Pupils circle the claims they trust and the ones they doubt, and write what evidence is missing.
+2. **Task 2: what can you defend? (20 min)** — Pupils underline the part of a classmate's answer that the writer could explain in their own words, and write one sentence saying why.
+3. **Task 3: ready to hand in? (18 min)** — Pupils read a draft piece of work and list what to check before handing it in.
+4. **Wrap-up and follow-up (7 min)** — Choose one follow-up activity (below) and collect the answers as evidence for what to teach next.
 
 ## Answer key and marking notes
 

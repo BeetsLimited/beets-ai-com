@@ -49,13 +49,12 @@ The planning rests on the AI literacy learning framework and sets targets by lea
 
 ## Planning steps
 
-This is a planning-meeting agenda of about 60 minutes (it can be folded into a panel or administrative meeting):
+One 60-minute planning meeting, in four segments.
 
-1. **Opening and shared aim (10 min)** — State that this term's goal is not "full rollout" but completing two pilots and collecting evidence.
-2. **Look at the completed example (10 min)** — Project the fictional school example from the attachment and point out what goes in each column and what evidence looks like.
-3. **Choose two pilot activities (15 min)** — As a group, choose or adapt two activities from the two worked pilots below as this term's scope.
-4. **Fill in the planning table (15 min)** — Complete each column: activity, owner, dates and review evidence; leave gaps to be finished after the meeting.
-5. **Set the review mechanism (10 min)** — Fix the dates and agenda of the mid-term and end-of-term review meetings, and confirm who collects the evidence.
+1. **Opening, shared aim and the completed example (15 min)** — State that this term's goal is not "full rollout" but completing two pilots and collecting evidence. Project the fictional school example from the attachment and point out what goes in each column and what evidence looks like.
+2. **Choose two pilot activities (20 min)** — As a group, choose or adapt two activities from the two worked pilots below as this term's scope.
+3. **Fill in the planning table (18 min)** — Complete each column: activity, owner, dates and review evidence; leave gaps to be finished after the meeting.
+4. **Set the review mechanism (7 min)** — Fix the dates and agenda of the mid-term and end-of-term review meetings, and confirm who collects the evidence.
 
 ## Review checklist
 

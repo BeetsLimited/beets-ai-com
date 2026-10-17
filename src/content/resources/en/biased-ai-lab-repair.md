@@ -11,7 +11,7 @@ stage: "S1-S3"
 subject: "ICT"
 sourceIdea: "#20"
 sources: ["F, p.1-13", "G, p.2-9"]
-prepTime: "Two lessons (about 40 min each): the repair lab, then the release note and review"
+prepTime: "1 lesson (60 min)"
 equipment: "Printed worksheets (with the training record and rule); a whiteboard or projector to write the rules on; no AI tool required - the whole lab is done on paper"
 author: "BeetsBot"
 version: "1.0"
@@ -39,7 +39,7 @@ This resource can sit inside a school's digital education planning and its Schoo
 
 ## Learning objectives
 
-By the end of the two lessons, pupils can:
+By the end of the lesson, pupils can:
 
 1. Say that a biased output does not appear from nowhere, but can be traced back to a choice in the data or the rule.
 2. Find the skew in a training record: which attribute (each column of a row) is "carrying" the decision and which pupils are not represented, and say that this is a data problem, not a pupil problem.
@@ -51,22 +51,12 @@ It targets the reflection on the application of AI strand of AI literacy, asking
 
 ## Teaching steps
 
-The two lessons total about 80 minutes: the first runs the repair lab, the second writes the release note and reviews.
+One 60-minute lesson, in four segments.
 
-**Lesson 1 (40 min) - the repair lab**
-
-1. **Introduction (5 min)** - Set the scene: the school wants a small system to decide "should this pupil be recommended for the after-school coding club?". Set the ground rule: every person, school and record is fictional; the lab is offline and uses no AI tool. Write on the board: "rules are written by people, data is chosen by people."
-2. **Build the system together (5 min)** - Read the eight old pupils' training record and the rule written by "the previous developer" as a class. Go column by column so everyone follows every word, explaining "attribute" and "label" (the "result" column the system learns to predict) in plain language the first time they appear.
-3. **Task 1: find the skew (10 min)** - Pupils use the bias-spotting checklist to circle: which attribute is carrying the decision? Which pupils are not represented? Circulate, prompting "count it, do not go on feeling."
-4. **Task 2: trace the rule (10 min)** - Pupils run the rule step by step on two new pupils and fill in the trace table, writing which line of the rule decided each outcome.
-5. **Task 3: propose a fix and its cost (10 min)** - Pupils write one change (to the rule or the data), who it helps, who it may disadvantage, and what it still cannot do, in the fix-and-trade-off table. Collect the sheets for lesson 2.
-
-**Lesson 2 (40 min) - the release note and review**
-
-1. **Recap (5 min)** - Ask two or three pupils to share their fix from task 3; summarise on the board that "every change has a cost."
-2. **Task 4: write the release note (15 min)** - Pupils use the release-note frame to write four to six sentences (may be used for / must not be used for / when a human must look). This is the assessed deliverable.
-3. **Peer sharing (10 min)** - In pairs, pupils swap release notes and use the marking guide to find each other's sentences with a concrete use and a concrete limit; read one or two aloud to the class.
-4. **Wrap-up (10 min)** - Discuss as a class: what this system "cannot see" (real interest, a pupil's actual home situation), and who that hurts (a keen pupil with no computer at home). Close with the point that fairness is a design and evidence problem, not "AI is born biased".
+1. **Set the scene and build the system (10 min)** — Set the scene: the school wants a small system to decide "should this pupil be recommended for the after-school coding club?". Set the ground rule: every person, school and record is fictional; the lab is offline and uses no AI tool. Write on the board: "rules are written by people, data is chosen by people.". Read the eight old pupils' training record and the rule written by "the previous developer" as a class. Go column by column so everyone follows every word, explaining "attribute" and "label" (the "result" column the system learns to predict) in plain language the first time they appear.
+2. **Find the skew and trace the rule (15 min)** — Pupils use the bias-spotting checklist to circle: which attribute is carrying the decision? Which pupils are not represented? Circulate, prompting "count it, do not go on feeling.". Pupils run the rule step by step on two new pupils and fill in the trace table, writing which line of the rule decided each outcome.
+3. **Propose a fix and its cost (15 min)** — Pupils write one change (to the rule or the data), who it helps, who it may disadvantage, and what it still cannot do, in the fix-and-trade-off table. Collect the sheets for lesson 2. Ask two or three pupils to share their fix from task 3; summarise on the board that "every change has a cost."
+4. **Write the release note and review (20 min)** — Pupils use the release-note frame to write four to six sentences (may be used for / must not be used for / when a human must look). This is the assessed deliverable. In pairs, pupils swap release notes and use the marking guide to find each other's sentences with a concrete use and a concrete limit; read one or two aloud to the class. Discuss as a class: what this system "cannot see" (real interest, a pupil's actual home situation), and who that hurts (a keen pupil with no computer at home). Close with the point that fairness is a design and evidence problem, not "AI is born biased".
 
 ## Answer key and marking notes
 

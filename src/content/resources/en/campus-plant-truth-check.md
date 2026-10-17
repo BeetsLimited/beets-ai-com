@@ -11,7 +11,7 @@ subject: "Science"
 audience: [teachers, students]
 sourceIdea: "#12"
 sources: ["E, p.7"]
-prepTime: "1 lesson (about 35–40 min)"
+prepTime: "1 lesson (60 min)"
 equipment: "Printed observation record sheet; plant photo cards (swap in your own campus photos); optional tablet or phone for the checking stage"
 author: "BeetsBot"
 version: "1.0"
@@ -49,11 +49,12 @@ The task belongs to the reflection on the application of AI strand of AI literac
 
 ## Teaching steps
 
-1. **Hook (5 min)** — Ask: "If you photographed a plant and asked an AI 'What is this?', would you trust its answer? How would you check it?" Collect answers without judging them.
-2. **Outdoor observation (15 min)** — Each group chooses one plant on the school grounds (or from a window) and does just one thing: fill in the five features on the observation record sheet. Emphasise: do not guess a name, only describe what you can see.
-3. **Back in class, check (10 min)** — Hand out the "plant photo cards" (three AI answers) and judge each one: does it match the photo? Is it right, wrong, or impossible to tell?
-4. **Trust judgement (5 min)** — Fill in the "which source do I trust here" summary: when the AI's claim differs from what my eyes show, which do I trust first? What source would I still need to confirm a name?
-5. **Wrap up (5 min)** — Together, write the prompt: observe first → then check → then ask for the source.
+One 60-minute lesson, in four segments.
+
+1. **Hook (10 min)** — Ask: "If you photographed a plant and asked an AI 'What is this?', would you trust its answer? How would you check it?" Collect answers without judging them.
+2. **Outdoor observation (20 min)** — Each group chooses one plant on the school grounds (or from a window) and does just one thing: fill in the five features on the observation record sheet. Emphasise: do not guess a name, only describe what you can see.
+3. **Back in class: check and judge trust (20 min)** — Hand out the "plant photo cards" (three AI answers) and judge each one: does it match the photo? Is it right, wrong, or impossible to tell? Fill in the "which source do I trust here" summary: when the AI's claim differs from what my eyes show, which do I trust first? What source would I still need to confirm a name?
+4. **Wrap up (10 min)** — Together, write the prompt: observe first → then check → then ask for the source.
 
 ## Answer key and marking notes
 

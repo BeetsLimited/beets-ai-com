@@ -11,7 +11,7 @@ subject: "History"
 audience: [teachers, students]
 sourceIdea: "#86"
 sources: ["E, p.14"]
-prepTime: "One lesson (about 40 min); add a homework slot for pupils to check the sources"
+prepTime: "One lesson (60 min); add a homework slot for pupils to check the sources"
 equipment: "Projector; printed worksheet; access to usable official sources when checking (the school library, an official online notice or a local publication)"
 author: "BeetsBot"
 version: "1.1"
@@ -51,11 +51,12 @@ Written for the junior-secondary stage, it covers the reflection on the applicat
 
 ## How to use it
 
-1. **Choose a street (3 minutes)** - each pupil or group picks a street they pass every day whose name they cannot explain, and writes it in the first column.
-2. **Ask an AI (5 minutes)** - ask it "where did this street name come from?" and copy the answer out **word for word**. The point: what is written down is the AI's claim, not a fact.
-3. **Split it up (7 minutes)** - break the answer into 4-6 sentences and label what each one claims: an origin? a year? a person or an event? the language it came from (a translation, or a transliteration)?
-4. **Find the record (15 minutes, in groups)** - each group takes one or two sentences, looks them up in the sources the teacher has named, and fills in the checking table: sentence, record, source and year, judgement.
-5. **Report and close (10 minutes)** - each group reports in one sentence: "the claim we checked was ... the record shows ... so the AI's statement is ...". Then compare across the class: did different groups judge the same street differently?
+One 60-minute lesson, in four segments.
+
+1. **Choose a street and ask an AI (10 min)** — each pupil or group picks a street they pass every day whose name they cannot explain, and writes it in the first column. ask it "where did this street name come from?" and copy the answer out **word for word**. The point: what is written down is the AI's claim, not a fact.
+2. **Split it up (20 min)** — break the answer into 4-6 sentences and label what each one claims: an origin? a year? a person or an event? the language it came from (a translation, or a transliteration)?
+3. **Find the record (20 min)** — each group takes one or two sentences, looks them up in the sources the teacher has named, and fills in the checking table: sentence, record, source and year, judgement.
+4. **Report and close (10 min)** — each group reports in one sentence: "the claim we checked was ... the record shows ... so the AI's statement is ...". Then compare across the class: did different groups judge the same street differently?
 
 **Sources the teacher may name (pupils look them up themselves and record the source and the year)**
 
@@ -69,6 +70,7 @@ Written for the junior-secondary stage, it covers the reflection on the applicat
 > This worksheet deliberately prints no "correct answer" for any street. The record is the answer; a teaching resource that printed the conclusion would simply be one more unchecked copy of it. Pupils obtain the record themselves, and write down the source and the year.
 
 > If a sentence traces only to a spoken account, that is not a failure: mark it impossible to check, and write "spoken only, no official record" in the reason column. That is a full-credit answer.
+
 
 ## Answer key and marking notes
 

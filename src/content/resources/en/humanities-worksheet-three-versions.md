@@ -11,7 +11,7 @@ subject: "Primary Humanities"
 audience: [teachers, students]
 sourceIdea: "#6"
 sources: ["G, pp.2-5 and 2-7"]
-prepTime: "1 lesson (about 35-40 min); plus time to copy the three versions in advance"
+prepTime: "1 lesson (60 min); plus time to print the three versions"
 equipment: "Printouts of the three worksheet versions; scissors and glue for the visual version; projector (optional)"
 author: "BeetsBot"
 version: "1.1"
@@ -51,11 +51,12 @@ All three versions are framed by AI literacy and pitched at the upper-primary le
 
 ## How to use it
 
-1. **Introduction (5 min)** — Project two contrasting pictures (one old, one new; sketches are fine) and ask: "What is different about this community?" Let pupils answer freely, without judging.
-2. **Handing out versions (2 min)** — Give out the standard, scaffolded or visual version according to need. All three can run in the same classroom at once.
-3. **Independent work (18 min)** — Pupils complete their worksheet. The scaffolded version provides sentence frames; the visual version is mostly cut-and-paste sorting. Circulate and support individuals.
-4. **Pair sharing (5 min)** — Mix pupils who had different versions and have them tell each other one change they found.
-5. **Whole-class wrap-up (5 min)** — Write "change + reason" on the board and sum up: changes in a community are often linked to population, transport and people's needs.
+One 60-minute lesson, in four segments.
+
+1. **Introduction and handing out versions (15 min)** — Project two contrasting pictures (one old, one new; sketches are fine) and ask: "What is different about this community?" Let pupils answer freely, without judging. Give out the standard, scaffolded or visual version according to need. All three can run in the same classroom at once.
+2. **Independent work (20 min)** — Pupils complete their worksheet. The scaffolded version provides sentence frames; the visual version is mostly cut-and-paste sorting. Circulate and support individuals.
+3. **Pair sharing (18 min)** — Mix pupils who had different versions and have them tell each other one change they found.
+4. **Whole-class wrap-up (7 min)** — Write "change + reason" on the board and sum up: changes in a community are often linked to population, transport and people's needs.
 
 ## Answer key and marking notes
 

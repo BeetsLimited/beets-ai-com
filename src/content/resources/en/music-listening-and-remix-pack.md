@@ -11,7 +11,7 @@ subject: "Music"
 audience: [teachers, students]
 sourceIdea: "#18"
 sources: ["E, p.4", "F, p.1-8"]
-prepTime: "Two lessons (about 40 minutes each): first listening and describing, then remixing and choosing"
+prepTime: "1 lesson (60 min)"
 equipment: "A way to play one short audio excerpt (optional, see the lesson steps) and printed worksheets"
 author: "BeetsBot"
 version: "1.0"
@@ -39,7 +39,7 @@ The pack can sit in the digital education part of a School Development Plan and 
 
 ## Learning objectives
 
-By the end of the two lessons, pupils can:
+By the end of the lesson, pupils can:
 
 1. Record a musical idea using a fixed vocabulary of musical elements (at least four of: pulse/tempo, metre, rhythm pattern, pitch contour, dynamics, timbre/instrumentation, texture, structure).
 2. Turn their notes into a precise 4–6 sentence description, precise enough that someone who never heard it could reconstruct its shape.
@@ -50,22 +50,12 @@ Written for the junior- and senior-secondary learning stages, it covers the huma
 
 ## Teaching steps
 
-Two lessons, about 40 minutes each.
+One 60-minute lesson, in four segments.
 
-**Lesson 1: listening and describing (about 40 minutes)**
-
-1. **Introduction (5 min)** — Set the goal: we are turning "hearing" into "describing". Agree two rules: no judging whether something sounds "good"; and later the AI will work only from our words, never from any recording.
-2. **Demonstration and vocabulary (10 min)** — The teacher performs a short 4–8 bar musical idea live (play, sing, clap or write it; with no instrument, write a rhythm pattern on the board). The class listens through the vocabulary once; the teacher models filling one row of the listening log (see the download).
-3. **Pupil listening log (10 min)** — The teacher performs the idea twice more; pupils fill in "what I heard" and "musical term" for each element. Pupils who cannot hear pitch accurately may complete rhythm, dynamics and structure only.
-4. **Writing the description (10 min)** — Pupils turn their notes into a 4–6 sentence description, using the weak-vs-strong pair (below).
-5. **Swap and wrap up (5 min)** — Pairs swap descriptions and guess which element the other was describing; the teacher sums up the three conditions of a precise description: use musical terms, name the elements, be precise enough to rebuild.
-
-**Lesson 2: remixing and choosing (about 40 minutes)**
-
-1. **Recap and boundary (5 min)** — Recap the idea and description from the last lesson; hand out the remix brief template and make the boundary clear: **do not upload any commercial recording**; the AI works only from the pupils' written description.
-2. **Hand it to the AI (10 min)** — Pupils hand their description plus one change request to the school's approved AI tool (or the teacher models one run), and receive a variation as a description or notation.
-3. **Compare and choose (15 min)** — Pupils compare the variation against their description and the original idea, and write in the comparison frame which one they would keep and why, naming at least two musical elements.
-4. **Share and wrap up (10 min)** — Two or three pairs share their judgement; the teacher makes the point: the more precise the description, the closer the variation is to what was wanted; the AI only works from words, and the judgement stays with the pupils.
+1. **Introduction, demonstration and vocabulary (10 min)** — Set the goal: we are turning "hearing" into "describing". Agree two rules: no judging whether something sounds "good"; and later the AI will work only from our words, never from any recording. The teacher performs a short 4–8 bar musical idea live (play, sing, clap or write it; with no instrument, write a rhythm pattern on the board). The class listens through the vocabulary once; the teacher models filling one row of the listening log (see the download).
+2. **Listening log and writing the description (20 min)** — The teacher performs the idea twice more; pupils fill in "what I heard" and "musical term" for each element. Pupils who cannot hear pitch accurately may complete rhythm, dynamics and structure only. Pupils turn their notes into a 4–6 sentence description, using the weak-vs-strong pair (below).
+3. **Swap, wrap up and recap the boundary (15 min)** — Pairs swap descriptions and guess which element the other was describing; the teacher sums up the three conditions of a precise description: use musical terms, name the elements, be precise enough to rebuild. Recap the idea and description from the start of the lesson; hand out the remix brief template and make the boundary clear: **do not upload any commercial recording**; the AI works only from the pupils' written description.
+4. **Hand it to the AI, compare and share (15 min)** — Pupils hand their description plus one change request to the school's approved AI tool (or the teacher models one run), and receive a variation as a description or notation. Pupils compare the variation against their description and the original idea, and write in the comparison frame which one they would keep and why, naming at least two musical elements. Two or three pairs share their judgement; the teacher makes the point: the more precise the description, the closer the variation is to what was wanted; the AI only works from words, and the judgement stays with the pupils.
 
 ## Answer key and marking notes
 

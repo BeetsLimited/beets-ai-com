@@ -49,13 +49,12 @@ The goals it maps are arranged by the learning framework's learning stages, with
 
 ## Planning steps
 
-This is a curriculum-meeting agenda of about 60 minutes (it can be folded into a panel or administrative meeting):
+One 60-minute curriculum meeting, in four segments.
 
-1. **Opening and shared aim (5 min)** — State that the goal is not "full rollout" but seeing where P4-P6 AI literacy already fits across the subjects.
-2. **Explain the stage goals (10 min)** — Project the P4-P6 stage-goal list and ask each panel head to tick off, in their head, which goals their subject already teaches.
-3. **Fill in the coverage table (20 min)** — Subject by subject, record existing activities in the "subject × term" table: existing first, then empty.
-4. **Mark the gaps (15 min)** — Against the goal list, mark the "not covered" and "repeated" positions.
-5. **Write the next steps (10 min)** — For each gap, write one small next step and assign an owner; leave blanks to be finished after the meeting.
+1. **Opening, shared aim and the stage goals (15 min)** — State that the goal is not "full rollout" but seeing where P4-P6 AI literacy already fits across the subjects. Project the P4-P6 stage-goal list and ask each panel head to tick off, in their head, which goals their subject already teaches.
+2. **Fill in the coverage table (20 min)** — Subject by subject, record existing activities in the "subject × term" table: existing first, then empty.
+3. **Mark the gaps (18 min)** — Against the goal list, mark the "not covered" and "repeated" positions.
+4. **Write the next steps (7 min)** — For each gap, write one small next step and assign an owner; leave blanks to be finished after the meeting.
 
 ## Review checklist
 

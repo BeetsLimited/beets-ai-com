@@ -17,7 +17,7 @@ Reuse terms: https://beets-ai.com/about/
 ### S1–S3 資訊科技：修復有偏見的 AI（四個除錯任務）
 - URL: https://beets-ai.com/resources/biased-ai-lab-repair/
 - Language: zh-HK
-- Description: 不插電的兩節除錯課堂：全班在紙上建構一個簡單的推薦系統，找出資料偏斜、追蹤偏差如何由規則造成，提出修復並寫一份發行說明。附訓練紀錄、追蹤表與評分指引。
+- Description: 不插電的一節除錯課堂：全班在紙上建構一個簡單的推薦系統，找出資料偏斜、追蹤偏差如何由規則造成，提出修復並寫一份發行說明。附訓練紀錄、追蹤表與評分指引。
 - Stage: S1-S3
 - Subject: 資訊科技
 - Theme: B (安全及負責任使用 AI)
@@ -149,7 +149,7 @@ Reuse terms: https://beets-ai.com/about/
 ### Your first AI lesson: a self-guided kit for P4-P6 teachers who have never taught with AI
 - URL: https://beets-ai.com/en/resources/first-ai-lesson-kit/
 - Language: en
-- Description: A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone.
+- Description: A self-guided kit: one 60-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone.
 - Stage: P4-P6
 - Subject: Cross-curricular
 - Theme: E (共融 AI 課堂)
@@ -160,7 +160,7 @@ Reuse terms: https://beets-ai.com/about/
 ### 第一堂 AI 課：從未用過 AI 的 P4–P6 教師自學套件
 - URL: https://beets-ai.com/resources/first-ai-lesson-kit/
 - Language: zh-HK
-- Description: 一份自學套件：一個 40 分鐘的 P4–P6 人文科示範課堂、課前準備清單、投影片逐頁大綱、學生工作紙與課後反思三問，讓從未用過 AI 的教師也能獨自上完第一堂 AI 課。
+- Description: 一份自學套件：一個 60 分鐘的 P4–P6 人文科示範課堂、課前準備清單、投影片逐頁大綱、學生工作紙與課後反思三問，讓從未用過 AI 的教師也能獨自上完第一堂 AI 課。
 - Stage: P4-P6
 - Subject: 全科／跨科
 - Theme: E (共融 AI 課堂)
@@ -347,7 +347,7 @@ Reuse terms: https://beets-ai.com/about/
 ### P4-P6 Chinese Language: my story, many voices (interview and record)
 - URL: https://beets-ai.com/en/resources/my-story-many-voices/
 - Language: en
-- Description: A two-lesson Chinese writing unit: pupils interview a family or community member, note down a spoken story, then write it in the first person in their own words; AI does only three named jobs and never adds a detail the person did not say. Includes an interview question bank, an AI-use boundary checklist and a marking guide.
+- Description: A one-lesson Chinese writing unit: pupils interview a family or community member, note down a spoken story, then write it in the first person in their own words; AI does only three named jobs and never adds a detail the person did not say. Includes an interview question bank, an AI-use boundary checklist and a marking guide.
 - Stage: P4-P6
 - Subject: Chinese Language
 - Theme: E (共融 AI 課堂)
@@ -358,7 +358,7 @@ Reuse terms: https://beets-ai.com/about/
 ### P4–P6 中文：我的故事，多元聲音（訪談與記錄）
 - URL: https://beets-ai.com/resources/my-story-many-voices/
 - Language: zh-HK
-- Description: 兩節中文寫作單元：學生訪問家人或社區人物、記下口述故事，再用自己的話寫成第一人稱短文；AI 只做三件被點名的工作，不添加家人沒說過的細節。
+- Description: 一節中文寫作單元：學生訪問家人或社區人物、記下口述故事，再用自己的話寫成第一人稱短文；AI 只做三件被點名的工作，不添加家人沒說過的細節。
 - Stage: P4-P6
 - Subject: 中文
 - Theme: E (共融 AI 課堂)
@@ -523,7 +523,7 @@ Reuse terms: https://beets-ai.com/about/
 ### S1-S3 Visual Arts: school garden design sprint (observe, propose, improve)
 - URL: https://beets-ai.com/en/resources/school-garden-design-sprint/
 - Language: en
-- Description: Three-lesson design sprint: pupils observe their campus, set criteria, use the school's approved AI tool to propose options, improve and critique one.
+- Description: Design sprint: pupils observe their campus, set criteria, use the school's approved AI tool to propose options, improve and critique one.
 - Stage: S1-S3
 - Subject: Visual Arts
 - Theme: D (用 AI 探究香港)
@@ -534,7 +534,7 @@ Reuse terms: https://beets-ai.com/about/
 ### S1–S3 視覺藝術：校園花園設計衝刺（觀察、提案、改良）
 - URL: https://beets-ai.com/resources/school-garden-design-sprint/
 - Language: zh-HK
-- Description: 三節課的校園花園設計衝刺：學生先到本校一個真實戶外地點觀察、訂立準則，再用校方認可的 AI 工具提出方案並逐項核對，最後親手改良並批評 AI 的不足。
+- Description: 校園花園設計衝刺：學生先到本校一個真實戶外地點觀察、訂立準則，再用校方認可的 AI 工具提出方案並逐項核對，最後親手改良並批評 AI 的不足。
 - Stage: S1-S3
 - Subject: 視覺藝術
 - Theme: D (用 AI 探究香港)

@@ -49,13 +49,12 @@ The audit keeps nurturing the whole person, literacy first, application-oriented
 
 ## Planning steps
 
-This is a curriculum meeting of about 60 minutes (it can be folded into a panel or administrative meeting):
+One 60-minute curriculum meeting, in four segments.
 
-1. **State the purpose (5 minutes)** — This is not an appraisal of teachers; it is to find out where the three strands still have no landing place, in which subjects and at which stages.
-2. **Claim the learning areas (10 minutes)** — Whoever is present speaks for the learning areas represented; for any area with nobody in the room, the curriculum coordinator fills it in afterwards rather than leaving it empty and reading it as "none".
-3. **Fill in the grid (25 minutes)** — In the subject coverage sheet, record for each subject a short name of the existing activity with its year level and term, and mark each of the three strands taught, partial or not taught. Primary teachers can filter on the applicable-stages column to see junior primary and upper primary only, without wading through secondary subjects.
-4. **Read the gaps (15 minutes)** — The stage-by-strand summary sheet shows automatically how many subjects at each stage have marked a strand as taught; a 0 means no coverage at all. Then list the subjects or stages with no landing place in the gaps sheet, and flag the cells covered by three or more subjects.
-5. **Write the next steps (5 minutes, finished afterwards)** — For each gap, write one smallest next step, sorted into short term (one lesson or one co-planning session this term), medium term (plan it next term) and long term (it has to be handled at curriculum-document level), with the panel responsible.
+1. **State the purpose and claim the learning areas (15 min)** — This is not an appraisal of teachers; it is to find out where the three strands still have no landing place, in which subjects and at which stages. Whoever is present speaks for the learning areas represented; for any area with nobody in the room, the curriculum coordinator fills it in afterwards rather than leaving it empty and reading it as "none".
+2. **Fill in the grid (20 min)** — In the subject coverage sheet, record for each subject a short name of the existing activity with its year level and term, and mark each of the three strands taught, partial or not taught. Primary teachers can filter on the applicable-stages column to see junior primary and upper primary only, without wading through secondary subjects.
+3. **Read the gaps (18 min)** — The stage-by-strand summary sheet shows automatically how many subjects at each stage have marked a strand as taught; a 0 means no coverage at all. Then list the subjects or stages with no landing place in the gaps sheet, and flag the cells covered by three or more subjects.
+4. **Write the next steps (7 min)** — For each gap, write one smallest next step, sorted into short term (one lesson or one co-planning session this term), medium term (plan it next term) and long term (it has to be handled at curriculum-document level), with the panel responsible.
 
 **The dimensions of the grid**
 
@@ -92,6 +91,7 @@ Physical Education                Physical Education
 ```
 
 > The applicable-stages column follows the curriculum documents and a school then adjusts it to what it actually offers; primary and secondary subjects are listed separately so a primary teacher only sees the stages they teach.
+
 
 ## Review checklist
 

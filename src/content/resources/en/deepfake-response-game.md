@@ -11,7 +11,7 @@ subject: "Citizenship, Economics and Society"
 audience: [teachers]
 sourceIdea: "#16"
 sources: ["E, p.14"]
-prepTime: "1 lesson (about 40 min)"
+prepTime: "1 lesson (60 min)"
 equipment: "Projector (to play or show the scenario); one printed set of decision cards per group; whiteboard or interactive board"
 author: "BeetsBot"
 version: "1.0"
@@ -56,12 +56,12 @@ It maps to the reflection on the application of AI strand of AI literacy and bui
 
 ## Teaching steps
 
-1. **Hook (5 min)** — Ask: "Have you or your family ever received a suspicious message that claimed to be from your school?" Collect the experiences without judging them. Write "pause, check, report" on the board.
-2. **Play the scenario (5 min)** — Project or read aloud the fictional message from the files (a roughly 20-second voice note or clip that claims to be from the school office). Give no hints yet; ask each pupil to note what they would do.
-3. **Group sorting (12 min)** — Give each group a set of five decision cards (pause / check a second source / report / ignore / share it on). Task: put the things you *should* do in the correct order, set the things you *should not* do aside, and say why.
-4. **Whole-class checking (8 min)** — Check against the answer key in the files. Focus the discussion on why "ignore" alone is not enough and why "share it on" is the most harmful.
-5. **Debrief (7 min)** — Use the "why a fake can be convincing" section to explain briefly (without technical detail) why deepfake messages persuade.
-6. **Wrap-up (3 min)** — Read the chant together: "Stop, ask, tell a grown-up."
+One 60-minute lesson, in four segments.
+
+1. **Hook and play the scenario (15 min)** — Ask: "Have you or your family ever received a suspicious message that claimed to be from your school?" Collect the experiences without judging them. Write "pause, check, report" on the board. Project or read aloud the fictional message from the files (a roughly 20-second voice note or clip that claims to be from the school office). Give no hints yet; ask each pupil to note what they would do.
+2. **Group sorting (20 min)** — Give each group a set of five decision cards (pause / check a second source / report / ignore / share it on). Task: put the things you *should* do in the correct order, set the things you *should not* do aside, and say why.
+3. **Whole-class checking and debrief (18 min)** — Check against the answer key in the files. Focus the discussion on why "ignore" alone is not enough and why "share it on" is the most harmful. Use the "why a fake can be convincing" section to explain briefly (without technical detail) why deepfake messages persuade.
+4. **Wrap-up (7 min)** — Read the chant together: "Stop, ask, tell a grown-up."
 
 ## Answer key and marking notes
 

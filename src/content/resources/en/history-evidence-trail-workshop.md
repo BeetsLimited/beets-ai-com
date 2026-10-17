@@ -11,7 +11,7 @@ subject: "History"
 audience: [teachers, students]
 sourceIdea: "#14"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
-prepTime: "One double lesson (about 80 min), or three 25-minute segments"
+prepTime: "1 lesson (60 min)"
 equipment: "Printing or projection; for one step pupils may need the school's approved AI tool"
 author: "BeetsBot"
 version: "1.1"
@@ -51,13 +51,12 @@ It targets the reflection on the application of AI strand of AI literacy and bui
 
 ## How to use it
 
-The three tasks fit one double lesson (about 80 minutes), or three 25-minute segments.
+One 60-minute lesson, in four segments.
 
-1. **Introduction and ground rules (8 min)** — Set the goal: "We are not judging whether AI should be used; we are learning to trace where a claim comes from." Agree the ground rule: these tasks do not grade whether a pupil used AI. Hand out the sheet and the evidence-trail record.
-2. **Task 1: Split the claim (20 min)** — Pupils read a short AI-generated history statement (fictional) and label each sentence "fact claim" or "interpretation", marking every place a source is missing.
-3. **Task 2: Find the trail (24 min)** — Pupils choose two claims they judge traceable and write what kind of source would settle each one and where in Hong Kong they would look. The teacher runs through what each kind of archive or library is for, without naming a specific document.
-4. **Task 3: Defend or drop it (20 min)** — Pupils rewrite the AI paragraph into a version they can stand behind: keep what has a trail, delete or hedge what does not, and account for each item on the record.
-5. **Wrap-up and follow-up (8 min)** — Choose one follow-up activity (below) and collect the record as evidence for what to teach next.
+1. **Introduction, ground rules and splitting the claim (15 min)** — Set the goal: "We are not judging whether AI should be used; we are learning to trace where a claim comes from." Agree the ground rule: these tasks do not grade whether a pupil used AI. Hand out the sheet and the evidence-trail record. Pupils read a short AI-generated history statement (fictional) and label each sentence "fact claim" or "interpretation", marking every place a source is missing.
+2. **Find the trail (20 min)** — Pupils choose two claims they judge traceable and write what kind of source would settle each one and where in Hong Kong they would look. The teacher runs through what each kind of archive or library is for, without naming a specific document.
+3. **Defend or drop it (18 min)** — Pupils rewrite the AI paragraph into a version they can stand behind: keep what has a trail, delete or hedge what does not, and account for each item on the record.
+4. **Wrap-up and follow-up (7 min)** — Choose one follow-up activity (below) and collect the record as evidence for what to teach next.
 
 ## Answer key and marking notes
 

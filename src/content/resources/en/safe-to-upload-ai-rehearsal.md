@@ -11,7 +11,7 @@ subject: "Cross-curricular"
 audience: [teachers]
 sourceIdea: "#8"
 sources: ["G, pp.2-4 and 2-9"]
-prepTime: "45 min (can be split across two lessons)"
+prepTime: "1 lesson (60 min)"
 equipment: "Projector or computer; also runs on printouts alone"
 author: "BeetsBot"
 version: "1.1"
@@ -51,16 +51,19 @@ By the end, teachers can:
 It covers the reflection on the application of AI strand of AI literacy, with critical thinking, responsibility and professional judgement at the centre.
 
 ## How to use it
-1. **Introduction (5 min)** — Ask: "If you were going to hand a pupil's composition to an AI for marking, what would you do first?" Collect the answers without judging them.
-2. **Demonstration (5 min)** — Project "Example 1" and demonstrate removing information step by step, explaining what is removed at each step and why.
-3. **Group work (20 min)** — Each group works on two examples (chosen from Examples 2–6) and fills in the "before-you-upload checklist".
-4. **Whole-class checking (10 min)** — Check against the answer key in the attachments. Focus the discussion on "what risk remains after names are removed".
-5. **Wrap-up (5 min)** — Together, write out a three-step checking prompt that the school can use.
+
+One 60-minute lesson, in four segments.
+
+1. **Introduction and demonstration (15 min)** — Ask: "If you were going to hand a pupil's composition to an AI for marking, what would you do first?" Collect the answers without judging them. Project "Example 1" and demonstrate removing information step by step, explaining what is removed at each step and why.
+2. **Group work (20 min)** — Each group works on two examples (chosen from Examples 2–6) and fills in the "before-you-upload checklist".
+3. **Whole-class checking (18 min)** — Check against the answer key in the attachments. Focus the discussion on "what risk remains after names are removed".
+4. **Wrap-up (7 min)** — Together, write out a three-step checking prompt that the school can use.
 
 - **A name is not the only identifier.** Class + seat number, class + the date and nature of an event, and rare combinations (for example "the school's only non-Chinese-speaking new arrival"), are all enough to identify an individual pupil.
 - **Photos carry higher risk than text.** A uniform, the classroom background, a name badge, or another pupil's face can all amount to identification.
 - **"Removed" does not mean "safe".** Ask: once the remaining pieces of information are combined, who else in the school could still recognise the pupil?
 - **Marking does not require identity.** If the AI is only being asked to mark, a pupil's name is of no use to the AI and should always be removed.
+
 
 ## Review checklist
 ```

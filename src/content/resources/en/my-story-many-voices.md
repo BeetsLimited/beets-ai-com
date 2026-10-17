@@ -11,13 +11,13 @@ subject: "Chinese Language"
 audience: [teachers, students]
 sourceIdea: "#15"
 sources: ["F, p.1-8", "E, p.4"]
-prepTime: "Two lessons (about 35 min each): lesson 1 interview preparation, lesson 2 writing"
+prepTime: "1 lesson (60 min)"
 equipment: "Printing; a way to play back a recording if a pupil records one (optional)"
 author: "BeetsBot"
 version: "1.0"
 date: 2026-10-15
-description: "A two-lesson Chinese writing unit: pupils interview a family or community member, note down a spoken story, then write it in the first person in their own words; AI does only three named jobs and never adds a detail the person did not say. Includes an interview question bank, an AI-use boundary checklist and a marking guide."
-metaDescription: "A two-lesson Chinese writing unit: interview a family or community member, then write the story in the first person, with AI limited to three named jobs."
+description: "A one-lesson Chinese writing unit: pupils interview a family or community member, note down a spoken story, then write it in the first person in their own words; AI does only three named jobs and never adds a detail the person did not say. Includes an interview question bank, an AI-use boundary checklist and a marking guide."
+metaDescription: "A one-lesson Chinese writing unit: interview a family or community member, then write the story in the first person, with AI limited to three named jobs."
 image: "/images/my-story-many-voices-hero.webp"
 imageAlt: "An adult and a primary pupil sit side by side on a sofa; the pupil holds a blank notebook while a small blue recorder rests on the low table in front of them."
 downloads: ["/files/en/my-story-many-voices.docx"]
@@ -32,7 +32,7 @@ feedback: true
 
 Every pupil already owns a story worth writing — a grandparent's move to Hong Kong, a family trade, a neighbourhood that changed. But the gap between the spoken account and a written paragraph is exactly where P4-P6 writers stall: the words came out of a real person's mouth, and the page is supposed to be the pupil's own.
 
-This two-lesson unit turns that gap into a staged writing task and gives AI a deliberately narrow, honest role:
+This unit turns that gap into a staged writing task and gives AI a deliberately narrow, honest role:
 
 1. **Prepare** — each pupil chooses one family or community story and writes their own interview questions (the sheet carries a question bank plus a rule: ask about a time, a place and a change, not facts you can look up).
 2. **Record** — pupils take notes or record a short clip WITH the family member's spoken permission. The recording stays with the family or pupil; it is never uploaded to any AI tool.
@@ -55,19 +55,12 @@ Written for the upper-primary learning stage, it covers the reflection on the ap
 
 ## How to use it
 
-Two lessons (about 35 minutes each), run back to back or a day apart.
-
-**Lesson 1: interview preparation (35 min)**
+One 60-minute lesson, in four segments.
 
 1. **Choosing a story (10 min)** — Open with "everyone is carrying a story worth writing." Pupils pick an interview subject from a family member, a neighbour, a school staff member, an object with a story, or a place in the neighbourhood; it does not have to be a relative.
-2. **Setting the privacy and AI boundary (10 min)** — The class writes three rules together: the recording and the person's details are never uploaded to any AI tool; AI does only the three named jobs; AI may not add a detail the person did not say.
-3. **Writing interview questions (15 min)** — Using the question bank and the "time, place, change" rule, each pupil writes three to five questions and gets the person's spoken permission.
-
-**Lesson 2: writing (35 min)**
-
-4. **Sharing and recording (10 min)** — Pupils share what they gathered (notes or a short clip; the clip stays with the family or pupil and is not uploaded). The teacher reminds them: the recording is for writing, not for uploading.
-5. **Drafting (15 min)** — Pupils write the story in the first person in their own words; they may use AI for one of the three named jobs, and mark each sentence "from the person" or "mine".
-6. **Comparing voices and wrap-up (10 min)** — Pupils write one sentence on how the person's spoken words differ from their own written version, and why; then they give one response using the peer-response frame.
+2. **Set the boundary and write the questions (20 min)** — The class writes three rules together: the recording and the person's details are never uploaded to any AI tool; AI does only the three named jobs; AI may not add a detail the person did not say. Using the question bank and the "time, place, change" rule, each pupil writes three to five questions and gets the person's spoken permission.
+3. **Share, record and draft (20 min)** — Pupils share what they gathered (notes or a short clip; the clip stays with the family or pupil and is not uploaded). The teacher reminds them: the recording is for writing, not for uploading. Pupils write the story in the first person in their own words; they may use AI for one of the three named jobs, and mark each sentence "from the person" or "mine".
+4. **Compare voices and wrap up (10 min)** — Pupils write one sentence on how the person's spoken words differ from their own written version, and why; then they give one response using the peer-response frame.
 
 ## Answer key and marking notes
 

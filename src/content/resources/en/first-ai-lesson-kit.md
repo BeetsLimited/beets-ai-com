@@ -11,14 +11,14 @@ subject: "Cross-curricular"
 audience: [teachers]
 sourceIdea: "#9"
 sources: ["G, p.2-3", "G, pp.2-5 and 2-7"]
-prepTime: "1 lesson (40 min); about 15 min preparation"
+prepTime: "1 lesson (60 min); about 15 min preparation"
 equipment: "Projector or computer; worksheet and source cards; no live internet needed (a pre-printed AI answer can replace using an AI tool on the day)"
 author: "BeetsBot"
 version: "1.1"
 date: 2026-10-08
 updated: 2026-10-17
-description: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone."
-metaDescription: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a worksheet and reflection questions."
+description: "A self-guided kit: one 60-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone."
+metaDescription: "A self-guided kit: one 60-minute upper-primary Humanities demonstration lesson, a preparation checklist, a worksheet and reflection questions."
 image: "/images/first-ai-lesson-kit-hero.webp"
 imageAlt: "A teacher beside a table handing a stack of worksheets to two students, with a deep red pencil holder and a blue tray on the table."
 downloads: ["/files/en/first-ai-lesson-kit.docx"]
@@ -54,9 +54,11 @@ It covers the fundamental operating principles of AI and human-AI communication 
 
 ## Teaching steps
 
-1. **Introduction (5 min)** — Ask: "Have you heard of AI? What has it done for you?" Collect answers without judging. Make the point: "AI can be wrong too, so we check first, then trust."
-2. **Demonstration (10 min)** — Project Example 1 (the AI says "Sha Tin has trams"). Read the answer together, then model the check card: circle the AI's claims → compare with the source card → mark ✓ / ✗ / ?, and find the mistake.
-3. **Pair work (15 min)** — In pairs, pupils use Example 2 on the worksheet and source card B to complete the check card. Circulate, supporting the pairs that need help.
+One 60-minute lesson, in four segments.
+
+1. **Introduction (10 min)** — Ask: "Have you heard of AI? What has it done for you?" Collect answers without judging. Make the point: "AI can be wrong too, so we check first, then trust."
+2. **Demonstration (20 min)** — Project Example 1 (the AI says "Sha Tin has trams"). Read the answer together, then model the check card: circle the AI's claims → compare with the source card → mark ✓ / ✗ / ?, and find the mistake.
+3. **Pair work (20 min)** — In pairs, pupils use Example 2 on the worksheet and source card B to complete the check card. Circulate, supporting the pairs that need help.
 4. **Sharing and wrap-up (10 min)** — Two pairs share the mistake they found. The teacher restates the three-step prompt "ask, then check, then trust", and asks: "What do we do when we are not sure?" (Answer: ask the teacher / check a second source.)
 
 ## Answer key and marking notes
