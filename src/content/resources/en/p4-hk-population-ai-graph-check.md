@@ -11,11 +11,11 @@ subject: "Mathematics"
 audience: [teachers, students]
 sourceIdea: "#11"
 sources: ["E, p.6"]
-prepTime: "1 lesson (about 35–40 min)"
+prepTime: "1 lesson (60 min)"
 equipment: "Projector; printed student worksheet (graph paper or spreadsheet)"
 author: "BeetsBot"
-version: "1.0"
-date: 2026-10-07
+version: "1.1"
+date: 2026-10-17
 description: "Students check an AI-generated explanation of Hong Kong's population: find the figures with no source, discover that the claim that the population 'rises every year' is wrong, and redraw the correct line graph using official Census and Statistics Department data."
 metaDescription: "Students check an AI explanation of Hong Kong's population: find the figures with no source, spot the wrong claim, and redraw the graph from official data."
 image: "/images/p4-hk-population-ai-graph-check-hero.webp"
@@ -48,11 +48,10 @@ Students will be able to:
 Written for the upper-primary learning stage, it covers the reflection on the application of AI strand of AI literacy, building critical thinking and keeping human judgement first.
 
 ## How to use it
-1. **Hook (5 minutes)** — Project "the AI's explanation" (see the download), and ask: can this be trusted? How would you check it?
-2. **Set up a checking method (5 minutes)** — Together, list the checking steps: find the source → compare the figures → check whether each claim is supported by the data.
-3. **Group checking (15 minutes)** — Students check each statement using the official Census and Statistics Department data.
-4. **Redraw the line graph (10 minutes)** — Plot the graph using the official data, and describe the trend in one sentence.
-5. **Wrap up (5 minutes)** — Discuss: if the AI got half its figures right, why is it still risky?
+1. **Hook and set up a checking method (15 minutes)** — Project "the AI's explanation" (see the download), and ask: can this be trusted? How would you check it? Then list the checking steps together: find the source → compare the figures → check whether each claim is supported by the data.
+2. **Group checking (20 minutes)** — Students check each statement using the official Census and Statistics Department data.
+3. **Redraw the line graph (18 minutes)** — Plot the graph using the official data, and describe the trend in one sentence.
+4. **Wrap up (7 minutes)** — Discuss: if the AI got half its figures right, why is it still risky?
 
 **Census and Statistics Department**
 

@@ -168,26 +168,26 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.0
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; 《中小學應用人工智能教學指南》, pp.2-7 to 2-8
 
-### S1-S3 Where Hong Kong lives: housing types and living space, checked against official figures
+### S1-S3 Where Hong Kong lives: comparing housing choices with a scoring model
 - URL: https://beets-ai.com/en/resources/hk-housing-figures-ai-check/
 - Language: en
-- Description: Pupils take an AI's account of Hong Kong housing — a typical flat size, the public-versus-private split, how it changed over time — and check it line by line: supported by the official figures, contradicted by them, or impossible to check. Then they redraw a corrected comparison chart.
+- Description: Pupils turn 'where is the better place to live?' into a small mathematical model: at most three factors, whole-number scores from 1 to 5, three weights that add to 10, and one weighted average — then fill in a method review sheet that says when the model can be trusted and when it cannot.
 - Stage: S1-S3
 - Subject: Mathematics
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.13
 
-### S1–S3 香港人住哪裡：住屋類型與居住面積，用官方數字核實
+### S1–S3 香港住哪裡：用評分模型比較居住選擇（數學建模）
 - URL: https://beets-ai.com/resources/hk-housing-figures-ai-check/
 - Language: zh-HK
-- Description: 學生拿一段 AI 對香港住屋的說明（平均面積、公營與私營比例、多年變化），逐句核實：分辨有官方數字支持、與官方數字矛盾、以及無法核實三種情況，再用官方統計重畫比較圖表並報告。
+- Description: 學生把「住哪裡較適合」變成一個小型數學模型：最多三個因素、1–5 分整數、三個權重合共 10，用一條加權平均式計算三個虛構居住選項的總分，再填寫方法檢視紀錄，說明模型何時可信、何時不可以當答案。
 - Stage: S1-S3
 - Subject: 數學
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.13
 
 ### Hong Kong then and now: a local history project with an alternative to a family interview (P4-P6)
@@ -352,7 +352,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Mathematics
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.6
 
 ### P4–P6 香港人口折線圖：檢查 AI 生成的解釋
@@ -363,7 +363,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 數學
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.6
 
 ### P4-P6 curriculum gap map: where AI literacy already fits your subjects
