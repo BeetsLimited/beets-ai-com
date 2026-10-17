@@ -44,7 +44,7 @@ Users will be able to:
 1. Check a piece of text against four questions before pasting it.
 2. Point out the identifying parts of a sample passage and write the stripped version.
 3. Explain why deleting first is more reliable than repairing afterwards.
-4. Record one check in the log: the date, what was entered, what was removed, and who checked it.
+4. Record one check in the log: who entered it, when, the category of data, and whether it was anonymised.
 
 ## How to use it
 
@@ -76,7 +76,7 @@ This is the hardest question, because it makes you think about the task itself. 
 
 **Log (one row per check)**
 
-| Date | What was entered (briefly) | What was removed | Checked by |
+| Who entered it | When | Category of data | Anonymised |
 |---|---|---|---|
 |  |  |  |  |
 |  |  |  |  |
