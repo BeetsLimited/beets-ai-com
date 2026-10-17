@@ -184,6 +184,7 @@ type ResourceEntry = {
     reviewer?: string;
     version?: string;
     date: Date | string;
+    updated?: Date | string;
     fileType?: string[];
     downloads?: string[];
     image?: string;
@@ -222,7 +223,8 @@ export function learningResourceLd(entry: ResourceEntry, lang: Locale, url: stri
      */
     keywords: [themeLabel(lang, d.theme), d.stage, d.subject].filter(Boolean).join(", "),
     datePublished: published,
-    dateModified: published,
+    /** A page edited after publication reports the edit, not the first publish. */
+    dateModified: d.updated ? new Date(d.updated).toISOString().slice(0, 10) : published,
     version: d.version,
     publisher: { "@id": `${ORG_URL}/#organization` },
     /**

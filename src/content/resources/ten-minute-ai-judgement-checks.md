@@ -7,15 +7,16 @@ type: "resource"
 kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
-subject: "全科/跨科"
+subject: "全科／跨科"
 audience: [teachers, students]
 sourceIdea: "#3"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "每題約 10 分鐘；三題可在一節（約 40 分鐘）內完成"
 equipment: "只需列印工作紙；如想示範可用投影"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "三個各約十分鐘的形成性小任務：判斷 AI 答案是否可信、找出同學答案中自己能辯護的部分、列出交功課前要檢查的事項。附評分指引與後續活動。"
 image: "/images/ten-minute-ai-judgement-checks-hero.webp"
 imageAlt: "教師在課室內舉起一張深紅色卡片，兩名學生坐在桌前，桌上有一支藍色鉛筆。"

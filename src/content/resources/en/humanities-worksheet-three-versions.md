@@ -7,15 +7,16 @@ type: "resource"
 kind: "worksheet"
 theme: "E"
 stage: "P4-P6"
-subject: "Humanities"
+subject: "Primary Humanities"
 audience: [teachers, students]
 sourceIdea: "#6"
 sources: ["G, pp.2-5 and 2-7"]
 prepTime: "1 lesson (about 35-40 min); plus time to copy the three versions in advance"
 equipment: "Printouts of the three worksheet versions; scissors and glue for the visual version; projector (optional)"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "A single P4-P6 Humanities worksheet in three versions — standard, scaffolded and visual — with notes explaining the changes and a comparison table."
 image: "/images/humanities-worksheet-three-versions-hero.webp"
 imageAlt: "A hand reaching towards three blank folders on a table, the left marked with a deep red tab and the middle with a blue tab."

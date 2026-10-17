@@ -7,15 +7,16 @@ type: "resource"
 kind: "worksheet"
 theme: "C"
 stage: "S4-S6"
-subject: "人文"
+subject: "歷史"
 audience: [teachers, students]
 sourceIdea: "#14"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "一節雙連堂（約 80 分鐘），或拆作三節各約 25 分鐘"
 equipment: "列印或投影；其中一步學生可能需要學校核准的 AI 工具"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-15
+updated: 2026-10-17
 description: "歷史科 AI 答案流暢卻無出處，學生分不清哪些說法有史料、哪些只是順口。三個任務教 S4–S6 學生拆開宣稱、追查證據，改寫成自己能負責的版本，附證據鏈記錄表。"
 image: "/images/history-evidence-trail-workshop-hero.webp"
 imageAlt: "兩名學生站在桌旁，一人舉起一張紅色卡片，另一人指著桌上四張淺色紙卡排成的證據鏈，旁邊有一支藍色鉛筆。"

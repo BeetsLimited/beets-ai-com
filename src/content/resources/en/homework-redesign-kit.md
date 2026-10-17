@@ -14,8 +14,9 @@ sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "About 40 min (self-guided; can be used for panel planning)"
 equipment: "Projector or printed examples; a copy of an existing assignment you want to redesign"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "Two complete before-and-after assignments (a Chinese Language reading response and a Humanities data task) plus a homework-redesign checklist, showing how to make student thinking visible while keeping the learning objective and the time required."
 metaDescription: "Two complete before-and-after assignments, plus a homework-redesign checklist, showing how to make student thinking visible without adding time."
 image: "/images/homework-redesign-kit-hero.webp"

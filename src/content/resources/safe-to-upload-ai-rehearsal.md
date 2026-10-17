@@ -7,15 +7,16 @@ type: "resource"
 kind: "guide"
 theme: "B"
 stage: "P4-P6"
-subject: 全科/跨科
+subject: "全科／跨科"
 audience: [teachers]
 sourceIdea: "#8"
 sources: ["G, pp.2-4 and 2-9"]
 prepTime: "45 分鐘（可分成兩節）"
 equipment: "投影或電腦；亦可純列印操作"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-07
+updated: 2026-10-17
 description: "教師實作練習：從六份虛構學校文件中找出並移除可識別學生的資料，再安全地交給 AI 工具。附答案、準備清單與可重用步驟。"
 downloads: ["/files/safe-to-upload-ai-rehearsal.docx"]
 image: "/images/safe-to-upload-ai-rehearsal-hero.webp"

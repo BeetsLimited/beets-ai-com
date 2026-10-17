@@ -7,15 +7,16 @@ type: "resource"
 kind: "worksheet"
 theme: "C"
 stage: "S4-S6"
-subject: "Humanities"
+subject: "History"
 audience: [teachers, students]
 sourceIdea: "#14"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "One double lesson (about 80 min), or three 25-minute segments"
 equipment: "Printing or projection; for one step pupils may need the school's approved AI tool"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-15
+updated: 2026-10-17
 description: "An AI answer in history often arrives as a fluent paragraph with no sources, and students cannot tell a sourced claim from a plausible one. Three linked tasks teach S4-S6 students to split a claim, trace the evidence, and rewrite it into a version they can stand behind, with a reusable evidence-trail record, a worked example and a marking guide."
 metaDescription: "Three linked tasks teach S4-S6 history students to split an AI claim, trace the evidence, and rewrite it into a version they can stand behind."
 image: "/images/history-evidence-trail-workshop-hero.webp"

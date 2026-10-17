@@ -7,15 +7,16 @@ type: "resource"
 kind: "lesson"
 theme: "D"
 stage: "P4-P6"
-subject: "人文"
+subject: "人文科"
 audience: [teachers, students]
 sourceIdea: "#13"
 sources: ["E, p.8"]
 prepTime: "1 節（約 35–40 分鐘）；專題在課外完成"
 equipment: "投影或電腦；可列印工作紙；街道地圖或電子地圖（如有）"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "P4-P6 人文科「香港今昔」專題：提供訪談提示、不需訪談家人的公開資料路徑、一次來源核對示例與三級評分表，讓每位學生都能完成。"
 image: "/images/hk-then-and-now-project-hero.webp"
 imageAlt: "一位長者與一名女孩同坐在淺灰色沙發上一起看書，身旁有深紅色坐墊和一盆藍色花盆的植物。"

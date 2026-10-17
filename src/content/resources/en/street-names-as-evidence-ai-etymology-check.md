@@ -7,15 +7,16 @@ type: "resource"
 kind: "worksheet"
 theme: "D"
 stage: "S1-S3"
-subject: "Humanities"
+subject: "History"
 audience: [teachers, students]
 sourceIdea: "#86"
 sources: ["E, p.14"]
 prepTime: "One lesson (about 40 min); add a homework slot for pupils to check the sources"
 equipment: "Projector; printed worksheet; access to usable official sources when checking (the school library, an official online notice or a local publication)"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-16
+updated: 2026-10-17
 description: "Pupils pick a street they walk along every day, ask an AI where its name came from, then check the answer line by line: find the matching record in an official or first-hand source and sort each sentence into supported, contradicted or impossible to check."
 metaDescription: "Pupils ask an AI where a local street name came from, then check every sentence against an official record: supported, contradicted or uncheckable."
 image: "/images/street-names-as-evidence-ai-etymology-check-hero.webp"

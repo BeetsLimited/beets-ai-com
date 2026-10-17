@@ -8,15 +8,16 @@ type: "resource"
 kind: "worksheet"
 theme: "E"
 stage: "P4-P6"
-subject: "人文"
+subject: "人文科"
 audience: [teachers, students]
 sourceIdea: "#6"
 sources: ["G, pp.2-5 and 2-7"]
 prepTime: "1 節（約 35–40 分鐘）；另需時間預先列印三種版本"
 equipment: "列印三種版本的工作紙；圖像版另需剪刀與膠水；投影（可選）"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "一份同一主題的 P4–P6 人文科工作紙，示範標準、扶助、圖像三個版本的差異，並附各版本的改動說明與比較表。"
 image: "/images/humanities-worksheet-three-versions-hero.webp"
 imageAlt: "一隻手伸向桌上三份空白文件夾，左邊一份有深紅色標籤，中間一份有藍色標籤。"

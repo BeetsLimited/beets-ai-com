@@ -7,15 +7,16 @@ type: "resource"
 kind: "lesson"
 theme: "D"
 stage: "P4-P6"
-subject: "Humanities"
+subject: "Primary Humanities"
 audience: [teachers, students]
 sourceIdea: "#13"
 sources: ["E, p.8"]
 prepTime: "1 lesson (about 35-40 min); the project itself is completed outside class"
 equipment: "Projector or computer; printable worksheet; a street map or online map if available"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, a worked source check and a three-level rubric, so every pupil can complete it."
 metaDescription: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, and a rubric."
 image: "/images/hk-then-and-now-project-hero.webp"

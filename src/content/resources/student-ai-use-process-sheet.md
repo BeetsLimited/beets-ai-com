@@ -7,15 +7,16 @@ type: "resource"
 kind: "worksheet"
 theme: "C"
 stage: "P4-P6"
-subject: 全科/跨科
+subject: "全科／跨科"
 audience: [teachers, students]
 sourceIdea: "#4"
 sources: ["F, p.1-13", "G, p.2-8"]
 prepTime: "10 分鐘說明 + 課業時間"
 equipment: "工作紙列印（可選：學生裝置）"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-07
+updated: 2026-10-17
 description: "一張可重用的歷程表，記錄學生第一次嘗試、AI 提示、核對結果、修訂與最後解釋，讓教師看得見學生的思考，而不必翻查整個對話紀錄。"
 image: "/images/student-ai-use-process-sheet-hero.webp"
 imageAlt: "一名學生托着頭坐在桌前，看着面前一張空白紙；桌上有深紅色筆筒和藍色鉛筆。"

@@ -14,8 +14,9 @@ sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "About 10 min per task; all three fit one lesson (about 40 min)"
 equipment: "Printed worksheets only; a projector helps if you model a task"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "Three short formative tasks (about ten minutes each): judge whether an AI answer is trustworthy, spot the part of a classmate's answer the writer can actually defend, and list what still needs checking before handing work in. With scoring guidance and follow-up activities."
 metaDescription: "Three quick formative tasks for P4-P6: judge whether an AI answer is trustworthy, spot what a classmate can defend, and list what still needs checking."
 image: "/images/ten-minute-ai-judgement-checks-hero.webp"

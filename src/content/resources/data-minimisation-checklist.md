@@ -15,8 +15,9 @@ sources: ["G, pp.2-4 and 2-7", "E, p.17"]
 prepTime: "5 分鐘（第一次使用）；之後每次輸入前約 30 秒"
 equipment: "一頁 A4 檢查表（可獨立列印）；可貼在電腦旁或影印機旁"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-17
+updated: 2026-10-17
 description: "一頁 A4、四條問題、刪減前後對照與記錄欄：貼上之前先逐項對照，任何一問答「有」就回到該處刪去，四問全答「沒有」才輸入。"
 image: "/images/data-minimisation-checklist-hero.webp"
 imageAlt: "一位五官從簡的教師手持一張空白紙與一支紅色筆，站在素色書桌旁，桌上有疊好的紙張與一個藍色盒子。"

@@ -14,8 +14,9 @@ sources: ["G, pp.2-4 and 2-9"]
 prepTime: "45 min (can be split across two lessons)"
 equipment: "Projector or computer; also runs on printouts alone"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-07
+updated: 2026-10-17
 description: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to an AI tool. Includes an answer key, a preparation checklist and reusable steps."
 metaDescription: "A hands-on practice for teachers: find and remove pupil-identifying information in six fictional school documents, then hand them safely to AI."
 downloads: ["/files/en/safe-to-upload-ai-rehearsal.docx"]

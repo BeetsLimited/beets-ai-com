@@ -8,15 +8,16 @@ type: "resource"
 kind: "worksheet"
 theme: "B"
 stage: "P4-S6"
-subject: "Cross-subject"
+subject: "Cross-curricular"
 audience: [teachers]
 sourceIdea: "#42"
 sources: ["G, pp.2-4 and 2-7", "E, p.17"]
 prepTime: "5 minutes the first time; about 30 seconds before each later input"
 equipment: "The one-page A4 checklist (prints on its own); keep it beside the computer or the photocopier"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-17
+updated: 2026-10-17
 description: "One A4 page, four questions, a before-and-after comparison and a log: check each question before pasting, strip whatever answers yes, and type only when all four answer no."
 metaDescription: "One A4 page, four questions, a before-and-after strip and a log: strip identifying data before you paste anything into an AI tool."
 image: "/images/data-minimisation-checklist-hero.webp"

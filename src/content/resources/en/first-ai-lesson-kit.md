@@ -14,8 +14,9 @@ sources: ["G, p.2-3", "G, pp.2-5 and 2-7"]
 prepTime: "1 lesson (40 min); about 15 min preparation"
 equipment: "Projector or computer; worksheet and source cards; no live internet needed (a pre-printed AI answer can replace using an AI tool on the day)"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a slide-by-slide outline, a pupil worksheet and three post-lesson reflection questions, so a teacher who has never used AI can run a first AI lesson alone."
 metaDescription: "A self-guided kit: one 40-minute upper-primary Humanities demonstration lesson, a preparation checklist, a worksheet and reflection questions."
 image: "/images/first-ai-lesson-kit-hero.webp"

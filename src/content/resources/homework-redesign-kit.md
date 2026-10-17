@@ -7,15 +7,16 @@ type: "resource"
 kind: "guide"
 theme: "C"
 stage: "P4-P6"
-subject: "全科/跨科"
+subject: "全科／跨科"
 audience: [teachers]
 sourceIdea: "#5"
 sources: ["F, p.1-13", "G, pp.2-7 to 2-8"]
 prepTime: "約 40 分鐘（自學流程，可作科組備課）"
 equipment: "投影或列印的範例；教師自備一份想改寫的現有功課"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "兩份完整的前後對照課業範例（中文閱讀回應與小學人文科資料整理）加一份功課重設計檢查清單，示範在保留學習目標與作答時間之餘，讓學生的思考歷程看得見。"
 image: "/images/homework-redesign-kit-hero.webp"
 imageAlt: "一位教師坐在桌前，手拿夾紙板，桌上有疊好的紙張和插着鉛筆的深紅色筆筒。"

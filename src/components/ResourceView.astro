@@ -33,6 +33,8 @@ interface Props {
 const { entry, lang, related = [] } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+/** A calendar date as a reader reads it: one format in both editions. */
+const isoDate = (value: Date | string) => new Date(value).toISOString().slice(0, 10);
 /** The classification lines, in the order the page reads them. */
 const classification = [
   // The theme's public name. The A–E key is internal lettering, not for a reader.
@@ -45,6 +47,13 @@ const practicals = [
   d.prepTime ? { label: t(lang, "labelPrep"), value: d.prepTime } : null,
   d.equipment ? { label: t(lang, "labelEquipment"), value: d.equipment } : null,
   { label: t(lang, "labelVersion"), value: d.version },
+  /**
+   * The last-modified date, beside the version (Henry, 2026-10-17). `updated`
+   * is written only when a page really was changed after publication; an entry
+   * that never was has no edit to report, so it shows its publication date
+   * rather than a blank or a claim.
+   */
+  { label: t(lang, "labelUpdated"), value: isoDate(d.updated ?? d.date) },
 ].filter((row): row is { label: string; value: string } => row !== null);
 ---
 

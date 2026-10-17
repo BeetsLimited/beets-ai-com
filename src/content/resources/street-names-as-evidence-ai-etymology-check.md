@@ -8,15 +8,16 @@ type: "resource"
 kind: "worksheet"
 theme: "D"
 stage: "S1-S3"
-subject: "人文"
+subject: "歷史"
 audience: [teachers, students]
 sourceIdea: "#86"
 sources: ["E, p.14"]
 prepTime: "1 節（約 40 分鐘）；另加課後時段供學生到圖書館或網上查證"
 equipment: "投影；工作紙列印；查證時需要可用的官方資料來源（校內圖書館、網上官方公告或地區資料）"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-16
+updated: 2026-10-17
 description: "學生挑一條自己每天經過的街道，先問 AI 它的名字從何而來，再逐句核實：找出官方或一手資料的對應記載，把每一句歸入「有資料支持」、「與資料矛盾」或「無法核實」，並說明理由。"
 metaDescription: "學生挑一條每天經過的街道，先問 AI 名字從何而來，再逐句核實：找出官方或一手資料的記載，把每一句判為有資料支持、與資料矛盾或無法核實。"
 image: "/images/street-names-as-evidence-ai-etymology-check-hero.webp"

@@ -14,8 +14,9 @@ sources: ["F, p.1-13", "G, p.2-8"]
 prepTime: "10 min briefing + task time"
 equipment: "Printed worksheet (optional: student devices)"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-07
+updated: 2026-10-17
 downloads: ["/files/en/student-ai-use-process-sheet.docx"]
 feedback: true
 description: "A reusable process sheet that records a student's first attempt, the AI prompt, the checking results, revisions, and final explanation, so teachers can see the student's thinking without having to search through the entire conversation log."

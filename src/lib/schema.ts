@@ -109,6 +109,17 @@ const fields = {
   reviewer: z.string().min(1).optional(),
   version: z.string().default("1.0"),
   date: z.coerce.date(),
+  /**
+   * The date the page was last changed, when that is not the day it was first
+   * published (Henry, 2026-10-17 — "顯示最後修改日").
+   *
+   * A reader uses this the way a teacher uses the date on a printed worksheet:
+   * to know whether what they downloaded last term is still what is here. So the
+   * page prints it beside the version, and `dateModified` in the structured data
+   * reads it too. Optional, and absent means "never changed since publication" —
+   * the view then prints `date`, which is honest rather than blank.
+   */
+  updated: z.coerce.date().optional(),
   description: z.string().min(1),
   /**
    * The <title> TAG only, for when it has to differ from the visible `title`.

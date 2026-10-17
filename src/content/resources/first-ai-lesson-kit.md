@@ -7,15 +7,16 @@ type: "resource"
 kind: "lesson"
 theme: "E"
 stage: "P4-P6"
-subject: "全科/跨科"
+subject: "全科／跨科"
 audience: [teachers]
 sourceIdea: "#9"
 sources: ["G, p.2-3", "G, pp.2-5 and 2-7"]
 prepTime: "1 節（40 分鐘）；課前準備約 15 分鐘"
 equipment: "投影或電腦；工作紙與來源卡；毋須即場上網（可用預先印好的 AI 答案代替即場使用 AI 工具）"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-17
 description: "一份自學套件：一個 40 分鐘的 P4–P6 人文科示範課堂、課前準備清單、投影片逐頁大綱、學生工作紙與課後反思三問，讓從未用過 AI 的教師也能獨自上完第一堂 AI 課。"
 image: "/images/first-ai-lesson-kit-hero.webp"
 imageAlt: "教師站在桌旁，把一疊工作紙交給兩名學生；桌上有深紅色筆筒和藍色托盤，背景是課室白板。"
