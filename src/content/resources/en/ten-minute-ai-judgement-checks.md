@@ -25,6 +25,10 @@ downloads: ["/files/en/ten-minute-ai-judgement-checks.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Cross-KLA | fact-checking, information literacy, over-reliance | Fact-check and information literacy: the three tasks assess judgement, not whether a tool was used; pupils name which claims are AI hallucinations and what still has to be checked, so that thinking is not outsourced to the tool. |
+
 ## What this solves
 
 After pupils use AI for homework, the hardest thing for a teacher to see is often not whether the answer is right, but whether the pupil actually thought about it. Reading through a chat history is neither practical nor good for privacy.

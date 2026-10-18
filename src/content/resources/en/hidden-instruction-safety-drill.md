@@ -25,6 +25,10 @@ downloads: ["/files/en/hidden-instruction-safety-drill.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Technology Education | information processing, information literacy, fact-checking | Information literacy and fact-checking: the one instruction hidden inside the material is one the tool will follow as well, so separate the task from the material before it goes in, and treat what the tool then does as unverified output rather than a fact — no over-reliance on it. |
+
 > What you paste in is one block of text. What the tool reads can be two things: your task, and a second instruction hidden inside the material. This worksheet teaches two moves only — spot it, then do not follow it.
 
 ## What this solves

@@ -25,6 +25,10 @@ downloads: ["/files/en/street-names-as-evidence-ai-etymology-check.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Personal, Social and Humanities Education | project learning, use of historical sources, fact-checking | Fact-check: however fluent the answer, no source means the typical shape of an AI hallucination; every sentence has to be checked against a first-hand or official record — human judgement first, the tool second, and no over-reliance on it. |
+
 > A street name looks like a fact. Ask an AI where it came from, though, and you usually get a fluent story with no source named. This worksheet teaches pupils to sort the answer: which sentence a record supports, which sentence a record contradicts, and which sentence cannot be checked at all.
 
 ## What this solves

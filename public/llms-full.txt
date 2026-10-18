@@ -242,7 +242,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Primary Humanities
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 2.3
+- Version: 2.4
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.8
 
 ### 香港今昔：本地歷史專題（不需訪談家人的替代方案）（P4–P6）
@@ -253,7 +253,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 人文科
 - Theme: D (用 AI 探究香港)
 - Audience: teachers (教師), students (學生)
-- Version: 2.3
+- Version: 2.4
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.8
 
 ### Homework redesign kit: two before-and-after assignments that show student thinking (P4-P6)
@@ -550,7 +550,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: PE
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
-- Version: 2.4
+- Version: 2.5
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.4; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8
 
 ### P1–P3 體育：兩個不插電 AI 遊戲（無需裝置）
@@ -561,7 +561,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 體育
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
-- Version: 2.4
+- Version: 2.5
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.4; 《中小學人工智能素養學習架構》, p.1-8
 
 ### Whole-staff AI-literacy baseline self-audit and one-term CPD plan (P1-S6)

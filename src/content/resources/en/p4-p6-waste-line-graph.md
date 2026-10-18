@@ -25,6 +25,10 @@ downloads: ["/files/en/p4-p6-waste-line-graph.docx"]
 feedback: true
 ---
 
+| Key learning area | Learning elements | Points to note when using AI |
+|---|---|---|
+| Mathematics Education | data, charts, statistics, comparison, problem-solving | Fact-check and over-reliance: letting a tool draw the graph hands over the judgements on intervals, units and rounding, and an AI hallucination is easy to miss; every value on the graph still has to be checked against the official source, point by point. |
+
 > A line on a graph can be clear, and it can mislead. This worksheet has pupils draw their own, then peer-assess it: does this line say what the data actually says?
 
 ## What this solves
