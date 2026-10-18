@@ -11,11 +11,12 @@ subject: "PE"
 audience: [teachers]
 sourceIdea: "#10"
 sources: ["E, p.4", "F, p.1-8"]
-prepTime: "One PE lesson (about 35 min)"
+prepTime: "One PE lesson (60 min)"
 equipment: "Hall or playground and everyday PE kit only (cones, hoops or floor mats, picture cards) — no devices"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-10-08
+updated: 2026-10-18
 description: "Two screen-free movement games: pupils run to a labelled cone to sort everyday items into 'uses AI / does not use AI', then the whole class acts as training data to see how one wrong example skews the model. Includes an equipment list, teacher instructions, inclusion notes and a two-minute understanding check."
 metaDescription: "Two screen-free movement games: pupils sort everyday items into 'uses AI / does not use AI', then see how one wrong example skews the model."
 image: "/images/screen-free-ai-pe-games-p1-p3-hero.webp"
@@ -51,12 +52,12 @@ They cover the fundamental operating principles of AI strand of AI literacy at t
 
 ## Teaching steps
 
-(The timings below add up to one lesson of about 35 minutes; Games 1 and 2 can be swapped or shortened depending on the class.)
+One 60-minute lesson, in four segments. The two games keep exactly the same content; only the time for each activity is longer, and Games 1 and 2 can be swapped depending on the class.
 
-1. **Warm-up and introduction (5 min)** — Ask: "What things can 'decide for themselves'?" (for example an automatic door, a voice assistant). Collect answers without judging.
-2. **Game 1 — "AI or not AI?" (12 min)** — See the teacher instructions below. Pupils run to the labelled cone to sort each card.
-3. **Game 2 — "Train the model" (12 min)** — The whole class is the "training data"; one pupil is the "model". Watch how one wrong example makes the model go wrong.
-4. **Tidy-up and the two-minute check (6 min)** — Use the check questions in "Answer key and marking notes" to confirm the two key ideas.
+1. **Warm-up and introduction (8 min)** — Ask: "What things can 'decide for themselves'?" (for example an automatic door, a voice assistant). Collect answers without judging.
+2. **Game 1 — "AI or not AI?" (22 min)** — See the teacher instructions below. Pupils run to the labelled cone to sort each card.
+3. **Game 2 — "Train the model" (22 min)** — The whole class is the "training data"; one pupil is the "model". Watch how one wrong example makes the model go wrong.
+4. **Tidy-up and the two-minute check (8 min)** — Use the check questions in "Answer key and marking notes" to confirm the two key ideas.
 
 ### Game 1 — "AI or not AI?"
 
@@ -67,7 +68,7 @@ They cover the fundamental operating principles of AI strand of AI literacy at t
 1. The teacher holds up a card (for example "robot vacuum") and the whole class thinks for a second.
 2. The teacher calls "Go!", and pupils run to the cone they think is correct.
 3. The teacher reveals the answer, asks anyone who is wrong to run to the correct side, and gives a one-sentence reason (for example "A robot vacuum avoids obstacles by itself, so it uses AI").
-4. Repeat with 6–8 cards.
+4. Repeat with 8–12 cards (with the longer time, play more rounds from the same set of cards).
 
 **Teacher instructions:**
 
@@ -80,10 +81,10 @@ They cover the fundamental operating principles of AI strand of AI literacy at t
 
 **How to play (four steps):**
 
-1. **Teach (about 4 min)** — One pupil is the "model", standing with their back to the class (or with eyes closed). The teacher shows cards one by one (cat, dog, fish → animal; ball, car → not animal); the whole class says the correct label out loud so the "model" hears it. Repeat 4–5 cards, all correct.
-2. **Test (about 2 min)** — The teacher shows a new card the model has not seen (for example "bird"). The class stays silent; the model judges "animal / not animal" and steps into the matching zone. Usually correct.
-3. **Add one wrong example (about 2 min)** — The teacher quietly shows a "ball" card but signals the class to say the label "animal" on purpose. Test a new ball card again — the model now judges it as "animal".
-4. **Discuss (about 4 min)** — Ask: "Why did the model get it wrong just now?" Guide pupils to see that one wrong example mixed into the teaching made the AI learn the wrong thing.
+1. **Teach (about 8 min)** — One pupil is the "model", standing with their back to the class (or with eyes closed). The teacher shows cards one by one (cat, dog, fish → animal; ball, car → not animal); the whole class says the correct label out loud so the "model" hears it. Repeat 4–5 cards, all correct; a second pupil can take a turn as the "model" with the same cards, or the class can say the labels more than once.
+2. **Test (about 4 min)** — The teacher shows a new card the model has not seen (for example "bird"). The class stays silent; the model judges "animal / not animal" and steps into the matching zone. Usually correct; one or two more new cards can be tested.
+3. **Add one wrong example (about 4 min)** — The teacher quietly shows a "ball" card but signals the class to say the label "animal" on purpose. Test a new ball card again — the model now judges it as "animal"; one more new card shows whether the model still gets it wrong.
+4. **Discuss (about 6 min)** — Ask: "Why did the model get it wrong just now?" Guide pupils to see that one wrong example mixed into the teaching made the AI learn the wrong thing.
 
 ### Inclusion notes
 

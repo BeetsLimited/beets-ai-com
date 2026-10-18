@@ -11,12 +11,12 @@ subject: "Primary Humanities"
 audience: [teachers, students]
 sourceIdea: "#13"
 sources: ["E, p.8"]
-prepTime: "1 lesson (about 35-40 min); the project itself is completed outside class"
+prepTime: "1 lesson (60 min); the project itself is completed outside class"
 equipment: "Projector or computer; printable worksheet; a street map or online map if available"
 author: "BeetsBot"
-version: "1.1"
+version: "1.2"
 date: 2026-10-08
-updated: 2026-10-17
+updated: 2026-10-18
 description: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, a worked source check and a three-level rubric, so every pupil can complete it."
 metaDescription: "A P4-P6 Humanities project on Hong Kong then and now, with interview prompts, a public-source path for pupils who cannot interview family, and a rubric."
 image: "/images/hk-then-and-now-project-hero.webp"
@@ -50,11 +50,12 @@ Written for the upper-primary learning stage, it covers the reflection on the ap
 
 ## Teaching steps
 
-1. **Introduction (5 min)** — Show two images of the same place, old and new (a diagram is fine), and ask: "What has changed here, and how do you know?"
-2. **Demonstrate checking (10 min)** — Use the worked source check in the attachment to show how an AI's claim about "Banyan Street" is checked against an old map and an old newspaper, and how the right and wrong parts are found.
-3. **Choose a path (5 min)** — Introduce the two paths: Path A interviewing a relative, Path B public sources. Stress that both paths count and are marked identically.
-4. **Group planning (10 min)** — Pupils choose a place and a path and fill in the planning section of the worksheet; the teacher circulates to make sure everyone has a workable starting point.
-5. **Wrap-up and set the task (5-10 min)** — Explain the task and the "three never" rules (see teacher notes), and remind pupils to bring one source next lesson.
+One 60-minute lesson, in four segments; the project itself is completed outside class.
+
+1. **Introduction (8 min)** — Show two images of the same place, old and new (a diagram is fine), and ask: "What has changed here, and how do you know?"
+2. **Demonstrate checking (17 min)** — Use the worked source check in the attachment to show how an AI's claim about "Banyan Street" is checked against an old map and an old newspaper, and how the right and wrong parts are found.
+3. **Choose a path and plan the project (25 min)** — Introduce the two paths: Path A interviewing a relative, Path B public sources, and stress that both count and are marked identically. Pupils choose a place and a path and fill in the planning section of the worksheet; the teacher circulates to make sure everyone has a workable starting point.
+4. **Wrap-up and set the task (10 min)** — Explain the task and the "three never" rules (see teacher notes), and remind pupils to bring one source next lesson.
 
 ## Answer key and marking notes
 
