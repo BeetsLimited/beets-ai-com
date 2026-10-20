@@ -81,6 +81,12 @@ jobs:
       - name: Check page metadata
         run: npm run check:meta
 
+      # Billy, 2026-10-21: /resources.json is the machine-readable index external
+      # agents read. No other gate reads it — a feed with the wrong URL, a stale
+      # version or a missing resource would ship silently. See the script header.
+      - name: Check the resource feed matches what was published
+        run: npm run check:feed
+
       - name: Check external links (non-blocking)
         run: npm run check:links:external
         continue-on-error: true

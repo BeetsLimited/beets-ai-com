@@ -16,6 +16,7 @@ import {
 } from "../lib/i18n";
 import { AUDIENCES, THEMES } from "../lib/schema";
 import { ORG_SITE, organizationLd, socialMeta, webSiteLd } from "../lib/seo";
+import { FEED_PATH } from "../lib/resources-feed";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
 import { getCollection } from "astro:content";
 
@@ -124,6 +125,20 @@ const liveResources = (
       ))
     }
     {noindex ? <meta name="robots" content="noindex, nofollow" /> : null}
+
+    <!--
+      Machine-readable index: every published resource, newest first, with both
+      editions' titles and URLs and the hero image (Billy, 2026-10-21). Emitted
+      from src/pages/resources.json.ts at build time; the shape is documented at
+      /resources.schema.json. Declared on every page so an agent that fetched
+      only one resource page can still find the whole library.
+    -->
+    <link
+      rel="alternate"
+      type="application/json"
+      href={new URL(FEED_PATH, Astro.site).href}
+      title="Beets AI — every resource, in JSON"
+    />
 
     <!--
       Social cards. These also feed the link-preview surfaces that AI answer

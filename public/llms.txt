@@ -21,6 +21,11 @@ Reuse terms: https://beets-ai.com/about/
 - [https://beets-ai.com/feedback/](https://beets-ai.com/feedback/): request a resource
 
 
+## Machine-readable index
+
+- [https://beets-ai.com/resources.json](https://beets-ai.com/resources.json): every published resource, newest first — both editions' titles and URLs, the hero image, date and version. JSON; schema at https://beets-ai.com/resources.schema.json
+
+
 ## 主題 A — 校本 AI 教育規劃
 
 - [P1–S6 跨科 AI 素養覆蓋審核表：哪一科教哪個學習範疇，缺口在哪裡](https://beets-ai.com/resources/cross-subject-ai-coverage-audit/): 一份可編輯的跨科 AI 素養覆蓋審核工作簿：把八個學習領域細分為三十個科目，逐科對照三條學習範疇與四個學習階段，標出完全沒有覆蓋的位置，並為每個缺口寫下最小的下一步，附一間虛構學校的部分完成示例。 Sources: 《中小學人工智能素養學習架構》, p.1-4; 《中小學人工智能素養學習架構》, pp.1-6 to 1-10.
