@@ -1,5 +1,12 @@
 import { describe, it, expect } from "vitest";
-import { alternateHrefFor, assertPairedEditions, findCounterpart } from "../src/lib/resources";
+import {
+  alternateHrefFor,
+  assertPairedEditions,
+  findCounterpart,
+  newestFirst,
+  publishedDay,
+} from "../src/lib/resources";
+import { revisionFor, trackedAddresses } from "../src/lib/revisions";
 
 /**
  * The language switch must never point at a page that does not exist.
@@ -73,5 +80,62 @@ describe("assertPairedEditions", () => {
   it("throws when the same language appears twice", () => {
     const all = [entry("foo", "zh-HK"), entry("foo", "zh-HK")];
     expect(() => assertPairedEditions(all, "test")).toThrow(/foo \(zh-HK, zh-HK\)/);
+  });
+});
+
+/**
+ * Newest first means "newest PUBLISHED first" — the publish log's date, never
+ * the frontmatter's.
+ *
+ * Billy, 2026-10-24: the JSON feed and the catalogue disagreed about what was
+ * new, because the catalogue sorted on frontmatter `date` (which had been bumped
+ * to the day of a later edit) while the feed sorted on the publish log. Both
+ * surfaces must answer "what is new" the same way; `check:feed` now compares the
+ * built catalogue's card order against the feed.
+ *
+ * Fixtures use real publish-log records (chosen at run time, not hard-coded), so
+ * these tests do not break when a resource is added or retired.
+ */
+describe("newestFirst", () => {
+  const tracked = trackedAddresses()
+    .map((address) => ({ address, revision: revisionFor(address)! }))
+    .filter(({ revision }) => revision);
+
+  it("takes the publication date from the publish log, not frontmatter", () => {
+    const [first] = tracked;
+    const bumped = { data: { address: first.address, date: new Date("2099-01-01T00:00:00Z") } };
+    expect(publishedDay(bumped)).toBe(first.revision.published);
+  });
+
+  it("falls back to the frontmatter date when the publish log has no record", () => {
+    const untracked = { data: { address: "not-committed-yet", date: new Date("2026-10-09") } };
+    expect(publishedDay(untracked)).toBe("2026-10-09");
+  });
+
+  it("orders by publication date even when frontmatter claims the opposite", () => {
+    const sorted = [...tracked].sort((a, b) => a.revision.published.localeCompare(b.revision.published));
+    const oldest = sorted[0];
+    const newest = sorted[sorted.length - 1];
+    if (oldest.revision.published === newest.revision.published) return; // one publish day: nothing to order
+
+    // Frontmatter deliberately inverted: the oldest resource claims to be the
+    // most recent, the newest claims to be ancient.
+    const lying = [
+      { data: { address: oldest.address, date: new Date("2099-12-31T00:00:00Z") } },
+      { data: { address: newest.address, date: new Date("1990-01-01T00:00:00Z") } },
+    ];
+    expect(newestFirst(lying).map((item) => item.data.address)).toEqual([
+      newest.address,
+      oldest.address,
+    ]);
+  });
+
+  it("breaks a same-day tie by address, so the order is stable between builds", () => {
+    const day = new Date("2026-10-09");
+    const items = [
+      { data: { address: "zz-later", date: day } },
+      { data: { address: "aa-earlier", date: day } },
+    ];
+    expect(newestFirst(items).map((item) => item.data.address)).toEqual(["aa-earlier", "zz-later"]);
   });
 });

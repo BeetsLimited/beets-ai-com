@@ -1,4 +1,5 @@
 import { resourceIndexPath, resourcesPath, type Locale } from "./i18n";
+import { revisionFor } from "./revisions";
 
 /**
  * Resource routing helpers.
@@ -109,11 +110,51 @@ export function assertPairedEditions<T extends LocalizedEntry>(entries: T[], whe
 // catalogue's tags replaced the old by-stage / by-subject pages: a resource's
 // stage and subject are labels ON it, never separate near-identical pages.
 
-/** Newest first. */
-export function newestFirst<T extends { data: { date?: Date } }>(entries: T[]): T[] {
-  return [...entries].sort(
-    (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
-  );
+/**
+ * Newest first — by PUBLICATION date, then by address.
+ *
+ * The publication date is the publish log's (`src/data/revisions.json`, written
+ * from the commit log), not the frontmatter's `date` field. The feed at
+ * `/resources.json` already sorts this way, and the detail pages already print
+ * these dates (`withRevision()`), so sorting on frontmatter here made the
+ * listing disagree with both:
+ *
+ *   Billy, 2026-10-24: *"resource json file is out of sync with the actual
+ *   content"* — `p4-hk-population-ai-graph-check` sat at position 4 on the
+ *   catalogue (its frontmatter `date` had been bumped to the last edit,
+ *   2026-10-17) while the feed listed it 28th, because it was first published
+ *   2026-10-07. Two surfaces, one library, two different answers to "what is
+ *   new".
+ *
+ * Ties break on `address` ascending for the same reason the feed does it: a
+ * stable, content-independent order, so the listing and the feed cannot drift
+ * apart on the days when several resources ship together.
+ * `scripts/check-resources-feed.mjs` fails the build if they ever do.
+ */
+export function newestFirst<T extends { data: { address?: string; date?: Date } }>(
+  entries: T[],
+): T[] {
+  return [...entries].sort((a, b) => {
+    const left = publishedDay(a);
+    const right = publishedDay(b);
+    if (left !== right) return left < right ? 1 : -1;
+    return (a.data.address ?? "").localeCompare(b.data.address ?? "");
+  });
+}
+
+/**
+ * The day an entry was first published, `YYYY-MM-DD`.
+ *
+ * The publish log wins whenever it has a record; frontmatter is the fallback for
+ * an entry that has no commit yet (only possible mid-authoring), so nothing
+ * sorts to the top by accident.
+ */
+export function publishedDay<T extends { data: { address?: string; date?: Date } }>(
+  entry: T,
+): string {
+  const revision = entry.data.address ? revisionFor(entry.data.address) : undefined;
+  if (revision) return revision.published;
+  return entry.data.date ? entry.data.date.toISOString().slice(0, 10) : "";
 }
 
 /** Same-theme siblings, excluding the entry itself — "related resources". */

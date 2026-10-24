@@ -23,6 +23,8 @@
  *      (src/data/revisions.json) — the feed must never advertise a version the
  *      page has moved past
  *   7. no internal material: no idea numbers (#41), no document codes (B, p.6)
+ *   8. the built catalogue lists the same resources in the same order — the page
+ *      and the feed must give one answer to "what is new"
  *
  * Resources only. Posts share one content collection; if a post ever appears in
  * the feed, check 2 fails on the count.
@@ -168,6 +170,51 @@ for (const [index, item] of resources.entries()) {
     note(`${label}: out of order — sorted newest first, then by id (saw ${key} after ${previous.key})`);
   }
   previous = { published: item.published, id: item.id, key };
+}
+
+// 8. The catalogue lists the same resources in the same order.
+//
+// Two public surfaces answer "what is new": the catalogue page a reader sees and
+// this feed a program reads. They read different things to do it — the page used
+// to sort on frontmatter `date` (bumped on every edit), the feed on the publish
+// log — so `p4-hk-population-ai-graph-check`, first published 2026-10-07 but
+// edited 2026-10-17, appeared 4th on the page and 28th in the feed. Billy,
+// 2026-10-24: *"resource json file is out of sync with the actual content"*.
+// Both now sort on the publish log; this check is what keeps it that way, since
+// neither surface would fail on its own if the rule were reverted.
+const CATALOGUE = join(DIST, "resources/index.html");
+if (!existsSync(CATALOGUE)) {
+  note("dist/resources/index.html was not built — cannot compare the catalogue order");
+} else {
+  const html = readFileSync(CATALOGUE, "utf8");
+  const listed = Array.from(
+    html.matchAll(/class="[^"]*card-cta[^"]*"\s+href="\/resources\/([a-z0-9]+(?:-[a-z0-9]+)*)\/"/g),
+    (match) => match[1],
+  );
+  const feedIds = resources.map((item) => item.id);
+
+  if (listed.length !== feedIds.length) {
+    note(
+      `the catalogue lists ${listed.length} resources but the feed lists ${feedIds.length} ` +
+        `— both must carry every resource, in the same order`,
+    );
+  }
+  const divergences = [];
+  for (let index = 0; index < Math.min(listed.length, feedIds.length); index += 1) {
+    if (listed[index] !== feedIds[index]) {
+      divergences.push(`#${index + 1} catalogue ${listed[index]} vs feed ${feedIds[index]}`);
+    }
+  }
+  if (divergences.length > 0) {
+    note(
+      `the catalogue and the feed disagree on "newest first" (${divergences.length} of ` +
+        `${feedIds.length} positions) — ${divergences.slice(0, 3).join("; ")}` +
+        (divergences.length > 3 ? "; …" : ""),
+    );
+  }
+  if (divergences.length === 0 && listed.length === feedIds.length) {
+    console.log(`feed gate: catalogue order matches the feed (${feedIds.length} resources)`);
+  }
 }
 
 // 7. Internal material must never reach a machine-readable public surface.
