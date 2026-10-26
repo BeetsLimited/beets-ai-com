@@ -1,17 +1,17 @@
 ---
-title: "P1-P3 PE: two screen-free AI games (no devices needed)"
-metaTitle: "P1-P3 PE: two screen-free AI games"
+title: "P1-P3 cross-subject: two screen-free AI games (no devices needed)"
+metaTitle: "P1-P3 cross-subject: screen-free AI games"
 address: "screen-free-ai-pe-games-p1-p3"
 lang: "en"
 type: "resource"
 kind: "lesson"
 theme: "E"
 stage: "P1-P3"
-subject: "PE"
+subject: "Cross-curricular"
 audience: [teachers]
 sourceIdea: "#10"
 sources: ["E, p.4", "F, p.1-8"]
-prepTime: "One PE lesson (60 min)"
+prepTime: "One 60-minute lesson (in a PE lesson or a form-teacher period)"
 equipment: "Hall or playground and everyday PE kit only (cones, hoops or floor mats, picture cards) — no devices"
 author: "BeetsBot"
 version: "1.1"
@@ -27,7 +27,7 @@ feedback: true
 
 | Key learning area | Learning elements | Points to note when using AI |
 |---|---|---|
-| Physical Education | movement, fitness, games, competition, safety, cooperation | Use tools with care, and build information literacy: the teacher reads the pupils' movement as training data to show how a sensor collects data, and the class says why a wrong example teaches the model wrongly. |
+| Cross-curricular (physical activity as the vehicle) | classification, learning from examples, data and judgement | Use tools with care, and build information literacy: the teacher reads the pupils' movement as training data to show how a sensor collects data, and the class says why a wrong example teaches the model wrongly. |
 
 ## What this solves
 
@@ -37,7 +37,7 @@ This resource uses **two screen-free movement games** so that P1–P3 pupils "ru
 
 No device or screen is needed at any point — only ordinary PE kit — so it works in classrooms without tablets or a network, and in classes with a wide range of learning needs.
 
-The two games can form part of a school's digital education planning as an early encounter with AI, run in a PE lesson and usable as a lesson design for an inclusive class: pupils act out machine learning while the teacher reads their movements as training data, the way a sensor would, so they feel how the data decides the judgement.
+The two games can form part of a school's digital education planning as an early encounter with AI, run in a PE lesson or a form-teacher period and usable as a lesson design for an inclusive class: pupils act out machine learning while the teacher reads their movements as training data, the way a sensor would, so they feel how the data decides the judgement.
 
 ## Learning objectives
 
