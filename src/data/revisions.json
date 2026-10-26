@@ -133,6 +133,12 @@
       "publishes": 2,
       "version": "1.1"
     },
+    "parent-ai-communication-pack": {
+      "published": "2026-10-26",
+      "modified": "2026-10-26",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "safe-to-upload-ai-rehearsal": {
       "published": "2026-10-07",
       "modified": "2026-10-17",
@@ -186,6 +192,12 @@
       "modified": "2026-10-17",
       "publishes": 18,
       "version": "2.7"
+    },
+    "teacher-ai-cpd-ladder": {
+      "published": "2026-10-26",
+      "modified": "2026-10-26",
+      "publishes": 1,
+      "version": "1.0"
     },
     "ten-minute-ai-judgement-checks": {
       "published": "2026-10-08",
