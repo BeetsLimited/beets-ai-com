@@ -33,13 +33,33 @@
  *   node scripts/gen-revisions.mjs
  */
 import { execFileSync } from "node:child_process";
-import { readdirSync, writeFileSync, mkdirSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "src", "content", "resources");
 const OUT = join(ROOT, "src", "data", "revisions.json");
+
+/**
+ * Explicit versions for a page that was REDONE rather than revised.
+ *
+ * Henry, 2026-10-26: 「本次屬重做，內容重寫，不按 0.1 遞增」— the biased-AI lab
+ * was rewritten, and the +0.1 rule would have called that 1.9. The value is a
+ * FLOOR (`max(log, override)`), never a replacement: the commit carrying the
+ * redo prints the number that was asked for, the log catches up on its own at
+ * the next edit, and the entry is then redundant. Dates are not overridable —
+ * they are the commit log either way. `tests/revisions.test.ts` keeps every
+ * entry pointing at a real resource that the log has not already passed.
+ */
+const OVERRIDES = (() => {
+  try {
+    const raw = JSON.parse(readFileSync(join(ROOT, "src", "data", "version-overrides.json"), "utf8"));
+    return raw.resources ?? {};
+  } catch {
+    return {};
+  }
+})();
 
 /** A commit timestamp as a HKT calendar date, `YYYY-MM-DD`. */
 const hkDate = (iso) =>
@@ -95,11 +115,13 @@ for (const address of addresses) {
   if (!stamps.length) continue;
 
   const dates = stamps.map(hkDate).sort();
+  const logged = versionAt(stamps.length);
+  const floor = OVERRIDES[address]?.version;
   resources[address] = {
     published: dates[0],
     modified: dates[dates.length - 1],
     publishes: stamps.length,
-    version: versionAt(stamps.length),
+    version: floor && Number(floor) > Number(logged) ? floor : logged,
   };
   tracked += 1;
 }

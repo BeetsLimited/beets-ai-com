@@ -1,0 +1,9 @@
+{
+  "_comment": "Explicit version numbers for a page that was REDONE rather than revised. The publish log derives a version from the commit count (1.0 at first publish, +0.1 per later one), which cannot express a rebuild — Henry, 2026-10-26: '本次屬重做，內容重寫，不按 0.1 遞增'. Read by scripts/gen-revisions.mjs, which applies the value as a FLOOR (max of the log and this number) and never as a replacement: the commit that carries the redo prints the number the requester asked for, the log catches up by itself on the next edit, and the entry is then redundant and can be deleted. Dates are never overridden — they are the commit log either way. tests/revisions.test.ts keeps every entry pointing at a real resource whose logged version is not already higher.",
+  "resources": {
+    "biased-ai-lab-repair": {
+      "version": "2.0",
+      "why": "The 2026-10-26 change rewrote the lesson rather than editing it: the worked answers, the model answer with its below-standard contrast, the three marked pupils' work and the sixty-second marking routine all landed in one revision. The number is a redo, not a 0.1 step."
+    }
+  }
+}

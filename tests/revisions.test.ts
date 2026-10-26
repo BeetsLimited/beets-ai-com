@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { readdirSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { applyRevision, revisionFor, trackedAddresses, withRevision } from "../src/lib/revisions";
 import { learningResourceLd } from "../src/lib/seo";
@@ -86,5 +86,30 @@ describe("the publish record", () => {
     const data = { address: "not-a-page", version: "1.0", date: new Date("2026-10-01") };
     const entry = { data };
     expect(withRevision(entry)).toBe(entry);
+  });
+
+  /**
+   * Henry, 2026-10-26: a page that was REDONE gets a number the +0.1 rule cannot
+   * express (「本次屬重做，內容重寫，不按 0.1 遞增」). `gen-revisions.mjs` reads
+   * `src/data/version-overrides.json` and applies it as a floor. The risk is an
+   * entry that outlives its reason — pointing at a typo'd address, or claiming a
+   * number the log has already passed, which would silently pin a page to an old
+   * version forever. So the file is checked against the resources that exist.
+   */
+  it("only lifts a version for a redo, for a real page, and never lowers it", () => {
+    const raw = JSON.parse(
+      readFileSync(resolve(import.meta.dirname, "..", "src/data/version-overrides.json"), "utf8"),
+    ) as { resources?: Record<string, { version: string; why: string }> };
+
+    for (const [address, entry] of Object.entries(raw.resources ?? {})) {
+      expect(addresses, `${address} is not a resource the site builds`).toContain(address);
+      expect(entry.version, `${address} version`).toMatch(/^\d+\.\d$/);
+      expect(entry.why?.length ?? 0, `${address} needs a reason recorded`).toBeGreaterThan(20);
+      const logged = revisionFor(address)!;
+      expect(
+        Number(entry.version),
+        `${address}: ${entry.version} is not above the logged ${logged.version}`,
+      ).toBeGreaterThanOrEqual(Number(logged.version));
+    }
   });
 });
