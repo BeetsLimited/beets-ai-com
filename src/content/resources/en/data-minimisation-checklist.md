@@ -12,7 +12,8 @@ subject: "Cross-curricular"
 audience: [teachers]
 sourceIdea: "#42"
 sources: ["G, pp.2-4 and 2-7", "E, p.17"]
-prepTime: "5 minutes the first time; about 30 seconds before each later input"
+prepTime: "About 5 minutes to set the checklist up the first time; about 30 seconds before each later input"
+timeLabel: "Time needed (not a lesson)"
 equipment: "The one-page A4 checklist (prints on its own); keep it beside the computer or the photocopier"
 author: "BeetsBot"
 version: "1.1"

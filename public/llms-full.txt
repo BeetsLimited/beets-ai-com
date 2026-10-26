@@ -17,7 +17,7 @@ Reuse terms: https://beets-ai.com/about/
 ### S1–S3 資訊科技：修復有偏見的 AI（四個除錯任務）
 - URL: https://beets-ai.com/resources/biased-ai-lab-repair/
 - Language: zh-HK
-- Description: 不插電的一節除錯課堂：全班在紙上建構一個簡單的推薦系統，找出資料偏斜、追蹤偏差如何由規則造成，提出修復並寫一份發行說明。附訓練紀錄、追蹤表與評分指引。
+- Description: 不插電的一節除錯課堂：全班在紙上建構一個簡單的推薦系統，找出資料偏斜、追蹤偏差如何由規則造成，提出修復並寫一份發行說明。附四問四答示範、完整示範本、未達標對照、三份學生作品判分與教師六十秒批改流程。
 - Stage: S1-S3
 - Subject: 資訊科技
 - Theme: B (安全及負責任使用 AI)
@@ -28,7 +28,7 @@ Reuse terms: https://beets-ai.com/about/
 ### S1-S3 ICT: repair the biased AI (four debugging tasks)
 - URL: https://beets-ai.com/en/resources/biased-ai-lab-repair/
 - Language: en
-- Description: An unplugged lab for ICT: the class builds a paper recommendation system, spots skewed data, traces each output to its rule, and writes a release note.
+- Description: An unplugged lab for ICT: the class builds a paper recommendation system, spots skewed data, traces each output to its rule, and writes a release note. Includes four worked answers, a full model answer, a below-standard contrast, three pupils' own work marked, and a sixty-second marking routine.
 - Stage: S1-S3
 - Subject: ICT
 - Theme: B (安全及負責任使用 AI)
@@ -542,23 +542,23 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.8
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.7; 《中小學人工智能素養學習架構》, p.1-8
 
-### P1-P3 PE: two screen-free AI games (no devices needed)
+### P1-P3 cross-subject: two screen-free AI games (no devices needed)
 - URL: https://beets-ai.com/en/resources/screen-free-ai-pe-games-p1-p3/
 - Language: en
 - Description: Two screen-free movement games: pupils run to a labelled cone to sort everyday items into 'uses AI / does not use AI', then the whole class acts as training data to see how one wrong example skews the model. Includes an equipment list, teacher instructions, inclusion notes and a two-minute understanding check.
 - Stage: P1-P3
-- Subject: PE
+- Subject: Cross-curricular
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
 - Version: 2.5
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.4; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-8
 
-### P1–P3 體育：兩個不插電 AI 遊戲（無需裝置）
+### P1–P3 全科／跨科：兩個不插電 AI 遊戲（無需裝置）
 - URL: https://beets-ai.com/resources/screen-free-ai-pe-games-p1-p3/
 - Language: zh-HK
 - Description: 兩個不插電運動遊戲：學生跑向「用 AI／不用 AI」標記筒學習分類，再以全班當「訓練數據」，看一個錯誤例子如何令模型學錯。附器材清單、教師指引、共融調適與兩分鐘理解檢查。
 - Stage: P1-P3
-- Subject: 體育
+- Subject: 全科／跨科
 - Theme: E (共融 AI 課堂)
 - Audience: teachers (教師)
 - Version: 2.5

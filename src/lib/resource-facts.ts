@@ -81,19 +81,28 @@ export interface PageFacts {
   documents: string[];
   /** Prep/session time as the page states it — a lesson's 一節, a meeting's 一次. */
   time?: string;
+  /**
+   * The label for `time`, when the page's own wording beats the default
+   * 一節時間 — a checklist is used, not taught (Henry, 2026-10-26).
+   */
+  timeLabel?: string;
 }
 
 /** Everything the five-line block prints, read from the entry and its body. */
 export function pageFacts(
-  data: { stage?: string; subject?: string; prepTime?: string },
+  data: { stage?: string; subject?: string; prepTime?: string; timeLabel?: string },
   body: string,
   lang: Locale,
 ): PageFacts {
+  const timeLabel = data.timeLabel?.trim();
   return {
     stage: data.stage?.trim() || undefined,
     subject: data.subject?.trim() || undefined,
     strand: parseStrand(body, lang),
     documents: parseDocuments(body, lang),
     time: data.prepTime?.trim() || undefined,
+    // Spread, not a value: an absent label must stay absent so the view falls
+    // back to the default and the fact object gains no empty key.
+    ...(timeLabel ? { timeLabel } : {}),
   };
 }

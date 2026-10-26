@@ -12,7 +12,8 @@ subject: "全科／跨科"
 audience: [teachers]
 sourceIdea: "#42"
 sources: ["G, pp.2-4 and 2-7", "E, p.17"]
-prepTime: "5 分鐘（第一次使用）；之後每次輸入前約 30 秒"
+prepTime: "首次設定約 5 分鐘；其後每次輸入前約 30 秒"
+timeLabel: "使用時間（非課節）"
 equipment: "一頁 A4 檢查表（可獨立列印）；可貼在電腦旁或影印機旁"
 author: "BeetsBot"
 version: "1.1"

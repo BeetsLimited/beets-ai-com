@@ -53,7 +53,9 @@ const factsRows = [
   { label: t(lang, "labelSubject"), value: facts.subject },
   { label: t(lang, "labelStrand"), value: facts.strand },
   { label: t(lang, "labelDocs"), value: facts.documents.join(" · ") || undefined },
-  { label: t(lang, "labelSessionTime"), value: facts.time },
+  // The time row's label follows the entry when the resource is not a lesson
+  // (`timeLabel`), otherwise the default 一節時間 (Henry, 2026-10-26).
+  { label: facts.timeLabel ?? t(lang, "labelSessionTime"), value: facts.time },
 ].filter((row): row is { label: string; value: string } => Boolean(row.value));
 
 /**

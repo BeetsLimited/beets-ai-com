@@ -98,6 +98,15 @@ const fields = {
   /** EDB document code + page, e.g. ["E, p.6"]. At least one is required. */
   sources: z.array(z.string().min(1)).min(1, "at least one EDB source reference is required"),
   prepTime: z.string().optional(),
+  /**
+   * What the fifth fact at the top of the page calls the time it carries.
+   *
+   * The block's label is 一節時間 for a lesson, and that is wrong for anything a
+   * teacher does outside a lesson — a one-page checklist is set up once and then
+   * costs thirty seconds before each use (Henry, 2026-10-26). Optional: absent
+   * means the default label, which is right for every lesson and worksheet.
+   */
+  timeLabel: z.string().min(1).optional(),
   equipment: z.string().optional(),
   /** Our internal record. Never published — structured data names the org. */
   author: z.string().min(1),
