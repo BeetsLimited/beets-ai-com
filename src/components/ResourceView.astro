@@ -81,7 +81,15 @@ const practicals = [
 ].filter((row): row is { label: string; value: string } => row !== null);
 ---
 
-<article>
+<!--
+  `data-resource-slug` is how the analytics tracker knows this page is a
+  resource and which one it is (src/components/Analytics.astro). It carries the
+  stable address — the same string in both language editions — so views and
+  downloads of the Chinese and English pages of one resource add up as one
+  resource rather than two. Nothing is read from here by a reader, and it is not
+  new published information: the address is already the URL.
+-->
+<article data-resource-slug={d.address}>
   <h1>{d.title}</h1>
 
   {/* 五行：學習階段 · 科目 · 學習範疇 · 對應官方文件 · 一節時間 */}

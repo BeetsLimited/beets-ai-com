@@ -1,0 +1,48 @@
+---
+/**
+ * Google Analytics 4 for beets-ai.com (Billy, 2026-10-28).
+ *
+ * Two things are measured, and nothing else:
+ *
+ *   1. **A resource page was read.** GA4 counts every page automatically, so
+ *      "page views of resource pages" is answerable on day one from the built-in
+ *      page report filtered to `/resources/` and `/en/resources/`. On top of that
+ *      `resource_view` fires carrying the resource's own address, which is what
+ *      makes a per-resource table possible instead of a per-URL one.
+ *   2. **A download link was clicked.** `resource_download`, with the file name,
+ *      its format and the resource it came from.
+ *
+ * Why this is JavaScript on a site that had none: GA4 has no server-side
+ * alternative at this scale, and a download click only exists in the browser.
+ * The payload is the stock gtag bootstrap plus one small bundled module — no
+ * framework, no cookie banner. `async` on the loader means the page never waits
+ * for Google to render.
+ *
+ * The bootstrap is inline because Google's snippet must be; everything else
+ * lives in `../lib/analytics-tracker.ts` and is bundled and minified, because a
+ * long inline script publishes its own comments into the HTML of every page.
+ * Keep the inline part to one comment-free line for that reason.
+ *
+ * Nothing is emitted while `GA_MEASUREMENT_ID` is empty (`../lib/analytics.ts`),
+ * so an un-configured build is exactly the site that shipped before.
+ */
+import { GA_MEASUREMENT_ID } from "../lib/analytics";
+---
+
+{
+  GA_MEASUREMENT_ID.length > 0 ? (
+    <>
+      <script
+        is:inline
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <script is:inline define:vars={{ gaMeasurementId: GA_MEASUREMENT_ID }}>
+        window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}window.gtag=gtag;gtag("js",new Date());gtag("config",gaMeasurementId,{anonymize_ip:true});
+      </script>
+      <script>
+        import "../lib/analytics-tracker";
+      </script>
+    </>
+  ) : null
+}

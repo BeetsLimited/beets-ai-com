@@ -18,6 +18,7 @@ import { AUDIENCES, THEMES } from "../lib/schema";
 import { ORG_SITE, organizationLd, socialMeta, webSiteLd } from "../lib/seo";
 import { FEED_PATH } from "../lib/resources-feed";
 import LanguageSwitch from "../components/LanguageSwitch.astro";
+import Analytics from "../components/Analytics.astro";
 import { getCollection } from "astro:content";
 
 /**
@@ -185,6 +186,14 @@ const liveResources = (
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    {/*
+      Analytics, last in the head: the loader is `async`, so no stylesheet or
+      font above it waits for Google, and the page has already described itself
+      (canonical, hreflang, social cards, structured data) before the tag is
+      even requested. Emits nothing while GA_MEASUREMENT_ID is empty.
+    */}
+    <Analytics />
   </head>
   <body>
     <a class="skip" href="#main">{t(lang, "skip")}</a>
