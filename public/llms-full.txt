@@ -14,6 +14,28 @@ Reuse terms: https://beets-ai.com/about/
 ## Full inventory (both editions)
 
 
+### P1–S6 校本規劃：AI 預算與授權規劃工作表（三個錢包、三個成本情境）
+- URL: https://beets-ai.com/resources/ai-budget-licensing-worksheet/
+- Language: zh-HK
+- Description: 一份可計算的校本 AI 預算與授權規劃工作簿：三個錢包分開記錄、三個成本情境用同一組欄位並排、每學生每年成本一條公式、簽約前必問三題，以及四項問責程序的空白時間表。
+- Stage: P1-S6
+- Subject: 校本規劃
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 2 節）; 通函 107/2026（第 4 段）
+
+### P1-S6 School planning: AI budget and licensing worksheet (three funding sources, three cost scenarios)
+- URL: https://beets-ai.com/en/resources/ai-budget-licensing-worksheet/
+- Language: en
+- Description: A planning workbook that does the arithmetic: three funding sources kept apart, three cost scenarios filled in with the same set of columns, one formula for cost per student per year, three questions to ask before signing, and a blank timetable for the four reporting duties.
+- Stage: P1-S6
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 2 節）; 通函 107/2026（第 4 段）
+
 ### P1–S6 跨科：AI 融入課堂的觀課與同儕回饋指引（一頁六欄記錄表、三十分鐘回饋會）
 - URL: https://beets-ai.com/resources/ai-lesson-observation-protocol/
 - Language: zh-HK
@@ -79,6 +101,28 @@ Reuse terms: https://beets-ai.com/about/
 - Audience: teachers (教師)
 - Version: 1.0
 - Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-2; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-2
+
+### S1–S6 跨科：評估誠信政策（四類課業、每科每學期一份甲類、四步處理）
+- URL: https://beets-ai.com/resources/assessment-integrity-policy/
+- Language: zh-HK
+- Description: 一份可獨立影印的校本評估誠信政策：四類課業（甲必須親手完成、乙可用工具但須聲明、丙可用工具作過程工具、丁不可使用）、每份評分課業首頁標明類別、每科每學期至少一份甲類在課堂內完成、疑似違規的四步處理，以及與校內考試及校本評核的界線。
+- Stage: S1-S6
+- Subject: 跨科
+- Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, pp.1-6 to 1-10; 《中小學應用人工智能教學指南》, pp.2-4 to 2-9; 通函 156/2026（附錄一 第 3、4 節；附錄三 基礎單元 7、進階單元 5）; 通函 107/2026（第 4 段）
+
+### S1-S6 across subjects: assessment-integrity policy (four task categories, one in-class task per subject per term, a four-step process)
+- URL: https://beets-ai.com/en/resources/assessment-integrity-policy/
+- Language: en
+- Description: A photocopiable school assessment-integrity policy: four categories of task (A done by hand, B tools allowed with a declaration, C tools as a process tool, D no tools at all), the category printed on the front of every assessed task, at least one category-A task completed in class in every subject every term, a four-step process for a suspected breach, and the boundary with internal examinations and school-based assessment.
+- Stage: S1-S6
+- Subject: Across subjects
+- Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-4 to 2-9; 通函 156/2026（附錄一 第 3、4 節；附錄三 基礎單元 7、進階單元 5）; 通函 107/2026（第 4 段）
 
 ### S1–S3 資訊科技：修復有偏見的 AI（四個除錯任務）
 - URL: https://beets-ai.com/resources/biased-ai-lab-repair/
