@@ -58,6 +58,50 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.0
 - Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-7 to 2-8; EDBCM No. 156/2026; EDBCM No. 107/2026
 
+### P1–S6 校本規劃：AI 規劃交接包（七件文件、三步交接、一頁簽收）
+- URL: https://beets-ai.com/resources/ai-plan-continuity-pack/
+- Language: zh-HK
+- Description: 新任統籌接手時真正需要的七件文件、三步交接與一頁簽收：每件文件寫到甚麼程度、三週之內兩人各做甚麼、交接當日要轉移哪三樣，以及一頁可獨立影印的簽收頁。
+- Stage: P1-S6
+- Subject: 校本規劃
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 2 節、第 3 節；附錄三 進階單元 8）; 通函 107/2026（第 4 段）
+
+### P1-S6 School planning: AI planning continuity pack (seven documents, three handover steps, a one-page sign-off)
+- URL: https://beets-ai.com/en/resources/ai-plan-continuity-pack/
+- Language: en
+- Description: What a new coordinator actually needs on the day they take over: seven documents, three handover steps and a one-page sign-off, with how far each document must be written up, what each person does across three weeks, the three things transferred on the day, and a sign-off page you can photocopy on its own.
+- Stage: P1-S6
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 2 節、第 3 節；附錄三 進階單元 8）; 通函 107/2026（第 4 段）
+
+### P1–S6 校本規劃：全校 AI 風險登記冊及事故處理流程（八欄、十項風險、三步處理）
+- URL: https://beets-ai.com/resources/ai-risk-register-incident-response/
+- Language: zh-HK
+- Description: 一張八欄的校本風險登記冊，把十項 AI 風險逐項寫成有負責崗位、有下次檢視日期的一行；再加一套三步事故處理、四類事故的處理方向，以及一頁可獨立影印的事故記錄。
+- Stage: P1-S6
+- Subject: 校本規劃
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 2 節、第 4 節；附錄三 基礎單元 2、進階單元 2）; 通函 107/2026（第 4 段）
+
+### P1-S6 School planning: whole-school AI risk register and incident response (eight columns, ten risks, three steps)
+- URL: https://beets-ai.com/en/resources/ai-risk-register-incident-response/
+- Language: en
+- Description: An eight-column risk register that turns ten school AI risks into one line each, with a post holder and a next review date; plus a three-step incident process, handling directions for four incident types, and a one-page incident record you can photocopy on its own.
+- Stage: P1-S6
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 2 節、第 4 節；附錄三 基礎單元 2、進階單元 2）; 通函 107/2026（第 4 段）
+
 ### P1–S6 校本規劃：AI 工具評選及採購評分表
 - URL: https://beets-ai.com/resources/ai-tool-selection-scoring-table/
 - Language: zh-HK

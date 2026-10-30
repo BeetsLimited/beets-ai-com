@@ -13,6 +13,18 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "ai-plan-continuity-pack": {
+      "published": "2026-10-30",
+      "modified": "2026-10-30",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "ai-risk-register-incident-response": {
+      "published": "2026-10-30",
+      "modified": "2026-10-30",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "ai-tool-selection-scoring-table": {
       "published": "2026-10-26",
       "modified": "2026-10-26",
