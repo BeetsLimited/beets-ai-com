@@ -454,6 +454,28 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 2.7
 - Sources: 《中小學應用人工智能教學指南》, pp.2-5 and 2-7
 
+### P1-S6 All subjects: library and self-study AI provision (four resource categories, three time slots, five rules)
+- URL: https://beets-ai.com/en/resources/library-and-self-study-ai-provision/
+- Language: en
+- Description: Four resource categories, three time slots and five rules: what the library provides, when it is open, which post is on duty, and what a pupil leaves behind — plus a one-page use record a term that counts categories and numbers, never names.
+- Stage: P1-S6
+- Subject: All subjects / cross-subject
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.1; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 3 節、第 4 節）; 中文科課程指引（小一至小六）第 4 節; 音樂科課程指引（小一至中六）第 4.6 節; Primary IT curriculum framework (trial version), AI component, P2 topic C
+
+### P1–S6 全科／跨科：圖書館及自學 AI 資源與督導計劃（四類資源、三個時段、五條使用規則）
+- URL: https://beets-ai.com/resources/library-and-self-study-ai-provision/
+- Language: zh-HK
+- Description: 四類資源、三個時段與五條使用規則：圖書館提供甚麼、幾時開放、由哪個崗位當值、學生用完之後留下甚麼；另附每學期一頁使用記錄，只記類別與次數，不記名。
+- Stage: P1-S6
+- Subject: 全科／跨科
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學數字教育發展藍圖》, p.1; 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 3 節、第 4 節）; 中文科課程指引（小一至小六）第 4 節; 音樂科課程指引（小一至中六）第 4.6 節; Primary IT curriculum framework (trial version), AI component, P2 topic C
+
 ### S4-S6 Mathematics: teacher-controlled AI hint cards (four levels, never the answer)
 - URL: https://beets-ai.com/en/resources/maths-hint-cards-teacher-controlled/
 - Language: en
@@ -651,6 +673,28 @@ Reuse terms: https://beets-ai.com/about/
 - Audience: teachers (教師)
 - Version: 3.2
 - Sources: 《中小學應用人工智能教學指南》, pp.2-4 and 2-9
+
+### P1-S6 Cross-subject: a scheme-of-work AI literacy mapping template (six columns, three markers, two reviews a term)
+- URL: https://beets-ai.com/en/resources/scheme-of-work-ai-literacy-mapping/
+- Language: en
+- Description: Six columns, three markers and two reviews a term: which unit, carried in which way, gives pupils a chance to apply a particular learning element — with the plan filled in September and only the actual and its teaching date checked in January. Learning-element names are written from the school's own copy of the framework, never pre-filled here.
+- Stage: P1-S6
+- Subject: Cross-subject
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, pp.1-6 to 1-10; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; 通函 156/2026（附錄一 第 2 節）; 通函 107/2026（第 4 段）; Primary IT curriculum framework (trial version), AI component
+
+### P1–S6 跨科：課程進度 AI 素養對應表範本（六欄、三個標記、每學期兩次檢視）
+- URL: https://beets-ai.com/resources/scheme-of-work-ai-literacy-mapping/
+- Language: zh-HK
+- Description: 六欄對應表、三個標記與每學期兩次檢視：哪一個單元、用哪一種方式，令學生有機會應用某一項學習元素；九月只填計劃，一月只核實際與施教日期。學習元素名稱一律按《中小學人工智能素養學習架構》原文填寫，本頁不預填。
+- Stage: P1-S6
+- Subject: 跨科
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學人工智能素養學習架構》, pp.1-6 to 1-10; 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, pp.2-2 to 2-5; 《中小學數字教育發展藍圖》, p.2; 通函 156/2026（附錄一 第 2 節）; 通函 107/2026（第 4 段）; Primary IT curriculum framework (trial version), AI component
 
 ### P1-S6 School planning: AI-readiness infrastructure checklist (devices, network, accounts, filtering, storage)
 - URL: https://beets-ai.com/en/resources/school-ai-readiness-infrastructure-checklist/

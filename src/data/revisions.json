@@ -121,6 +121,12 @@
       "publishes": 18,
       "version": "2.7"
     },
+    "library-and-self-study-ai-provision": {
+      "published": "2026-10-31",
+      "modified": "2026-10-31",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "maths-hint-cards-teacher-controlled": {
       "published": "2026-10-15",
       "modified": "2026-10-15",
@@ -174,6 +180,12 @@
       "modified": "2026-10-17",
       "publishes": 23,
       "version": "3.2"
+    },
+    "scheme-of-work-ai-literacy-mapping": {
+      "published": "2026-10-31",
+      "modified": "2026-10-31",
+      "publishes": 1,
+      "version": "1.0"
     },
     "school-ai-readiness-infrastructure-checklist": {
       "published": "2026-10-16",
