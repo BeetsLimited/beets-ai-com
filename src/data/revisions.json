@@ -73,6 +73,12 @@
       "publishes": 16,
       "version": "2.5"
     },
+    "external-ai-partner-vetting-pack": {
+      "published": "2026-11-02",
+      "modified": "2026-11-02",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "family-ai-homework-guide": {
       "published": "2026-10-08",
       "modified": "2026-10-15",
@@ -240,6 +246,12 @@
       "modified": "2026-10-17",
       "publishes": 18,
       "version": "2.7"
+    },
+    "student-ai-voice-survey-and-feedback-loop": {
+      "published": "2026-11-02",
+      "modified": "2026-11-02",
+      "publishes": 1,
+      "version": "1.0"
     },
     "teacher-ai-cpd-ladder": {
       "published": "2026-10-26",
