@@ -37,6 +37,12 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "annual-ai-review-evidence-portfolio": {
+      "published": "2026-11-03",
+      "modified": "2026-11-03",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "assessment-integrity-policy": {
       "published": "2026-10-29",
       "modified": "2026-10-29",
@@ -126,6 +132,12 @@
       "modified": "2026-10-17",
       "publishes": 18,
       "version": "2.7"
+    },
+    "junior-pupils-ai-supervision-guide": {
+      "published": "2026-11-03",
+      "modified": "2026-11-03",
+      "publishes": 1,
+      "version": "1.0"
     },
     "library-and-self-study-ai-provision": {
       "published": "2026-10-31",
