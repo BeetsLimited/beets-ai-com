@@ -37,6 +37,8 @@ The official guidance is direct about this. The Guide to Using AI in Teaching re
 
 Both point at the same action: **strip it before the input**, not after. This page turns that action into four questions that can be answered one at a time.
 
+It serves teaching and learning, not administrative protection: before the same exercise goes to a whole class, the teacher decides which part counts as a pupil's personal data, then which version to use. Done well, the step also teaches pupils critical discernment and responsibility — for their own data and for a classmate's. A school that wants to make the four questions a school-based pre-entry step can place it in the digital education section of its School Development Plan; this page supplies the four questions only.
+
 **What this page covers**: the thirty seconds before the input. It does not repeat the list of what may and may not be entered (another resource sets that out item by item), it does not deal with parental consent (that belongs to another resource), and it is not a new school policy. Once all four questions answer no, anything further that your school requires is a matter for its existing procedures.
 
 ## Learning objectives

@@ -41,6 +41,8 @@ What a lesson has to teach, then, is judgement: why does *this* sentence end up 
 
 This worksheet does identification and response only. All three scenarios are abstracted with boxes and codes; the structure is shown, and no ready-to-run instruction string is printed anywhere. The teacher edition does not supply attack templates either — it lists the correct identification point for each of the three scenarios. What pupils should learn is to recognise the shape, not to memorise a sentence.
 
+In teaching and learning terms, the assessment is not whether pupils recognise a few examples but whether they pause before a real paste: is this sentence material, or an instruction? The record column and classroom observation show whether that judgement is forming, and the feedback should point to one thing only. The boundary is also a question of values: respecting someone else's words and taking responsibility for what you paste are what critical discernment and responsibility look like in practice, not a technical rule.
+
 The lesson sits in Information and Communication Technology, and it applies to any classroom where pupils are asked to paste material into a tool. It maps to the digital education part of a School Development Plan, and to the reflection on the application of AI strand of AI literacy.
 
 ## Learning objectives

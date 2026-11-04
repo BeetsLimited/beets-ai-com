@@ -39,6 +39,8 @@ Knowing those figures is not hard. What is hard is three questions a school must
 
 This resource puts five things on one page: the official figures, a **four-rung ladder with suggested hours**, a **table of the three official course categories**, a **school-based training record**, and **how to enrol**. The four tables depend on each other — without the ladder the record is just an attendance list, and without the record the ladder is just a statement.
 
+An hour in a course is not the same as a change in the classroom: the school needs something it can verify — a lesson plan, a piece of student feedback, or a prompt log — rather than an attendance record.
+
 ## Purpose
 
 After one planning meeting of about 60 minutes, a school can:

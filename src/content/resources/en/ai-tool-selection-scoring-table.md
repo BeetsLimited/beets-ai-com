@@ -41,6 +41,8 @@ This resource turns the selection into a table a school can **fill in, account f
 
 **No commercial tool is named anywhere in the table.** Tools appear as Tool A, Tool B and Tool C, filled in by the school. That column is deliberately blank: today's product names will mostly be renamed or re-termed within three years, and a set of selection criteria should not have to be rewritten when a product is.
 
+Choosing a tool is not a procurement procedure but a teaching and learning decision: the tool should make a teacher's lesson design more dependable, not a lesson harder to explain. The question to ask is whether the tool leaves the school more dependent on a supplier, or leaves teachers with better judgement about the feedback they give pupils; the first is convenient, the second is what people-oriented and timely and appropriate use actually mean.
+
 ## Purpose
 
 By the end of this table a school will be able to:

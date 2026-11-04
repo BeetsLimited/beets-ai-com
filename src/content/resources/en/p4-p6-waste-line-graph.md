@@ -41,6 +41,8 @@ This worksheet hands those judgements back to pupils, and it is fixed at two pag
 
 **Where the topic comes from**: using waste as the context for practising broken line graphs is this resource's own choice of topic. The official example uses a different context. This page does not present waste as the official example's topic, and a teacher may substitute another topic for their own school without changing the worksheet's structure.
 
+This is also part of teaching and learning: the teacher decides which judgements pupils must make for themselves, and confirms through classroom observation and feedback that they did make them, rather than accepting a neat graph. A chart can be drawn for you; critical discernment and responsibility cannot. Where the figures came from, and whether they may be compared at all, still has to be explained by the pupil. The worksheet can sit inside a school-based mathematics unit, and be written into the digital education measures of the School Development Plan.
+
 ## Learning objectives
 
 Pupils will be able to:
