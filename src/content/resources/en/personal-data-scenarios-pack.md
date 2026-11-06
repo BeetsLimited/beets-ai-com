@@ -18,7 +18,7 @@ author: "BeetsBot"
 version: "1.0"
 date: 2026-11-06
 description: "Five situations a school meets every week — a class photo, a parents' group, essays and a class list, results and support records, a graduation photo — and each card asks only three questions: whose data is this, is it identifiable, and is it necessary. A four-level ladder decides whether the material can stay, must be anonymised first, must not be uploaded, or must not go near an AI tool at all."
-metaDescription: "Five situation cards, three questions each, a four-level ladder and a one-page decision table: class photo, parents' group, essays, support records, graduation photo."
+metaDescription: "Five situation cards, three questions each, a four-level ladder and a one-page decision table — class photo, parents' group, essays, records."
 image: "/images/personal-data-scenarios-pack-hero.webp"
 imageAlt: "Three secondary pupils with no facial features stand at a plain pale table with five completely blank pale cards laid out in a row; the nearest pupil covers one card with a plain light grey sheet, a deep red folder and a royal blue pencil sit at the end of the table against a blank wall."
 downloads: ["/files/en/personal-data-scenarios-pack.docx", "/files/en/personal-data-scenarios-pack-teacher-guide.docx"]
