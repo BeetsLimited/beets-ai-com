@@ -15,8 +15,9 @@ prepTime: "about 30 minutes to introduce at a staff meeting beforehand; used as 
 timeLabel: "Time to prepare"
 equipment: "two editable Word documents (the four-step procedure with its record form, and the one page for parents); the procedure and the record form print one page each and can be copied separately; the parent page prints single-sided and goes out with the school letter"
 author: "BeetsBot"
-version: "1.0"
+version: "1.1"
 date: 2026-11-05
+updated: 2026-11-06
 description: "When something happens, the first task is not to establish whether it is true but to make the affected student safe. Four steps in a fixed order — protect, preserve, report, handle and record — with three situations that only route the case, a first-24-hours timeline and a single page for parents."
 metaDescription: "Four steps in a fixed order — protect, preserve, report, handle and record — with three situations, a first-24-hours timeline and a page for parents."
 image: "/images/ai-generated-harassment-response-procedure-hero.webp"
@@ -57,7 +58,7 @@ With this procedure in place, a school can:
 5. Let the three situations affect only who acts first and which reporting line applies — never the order of the four steps.
 6. Put a single page in front of parents the same day, naming three things they can do and three they should avoid.
 
-The page is written around the three learning strands of AI literacy and addresses **reflection on the application of AI**; the three strands are the basic operation of AI, human-machine communication and collaboration, and reflection on the application of AI. It sits between **critical thinking** and **attention to student wellbeing**: critical thinking means not confusing "this sounds serious" with "this has been established", and attention to wellbeing means settling the person first. Of the four attitudes the framework names, the ones that matter most here are **empathy** and **respect for others** — and respect for the student who was named includes not characterising them while they are not in the room.
+The page is written around the three learning strands of AI literacy and addresses **reflection on the application of AI**; the three strands are the basic operation of AI, human-machine communication and collaboration, and reflection on the application of AI. It sits between **critical thinking** and **attention to student wellbeing**: critical thinking means not confusing "this sounds serious" with "this has been established", and attention to wellbeing means settling the person first. Of the four attitudes the framework names, the ones that matter most here are **empathy** and **respect for others** — and respect for the student who was named includes not characterising them while they are not in the room. Deciding where the case goes is a professional gatekeeping judgement: the named coordinator makes it, not the colleague who happens to see the material first.
 
 ## How to use it
 
@@ -79,7 +80,7 @@ Four points that matter in practice:
 - **Protect is step one. It is not "verify first, then act".** Verification is not the first step and is not for the first colleague on the scene to decide. This page places it after protection and preservation, carried out by the school through its own arrangements. No page and no attachment may be written as "verify first, then deal with it" — written that way, the contact that should stop does not stop.
 - **"Pass nothing on" is part of protection, not a news blackout.** Every forward makes another copy and another reader. The few people who have to act are enough, and one named colleague preserving the material is enough.
 - **"Do not confront anyone alone" is protection too.** The school sets the time, the place and who is present. A student confronting another usually produces a second injury and a record that no longer matches what happened.
-- **All four details are needed.** A conversation without the address and the time cannot later show which item, when, in which group, under which display name. A deleted or edited original is no longer that day's evidence. One named colleague does the preserving so that all four are captured and the format is consistent.
+- **All four details are needed.** A conversation without the address and the time cannot later show which item, when, in which group, under which display name. A deleted or edited original is no longer that day's evidence. One named colleague does the preserving so that all four are captured and the format is consistent. Only the four details are recorded and the student who was named is kept non-identifiable: the record is anonymised, and the one page for parents carries no name.
 
 ### Step 2: Three situations, routing only
 
