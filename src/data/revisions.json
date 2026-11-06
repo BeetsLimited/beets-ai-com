@@ -15,9 +15,9 @@
     },
     "ai-generated-harassment-response-procedure": {
       "published": "2026-11-05",
-      "modified": "2026-11-05",
-      "publishes": 1,
-      "version": "1.0"
+      "modified": "2026-11-06",
+      "publishes": 2,
+      "version": "1.1"
     },
     "ai-lesson-observation-protocol": {
       "published": "2026-10-28",
@@ -220,8 +220,8 @@
     "personal-data-scenarios-pack": {
       "published": "2026-11-06",
       "modified": "2026-11-06",
-      "publishes": 1,
-      "version": "1.0"
+      "publishes": 2,
+      "version": "1.1"
     },
     "safe-to-upload-ai-rehearsal": {
       "published": "2026-10-07",
