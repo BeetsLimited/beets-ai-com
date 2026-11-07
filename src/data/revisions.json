@@ -73,6 +73,12 @@
       "publishes": 15,
       "version": "2.4"
     },
+    "chatbot-emotional-reliance": {
+      "published": "2026-11-07",
+      "modified": "2026-11-07",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "cross-subject-ai-coverage-audit": {
       "published": "2026-10-15",
       "modified": "2026-10-17",
@@ -94,6 +100,12 @@
     "external-ai-partner-vetting-pack": {
       "published": "2026-11-02",
       "modified": "2026-11-02",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "family-ai-agreement": {
+      "published": "2026-11-07",
+      "modified": "2026-11-07",
       "publishes": 1,
       "version": "1.0"
     },
