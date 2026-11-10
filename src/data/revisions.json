@@ -169,6 +169,12 @@
       "publishes": 18,
       "version": "2.7"
     },
+    "impersonation-scam-recognition-routine": {
+      "published": "2026-11-10",
+      "modified": "2026-11-10",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "junior-pupils-ai-supervision-guide": {
       "published": "2026-11-03",
       "modified": "2026-11-03",
@@ -282,6 +288,12 @@
       "modified": "2026-10-26",
       "publishes": 17,
       "version": "2.6"
+    },
+    "screenshot-verification-three-steps": {
+      "published": "2026-11-10",
+      "modified": "2026-11-10",
+      "publishes": 1,
+      "version": "1.0"
     },
     "staff-ai-literacy-audit-and-cpd-plan": {
       "published": "2026-10-15",
