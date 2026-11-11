@@ -37,6 +37,12 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "ai-sleep-self-image-scenarios": {
+      "published": "2026-11-11",
+      "modified": "2026-11-11",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "ai-tool-selection-scoring-table": {
       "published": "2026-10-26",
       "modified": "2026-11-04",
@@ -246,6 +252,12 @@
       "modified": "2026-11-06",
       "publishes": 2,
       "version": "1.1"
+    },
+    "prompt-never-list-staff-checklist": {
+      "published": "2026-11-11",
+      "modified": "2026-11-11",
+      "publishes": 1,
+      "version": "1.0"
     },
     "recommendation-list-audit": {
       "published": "2026-11-09",
