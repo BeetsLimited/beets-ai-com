@@ -146,6 +146,28 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.0
 - Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; 通函 156/2026（附錄一 第 2 節、第 4 節；附錄三 基礎單元 2、進階單元 2）; 通函 107/2026（第 4 段）
 
+### S1–S6 班主任及家長：AI、睡眠與自我形象——五張情境卡、三個問題與一頁不記名紀錄（兩節班主任課）
+- URL: https://beets-ai.com/resources/ai-sleep-self-image-scenarios/
+- Language: zh-HK
+- Description: 睡前那「最後一條」、對照之後不想拍照、只在工具裏講的心事、被歸類之後不再嘗試、同一個問題問到底——五張情境卡、三個問題（次序固定）、一頁四欄不記名紀錄，兩節各 60 分鐘的班主任課。
+- Stage: S1-S6
+- Subject: 班主任及家長
+- Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師), parents (家長)
+- Version: 1.0
+- Sources: 《中小學應用人工智能教學指南》, pp.2-2 to 2-5; 《中小學人工智能素養學習架構》, p.1-4; 《中小學數字教育發展藍圖》, p.2; EDBCM No. 156/2026
+
+### S1-S6 Class teachers and parents: AI, sleep and self-image — five scenario cards, three questions and a one-page unnamed record (two class-teacher lessons)
+- URL: https://beets-ai.com/en/resources/ai-sleep-self-image-scenarios/
+- Language: en
+- Description: The last one before sleep, not wanting to be photographed after a comparison, a confidence that comes only from a tool, being told what kind of person you are, and one question asked ten times — five scenario cards, three questions in a fixed order, and a one-page four-column unnamed record across two 60-minute lessons.
+- Stage: S1-S6
+- Subject: Class teachers and parents
+- Theme: B (安全及負責任使用 AI)
+- Audience: teachers (教師), parents (家長)
+- Version: 1.0
+- Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-2 to 2-5; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; EDBCM No. 156/2026
+
 ### P1–S6 校本規劃：AI 工具評選及採購評分表
 - URL: https://beets-ai.com/resources/ai-tool-selection-scoring-table/
 - Language: zh-HK
@@ -915,6 +937,28 @@ Reuse terms: https://beets-ai.com/about/
 - Audience: teachers (教師), students (學生)
 - Version: 1.1
 - Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, p.2-4; EDBCM No. 156/2026（附錄一 第 4 節；附錄二 教師資訊包 四. 重要訊息 4 學生篇）
+
+### P1-S6 School planning: what never goes into a prompt — six categories of data, three rewriting methods and a one-page staff checklist
+- URL: https://beets-ai.com/en/resources/prompt-never-list-staff-checklist/
+- Language: en
+- Description: Turning \"which sentence must not go out\" into one page and one meeting: six categories of data that never go in, three rewriting methods done in order, three exceptions that need written approval, and a one-page five-column checklist.
+- Stage: P1-S6
+- Subject: School planning
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-4; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; EDBCM No. 156/2026; EDBCM No. 107/2026
+
+### P1–S6 校本規劃：提示中永不出現的內容——六類資料、三個改寫方法與一頁教職員檢查表
+- URL: https://beets-ai.com/resources/prompt-never-list-staff-checklist/
+- Language: zh-HK
+- Description: 把「哪一句提示不可以打出去」寫成一次會議可以講完的一頁：六類永不輸入的資料、三個依次做的改寫方法、三個須書面批准的例外，以及一頁五欄檢查表。
+- Stage: P1-S6
+- Subject: 校本規劃
+- Theme: A (校本 AI 教育規劃)
+- Audience: teachers (教師)
+- Version: 1.0
+- Sources: 《中小學應用人工智能教學指南》, p.2-4; 《中小學人工智能素養學習架構》, p.1-4; 《中小學數字教育發展藍圖》, p.2; EDBCM No. 156/2026; EDBCM No. 107/2026
 
 ### S1-S3 ICT: audit a recommendation list — three questions, four places, and what the ranking leaves out
 - URL: https://beets-ai.com/en/resources/recommendation-list-audit/
