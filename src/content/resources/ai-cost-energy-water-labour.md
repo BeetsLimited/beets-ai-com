@@ -20,7 +20,7 @@ date: 2026-11-12
 description: "一條線索一條線索地分開「我們知道」與「我們還不知道」：能源、用水與看不見的勞動，加一張三欄表、一次校內小量度與五條提問，讓學生問得出下一個問題，而不是背一個數字。"
 metaDescription: "能源、用水與看不見的勞動三條線索，每條分「我們知道」與「我們還不知道」，配三欄表、校內小量度與五條提問。"
 image: "/images/ai-cost-energy-water-labour-hero.webp"
-imageAlt: "三名沒有五官的學生站著圍住一張淺色長桌，桌上並排放著三張完全空白的淺色卡，旁邊一只透明玻璃杯、一支深紅色鉛筆與一個深藍色文件夾。"
+imageAlt: "三名沒有五官的學生圍坐在一張淺色長桌旁，桌上並排放著三張完全空白的淺色卡，旁邊一只透明玻璃杯、一支深紅色鉛筆與一個深藍色文件夾。"
 downloads: ["/files/ai-cost-energy-water-labour.docx", "/files/ai-cost-energy-water-labour-source-check.docx"]
 feedback: true
 ---

@@ -19,7 +19,7 @@ date: 2026-11-12
 description: "Taking one clue at a time and separating \"what we know\" from \"what we do not know yet\": energy, water and unseen labour, plus a three-column table, one small class tally and five questions — so that pupils leave with the next question instead of a figure."
 metaDescription: "Energy, water and unseen labour as three clues, each split into what we know and what we do not know yet, with a three-column table and five questions."
 image: "/images/ai-cost-energy-water-labour-hero.webp"
-imageAlt: "Three faceless pupils stand around a long pale table, three completely blank pale cards laid in a row on it, a clear glass of water, a deep red pencil and a deep blue folder beside them."
+imageAlt: "Three faceless pupils sit around a long pale table with three completely blank pale cards in a row, a clear glass of water, a deep red pencil and a deep blue folder beside them."
 downloads: ["/files/en/ai-cost-energy-water-labour.docx", "/files/en/ai-cost-energy-water-labour-source-check.docx"]
 feedback: true
 ---

@@ -13,6 +13,18 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "ai-cost-energy-water-labour": {
+      "published": "2026-11-12",
+      "modified": "2026-11-12",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "ai-error-responsibility-mapping": {
+      "published": "2026-11-12",
+      "modified": "2026-11-12",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "ai-generated-harassment-response-procedure": {
       "published": "2026-11-05",
       "modified": "2026-11-06",

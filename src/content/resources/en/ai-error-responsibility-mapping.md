@@ -18,7 +18,7 @@ author: "BeetsBot"
 version: "1.0"
 date: 2026-11-12
 description: "Turning \"who has to account for this\" into one four-column sheet: five positions, three types of event, and a 45-minute staff version that walks one rewritten event through the same table."
-metaDescription: "Five positions, three types of event and a four-column responsibility map, plus a 45-minute staff version. Every cell records what must be accounted for — no verdicts."
+metaDescription: "Five positions, three types of event and a four-column responsibility map, plus a 45-minute staff version. Every cell records, never judges."
 image: "/images/ai-error-responsibility-mapping-hero.webp"
 imageAlt: "Two faceless Hong Kong school colleagues stand at a long pale table in a bright staff room, five completely blank pale cards laid in a row on the table, a deep red tab on the leftmost card and a deep blue folder beside them."
 downloads: ["/files/en/ai-error-responsibility-mapping.docx", "/files/en/ai-error-responsibility-mapping-cards.docx"]
