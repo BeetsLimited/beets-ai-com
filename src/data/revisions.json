@@ -16,14 +16,14 @@
     "ai-cost-energy-water-labour": {
       "published": "2026-11-12",
       "modified": "2026-11-12",
-      "publishes": 1,
-      "version": "1.0"
+      "publishes": 2,
+      "version": "1.1"
     },
     "ai-error-responsibility-mapping": {
       "published": "2026-11-12",
       "modified": "2026-11-12",
-      "publishes": 1,
-      "version": "1.0"
+      "publishes": 2,
+      "version": "1.1"
     },
     "ai-generated-harassment-response-procedure": {
       "published": "2026-11-05",
@@ -289,6 +289,12 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "school-ai-incident-log-and-reporting-template": {
+      "published": "2026-11-13",
+      "modified": "2026-11-13",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "school-ai-readiness-infrastructure-checklist": {
       "published": "2026-10-16",
       "modified": "2026-10-16",
@@ -316,6 +322,12 @@
     "screenshot-verification-three-steps": {
       "published": "2026-11-10",
       "modified": "2026-11-10",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "sen-pupils-ai-safeguarding-notes": {
+      "published": "2026-11-13",
+      "modified": "2026-11-13",
       "publishes": 1,
       "version": "1.0"
     },

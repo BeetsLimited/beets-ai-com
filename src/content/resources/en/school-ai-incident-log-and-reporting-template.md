@@ -110,7 +110,7 @@ These are floors, not ceilings: it can all be done faster, but the three points 
 
 Once a month, a named post writes three lines — how many pages this month, how many at each level, and the average days to closure — and reads them at the admin meeting. Three lines of numbers only: no names, no classes, no comparison between teams.
 
-Before the end of the school year, the twelve sets of three lines are read together: which level was commonest, which kind was commonest, which point in time slipped most often. Those three answers are the list for next year — possibly where the levels divide, possibly one station on the route, possibly how one kind of tool is used. **The review exists to change the process, not to grade a colleague.**
+Before the end of the school year, the twelve sets of three lines are read together: which level was commonest, which kind was commonest, which point in time slipped most often. Those three answers are the list for next year — possibly where the levels divide, possibly one station on the route, possibly how long a page is kept — its retention period — or possibly how one kind of tool is used. **The review exists to change the process, not to grade a colleague.**
 
 ### Three pages, three jobs
 
