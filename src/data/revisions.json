@@ -265,6 +265,12 @@
       "publishes": 2,
       "version": "1.1"
     },
+    "prompt-journal-thinking-evidence": {
+      "published": "2026-11-16",
+      "modified": "2026-11-16",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "prompt-never-list-staff-checklist": {
       "published": "2026-11-11",
       "modified": "2026-11-11",
@@ -378,6 +384,12 @@
       "modified": "2026-10-18",
       "publishes": 16,
       "version": "2.5"
+    },
+    "think-aloud-record-ai-assisted-solve": {
+      "published": "2026-11-16",
+      "modified": "2026-11-16",
+      "publishes": 1,
+      "version": "1.0"
     }
   }
 }
