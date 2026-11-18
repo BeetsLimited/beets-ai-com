@@ -85,6 +85,12 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "better-questions-from-ai-answers": {
+      "published": "2026-11-18",
+      "modified": "2026-11-18",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "biased-ai-lab-repair": {
       "published": "2026-10-15",
       "modified": "2026-10-26",
@@ -340,6 +346,12 @@
     "sen-pupils-ai-safeguarding-notes": {
       "published": "2026-11-13",
       "modified": "2026-11-13",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "sentence-by-sentence-labelling": {
+      "published": "2026-11-18",
+      "modified": "2026-11-18",
       "publishes": 1,
       "version": "1.0"
     },
