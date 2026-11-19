@@ -17,7 +17,7 @@ author: "BeetsBot"
 version: "1.0"
 date: 2026-11-19
 description: "Take one sentence from a step of this lesson — \"I did it this way because...\" — and put the same sentence through three levels: the idea, the reason, the what-if. Three minutes a pupil (one to speak, one for a group-mate to restate, one for the teacher to write), four to six pupils a lesson, and a four-column record that says which level was reached and the one reason the pupil gave; a pupil who cannot answer is recorded as not answered."
-metaDescription: "One sentence, three levels, three minutes, four columns: ask a pupil what they meant, why this step, and what if a condition changed. Nothing is scored and nothing is taught on the spot."
+metaDescription: "One sentence, three levels, three minutes, four columns: what the pupil meant, why this step, and what if a condition changed. Nothing is scored."
 image: "/images/oral-check-explain-the-idea-hero.webp"
 imageAlt: "A teacher leans over a wooden desk asking four seated pupils a question, a blank white card and a red pencil and a black pencil on the desk; the wall behind is warm and plain and every figure is a simple featureless shape."
 downloads: ["/files/en/oral-check-explain-the-idea.docx"]
