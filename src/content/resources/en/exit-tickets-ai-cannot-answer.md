@@ -17,7 +17,7 @@ author: "BeetsBot"
 version: "1.0"
 date: 2026-11-19
 description: "Two minutes before the bell, pupils write three lines on half a sheet of A5: what I understood today, what I am still unsure about, what our group said. The questions come from five types only, at least two types per ticket; the tickets are sorted into four piles in three minutes (got it, half there, teach again, not answered), and the first five minutes of the next lesson answer the teach-again pile only. No name, no score — class and group only."
-metaDescription: "One sheet, three lines, two minutes, five question types, four piles. An exit ticket can only ask about this lesson, so a tool cannot answer it; no names, no score, and the next lesson answers one pile."
+metaDescription: "One sheet, three lines, two minutes, five types, four piles: an exit ticket can only ask about this lesson, so no tool can answer it for you."
 image: "/images/exit-tickets-ai-cannot-answer-hero.webp"
 imageAlt: "Four small piles of folded half-sheets lie on the floor beside a classroom door while a teacher bends to add one card to a pile; two pupils with school bags watch from the doorway; the wall behind is warm and plain and every figure is a simple featureless shape."
 downloads: ["/files/en/exit-tickets-ai-cannot-answer.docx"]
@@ -107,7 +107,7 @@ The examples are a starting point, and a teacher may rewrite them for their own 
 | Mathematics | What our group said... the same expression can be written by two methods. | 3 |
 | Mathematics | What I am still unsure about... why the unit is written in square centimetres. | 5 |
 | Science and General Studies | What I understood today... the drops outside the ice cup are water vapour in the air condensing. | 4 |
-| Science and General Studies | What I am still unsure about... why the thermometer goes into the water and not against the side of the cup. | 4 |
+| Science and General Studies | What I am still unsure about... why the drops appear on the outside of the cup and never on the inside. | 5 |
 | Science and General Studies | What our group said... with the lid on, there would be fewer drops. | 3 |
 | Art and Physical Education | What I understood today... for the dark part, the pencil is used on its side. | 2 |
 | Art and Physical Education | What our group said... after the formation went from three rows to two, nobody collided on the turn. | 3 |
@@ -141,6 +141,18 @@ The proportions of the four piles are recorded as **counts only**, for four less
 - The five types, three lines and four piles stay fixed: one variable at a time, so that four lessons later the difference can be seen.
 - Follow-up one: turn the teach-again pile's shared error into the opening sentence of the next lesson and keep it on the teacher's desk.
 - Follow-up two: at the end of a term, lay the four sets of counts side by side once, only to decide whether the next unit needs two more minutes.
+
+### 6. How this page divides the work with five others
+
+This page does the two minutes on paper, and it takes the whole class. Five other pages do related work; a teacher picks one of them, not all of them.
+
+| Page | What it does | How it differs from this page |
+|---|---|---|
+| [ten-minute-ai-judgement-checks](/en/resources/ten-minute-ai-judgement-checks/) | Judges in ten minutes whether a tool's answer can be trusted | This page judges no tool; it collects what the pupils wrote about the room |
+| [better-questions-from-ai-answers](/en/resources/better-questions-from-ai-answers/) | Puts three questions the tool's answer did not ask | This page asks about what happened in this lesson, not about a tool's sentence |
+| [ai-error-discovery-log](/en/resources/ai-error-discovery-log/) | Finds the errors in a tool's answer and records them in five boxes | This page looks for no error, and no tool is available in these two minutes |
+| [student-ai-use-process-sheet](/en/resources/student-ai-use-process-sheet/) | The pupil records the first attempt, the prompt, the check and the revision | This page collects three lines only, with no name on the ticket and no running record |
+| [oral-check-explain-the-idea](/en/resources/oral-check-explain-the-idea/) | The teacher takes three minutes orally with four to six pupils and puts three levels to one sentence | That page takes one pupil at a time, four to six a lesson; this page takes the whole class on paper in two minutes |
 
 ## Answer key and marking notes
 
