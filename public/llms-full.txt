@@ -498,6 +498,28 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 2.5
 - Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.14
 
+### P4-S6 all subjects: exit tickets an AI cannot answer for you — one sheet, three lines, two minutes, five question types, four piles
+- URL: https://beets-ai.com/en/resources/exit-tickets-ai-cannot-answer/
+- Language: en
+- Description: Two minutes before the bell, pupils write three lines on half a sheet of A5: what I understood today, what I am still unsure about, what our group said. The questions come from five types only, at least two types per ticket; the tickets are sorted into four piles in three minutes (got it, half there, teach again, not answered), and the first five minutes of the next lesson answer the teach-again pile only. No name, no score — class and group only.
+- Stage: P4-S6
+- Subject: All subjects / cross-curricular
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: EDBCM No. 156/2026, App.2 s.3; Maths C&A Guide (S4-6), s.5.2; Primary IT Curriculum Framework (AI, pilot), 在小學階段推展人工智能教育; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13
+
+### P4–S6 全科／跨科：AI 無法代答的離場券——一張紙三行、兩分鐘、五類題、四堆分類
+- URL: https://beets-ai.com/resources/exit-tickets-ai-cannot-answer/
+- Language: zh-HK
+- Description: 打鐘前兩分鐘，學生在半張 A5 上寫三行：我今日明白了⋯／我仍然不確定⋯／我們組講過⋯。題目只從五類之中選，最少跨兩類；收券後三分鐘分四堆（懂了、半懂、要重教、未答），下一節首五分鐘只回應「要重教」那一堆。不記姓名、不評分，只寫班別與組別。
+- Stage: P4-S6
+- Subject: 全科／跨科
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: EDBCM No. 156/2026, App.2 s.3; Maths C&A Guide (S4-6), s.5.2; Primary IT Curriculum Framework (AI, pilot), 在小學階段推展人工智能教育; 《中小學人工智能素養學習架構》, p.1-13
+
 ### P1-S6 School planning: a vetting pack for external AI partners and visiting speakers (five one-page forms, three outcomes, four requirements on the day)
 - URL: https://beets-ai.com/en/resources/external-ai-partner-vetting-pack/
 - Language: en
@@ -915,6 +937,28 @@ Reuse terms: https://beets-ai.com/about/
 - Audience: teachers (教師)
 - Version: 3.0
 - Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, pp.1-6 to 1-10
+
+### P4-S6 mathematics: explain the idea, not the steps — a three-level oral check an AI cannot sit for you (three minutes a pupil, four columns)
+- URL: https://beets-ai.com/en/resources/oral-check-explain-the-idea/
+- Language: en
+- Description: Take one sentence from a step of this lesson — \"I did it this way because...\" — and put the same sentence through three levels: the idea, the reason, the what-if. Three minutes a pupil (one to speak, one for a group-mate to restate, one for the teacher to write), four to six pupils a lesson, and a four-column record that says which level was reached and the one reason the pupil gave; a pupil who cannot answer is recorded as not answered.
+- Stage: P4-S6
+- Subject: Mathematics
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: Maths C&A Guide (S4-6), s.4.4; Maths C&A Guide (S4-6), s.5.4.2; Primary IT Curriculum Framework (AI, pilot), 先思而後用; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; EDBCM No. 156/2026
+
+### P4–S6 數學：講想法，不講步驟——AI 代答不了的三層追問（三分鐘一人、四欄記錄）
+- URL: https://beets-ai.com/resources/oral-check-explain-the-idea/
+- Language: zh-HK
+- Description: 由本節其中一步取一句「我這樣做，因為⋯」，用三層追問問同一句：想法、理由、如果；三分鐘一人（一分鐘講、一分鐘同組複述、一分鐘教師寫），一次抽四至六人，教師在四欄記錄表上寫下問到哪一層與他講的理由，答不到如實寫「未答」。
+- Stage: P4-S6
+- Subject: 數學
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: Maths C&A Guide (S4-6), s.4.4; Maths C&A Guide (S4-6), s.5.4.2; Primary IT Curriculum Framework (AI, pilot), 先思而後用; 《中小學人工智能素養學習架構》, p.1-13; EDBCM No. 156/2026
 
 ### P4-P6 Hong Kong population line graph: check an AI explanation
 - URL: https://beets-ai.com/en/resources/p4-hk-population-ai-graph-check/

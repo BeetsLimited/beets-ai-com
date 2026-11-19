@@ -133,6 +133,12 @@
       "publishes": 16,
       "version": "2.5"
     },
+    "exit-tickets-ai-cannot-answer": {
+      "published": "2026-11-19",
+      "modified": "2026-11-19",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "external-ai-partner-vetting-pack": {
       "published": "2026-11-02",
       "modified": "2026-11-02",
@@ -246,6 +252,12 @@
       "modified": "2026-10-17",
       "publishes": 21,
       "version": "3.0"
+    },
+    "oral-check-explain-the-idea": {
+      "published": "2026-11-19",
+      "modified": "2026-11-19",
+      "publishes": 1,
+      "version": "1.0"
     },
     "p4-hk-population-ai-graph-check": {
       "published": "2026-10-07",
