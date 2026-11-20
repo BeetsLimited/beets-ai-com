@@ -968,7 +968,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Mathematics
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.2
 - Sources: Maths C&A Guide (S4-6), s.4.4; Maths C&A Guide (S4-6), s.5.4.2; Primary IT Curriculum Framework (AI, pilot), 先思而後用; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; EDBCM No. 156/2026
 
 ### P4–S6 數學：講想法，不講步驟——AI 代答不了的三層追問（三分鐘一人、四欄記錄）
@@ -979,7 +979,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 數學
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.2
 - Sources: Maths C&A Guide (S4-6), s.4.4; Maths C&A Guide (S4-6), s.5.4.2; Primary IT Curriculum Framework (AI, pilot), 先思而後用; 《中小學人工智能素養學習架構》, p.1-13; EDBCM No. 156/2026
 
 ### P4-P6 Hong Kong population line graph: check an AI explanation
