@@ -235,6 +235,12 @@
       "publishes": 7,
       "version": "1.6"
     },
+    "metacognitive-log-know-asked-not-yet": {
+      "published": "2026-11-20",
+      "modified": "2026-11-20",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "music-listening-and-remix-pack": {
       "published": "2026-10-15",
       "modified": "2026-10-17",
@@ -280,6 +286,12 @@
     "parent-ai-communication-pack": {
       "published": "2026-10-26",
       "modified": "2026-10-26",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "peer-critique-ai-output-shared-object": {
+      "published": "2026-11-20",
+      "modified": "2026-11-20",
       "publishes": 1,
       "version": "1.0"
     },

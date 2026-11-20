@@ -17,7 +17,7 @@ author: "BeetsBot"
 version: "1.0"
 date: 2026-11-20
 description: "In the last three minutes of each lesson, pupils write three lines in one box of the same sheet: one step I could already take before today, one question I asked today, and the one step I still cannot do. Four boxes fill over four lessons, and the fifth lesson spends ten minutes setting the first box beside the fourth and writing one line — what I have changed. Twenty characters a line at most, no name, no score, and the sheet stays with the pupil for four weeks."
-metaDescription: "Three minutes at the end of each lesson: what I knew, what I asked, what I still cannot do. Four boxes over four lessons, ten minutes in the fifth. Nothing scored or named."
+metaDescription: "Three minutes at the end of each lesson: what I knew, what I asked, what I still cannot do. Four boxes over four lessons, ten minutes in the fifth."
 image: "/images/metacognitive-log-know-asked-not-yet-hero.webp"
 imageAlt: "A pupil in school uniform sits at a pale wooden desk writing with a deep red pencil on a blank sheet divided into four boxes; an adult stands behind, watching; a blank notepad and a pale blue cup holding pencils sit on the desk, and there is no lettering on the sheet or the wall."
 downloads: ["/files/en/metacognitive-log-know-asked-not-yet.docx"]

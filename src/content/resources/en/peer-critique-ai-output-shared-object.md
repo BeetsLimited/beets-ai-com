@@ -17,7 +17,7 @@ author: "BeetsBot"
 version: "1.0"
 date: 2026-11-20
 description: "The whole class reads one five-to-eight-sentence output and each pupil critiques three sentences only, choosing one of three comment types per sentence — it holds up, it needs evidence, it does not hold if the object changes — and naming on a four-column sheet which evidence is wanted. Four-person groups argue for five minutes, the class casts one vote for the sentence that most needs evidence, and then the class revises that one sentence. Nothing is scored, nothing is named, and no chat record is collected."
-metaDescription: "One shared output, three sentences each, three comment types, four columns: groups argue for five minutes, the class votes, one sentence is revised. Nothing is scored or named."
+metaDescription: "One shared output, three sentences each, three comment types, four columns: groups argue, the class votes, one sentence is revised."
 image: "/images/peer-critique-ai-output-shared-object-hero.webp"
 imageAlt: "Four pupils in school uniform stand behind a pale wooden table, each holding one blank deep red card; on the table are a sheet of lined paper with nothing written on it, a stack of pale blue cards and a deep red pencil; the wall behind is warm and plain, with no lettering anywhere."
 downloads: ["/files/en/peer-critique-ai-output-shared-object.docx"]
