@@ -136,8 +136,8 @@
     "exit-tickets-ai-cannot-answer": {
       "published": "2026-11-19",
       "modified": "2026-11-19",
-      "publishes": 1,
-      "version": "1.0"
+      "publishes": 2,
+      "version": "1.1"
     },
     "external-ai-partner-vetting-pack": {
       "published": "2026-11-02",
@@ -256,8 +256,8 @@
     "oral-check-explain-the-idea": {
       "published": "2026-11-19",
       "modified": "2026-11-19",
-      "publishes": 1,
-      "version": "1.0"
+      "publishes": 2,
+      "version": "1.1"
     },
     "p4-hk-population-ai-graph-check": {
       "published": "2026-10-07",
