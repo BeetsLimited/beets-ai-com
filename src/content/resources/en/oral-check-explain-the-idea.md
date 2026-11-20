@@ -134,6 +134,8 @@ This page does the three oral minutes and nothing else. Five related pages do re
 | [prompt-journal-thinking-evidence](/en/resources/prompt-journal-thinking-evidence/) | The pupil records their own questions and thinking as evidence | This page's record belongs to the teacher and is not handed to the pupil |
 | [ai-error-discovery-log](/en/resources/ai-error-discovery-log/) | Finds the errors in a tool's answer | This page looks for no error; it hears whether a reason can be given |
 
+Keep the questioning to one step and three layers: what the student was trying to do, why that step and not another, and whether it still holds if one condition changes. The teacher does not verify the mathematics or correct the answer on the spot; the aim is to make the reasoning audible, so that over-reliance on a single worked answer becomes visible in the student's own words.
+
 ## Review checklist
 
 Run through it once before the lesson. If any line does not hold, change the practice, not the record.
