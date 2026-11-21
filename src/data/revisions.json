@@ -165,9 +165,9 @@
     },
     "hallucination-hunt-multi-source-verification": {
       "published": "2026-11-04",
-      "modified": "2026-11-04",
-      "publishes": 1,
-      "version": "1.0"
+      "modified": "2026-11-21",
+      "publishes": 2,
+      "version": "1.1"
     },
     "hidden-instruction-safety-drill": {
       "published": "2026-10-17",

@@ -616,7 +616,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-curricular
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-4; AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.13
 
 ### P4–S6 全科：「幻覺」追查——可重複的多來源核實程序
@@ -627,7 +627,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, p.2-4; 《中小學人工智能素養學習架構（應用場景示例）》, p.13
 
 ### S1-S6 ICT: hidden-instruction safety drill — when a prompt carries more than you wrote
