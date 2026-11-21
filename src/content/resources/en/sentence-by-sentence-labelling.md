@@ -155,6 +155,8 @@ Two extensions, neither adding a label or a column:
 - **Run it again on another piece.** The next piece of writing: still three to five places, three to five sentences, three labels, four columns.
 - **Do column four only.** Take an old draft and circle only the sentences where "will I keep it" still cannot be answered, with one reason each.
 
+Labelling is a teaching and learning routine, not an integrity check: the teacher gives feedback on the label only when the third column is unclear, and the page should make no claim about academic integrity, copyright or intellectual property beyond labelling.
+
 ## Answer key and marking notes
 
 The record sheet is **not marked, not graded and not ranked**. What follows is for the teacher's demonstration and for circulating round the room; every example is fictional.
