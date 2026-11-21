@@ -146,6 +146,8 @@ The parent page prints single-sided, goes out with the school letter and may be 
 
 The parent page carries the same closing line: **this agreement is not a school rule; not signing it and not returning it affects nothing at school.**
 
+Keep the agreement short and review it each term: one line on over-reliance, naming what the family will do instead of asking the tool first; one line on human-ai collaboration inside homework; and one line on timely and appropriate use before an assessment.
+
 ## Answer key and marking notes
 
 This resource **is not marked and has no levels**, and there is no single right answer: column two should differ in every household. What follows is material for the class teacher's briefing and for a parent's reply.
