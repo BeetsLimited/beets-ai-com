@@ -141,6 +141,8 @@ The ten items below are invented for this resource; any resemblance to a real ac
 | 9 | Library volunteering | Thursdays at lunch |
 | 10 | Photography group | Bring your own camera |
 
+Before a recommendation list goes to parents or students, verify every entry against the original source, cross-check at least two independent sources for any figure or date, and record who gatekeeps the final list and on what basis.
+
 ## Answer key and marking notes
 
 The answers below are **one reasonable reading, not the only one**. Marking looks at whether the three questions were worked through in order, whether each of the four places has evidence, and whether the re-ranking used one standard — not at whether the group reached the same conclusion.
