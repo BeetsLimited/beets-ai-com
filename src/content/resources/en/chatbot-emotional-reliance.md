@@ -147,6 +147,8 @@ The parent page prints single-sided; it can be handed out at a parent meeting, o
 
 The parent page closes with: **these are three sentences that can be said, not three that must be said; on a day when they will not come out, sitting with your child for a while is also enough.**
 
+Ask students to name one moment when the reply felt personal and one moment when it did not, and to write what they would say to a classmate instead. The aim is not to ban the tool but to keep over-reliance in view and to make human-ai collaboration an explicit topic of the lesson, with the teacher's feedback kept timely and appropriate.
+
 ## Answer key and marking notes
 
 The lesson **is not marked and has no levels**. What follows are the acceptable answers for the three-step response, the five signals and the four categories, for the class teacher's use in the lesson and the briefing.
