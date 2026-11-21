@@ -105,9 +105,9 @@
     },
     "chatbot-emotional-reliance": {
       "published": "2026-11-07",
-      "modified": "2026-11-07",
-      "publishes": 1,
-      "version": "1.0"
+      "modified": "2026-11-21",
+      "publishes": 2,
+      "version": "1.1"
     },
     "copyright-ip-student-checklist": {
       "published": "2026-11-09",
@@ -379,6 +379,12 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "source-trail-map-claim-source-verification": {
+      "published": "2026-11-21",
+      "modified": "2026-11-21",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "staff-ai-literacy-audit-and-cpd-plan": {
       "published": "2026-10-15",
       "modified": "2026-10-15",
@@ -412,6 +418,12 @@
     "student-ai-voice-survey-and-feedback-loop": {
       "published": "2026-11-02",
       "modified": "2026-11-02",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "teach-it-back-clarity-assessed": {
+      "published": "2026-11-21",
+      "modified": "2026-11-21",
       "publishes": 1,
       "version": "1.0"
     },
