@@ -170,6 +170,8 @@ Interfaces only; nothing here redoes their work:
 - **The family AI agreement** covers arrangements at home (when, where, and where the device goes afterwards). This page covers one lesson in school and does not write a family agreement.
 - **The supervision guide for junior pupils** covers supervision in P1–P3. This page is S1–S6 and the boundary differs: one is about supervising, the other about what a pupil can say themselves.
 
+Each scenario ends with the same question: what would you check before you believe this, and who would you ask? Teachers should not fact-check the scenario for the class; the aim is to practise questioning and reflection on how a claim about health and image reached them.
+
 ## Answer key and marking notes
 
 The lesson **is not marked and has no levels or ranking**. What follows are the acceptable answers for the teacher's use during the lesson and the demonstration.
