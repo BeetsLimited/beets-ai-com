@@ -506,7 +506,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: All subjects / cross-curricular
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.2
 - Sources: EDBCM No. 156/2026, App.2 s.3; Maths C&A Guide (S4-6), s.5.2; Primary IT Curriculum Framework (AI, pilot), 在小學階段推展人工智能教育; Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13
 
 ### P4–S6 全科／跨科：AI 無法代答的離場券——一張紙三行、兩分鐘、五類題、四堆分類
@@ -517,7 +517,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.1
+- Version: 1.2
 - Sources: EDBCM No. 156/2026, App.2 s.3; Maths C&A Guide (S4-6), s.5.2; Primary IT Curriculum Framework (AI, pilot), 在小學階段推展人工智能教育; 《中小學人工智能素養學習架構》, p.1-13
 
 ### P1-S6 School planning: a vetting pack for external AI partners and visiting speakers (five one-page forms, three outcomes, four requirements on the day)
