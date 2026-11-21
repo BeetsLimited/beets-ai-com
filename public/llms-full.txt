@@ -1342,7 +1342,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-subject
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-4; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, p.2-4; Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; EDBCM No. 156/2026（附錄一 第 4 節）
 
 ### P4–S6 全科：轉發前先核實——截圖三步行
@@ -1353,7 +1353,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: B (安全及負責任使用 AI)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, p.2-4; 《中小學數字教育發展藍圖》, p.2; EDBCM No. 156/2026（附錄一 第 4 節）
 
 ### P1-S6 Class teachers and parents: safeguarding notes for pupils with additional support needs using AI (five principles, four adjustments, a one-page card)
