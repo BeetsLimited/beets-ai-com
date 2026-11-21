@@ -135,6 +135,8 @@ In one line: **the register says what might happen, this page says what did, and
 
 All of it inside 60 minutes, with no workshop. Every example is fictional and has nothing to do with any real school, pupil or event.
 
+Record only what the school needs in order to act: anonymise the names of students and staff, remove identifiable details from screenshots, keep the log behind a tiered access list, and name the person who gatekeeps release of any entry.
+
 ## Review checklist
 
 Before the meeting ends, check each item:
