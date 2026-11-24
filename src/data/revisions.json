@@ -301,6 +301,12 @@
       "publishes": 2,
       "version": "1.1"
     },
+    "process-rubric-reasoning-not-artefact": {
+      "published": "2026-11-24",
+      "modified": "2026-11-24",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "prompt-journal-thinking-evidence": {
       "published": "2026-11-16",
       "modified": "2026-11-16",
@@ -460,6 +466,12 @@
     "two-draft-comparison-revision": {
       "published": "2026-11-17",
       "modified": "2026-11-17",
+      "publishes": 1,
+      "version": "1.0"
+    },
+    "vocabulary-of-uncertainty-confident-or-tentative": {
+      "published": "2026-11-24",
+      "modified": "2026-11-24",
       "publishes": 1,
       "version": "1.0"
     }
