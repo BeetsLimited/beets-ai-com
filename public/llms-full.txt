@@ -652,6 +652,28 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.2
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.14
 
+### P4-S6 Mathematics: hint log — how much help did you need, and where exactly did you stall?
+- URL: https://beets-ai.com/en/resources/hint-log-assistance-level-and-stall-point/
+- Language: en
+- Description: One sheet records two things: which level of help a pupil took when stuck (L0 not needed, L1 re-read the question, L2 strategy direction, L3 first step, L4 cross-check), and which kind of stall it was (reading the question, choosing a method, computing, checking). After every hint the pupil writes one line: what I filled in myself. Three to five questions per lesson.
+- Stage: P4-S6
+- Subject: Mathematics
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; Mathematics Curriculum and Assessment Guide (S4-S6), section 4.2
+
+### P4–S6 數學：提示記錄——你需要多少協助、卡在哪一步
+- URL: https://beets-ai.com/resources/hint-log-assistance-level-and-stall-point/
+- Language: zh-HK
+- Description: 一張紙同時記兩件事：學生卡住時拿到了哪一級協助（L0 沒有需要、L1 重新讀題、L2 策略方向、L3 第一步、L4 對照檢查），以及卡點屬哪一類（審題／選法／計算／驗算）；每次提示後寫一行「我自己補上哪一步」，一節三至五題。
+- Stage: P4-S6
+- Subject: 數學
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: 《中小學人工智能素養學習架構》, p.1-13; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; Mathematics Curriculum and Assessment Guide (S4-S6), section 4.2
+
 ### S4-S6 History: AI evidence-trail workshop (three classroom tasks)
 - URL: https://beets-ai.com/en/resources/history-evidence-trail-workshop/
 - Language: en
@@ -1201,6 +1223,28 @@ Reuse terms: https://beets-ai.com/about/
 - Audience: teachers (教師), students (學生)
 - Version: 1.1
 - Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學人工智能素養學習架構》, p.1-4; 《中小學應用人工智能教學指南》, p.2-4; EDBCM No. 156/2026（附錄一 第 4 節；附錄二 教師資訊包 四. 重要訊息 4 學生篇）
+
+### S1-S6 English: accept, reject or justify — responding to AI feedback on your work
+- URL: https://beets-ai.com/en/resources/respond-to-ai-feedback-accept-reject-justify/
+- Language: en
+- Description: A tool has commented on the pupil's writing, and the pupil has to decide how to respond: accept and revise, reject and justify, or handle it another way. Three comments per lesson, starting with one that would change what the pupil does and one where they cannot tell whether it is right; rejecting has to clear three thresholds: contrary to fact, contrary to the task, or making the content less accurate if followed.
+- Stage: S1-S6
+- Subject: English
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: Blueprint for Digital Education Development in Primary and Secondary Schools, p.2; Supplement II: Guide to Using AI in Teaching in Primary and Secondary Schools, pp.2-7 to 2-8; EDBCM No. 156/2026, Annex II IV. 3) Learning and Teaching Chapter and 4) Student Chapter
+
+### S1–S6 英文：接受、拒絕還是說明理由——回應 AI 的評語
+- URL: https://beets-ai.com/resources/respond-to-ai-feedback-accept-reject-justify/
+- Language: zh-HK
+- Description: 工具對學生作文給了評語，學生要決定怎樣回應：接受並改、不接受並說明理由，或另法處理。一節只回應三句，先選「會改變你做法」與「你不確定對錯」各一句；不接受要過三個門檻：事實不符、與題目要求不符、照改會令內容不準確。
+- Stage: S1-S6
+- Subject: 英文
+- Theme: C (看見學生思考)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: 《中小學數字教育發展藍圖》, p.2; 《中小學應用人工智能教學指南》, pp.2-7 to 2-8; EDBCM No. 156/2026, Annex II IV. 3) Learning and Teaching Chapter and 4) Student Chapter
 
 ### Safe-to-upload rehearsal: find and remove pupil information before using AI (P4-P6)
 - URL: https://beets-ai.com/en/resources/safe-to-upload-ai-rehearsal/
