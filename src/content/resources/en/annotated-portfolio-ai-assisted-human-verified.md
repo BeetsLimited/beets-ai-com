@@ -30,7 +30,7 @@ feedback: true
 
 Start with the familiar situation: a school collects work and receives the final version. Whether the pupil used a tool, at which step, and whether anything was verified — none of it can be seen. The work in the exercise book is complete and neat, but neatness says nothing about who did which step.
 
-The second gap is the delay. Once the work has been handed in, the pupil can no longer remember what they judged at the time; asked "what did you verify in this paragraph", the usual answer is "I looked at it a few times". Verification that was not written down is not verification. If verifying leaves no source and no position, it cannot be looked at again, and there is nothing to cross-check.
+The second gap is the delay. Once the work has been handed in, the pupil can no longer remember what they judged at the time; asked "what did you verify in this paragraph", the usual answer is "I looked at it a few times". Verification that was not written down is not verification. If verifying leaves no source and no position, it cannot be looked at again, and there is nothing to cross-check. By the same token, over-reliance on a tool leaves no trace on the work either: a fluent piece may only show that the tool writes fluently, not that the pupil judged any of it.
 
 The third gap is between the single piece and the whole. A declaration for one piece of coursework shows how much of that piece involved a tool; but three pieces from one unit, set side by side, do not show whether the pupil changed their practice between them. Seeing the change needs a record that spans pieces and is clipped to them. This is one way of putting assessment back inside the learning process instead of adding a separate test at the end of the unit.
 

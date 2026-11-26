@@ -73,6 +73,12 @@
       "publishes": 1,
       "version": "1.0"
     },
+    "annotated-portfolio-ai-assisted-human-verified": {
+      "published": "2026-11-26",
+      "modified": "2026-11-26",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "annual-ai-review-evidence-portfolio": {
       "published": "2026-11-03",
       "modified": "2026-11-03",
@@ -162,6 +168,12 @@
       "modified": "2026-10-17",
       "publishes": 17,
       "version": "2.6"
+    },
+    "group-thinking-roles-in-ai-task": {
+      "published": "2026-11-26",
+      "modified": "2026-11-26",
+      "publishes": 1,
+      "version": "1.0"
     },
     "hallucination-hunt-multi-source-verification": {
       "published": "2026-11-04",
