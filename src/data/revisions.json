@@ -76,8 +76,8 @@
     "annotated-portfolio-ai-assisted-human-verified": {
       "published": "2026-11-26",
       "modified": "2026-11-26",
-      "publishes": 1,
-      "version": "1.0"
+      "publishes": 2,
+      "version": "1.1"
     },
     "annual-ai-review-evidence-portfolio": {
       "published": "2026-11-03",
@@ -199,6 +199,12 @@
       "publishes": 9,
       "version": "1.8"
     },
+    "hk-climate-observatory-records-ai-check": {
+      "published": "2026-11-27",
+      "modified": "2026-11-27",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "hk-housing-figures-ai-check": {
       "published": "2026-10-15",
       "modified": "2026-10-17",
@@ -210,6 +216,12 @@
       "modified": "2026-10-18",
       "publishes": 15,
       "version": "2.4"
+    },
+    "hk-transport-official-figures-ai-check": {
+      "published": "2026-11-27",
+      "modified": "2026-11-27",
+      "publishes": 1,
+      "version": "1.0"
     },
     "homework-redesign-kit": {
       "published": "2026-10-08",

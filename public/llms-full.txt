@@ -286,7 +286,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: 全科／跨科
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; Chinese Language Curriculum Guide (P1-P6) 2023, 5.3.2; Mathematics Curriculum and Assessment Guide (S4-S6) 2015, 5.2
 
 ### S1-S6 cross-subject: AI-assisted, human-verified — an annotated portfolio frame (three pieces, one four-column annotation card each, one contents page)
@@ -297,7 +297,7 @@ Reuse terms: https://beets-ai.com/about/
 - Subject: Cross-subject
 - Theme: C (看見學生思考)
 - Audience: teachers (教師), students (學生)
-- Version: 1.0
+- Version: 1.1
 - Sources: Supplement I: AI Literacy Learning Framework for Primary and Secondary Schools, p.1-13; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; Chinese Language Curriculum Guide (P1-P6) 2023, 5.3.2; Mathematics Curriculum and Assessment Guide (S4-S6) 2015, 5.2
 
 ### P1–S6 校本規劃：年度 AI 檢視包（五欄檢視表、六類證據、三個自評判斷、四個時點）
@@ -740,6 +740,28 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.8
 - Sources: 《中小學人工智能素養學習架構》, p.1-13; 《中小學應用人工智能教學指南》, pp.2-7 to 2-8
 
+### P4-P6 science: Hong Kong's climate — checking an AI account against the Observatory's own records (three columns, four kinds of difference, three figures in one lesson)
+- URL: https://beets-ai.com/en/resources/hk-climate-observatory-records-ai-check/
+- Language: en
+- Description: Pupils first copy three figures out of the Hong Kong Observatory's published records, writing down for each one the year, the page name or table number, and the unit. They then put the same question to the school-approved tool, set the tool's figures beside their own, circle one of four kinds of difference for each figure, and finish with a single sentence saying which account can be used.
+- Stage: P4-P6
+- Subject: Science
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.7; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; EDBCM No. 156/2026, Annex I section 4; Primary Information and Technology Curriculum Framework (AI component, pilot edition)
+
+### P4–P6 科學：香港氣候——以天文台官方紀錄核對 AI 的說法（三欄紀錄、四類差異、一節三個數字）
+- URL: https://beets-ai.com/resources/hk-climate-observatory-records-ai-check/
+- Language: zh-HK
+- Description: 學生先在香港天文台已公布的公開紀錄抄下三個數字，並逐個寫出年份、頁面名稱或表號與單位；再用同一個問題問校方已指定的工具，把工具的數字與自己抄的並排，逐題圈出四類差異之一，最後寫一句判詞，說明哪一個說法可以用。
+- Stage: P4-P6
+- Subject: 科學
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.7; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; EDBCM No. 156/2026, Annex I section 4; Primary Information and Technology Curriculum Framework (AI component, pilot edition)
+
 ### S1-S3 Where Hong Kong lives: comparing housing choices with a scoring model
 - URL: https://beets-ai.com/en/resources/hk-housing-figures-ai-check/
 - Language: en
@@ -783,6 +805,28 @@ Reuse terms: https://beets-ai.com/about/
 - Audience: teachers (教師), students (學生)
 - Version: 2.4
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.8
+
+### S1-S3 mathematics: how the city moves — checking an AI account of transport against official figures (four checks, four ways of recording, three sets of figures in one lesson)
+- URL: https://beets-ai.com/en/resources/hk-transport-official-figures-ai-check/
+- Language: en
+- Description: Pupils copy three figures out of the official statistics published by the Transport Department and the Census and Statistics Department — daily passenger journeys, average journey time, and the split between modes of travel — and record each one four ways: source, year, table number or page name, and unit. They then put the same question to the tool, check four things item by item (number, unit, year, scope), carry out one source check, and finish with a single verdict: usable, needs fixing, or unusable.
+- Stage: S1-S3
+- Subject: Mathematics
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.13; EDBCM No. 156/2026, Annex II IV. 3) Learning and Teaching Chapter; Blueprint for Digital Education Development in Primary and Secondary Schools, Executive Summary, Overall Objective 1
+
+### S1–S3 數學：城市怎樣移動——以官方數據核對 AI 的交通說法（四項核對、來源四記法、一節三組數字）
+- URL: https://beets-ai.com/resources/hk-transport-official-figures-ai-check/
+- Language: zh-HK
+- Description: 學生由運輸署與政府統計處公布的官方統計抄下三組數字（每日乘客量、平均車程、出行方式分佈），每組寫齊四記法：來源、年份、表號或頁面名稱、單位；再問工具同一個問題，逐項核對數字、單位、年份與範圍，做一次來源檢查，最後給一句判詞：可用、需修或不可用。
+- Stage: S1-S3
+- Subject: 數學
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.13; EDBCM No. 156/2026, Annex II IV. 3) Learning and Teaching Chapter; Blueprint for Digital Education Development in Primary and Secondary Schools, Executive Summary, Overall Objective 1
 
 ### Homework redesign kit: two before-and-after assignments that show student thinking (P4-P6)
 - URL: https://beets-ai.com/en/resources/homework-redesign-kit/
