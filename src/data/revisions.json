@@ -211,6 +211,12 @@
       "publishes": 2,
       "version": "1.1"
     },
+    "hk-housing-type-and-living-area-ai-check": {
+      "published": "2026-11-28",
+      "modified": "2026-11-28",
+      "publishes": 1,
+      "version": "1.0"
+    },
     "hk-then-and-now-project": {
       "published": "2026-10-08",
       "modified": "2026-10-18",
@@ -264,6 +270,12 @@
       "modified": "2026-10-15",
       "publishes": 7,
       "version": "1.6"
+    },
+    "meal-price-survey-ai-check": {
+      "published": "2026-11-28",
+      "modified": "2026-11-28",
+      "publishes": 1,
+      "version": "1.0"
     },
     "metacognitive-log-know-asked-not-yet": {
       "published": "2026-11-20",

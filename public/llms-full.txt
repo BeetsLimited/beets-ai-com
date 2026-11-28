@@ -784,6 +784,28 @@ Reuse terms: https://beets-ai.com/about/
 - Version: 1.1
 - Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.13
 
+### S1-S3 mathematics: housing type and living area — verifying an AI claim against official statistics (four housing types, four things to verify, one rewritten sentence)
+- URL: https://beets-ai.com/en/resources/hk-housing-type-and-living-area-ai-check/
+- Language: en
+- Description: Pupils write one checkable sentence with four things in it — one of the four housing types, a district, a year, and one of the three ways of measuring floor area — then copy four things out of a statistic published by a government department: department name in full, year, table number or page name, and unit together with the definition. They put the same sentence to the tool without giving it the year, the department or the measure, verify type, definition, year and scope item by item, record whether a source is given at all, and finally rewrite the sentence so that the type, the measure and the year all appear in it.
+- Stage: S1-S3
+- Subject: Mathematics
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.13; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; EDBCM No. 156/2026, Annex II IV. 3) Learning and Teaching Chapter
+
+### S1–S3 數學：住屋類型與居住面積——以官方統計核實 AI 的說法（四類住屋、四項核對、一句改寫）
+- URL: https://beets-ai.com/resources/hk-housing-type-and-living-area-ai-check/
+- Language: zh-HK
+- Description: 學生寫一條可核實的句子，四項寫齊：四類住屋之一、地區、年份、面積寫法三選一；再由政府部門公布的統計抄下四記法（部門全名、年份、表號或頁面名稱、單位與定義）。然後把同一句（不給年份、不給部門、不給面積寫法）問一次工具，逐項核對類型、定義、年份與範圍，來源只寫有或沒有，最後把句子改寫成一句同時出現類型名稱、面積寫法與年份的版本。
+- Stage: S1-S3
+- Subject: 數學
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.13; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; EDBCM No. 156/2026, Annex II IV. 3) Learning and Teaching Chapter
+
 ### Hong Kong then and now: a local history project with an alternative to a family interview (P4-P6)
 - URL: https://beets-ai.com/en/resources/hk-then-and-now-project/
 - Language: en
@@ -981,6 +1003,28 @@ Reuse terms: https://beets-ai.com/about/
 - Audience: teachers (教師)
 - Version: 1.6
 - Sources: 《中小學應用人工智能教學指南》, pp.2-7 to 2-8; 《中小學人工智能素養學習架構》, p.1-13
+
+### P4-P6 mathematics: what a meal costs — a district price survey checked against AI (three definitions, four things to verify, one verdict)
+- URL: https://beets-ai.com/en/resources/meal-price-survey-ai-check/
+- Language: en
+- Description: Pupils first fix three conditions (which meal, eat in or take away, with or without a drink), then collect two or three prices inside the area the teacher sets, writing four cells for each: date, place, price and unit, portion basis. The class merges the records into one table, finds the highest and the lowest entry, and P5-P6 also work out one average and write the sentence \"an average cannot stand for every person\". They then put one question to the tool and verify four things — date, district, meal, and how the figure is described — record whether a source is given at all, and finish with one verdict.
+- Stage: P4-P6
+- Subject: Mathematics
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: AI Literacy Learning Framework for Primary and Secondary Schools (Examples of Application Scenarios), p.6; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; Primary Information and Technology Curriculum Framework (AI component, pilot edition)
+
+### P4–P6 數學：一餐多少錢——地區價格調查與 AI 核對（三項定義、四項核對、一句判詞）
+- URL: https://beets-ai.com/resources/meal-price-survey-ai-check/
+- Language: zh-HK
+- Description: 學生先定下三項條件（餐類、堂食或外賣、連飲品或不連），按教師指定的範圍收集兩至三筆價錢，每筆寫齊日期、地點、價格與單位、份量基準；再把全班的記錄合併成一張表，找最高與最低各一筆，P5–P6 加計一個平均數並寫一句「平均數不能代表每一個人」；然後用同一條問題問一次工具，逐項核對日期、地區、餐類與表述，來源只寫有或沒有，最後寫一句判詞。
+- Stage: P4-P6
+- Subject: 數學
+- Theme: D (用 AI 探究香港)
+- Audience: teachers (教師), students (學生)
+- Version: 1.0
+- Sources: 《中小學人工智能素養學習架構（應用場景示例）》, p.6; EDBCM No. 156/2026, Annex II IV. 4) Student Chapter; Primary Information and Technology Curriculum Framework (AI component, pilot edition)
 
 ### S1-S6 all subjects: a metacognitive log — what I knew, what I asked, what I still cannot do (three columns, four boxes on one page, three minutes in each of four lessons, ten minutes in the fifth)
 - URL: https://beets-ai.com/en/resources/metacognitive-log-know-asked-not-yet/
